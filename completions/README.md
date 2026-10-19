@@ -6,6 +6,7 @@ JSON command specs and zsh data generated from them.
 | --- | --- |
 | `json/*.json` | source specs, edit/add these |
 | `tools/convert.py` | JSON -> zsh converter |
+| `tools/package-cache.zsh` | build package name/description caches from local metadata |
 | `compile.zsh` | regenerate and compile the zsh specs |
 | `zsh/*.zsh` | generated packed specs |
 | `zsh/index.zsh` | generated command -> description map |
@@ -31,7 +32,24 @@ Python 3 is required for that step
 - `args`: `name`, `description`, `suggestions`, `template`, `isOptional`,
   `isVariadic`; may be a single object or a list
 - `suggestions`: strings or `{name, description, priority, hidden}` objects
-- `template`: `filepaths` or `folders`; other values are ignored
+- `template`: `filepaths`, `folders`, or `packages:<manager>`; other values are
+  ignored. `<manager>` names a cache file in `TZC_PACKAGES_DIR` (default
+  `${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages`)
+
+## Package caches
+
+`packages:<manager>` arguments read one package per line from
+`$TZC_PACKAGES_DIR/<manager>`, as `name<TAB>description`; a bare name means an
+empty description. The plugin never starts a package manager; refresh the
+caches explicitly from local metadata:
+
+```sh
+zsh tools/package-cache.zsh            # every installed manager
+zsh tools/package-cache.zsh dnf apt    # selected managers
+```
+
+Managers: `dnf` (also used by yum), `apt` (apt, apt-get, apt-cache), `pacman`,
+`zypper`, `apk`, `flatpak`.
 
 ## Packed format
 
