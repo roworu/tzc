@@ -60,6 +60,38 @@ __tzc_hide() {
   return 0
 }
 
+# Ctrl-C aborts the line before line-finish runs, so clear the popup from a
+# SIGINT handler while zle can still erase its rows.
+__tzc_int_cleanup() {
+  __tzc_hide
+}
+
+__tzc_sigint() {
+  emulate -L zsh
+  local ret
+  if (( ${+functions[__tzc_sigint_saved]} )); then
+    __tzc_sigint_saved "$@"
+    ret=$?
+    (( ret )) || return 0
+  else
+    ret=$(( 128 + $1 ))
+  fi
+  (( __tzc_owns )) && zle __tzc_int_cleanup 2>/dev/null
+  return $ret
+}
+
+__tzc_sigint_install() {
+  emulate -L zsh
+  # emulate -L enables LOCAL_TRAPS, which would scope the trap to this function
+  setopt localoptions no_localtraps
+  if (( ${+functions[TRAPINT]} )) &&
+     [[ ${functions[TRAPINT]} != "${functions[__tzc_sigint]}" ]]; then
+    functions[__tzc_sigint_saved]=${functions[TRAPINT]}
+  fi
+  functions[TRAPINT]=${functions[__tzc_sigint]}
+  return 0
+}
+
 __tzc_pre_redraw() {
   # measure before emulating so a prompt using prompt_subst expands the same
   # way zle expanded it
@@ -272,6 +304,8 @@ __tzc_menu_start() {
   zle -N __tzc_up
   zle -N __tzc_down
   zle -N __tzc_tab
+  zle -N __tzc_int_cleanup
+  __tzc_sigint_install
   __tzc_init_render
   __tzc_bind
   if [[ -o zle ]]; then
