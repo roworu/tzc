@@ -28,7 +28,7 @@
     },
     {
      "name": "--allow-dangerously-skip-permissions",
-     "description": "Make bypass-permissions mode available to dispatched sessions without defaultin…"
+     "description": "Make bypass-permissions mode available to dispatched sessions without defaulting to it"
     },
     {
      "name": "--cwd",
@@ -65,7 +65,7 @@
     },
     {
      "name": "--json",
-     "description": "Print active sessions (interactive and background) as a JSON array and exit (fo…"
+     "description": "Print active sessions (interactive and background) as a JSON array and exit (for scripting"
     },
     {
      "name": "--mcp-config",
@@ -137,7 +137,7 @@
   },
   {
    "name": "attach",
-   "description": "Open a background session in this terminal. <id> is the short id that `claude -…"
+   "description": "Open a background session in this terminal. <id> is the short id that `claude --bg` prints and `claude agents` lists"
   },
   {
    "name": "auth",
@@ -236,7 +236,7 @@
    "subcommands": [
     {
      "name": "config",
-     "description": "Print the effective auto mode config as JSON: your settings where set, defaults…",
+     "description": "Print the effective auto mode config as JSON: your settings where set, defaults otherwise",
      "options": [
       {
        "name": [
@@ -269,7 +269,7 @@
     },
     {
      "name": "defaults",
-     "description": "Print the default auto mode environment, allow, soft_deny, and hard_deny rules…",
+     "description": "Print the default auto mode environment, allow, soft_deny, and hard_deny rules as JSON",
      "options": [
       {
        "name": [
@@ -289,7 +289,7 @@
     },
     {
      "name": "reset",
-     "description": "Reset auto mode configuration to the shipped defaults by removing the autoMode…",
+     "description": "Reset auto mode configuration to the shipped defaults by removing the autoMode section from your user settings file",
      "options": [
       {
        "name": [
@@ -409,7 +409,7 @@
       },
       {
        "name": "--callback-port",
-       "description": "Fixed port for OAuth callback (for servers requiring pre-registered redirect UR…",
+       "description": "Fixed port for OAuth callback (for servers requiring pre-registered redirect URIs)",
        "args": {
         "name": "port"
        }
@@ -437,7 +437,7 @@
       },
       {
        "name": "-H",
-       "description": "Set headers for HTTP/SSE servers (e.g. -H \"X-Api-Key: abc123\" -H \"X-Custom: val…",
+       "description": "Set headers for HTTP/SSE servers (e.g. -H \"X-Api-Key: abc123\" -H \"X-Custom: value\")",
        "args": {
         "name": "header"
        }
@@ -560,7 +560,7 @@
       },
       {
        "name": "--no-browser",
-       "description": "Print the authorization URL instead of opening a browser (for SSH/headless sess…"
+       "description": "Print the authorization URL instead of opening a browser (for SSH/headless sessions — paste the redirect URL back when prompted)"
       }
      ]
     },
@@ -593,7 +593,7 @@
         "-s",
         "--scope"
        ],
-       "description": "Configuration scope (local, user, or project) - if not specified, removes from…",
+       "description": "Configuration scope (local, user, or project) - if not specified, removes from whichever scope it exists in",
        "args": {
         "name": "scope"
        }
@@ -602,7 +602,7 @@
     },
     {
      "name": "reset-project-choices",
-     "description": "Reset all approved and rejected project-scoped (.mcp.json) servers within this…",
+     "description": "Reset all approved and rejected project-scoped (.mcp.json) servers within this project",
      "options": [
       {
        "name": [
@@ -641,7 +641,7 @@
   },
   {
    "name": "purge",
-   "description": "Delete all Claude Code state for a project (transcripts, tasks, file history, c…",
+   "description": "Delete all Claude Code state for a project (transcripts, tasks, file history, config entry)",
    "options": [
     {
      "name": "--all",
@@ -676,7 +676,7 @@
   },
   {
    "name": "respawn",
-   "description": "Restart a background session, or all of them with --all, so it runs the current…"
+   "description": "Restart a background session, or all of them with --all, so it runs the current Claude Code version"
   },
   {
    "name": "rm",
@@ -684,14 +684,14 @@
    "options": [
     {
      "name": "--discard-unpushed",
-     "description": "Also discard the worktree's unpushed commits (and any uncommitted changes) whil…",
+     "description": "Also discard the worktree's unpushed commits (and any uncommitted changes) while it is still the same worktree at that commit — pass the value a previous 'claude rm <id>' reported",
      "args": {
       "name": "commit"
      }
     },
     {
      "name": "--force-remove-worktree",
-     "description": "Delete the worktree directory even though the WorktreeRemove hook or git couldn…",
+     "description": "Delete the worktree directory even though the WorktreeRemove hook or git couldn't remove it (its repository must list it as a worktree, or have dropped it in a removal that couldn't delete it",
      "args": {
       "name": "worktree-id"
      }
@@ -713,7 +713,7 @@
   },
   {
    "name": "ultrareview",
-   "description": "Run a cloud-hosted multi-agent code review of the current branch (or a PR numbe…",
+   "description": "Run a cloud-hosted multi-agent code review of the current branch (or a PR number / base branch) and print the findings",
    "options": [
     {
      "name": [
@@ -762,7 +762,7 @@
    "subcommands": [
     {
      "name": "configure",
-     "description": "Show a plugin's options and which are unset, or save values from stdin with --v…",
+     "description": "Show a plugin's options and which are unset, or save values from stdin with --values-stdin",
      "options": [
       {
        "name": "--values-stdin"
@@ -813,7 +813,7 @@
       },
       {
        "name": "--json",
-       "description": "Print one machine-readable result line on stdout instead of the human message (…"
+       "description": "Print one machine-readable result line on stdout instead of the human message (same exit codes)"
       },
       {
        "name": [
@@ -840,7 +840,7 @@
       },
       {
        "name": "--json",
-       "description": "Print one machine-readable result line on stdout instead of the human message (…"
+       "description": "Print one machine-readable result line on stdout instead of the human message (same exit codes)"
       },
       {
        "name": [
@@ -867,7 +867,7 @@
       },
       {
        "name": "--allow-real-servers",
-       "description": "With --mocks record: also start the plugin's REAL MCP server processes for serv…"
+       "description": "With --mocks record: also start the plugin's REAL MCP server processes for servers that have no mock (they run as you, outside the OS sandbox that confines shell tools"
       },
       {
        "name": "--allow-tools",
@@ -917,7 +917,7 @@
       },
       {
        "name": "--json",
-       "description": "Print the full run result (prompts, graders, per-run scores) as JSON to stdout,…"
+       "description": "Print the full run result (prompts, graders, per-run scores) as JSON to stdout, or write it to this .json file"
       },
       {
        "name": "--judge-model",
@@ -969,11 +969,11 @@
       },
       {
        "name": "--publish-report",
-       "description": "Also require publishing the report to claude.ai (already the default when your…"
+       "description": "Also require publishing the report to claude.ai (already the default when your account supports it)"
       },
       {
        "name": "--report",
-       "description": "Write the self-contained HTML report (scores, prompts, grader verdicts) to <pat…",
+       "description": "Write the self-contained HTML report (scores, prompts, grader verdicts) to <path> instead of the results dir",
        "args": {
         "name": "path",
         "template": "filepaths"
@@ -1006,7 +1006,7 @@
       },
       {
        "name": "--trust-plugin",
-       "description": "Assert that you trust this plugin's code and eval suite, and skip the first-run…"
+       "description": "Assert that you trust this plugin's code and eval suite, and skip the first-run trust prompt (for CI"
       },
       {
        "name": "--verbose",
@@ -1024,7 +1024,7 @@
       },
       {
        "name": "--data-size",
-       "description": "Measure each installed plugin's saved data directory, or only the named plugin'…"
+       "description": "Measure each installed plugin's saved data directory, or only the named plugin's (requires --json)"
       },
       {
        "name": [
@@ -1054,7 +1054,7 @@
     },
     {
      "name": "tag",
-     "description": "Create a {name}--v{version} git tag for a plugin release, validating that plugi…",
+     "description": "Create a {name}--v{version} git tag for a plugin release, validating that plugin.json and any enclosing marketplace entry agree",
      "options": [
       {
        "name": "--dry-run",
@@ -1116,7 +1116,7 @@
      "options": [
       {
        "name": "--accept-command",
-       "description": "Accept the marketplace-declared command (a command-source install, or the heade…",
+       "description": "Accept the marketplace-declared command (a command-source install, or the headersHelper that fetches the archive) whose sha256 a previous --json run reported as shownCommand.sha256",
        "args": {
         "name": "sha256"
        }
@@ -1130,7 +1130,7 @@
       },
       {
        "name": "--json",
-       "description": "Print one machine-readable result line on stdout instead of the human message (…"
+       "description": "Print one machine-readable result line on stdout instead of the human message (same exit codes"
       },
       {
        "name": [
@@ -1147,13 +1147,13 @@
         "-y",
         "--yes"
        ],
-       "description": "Accept the displayed marketplace-declared command without the confirmation prom…"
+       "description": "Accept the displayed marketplace-declared command without the confirmation prompt — a changed install command, or the headersHelper command that fetches its archive (required when stdin or stdout is not a TTY)"
       }
      ]
     },
     {
      "name": "validate",
-     "description": "Validate a plugin or marketplace manifest, or the skills, agents, and commands…",
+     "description": "Validate a plugin or marketplace manifest, or the skills, agents, and commands in a directory",
      "options": [
       {
        "name": [
@@ -1216,7 +1216,7 @@
   },
   {
    "name": "--agents",
-   "description": "JSON object defining custom agents, or with --print the path to a file that hol…",
+   "description": "JSON object defining custom agents, or with --print the path to a file that holds one (e.g. '{\"reviewer\": {\"description\": \"Reviews code\", \"prompt\": \"You are a code reviewer\"}}')",
    "args": {
     "name": "json-or-file",
     "template": "filepaths"
@@ -1224,7 +1224,7 @@
   },
   {
    "name": "--allow-dangerously-skip-permissions",
-   "description": "Enable bypassing all permission checks as an option, without it being enabled b…"
+   "description": "Enable bypassing all permission checks as an option, without it being enabled by default"
   },
   {
    "name": [
@@ -1247,12 +1247,16 @@
    "name": "--autocompact",
    "description": "Auto-compact window size (auto, or 100k–1M tokens)",
    "args": {
-    "name": "auto"
+    "name": "auto",
+    "suggestions": [
+     "auto",
+     "tokens"
+    ]
    }
   },
   {
    "name": "--ax-screen-reader",
-   "description": "Render screen-reader friendly output (flat text, no decorative borders or anima…"
+   "description": "Render screen-reader friendly output (flat text, no decorative borders or animations)"
   },
   {
    "name": [
@@ -1282,7 +1286,7 @@
   },
   {
    "name": "--cloud",
-   "description": "Create a cloud session with the given description, or attach to an existing one…"
+   "description": "Create a cloud session with the given description, or attach to an existing one by session ID or claude.ai/code URL"
   },
   {
    "name": [
@@ -1300,7 +1304,7 @@
     "-d",
     "--debug"
    ],
-   "description": "Enable debug mode with optional category filtering (e.g., \"api,hooks\" or \"!1p,!…"
+   "description": "Enable debug mode with optional category filtering (e.g., \"api,hooks\" or \"!1p,!file\")"
   },
   {
    "name": "--debug-file",
@@ -1312,7 +1316,7 @@
   },
   {
    "name": "--desktop",
-   "description": "Open in the Claude Desktop app instead of the terminal (with --continue or --re…"
+   "description": "Open in the Claude Desktop app instead of the terminal (with --continue or --resume <id> to pick the session)"
   },
   {
    "name": "--disable-slash-commands",
@@ -1344,18 +1348,18 @@
   },
   {
    "name": "--environment",
-   "description": "Create a new cloud session that runs on the given self-hosted environment (ccpo…",
+   "description": "Create a new cloud session that runs on the given self-hosted environment (ccpool_...)",
    "args": {
     "name": "environment_id"
    }
   },
   {
    "name": "--exclude-dynamic-system-prompt-sections",
-   "description": "Move per-machine sections (cwd, env info, memory paths, git status) from the sy…"
+   "description": "Move per-machine sections (cwd, env info, memory paths, git status) from the system prompt into the first user message"
   },
   {
    "name": "--fallback-model",
-   "description": "Enable automatic fallback to specified model(s) when the default model is overl…",
+   "description": "Enable automatic fallback to specified model(s) when the default model is overloaded or not available",
    "args": {
     "name": "model"
    }
@@ -1369,15 +1373,15 @@
   },
   {
    "name": "--fork-session",
-   "description": "When resuming, create a new session ID instead of reusing the original (use wit…"
+   "description": "When resuming, create a new session ID instead of reusing the original (use with --resume or --continue)"
   },
   {
    "name": "--forward-subagent-text",
-   "description": "Forward subagent text and thinking blocks as assistant/user messages with paren…"
+   "description": "Forward subagent text and thinking blocks as assistant/user messages with parent_tool_use_id set (only works with --print and --output-format=stream-json)"
   },
   {
    "name": "--from-pr",
-   "description": "Resume a session linked to a PR by PR number/URL, or open interactive picker wi…"
+   "description": "Resume a session linked to a PR by PR number/URL, or open interactive picker with optional search term"
   },
   {
    "name": [
@@ -1392,15 +1396,15 @@
   },
   {
    "name": "--include-hook-events",
-   "description": "Include all hook lifecycle events in the output stream (only works with --outpu…"
+   "description": "Include all hook lifecycle events in the output stream (only works with --output-format=stream-json)"
   },
   {
    "name": "--include-partial-messages",
-   "description": "Include partial message chunks as they arrive (only works with --print and --ou…"
+   "description": "Include partial message chunks as they arrive (only works with --print and --output-format=stream-json)"
   },
   {
    "name": "--input-format",
-   "description": "Input format (only works with --print): \"text\" (default), or \"stream-json\" (rea…",
+   "description": "Input format (only works with --print): \"text\" (default), or \"stream-json\" (realtime streaming input) (choices: \"text\", \"stream-json\")",
    "args": {
     "name": "format",
     "suggestions": [
@@ -1448,7 +1452,7 @@
     "-n",
     "--name"
    ],
-   "description": "Set a display name for this session (shown in the prompt box, /resume picker, a…",
+   "description": "Set a display name for this session (shown in the prompt box, /resume picker, and terminal title)",
    "args": {
     "name": "name"
    }
@@ -1459,11 +1463,11 @@
   },
   {
    "name": "--no-session-persistence",
-   "description": "Disable session persistence - sessions will not be saved to disk and cannot be…"
+   "description": "Disable session persistence - sessions will not be saved to disk and cannot be resumed (only works with --print)"
   },
   {
    "name": "--output-format",
-   "description": "Output format (only works with --print): \"text\" (default), \"json\" (single resul…",
+   "description": "Output format (only works with --print): \"text\" (default), \"json\" (single result), or \"stream-json\" (realtime streaming) (choices: \"text\", \"json\", \"stream-json\")",
    "args": {
     "name": "format",
     "suggestions": [
@@ -1475,7 +1479,7 @@
   },
   {
    "name": "--permission-mode",
-   "description": "Permission mode to use for the session (choices: \"acceptEdits\", \"auto\", \"bypass…",
+   "description": "Permission mode to use for the session (choices: \"acceptEdits\", \"auto\", \"bypassPermissions\", \"manual\", \"dontAsk\", \"plan\")",
    "args": {
     "name": "mode",
     "suggestions": [
@@ -1490,7 +1494,7 @@
   },
   {
    "name": "--permission-prompts",
-   "description": "Who answers permission prompts with --print: \"host\" (the SDK host or --permissi…",
+   "description": "Who answers permission prompts with --print: \"host\" (the SDK host or --permission-prompt-tool) or \"none\" (nobody: anything that would prompt is denied automatically",
    "args": {
     "name": "target"
    }
@@ -1505,7 +1509,7 @@
   },
   {
    "name": "--plugin-url",
-   "description": "Fetch a plugin .zip from a URL for this session only (repeatable: --plugin-url…",
+   "description": "Fetch a plugin .zip from a URL for this session only (repeatable: --plugin-url A --plugin-url B) (default: [])",
    "args": {
     "name": "url"
    }
@@ -1534,22 +1538,22 @@
   },
   {
    "name": "--replay-user-messages",
-   "description": "Re-emit user messages from stdin back on stdout for acknowledgment (only works…"
+   "description": "Re-emit user messages from stdin back on stdout for acknowledgment (only works with --input-format=stream-json and --output-format=stream-json)"
   },
   {
    "name": "--restricted",
-   "description": "Restricted mode: removes the built-in tools that run commands or code (Bash, Po…"
+   "description": "Restricted mode: removes the built-in tools that run commands or code (Bash, PowerShell and the other code-running tools) and WebFetch unless --tools names them, and ignores user, project and local settings files (managed settings and --settings still apply"
   },
   {
    "name": [
     "-r",
     "--resume"
    ],
-   "description": "Resume a conversation by session ID, or open interactive picker with optional s…"
+   "description": "Resume a conversation by session ID, or open interactive picker with optional search term"
   },
   {
    "name": "--safe-mode",
-   "description": "Start with all customizations (CLAUDE.md, skills, installed plugins, hooks, MCP…"
+   "description": "Start with all customizations (CLAUDE.md, skills, installed plugins, hooks, MCP servers, custom commands and agents, output styles, workflows, custom themes, keybindings, and more) disabled — useful for troubleshooting a broken configuration"
   },
   {
    "name": "--session-id",
@@ -1585,9 +1589,13 @@
   },
   {
    "name": "--system-prompt-snapshot",
-   "description": "Record the system prompt once per conversation and reuse it verbatim on every r…",
+   "description": "Record the system prompt once per conversation and reuse it verbatim on every request and resume. on (the default): the prompt is rendered on the conversation's first request — a --system-prompt or --append-system-prompt included — sent, and recorded",
    "args": {
-    "name": "on"
+    "name": "on",
+    "suggestions": [
+     "on",
+     "off"
+    ]
    }
   },
   {

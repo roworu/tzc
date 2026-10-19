@@ -1,1000 +1,825 @@
 {
-  "name": "wget",
-  "description": "Download files from the web",
-  "options": [
-    {
-      "name": "-V"
-    },
-    {
-      "name": "--version",
-      "description": "Display the version of Wget and exit"
-    },
-    {
-      "name": "-h"
-    },
-    {
-      "name": "--help",
-      "description": "Print this help"
-    },
-    {
-      "name": "-b"
-    },
-    {
-      "name": "--background",
-      "description": "Go to background after startup"
-    },
-    {
-      "name": "-e"
-    },
-    {
-      "name": "--execute",
-      "description": "Execute a `.wgetrc'-style command",
-      "args": {
-        "name": "command"
-      }
-    },
-    {
-      "name": "-o"
-    },
-    {
-      "name": "--output-file",
-      "description": "Log messages to FILE",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "-a"
-    },
-    {
-      "name": "--append-output",
-      "description": "Append messages to FILE",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "-d"
-    },
-    {
-      "name": "--debug",
-      "description": "Print lots of debugging information"
-    },
-    {
-      "name": "-q"
-    },
-    {
-      "name": "--quiet",
-      "description": "Quiet (no output)"
-    },
-    {
-      "name": "-v"
-    },
-    {
-      "name": "--verbose",
-      "description": "Be verbose (this is the default)"
-    },
-    {
-      "name": [
-        "-nv",
-        "--no-verbose"
-      ],
-      "description": "Turn off verboseness, without being quiet"
-    },
-    {
-      "name": "--report-speed",
-      "description": "Output bandwidth as TYPE",
-      "args": {
-        "name": "type"
-      }
-    },
-    {
-      "name": "-i"
-    },
-    {
-      "name": "--input-file",
-      "description": "Download URLs found in local or external FILE",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "-F"
-    },
-    {
-      "name": "--force-html",
-      "description": "Treat input file as HTML"
-    },
-    {
-      "name": "-B"
-    },
-    {
-      "name": "--base",
-      "description": "Resolves HTML input-file links (-i -F) relative to URL",
-      "args": {
-        "name": "url"
-      }
-    },
-    {
-      "name": "--config",
-      "description": "Specify config file to use",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--no-config",
-      "description": "Do not read any config file"
-    },
-    {
-      "name": "--rejected-log",
-      "description": "Log reasons for URL rejection to FILE",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "-t"
-    },
-    {
-      "name": "--tries",
-      "description": "Set number of retries to NUMBER (0 unlimits)",
-      "args": {
-        "name": "number"
-      }
-    },
-    {
-      "name": "--retry-connrefused",
-      "description": "Retry even if connection is refused"
-    },
-    {
-      "name": "--retry-on-host-error",
-      "description": "Consider host errors as non-fatal, transient errors"
-    },
-    {
-      "name": "--retry-on-http-error",
-      "description": "Comma-separated list of HTTP errors to retry",
-      "args": {
-        "name": "errors"
-      }
-    },
-    {
-      "name": "-O"
-    },
-    {
-      "name": "--output-document",
-      "description": "Write documents to FILE",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": [
-        "-nc",
-        "--no-clobber"
-      ],
-      "description": "Skip downloads that would download to existing files (overwriting them)"
-    },
-    {
-      "name": "--no-netrc",
-      "description": "Don't try to obtain credentials from .netrc"
-    },
-    {
-      "name": "-c"
-    },
-    {
-      "name": "--continue",
-      "description": "Resume getting a partially-downloaded file"
-    },
-    {
-      "name": "--start-pos",
-      "description": "Start downloading from zero-based position OFFSET",
-      "args": {
-        "name": "offset"
-      }
-    },
-    {
-      "name": "--progress",
-      "description": "Select progress gauge type",
-      "args": {
-        "name": "type"
-      }
-    },
-    {
-      "name": "--show-progress",
-      "description": "Display the progress bar in any verbosity mode"
-    },
-    {
-      "name": "-N"
-    },
-    {
-      "name": "--timestamping",
-      "description": "Don't re-retrieve files unless newer than local"
-    },
-    {
-      "name": "--no-if-modified-since",
-      "description": "Don't use conditional if-modified-since get requests in timestamping mode"
-    },
-    {
-      "name": "--no-use-server-timestamps",
-      "description": "Don't set the local file's timestamp by the one on the server"
-    },
-    {
-      "name": "-S"
-    },
-    {
-      "name": "--server-response",
-      "description": "Print server response"
-    },
-    {
-      "name": "--spider",
-      "description": "Don't download anything"
-    },
-    {
-      "name": "-T"
-    },
-    {
-      "name": "--timeout",
-      "description": "Set all timeout values to SECONDS",
-      "args": {
-        "name": "seconds"
-      }
-    },
-    {
-      "name": "--dns-timeout",
-      "description": "Set the DNS lookup timeout to SECS",
-      "args": {
-        "name": "secs"
-      }
-    },
-    {
-      "name": "--connect-timeout",
-      "description": "Set the connect timeout to SECS",
-      "args": {
-        "name": "secs"
-      }
-    },
-    {
-      "name": "--read-timeout",
-      "description": "Set the read timeout to SECS",
-      "args": {
-        "name": "secs"
-      }
-    },
-    {
-      "name": "-w"
-    },
-    {
-      "name": "--wait",
-      "description": "Wait SECONDS between retrievals (applies if more then 1 URL is to be retrieved)",
-      "args": {
-        "name": "seconds"
-      }
-    },
-    {
-      "name": "--waitretry",
-      "description": "Wait 1..SECONDS between retries of a retrieval (applies if more then 1 URL is t…",
-      "args": {
-        "name": "seconds"
-      }
-    },
-    {
-      "name": "--random-wait",
-      "description": "Wait from 0.5*WAIT...1.5*WAIT secs between retrievals (applies if more then 1 U…"
-    },
-    {
-      "name": "--no-proxy",
-      "description": "Explicitly turn off proxy"
-    },
-    {
-      "name": "-Q"
-    },
-    {
-      "name": "--quota",
-      "description": "Set retrieval quota to NUMBER",
-      "args": {
-        "name": "number"
-      }
-    },
-    {
-      "name": "--bind-address",
-      "description": "Bind to ADDRESS (hostname or IP) on local host",
-      "args": {
-        "name": "address"
-      }
-    },
-    {
-      "name": "--limit-rate",
-      "description": "Limit download rate to RATE",
-      "args": {
-        "name": "rate"
-      }
-    },
-    {
-      "name": "--no-dns-cache",
-      "description": "Disable caching DNS lookups"
-    },
-    {
-      "name": "--restrict-file-names",
-      "description": "Restrict chars in file names to ones OS allows",
-      "args": {
-        "name": "os"
-      }
-    },
-    {
-      "name": "--ignore-case",
-      "description": "Ignore case when matching files/directories"
-    },
-    {
-      "name": "-4"
-    },
-    {
-      "name": "--inet4-only",
-      "description": "Connect only to IPv4 addresses"
-    },
-    {
-      "name": "-6"
-    },
-    {
-      "name": "--inet6-only",
-      "description": "Connect only to IPv6 addresses"
-    },
-    {
-      "name": "--prefer-family",
-      "description": "Connect first to addresses of specified family, one of IPv6, IPv4, or none",
-      "args": {
-        "name": "family"
-      }
-    },
-    {
-      "name": "--user",
-      "description": "Set both ftp and http user to USER",
-      "args": {
-        "name": "user"
-      }
-    },
-    {
-      "name": "--password",
-      "description": "Set both ftp and http password to PASS",
-      "args": {
-        "name": "pass"
-      }
-    },
-    {
-      "name": "--ask-password",
-      "description": "Prompt for passwords"
-    },
-    {
-      "name": "--use-askpass",
-      "description": "Specify credential handler for requesting username and password",
-      "args": {
-        "name": "command"
-      }
-    },
-    {
-      "name": "--no-iri",
-      "description": "Turn off IRI support"
-    },
-    {
-      "name": "--local-encoding",
-      "description": "Use ENC as the local encoding for IRIs",
-      "args": {
-        "name": "enc"
-      }
-    },
-    {
-      "name": "--remote-encoding",
-      "description": "Use ENC as the default remote encoding",
-      "args": {
-        "name": "enc"
-      }
-    },
-    {
-      "name": "--unlink",
-      "description": "Remove file before clobber"
-    },
-    {
-      "name": "--xattr",
-      "description": "Turn on storage of metadata in extended file attributes"
-    },
-    {
-      "name": [
-        "-nd",
-        "--no-directories"
-      ],
-      "description": "Don't create directories"
-    },
-    {
-      "name": "-x"
-    },
-    {
-      "name": "--force-directories",
-      "description": "Force creation of directories"
-    },
-    {
-      "name": [
-        "-nH",
-        "--no-host-directories"
-      ],
-      "description": "Don't create host directories"
-    },
-    {
-      "name": "--protocol-directories",
-      "description": "Use protocol name in directories"
-    },
-    {
-      "name": "-P"
-    },
-    {
-      "name": "--directory-prefix",
-      "description": "Save files to PREFIX/",
-      "args": {
-        "name": "prefix"
-      }
-    },
-    {
-      "name": "--cut-dirs",
-      "description": "Ignore NUMBER remote directory components",
-      "args": {
-        "name": "number"
-      }
-    },
-    {
-      "name": "--http-user",
-      "description": "Set http user to USER",
-      "args": {
-        "name": "user"
-      }
-    },
-    {
-      "name": "--http-password",
-      "description": "Set http password to PASS",
-      "args": {
-        "name": "pass"
-      }
-    },
-    {
-      "name": "--no-cache",
-      "description": "Disallow server-cached data"
-    },
-    {
-      "name": "--default-page",
-      "description": "Change the default page name (normally this is 'index.html'.)",
-      "args": {
-        "name": "name"
-      }
-    },
-    {
-      "name": "-E"
-    },
-    {
-      "name": "--adjust-extension",
-      "description": "Save HTML/CSS documents with proper extensions"
-    },
-    {
-      "name": "--ignore-length",
-      "description": "Ignore 'Content-Length' header field"
-    },
-    {
-      "name": "--header",
-      "description": "Insert STRING among the headers",
-      "args": {
-        "name": "string"
-      }
-    },
-    {
-      "name": "--compression",
-      "description": "Choose compression, one of auto, gzip and none",
-      "args": {
-        "name": "type"
-      }
-    },
-    {
-      "name": "--max-redirect",
-      "description": "Maximum redirections allowed per page"
-    },
-    {
-      "name": "--proxy-user",
-      "description": "Set USER as proxy username",
-      "args": {
-        "name": "user"
-      }
-    },
-    {
-      "name": "--proxy-password",
-      "description": "Set PASS as proxy password",
-      "args": {
-        "name": "pass"
-      }
-    },
-    {
-      "name": "--referer",
-      "description": "Include 'Referer: URL' header in HTTP request",
-      "args": {
-        "name": "url"
-      }
-    },
-    {
-      "name": "--save-headers",
-      "description": "Save the HTTP headers to file"
-    },
-    {
-      "name": "-U"
-    },
-    {
-      "name": "--user-agent",
-      "description": "Identify as AGENT instead of Wget/VERSION",
-      "args": {
-        "name": "agent"
-      }
-    },
-    {
-      "name": "--no-http-keep-alive",
-      "description": "Disable HTTP keep-alive (persistent connections)"
-    },
-    {
-      "name": "--no-cookies",
-      "description": "Don't use cookies"
-    },
-    {
-      "name": "--load-cookies",
-      "description": "Load cookies from FILE before session",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--save-cookies",
-      "description": "Save cookies to FILE after session",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--keep-session-cookies",
-      "description": "Load and save session (non-permanent) cookies"
-    },
-    {
-      "name": "--post-data",
-      "description": "Use the POST method",
-      "args": {
-        "name": "string"
-      }
-    },
-    {
-      "name": "--post-file",
-      "description": "Use the POST method",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--method",
-      "description": "Use method \"HTTPMethod\" in the request",
-      "args": {
-        "name": "httpmethod"
-      }
-    },
-    {
-      "name": "--body-data",
-      "description": "Send STRING as data. --method MUST be set",
-      "args": {
-        "name": "string"
-      }
-    },
-    {
-      "name": "--body-file",
-      "description": "Send contents of FILE. --method MUST be set",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--content-disposition",
-      "description": "Honor the Content-Disposition header when choosing local file names (EXPERIMENT…"
-    },
-    {
-      "name": "--content-on-error",
-      "description": "Output the received content on server errors"
-    },
-    {
-      "name": "--auth-no-challenge",
-      "description": "Send Basic HTTP authentication information without first waiting for the server…"
-    },
-    {
-      "name": "--secure-protocol",
-      "description": "Choose secure protocol, one of auto, SSLv2, SSLv3, TLSv1, TLSv1_1, TLSv1_2, TLS…",
-      "args": {
-        "name": "pr"
-      }
-    },
-    {
-      "name": "--https-only",
-      "description": "Only follow secure HTTPS links"
-    },
-    {
-      "name": "--no-check-certificate",
-      "description": "Don't validate the server's certificate"
-    },
-    {
-      "name": "--certificate",
-      "description": "Client certificate file",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--certificate-type",
-      "description": "Client certificate type, PEM or DER",
-      "args": {
-        "name": "type"
-      }
-    },
-    {
-      "name": "--private-key",
-      "description": "Private key file",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--private-key-type",
-      "description": "Private key type, PEM or DER",
-      "args": {
-        "name": "type"
-      }
-    },
-    {
-      "name": "--ca-certificate",
-      "description": "File with the bundle of CAs",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--ca-directory",
-      "description": "Directory where hash list of CAs is stored",
-      "args": {
-        "name": "dir",
-        "template": "folders"
-      }
-    },
-    {
-      "name": "--crl-file",
-      "description": "File with bundle of CRLs",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--pinnedpubkey",
-      "description": "Public key (PEM/DER) file, or any number of base64 encoded sha256 hashes preced…",
-      "args": {
-        "name": "file",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--ciphers",
-      "description": "Set the priority string (GnuTLS) or cipher list string (OpenSSL) directly",
-      "args": {
-        "name": "str"
-      }
-    },
-    {
-      "name": "--no-hsts",
-      "description": "Disable HSTS"
-    },
-    {
-      "name": "--hsts-file",
-      "description": "Path of HSTS database (will override default)"
-    },
-    {
-      "name": "--ftp-user",
-      "description": "Set ftp user to USER",
-      "args": {
-        "name": "user"
-      }
-    },
-    {
-      "name": "--ftp-password",
-      "description": "Set ftp password to PASS",
-      "args": {
-        "name": "pass"
-      }
-    },
-    {
-      "name": "--no-remove-listing",
-      "description": "Don't remove '.listing' files"
-    },
-    {
-      "name": "--no-glob",
-      "description": "Turn off FTP file name globbing"
-    },
-    {
-      "name": "--no-passive-ftp",
-      "description": "Disable the \"passive\" transfer mode"
-    },
-    {
-      "name": "--preserve-permissions",
-      "description": "Preserve remote file permissions"
-    },
-    {
-      "name": "--retr-symlinks",
-      "description": "When recursing, get linked-to files (not dir)"
-    },
-    {
-      "name": "--ftps-implicit",
-      "description": "Use implicit FTPS (default port is 990)"
-    },
-    {
-      "name": "--ftps-resume-ssl",
-      "description": "Resume the SSL/TLS session started in the control connection when opening a dat…"
-    },
-    {
-      "name": "--ftps-clear-data-connection",
-      "description": "Cipher the control channel only"
-    },
-    {
-      "name": "--ftps-fallback-to-ftp",
-      "description": "Fall back to FTP if FTPS is not supported in the target server"
-    },
-    {
-      "name": "--warc-file",
-      "description": "Save request/response data to a .warc.gz file",
-      "args": {
-        "name": "filename",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--warc-header",
-      "description": "Insert STRING into the warcinfo record",
-      "args": {
-        "name": "string"
-      }
-    },
-    {
-      "name": "--warc-max-size",
-      "description": "Set maximum size of WARC files to NUMBER",
-      "args": {
-        "name": "number"
-      }
-    },
-    {
-      "name": "--warc-cdx",
-      "description": "Write CDX index files"
-    },
-    {
-      "name": "--warc-dedup",
-      "description": "Do not store records listed in this CDX file",
-      "args": {
-        "name": "filename",
-        "template": "filepaths"
-      }
-    },
-    {
-      "name": "--no-warc-compression",
-      "description": "Do not compress WARC files with GZIP"
-    },
-    {
-      "name": "--no-warc-digests",
-      "description": "Do not calculate SHA1 digests"
-    },
-    {
-      "name": "--no-warc-keep-log",
-      "description": "Do not store the log file in a WARC record"
-    },
-    {
-      "name": "--warc-tempdir",
-      "description": "Location for temporary files created by the WARC writer",
-      "args": {
-        "name": "directory",
-        "template": "folders"
-      }
-    },
-    {
-      "name": "-r"
-    },
-    {
-      "name": "--recursive",
-      "description": "Specify recursive download"
-    },
-    {
-      "name": "-l"
-    },
-    {
-      "name": "--level",
-      "description": "Maximum recursion depth (inf or 0 for infinite)",
-      "args": {
-        "name": "number"
-      }
-    },
-    {
-      "name": "--delete-after",
-      "description": "Delete files locally after downloading them"
-    },
-    {
-      "name": "-k"
-    },
-    {
-      "name": "--convert-links",
-      "description": "Make links in downloaded HTML or CSS point to local files"
-    },
-    {
-      "name": "--convert-file-only",
-      "description": "Convert the file part of the URLs only (usually known as the basename)"
-    },
-    {
-      "name": "--backups",
-      "description": "Before writing file X, rotate up to N backup files",
-      "args": {
-        "name": "n"
-      }
-    },
-    {
-      "name": "-K"
-    },
-    {
-      "name": "--backup-converted",
-      "description": "Before converting file X, back up as X.orig"
-    },
-    {
-      "name": "-m"
-    },
-    {
-      "name": "--mirror",
-      "description": "Shortcut for -N -r -l inf --no-remove-listing"
-    },
-    {
-      "name": "-p"
-    },
-    {
-      "name": "--page-requisites",
-      "description": "Get all images, etc. needed to display HTML page"
-    },
-    {
-      "name": "--strict-comments",
-      "description": "Turn on strict (SGML) handling of HTML comments"
-    },
-    {
-      "name": "-A"
-    },
-    {
-      "name": "--accept",
-      "description": "Comma-separated list of accepted extensions",
-      "args": {
-        "name": "list"
-      }
-    },
-    {
-      "name": "-R"
-    },
-    {
-      "name": "--reject",
-      "description": "Comma-separated list of rejected extensions",
-      "args": {
-        "name": "list"
-      }
-    },
-    {
-      "name": "--accept-regex",
-      "description": "Regex matching accepted URLs",
-      "args": {
-        "name": "regex"
-      }
-    },
-    {
-      "name": "--reject-regex",
-      "description": "Regex matching rejected URLs",
-      "args": {
-        "name": "regex"
-      }
-    },
-    {
-      "name": "--regex-type",
-      "description": "Regex type (posix|pcre)",
-      "args": {
-        "name": "type"
-      }
-    },
-    {
-      "name": "-D"
-    },
-    {
-      "name": "--domains",
-      "description": "Comma-separated list of accepted domains",
-      "args": {
-        "name": "list"
-      }
-    },
-    {
-      "name": "--exclude-domains",
-      "description": "Comma-separated list of rejected domains",
-      "args": {
-        "name": "list"
-      }
-    },
-    {
-      "name": "--follow-ftp",
-      "description": "Follow FTP links from HTML documents"
-    },
-    {
-      "name": "--follow-tags",
-      "description": "Comma-separated list of followed HTML tags",
-      "args": {
-        "name": "list"
-      }
-    },
-    {
-      "name": "--ignore-tags",
-      "description": "Comma-separated list of ignored HTML tags",
-      "args": {
-        "name": "list"
-      }
-    },
-    {
-      "name": "-H"
-    },
-    {
-      "name": "--span-hosts",
-      "description": "Go to foreign hosts when recursive"
-    },
-    {
-      "name": "-L"
-    },
-    {
-      "name": "--relative",
-      "description": "Follow relative links only"
-    },
-    {
-      "name": "-I"
-    },
-    {
-      "name": "--include-directories",
-      "description": "List of allowed directories",
-      "args": {
-        "name": "list"
-      }
-    },
-    {
-      "name": "--trust-server-names",
-      "description": "Use the name specified by the redirection URL's last component"
-    },
-    {
-      "name": "-X"
-    },
-    {
-      "name": "--exclude-directories",
-      "description": "List of excluded directories",
-      "args": {
-        "name": "list"
-      }
-    },
-    {
-      "name": [
-        "-np",
-        "--no-parent"
-      ],
-      "description": "Don't ascend to the parent directory"
-    }
-  ],
-  "args": {
-    "name": "url",
-    "isVariadic": true
+ "name": "wget",
+ "description": "Download files from the web",
+ "options": [
+  {
+   "name": "-V",
+   "description": "Version display the version of Wget and exit"
+  },
+  {
+   "name": "-h",
+   "description": "Help print this help"
+  },
+  {
+   "name": "-b",
+   "description": "Background go to background after startup"
+  },
+  {
+   "name": "-e",
+   "description": "Execute=COMMAND execute a `.wgetrc'-style command"
+  },
+  {
+   "name": "-o",
+   "description": "Output-file=FILE log messages to FILE"
+  },
+  {
+   "name": "-a",
+   "description": "Append-output=FILE append messages to FILE"
+  },
+  {
+   "name": "-d",
+   "description": "Debug print lots of debugging information"
+  },
+  {
+   "name": "-q",
+   "description": "Quiet quiet (no output)"
+  },
+  {
+   "name": "-v",
+   "description": "Verbose be verbose (this is the default)"
+  },
+  {
+   "name": [
+    "-nv",
+    "--no-verbose"
+   ],
+   "description": "Turn off verboseness, without being quiet"
+  },
+  {
+   "name": "--report-speed",
+   "description": "Output bandwidth as TYPE. TYPE can be bits",
+   "args": {
+    "name": "type"
+   }
+  },
+  {
+   "name": "-i",
+   "description": "Input-file=FILE download URLs found in local or external FILE"
+  },
+  {
+   "name": "-F",
+   "description": "Force-html treat input file as HTML"
+  },
+  {
+   "name": "-B",
+   "description": "Base=URL resolves HTML input-file links (-i -F) relative to URL --config=FILE specify config file to use --no-config do not read any config file --rejected-log=FILE log reasons for URL rejection to FILE"
+  },
+  {
+   "name": "--config",
+   "description": "Specify config file to use",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--no-config",
+   "description": "Do not read any config file"
+  },
+  {
+   "name": "--rejected-log",
+   "description": "Log reasons for URL rejection to FILE",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "-t",
+   "description": "Tries=NUMBER set number of retries to NUMBER (0 unlimits) --retry-connrefused retry even if connection is refused --retry-on-host-error consider host errors as non-fatal, transient errors --retry-on-http-error=ERRORS comma-separated list of HTTP errors to retry"
+  },
+  {
+   "name": "--retry-connrefused",
+   "description": "Retry even if connection is refused"
+  },
+  {
+   "name": "--retry-on-host-error",
+   "description": "Consider host errors as non-fatal, transient errors"
+  },
+  {
+   "name": "--retry-on-http-error",
+   "description": "Comma-separated list of HTTP errors to retry",
+   "args": {
+    "name": "errors"
+   }
+  },
+  {
+   "name": "-O",
+   "description": "Output-document=FILE write documents to FILE"
+  },
+  {
+   "name": [
+    "-nc",
+    "--no-clobber"
+   ],
+   "description": "Skip downloads that would download to existing files (overwriting them)"
+  },
+  {
+   "name": "--no-netrc",
+   "description": "Don't try to obtain credentials from .netrc"
+  },
+  {
+   "name": "-c",
+   "description": "Continue resume getting a partially-downloaded file --start-pos=OFFSET start downloading from zero-based position OFFSET --progress=TYPE select progress gauge type --show-progress display the progress bar in any verbosity mode"
+  },
+  {
+   "name": "--start-pos",
+   "description": "Start downloading from zero-based position OFFSET",
+   "args": {
+    "name": "offset"
+   }
+  },
+  {
+   "name": "--progress",
+   "description": "Select progress gauge type",
+   "args": {
+    "name": "type"
+   }
+  },
+  {
+   "name": "--show-progress",
+   "description": "Display the progress bar in any verbosity mode"
+  },
+  {
+   "name": "-N",
+   "description": "Timestamping don't re-retrieve files unless newer than local --no-if-modified-since don't use conditional if-modified-since get requests in timestamping mode --no-use-server-timestamps don't set the local file's timestamp by the one on the server"
+  },
+  {
+   "name": "--no-if-modified-since",
+   "description": "Don't use conditional if-modified-since get requests in timestamping mode"
+  },
+  {
+   "name": "--no-use-server-timestamps",
+   "description": "Don't set the local file's timestamp by the one on the server"
+  },
+  {
+   "name": "-S",
+   "description": "Server-response print server response --spider don't download anything"
+  },
+  {
+   "name": "--spider",
+   "description": "Don't download anything"
+  },
+  {
+   "name": "-T",
+   "description": "Timeout=SECONDS set all timeout values to SECONDS --dns-timeout=SECS set the DNS lookup timeout to SECS --connect-timeout=SECS set the connect timeout to SECS --read-timeout=SECS set the read timeout to SECS"
+  },
+  {
+   "name": "--dns-timeout",
+   "description": "Set the DNS lookup timeout to SECS",
+   "args": {
+    "name": "secs"
+   }
+  },
+  {
+   "name": "--connect-timeout",
+   "description": "Set the connect timeout to SECS",
+   "args": {
+    "name": "secs"
+   }
+  },
+  {
+   "name": "--read-timeout",
+   "description": "Set the read timeout to SECS",
+   "args": {
+    "name": "secs"
+   }
+  },
+  {
+   "name": "-w",
+   "description": "Wait=SECONDS wait SECONDS between retrievals (applies if more then 1 URL is to be retrieved) --waitretry=SECONDS wait 1..SECONDS between retries of a retrieval (applies if more then 1 URL is to be retrieved) --random-wait wait from 0.5*WAIT...1.5*WAIT secs between retrievals (applies if more then 1 URL is to be retrieved) --no-proxy explicitly turn off proxy"
+  },
+  {
+   "name": "--waitretry",
+   "description": "Wait 1..SECONDS between retries of a retrieval (applies if more then 1 URL is to be retrieved)",
+   "args": {
+    "name": "seconds"
+   }
+  },
+  {
+   "name": "--random-wait",
+   "description": "Wait from 0.5*WAIT...1.5*WAIT secs between retrievals (applies if more then 1 URL is to be retrieved)"
+  },
+  {
+   "name": "--no-proxy",
+   "description": "Explicitly turn off proxy"
+  },
+  {
+   "name": "-Q",
+   "description": "Quota=NUMBER set retrieval quota to NUMBER --bind-address=ADDRESS bind to ADDRESS (hostname or IP) on local host --limit-rate=RATE limit download rate to RATE --no-dns-cache disable caching DNS lookups --restrict-file-names=OS restrict chars in file names to ones OS allows --ignore-case ignore case when matching files/directories"
+  },
+  {
+   "name": "--bind-address",
+   "description": "Bind to ADDRESS (hostname or IP) on local host",
+   "args": {
+    "name": "address"
+   }
+  },
+  {
+   "name": "--limit-rate",
+   "description": "Limit download rate to RATE",
+   "args": {
+    "name": "rate"
+   }
+  },
+  {
+   "name": "--no-dns-cache",
+   "description": "Disable caching DNS lookups"
+  },
+  {
+   "name": "--restrict-file-names",
+   "description": "Restrict chars in file names to ones OS allows",
+   "args": {
+    "name": "os"
+   }
+  },
+  {
+   "name": "--ignore-case",
+   "description": "Ignore case when matching files/directories"
+  },
+  {
+   "name": "-4",
+   "description": "Inet4-only connect only to IPv4 addresses"
+  },
+  {
+   "name": "-6",
+   "description": "Inet6-only connect only to IPv6 addresses --prefer-family=FAMILY connect first to addresses of specified family, one of IPv6, IPv4, or none --user=USER set both ftp and http user to USER --password=PASS set both ftp and http password to PASS --ask-password prompt for passwords --use-askpass=COMMAND specify credential handler for requesting username and password"
+  },
+  {
+   "name": "--prefer-family",
+   "description": "Connect first to addresses of specified family, one of IPv6, IPv4, or none",
+   "args": {
+    "name": "family"
+   }
+  },
+  {
+   "name": "--user",
+   "description": "Set both ftp and http user to USER",
+   "args": {
+    "name": "user"
+   }
+  },
+  {
+   "name": "--password",
+   "description": "Set both ftp and http password to PASS",
+   "args": {
+    "name": "pass"
+   }
+  },
+  {
+   "name": "--ask-password",
+   "description": "Prompt for passwords"
+  },
+  {
+   "name": "--use-askpass",
+   "description": "Specify credential handler for requesting username and password",
+   "args": {
+    "name": "command"
+   }
+  },
+  {
+   "name": "--no-iri",
+   "description": "Turn off IRI support"
+  },
+  {
+   "name": "--local-encoding",
+   "description": "Use ENC as the local encoding for IRIs",
+   "args": {
+    "name": "enc"
+   }
+  },
+  {
+   "name": "--remote-encoding",
+   "description": "Use ENC as the default remote encoding",
+   "args": {
+    "name": "enc"
+   }
+  },
+  {
+   "name": "--unlink",
+   "description": "Remove file before clobber"
+  },
+  {
+   "name": "--xattr",
+   "description": "Turn on storage of metadata in extended file attributes"
+  },
+  {
+   "name": [
+    "-nd",
+    "--no-directories"
+   ],
+   "description": "Don't create directories"
+  },
+  {
+   "name": "-x",
+   "description": "Force-directories force creation of directories"
+  },
+  {
+   "name": [
+    "-nH",
+    "--no-host-directories"
+   ],
+   "description": "Don't create host directories"
+  },
+  {
+   "name": "--protocol-directories",
+   "description": "Use protocol name in directories"
+  },
+  {
+   "name": "-P",
+   "description": "Directory-prefix=PREFIX save files to PREFIX/.. --cut-dirs=NUMBER ignore NUMBER remote directory components"
+  },
+  {
+   "name": "--cut-dirs",
+   "description": "Ignore NUMBER remote directory components",
+   "args": {
+    "name": "number"
+   }
+  },
+  {
+   "name": "--http-user",
+   "description": "Set http user to USER",
+   "args": {
+    "name": "user"
+   }
+  },
+  {
+   "name": "--http-password",
+   "description": "Set http password to PASS",
+   "args": {
+    "name": "pass"
+   }
+  },
+  {
+   "name": "--no-cache",
+   "description": "Disallow server-cached data"
+  },
+  {
+   "name": "--default-page",
+   "description": "Change the default page name (normally this is 'index.html'.)",
+   "args": {
+    "name": "name"
+   }
+  },
+  {
+   "name": "-E",
+   "description": "Adjust-extension save HTML/CSS documents with proper extensions --ignore-length ignore 'Content-Length' header field --header=STRING insert STRING among the headers --compression=TYPE choose compression, one of auto, gzip and none. (default: none) --max-redirect maximum redirections allowed per page --proxy-user=USER set USER as proxy username --proxy-password=PASS set PASS as proxy password --referer=URL include 'Referer: URL' header in HTTP request --save-headers save the HTTP headers to file"
+  },
+  {
+   "name": "--ignore-length",
+   "description": "Ignore 'Content-Length' header field"
+  },
+  {
+   "name": "--header",
+   "description": "Insert STRING among the headers",
+   "args": {
+    "name": "string"
+   }
+  },
+  {
+   "name": "--compression",
+   "description": "Choose compression, one of auto, gzip and none. (default: none)",
+   "args": {
+    "name": "type"
+   }
+  },
+  {
+   "name": "--max-redirect",
+   "description": "Maximum redirections allowed per page"
+  },
+  {
+   "name": "--proxy-user",
+   "description": "Set USER as proxy username",
+   "args": {
+    "name": "user"
+   }
+  },
+  {
+   "name": "--proxy-password",
+   "description": "Set PASS as proxy password",
+   "args": {
+    "name": "pass"
+   }
+  },
+  {
+   "name": "--referer",
+   "description": "Include 'Referer: URL' header in HTTP request",
+   "args": {
+    "name": "url"
+   }
+  },
+  {
+   "name": "--save-headers",
+   "description": "Save the HTTP headers to file"
+  },
+  {
+   "name": "-U",
+   "description": "User-agent=AGENT identify as AGENT instead of Wget/VERSION --no-http-keep-alive disable HTTP keep-alive (persistent connections) --no-cookies don't use cookies --load-cookies=FILE load cookies from FILE before session --save-cookies=FILE save cookies to FILE after session --keep-session-cookies load and save session (non-permanent) cookies --post-data=STRING use the POST method"
+  },
+  {
+   "name": "--no-http-keep-alive",
+   "description": "Disable HTTP keep-alive (persistent connections)"
+  },
+  {
+   "name": "--no-cookies",
+   "description": "Don't use cookies"
+  },
+  {
+   "name": "--load-cookies",
+   "description": "Load cookies from FILE before session",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--save-cookies",
+   "description": "Save cookies to FILE after session",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--keep-session-cookies",
+   "description": "Load and save session (non-permanent) cookies"
+  },
+  {
+   "name": "--post-data",
+   "description": "Use the POST method",
+   "args": {
+    "name": "string"
+   }
+  },
+  {
+   "name": "--post-file",
+   "description": "Use the POST method",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--method",
+   "description": "Use method \"HTTPMethod\" in the request",
+   "args": {
+    "name": "httpmethod"
+   }
+  },
+  {
+   "name": "--body-data",
+   "description": "Send STRING as data. --method MUST be set",
+   "args": {
+    "name": "string"
+   }
+  },
+  {
+   "name": "--body-file",
+   "description": "Send contents of FILE. --method MUST be set",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--content-disposition",
+   "description": "Honor the Content-Disposition header when choosing local file names (EXPERIMENTAL)"
+  },
+  {
+   "name": "--content-on-error",
+   "description": "Output the received content on server errors"
+  },
+  {
+   "name": "--auth-no-challenge",
+   "description": "Send Basic HTTP authentication information without first waiting for the server's challenge"
+  },
+  {
+   "name": "--secure-protocol",
+   "description": "Choose secure protocol, one of auto, SSLv2, SSLv3, TLSv1, TLSv1_1, TLSv1_2, TLSv1_3 and PFS",
+   "args": {
+    "name": "pr"
+   }
+  },
+  {
+   "name": "--https-only",
+   "description": "Only follow secure HTTPS links"
+  },
+  {
+   "name": "--no-check-certificate",
+   "description": "Don't validate the server's certificate"
+  },
+  {
+   "name": "--certificate",
+   "description": "Client certificate file",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--certificate-type",
+   "description": "Client certificate type, PEM or DER",
+   "args": {
+    "name": "type"
+   }
+  },
+  {
+   "name": "--private-key",
+   "description": "Private key file",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--private-key-type",
+   "description": "Private key type, PEM or DER",
+   "args": {
+    "name": "type"
+   }
+  },
+  {
+   "name": "--ca-certificate",
+   "description": "File with the bundle of CAs",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--ca-directory",
+   "description": "Directory where hash list of CAs is stored",
+   "args": {
+    "name": "dir",
+    "template": "folders"
+   }
+  },
+  {
+   "name": "--crl-file",
+   "description": "File with bundle of CRLs",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--pinnedpubkey",
+   "description": "Public key (PEM/DER) file, or any number of base64 encoded sha256 hashes preceded by 'sha256//' and separated by ';', to verify peer against",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--ciphers",
+   "description": "Set the priority string (GnuTLS) or cipher list string (OpenSSL) directly",
+   "args": {
+    "name": "str"
+   }
+  },
+  {
+   "name": "--no-hsts",
+   "description": "Disable HSTS"
+  },
+  {
+   "name": "--hsts-file",
+   "description": "Path of HSTS database (will override default)"
+  },
+  {
+   "name": "--ftp-user",
+   "description": "Set ftp user to USER",
+   "args": {
+    "name": "user"
+   }
+  },
+  {
+   "name": "--ftp-password",
+   "description": "Set ftp password to PASS",
+   "args": {
+    "name": "pass"
+   }
+  },
+  {
+   "name": "--no-remove-listing",
+   "description": "Don't remove '.listing' files"
+  },
+  {
+   "name": "--no-glob",
+   "description": "Turn off FTP file name globbing"
+  },
+  {
+   "name": "--no-passive-ftp",
+   "description": "Disable the \"passive\" transfer mode"
+  },
+  {
+   "name": "--preserve-permissions",
+   "description": "Preserve remote file permissions"
+  },
+  {
+   "name": "--retr-symlinks",
+   "description": "When recursing, get linked-to files (not dir)"
+  },
+  {
+   "name": "--ftps-implicit",
+   "description": "Use implicit FTPS (default port is 990)"
+  },
+  {
+   "name": "--ftps-resume-ssl",
+   "description": "Resume the SSL/TLS session started in the control connection when opening a data connection"
+  },
+  {
+   "name": "--ftps-clear-data-connection",
+   "description": "Cipher the control channel only"
+  },
+  {
+   "name": "--ftps-fallback-to-ftp",
+   "description": "Fall back to FTP if FTPS is not supported in the target server"
+  },
+  {
+   "name": "--warc-file",
+   "description": "Save request/response data to a .warc.gz file",
+   "args": {
+    "name": "filename",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--warc-header",
+   "description": "Insert STRING into the warcinfo record",
+   "args": {
+    "name": "string"
+   }
+  },
+  {
+   "name": "--warc-max-size",
+   "description": "Set maximum size of WARC files to NUMBER",
+   "args": {
+    "name": "number"
+   }
+  },
+  {
+   "name": "--warc-cdx",
+   "description": "Write CDX index files"
+  },
+  {
+   "name": "--warc-dedup",
+   "description": "Do not store records listed in this CDX file",
+   "args": {
+    "name": "filename",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--no-warc-compression",
+   "description": "Do not compress WARC files with GZIP"
+  },
+  {
+   "name": "--no-warc-digests",
+   "description": "Do not calculate SHA1 digests"
+  },
+  {
+   "name": "--no-warc-keep-log",
+   "description": "Do not store the log file in a WARC record"
+  },
+  {
+   "name": "--warc-tempdir",
+   "description": "Location for temporary files created by the WARC writer",
+   "args": {
+    "name": "directory",
+    "template": "folders"
+   }
+  },
+  {
+   "name": "-r",
+   "description": "Recursive specify recursive download"
+  },
+  {
+   "name": "-l",
+   "description": "Level=NUMBER maximum recursion depth (inf or 0 for infinite) --delete-after delete files locally after downloading them"
+  },
+  {
+   "name": "--delete-after",
+   "description": "Delete files locally after downloading them"
+  },
+  {
+   "name": "-k",
+   "description": "Convert-links make links in downloaded HTML or CSS point to local files --convert-file-only convert the file part of the URLs only (usually known as the basename) --backups=N before writing file X, rotate up to N backup files"
+  },
+  {
+   "name": "--convert-file-only",
+   "description": "Convert the file part of the URLs only (usually known as the basename)"
+  },
+  {
+   "name": "--backups",
+   "description": "Before writing file X, rotate up to N backup files",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": "-K",
+   "description": "Backup-converted before converting file X, back up as X.orig"
+  },
+  {
+   "name": "-m",
+   "description": "Mirror shortcut for -N -r -l inf --no-remove-listing"
+  },
+  {
+   "name": "-p",
+   "description": "Page-requisites get all images, etc. needed to display HTML page --strict-comments turn on strict (SGML) handling of HTML comments"
+  },
+  {
+   "name": "--strict-comments",
+   "description": "Turn on strict (SGML) handling of HTML comments"
+  },
+  {
+   "name": "-A",
+   "description": "Accept=LIST comma-separated list of accepted extensions"
+  },
+  {
+   "name": "-R",
+   "description": "Reject=LIST comma-separated list of rejected extensions --accept-regex=REGEX regex matching accepted URLs --reject-regex=REGEX regex matching rejected URLs --regex-type=TYPE regex type (posix|pcre)"
+  },
+  {
+   "name": "--accept-regex",
+   "description": "Regex matching accepted URLs",
+   "args": {
+    "name": "regex"
+   }
+  },
+  {
+   "name": "--reject-regex",
+   "description": "Regex matching rejected URLs",
+   "args": {
+    "name": "regex"
+   }
+  },
+  {
+   "name": "--regex-type",
+   "description": "Regex type (posix|pcre)",
+   "args": {
+    "name": "type"
+   }
+  },
+  {
+   "name": "-D",
+   "description": "Domains=LIST comma-separated list of accepted domains --exclude-domains=LIST comma-separated list of rejected domains --follow-ftp follow FTP links from HTML documents --follow-tags=LIST comma-separated list of followed HTML tags --ignore-tags=LIST comma-separated list of ignored HTML tags"
+  },
+  {
+   "name": "--exclude-domains",
+   "description": "Comma-separated list of rejected domains",
+   "args": {
+    "name": "list"
+   }
+  },
+  {
+   "name": "--follow-ftp",
+   "description": "Follow FTP links from HTML documents"
+  },
+  {
+   "name": "--follow-tags",
+   "description": "Comma-separated list of followed HTML tags",
+   "args": {
+    "name": "list"
+   }
+  },
+  {
+   "name": "--ignore-tags",
+   "description": "Comma-separated list of ignored HTML tags",
+   "args": {
+    "name": "list"
+   }
+  },
+  {
+   "name": "-H",
+   "description": "Span-hosts go to foreign hosts when recursive"
+  },
+  {
+   "name": "-L",
+   "description": "Relative follow relative links only"
+  },
+  {
+   "name": "-I",
+   "description": "Include-directories=LIST list of allowed directories --trust-server-names use the name specified by the redirection URL's last component"
+  },
+  {
+   "name": "--trust-server-names",
+   "description": "Use the name specified by the redirection URL's last component"
+  },
+  {
+   "name": "-X",
+   "description": "Exclude-directories=LIST list of excluded directories"
+  },
+  {
+   "name": [
+    "-np",
+    "--no-parent"
+   ],
+   "description": "Don't ascend to the parent directory"
   }
+ ],
+ "args": {
+  "name": "url",
+  "isVariadic": true
+ }
 }

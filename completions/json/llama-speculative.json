@@ -40,7 +40,7 @@
     "-tb",
     "--threads-batch"
    ],
-   "description": "Number of threads to use during batch and prompt processing (default: same as -…",
+   "description": "Number of threads to use during batch and prompt processing (default: same as --threads)",
    "args": {
     "name": "n"
    }
@@ -78,7 +78,7 @@
   },
   {
    "name": "--prio",
-   "description": "Set process/thread priority : low(-1), normal(0), medium(1), high(2), realtime(…",
+   "description": "Set process/thread priority : low(-1), normal(0), medium(1), high(2), realtime(3) (default: 0)",
    "args": {
     "name": "n"
    }
@@ -123,7 +123,7 @@
   },
   {
    "name": "--prio-batch",
-   "description": "Set process/thread priority : 0-normal, 1-medium, 2-high, 3-realtime (default:…",
+   "description": "Set process/thread priority : 0-normal, 1-medium, 2-high, 3-realtime (default: 0)",
    "args": {
     "name": "n"
    }
@@ -189,7 +189,7 @@
   },
   {
    "name": "--swa-full",
-   "description": "Use full-size SWA cache (default: false) [(more info)](https://github.com/ggml-…"
+   "description": "Use full-size SWA cache (default: false) [(more info)](https://github.com/ggml-org/llama.cpp/pull/13194#issuecomment-2868343055)"
   },
   {
    "name": [
@@ -347,7 +347,7 @@
     "-ctk",
     "--cache-type-k"
    ],
-   "description": "KV cache data type for K allowed values: f32, f16, bf16, q8_0, q4_0, q4_1, iq4_…",
+   "description": "KV cache data type for K allowed values: f32, f16, bf16, q8_0, q4_0, q4_1, iq4_nl, q5_0, q5_1 (default: f16)",
    "args": {
     "name": "type",
     "suggestions": [
@@ -368,7 +368,7 @@
     "-ctv",
     "--cache-type-v"
    ],
-   "description": "KV cache data type for V allowed values: f32, f16, bf16, q8_0, q4_0, q4_1, iq4_…",
+   "description": "KV cache data type for V allowed values: f32, f16, bf16, q8_0, q4_0, q4_1, iq4_nl, q5_0, q5_1 (default: f16)",
    "args": {
     "name": "type",
     "suggestions": [
@@ -416,7 +416,7 @@
     "-lm",
     "--load-mode"
    ],
-   "description": "Model loading mode (default: auto) - auto: mmap, unless a device does not suppo…",
+   "description": "Model loading mode (default: auto) - auto: mmap, unless a device does not support it - none: no special loading mode - mmap: memory-map model (if mmap disabled, slower load but may reduce pageouts if not using mlock) - mlock: force system to keep model in RAM rather than swapping or compressing - mmap+mlock: mmap + force system to keep model in RAM rather than swapping or compressing - dio: use DirectIO if available",
    "args": {
     "name": "mode"
    }
@@ -426,14 +426,14 @@
     "-lzm",
     "--lazy-mode"
    ],
-   "description": "On-demand reading of certain tensors, for example per-layer embeddings (default…",
+   "description": "On-demand reading of certain tensors, for example per-layer embeddings (default: auto) - on: read the rows of such tensors from disk on demand instead of keeping them resident (requires mmap) - auto: on, but only for tensors larger than 4 GiB - off: always keep them resident",
    "args": {
     "name": "mode"
    }
   },
   {
    "name": "--numa",
-   "description": "Attempt optimizations that help on some NUMA systems - distribute: spread execu…",
+   "description": "Attempt optimizations that help on some NUMA systems - distribute: spread execution evenly over all nodes - isolate: only spawn threads on CPUs on the node that execution started on - numactl: use the CPU map provided by numactl if run without this previously, it is recommended to drop the system page cache before using this see https://github.com/ggml-org/llama.cpp/issues/1437",
    "args": {
     "name": "type"
    }
@@ -443,7 +443,7 @@
     "-dev",
     "--device"
    ],
-   "description": "Comma-separated list of devices to use for offloading (none = don't offload) us…",
+   "description": "Comma-separated list of devices to use for offloading (none = don't offload) use --list-devices to see a list of available devices",
    "args": {
     "name": "dev1"
    }
@@ -495,7 +495,7 @@
     "--gpu-layers",
     "--n-gpu-layers"
    ],
-   "description": "Max. number of layers to store in VRAM, either an exact number, 'auto', or 'all…",
+   "description": "Max. number of layers to store in VRAM, either an exact number, 'auto', or 'all' (default: auto)",
    "args": {
     "name": "n"
    }
@@ -505,7 +505,7 @@
     "-sm",
     "--split-mode"
    ],
-   "description": "How to split the model across multiple GPUs, one of: - none: use one GPU only -…",
+   "description": "How to split the model across multiple GPUs, one of: - none: use one GPU only - layer (default): split layers and KV across GPUs (pipelined) - row: split weight across GPUs by rows (parallelized) - tensor: split weights and KV across GPUs (parallelized, EXPERIMENTAL)",
    "args": {
     "name": "value",
     "suggestions": [
@@ -521,7 +521,7 @@
     "-ts",
     "--tensor-split"
    ],
-   "description": "Fraction of the model to offload to each GPU, comma-separated list of proportio…",
+   "description": "Fraction of the model to offload to each GPU, comma-separated list of proportions, e.g. 3,1",
    "args": {
     "name": "n0"
    }
@@ -531,7 +531,7 @@
     "-mg",
     "--main-gpu"
    ],
-   "description": "The GPU to use for the model (with split-mode = none), or for intermediate resu…",
+   "description": "The GPU to use for the model (with split-mode = none), or for intermediate results and KV (with split-mode = row) (default: 0)",
    "args": {
     "name": "index"
    }
@@ -541,7 +541,7 @@
     "-fit",
     "--fit"
    ],
-   "description": "Whether to adjust unset arguments to fit in device memory ('on' or 'off', defau…",
+   "description": "Whether to adjust unset arguments to fit in device memory ('on' or 'off', default: 'on')",
    "args": {
     "name": "value",
     "suggestions": [
@@ -555,7 +555,7 @@
     "-fitt",
     "--fit-target"
    ],
-   "description": "Target margin per device for --fit, comma-separated list of values, single valu…",
+   "description": "Target margin per device for --fit, comma-separated list of values, single value is broadcast across all devices, default: 1024",
    "args": {
     "name": "mib0"
    }
@@ -576,7 +576,7 @@
   },
   {
    "name": "--override-kv",
-   "description": "Advanced option to override model metadata by key. to specify multiple override…"
+   "description": "Advanced option to override model metadata by key. to specify multiple overrides, either use comma-separated values. types: int, float, bool, str. example: --override-kv tokenizer.ggml.add_bos_token=bool:false,tokenizer.ggml.add_eos_token=bool:false"
   },
   {
    "name": [
@@ -595,7 +595,7 @@
   },
   {
    "name": "--lora-scaled",
-   "description": "Path to LoRA adapter with user defined scaling (format: FNAME:SCALE,...) note:…",
+   "description": "Path to LoRA adapter with user defined scaling (format: FNAME:SCALE,...) note: use comma-separated values",
    "args": {
     "name": "file[:scale]",
     "template": "filepaths"
@@ -603,7 +603,7 @@
   },
   {
    "name": "--control-vector",
-   "description": "Add a control vector note: use comma-separated values to add multiple control v…",
+   "description": "Add a control vector note: use comma-separated values to add multiple control vectors",
    "args": {
     "name": "fname",
     "template": "filepaths"
@@ -611,7 +611,7 @@
   },
   {
    "name": "--control-vector-scaled",
-   "description": "Add a control vector with user defined scaling SCALE note: use comma-separated…",
+   "description": "Add a control vector with user defined scaling SCALE note: use comma-separated values (format: FNAME:SCALE,...)",
    "args": {
     "name": "fname",
     "template": "filepaths"
@@ -650,7 +650,7 @@
     "-dr",
     "--docker-repo"
    ],
-   "description": "Docker Hub model repository. repo is optional, default to ai/. quant is optiona…"
+   "description": "Docker Hub model repository. repo is optional, default to ai/. quant is optional, default to :latest. example: gemma3 (default: unused)"
   },
   {
    "name": [
@@ -701,11 +701,11 @@
     "--log-jsonl",
     "--no-log-jsonl"
    ],
-   "description": "Log as JSONL (one JSON object per line) to stdout, this also disables colored l…"
+   "description": "Log as JSONL (one JSON object per line) to stdout, this also disables colored logging (default: disabled)"
   },
   {
    "name": "--log-colors",
-   "description": "Set colored logging ('on', 'off', or 'auto', default: 'auto') 'auto' enables co…",
+   "description": "Set colored logging ('on', 'off', or 'auto', default: 'auto') 'auto' enables colors when output is to a terminal",
    "args": {
     "name": "value",
     "suggestions": [
@@ -758,7 +758,7 @@
     "-ctkd",
     "--cache-type-k-draft"
    ],
-   "description": "KV cache data type for K for the draft model allowed values: f32, f16, bf16, q8…",
+   "description": "KV cache data type for K for the draft model allowed values: f32, f16, bf16, q8_0, q4_0, q4_1, iq4_nl, q5_0, q5_1 (default: f16)",
    "args": {
     "name": "type",
     "suggestions": [
@@ -780,7 +780,7 @@
     "-ctvd",
     "--cache-type-v-draft"
    ],
-   "description": "KV cache data type for V for the draft model allowed values: f32, f16, bf16, q8…",
+   "description": "KV cache data type for V for the draft model allowed values: f32, f16, bf16, q8_0, q4_0, q4_1, iq4_nl, q5_0, q5_1 (default: f16)",
    "args": {
     "name": "type",
     "suggestions": [
@@ -798,7 +798,7 @@
   },
   {
    "name": "--samplers",
-   "description": "Samplers that will be used for generation in the order, separated by ';' (defau…",
+   "description": "Samplers that will be used for generation in the order, separated by ';' (default: penalties;dry;top_n_sigma;top_k;typ_p;top_p;min_p;xtc;temperature)",
    "args": {
     "name": "samplers"
    }
@@ -825,7 +825,7 @@
   },
   {
    "name": "--ignore-eos",
-   "description": "Ignore end of stream token and continue generating (implies --logit-bias EOS-in…"
+   "description": "Ignore end of stream token and continue generating (implies --logit-bias EOS-inf)"
   },
   {
    "name": [
@@ -950,7 +950,7 @@
   },
   {
    "name": "--dry-sequence-breaker",
-   "description": "Add sequence breaker for DRY sampling, clearing out default breakers ('\\n', ':'…",
+   "description": "Add sequence breaker for DRY sampling, clearing out default breakers ('\\n', ':', '\"', '*') in the process",
    "args": {
     "name": "string"
    }
@@ -964,7 +964,7 @@
   },
   {
    "name": "--adaptive-decay",
-   "description": "Adaptive-p: decay rate for target adaptation over time. lower values are more r…",
+   "description": "Adaptive-p: decay rate for target adaptation over time. lower values are more reactive, higher values are more stable. (valid range 0.0 to 0.99) (default: 0.90)",
    "args": {
     "name": "n"
    }
@@ -1009,7 +1009,7 @@
     "-l",
     "--logit-bias"
    ],
-   "description": "Modifies the likelihood of token appearing in the completion, i.e. `--logit-bia…"
+   "description": "Modifies the likelihood of token appearing in the completion, i.e. `--logit-bias 15043+1` to increase likelihood of token ' Hello', or `--logit-bias 15043-1` to decrease likelihood of token ' Hello'"
   },
   {
    "name": "--grammar",
@@ -1031,7 +1031,7 @@
     "-j",
     "--json-schema"
    ],
-   "description": "JSON schema to constrain generations (https://json-schema.org/), e.g. `{\"type\":…",
+   "description": "JSON schema to constrain generations (https://json-schema.org/), e.g. `{\"type\": \"object\"}` for any JSON object",
    "args": {
     "name": "schema"
    }
@@ -1041,7 +1041,7 @@
     "-jf",
     "--json-schema-file"
    ],
-   "description": "File containing a JSON schema to constrain generations (https://json-schema.org…",
+   "description": "File containing a JSON schema to constrain generations (https://json-schema.org/), e.g. `{\"type\": \"object\"}` for any JSON object",
    "args": {
     "name": "file",
     "template": "filepaths"
@@ -1083,7 +1083,7 @@
     "-tbd",
     "--threads-batch-draft"
    ],
-   "description": "Number of threads to use during batch and prompt processing (default: same as -…",
+   "description": "Number of threads to use during batch and prompt processing (default: same as --threads-draft)",
    "args": {
     "name": "n"
    }
@@ -1129,7 +1129,7 @@
     "--spec-draft-prio",
     "--prio-draft"
    ],
-   "description": "Set draft process/thread priority : 0-normal, 1-medium, 2-high, 3-realtime (def…",
+   "description": "Set draft process/thread priority : 0-normal, 1-medium, 2-high, 3-realtime (default: 0)",
    "args": {
     "name": "n"
    }
@@ -1189,7 +1189,7 @@
     "--spec-draft-prio-batch",
     "--prio-batch-draft"
    ],
-   "description": "Set draft process/thread priority : 0-normal, 1-medium, 2-high, 3-realtime (def…",
+   "description": "Set draft process/thread priority : 0-normal, 1-medium, 2-high, 3-realtime (default: 0)",
    "args": {
     "name": "n"
    }
@@ -1234,7 +1234,7 @@
     "-ncmoed",
     "--n-cpu-moe-draft"
    ],
-   "description": "Keep the Mixture of Experts (MoE) weights of the first N layers in the CPU for…",
+   "description": "Keep the Mixture of Experts (MoE) weights of the first N layers in the CPU for the draft model",
    "args": {
     "name": "n"
    }
@@ -1282,7 +1282,7 @@
   },
   {
    "name": "--spec-draft-sampling",
-   "description": "How the draft is sampled: greedy takes its argmax, probabilistic samples it and…",
+   "description": "How the draft is sampled: greedy takes its argmax, probabilistic samples it and has the target verify by rejection sampling (default: greedy)",
    "args": {
     "name": "value",
     "suggestions": [
@@ -1297,7 +1297,7 @@
     "-devd",
     "--device-draft"
    ],
-   "description": "Comma-separated list of devices to use for offloading the draft model (none = d…",
+   "description": "Comma-separated list of devices to use for offloading the draft model (none = don't offload, default: follows --device) use --list-devices to see a list of available devices",
    "args": {
     "name": "dev1"
    }
@@ -1309,7 +1309,7 @@
     "--gpu-layers-draft",
     "--n-gpu-layers-draft"
    ],
-   "description": "Max. number of draft model layers to store in VRAM, either an exact number, 'au…",
+   "description": "Max. number of draft model layers to store in VRAM, either an exact number, 'auto', or 'all' (default: auto)",
    "args": {
     "name": "n"
    }
@@ -1335,14 +1335,14 @@
   },
   {
    "name": "--spec-ngram-mod-n-min",
-   "description": "Minimum number of ngram tokens to use for ngram-based speculative decoding (def…",
+   "description": "Minimum number of ngram tokens to use for ngram-based speculative decoding (default: 48)",
    "args": {
     "name": "n"
    }
   },
   {
    "name": "--spec-ngram-mod-n-max",
-   "description": "Maximum number of ngram tokens to use for ngram-based speculative decoding (def…",
+   "description": "Maximum number of ngram tokens to use for ngram-based speculative decoding (default: 64)",
    "args": {
     "name": "n"
    }
@@ -1356,14 +1356,14 @@
   },
   {
    "name": "--spec-ngram-simple-size-n",
-   "description": "Ngram size N for ngram-simple speculative decoding, length of lookup n-gram (de…",
+   "description": "Ngram size N for ngram-simple speculative decoding, length of lookup n-gram (default: 12)",
    "args": {
     "name": "n"
    }
   },
   {
    "name": "--spec-ngram-simple-size-m",
-   "description": "Ngram size M for ngram-simple speculative decoding, length of draft m-gram (def…",
+   "description": "Ngram size M for ngram-simple speculative decoding, length of draft m-gram (default: 48)",
    "args": {
     "name": "n"
    }
@@ -1377,14 +1377,14 @@
   },
   {
    "name": "--spec-ngram-map-k-size-n",
-   "description": "Ngram size N for ngram-map-k speculative decoding, length of lookup n-gram (def…",
+   "description": "Ngram size N for ngram-map-k speculative decoding, length of lookup n-gram (default: 12)",
    "args": {
     "name": "n"
    }
   },
   {
    "name": "--spec-ngram-map-k-size-m",
-   "description": "Ngram size M for ngram-map-k speculative decoding, length of draft m-gram (defa…",
+   "description": "Ngram size M for ngram-map-k speculative decoding, length of draft m-gram (default: 48)",
    "args": {
     "name": "n"
    }
@@ -1398,14 +1398,14 @@
   },
   {
    "name": "--spec-ngram-map-k4v-size-n",
-   "description": "Ngram size N for ngram-map-k4v speculative decoding, length of lookup n-gram (d…",
+   "description": "Ngram size N for ngram-map-k4v speculative decoding, length of lookup n-gram (default: 12)",
    "args": {
     "name": "n"
    }
   },
   {
    "name": "--spec-ngram-map-k4v-size-m",
-   "description": "Ngram size M for ngram-map-k4v speculative decoding, length of draft m-gram (de…",
+   "description": "Ngram size M for ngram-map-k4v speculative decoding, length of draft m-gram (default: 48)",
    "args": {
     "name": "n"
    }
@@ -1443,7 +1443,7 @@
     "-co",
     "--color"
    ],
-   "description": "Colorize output to distinguish prompt and user input from generations ('on', 'o…",
+   "description": "Colorize output to distinguish prompt and user input from generations ('on', 'off', or 'auto', default: 'auto') 'auto' enables colors when output is to a terminal",
    "args": {
     "name": "value",
     "suggestions": [

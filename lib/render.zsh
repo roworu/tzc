@@ -6,6 +6,7 @@ typeset -g __tzc_menu_text
 typeset -ga __tzc_menu_regions
 typeset -gi __tzc_menu_rows
 typeset -gi __tzc_prompt_cols=-1
+typeset -ga __tzc_wrapped
 
 __tzc_init_render() {
   emulate -L zsh
@@ -59,6 +60,38 @@ __tzc_measure_prompt() {
   return 0
 }
 
+# split text into lines no wider than $2; sets __tzc_wrapped
+__tzc_wrap_text() {
+  emulate -L zsh
+  setopt localoptions noglob
+  local text=$1 width=$2
+  local -a words lines
+  local word line=
+  local IFS=$' \t\n'
+  (( width < 1 )) && width=1
+  words=( ${=text} )
+  for word in "${words[@]}"; do
+    if (( ${#word} > width )); then
+      [[ -n $line ]] && { lines+=("$line"); line= }
+      while (( ${#word} > width )); do
+        lines+=("${word[1,width]}")
+        word=${word[width+1,-1]}
+      done
+      line=$word
+    elif [[ -z $line ]]; then
+      line=$word
+    elif (( ${#line} + 1 + ${#word} <= width )); then
+      line+=" $word"
+    else
+      lines+=("$line")
+      line=$word
+    fi
+  done
+  [[ -n $line ]] && lines+=("$line")
+  __tzc_wrapped=("${lines[@]}")
+  return 0
+}
+
 # build __tzc_menu_text and __tzc_menu_regions for the current candidate list.
 # $1 is the offset of the leading newline in BUFFER+POSTDISPLAY (i.e. #BUFFER);
 # $2 is the display width of BUFFER up to CURSOR.
@@ -76,14 +109,65 @@ __tzc_render_menu() {
   local columns=${COLUMNS:-80} lines=${LINES:-24}
   (( columns < 1 )) && columns=80
   (( lines < 5 )) && lines=24
-  local max_rows=${__tzc_max_rows:-10}
-  (( max_rows > lines - 3 )) && max_rows=$(( lines - 3 ))
-  (( max_rows < 1 )) && return 1
-  local rows=$total
-  (( rows > max_rows )) && rows=$max_rows
+
+  # width from every candidate and its description, not just the visible rows,
+  # so scrolling does not resize the box under the pointer
+  local maxw=0 rec w
+  local -a f
+  for rec in "${__tzc_candidates[@]}"; do
+    IFS=$'\x1f' f=( ${=rec} )
+    w=$(( 3 + ${#f[1]} ))
+    (( ${#f[3]} + 1 > w )) && w=$(( ${#f[3]} + 1 ))
+    (( w > maxw )) && maxw=$w
+  done
+
   local top=${__tzc_top:-0} sel=${__tzc_selected:-0}
   (( sel < 0 )) && sel=0
   (( sel >= total )) && sel=$(( total - 1 ))
+
+  local inner=$(( maxw + 1 ))
+  local prompt_cols=${__tzc_prompt_cols:-0}
+  (( prompt_cols < 0 )) && prompt_cols=0
+  local indent=$(( ( prompt_cols + cursor_col ) % columns ))
+  # shift left near the right edge; keep the last column empty so zle never
+  # wraps a menu line
+  (( indent > columns - 13 )) && indent=$(( columns > 13 ? columns - 13 : 0 ))
+  local avail=$(( columns - 3 - indent ))
+  if (( avail < 10 )); then
+    indent=0
+    avail=$(( columns - 3 ))
+  fi
+  (( avail < 10 )) && return 1
+  (( inner > avail )) && inner=$avail
+
+  # wrap the selected description to the box interior; its line count changes
+  # the menu height
+  IFS=$'\x1f' f=( ${=__tzc_candidates[sel+1]} )
+  local -a desc_lines
+  if [[ -n ${f[3]} ]]; then
+    __tzc_wrap_text "${f[3]}" $(( inner - 1 ))
+    desc_lines=("${__tzc_wrapped[@]}")
+  fi
+  local desc_extra=0
+  if (( ${#desc_lines} )); then
+    local max_desc_lines=$(( lines - 5 ))
+    (( max_desc_lines < 1 )) && max_desc_lines=1
+    if (( ${#desc_lines} > max_desc_lines )); then
+      desc_lines=("${(@)desc_lines[1,max_desc_lines]}")
+      if (( ${#desc_lines[-1]} < inner - 1 )); then
+        desc_lines[-1]+="…"
+      else
+        desc_lines[-1]="${desc_lines[-1][1,inner-2]}…"
+      fi
+    fi
+    desc_extra=$(( 1 + ${#desc_lines} ))
+  fi
+
+  local max_rows=${__tzc_max_rows:-10}
+  (( max_rows > lines - 3 - desc_extra )) && max_rows=$(( lines - 3 - desc_extra ))
+  (( max_rows < 1 )) && return 1
+  local rows=$total
+  (( rows > max_rows )) && rows=$max_rows
   (( top < 0 )) && top=0
   (( top > total - rows )) && top=$(( total - rows ))
   (( sel < top )) && top=$sel
@@ -91,33 +175,9 @@ __tzc_render_menu() {
   __tzc_top=$top
   __tzc_menu_rows=$rows
 
-  # width from every candidate, not just the visible rows, so scrolling does
-  # not resize the box under the pointer
-  local maxw=0 rec w
-  local -a f
-  for rec in "${__tzc_candidates[@]}"; do
-    IFS=$'\x1f' f=( ${=rec} )
-    w=$(( 3 + ${#f[1]} ))
-    [[ -n ${f[3]} ]] && w=$(( w + 2 + ${#f[3]} ))
-    (( w > maxw )) && maxw=$w
-  done
-  local inner=$(( maxw + 1 ))
-  local prompt_cols=${__tzc_prompt_cols:-0}
-  (( prompt_cols < 0 )) && prompt_cols=0
-  local indent=$(( ( prompt_cols + cursor_col ) % columns ))
-  # shift left near the right edge so the box still fits on screen
-  (( indent > columns - 12 )) && indent=$(( columns > 12 ? columns - 12 : 0 ))
-  local avail=$(( columns - 2 - indent ))
-  if (( avail < 10 )); then
-    indent=0
-    avail=$(( columns - 2 ))
-  fi
-  (( avail < 10 )) && return 1
-  (( inner > avail )) && inner=$avail
-
-  local hbar='─' vbar='│' tl='┌' tr='┐' bl='└' br='┘'
+  local hbar='─' vbar='│' tl='┌' tr='┐' bl='└' br='┘' ml='├' mr='┤'
   if [[ ! -o multibyte ]]; then
-    hbar='-' vbar='|' tl='+' tr='+' bl='+' br='+'
+    hbar='-' vbar='|' tl='+' tr='+' bl='+' br='+' ml='+' mr='+'
   fi
   local bar= pad= i
   for ((i=0;i<inner;i++)); do bar+=$hbar; done
@@ -129,40 +189,30 @@ __tzc_render_menu() {
   menu+=$top_line
   pos+=${#top_line}
 
-  local r idx line content marker disp_label disp_desc
-  local -a row_start row_label_off row_label_len row_desc_off row_desc_len row_selected
+  local r idx line content marker disp_label
+  local -a row_start row_label_off row_label_len row_selected
   for ((r=1; r<=rows; r++)); do
     menu+=$'\n'
     (( pos++ ))
     idx=$(( top + r ))
     rec=${__tzc_candidates[idx]}
     IFS=$'\x1f' f=( ${=rec} )
-    local label=${f[1]} desc=${f[3]}
+    local label=${f[1]}
     marker='  '
     row_selected[r]=0
-    (( idx == sel + 1 )) && { marker='> '; row_selected[r]=1; }
-    local leading=" $marker$label"
+    (( idx == sel + 1 )) && { marker='> '; row_selected[r]=1 }
     disp_label=$label
-    disp_desc=$desc
-    if [[ -n $desc ]] && (( ${#leading} + 2 + ${#desc} <= inner )); then
-      content="$leading  $desc"
-    elif (( ${#leading} <= inner )); then
-      content=$leading
-      disp_desc=
-    else
-      disp_desc=
-      local avail=$(( inner - 3 ))
-      (( avail < 1 )) && avail=1
-      if (( ${#label} > avail )); then
-        if (( avail > 1 )); then
-          disp_label="${label[1,avail-1]}…"
-        else
-          disp_label="${label[1,avail]}"
-        fi
+    local label_avail=$(( inner - 3 ))
+    (( label_avail < 1 )) && label_avail=1
+    if (( ${#label} > label_avail )); then
+      if (( label_avail > 1 )); then
+        disp_label="${label[1,label_avail-1]}…"
+      else
+        disp_label="${label[1,label_avail]}"
       fi
-      content=" $marker$disp_label"
-      (( ${#content} > inner )) && content="${content[1,inner]}"
     fi
+    content=" $marker$disp_label"
+    (( ${#content} > inner )) && content="${content[1,inner]}"
     content=${(r:inner:: :)content}
     row_start[r]=$pos
     line="$pad$vbar$content$vbar"
@@ -170,14 +220,35 @@ __tzc_render_menu() {
     pos+=${#line}
     row_label_off[r]=$(( row_start[r] + indent + 4 ))
     row_label_len[r]=${#disp_label}
-    row_desc_off[r]=$(( row_start[r] + indent + 4 + ${#disp_label} + 2 ))
-    row_desc_len[r]=${#disp_desc}
   done
+
+  # selected description as a multi-line section inside the box
+  local -a desc_off desc_len
+  if (( ${#desc_lines} )); then
+    menu+=$'\n'
+    (( pos++ ))
+    local sep_line="$pad$ml$bar$mr"
+    menu+=$sep_line
+    pos+=${#sep_line}
+    local dl dl_content
+    for dl in "${desc_lines[@]}"; do
+      menu+=$'\n'
+      (( pos++ ))
+      desc_off+=($(( pos + indent + 2 )))
+      desc_len+=(${#dl})
+      dl_content=" $dl"
+      dl_content=${(r:inner:: :)dl_content}
+      line="$pad$vbar$dl_content$vbar"
+      menu+=$line
+      pos+=${#line}
+    done
+  fi
 
   menu+=$'\n'
   (( pos++ ))
   local bottom_line="$pad$bl$bar$br"
   menu+=$bottom_line
+  pos+=${#bottom_line}
 
   __tzc_menu_text=$menu
 
@@ -205,10 +276,12 @@ __tzc_render_menu() {
       __tzc_menu_regions+=(
         "${row_label_off[r]} $(( row_label_off[r] + row_label_len[r] )) $kindstyle memo=tzc"
       )
-    (( row_desc_len[r] )) &&
-      __tzc_menu_regions+=(
-        "${row_desc_off[r]} $(( row_desc_off[r] + row_desc_len[r] )) ${__tzc_palette[desc]} memo=tzc"
-      )
+  done
+  local di
+  for ((di=1; di<=${#desc_len}; di++)); do
+    __tzc_menu_regions+=(
+      "${desc_off[di]} $(( desc_off[di] + desc_len[di] )) ${__tzc_palette[desc]} memo=tzc"
+    )
   done
   return 0
 }
