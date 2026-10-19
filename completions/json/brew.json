@@ -1,0 +1,1173 @@
+{
+ "name": "brew",
+ "description": "Package manager for macOS and Linux",
+ "options": [
+  {
+   "name": [
+    "-h",
+    "--help"
+   ],
+   "description": "Show help for a command"
+  },
+  {
+   "name": [
+    "-v",
+    "--verbose"
+   ],
+   "description": "Print more details"
+  },
+  {
+   "name": [
+    "-q",
+    "--quiet"
+   ],
+   "description": "Print less"
+  },
+  {
+   "name": [
+    "-d",
+    "--debug"
+   ],
+   "description": "Display debugging information"
+  },
+  {
+   "name": "--version",
+   "description": "Show the Homebrew version"
+  },
+  {
+   "name": "--prefix",
+   "description": "Show the Homebrew installation prefix",
+   "args": {
+    "name": "formula",
+    "isOptional": true,
+    "template": "packages:brew"
+   }
+  },
+  {
+   "name": "--cellar",
+   "description": "Show the Homebrew Cellar path",
+   "args": {
+    "name": "formula",
+    "isOptional": true,
+    "template": "packages:brew"
+   }
+  },
+  {
+   "name": "--caskroom",
+   "description": "Show the Homebrew Caskroom path"
+  },
+  {
+   "name": "--repository",
+   "description": "Show the Homebrew repository path"
+  },
+  {
+   "name": "--cache",
+   "description": "Show the Homebrew cache path",
+   "args": {
+    "name": "formula",
+    "isOptional": true,
+    "template": "packages:brew"
+   }
+  },
+  {
+   "name": "--env",
+   "description": "Show the Homebrew build environment"
+  }
+ ],
+ "subcommands": [
+  {
+   "name": "install",
+   "description": "Install a formula or cask",
+   "priority": 80,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": [
+      "-f",
+      "--force"
+     ],
+     "description": "Install without checking for previously installed versions"
+    },
+    {
+     "name": [
+      "-n",
+      "--dry-run"
+     ],
+     "description": "Show what would be installed"
+    },
+    {
+     "name": [
+      "-v",
+      "--verbose"
+     ],
+     "description": "Print the verification and post-install steps"
+    },
+    {
+     "name": [
+      "-d",
+      "--debug"
+     ],
+     "description": "Open a debugging session if brewing fails"
+    },
+    {
+     "name": [
+      "-s",
+      "--build-from-source"
+     ],
+     "description": "Compile from source even if a bottle is available"
+    },
+    {
+     "name": "--force-bottle",
+     "description": "Install from a bottle if one exists"
+    },
+    {
+     "name": "--HEAD",
+     "description": "Install the HEAD version"
+    },
+    {
+     "name": "--only-dependencies",
+     "description": "Install dependencies but not the formula"
+    },
+    {
+     "name": "--include-test",
+     "description": "Install testing dependencies"
+    },
+    {
+     "name": "--keep-tmp",
+     "description": "Retain temporary files created during installation"
+    },
+    {
+     "name": "--display-times",
+     "description": "Print install times"
+    },
+    {
+     "name": "--ask",
+     "description": "Ask for confirmation before downloading"
+    },
+    {
+     "name": "--ignore-dependencies",
+     "description": "Skip installing dependencies"
+    },
+    {
+     "name": "--cc",
+     "description": "Compiler to use",
+     "args": {
+      "name": "compiler"
+     }
+    }
+   ]
+  },
+  {
+   "name": "reinstall",
+   "description": "Reinstall a formula or cask",
+   "priority": 73,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": [
+      "-f",
+      "--force"
+     ],
+     "description": "Reinstall without checking for previously installed versions"
+    },
+    {
+     "name": [
+      "-n",
+      "--dry-run"
+     ],
+     "description": "Show what would be reinstalled"
+    },
+    {
+     "name": [
+      "-v",
+      "--verbose"
+     ],
+     "description": "Print more details"
+    },
+    {
+     "name": [
+      "-d",
+      "--debug"
+     ],
+     "description": "Display debugging information"
+    }
+   ]
+  },
+  {
+   "name": [
+    "uninstall",
+    "remove",
+    "rm"
+   ],
+   "description": "Uninstall a formula or cask",
+   "priority": 78,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": [
+      "-f",
+      "--force"
+     ],
+     "description": "Uninstall without checking for dependents"
+    },
+    {
+     "name": "--zap",
+     "description": "Remove all files associated with a cask"
+    },
+    {
+     "name": "--ignore-dependencies",
+     "description": "Skip checking for dependents"
+    }
+   ]
+  },
+  {
+   "name": "upgrade",
+   "description": "Upgrade outdated formulae and casks",
+   "priority": 78,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": [
+      "-n",
+      "--dry-run"
+     ],
+     "description": "Show what would be upgraded"
+    },
+    {
+     "name": [
+      "-f",
+      "--force"
+     ],
+     "description": "Upgrade without checking for dependents"
+    },
+    {
+     "name": "--greedy",
+     "description": "Also upgrade casks with auto-update versions"
+    },
+    {
+     "name": "--greedy-latest",
+     "description": "Also upgrade casks with latest versions"
+    },
+    {
+     "name": "--fetch-HEAD",
+     "description": "Fetch the upstream repository to detect HEAD updates"
+    },
+    {
+     "name": [
+      "-v",
+      "--verbose"
+     ],
+     "description": "Print more details"
+    },
+    {
+     "name": [
+      "-d",
+      "--debug"
+     ],
+     "description": "Display debugging information"
+    },
+    {
+     "name": [
+      "-q",
+      "--quiet"
+     ],
+     "description": "Print less"
+    }
+   ]
+  },
+  {
+   "name": "update",
+   "description": "Fetch the newest version of Homebrew and all taps",
+   "priority": 74,
+   "options": [
+    {
+     "name": [
+      "-f",
+      "--force"
+     ],
+     "description": "Update even if the last update was recent"
+    },
+    {
+     "name": [
+      "-v",
+      "--verbose"
+     ],
+     "description": "Print more details"
+    },
+    {
+     "name": [
+      "-d",
+      "--debug"
+     ],
+     "description": "Display debugging information"
+    },
+    {
+     "name": [
+      "-q",
+      "--quiet"
+     ],
+     "description": "Print less"
+    },
+    {
+     "name": "--merge",
+     "description": "Merge upstream changes instead of rebasing"
+    },
+    {
+     "name": "--preinstall",
+     "description": "Run before installing packages"
+    }
+   ]
+  },
+  {
+   "name": "search",
+   "description": "Search for formulae and casks",
+   "priority": 76,
+   "args": {
+    "name": "text",
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": [
+      "-d",
+      "--desc"
+     ],
+     "description": "Search descriptions as well as names"
+    },
+    {
+     "name": "--eval-all",
+     "description": "Search all formulae and casks"
+    },
+    {
+     "name": [
+      "-n",
+      "--name"
+     ],
+     "description": "Search names only"
+    },
+    {
+     "name": "--macos",
+     "description": "Search macOS-only formulae and casks"
+    },
+    {
+     "name": "--linux",
+     "description": "Search Linux-only formulae and casks"
+    },
+    {
+     "name": "--open",
+     "description": "Open the search results in a browser"
+    }
+   ]
+  },
+  {
+   "name": "info",
+   "description": "Show information about a formula or cask",
+   "priority": 76,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": [
+      "-v",
+      "--verbose"
+     ],
+     "description": "Print more details"
+    },
+    {
+     "name": "--json",
+     "description": "Print JSON",
+     "args": {
+      "name": "version",
+      "isOptional": true,
+      "suggestions": [
+       "v1",
+       "v2"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": [
+    "list",
+    "ls"
+   ],
+   "description": "List installed formulae and casks",
+   "priority": 74,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": "--versions",
+     "description": "Show the version number for each package"
+    },
+    {
+     "name": "--pinned",
+     "description": "Show pinned packages"
+    },
+    {
+     "name": "--multiple",
+     "description": "Only show packages with multiple versions"
+    }
+   ]
+  },
+  {
+   "name": "leaves",
+   "description": "List installed formulae that are not dependencies",
+   "priority": 70,
+   "options": [
+    {
+     "name": "--installed-on-request",
+     "description": "Show packages installed on request"
+    },
+    {
+     "name": "--installed-as-dependency",
+     "description": "Show packages installed as dependencies"
+    }
+   ]
+  },
+  {
+   "name": "deps",
+   "description": "Show dependencies of a formula or cask",
+   "priority": 72,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": "--tree",
+     "description": "Show dependencies as a tree"
+    },
+    {
+     "name": "--installed",
+     "description": "Show only installed dependencies"
+    },
+    {
+     "name": "--include-build",
+     "description": "Include build dependencies"
+    },
+    {
+     "name": "--include-optional",
+     "description": "Include optional dependencies"
+    },
+    {
+     "name": "--include-test",
+     "description": "Include test dependencies"
+    },
+    {
+     "name": "--skip-recommended",
+     "description": "Skip recommended dependencies"
+    },
+    {
+     "name": "--union",
+     "description": "Show the union of dependencies"
+    }
+   ]
+  },
+  {
+   "name": "uses",
+   "description": "Show formulae and casks that depend on a package",
+   "priority": 72,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": "--installed",
+     "description": "Show only installed dependents"
+    },
+    {
+     "name": "--include-build",
+     "description": "Include build dependencies"
+    },
+    {
+     "name": "--include-optional",
+     "description": "Include optional dependencies"
+    },
+    {
+     "name": "--include-test",
+     "description": "Include test dependencies"
+    },
+    {
+     "name": "--skip-recommended",
+     "description": "Skip recommended dependencies"
+    }
+   ]
+  },
+  {
+   "name": "outdated",
+   "description": "List outdated formulae and casks",
+   "priority": 72,
+   "args": {
+    "name": "package",
+    "isOptional": true,
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": [
+      "-v",
+      "--verbose"
+     ],
+     "description": "Print more details"
+    },
+    {
+     "name": [
+      "-q",
+      "--quiet"
+     ],
+     "description": "Print less"
+    },
+    {
+     "name": "--json",
+     "description": "Print JSON"
+    }
+   ]
+  },
+  {
+   "name": "doctor",
+   "description": "Check the Homebrew installation for problems",
+   "priority": 68,
+   "options": [
+    {
+     "name": "--list-checks",
+     "description": "List all checks"
+    },
+    {
+     "name": "--audit-debug",
+     "description": "Enable debugging for audits"
+    }
+   ]
+  },
+  {
+   "name": "config",
+   "description": "Show the Homebrew configuration",
+   "priority": 68
+  },
+  {
+   "name": "cleanup",
+   "description": "Remove stale files from the Cellar and caches",
+   "priority": 68,
+   "args": {
+    "name": "package",
+    "isOptional": true,
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "-n",
+      "--dry-run"
+     ],
+     "description": "Show what would be removed"
+    },
+    {
+     "name": "--prune",
+     "description": "Remove all files older than the given age",
+     "args": {
+      "name": "age",
+      "suggestions": [
+       "all"
+      ]
+     }
+    },
+    {
+     "name": "--scrub",
+     "description": "Scrub the cache"
+    },
+    {
+     "name": "--cache",
+     "description": "Clean the cache"
+    }
+   ]
+  },
+  {
+   "name": "autoremove",
+   "description": "Remove unused dependencies",
+   "priority": 66,
+   "options": [
+    {
+     "name": [
+      "-n",
+      "--dry-run"
+     ],
+     "description": "Show what would be removed"
+    }
+   ]
+  },
+  {
+   "name": "fetch",
+   "description": "Download a formula or cask without installing it",
+   "priority": 68,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": [
+      "-s",
+      "--build-from-source"
+     ],
+     "description": "Fetch the source instead of a bottle"
+    },
+    {
+     "name": [
+      "-f",
+      "--force"
+     ],
+     "description": "Fetch even if the cache is current"
+    },
+    {
+     "name": "--retry",
+     "description": "Retry the download"
+    },
+    {
+     "name": "--deps",
+     "description": "Also fetch dependencies"
+    }
+   ]
+  },
+  {
+   "name": "home",
+   "description": "Open a formula or cask homepage",
+   "priority": 66,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    }
+   ]
+  },
+  {
+   "name": "cat",
+   "description": "Show the source of a formula or cask",
+   "priority": 64,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    }
+   ]
+  },
+  {
+   "name": "edit",
+   "description": "Open a formula or cask in an editor",
+   "priority": 64,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": "--print",
+     "description": "Print the path instead of opening an editor"
+    }
+   ]
+  },
+  {
+   "name": "options",
+   "description": "Show the options of a formula",
+   "priority": 62,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": "--compact",
+     "description": "Show options compactly"
+    }
+   ]
+  },
+  {
+   "name": "desc",
+   "description": "Show or search package descriptions",
+   "priority": 64,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "--cask",
+      "--casks"
+     ],
+     "description": "Treat all named arguments as casks"
+    },
+    {
+     "name": [
+      "--formula",
+      "--formulae"
+     ],
+     "description": "Treat all named arguments as formulae"
+    },
+    {
+     "name": [
+      "-s",
+      "--search"
+     ],
+     "description": "Search names and descriptions"
+    },
+    {
+     "name": [
+      "-n",
+      "--name"
+     ],
+     "description": "Search names only"
+    },
+    {
+     "name": [
+      "-d",
+      "--description"
+     ],
+     "description": "Search descriptions only"
+    },
+    {
+     "name": "--eval-all",
+     "description": "Evaluate all formulae and casks"
+    }
+   ]
+  },
+  {
+   "name": "pin",
+   "description": "Pin a formula to its current version",
+   "priority": 60,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   }
+  },
+  {
+   "name": "unpin",
+   "description": "Unpin a formula",
+   "priority": 60,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   }
+  },
+  {
+   "name": "postinstall",
+   "description": "Run the post-install step of a formula",
+   "priority": 60,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   }
+  },
+  {
+   "name": "test",
+   "description": "Run a formula's test",
+   "priority": 60,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "-v",
+      "--verbose"
+     ],
+     "description": "Print more details"
+    },
+    {
+     "name": [
+      "-d",
+      "--debug"
+     ],
+     "description": "Display debugging information"
+    },
+    {
+     "name": "--keep-tmp",
+     "description": "Retain temporary files"
+    }
+   ]
+  },
+  {
+   "name": "link",
+   "description": "Link a formula's files into the prefix",
+   "priority": 60,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   },
+   "options": [
+    {
+     "name": [
+      "-f",
+      "--force"
+     ],
+     "description": "Link even if files already exist"
+    },
+    {
+     "name": "--overwrite",
+     "description": "Overwrite existing files"
+    },
+    {
+     "name": [
+      "-n",
+      "--dry-run"
+     ],
+     "description": "Show what would be linked"
+    },
+    {
+     "name": [
+      "-v",
+      "--verbose"
+     ],
+     "description": "Print more details"
+    }
+   ]
+  },
+  {
+   "name": "unlink",
+   "description": "Unlink a formula's files from the prefix",
+   "priority": 60,
+   "args": {
+    "name": "package",
+    "isVariadic": true,
+    "template": "packages:brew"
+   }
+  },
+  {
+   "name": "tap",
+   "description": "Tap a formula repository",
+   "priority": 62,
+   "args": {
+    "name": "repository"
+   },
+   "options": [
+    {
+     "name": [
+      "-f",
+      "--force"
+     ],
+     "description": "Tap even if the repository already exists"
+    },
+    {
+     "name": "--repair",
+     "description": "Repair an existing tap"
+    }
+   ]
+  },
+  {
+   "name": "services",
+   "description": "Manage background services with launchd or systemd",
+   "priority": 66,
+   "subcommands": [
+    {
+     "name": [
+      "start",
+      "stop",
+      "restart",
+      "run",
+      "info"
+     ],
+     "description": "Start a service",
+     "args": {
+      "name": "package",
+      "isVariadic": true,
+      "template": "packages:brew"
+     }
+    },
+    {
+     "name": [
+      "list",
+      "cleanup"
+     ],
+     "description": "List managed services"
+    }
+   ]
+  },
+  {
+   "name": "shellenv",
+   "description": "Print the Homebrew shell environment",
+   "priority": 62
+  },
+  {
+   "name": "help",
+   "description": "Show help for a command",
+   "priority": 60,
+   "args": {
+    "name": "command",
+    "suggestions": [
+     "install",
+     "uninstall",
+     "upgrade",
+     "update",
+     "search",
+     "info",
+     "list",
+     "deps",
+     "uses",
+     "outdated",
+     "leaves",
+     "doctor",
+     "config",
+     "cleanup",
+     "autoremove",
+     "fetch",
+     "home",
+     "cat",
+     "edit",
+     "options",
+     "desc",
+     "services",
+     "tap"
+    ]
+   }
+  }
+ ]
+}

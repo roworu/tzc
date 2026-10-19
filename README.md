@@ -48,8 +48,8 @@ To add new completions or change existing, check @completions/README.md
 
 ### Package completions
 
-Package arguments of dnf/yum, apt/apt-get/apt-cache, pacman, zypper, apk and
-flatpak complete names and descriptions from local caches. Build or refresh
+Package arguments of brew, dnf/yum, apt/apt-get/apt-cache, pacman, zypper, apk
+and flatpak complete names and descriptions from local caches. Build or refresh
 them from the installed package managers' local metadata:
 
 ```sh

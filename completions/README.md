@@ -48,8 +48,8 @@ zsh tools/package-cache.zsh            # every installed manager
 zsh tools/package-cache.zsh dnf apt    # selected managers
 ```
 
-Managers: `dnf` (also used by yum), `apt` (apt, apt-get, apt-cache), `pacman`,
-`zypper`, `apk`, `flatpak`.
+Managers: `brew`, `dnf` (also used by yum), `apt` (apt, apt-get, apt-cache),
+`pacman`, `zypper`, `apk`, `flatpak`.
 
 ## Packed format
 

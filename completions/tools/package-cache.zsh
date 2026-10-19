@@ -6,7 +6,7 @@ emulate -L zsh
 setopt pipe_fail
 
 typeset -g out=${TZC_PACKAGES_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages}
-typeset -ga known=(dnf apt pacman zypper apk flatpak)
+typeset -ga known=(brew dnf apt pacman zypper apk flatpak)
 typeset -ga managers=("${known[@]}")
 
 usage() {
@@ -22,6 +22,29 @@ for manager in "${managers[@]}"; do
   (( ${known[(Ie)$manager]} )) || { print -u2 "${0:t}: unknown manager: $manager"; usage }
 done
 mkdir -p -- "$out" || exit 1
+
+fetch_brew() {
+  whence -p brew >/dev/null 2>&1 || return 1
+  local descs
+  # --eval-all lists local formulae and casks without an online search
+  descs=$(brew desc --eval-all -s '' 2>/dev/null)
+  if [[ -n $descs ]]; then
+    print -r -- "$descs" |
+      awk '
+        /^==> / { next }
+        /: / {
+          name = $0
+          sub(/: .*/, "", name)
+          desc = $0
+          sub(/^[^:]*: /, "", desc)
+          print name "\t" desc
+        }
+      '
+  else
+    brew formulae 2>/dev/null
+    brew casks 2>/dev/null
+  fi
+}
 
 fetch_dnf() {
   # -C keeps the query on the local metadata cache
