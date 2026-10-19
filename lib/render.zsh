@@ -110,20 +110,21 @@ __tzc_render_menu() {
   (( columns < 1 )) && columns=80
   (( lines < 5 )) && lines=24
 
-  # width from every candidate and its description, not just the visible rows,
-  # so scrolling does not resize the box under the pointer
-  local maxw=0 rec w
-  local -a f
-  for rec in "${__tzc_candidates[@]}"; do
-    IFS=$'\x1f' f=( ${=rec} )
-    w=$(( 3 + ${#f[1]} ))
-    (( ${#f[3]} + 1 > w )) && w=$(( ${#f[3]} + 1 ))
-    (( w > maxw )) && maxw=$w
-  done
-
   local top=${__tzc_top:-0} sel=${__tzc_selected:-0}
   (( sel < 0 )) && sel=0
   (( sel >= total )) && sel=$(( total - 1 ))
+
+  # width from every label and the selected description, the only description
+  # rendered; a long description on another candidate must not widen the box
+  local maxw=0 rec w
+  local -a f
+  IFS=$'\x1f' f=( ${=__tzc_candidates[sel+1]} )
+  (( ${#f[3]} + 1 > maxw )) && maxw=$(( ${#f[3]} + 1 ))
+  for rec in "${__tzc_candidates[@]}"; do
+    IFS=$'\x1f' f=( ${=rec} )
+    w=$(( 3 + ${#f[1]} ))
+    (( w > maxw )) && maxw=$w
+  done
 
   local inner=$(( maxw + 1 ))
   local prompt_cols=${__tzc_prompt_cols:-0}
@@ -142,11 +143,8 @@ __tzc_render_menu() {
   local max_width=${__tzc_max_width:-80}
   [[ $max_width == <-> ]] || max_width=80
   (( max_width < 12 )) && max_width=12
-  # the setting is the rightmost screen column the popup may reach; when the
-  # prompt already sits past it, fall back to limiting the popup width
-  local box_max=$(( max_width - indent ))
-  (( box_max < 12 )) && box_max=$max_width
-  (( inner > box_max - 2 )) && inner=$(( box_max - 2 ))
+  # the setting caps the popup width; keep the box anchored to the cursor
+  (( inner > max_width - 2 )) && inner=$(( max_width - 2 ))
 
   # wrap the selected description to the box interior; its line count changes
   # the menu height
