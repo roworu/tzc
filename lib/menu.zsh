@@ -32,7 +32,7 @@ __tzc_worth_showing() {
 
 __tzc_render() {
   emulate -L zsh
-  if ! __tzc_render_menu ${#BUFFER}; then
+  if ! __tzc_render_menu ${#BUFFER} ${(m)#${BUFFER[1,CURSOR]}}; then
     __tzc_hide
     return 0
   fi
@@ -57,6 +57,9 @@ __tzc_hide() {
 }
 
 __tzc_pre_redraw() {
+  # measure before emulating so a prompt using prompt_subst expands the same
+  # way zle expanded it
+  (( __tzc_prompt_cols < 0 )) && __tzc_measure_prompt
   emulate -L zsh
   if [[ -n ${TZC_DISABLE:-} || -n $PREBUFFER ||
         $KEYMAP == (vicmd|viopp|visual|isearch) ]]; then
@@ -234,6 +237,7 @@ __tzc_finish() {
 
 __tzc_precmd() {
   emulate -L zsh
+  __tzc_prompt_cols=-1
   __tzc_hide
   __tzc_last_key=
   return 0

@@ -5,6 +5,7 @@ typeset -g __tzc_color_mode
 typeset -g __tzc_menu_text
 typeset -ga __tzc_menu_regions
 typeset -gi __tzc_menu_rows
+typeset -gi __tzc_prompt_cols=-1
 
 __tzc_init_render() {
   emulate -L zsh
@@ -19,42 +20,53 @@ __tzc_init_render() {
   case $__tzc_color_mode in
     (true)
       __tzc_palette=(
-        bg 'bg=#1e1e2e'
-        sel 'bg=#313244,fg=#cdd6f4'
-        border 'bg=#1e1e2e,fg=#45475a'
-        desc 'bg=#1e1e2e,fg=#a6adc8'
-        subcommand 'bg=#1e1e2e,fg=#cba6f7'
-        suggestion 'bg=#1e1e2e,fg=#89dceb'
-        option 'bg=#1e1e2e,fg=#f9e2af'
-        command 'bg=#1e1e2e,fg=#a6e3a1'
-        folder 'bg=#1e1e2e,fg=#89b4fa'
-        file 'bg=#1e1e2e,fg=#cdd6f4'
+        desc 'fg=#a6adc8'
+        subcommand 'fg=#cba6f7'
+        suggestion 'fg=#89dceb'
+        option 'fg=#f9e2af'
+        command 'fg=#a6e3a1'
+        folder 'fg=#89b4fa'
+        file 'fg=#cdd6f4'
       )
       ;;
     (256)
       __tzc_palette=(
-        bg 'bg=236'
-        sel 'bg=238,fg=252'
-        border 'bg=236,fg=240'
-        desc 'bg=236,fg=245'
-        subcommand 'bg=236,fg=141'
-        suggestion 'bg=236,fg=117'
-        option 'bg=236,fg=222'
-        command 'bg=236,fg=114'
-        folder 'bg=236,fg=111'
-        file 'bg=236,fg=252'
+        desc 'fg=245'
+        subcommand 'fg=141'
+        suggestion 'fg=117'
+        option 'fg=222'
+        command 'fg=114'
+        folder 'fg=111'
+        file 'fg=252'
       )
       ;;
   esac
   return 0
 }
 
+# store the display width of the last prompt line in __tzc_prompt_cols. runs
+# with the caller's options so prompt_subst matches the real prompt.
+__tzc_measure_prompt() {
+  setopt localoptions extendedglob
+  local text=${(%%)PROMPT}
+  # csi, osc and other escape sequences take no cells; %{...%} output is
+  # literal escape text after prompt expansion
+  text=${text//$'\e'\[[0-9;:?<=>!#-]#[ -\/]#[@-~]/}
+  text=${text//$'\e'\]([^$'\a'$'\e']|$'\e'[^\\])#($'\a'|$'\e'\\)/}
+  text=${text//$'\e'[^$'\e']/}
+  text=${text##*$'\n'}
+  __tzc_prompt_cols=${(m)#text}
+  return 0
+}
+
 # build __tzc_menu_text and __tzc_menu_regions for the current candidate list.
-# $1 is the offset of the leading newline in BUFFER+POSTDISPLAY (i.e. #BUFFER).
+# $1 is the offset of the leading newline in BUFFER+POSTDISPLAY (i.e. #BUFFER);
+# $2 is the display width of BUFFER up to CURSOR.
 __tzc_render_menu() {
   emulate -L zsh
   setopt localoptions noglob extendedglob
   local base=$1
+  local cursor_col=${2:-0}
   __tzc_menu_text=
   __tzc_menu_regions=()
   __tzc_menu_rows=0
@@ -90,15 +102,18 @@ __tzc_render_menu() {
     (( w > maxw )) && maxw=$w
   done
   local inner=$(( maxw + 1 ))
-  local indent=$__tzc_result_start
-  (( indent < 0 )) && indent=0
-  (( indent > columns / 4 )) && indent=$(( columns / 4 ))
-  (( inner > columns - 2 - indent )) && inner=$(( columns - 2 - indent ))
-  if (( inner < 10 )); then
+  local prompt_cols=${__tzc_prompt_cols:-0}
+  (( prompt_cols < 0 )) && prompt_cols=0
+  local indent=$(( ( prompt_cols + cursor_col ) % columns ))
+  # shift left near the right edge so the box still fits on screen
+  (( indent > columns - 12 )) && indent=$(( columns > 12 ? columns - 12 : 0 ))
+  local avail=$(( columns - 2 - indent ))
+  if (( avail < 10 )); then
     indent=0
-    inner=$(( columns - 2 ))
+    avail=$(( columns - 2 ))
   fi
-  (( inner < 10 )) && return 1
+  (( avail < 10 )) && return 1
+  (( inner > avail )) && inner=$avail
 
   local hbar='─' vbar='│' tl='┌' tr='┐' bl='└' br='┘'
   if [[ ! -o multibyte ]]; then
@@ -110,9 +125,7 @@ __tzc_render_menu() {
 
   local menu=$'\n'
   local -i pos=$(( base + 1 ))
-  local -i menu_start=$pos
   local top_line="$pad$tl$bar$tr"
-  local top_start=$pos
   menu+=$top_line
   pos+=${#top_line}
 
@@ -164,10 +177,7 @@ __tzc_render_menu() {
   menu+=$'\n'
   (( pos++ ))
   local bottom_line="$pad$bl$bar$br"
-  local bottom_start=$pos
   menu+=$bottom_line
-  pos+=${#bottom_line}
-  local menu_end=$pos
 
   __tzc_menu_text=$menu
 
@@ -181,21 +191,11 @@ __tzc_render_menu() {
     return 0
   fi
 
-  local bg=${__tzc_palette[bg]}
-  [[ -n $bg ]] && __tzc_menu_regions+=("$menu_start $menu_end $bg memo=tzc")
-  local border=${__tzc_palette[border]}
-  if [[ -n $border ]]; then
-    __tzc_menu_regions+=(
-      "$top_start $(( top_start + ${#top_line} )) $border memo=tzc"
-      "$bottom_start $menu_end $border memo=tzc"
-    )
-  fi
-  local style kindstyle kind
+  local kindstyle kind
   for ((r=1; r<=rows; r++)); do
     if (( row_selected[r] )); then
-      style=${__tzc_palette[sel]}
       __tzc_menu_regions+=(
-        "$(( row_start[r] + indent )) $(( row_start[r] + ${#pad} + inner + 2 )) $style memo=tzc"
+        "$(( row_start[r] + indent )) $(( row_start[r] + ${#pad} + inner + 2 )) standout memo=tzc"
       )
       continue
     fi
