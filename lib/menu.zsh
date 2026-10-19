@@ -160,7 +160,12 @@ __tzc_delegate() {
 __tzc_up() {
   emulate -L zsh
   if (( __tzc_active )); then
-    (( __tzc_selected > 0 )) && (( __tzc_selected-- ))
+    (( ${#__tzc_candidates} )) || return 0
+    if (( __tzc_selected > 0 )); then
+      (( __tzc_selected-- ))
+    else
+      __tzc_selected=$(( ${#__tzc_candidates} - 1 ))
+    fi
     __tzc_render
     zle -R
   else
@@ -173,7 +178,12 @@ __tzc_up() {
 __tzc_down() {
   emulate -L zsh
   if (( __tzc_active )); then
-    (( __tzc_selected < ${#__tzc_candidates} - 1 )) && (( __tzc_selected++ ))
+    (( ${#__tzc_candidates} )) || return 0
+    if (( __tzc_selected < ${#__tzc_candidates} - 1 )); then
+      (( __tzc_selected++ ))
+    else
+      __tzc_selected=0
+    fi
     __tzc_render
     zle -R
   else

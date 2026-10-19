@@ -3,7 +3,7 @@
 IDE-like completions for zsh, drawn by shell itself, in any terminal of your choice.
 Inspired by fig project: https://github.com/withfig/autocomplete
 
-Up/Down move selection, Tab accepts it, and anything else goes to zsh as usual.
+Up/Down move selection (wrapping at the ends), Tab accepts it, and anything else goes to zsh as usual.
 Candidates come from bundled JSON command specs, `PATH` and filesystem.
 
 ## Requirements
