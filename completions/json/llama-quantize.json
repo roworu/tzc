@@ -1,0 +1,150 @@
+{
+ "name": "llama-quantize",
+ "description": "Quantize GGUF models",
+ "options": [
+  {
+   "name": "--allow-requantize",
+   "description": "Allow requantizing tensors that have already been quantized WARNING: this can s…"
+  },
+  {
+   "name": "--leave-output-tensor",
+   "description": "Leave output.weight un(re)quantized increases model size but may also increase…"
+  },
+  {
+   "name": "--pure",
+   "description": "Disable k-quant mixtures and quantize all tensors to the same type"
+  },
+  {
+   "name": "--imatrix",
+   "description": "Use data in file_name as importance matrix for quant optimizations",
+   "args": {
+    "name": "file_name",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--include-weights",
+   "description": "Use importance matrix for this/these tensor(s)",
+   "args": {
+    "name": "tensor_name"
+   }
+  },
+  {
+   "name": "--exclude-weights",
+   "description": "Do not use importance matrix for this/these tensor(s)",
+   "args": {
+    "name": "tensor_name"
+   }
+  },
+  {
+   "name": "--output-tensor-type",
+   "description": "Use this ggml_type for the output.weight tensor",
+   "args": {
+    "name": "ggml_type"
+   }
+  },
+  {
+   "name": "--token-embedding-type",
+   "description": "Use this ggml_type for the token embeddings tensor",
+   "args": {
+    "name": "ggml_type"
+   }
+  },
+  {
+   "name": "--tensor-type",
+   "description": "Quantize this tensor to this ggml_type this is an advanced option to selectivel…"
+  },
+  {
+   "name": "--tensor-type-file",
+   "description": "List of tensors to quantize to a specific ggml_type this is an advanced option…",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--prune-layers",
+   "description": "Comma-separated list of layer numbers to prune from the model WARNING: this is…",
+   "args": {
+    "name": "l0"
+   }
+  },
+  {
+   "name": "--keep-split",
+   "description": "Generate quantized model in the same shards as input"
+  },
+  {
+   "name": "--override-kv",
+   "description": "Override model metadata by key in the quantized model. may be specified multipl…"
+  },
+  {
+   "name": "--dry-run",
+   "description": "Calculate and show the final quantization size without performing quantization…"
+  },
+  {
+   "name": "--max-buffer-size",
+   "description": "Max amount of tensor rows kept in memory while quantizing one tensor (default:…",
+   "args": {
+    "name": "mib"
+   }
+  }
+ ],
+ "args": [
+  {
+   "name": "input",
+   "template": "filepaths"
+  },
+  {
+   "name": "output",
+   "template": "filepaths",
+   "isOptional": true
+  },
+  {
+   "name": "type",
+   "suggestions": [
+    "Q1_0",
+    "Q2_0",
+    "Q4_0",
+    "Q4_1",
+    "MXFP4_MOE",
+    "Q5_0",
+    "Q5_1",
+    "IQ2_XXS",
+    "IQ2_XS",
+    "IQ2_S",
+    "IQ2_M",
+    "IQ1_S",
+    "IQ1_M",
+    "TQ1_0",
+    "TQ2_0",
+    "Q2_K",
+    "Q2_K_S",
+    "IQ3_XXS",
+    "IQ3_S",
+    "IQ3_M",
+    "Q3_K",
+    "IQ3_XS",
+    "Q3_K_S",
+    "Q3_K_M",
+    "Q3_K_L",
+    "IQ4_NL",
+    "IQ4_XS",
+    "Q4_K",
+    "Q4_K_S",
+    "Q4_K_M",
+    "Q5_K",
+    "Q5_K_S",
+    "Q5_K_M",
+    "Q6_K",
+    "Q8_0",
+    "F16",
+    "BF16",
+    "F32"
+   ]
+  },
+  {
+   "name": "threads",
+   "isOptional": true
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "name": "llama-gguf-split",
+ "description": "Split and merge GGUF model files",
+ "options": [
+  {
+   "name": [
+    "-h",
+    "--help"
+   ],
+   "description": "Show this help message and exit"
+  },
+  {
+   "name": "--version",
+   "description": "Show version and build info"
+  },
+  {
+   "name": "--split",
+   "description": "Split GGUF to multiple GGUF (enabled by default)"
+  },
+  {
+   "name": "--merge",
+   "description": "Merge multiple GGUF to a single GGUF"
+  },
+  {
+   "name": "--split-max-tensors",
+   "description": "Max tensors in each split (default: 128)"
+  },
+  {
+   "name": "--split-max-size"
+  },
+  {
+   "name": "--no-tensor-first-split",
+   "args": {
+    "name": "do"
+   }
+  },
+  {
+   "name": "--dry-run",
+   "description": "Only print out a split plan and exit, without writing any new files"
+  },
+  {
+   "name": "--delete-splits",
+   "description": "Delete the split files during merge to free up disk space WARNING: this option…"
+  }
+ ],
+ "args": {
+  "name": "file",
+  "template": "filepaths",
+  "isVariadic": true
+ }
+}

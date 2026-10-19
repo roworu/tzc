@@ -1,0 +1,52 @@
+{
+ "name": "llama-gguf-hash",
+ "description": "Hash the tensors of a GGUF file",
+ "options": [
+  {
+   "name": [
+    "-h",
+    "--help"
+   ],
+   "description": "Show this help message and exit"
+  },
+  {
+   "name": "--xxh64",
+   "description": "Use xxh64 hash"
+  },
+  {
+   "name": "--sha1",
+   "description": "Use sha1 hash"
+  },
+  {
+   "name": "--sha256",
+   "description": "Use sha256 hash"
+  },
+  {
+   "name": "--all",
+   "description": "Use all hash"
+  },
+  {
+   "name": "--no-layer",
+   "description": "Exclude per layer hash"
+  },
+  {
+   "name": "--uuid",
+   "description": "Generate UUIDv5 ID"
+  },
+  {
+   "name": [
+    "-c",
+    "--check"
+   ],
+   "description": "Verify against a manifest",
+   "args": {
+    "name": "manifest"
+   }
+  }
+ ],
+ "args": {
+  "name": "file",
+  "template": "filepaths",
+  "isVariadic": true
+ }
+}

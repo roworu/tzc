@@ -1,0 +1,1104 @@
+{
+  "name": "ruff",
+  "description": "Extremely fast Python linter and formatter",
+  "subcommands": [
+    {
+      "name": "check",
+      "description": "Run Ruff on the given files or directories",
+      "options": [
+        {
+          "name": "--fix",
+          "description": "Apply fixes to resolve lint violations"
+        },
+        {
+          "name": "--unsafe-fixes",
+          "description": "Include fixes that may not retain the original intent of the code"
+        },
+        {
+          "name": "--show-fixes",
+          "description": "Show an enumeration of all fixed lint violations"
+        },
+        {
+          "name": "--diff",
+          "description": "Avoid writing any fixed files back"
+        },
+        {
+          "name": [
+            "-w",
+            "--watch"
+          ],
+          "description": "Run in watch mode by re-running whenever files change"
+        },
+        {
+          "name": "--fix-only",
+          "description": "Apply fixes to resolve lint violations, but don't report on, or exit non-zero f…"
+        },
+        {
+          "name": "--ignore-noqa",
+          "description": "Ignore any `# noqa` comments"
+        },
+        {
+          "name": "--output-format",
+          "description": "Output serialization format for violations",
+          "args": {
+            "name": "format",
+            "suggestions": [
+              "concise",
+              "full",
+              "json",
+              "json-lines",
+              "junit",
+              "grouped",
+              "github",
+              "gitlab",
+              "pylint",
+              "rdjson",
+              "azure",
+              "sarif"
+            ]
+          }
+        },
+        {
+          "name": [
+            "-o",
+            "--output-file"
+          ],
+          "description": "Specify file to write the linter output to",
+          "args": {
+            "name": "output_file",
+            "template": "filepaths"
+          }
+        },
+        {
+          "name": "--target-version",
+          "description": "The minimum Python version that should be supported",
+          "args": {
+            "name": "version",
+            "suggestions": [
+              "py37",
+              "py38",
+              "py39",
+              "py310",
+              "py311",
+              "py312",
+              "py313",
+              "py314",
+              "py315"
+            ]
+          }
+        },
+        {
+          "name": "--preview",
+          "description": "Enable preview mode"
+        },
+        {
+          "name": "--extension",
+          "description": "List of mappings from file extension to language (one of `python`, `ipynb`, `py…",
+          "args": {
+            "name": "extension"
+          }
+        },
+        {
+          "name": "--statistics",
+          "description": "Show counts for every rule with at least one violation"
+        },
+        {
+          "name": "--add-noqa",
+          "description": "Enable automatic additions of `noqa` directives to failing lines",
+          "args": {
+            "name": "reason",
+            "isOptional": true
+          }
+        },
+        {
+          "name": "--add-ignore",
+          "description": "Enable automatic additions of `ruff: ignore` comments to failing lines",
+          "args": {
+            "name": "reason",
+            "isOptional": true
+          }
+        },
+        {
+          "name": "--show-files",
+          "description": "See the files Ruff will be run against with the current settings"
+        },
+        {
+          "name": "--show-settings",
+          "description": "See the settings Ruff will use to lint a given Python file"
+        },
+        {
+          "name": [
+            "-h",
+            "--help"
+          ],
+          "description": "Print help (see a summary with '-h')"
+        },
+        {
+          "name": "--select",
+          "description": "Comma-separated list of rule codes to enable (or ALL, to enable all rules)",
+          "args": {
+            "name": "rule_code"
+          }
+        },
+        {
+          "name": "--ignore",
+          "description": "Comma-separated list of rule codes to disable",
+          "args": {
+            "name": "rule_code"
+          }
+        },
+        {
+          "name": "--extend-select",
+          "description": "Like --select, but adds additional rule codes on top of those already specified",
+          "args": {
+            "name": "rule_code"
+          }
+        },
+        {
+          "name": "--per-file-ignores",
+          "description": "List of mappings from file pattern to code to exclude",
+          "args": {
+            "name": "per_file_ignores"
+          }
+        },
+        {
+          "name": "--extend-per-file-ignores",
+          "description": "Like `--per-file-ignores`, but adds additional ignores on top of those already…",
+          "args": {
+            "name": "extend_per_file_ignores"
+          }
+        },
+        {
+          "name": "--fixable",
+          "description": "List of rule codes to treat as eligible for fix",
+          "args": {
+            "name": "rule_code"
+          }
+        },
+        {
+          "name": "--unfixable",
+          "description": "List of rule codes to treat as ineligible for fix",
+          "args": {
+            "name": "rule_code"
+          }
+        },
+        {
+          "name": "--extend-fixable",
+          "description": "Like --fixable, but adds additional rule codes on top of those already specified",
+          "args": {
+            "name": "rule_code"
+          }
+        },
+        {
+          "name": "--exclude",
+          "description": "List of paths, used to omit files and/or directories from analysis",
+          "args": {
+            "name": "file_pattern"
+          }
+        },
+        {
+          "name": "--extend-exclude",
+          "description": "Like --exclude, but adds additional files and directories on top of those alrea…",
+          "args": {
+            "name": "file_pattern"
+          }
+        },
+        {
+          "name": "--respect-gitignore",
+          "description": "Respect file exclusions via `.gitignore` and other standard ignore files"
+        },
+        {
+          "name": "--force-exclude",
+          "description": "Enforce exclusions, even for paths passed to Ruff directly on the command-line"
+        },
+        {
+          "name": [
+            "-n",
+            "--no-cache"
+          ],
+          "description": "Disable cache reads"
+        },
+        {
+          "name": "--cache-dir",
+          "description": "Path to the cache directory",
+          "args": {
+            "name": "cache_dir",
+            "template": "folders"
+          }
+        },
+        {
+          "name": "--stdin-filename",
+          "description": "The name of the file when passing it through stdin",
+          "args": {
+            "name": "stdin_filename"
+          }
+        },
+        {
+          "name": [
+            "-e",
+            "--exit-zero"
+          ],
+          "description": "Exit with status code \"0\", even upon detecting lint violations"
+        },
+        {
+          "name": "--exit-non-zero-on-fix",
+          "description": "Exit with a non-zero status code if any files were modified via fix, even if no…"
+        },
+        {
+          "name": [
+            "-v",
+            "--verbose"
+          ],
+          "description": "Enable verbose logging"
+        },
+        {
+          "name": [
+            "-q",
+            "--quiet"
+          ],
+          "description": "Print diagnostics, but nothing else"
+        },
+        {
+          "name": [
+            "-s",
+            "--silent"
+          ],
+          "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+        },
+        {
+          "name": "--config",
+          "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+          "args": {
+            "name": "config_option"
+          }
+        },
+        {
+          "name": "--isolated",
+          "description": "Ignore all configuration files"
+        },
+        {
+          "name": "--color",
+          "description": "Control when colored output is used",
+          "args": {
+            "name": "when"
+          }
+        }
+      ],
+      "args": {
+        "name": "file",
+        "template": "filepaths",
+        "isOptional": true,
+        "isVariadic": true
+      },
+      "priority": 80
+    },
+    {
+      "name": "rule",
+      "description": "Explain a rule (or all rules)",
+      "options": [
+        {
+          "name": "--all",
+          "description": "Explain all rules"
+        },
+        {
+          "name": "--output-format",
+          "description": "Output format",
+          "args": {
+            "name": "output_format"
+          }
+        },
+        {
+          "name": [
+            "-h",
+            "--help"
+          ],
+          "description": "Print help (see a summary with '-h')"
+        },
+        {
+          "name": [
+            "-v",
+            "--verbose"
+          ],
+          "description": "Enable verbose logging"
+        },
+        {
+          "name": [
+            "-q",
+            "--quiet"
+          ],
+          "description": "Print diagnostics, but nothing else"
+        },
+        {
+          "name": [
+            "-s",
+            "--silent"
+          ],
+          "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+        },
+        {
+          "name": "--config",
+          "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+          "args": {
+            "name": "config_option"
+          }
+        },
+        {
+          "name": "--isolated",
+          "description": "Ignore all configuration files"
+        },
+        {
+          "name": "--color",
+          "description": "Control when colored output is used",
+          "args": {
+            "name": "when"
+          }
+        }
+      ],
+      "args": {
+        "name": "rule",
+        "isOptional": true
+      },
+      "priority": 76
+    },
+    {
+      "name": "config",
+      "description": "List or describe the available configuration options",
+      "options": [
+        {
+          "name": "--output-format",
+          "description": "Output format",
+          "args": {
+            "name": "output_format"
+          }
+        },
+        {
+          "name": [
+            "-h",
+            "--help"
+          ],
+          "description": "Print help (see a summary with '-h')"
+        },
+        {
+          "name": [
+            "-v",
+            "--verbose"
+          ],
+          "description": "Enable verbose logging"
+        },
+        {
+          "name": [
+            "-q",
+            "--quiet"
+          ],
+          "description": "Print diagnostics, but nothing else"
+        },
+        {
+          "name": [
+            "-s",
+            "--silent"
+          ],
+          "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+        },
+        {
+          "name": "--config",
+          "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+          "args": {
+            "name": "config_option"
+          }
+        },
+        {
+          "name": "--isolated",
+          "description": "Ignore all configuration files"
+        },
+        {
+          "name": "--color",
+          "description": "Control when colored output is used",
+          "args": {
+            "name": "when"
+          }
+        }
+      ],
+      "args": {
+        "name": "option",
+        "isOptional": true
+      },
+      "priority": 75
+    },
+    {
+      "name": "linter",
+      "description": "List all supported upstream linters",
+      "options": [
+        {
+          "name": "--output-format",
+          "description": "Output format",
+          "args": {
+            "name": "output_format"
+          }
+        },
+        {
+          "name": [
+            "-h",
+            "--help"
+          ],
+          "description": "Print help (see a summary with '-h')"
+        },
+        {
+          "name": [
+            "-v",
+            "--verbose"
+          ],
+          "description": "Enable verbose logging"
+        },
+        {
+          "name": [
+            "-q",
+            "--quiet"
+          ],
+          "description": "Print diagnostics, but nothing else"
+        },
+        {
+          "name": [
+            "-s",
+            "--silent"
+          ],
+          "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+        },
+        {
+          "name": "--config",
+          "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+          "args": {
+            "name": "config_option"
+          }
+        },
+        {
+          "name": "--isolated",
+          "description": "Ignore all configuration files"
+        },
+        {
+          "name": "--color",
+          "description": "Control when colored output is used",
+          "args": {
+            "name": "when"
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "linter"
+        }
+      ]
+    },
+    {
+      "name": "clean",
+      "description": "Clear any caches in the current directory and any subdirectories",
+      "options": [
+        {
+          "name": [
+            "-h",
+            "--help"
+          ],
+          "description": "Print help (see a summary with '-h')"
+        },
+        {
+          "name": [
+            "-v",
+            "--verbose"
+          ],
+          "description": "Enable verbose logging"
+        },
+        {
+          "name": [
+            "-q",
+            "--quiet"
+          ],
+          "description": "Print diagnostics, but nothing else"
+        },
+        {
+          "name": [
+            "-s",
+            "--silent"
+          ],
+          "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+        },
+        {
+          "name": "--config",
+          "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+          "args": {
+            "name": "config_option"
+          }
+        },
+        {
+          "name": "--isolated",
+          "description": "Ignore all configuration files"
+        },
+        {
+          "name": "--color",
+          "description": "Control when colored output is used",
+          "args": {
+            "name": "when"
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "clean"
+        }
+      ],
+      "priority": 75
+    },
+    {
+      "name": "format",
+      "description": "Run the Ruff formatter on the given files or directories",
+      "options": [
+        {
+          "name": "--check",
+          "description": "Avoid writing any formatted files back"
+        },
+        {
+          "name": "--diff",
+          "description": "Avoid writing any formatted files back"
+        },
+        {
+          "name": "--extension",
+          "description": "List of mappings from file extension to language (one of `python`, `ipynb`, `py…",
+          "args": {
+            "name": "extension"
+          }
+        },
+        {
+          "name": "--target-version",
+          "description": "The minimum Python version that should be supported",
+          "args": {
+            "name": "version",
+            "suggestions": [
+              "py37",
+              "py38",
+              "py39",
+              "py310",
+              "py311",
+              "py312",
+              "py313",
+              "py314",
+              "py315"
+            ]
+          }
+        },
+        {
+          "name": "--preview",
+          "description": "Enable preview mode"
+        },
+        {
+          "name": "--output-format",
+          "description": "Output serialization format for violations, when used with `--check`",
+          "args": {
+            "name": "format",
+            "suggestions": [
+              "concise",
+              "full",
+              "json",
+              "json-lines",
+              "junit",
+              "grouped",
+              "github",
+              "gitlab",
+              "pylint",
+              "rdjson",
+              "azure",
+              "sarif"
+            ]
+          }
+        },
+        {
+          "name": [
+            "-h",
+            "--help"
+          ],
+          "description": "Print help (see a summary with '-h')"
+        },
+        {
+          "name": [
+            "-n",
+            "--no-cache"
+          ],
+          "description": "Disable cache reads"
+        },
+        {
+          "name": "--cache-dir",
+          "description": "Path to the cache directory",
+          "args": {
+            "name": "cache_dir",
+            "template": "folders"
+          }
+        },
+        {
+          "name": "--stdin-filename",
+          "description": "The name of the file when passing it through stdin",
+          "args": {
+            "name": "stdin_filename"
+          }
+        },
+        {
+          "name": "--exit-non-zero-on-format",
+          "description": "Exit with a non-zero status code if any files were modified via format, even if…"
+        },
+        {
+          "name": "--respect-gitignore",
+          "description": "Respect file exclusions via `.gitignore` and other standard ignore files"
+        },
+        {
+          "name": "--exclude",
+          "description": "List of paths, used to omit files and/or directories from analysis",
+          "args": {
+            "name": "file_pattern"
+          }
+        },
+        {
+          "name": "--extend-exclude",
+          "description": "Like --exclude, but adds additional files and directories on top of those alrea…",
+          "args": {
+            "name": "file_pattern"
+          }
+        },
+        {
+          "name": "--force-exclude",
+          "description": "Enforce exclusions, even for paths passed to Ruff directly on the command-line"
+        },
+        {
+          "name": "--line-length",
+          "description": "Set the line-length",
+          "args": {
+            "name": "line_length"
+          }
+        },
+        {
+          "name": "--range",
+          "description": "When specified, Ruff will try to only format the code in the given range",
+          "args": {
+            "name": "range"
+          }
+        },
+        {
+          "name": "-unicode",
+          "args": {
+            "name": "codepoint"
+          }
+        },
+        {
+          "name": [
+            "-v",
+            "--verbose"
+          ],
+          "description": "Enable verbose logging"
+        },
+        {
+          "name": [
+            "-q",
+            "--quiet"
+          ],
+          "description": "Print diagnostics, but nothing else"
+        },
+        {
+          "name": [
+            "-s",
+            "--silent"
+          ],
+          "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+        },
+        {
+          "name": "--config",
+          "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+          "args": {
+            "name": "config_option"
+          }
+        },
+        {
+          "name": "--isolated",
+          "description": "Ignore all configuration files"
+        },
+        {
+          "name": "--color",
+          "description": "Control when colored output is used",
+          "args": {
+            "name": "when"
+          }
+        }
+      ],
+      "args": {
+        "name": "file",
+        "template": "filepaths",
+        "isOptional": true,
+        "isVariadic": true
+      },
+      "priority": 78
+    },
+    {
+      "name": "server",
+      "description": "Run the language server",
+      "options": [
+        {
+          "name": "--untrusted-workspace",
+          "description": "Treat all workspaces as untrusted, disabling the uv formatter backend"
+        },
+        {
+          "name": "--preview",
+          "description": "Enable preview mode"
+        },
+        {
+          "name": [
+            "-h",
+            "--help"
+          ],
+          "description": "Print help (see a summary with '-h')"
+        },
+        {
+          "name": [
+            "-v",
+            "--verbose"
+          ],
+          "description": "Enable verbose logging"
+        },
+        {
+          "name": [
+            "-q",
+            "--quiet"
+          ],
+          "description": "Print diagnostics, but nothing else"
+        },
+        {
+          "name": [
+            "-s",
+            "--silent"
+          ],
+          "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+        },
+        {
+          "name": "--config",
+          "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+          "args": {
+            "name": "config_option"
+          }
+        },
+        {
+          "name": "--isolated",
+          "description": "Ignore all configuration files"
+        },
+        {
+          "name": "--color",
+          "description": "Control when colored output is used",
+          "args": {
+            "name": "when"
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "server"
+        }
+      ],
+      "priority": 75
+    },
+    {
+      "name": "analyze",
+      "description": "Run analysis over Python source code",
+      "subcommands": [
+        {
+          "name": "graph",
+          "description": "Generate a map of Python file dependencies or dependents",
+          "options": [
+            {
+              "name": "--direction",
+              "description": "The direction of the import map",
+              "args": {
+                "name": "direction",
+                "suggestions": [
+                  "dependencies",
+                  "dependents"
+                ]
+              }
+            },
+            {
+              "name": "--detect-string-imports",
+              "description": "Attempt to detect imports from string literals"
+            },
+            {
+              "name": "--min-dots",
+              "description": "The minimum number of dots in a string import to consider it a valid import",
+              "args": {
+                "name": "min_dots"
+              }
+            },
+            {
+              "name": "--preview",
+              "description": "Enable preview mode"
+            },
+            {
+              "name": "--target-version",
+              "description": "The minimum Python version that should be supported",
+              "args": {
+                "name": "target_version"
+              }
+            },
+            {
+              "name": "--python",
+              "description": "Path to a virtual environment to use for resolving additional dependencies",
+              "args": {
+                "name": "python"
+              }
+            },
+            {
+              "name": "--type-checking-imports",
+              "description": "Include imports that are only used for type checking (i.e., imports within `if…"
+            },
+            {
+              "name": [
+                "-h",
+                "--help"
+              ],
+              "description": "Print help (see a summary with '-h')"
+            },
+            {
+              "name": [
+                "-v",
+                "--verbose"
+              ],
+              "description": "Enable verbose logging"
+            },
+            {
+              "name": [
+                "-q",
+                "--quiet"
+              ],
+              "description": "Print diagnostics, but nothing else"
+            },
+            {
+              "name": [
+                "-s",
+                "--silent"
+              ],
+              "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+            },
+            {
+              "name": "--config",
+              "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+              "args": {
+                "name": "config_option"
+              }
+            },
+            {
+              "name": "--isolated",
+              "description": "Ignore all configuration files"
+            },
+            {
+              "name": "--color",
+              "description": "Control when colored output is used",
+              "args": {
+                "name": "when"
+              }
+            }
+          ],
+          "args": {
+            "name": "file",
+            "template": "filepaths",
+            "isOptional": true,
+            "isVariadic": true
+          }
+        },
+        {
+          "name": "help",
+          "description": "Print this message or the help of the given subcommand(s)",
+          "args": [
+            {
+              "name": "analyze"
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "name": [
+            "-h",
+            "--help"
+          ],
+          "description": "Print help (see a summary with '-h')"
+        },
+        {
+          "name": [
+            "-v",
+            "--verbose"
+          ],
+          "description": "Enable verbose logging"
+        },
+        {
+          "name": [
+            "-q",
+            "--quiet"
+          ],
+          "description": "Print diagnostics, but nothing else"
+        },
+        {
+          "name": [
+            "-s",
+            "--silent"
+          ],
+          "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+        },
+        {
+          "name": "--config",
+          "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+          "args": {
+            "name": "config_option"
+          }
+        },
+        {
+          "name": "--isolated",
+          "description": "Ignore all configuration files"
+        },
+        {
+          "name": "--color",
+          "description": "Control when colored output is used",
+          "args": {
+            "name": "when"
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "analyze"
+        }
+      ],
+      "priority": 75
+    },
+    {
+      "name": "version",
+      "description": "Display Ruff's version",
+      "options": [
+        {
+          "name": "--output-format",
+          "args": {
+            "name": "output_format",
+            "suggestions": [
+              "text",
+              "json"
+            ]
+          }
+        },
+        {
+          "name": [
+            "-h",
+            "--help"
+          ],
+          "description": "Print help (see a summary with '-h')"
+        },
+        {
+          "name": [
+            "-v",
+            "--verbose"
+          ],
+          "description": "Enable verbose logging"
+        },
+        {
+          "name": [
+            "-q",
+            "--quiet"
+          ],
+          "description": "Print diagnostics, but nothing else"
+        },
+        {
+          "name": [
+            "-s",
+            "--silent"
+          ],
+          "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+        },
+        {
+          "name": "--config",
+          "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+          "args": {
+            "name": "config_option"
+          }
+        },
+        {
+          "name": "--isolated",
+          "description": "Ignore all configuration files"
+        },
+        {
+          "name": "--color",
+          "description": "Control when colored output is used",
+          "args": {
+            "name": "when"
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "version"
+        }
+      ],
+      "priority": 75
+    },
+    {
+      "name": "help",
+      "description": "Print this message or the help of the given subcommand(s)"
+    }
+  ],
+  "options": [
+    {
+      "name": [
+        "-h",
+        "--help"
+      ],
+      "description": "Print help (see a summary with '-h')"
+    },
+    {
+      "name": [
+        "-V",
+        "--version"
+      ],
+      "description": "Print version"
+    },
+    {
+      "name": [
+        "-v",
+        "--verbose"
+      ],
+      "description": "Enable verbose logging"
+    },
+    {
+      "name": [
+        "-q",
+        "--quiet"
+      ],
+      "description": "Print diagnostics, but nothing else"
+    },
+    {
+      "name": [
+        "-s",
+        "--silent"
+      ],
+      "description": "Disable all logging (but still exit with status code \"1\" upon detecting diagnos…"
+    },
+    {
+      "name": "--config",
+      "description": "Either a path to a TOML configuration file (`pyproject.toml` or `ruff.toml`), o…",
+      "args": {
+        "name": "config_option"
+      }
+    },
+    {
+      "name": "--isolated",
+      "description": "Ignore all configuration files"
+    },
+    {
+      "name": "--color",
+      "description": "Control when colored output is used",
+      "args": {
+        "name": "when",
+        "suggestions": [
+          "auto",
+          "always",
+          "never"
+        ]
+      }
+    }
+  ]
+}

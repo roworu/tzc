@@ -1,0 +1,467 @@
+{
+ "name": "llama-bench",
+ "description": "Benchmark llama.cpp model performance",
+ "options": [
+  {
+   "name": [
+    "-h",
+    "--help"
+   ]
+  },
+  {
+   "name": "--version",
+   "description": "Show version and build info"
+  },
+  {
+   "name": "--numa",
+   "description": "Numa mode (default: disabled)",
+   "args": {
+    "name": "distribute",
+    "suggestions": [
+     "distribute",
+     "isolate",
+     "numactl"
+    ]
+   }
+  },
+  {
+   "name": [
+    "-r",
+    "--repetitions"
+   ],
+   "description": "Number of times to repeat each test (default: 5)",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": "--prio",
+   "description": "Process/thread priority (default: 0)",
+   "args": {
+    "name": "1",
+    "suggestions": [
+     "-1",
+     "0",
+     "1",
+     "2",
+     "3"
+    ]
+   }
+  },
+  {
+   "name": "--delay",
+   "description": "Delay between each test (default: 0)",
+   "args": {
+    "name": "0"
+   }
+  },
+  {
+   "name": [
+    "-o",
+    "--output"
+   ],
+   "description": "Output format printed to stdout (default: md)",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": [
+    "-oe",
+    "--output-err"
+   ],
+   "description": "Output format printed to stderr (default: none)",
+   "args": {
+    "name": "csv",
+    "suggestions": [
+     "csv",
+     "json",
+     "jsonl",
+     "md",
+     "sql"
+    ]
+   }
+  },
+  {
+   "name": "--list-devices",
+   "description": "List available devices and exit"
+  },
+  {
+   "name": [
+    "-v",
+    "--verbose"
+   ],
+   "description": "Verbose output"
+  },
+  {
+   "name": "--progress",
+   "description": "Print test progress indicators"
+  },
+  {
+   "name": "--no-warmup",
+   "description": "Skip warmup runs before benchmarking"
+  },
+  {
+   "name": [
+    "-fitt",
+    "--fit-target"
+   ],
+   "description": "Fit model to device memory with this margin per device in MiB (default: off)",
+   "args": {
+    "name": "mib"
+   }
+  },
+  {
+   "name": [
+    "-fitc",
+    "--fit-ctx"
+   ],
+   "description": "Minimum ctx size for --fit-target (default: 4096)",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": [
+    "-m",
+    "--model"
+   ],
+   "description": "Default: models/7B/ggml-model-q4_0.gguf",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": [
+    "-hf",
+    "-hfr",
+    "--hf-repo"
+   ],
+   "description": "Hugging Face model repository",
+   "args": {
+    "name": "user"
+   }
+  },
+  {
+   "name": [
+    "-hff",
+    "--hf-file"
+   ],
+   "description": "Hugging Face model file",
+   "args": {
+    "name": "file",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": [
+    "-hft",
+    "--hf-token"
+   ],
+   "description": "Hugging Face access token (default: value from HF_TOKEN environment variable)",
+   "args": {
+    "name": "token"
+   }
+  },
+  {
+   "name": "--offline",
+   "description": "Offline mode: forces use of cache, prevents network access (default: disabled)"
+  },
+  {
+   "name": [
+    "-p",
+    "--n-prompt"
+   ],
+   "description": "Default: 512",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": [
+    "-n",
+    "--n-gen"
+   ],
+   "description": "Default: 128",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": "-pg",
+   "description": "Default",
+   "args": {
+    "name": "pp"
+   }
+  },
+  {
+   "name": [
+    "-d",
+    "--n-depth"
+   ],
+   "description": "Default: 0",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": [
+    "-b",
+    "--batch-size"
+   ],
+   "description": "Default: 2048",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": [
+    "-ub",
+    "--ubatch-size"
+   ],
+   "description": "Default: 512",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": [
+    "-ctk",
+    "--cache-type-k"
+   ],
+   "description": "Default: f16",
+   "args": {
+    "name": "t"
+   }
+  },
+  {
+   "name": [
+    "-ctv",
+    "--cache-type-v"
+   ],
+   "description": "Default: f16",
+   "args": {
+    "name": "t"
+   }
+  },
+  {
+   "name": [
+    "-t",
+    "--threads"
+   ],
+   "description": "Default: 6",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": [
+    "-C",
+    "--cpu-mask"
+   ],
+   "description": "Default: 0x0",
+   "args": {
+    "name": "hex"
+   }
+  },
+  {
+   "name": "--cpu-strict",
+   "description": "Default: 0",
+   "args": {
+    "name": "0",
+    "suggestions": [
+     "0",
+     "1"
+    ]
+   }
+  },
+  {
+   "name": "--poll",
+   "description": "Default: 50",
+   "args": {
+    "name": "0"
+   }
+  },
+  {
+   "name": [
+    "-ngl",
+    "--n-gpu-layers"
+   ],
+   "description": "Default: -1",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": [
+    "-ncmoe",
+    "--n-cpu-moe"
+   ],
+   "description": "Default: 0",
+   "args": {
+    "name": "n"
+   }
+  },
+  {
+   "name": [
+    "-sm",
+    "--split-mode"
+   ],
+   "description": "Default: layer",
+   "args": {
+    "name": "none",
+    "suggestions": [
+     "none",
+     "layer",
+     "row",
+     "tensor"
+    ]
+   }
+  },
+  {
+   "name": [
+    "-mg",
+    "--main-gpu"
+   ],
+   "description": "Default: 0",
+   "args": {
+    "name": "i"
+   }
+  },
+  {
+   "name": [
+    "-nkvo",
+    "--no-kv-offload"
+   ],
+   "description": "Default: 0",
+   "args": {
+    "name": "0",
+    "suggestions": [
+     "0",
+     "1"
+    ]
+   }
+  },
+  {
+   "name": [
+    "-fa",
+    "--flash-attn"
+   ],
+   "description": "Default: auto",
+   "args": {
+    "name": "on",
+    "suggestions": [
+     "on",
+     "off",
+     "auto"
+    ]
+   }
+  },
+  {
+   "name": [
+    "-dev",
+    "--device"
+   ],
+   "description": "Default: auto",
+   "args": {
+    "name": "dev0"
+   }
+  },
+  {
+   "name": [
+    "-lm",
+    "--load-mode"
+   ],
+   "args": {
+    "name": "auto"
+   }
+  },
+  {
+   "name": [
+    "-lzm",
+    "--lazy-mode"
+   ],
+   "description": "Default: auto",
+   "args": {
+    "name": "on",
+    "suggestions": [
+     "on",
+     "auto",
+     "off"
+    ]
+   }
+  },
+  {
+   "name": [
+    "-embd",
+    "--embeddings"
+   ],
+   "description": "Default: 0",
+   "args": {
+    "name": "0",
+    "suggestions": [
+     "0",
+     "1"
+    ]
+   }
+  },
+  {
+   "name": [
+    "-ts",
+    "--tensor-split"
+   ],
+   "description": "Default: 0",
+   "args": {
+    "name": "ts0"
+   }
+  },
+  {
+   "name": [
+    "-ot",
+    "--override-tensor"
+   ],
+   "description": "Default: disabled",
+   "args": {
+    "name": "tensor"
+   }
+  },
+  {
+   "name": [
+    "-nopo",
+    "--no-op-offload"
+   ],
+   "description": "Default: 0",
+   "args": {
+    "name": "0",
+    "suggestions": [
+     "0",
+     "1"
+    ]
+   }
+  },
+  {
+   "name": "--no-host",
+   "description": "Default: 0",
+   "args": {
+    "name": "0",
+    "suggestions": [
+     "0",
+     "1"
+    ]
+   }
+  },
+  {
+   "name": "--repack",
+   "description": "Default: 1",
+   "args": {
+    "name": "0",
+    "suggestions": [
+     "0",
+     "1"
+    ]
+   }
+  }
+ ]
+}
