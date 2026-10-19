@@ -46,6 +46,11 @@ __tzc_escape() {
     done
     (( close )) && out+=$quote
   else
+    # nothing in plain names needs escaping; skip the per-character loop
+    if [[ $text != *[[:punct:][:space:]]* ]]; then
+      REPLY=$text
+      return 0
+    fi
     for ((i=1;i<=${#text};i++)); do
       ch=${text[i]}
       if (( i == 1 )) && [[ $ch == '~' ]]; then out+=$ch; continue; fi
@@ -269,6 +274,68 @@ __tzc_add_names() {
   return 0
 }
 
+# add candidates for node ids in "$@"; kind is option or subcommand.
+# this is the hot path for option-heavy specs, so records are split, scored
+# and pushed inline instead of through __tzc_record/__tzc_score/__tzc_push.
+# used (caller-local) skips options that were already given.
+__tzc_add_nodes() {
+  emulate -L zsh
+  setopt localoptions noglob
+  local kind=$1
+  shift
+  local -a f names
+  local oid flags hidden name best best_score best_len sc label insert prio
+  local query=$__tzc_p_prefix
+  local bq=${(b)query} blq=${(b)${(L)query}}
+  local qlen=${#query}
+  for oid in "$@"; do
+    f=( "${(@ps:\x1f:)__tzc_s_nodes[$oid]}" )
+    flags=${f[5]}
+    [[ $kind == option ]] && (( ${+used[$oid]} )) && [[ $flags != *R* ]] && continue
+    names=( ${(ps:\x1d:)f[2]} )
+    best= best_score= best_len=-1
+    for name in "${names[@]}"; do
+      if [[ $name == ${~bq}* ]]; then sc=0
+      elif [[ ${(L)name} == ${~blq}* ]]; then sc=1
+      elif (( qlen >= 3 )) && [[ ${(L)name} == *${~blq}* ]]; then sc=2
+      else continue
+      fi
+      if (( best_len < 0 || sc < best_score ||
+            (sc == best_score && ${#name} > best_len) )); then
+        best=$name
+        best_score=$sc
+        best_len=${#name}
+      fi
+    done
+    (( best_len < 0 )) && continue
+    hidden=0
+    [[ $flags == *H* ]] && hidden=1
+    (( hidden )) && [[ $best != $query ]] && continue
+    [[ $best == *[[:cntrl:]]* ]] && continue
+    label=$best
+    insert="$best "
+    if [[ $kind == option ]]; then
+      (( ${#names} > 1 )) && label="${(j:, :)names}"
+    elif [[ -z $__tzc_p_quote && $best != *[[:punct:][:space:]]* ]]; then
+      # plain name: avoid the __tzc_escape call in the hot loop
+      insert="$best "
+    else
+      __tzc_escape "$best" "$__tzc_p_quote" 1
+      insert="$REPLY "
+    fi
+    prio=${f[4]:-50}
+    (( prio > 100 )) && prio=100
+    (( prio < 0 )) && prio=0
+    __tzc_c_label+=("$label")
+    __tzc_c_insert+=("$insert")
+    __tzc_c_desc+=("${f[3]}")
+    __tzc_c_kind+=("$kind")
+    __tzc_c_score+=("$best_score")
+    __tzc_c_prio+=("$prio")
+  done
+  return 0
+}
+
 __tzc_add_commands() {
   emulate -L zsh
   setopt localoptions noglob extendedglob
@@ -466,15 +533,12 @@ __tzc_arg_at() {
 __tzc_option_named() {
   emulate -L zsh
   setopt localoptions noglob
-  local name=$1 id n
-  local IFS=$'\x1d'
+  local name=$1 id
+  local -a f names
   for id in "${__tzc_opt_ids[@]}"; do
-    __tzc_record "$id"
-    local -a names
-    names=( ${=__tzc_f[2]} )
-    for n in "${names[@]}"; do
-      [[ $n == "$name" ]] && { REPLY=$id; return 0; }
-    done
+    f=( "${(@ps:\x1f:)__tzc_s_nodes[$id]}" )
+    names=( ${(ps:\x1d:)f[2]} )
+    (( ${names[(Ie)$name]} )) && { REPLY=$id; return 0; }
   done
   return 1
 }
@@ -527,34 +591,42 @@ __tzc_opt_arg_count() {
   return 0
 }
 
+# cache the persistent option ids per node: walking them on every completion
+# is what made option-heavy specs slow
 __tzc_collect_persistent() {
   emulate -L zsh
   setopt localoptions noglob
-  local IFS=$'\x1d' id
-  local -a ids
-  __tzc_record "$1"
-  ids=( ${=__tzc_f[8]} )
-  for id in "${ids[@]}"; do
-    __tzc_record "$id"
-    [[ ${__tzc_f[5]} == *P* ]] && __tzc_persistent+=("$id")
-  done
+  local node=$1 cached
+  if (( ${+__tzc_persist_ids[$node]} )); then
+    cached=${__tzc_persist_ids[$node]}
+  else
+    local -a ids hits
+    local IFS=$'\x1d' id
+    local -a f
+    f=( "${(@ps:\x1f:)__tzc_s_nodes[$node]}" )
+    ids=( ${=f[8]} )
+    for id in "${ids[@]}"; do
+      f=( "${(@ps:\x1f:)__tzc_s_nodes[$id]}" )
+      [[ ${f[5]} == *P* ]] && hits+=("$id")
+    done
+    cached=${(pj:\x1d:)hits}
+    __tzc_persist_ids[$node]=$cached
+  fi
+  [[ -n $cached ]] && __tzc_persistent+=(${(ps:\x1d:)cached})
   return 0
 }
 
 __tzc_sub_named() {
   emulate -L zsh
   setopt localoptions noglob
-  local node=$1 word=$2 id n
-  local IFS=$'\x1d'
-  local -a ids names
-  __tzc_record "$node"
-  ids=( ${=__tzc_f[9]} )
+  local node=$1 word=$2 id
+  local -a f ids names
+  f=( "${(@ps:\x1f:)__tzc_s_nodes[$node]}" )
+  ids=( ${(ps:\x1d:)f[9]} )
   for id in "${ids[@]}"; do
-    __tzc_record "$id"
-    names=( ${=__tzc_f[2]} )
-    for n in "${names[@]}"; do
-      [[ $n == "$word" ]] && { REPLY=$id; return 0; }
-    done
+    f=( "${(@ps:\x1f:)__tzc_s_nodes[$id]}" )
+    names=( ${(ps:\x1d:)f[2]} )
+    (( ${names[(Ie)$word]} )) && { REPLY=$id; return 0; }
   done
   return 1
 }
@@ -636,30 +708,16 @@ __tzc_add_from_spec() {
   fi
 
   if (( ! options_done )) && [[ $__tzc_p_prefix == -* ]]; then
-    local oid flags
-    for oid in "${__tzc_opt_ids[@]}"; do
-      __tzc_record "$oid"
-      flags=${__tzc_f[5]}
-      (( ${+used[$oid]} )) && [[ $flags != *R* ]] && continue
-      hidden=0
-      [[ $flags == *H* ]] && hidden=1
-      __tzc_add_names "${__tzc_f[2]}" "${__tzc_f[3]}" option "${__tzc_f[4]}" "$hidden"
-    done
+    __tzc_add_nodes option "${__tzc_opt_ids[@]}"
     return 0
   fi
 
   if (( arg_index == 0 )); then
-    local IFS=$'\x1d' sid flags
+    local IFS=$'\x1d'
     local -a subs
     __tzc_record "$__tzc_node"
     subs=( ${=__tzc_f[9]} )
-    for sid in "${subs[@]}"; do
-      __tzc_record "$sid"
-      flags=${__tzc_f[5]}
-      hidden=0
-      [[ $flags == *H* ]] && hidden=1
-      __tzc_add_names "${__tzc_f[2]}" "${__tzc_f[3]}" subcommand "${__tzc_f[4]}" "$hidden"
-    done
+    __tzc_add_nodes subcommand "${subs[@]}"
   fi
 
   if __tzc_arg_at "$__tzc_node" "$arg_index"; then

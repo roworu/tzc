@@ -5,6 +5,7 @@ typeset -g __tzc_spec_lib=${${(%):-%x}:A:h}
 typeset -g __tzc_user_specs=${__tzc_user_specs:-${XDG_CONFIG_HOME:-$HOME/.config}/tzc/specs}
 
 typeset -ga __tzc_s_nodes __tzc_f
+typeset -gA __tzc_persist_ids
 
 # shell builtins; `commands` alone misses builtin/eval/export/set
 typeset -ga __tzc_builtins
@@ -43,12 +44,14 @@ __tzc_spec_load() {
     __tzc_s_ok=0
     source "$file" 2>/dev/null || continue
     [[ $__tzc_s_ok == 1 && -n $__tzc_s_blob ]] || continue
-    local IFS=$'\x1e'
-    __tzc_s_nodes=( ${=__tzc_s_blob} )
+    # (p) makes the separator understand \x1e; this is several times faster
+    # than an IFS split of the multi-megabyte blob
+    __tzc_s_nodes=( ${(ps:\x1e:)__tzc_s_blob} )
     # a trailing separator would leave one empty record
     (( ${#__tzc_s_nodes} )) && [[ -z ${__tzc_s_nodes[-1]} ]] && unset "__tzc_s_nodes[-1]"
     (( ${#__tzc_s_nodes} )) || continue
     __tzc_spec_loaded=$name
+    __tzc_persist_ids=()
     return 0
   done
   __tzc_s_nodes=()
@@ -60,8 +63,8 @@ __tzc_spec_load() {
 __tzc_record() {
   emulate -L zsh
   setopt localoptions noglob
-  local IFS=$'\x1f'
-  __tzc_f=( ${=__tzc_s_nodes[$1]} )
+  # quoted (@) keeps empty fields; (p) makes the separator understand \x1f
+  __tzc_f=( "${(@ps:\x1f:)__tzc_s_nodes[$1]}" )
   return 0
 }
 

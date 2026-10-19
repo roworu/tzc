@@ -30,6 +30,10 @@ source "$HOME/.local/share/zsh/tzc/tzc.zsh"
 
 Or whichever path you downloaded plugin to
 
+On first run compiles completions and then builds package caches in the background. 
+That happens once per installation; after a plugin update run
+`$HOME/.local/share/zsh/tzc/completions/compile.zsh` to recompile the specs.
+
 ## Config
 
 You can configure completion popup UI/settings via env options
@@ -49,13 +53,15 @@ To add new completions or change existing, check @completions/README.md
 ### Package completions
 
 Package arguments of brew, dnf/yum, apt/apt-get/apt-cache, pacman, zypper, apk
-and flatpak complete names and descriptions from local caches. Build or refresh
-them from the installed package managers' local metadata:
+and flatpak complete names and descriptions from local caches. Caches are
+built on first start. Refresh them from the installed package managers'
+local metadata with:
 
 ```sh
 zsh ~/.local/share/zsh/tzc/completions/tools/package-cache.zsh
 ```
 
+The first-start run logs to `${XDG_CACHE_HOME:-$HOME/.cache}/tzc/setup.log`.
 Managers that are not installed are skipped. dnf reads its metadata cache only;
 run `dnf makecache` first if that cache is empty. Cache changes are picked up
 automatically.
