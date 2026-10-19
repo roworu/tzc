@@ -9,6 +9,10 @@ typeset -gA __tzc_orig_bind
 (( __tzc_max_rows < 1 )) && __tzc_max_rows=1
 (( __tzc_max_rows > 10 )) && __tzc_max_rows=10
 
+: ${__tzc_max_width:=${TZC_MAX_WIDTH:-80}}
+[[ $__tzc_max_width == <-> ]] || __tzc_max_width=80
+(( __tzc_max_width < 12 )) && __tzc_max_width=12
+
 __tzc_compute() {
   emulate -L zsh
   __tzc_complete "$BUFFER" "$CURSOR" "$PWD"

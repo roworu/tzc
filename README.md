@@ -36,7 +36,8 @@ You can configure completion popup UI/settings via env options
 
 | variable | meaning |
 | --- | --- |
-| `TZC_MAX_ROWS` | rows to show, default 10 |
+| `TZC_MAX_ROWS` | rows to show, description included, default 10 |
+| `TZC_MAX_WIDTH` | width popup may use, default 80 |
 | `TZC_NO_COLOR` | use `standout` for the selection instead of colors |
 | `TZC_DISABLE` | do not load the plugin |
 

@@ -139,6 +139,14 @@ __tzc_render_menu() {
   fi
   (( avail < 10 )) && return 1
   (( inner > avail )) && inner=$avail
+  local max_width=${__tzc_max_width:-80}
+  [[ $max_width == <-> ]] || max_width=80
+  (( max_width < 12 )) && max_width=12
+  # the setting is the rightmost screen column the popup may reach; when the
+  # prompt already sits past it, fall back to limiting the popup width
+  local box_max=$(( max_width - indent ))
+  (( box_max < 12 )) && box_max=$max_width
+  (( inner > box_max - 2 )) && inner=$(( box_max - 2 ))
 
   # wrap the selected description to the box interior; its line count changes
   # the menu height
@@ -148,11 +156,19 @@ __tzc_render_menu() {
     __tzc_wrap_text "${f[3]}" $(( inner - 1 ))
     desc_lines=("${__tzc_wrapped[@]}")
   fi
+  local row_budget=${__tzc_max_rows:-10}
+  [[ $row_budget == <-> ]] || row_budget=10
+  (( row_budget < 1 )) && row_budget=1
+
   local desc_extra=0
   if (( ${#desc_lines} )); then
-    local max_desc_lines=$(( lines - 5 ))
-    (( max_desc_lines < 1 )) && max_desc_lines=1
-    if (( ${#desc_lines} > max_desc_lines )); then
+    # the description counts against the row budget; keep one candidate row
+    local max_desc_lines=$(( row_budget - 2 ))
+    (( max_desc_lines > lines - 5 )) && max_desc_lines=$(( lines - 5 ))
+    (( max_desc_lines < 0 )) && max_desc_lines=0
+    if (( max_desc_lines == 0 )); then
+      desc_lines=()
+    elif (( ${#desc_lines} > max_desc_lines )); then
       desc_lines=("${(@)desc_lines[1,max_desc_lines]}")
       if (( ${#desc_lines[-1]} < inner - 1 )); then
         desc_lines[-1]+="…"
@@ -160,10 +176,10 @@ __tzc_render_menu() {
         desc_lines[-1]="${desc_lines[-1][1,inner-2]}…"
       fi
     fi
-    desc_extra=$(( 1 + ${#desc_lines} ))
+    (( ${#desc_lines} )) && desc_extra=$(( 1 + ${#desc_lines} ))
   fi
 
-  local max_rows=${__tzc_max_rows:-10}
+  local max_rows=$(( row_budget - desc_extra ))
   (( max_rows > lines - 3 - desc_extra )) && max_rows=$(( lines - 3 - desc_extra ))
   (( max_rows < 1 )) && return 1
   local rows=$total
