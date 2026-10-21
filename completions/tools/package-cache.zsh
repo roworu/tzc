@@ -17,8 +17,8 @@ usage() {
 }
 
 (( $# )) && managers=("$@")
+managers=( "${(@)managers:/(yum|dnf5)/dnf}" )
 for manager in "${managers[@]}"; do
-  [[ $manager == (yum|dnf5) ]] && continue
   (( ${known[(Ie)$manager]} )) || { print -u2 "${0:t}: unknown manager: $manager"; usage }
 done
 mkdir -p -- "$out" || exit 1
@@ -105,9 +105,6 @@ fetch_flatpak() {
 refresh() {
   local manager=$1
   local tmp="$out/.$manager.$$" sorted="$out/.$manager.$$.sorted"
-  case $manager in
-    (yum|dnf5) manager=dnf ;;
-  esac
   if ! "fetch_$manager" > "$tmp" 2>/dev/null; then
     rm -f -- "$tmp"
     print -u2 "$manager: skipped (no data)"

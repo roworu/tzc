@@ -29,8 +29,6 @@ def clean(value: object) -> str:
     if value is None:
         return ""
     text = str(value)
-    text = text.replace(RS, " ").replace(FS, " ").replace(GS, " ").replace(SRS, " ")
-    text = text.replace("\t", " ").replace("\r", " ").replace("\n", " ")
     text = "".join(" " if ord(char) < 32 or ord(char) == 127 else char
                    for char in text)
     return text.strip()
@@ -67,10 +65,6 @@ def priority_of(item: dict) -> int:
     return max(0, min(value, 100))
 
 
-def truthy(value: object) -> bool:
-    return bool(value)
-
-
 def repeatable(item: dict) -> bool:
     value = item.get("isRepeatable", False)
     if isinstance(value, bool):
@@ -79,11 +73,11 @@ def repeatable(item: dict) -> bool:
 
 
 def optional_arg(arg: dict) -> bool:
-    return truthy(arg.get("isOptional"))
+    return bool(arg.get("isOptional"))
 
 
 def variadic_arg(arg: dict) -> bool:
-    return truthy(arg.get("isVariadic"))
+    return bool(arg.get("isVariadic"))
 
 
 def arg_is_empty(arg: dict) -> bool:
@@ -134,7 +128,7 @@ class Converter:
                     GS.join(names_of(suggestion)),
                     clean(suggestion.get("description")),
                     "" if suggestion.get("priority") is None else str(priority_of(suggestion)),
-                    "1" if truthy(suggestion.get("hidden")) else "0",
+                    "1" if bool(suggestion.get("hidden")) else "0",
                 ]))
         return self.add(Node(
             kind="a",
@@ -145,11 +139,11 @@ class Converter:
 
     def add_option(self, option: dict) -> int:
         flags = ""
-        if truthy(option.get("isPersistent")):
+        if bool(option.get("isPersistent")):
             flags += "P"
         if repeatable(option):
             flags += "R"
-        if truthy(option.get("hidden")):
+        if bool(option.get("hidden")):
             flags += "H"
         node = Node(
             kind="o",
@@ -162,7 +156,7 @@ class Converter:
         args = item_args(option)
         # a lone empty required arg only means "takes a value"; keep that in a
         # flag instead of a node. anything else keeps its arg nodes.
-        if len(args) == 1 and arg_is_empty(args[0]) and not optional_arg(args[0]):
+        if len(args) == 1 and arg_is_empty(args[0]):
             node.flags += "T"
         else:
             for arg in args:
@@ -171,7 +165,7 @@ class Converter:
 
     def add_node(self, spec: dict, kind: str) -> int:
         flags = ""
-        if kind == "s" and truthy(spec.get("hidden")):
+        if kind == "s" and bool(spec.get("hidden")):
             flags = "H"
         node = Node(
             kind=kind,
@@ -294,7 +288,7 @@ def main() -> int:
     out.mkdir(parents=True, exist_ok=True)
 
     entries: list[tuple[str, str]] = []
-    total_nodes = total_bytes = files = 0
+    total_nodes = total_bytes = 0
     failures = 0
     for path in paths:
         if path.stem == "index":
@@ -308,12 +302,11 @@ def main() -> int:
             failures += 1
             continue
         entries.append((name, desc))
-        files += 1
         total_nodes += nodes
         total_bytes += size
 
     write_index(entries, out)
-    print(f"packed {files} specs, {total_nodes} nodes, {total_bytes} blob chars in {out}")
+    print(f"packed {len(entries)} specs, {total_nodes} nodes, {total_bytes} blob chars in {out}")
     if failures:
         print(f"skipped {failures} files", file=sys.stderr)
         return 1
