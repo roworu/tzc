@@ -12,7 +12,6 @@ typeset -g __tzc_loaded=1
 [[ -n ${TZC_DISABLE:-} ]] && return 0
 
 typeset -g __tzc_root=${${(%):-%x}:A:h}
-: ${__tzc_specs_dir:=$__tzc_root/completions/zsh}
 
 source "$__tzc_root/lib/spec.zsh"
 source "$__tzc_root/lib/engine.zsh"

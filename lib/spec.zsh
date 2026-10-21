@@ -47,14 +47,11 @@ __tzc_spec_load() {
     # (p) makes the separator understand \x1e; this is several times faster
     # than an IFS split of the multi-megabyte blob
     __tzc_s_nodes=( ${(ps:\x1e:)__tzc_s_blob} )
-    # a trailing separator would leave one empty record
-    (( ${#__tzc_s_nodes} )) && [[ -z ${__tzc_s_nodes[-1]} ]] && unset "__tzc_s_nodes[-1]"
     (( ${#__tzc_s_nodes} )) || continue
     __tzc_spec_loaded=$name
     __tzc_persist_ids=()
     return 0
   done
-  __tzc_s_nodes=()
   return 1
 }
 
@@ -80,30 +77,20 @@ __tzc_programs() {
   local -a names keys
   if (( ${+commands} )); then
     rehash 2>/dev/null
-    for name in "${__tzc_builtins[@]}" "${(@k)commands}"; do
-      # names with whitespace cannot be used as plain assoc keys below
-      [[ -n $name && $name != *[[:space:][:cntrl:]]* ]] || continue
-      (( ${+seen[$name]} )) && continue
-      seen[$name]=1
-      names+=("$name")
-    done
+    names=( "${(@k)commands}" )
   else
     setopt localoptions extendedglob nullglob
-    for name in "${__tzc_builtins[@]}" $^path/*(N-*:t); do
-      [[ -n $name && $name != *[[:space:][:cntrl:]]* ]] || continue
-      (( ${+seen[$name]} )) && continue
-      seen[$name]=1
-      names+=("$name")
-    done
+    names=( $^path/*(N-*:t) )
   fi
-  for name in "${names[@]}"; do
+  for name in "${__tzc_builtins[@]}" "${names[@]}"; do
+    # names with whitespace cannot be used as plain assoc keys below
+    [[ -n $name && $name != *[[:space:][:cntrl:]]* ]] || continue
+    (( ${+seen[$name]} )) && continue
+    seen[$name]=1
     keys+=("${(L)name}"$'\x1f'"$name")
   done
   local LC_COLLATE=C
   keys=("${(@o)keys}")
-  __tzc_prog_names=()
-  for name in "${keys[@]}"; do
-    __tzc_prog_names+=("${name#*$'\x1f'}")
-  done
+  __tzc_prog_names=( "${(@)keys#*$'\x1f'}" )
   return 0
 }

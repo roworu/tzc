@@ -1,6 +1,8 @@
-# zle layer: menu state, line-pre-redraw, up/down/tab widgets and bindings.
+# zle layer: menu state, line-pre-redraw, arrow/tab widgets and bindings.
 
+# panel 0 is the completion box, 1 the history box to its right
 typeset -gi __tzc_active=0 __tzc_selected=0 __tzc_top=0 __tzc_owns=0
+typeset -gi __tzc_panel=0 __tzc_hist_selected=0 __tzc_hist_top=0
 typeset -g __tzc_last_key= __tzc_history_moved=0
 typeset -gA __tzc_orig_bind
 
@@ -19,19 +21,20 @@ __tzc_compute() {
   return 0
 }
 
+# drop a lone candidate that only repeats the typed word, then reset the
+# selection; fails when neither box has anything to show
 __tzc_worth_showing() {
   emulate -L zsh
   setopt localoptions noglob
-  local n=${#__tzc_candidates}
-  (( n )) || return 1
-  if (( n == 1 )); then
+  if (( ${#__tzc_candidates} == 1 )); then
     local -a f
-    IFS=$'\x1f' f=( ${=__tzc_candidates[1]} )
-    local insert=${f[2]}
-    insert=${insert% }
-    [[ $insert == $__tzc_result_typed ]] && return 1
+    local IFS=$'\x1f'
+    f=( ${=__tzc_candidates[1]} )
+    [[ ${f[2]% } == $__tzc_result_typed ]] && __tzc_candidates=()
   fi
-  return 0
+  __tzc_selected=0 __tzc_top=0 __tzc_hist_selected=0 __tzc_hist_top=0
+  __tzc_panel=$(( ! ${#__tzc_candidates} ))
+  (( ${#__tzc_candidates} || ${#__tzc_hist_candidates} ))
 }
 
 __tzc_render() {
@@ -107,22 +110,11 @@ __tzc_pre_redraw() {
     __tzc_hide
     return 0
   fi
+  # history moves, zsh's own completion listing and blank input
   if (( __tzc_history_moved )) ||
-     [[ $LASTWIDGET == *history* || $LASTWIDGET == *-line-or-search ]]; then
+     [[ $LASTWIDGET == (*history*|*-line-or-search|*complete*|*expand*|menu-select*) ||
+        -z ${${BUFFER[1,CURSOR]}//[[:space:]]/} ]]; then
     __tzc_history_moved=0
-    __tzc_last_key=
-    __tzc_hide
-    return 0
-  fi
-  # do not fight zsh's own completion listing
-  if [[ $LASTWIDGET == *complete* || $LASTWIDGET == *expand* ||
-        $LASTWIDGET == menu-select* ]]; then
-    __tzc_last_key=
-    __tzc_hide
-    return 0
-  fi
-  local before=${BUFFER[1,CURSOR]}
-  if [[ -z ${before//[[:space:]]/} ]]; then
     __tzc_last_key=
     __tzc_hide
     return 0
@@ -135,8 +127,6 @@ __tzc_pre_redraw() {
     __tzc_last_key=$key
     __tzc_compute
     if __tzc_worth_showing; then
-      __tzc_selected=0
-      __tzc_top=0
       __tzc_active=1
     else
       __tzc_hide
@@ -154,16 +144,21 @@ __tzc_accept() {
   if [[ $key != $__tzc_last_key ]]; then
     __tzc_last_key=$key
     __tzc_compute
-    __tzc_selected=0
-    __tzc_top=0
     __tzc_worth_showing || return 1
   fi
-  local n=${#__tzc_candidates}
-  (( n )) || return 1
-  local idx=$(( __tzc_selected + 1 ))
-  (( idx > n )) && idx=$n
-  local -a f
-  IFS=$'\x1f' f=( ${=__tzc_candidates[idx]} )
+  local -a list f
+  local idx
+  if (( __tzc_panel )); then
+    list=( "${__tzc_hist_candidates[@]}" )
+    idx=$(( __tzc_hist_selected + 1 ))
+  else
+    list=( "${__tzc_candidates[@]}" )
+    idx=$(( __tzc_selected + 1 ))
+  fi
+  (( ${#list} )) || return 1
+  (( idx > ${#list} )) && idx=${#list}
+  local IFS=$'\x1f'
+  f=( ${=list[idx]} )
   local insert=${f[2]}
   [[ -n $insert && $insert != *[[:cntrl:]]* ]] || return 1
   local start=$__tzc_result_start end=$__tzc_result_end
@@ -187,7 +182,7 @@ __tzc_delegate() {
   local default=$1 action=$2 binding key
   key="$KEYMAP:$action"
   binding=${__tzc_orig_bind[$key]:-}
-  if [[ -n $binding && ${+widgets[$binding]} ]]; then
+  if [[ -n $binding ]] && (( ${+widgets[$binding]} )); then
     zle "$binding"
   else
     zle "$default"
@@ -195,17 +190,27 @@ __tzc_delegate() {
   return 0
 }
 
+# move the selection of the focused box by $1, wrapping at the ends
+__tzc_move() {
+  emulate -L zsh
+  local n
+  if (( __tzc_panel )); then
+    n=${#__tzc_hist_candidates}
+    (( n )) && __tzc_hist_selected=$(( (__tzc_hist_selected + $1 + n) % n ))
+  else
+    n=${#__tzc_candidates}
+    (( n )) && __tzc_selected=$(( (__tzc_selected + $1 + n) % n ))
+  fi
+  (( n )) || return 0
+  __tzc_render
+  zle -R
+  return 0
+}
+
 __tzc_up() {
   emulate -L zsh
   if (( __tzc_active )); then
-    (( ${#__tzc_candidates} )) || return 0
-    if (( __tzc_selected > 0 )); then
-      (( __tzc_selected-- ))
-    else
-      __tzc_selected=$(( ${#__tzc_candidates} - 1 ))
-    fi
-    __tzc_render
-    zle -R
+    __tzc_move -1
   else
     __tzc_history_moved=1
     __tzc_delegate .up-line-or-history up
@@ -216,17 +221,36 @@ __tzc_up() {
 __tzc_down() {
   emulate -L zsh
   if (( __tzc_active )); then
-    (( ${#__tzc_candidates} )) || return 0
-    if (( __tzc_selected < ${#__tzc_candidates} - 1 )); then
-      (( __tzc_selected++ ))
-    else
-      __tzc_selected=0
-    fi
-    __tzc_render
-    zle -R
+    __tzc_move 1
   else
     __tzc_history_moved=1
     __tzc_delegate .down-line-or-history down
+  fi
+  return 0
+}
+
+# right focuses the history box, left the completion box; otherwise the keys
+# keep their own bindings
+__tzc_right() {
+  emulate -L zsh
+  if (( __tzc_active && ! __tzc_panel && ${#__tzc_hist_candidates} )); then
+    __tzc_panel=1
+    __tzc_render
+    zle -R
+  else
+    __tzc_delegate .forward-char right
+  fi
+  return 0
+}
+
+__tzc_left() {
+  emulate -L zsh
+  if (( __tzc_active && __tzc_panel && ${#__tzc_candidates} )); then
+    __tzc_panel=0
+    __tzc_render
+    zle -R
+  else
+    __tzc_delegate .backward-char left
   fi
   return 0
 }
@@ -257,24 +281,14 @@ __tzc_save_bind() {
 
 __tzc_bind() {
   emulate -L zsh
-  local map
+  local map seq action
   # $KEYMAP is usually "main" with emacs bindings; keep its originals too
-  __tzc_save_bind main up '^[[A'
-  __tzc_save_bind main up '^[OA'
-  __tzc_save_bind main down '^[[B'
-  __tzc_save_bind main down '^[OB'
-  __tzc_save_bind main tab '^I'
-  for map in emacs viins; do
-    __tzc_save_bind $map up '^[[A'
-    __tzc_save_bind $map up '^[OA'
-    __tzc_save_bind $map down '^[[B'
-    __tzc_save_bind $map down '^[OB'
-    __tzc_save_bind $map tab '^I'
-    bindkey -M $map '^[[A' __tzc_up 2>/dev/null
-    bindkey -M $map '^[[B' __tzc_down 2>/dev/null
-    bindkey -M $map '^[OA' __tzc_up 2>/dev/null
-    bindkey -M $map '^[OB' __tzc_down 2>/dev/null
-    bindkey -M $map '^I' __tzc_tab 2>/dev/null
+  for map in main emacs viins; do
+    for seq action in '^[[A' up '^[OA' up '^[[B' down '^[OB' down \
+                      '^[[C' right '^[OC' right '^[[D' left '^[OD' left '^I' tab; do
+      __tzc_save_bind $map $action $seq
+      [[ $map == main ]] || bindkey -M $map $seq __tzc_$action 2>/dev/null
+    done
   done
   return 0
 }
@@ -310,6 +324,8 @@ __tzc_menu_start() {
   zle -N __tzc_up
   zle -N __tzc_down
   zle -N __tzc_tab
+  zle -N __tzc_left
+  zle -N __tzc_right
   zle -N __tzc_int_cleanup
   __tzc_sigint_install
   __tzc_init_render
