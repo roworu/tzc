@@ -10,7 +10,7 @@ Candidates come from bundled JSON command specs, `PATH`, filesystem and shell hi
 
 - zsh 5.9+
 - UTF-8 terminal:
-  truecolor is used when `COLORTERM` is `truecolor`/`24bit`,otherwise 256 colors
+  menu colors come from terminal palette
 - Python 3:
   for generating new zsh completion specs from JSON file
 
@@ -19,7 +19,7 @@ Candidates come from bundled JSON command specs, `PATH`, filesystem and shell hi
 Clone repo
 
 ```bash
-git clone https://github.com/OWNER/tzc.git --depth 1 ~/.local/share/zsh/tzc
+git clone https://github.com/roworu/tzc.git --depth 1 ~/.local/share/zsh/tzc
 ```
 
 Add this to your `~/.zshrc`:

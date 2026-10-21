@@ -10,40 +10,24 @@ typeset -ga __tzc_wrapped
 
 __tzc_init_render() {
   emulate -L zsh
+  __tzc_palette=()
   if [[ -n ${TZC_NO_COLOR:-} || -n ${NO_COLOR:-} ]]; then
     __tzc_color_mode=none
-  elif [[ ${COLORTERM:-} == (truecolor|24bit) ]]; then
-    __tzc_color_mode=true
-  else
-    __tzc_color_mode=256
+    return 0
   fi
-  __tzc_palette=()
-  case $__tzc_color_mode in
-    (true)
-      __tzc_palette=(
-        desc 'fg=#a6adc8'
-        subcommand 'fg=#cba6f7'
-        suggestion 'fg=#89dceb'
-        option 'fg=#f9e2af'
-        command 'fg=#a6e3a1'
-        folder 'fg=#89b4fa'
-        file 'fg=#cdd6f4'
-        history 'fg=#f5c2e7'
-      )
-      ;;
-    (256)
-      __tzc_palette=(
-        desc 'fg=245'
-        subcommand 'fg=141'
-        suggestion 'fg=117'
-        option 'fg=222'
-        command 'fg=114'
-        folder 'fg=111'
-        file 'fg=252'
-        history 'fg=218'
-      )
-      ;;
-  esac
+  __tzc_color_mode=color
+  # palette slots instead of fixed rgb so the menu follows the terminal theme
+  # and stays readable on both light and dark backgrounds
+  __tzc_palette=(
+    desc 'fg=8'
+    subcommand 'fg=magenta'
+    suggestion 'fg=cyan'
+    option 'fg=yellow'
+    command 'fg=green'
+    folder 'fg=blue'
+    file 'fg=default'
+    history 'fg=8'
+  )
   return 0
 }
 
