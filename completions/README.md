@@ -33,15 +33,16 @@ Python 3 is required for that step
   `isVariadic`; may be a single object or a list
 - `suggestions`: strings or `{name, description, priority, hidden}` objects
 - `template`: `filepaths`, `folders`, or `packages:<manager>`; other values are
-  ignored. `<manager>` names a cache file in `TZC_PACKAGES_DIR` (default
-  `${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages`)
+  ignored. `<manager>` names a cache file in
+  `${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages`
 
 ## Package caches
 
 `packages:<manager>` arguments read one package per line from
-`$TZC_PACKAGES_DIR/<manager>`, as `name<TAB>description`; a bare name means an
-empty description. The plugin never starts a package manager; refresh the
-caches explicitly from local metadata:
+`${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages/<manager>`, as
+`name<TAB>description`; a bare name means an empty description. The plugin
+never starts a package manager; refresh the caches explicitly from local
+metadata:
 
 ```sh
 zsh tools/package-cache.zsh            # every installed manager

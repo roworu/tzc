@@ -5,7 +5,7 @@
 emulate -L zsh
 setopt pipe_fail
 
-typeset -g out=${TZC_PACKAGES_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages}
+typeset -g out=${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages
 typeset -ga known=(brew dnf apt pacman zypper apk flatpak)
 typeset -ga managers=("${known[@]}")
 

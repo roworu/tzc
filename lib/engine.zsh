@@ -430,7 +430,7 @@ __tzc_pkg_load() {
   setopt localoptions noglob
   local manager=$1
   [[ -n $manager && $manager != *[!A-Za-z0-9_.-]* ]] || return 1
-  local dir=${TZC_PACKAGES_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages}
+  local dir=${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages
   local file="$dir/$manager"
   # reload only when the cache file changes, not after every command
   zmodload zsh/stat 2>/dev/null

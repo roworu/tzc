@@ -44,7 +44,6 @@ You can configure completion popup UI/settings via env options
 | `TZC_MAX_WIDTH` | width popup may use, default 80 |
 | `TZC_HISTORY` | recent history entries starting with the typed line, offered first; 0 disables, default 3 |
 | `TZC_NO_COLOR` | use `standout` for the selection instead of colors |
-| `TZC_PACKAGES_DIR` | package name cache directory, default `${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages` |
 | `TZC_DISABLE` | do not load the plugin |
 
 ### Spec data
