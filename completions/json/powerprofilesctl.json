@@ -1,0 +1,172 @@
+{
+ "name": "powerprofilesctl",
+ "description": "Control the power profiles daemon",
+ "options": [
+  {
+   "name": [
+    "-h",
+    "--help"
+   ],
+   "description": "Show help and exit",
+   "isPersistent": true
+  }
+ ],
+ "subcommands": [
+  {
+   "name": "list",
+   "description": "List available power profiles",
+   "priority": 75
+  },
+  {
+   "name": "list-holds",
+   "description": "List current power profile holds",
+   "priority": 55
+  },
+  {
+   "name": "list-actions",
+   "description": "List available power profile actions",
+   "priority": 55
+  },
+  {
+   "name": "get",
+   "description": "Print the currently active power profile",
+   "priority": 76
+  },
+  {
+   "name": "set",
+   "description": "Set the currently active power profile",
+   "priority": 78,
+   "args": {
+    "name": "profile",
+    "suggestions": [
+     {
+      "name": "performance",
+      "description": "High performance and power consumption"
+     },
+     {
+      "name": "balanced",
+      "description": "Balanced power consumption and performance"
+     },
+     {
+      "name": "power-saver",
+      "description": "Reduced power consumption and performance"
+     }
+    ]
+   }
+  },
+  {
+   "name": "configure-action",
+   "description": "Configure the action to be taken for the profile",
+   "priority": 50,
+   "options": [
+    {
+     "name": "--enable",
+     "description": "Enable the action"
+    },
+    {
+     "name": "--disable",
+     "description": "Disable the action"
+    }
+   ],
+   "args": {
+    "name": "action",
+    "suggestions": [
+     {
+      "name": "trickle_charge",
+      "description": "Configure the power supply to trickle charge"
+     },
+     {
+      "name": "amdgpu_panel_power",
+      "description": "Panel power savings, may affect color quality"
+     },
+     {
+      "name": "amdgpu_dpm",
+      "description": "Adjust GPU dynamic power management"
+     }
+    ]
+   }
+  },
+  {
+   "name": "configure-battery-aware",
+   "description": "Turn dynamic changes from battery level or power adapter on or off",
+   "priority": 50,
+   "options": [
+    {
+     "name": "--enable",
+     "description": "Enable battery aware"
+    },
+    {
+     "name": "--disable",
+     "description": "Disable battery aware"
+    }
+   ]
+  },
+  {
+   "name": "query-battery-aware",
+   "description": "Query whether dynamic changes from battery level or power adapter are enabled",
+   "priority": 50
+  },
+  {
+   "name": "launch",
+   "description": "Launch a command while holding a power profile",
+   "priority": 72,
+   "options": [
+    {
+     "name": [
+      "-p",
+      "--profile"
+     ],
+     "description": "Profile to hold while the command runs",
+     "args": {
+      "name": "profile",
+      "suggestions": [
+       {
+        "name": "performance",
+        "description": "High performance and power consumption"
+       },
+       {
+        "name": "balanced",
+        "description": "Balanced power consumption and performance"
+       },
+       {
+        "name": "power-saver",
+        "description": "Reduced power consumption and performance"
+       }
+      ]
+     }
+    },
+    {
+     "name": [
+      "-r",
+      "--reason"
+     ],
+     "description": "Reason for the hold",
+     "args": {
+      "name": "reason"
+     }
+    },
+    {
+     "name": [
+      "-i",
+      "--appid"
+     ],
+     "description": "Application ID for the hold",
+     "args": {
+      "name": "appid"
+     }
+    }
+   ],
+   "args": {
+    "name": "command",
+    "description": "Command to launch",
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "version",
+   "description": "Print version information and exit",
+   "priority": 40
+  }
+ ]
+}
