@@ -22,6 +22,14 @@ typeset -ga __tzc_c_label __tzc_c_insert __tzc_c_desc __tzc_c_kind __tzc_c_score
 typeset -ga __tzc_candidates __tzc_prog_names __tzc_pkg_lines
 typeset -g __tzc_pkg_manager= __tzc_pkg_stamp=
 
+# history suggestions: max entries offered on top; 0 disables. the recent
+# window is cached so keystrokes scan an array, not the whole history map.
+typeset -g __tzc_history=${TZC_HISTORY:-3}
+[[ $__tzc_history == <-> ]] || __tzc_history=3
+__tzc_history=$(( 10#$__tzc_history ))
+typeset -ga __tzc_hist_lines
+typeset -g __tzc_hist_stamp=
+
 # quote text for the open quote; close adds the closing quote. a leading ~ is
 # left unescaped so home paths keep working.
 __tzc_escape() {
@@ -236,6 +244,50 @@ __tzc_push() {
   (( prio > 100 )) && prio=100
   (( prio < 0 )) && prio=0
   __tzc_c_prio+=("$prio")
+  return 0
+}
+
+# rebuild the recent-history window only when the history changes
+__tzc_hist_refresh() {
+  emulate -L zsh
+  setopt localoptions noglob
+  # ${#history} is linear on the special parameter, so HISTCMD is the stamp
+  local stamp=${HISTCMD:-0}
+  [[ $stamp == $__tzc_hist_stamp ]] && return 0
+  __tzc_hist_stamp=$stamp
+  local -a lines
+  local key=$(( stamp - 1 ))
+  local scans=0 window=500
+  while (( key > 0 && scans < window * 2 && ${#lines} < window )); do
+    (( ${+history[$key]} )) && lines+=("${history[$key]}")
+    scans=$(( scans + 1 ))
+    key=$(( key - 1 ))
+  done
+  __tzc_hist_lines=("${lines[@]}")
+  return 0
+}
+
+# recent history lines that start with the typed line, newest first
+__tzc_add_history() {
+  emulate -L zsh
+  setopt localoptions noglob
+  local limit=${__tzc_history:-0}
+  (( limit > 0 )) || return 0
+  local line=$__tzc_result_line
+  [[ -n ${line//[[:space:]]/} ]] || return 0
+  __tzc_hist_refresh
+  local -a seen
+  local entry count=0
+  for entry in "${__tzc_hist_lines[@]}"; do
+    (( count >= limit )) && break
+    [[ $entry == "$line"* ]] || continue
+    [[ $entry == "$line" ]] && continue
+    [[ $entry == *[[:cntrl:]]* ]] && continue
+    (( ${seen[(Ie)$entry]} )) && continue
+    seen+=("$entry")
+    __tzc_push "$entry" "$entry" "" history 0 100
+    (( count += 1 ))
+  done
   return 0
 }
 
@@ -726,13 +778,24 @@ __tzc_add_from_spec() {
   return 0
 }
 
-# sort by score, priority, kind, label; dedupe by insert; cap 200
+# sort by score, priority, kind, label; dedupe by insert; cap 200.
+# history suggestions keep their recency order above the sorted candidates.
 __tzc_sort_emit() {
   emulate -L zsh
   setopt localoptions noglob
-  local -a keys
+  local -a keys seen_inserts
   local i key label kind prio score ko insert
   for ((i=1;i<=${#__tzc_c_label};i++)); do
+    [[ ${__tzc_c_kind[i]} == history ]] || continue
+    insert=${__tzc_c_insert[i]}
+    [[ -n $insert ]] || continue
+    (( ${seen_inserts[(Ie)$insert]} )) && continue
+    seen_inserts+=("$insert")
+    __tzc_candidates+=("${__tzc_c_label[i]}"$'\x1f'"$insert"$'\x1f'"${__tzc_c_desc[i]}"$'\x1f'"history")
+    (( ${#__tzc_candidates} >= 200 )) && return 0
+  done
+  for ((i=1;i<=${#__tzc_c_label};i++)); do
+    [[ ${__tzc_c_kind[i]} == history ]] && continue
     label=${__tzc_c_label[i]}
     kind=${__tzc_c_kind[i]}
     ko=${__tzc_kind_order[$kind]:-9}
@@ -746,7 +809,6 @@ __tzc_sort_emit() {
   # punctuation and would put -c before --dereference
   local LC_COLLATE=C
   keys=("${(@o)keys}")
-  local -a seen_inserts
   for key in "${keys[@]}"; do
     i=${key##*$'\x1f'}
     insert=${__tzc_c_insert[i]}
@@ -772,6 +834,7 @@ __tzc_complete() {
   __tzc_result_start=$__tzc_p_start
   __tzc_result_end=$cursor
   __tzc_result_typed=${buffer[$(( __tzc_p_start + 1 )),cursor]}
+  __tzc_result_line=$before
   __tzc_cwd=$cwd
   __tzc_c_label=()
   __tzc_c_insert=()
@@ -780,6 +843,7 @@ __tzc_complete() {
   __tzc_c_score=()
   __tzc_c_prio=()
   __tzc_candidates=()
+  __tzc_add_history
   __tzc_command_words "${__tzc_p_words[@]}"
   if (( __tzc_p_redirect )); then
     __tzc_add_paths 1

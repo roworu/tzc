@@ -168,8 +168,14 @@ __tzc_accept() {
   [[ -n $insert && $insert != *[[:cntrl:]]* ]] || return 1
   local start=$__tzc_result_start end=$__tzc_result_end
   (( start >= 0 && end >= start && end <= ${#BUFFER} )) || return 1
-  BUFFER="${BUFFER[1,start]}${insert}${BUFFER[end+1,-1]}"
-  CURSOR=$(( start + ${#insert} ))
+  if [[ ${f[4]} == history ]]; then
+    # a history entry replaces the typed line, not just the current word
+    BUFFER="${insert}${BUFFER[end+1,-1]}"
+    CURSOR=${#insert}
+  else
+    BUFFER="${BUFFER[1,start]}${insert}${BUFFER[end+1,-1]}"
+    CURSOR=$(( start + ${#insert} ))
+  fi
   __tzc_hide
   __tzc_last_key=
   return 0

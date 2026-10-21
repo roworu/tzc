@@ -4,7 +4,7 @@ IDE-like completions for zsh, drawn by shell itself, in any terminal of your cho
 Inspired by fig project: https://github.com/withfig/autocomplete
 
 Up/Down move selection (wrapping at the ends), Tab accepts it, and anything else goes to zsh as usual.
-Candidates come from bundled JSON command specs, `PATH` and filesystem.
+Candidates come from bundled JSON command specs, `PATH`, filesystem and shell history.
 
 ## Requirements
 
@@ -42,6 +42,7 @@ You can configure completion popup UI/settings via env options
 | --- | --- |
 | `TZC_MAX_ROWS` | rows to show, description included, default 10 |
 | `TZC_MAX_WIDTH` | width popup may use, default 80 |
+| `TZC_HISTORY` | recent history entries starting with the typed line, offered first; 0 disables, default 3 |
 | `TZC_NO_COLOR` | use `standout` for the selection instead of colors |
 | `TZC_PACKAGES_DIR` | package name cache directory, default `${XDG_CACHE_HOME:-$HOME/.cache}/tzc/packages` |
 | `TZC_DISABLE` | do not load the plugin |

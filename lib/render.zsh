@@ -28,6 +28,7 @@ __tzc_init_render() {
         command 'fg=#a6e3a1'
         folder 'fg=#89b4fa'
         file 'fg=#cdd6f4'
+        history 'fg=#f5c2e7'
       )
       ;;
     (256)
@@ -39,6 +40,7 @@ __tzc_init_render() {
         command 'fg=114'
         folder 'fg=111'
         file 'fg=252'
+        history 'fg=218'
       )
       ;;
   esac
