@@ -162,12 +162,18 @@ __tzc_render_menu() {
   (( sel >= total )) && sel=$(( total - 1 ))
   (( sel < 0 )) && sel=0
 
-  # width from every label and the selected description, the only description
-  # rendered; a long description on another candidate must not widen the box
-  local -a f
+  # width from the labels that can be on screen and the selected description,
+  # the only description rendered; entries scrolled out of view must not widen
+  # the box. the shown rows always fall inside this row_budget window.
+  local -a f window
   f=( ${=__tzc_candidates[sel+1]} )
-  local sel_desc=${f[3]}
-  __tzc_label_width __tzc_candidates
+  local sel_desc=${f[3]} wtop=$top
+  (( wtop > total - row_budget )) && wtop=$(( total - row_budget ))
+  (( wtop < 0 )) && wtop=0
+  (( sel < wtop )) && wtop=$sel
+  (( sel >= wtop + row_budget )) && wtop=$(( sel - row_budget + 1 ))
+  window=( "${(@)__tzc_candidates[wtop+1,wtop+row_budget]}" )
+  __tzc_label_width window
   (( REPLY < ${#sel_desc} + 1 )) && REPLY=$(( ${#sel_desc} + 1 ))
   local inner=$(( REPLY + 1 ))
   # the setting caps the box; keep the popup anchored to the cursor
