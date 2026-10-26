@@ -1,8 +1,6 @@
 # zle layer: menu state, line-pre-redraw, arrow/tab widgets and bindings.
 
-# panel 0 is the completion box, 1 the history box to its right
 typeset -gi __tzc_active=0 __tzc_selected=0 __tzc_top=0 __tzc_owns=0
-typeset -gi __tzc_panel=0 __tzc_hist_selected=0 __tzc_hist_top=0
 typeset -g __tzc_last_key= __tzc_history_moved=0
 typeset -gA __tzc_orig_bind
 
@@ -21,8 +19,8 @@ __tzc_compute() {
   return 0
 }
 
-# drop a lone candidate that only repeats the typed word, then reset the
-# selection; fails when neither box has anything to show
+# drop a lone candidate that only repeats the typed word, put history entries
+# on top and select the first completion; fails when nothing is left to show
 __tzc_worth_showing() {
   emulate -L zsh
   setopt localoptions noglob
@@ -32,9 +30,10 @@ __tzc_worth_showing() {
     f=( ${=__tzc_candidates[1]} )
     [[ ${f[2]% } == $__tzc_result_typed ]] && __tzc_candidates=()
   fi
-  __tzc_selected=0 __tzc_top=0 __tzc_hist_selected=0 __tzc_hist_top=0
-  __tzc_panel=$(( ! ${#__tzc_candidates} ))
-  (( ${#__tzc_candidates} || ${#__tzc_hist_candidates} ))
+  __tzc_selected=$(( ${#__tzc_candidates} ? ${#__tzc_hist_candidates} : 0 ))
+  __tzc_top=0
+  __tzc_candidates=( "${__tzc_hist_candidates[@]}" "${__tzc_candidates[@]}" )
+  (( ${#__tzc_candidates} ))
 }
 
 __tzc_render() {
@@ -146,19 +145,13 @@ __tzc_accept() {
     __tzc_compute
     __tzc_worth_showing || return 1
   fi
-  local -a list f
-  local idx
-  if (( __tzc_panel )); then
-    list=( "${__tzc_hist_candidates[@]}" )
-    idx=$(( __tzc_hist_selected + 1 ))
-  else
-    list=( "${__tzc_candidates[@]}" )
-    idx=$(( __tzc_selected + 1 ))
-  fi
-  (( ${#list} )) || return 1
-  (( idx > ${#list} )) && idx=${#list}
+  local n=${#__tzc_candidates}
+  (( n )) || return 1
+  local idx=$(( __tzc_selected + 1 ))
+  (( idx > n )) && idx=$n
+  local -a f
   local IFS=$'\x1f'
-  f=( ${=list[idx]} )
+  f=( ${=__tzc_candidates[idx]} )
   local insert=${f[2]}
   [[ -n $insert && $insert != *[[:cntrl:]]* ]] || return 1
   local start=$__tzc_result_start end=$__tzc_result_end
@@ -190,18 +183,12 @@ __tzc_delegate() {
   return 0
 }
 
-# move the selection of the focused box by $1, wrapping at the ends
+# move the selection by $1, wrapping at the ends
 __tzc_move() {
   emulate -L zsh
-  local n
-  if (( __tzc_panel )); then
-    n=${#__tzc_hist_candidates}
-    (( n )) && __tzc_hist_selected=$(( (__tzc_hist_selected + $1 + n) % n ))
-  else
-    n=${#__tzc_candidates}
-    (( n )) && __tzc_selected=$(( (__tzc_selected + $1 + n) % n ))
-  fi
+  local n=${#__tzc_candidates}
   (( n )) || return 0
+  __tzc_selected=$(( (__tzc_selected + $1 + n) % n ))
   __tzc_render
   zle -R
   return 0
@@ -225,32 +212,6 @@ __tzc_down() {
   else
     __tzc_history_moved=1
     __tzc_delegate .down-line-or-history down
-  fi
-  return 0
-}
-
-# right focuses the history box, left the completion box; otherwise the keys
-# keep their own bindings
-__tzc_right() {
-  emulate -L zsh
-  if (( __tzc_active && ! __tzc_panel && ${#__tzc_hist_candidates} )); then
-    __tzc_panel=1
-    __tzc_render
-    zle -R
-  else
-    __tzc_delegate .forward-char right
-  fi
-  return 0
-}
-
-__tzc_left() {
-  emulate -L zsh
-  if (( __tzc_active && __tzc_panel && ${#__tzc_candidates} )); then
-    __tzc_panel=0
-    __tzc_render
-    zle -R
-  else
-    __tzc_delegate .backward-char left
   fi
   return 0
 }
@@ -284,8 +245,7 @@ __tzc_bind() {
   local map seq action
   # $KEYMAP is usually "main" with emacs bindings; keep its originals too
   for map in main emacs viins; do
-    for seq action in '^[[A' up '^[OA' up '^[[B' down '^[OB' down \
-                      '^[[C' right '^[OC' right '^[[D' left '^[OD' left '^I' tab; do
+    for seq action in '^[[A' up '^[OA' up '^[[B' down '^[OB' down '^I' tab; do
       __tzc_save_bind $map $action $seq
       [[ $map == main ]] || bindkey -M $map $seq __tzc_$action 2>/dev/null
     done
@@ -324,8 +284,6 @@ __tzc_menu_start() {
   zle -N __tzc_up
   zle -N __tzc_down
   zle -N __tzc_tab
-  zle -N __tzc_left
-  zle -N __tzc_right
   zle -N __tzc_int_cleanup
   __tzc_sigint_install
   __tzc_init_render
