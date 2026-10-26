@@ -626,6 +626,14 @@ __tzc_add_from_spec() {
       __tzc_ids "$__tzc_node" 9
       if __tzc_find_named "$word" "${reply[@]}"; then
         __tzc_node=$REPLY
+        # a split subcommand continues in its own spec, which carries the
+        # inherited persistent options
+        __tzc_record "$__tzc_node"
+        if __tzc_spec_load "$__tzc_spec_loaded/${__tzc_f[2]%%$'\x1d'*}"; then
+          __tzc_node=1
+          __tzc_persistent=()
+          used=()
+        fi
         __tzc_collect_persistent "$__tzc_node"
         __tzc_build_opt_ids
         continue

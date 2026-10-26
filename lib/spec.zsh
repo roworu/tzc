@@ -27,21 +27,20 @@ __tzc_engine_init() {
   return 0
 }
 
-# source one command spec and split its blob into records; the first record is
-# the root. resourcing a broken file leaves __tzc_s_nodes empty.
+# source one spec, "cmd" or a split "cmd/sub", and split its blob into
+# records; the first record is the root. a missing or broken file keeps the
+# loaded spec.
 __tzc_spec_load() {
   emulate -L zsh
   setopt localoptions noglob
   local name=$1 dir file
   [[ $name == $__tzc_spec_loaded ]] && return 0
-  __tzc_spec_loaded=
-  __tzc_s_nodes=()
-  __tzc_s_blob=
   for dir in "$__tzc_user_specs" "$__tzc_specs_dir"; do
     [[ -n $dir ]] || continue
     file="$dir/$name.zsh"
     [[ -f $file ]] || continue
     __tzc_s_ok=0
+    __tzc_s_blob=
     source "$file" 2>/dev/null || continue
     [[ $__tzc_s_ok == 1 && -n $__tzc_s_blob ]] || continue
     # (p) makes the separator understand \x1e; this is several times faster
