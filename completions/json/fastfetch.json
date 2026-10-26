@@ -1,0 +1,1868 @@
+{
+ "name": "fastfetch",
+ "description": "Fetch and display system information",
+ "options": [
+  {
+   "name": [
+    "-h",
+    "--help"
+   ],
+   "description": "Show this help message or help for a specific command"
+  },
+  {
+   "name": [
+    "-v",
+    "--version"
+   ],
+   "description": "Show the full Fastfetch version"
+  },
+  {
+   "name": "--version-raw",
+   "description": "Show the raw version string (major.minor.patch)"
+  },
+  {
+   "name": "--list-config-paths",
+   "description": "List search paths for config files"
+  },
+  {
+   "name": "--list-data-paths",
+   "description": "List search paths for presets and logos"
+  },
+  {
+   "name": "--list-logos",
+   "description": "List available logos"
+  },
+  {
+   "name": "--list-modules",
+   "description": "List available modules"
+  },
+  {
+   "name": "--list-presets",
+   "description": "List available presets"
+  },
+  {
+   "name": "--list-features",
+   "description": "List the supported features that fastfetch was compiled with"
+  },
+  {
+   "name": "--print-logos",
+   "description": "Show available logos"
+  },
+  {
+   "name": "--print-structure",
+   "description": "Show the default structure"
+  },
+  {
+   "name": "--format",
+   "description": "Set the output format",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "default",
+      "description": "Default format"
+     },
+     {
+      "name": "json",
+      "description": "JSON format"
+     }
+    ]
+   }
+  },
+  {
+   "name": [
+    "-j",
+    "--json"
+   ],
+   "description": "Enable or disable JSON output",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--dynamic-interval",
+   "description": "Keep Fastfetch running and refresh the output every <num> milliseconds",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": [
+    "-w",
+    "--watch"
+   ],
+   "description": "Alias of dynamic-interval, but the value is in seconds instead of milliseconds. If no value is provided, it defaults to 1 second",
+   "args": {
+    "name": "num",
+    "isOptional": true
+   }
+  },
+  {
+   "name": [
+    "-c",
+    "--config"
+   ],
+   "description": "Specify the config file or preset to load",
+   "args": {
+    "name": "config",
+    "suggestions": [
+     "examples/10",
+     "examples/11",
+     "examples/12",
+     "examples/13",
+     "examples/14",
+     "examples/15",
+     "examples/16",
+     "examples/17",
+     "examples/18",
+     "examples/19",
+     "examples/2",
+     "examples/20",
+     "examples/21",
+     "examples/22",
+     "examples/23",
+     "examples/24",
+     "examples/25",
+     "examples/26",
+     "examples/27",
+     "examples/28",
+     "examples/29",
+     "examples/3",
+     "examples/30",
+     "examples/31",
+     "examples/32",
+     "examples/4",
+     "examples/5",
+     "examples/6",
+     "examples/7",
+     "examples/8",
+     "examples/9"
+    ],
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--gen-config",
+   "description": "Interactively generate a config file at the specified path",
+   "args": {
+    "name": "path",
+    "template": "filepaths",
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--thread",
+   "description": "Use separate threads for HTTP requests",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--wmi-timeout",
+   "description": "Set the timeout (ms) for WMI queries",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--processing-timeout",
+   "description": "Set the timeout (ms) when waiting for child processes",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--ds-force-drm",
+   "description": "Specify whether display detection should use DRM only",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "true",
+      "description": "Try `libdrm` first, then `sysfs` if libdrm fails"
+     },
+     {
+      "name": "sysfs-only",
+      "description": "Use `/sys/class/drm` only"
+     },
+     {
+      "name": "false",
+      "description": "Try `wayland`, then `x11`, then `drm`"
+     }
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--detect-version",
+   "description": "Specify whether to detect and display versions for terminal, shell, editor, and others",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": [
+    "-l",
+    "--logo"
+   ],
+   "description": "Set the logo source. Use \"none\" to disable logo output",
+   "args": {
+    "name": "logo",
+    "suggestions": [
+     "Ad\u00e9lie",
+     "aerOS",
+     "Aeon",
+     "AerynOS",
+     "AerynOS_old",
+     "Afterglow",
+     "aix",
+     "Almalinux",
+     "Alpine",
+     "Alpine2",
+     "Alpine_small",
+     "alpine2_small",
+     "alpine3_small",
+     "Alter",
+     "ALTLinux",
+     "Amazon",
+     "Amazon Linux",
+     "Amiga",
+     "AmogOS",
+     "Anarchy",
+     "android",
+     "android_small",
+     "anduinos",
+     "Antergos",
+     "antiX",
+     "AnushOS",
+     "Aosc OS/Retro",
+     "Aosc OS/Retro_small",
+     "Aosc OS",
+     "Aosc OS_old",
+     "Aperture",
+     "Apple",
+     "Apple_small",
+     "Apricity",
+     "ArchBox",
+     "Archcraft",
+     "Archcraft2",
+     "arch",
+     "arch2",
+     "arch3",
+     "arch_small",
+     "arch_old",
+     "ARCHlabs",
+     "ArchStrike",
+     "Arkane",
+     "Armbian",
+     "Armbian2",
+     "artix",
+     "artix2",
+     "artix_small",
+     "artix2_small",
+     "arco",
+     "arco_small",
+     "arse",
+     "Arya",
+     "asahi",
+     "asahi2",
+     "aster",
+     "AsteroidOS",
+     "astOS",
+     "Astra",
+     "Ataraxia",
+     "AthenaOS",
+     "AthenaOS_old",
+     "Aurora",
+     "AxOS",
+     "Azos",
+     "AzureLinux",
+     "AzureLinux2",
+     "bedrock",
+     "bedrock_small",
+     "BerserkArch",
+     "BigLinux",
+     "Bitrig",
+     "Blackarch",
+     "BlackMesa",
+     "BlackPanther",
+     "BLAG",
+     "BlankOn",
+     "BlueLight",
+     "Bodhi",
+     "Bonsai",
+     "Bredos",
+     "BSD",
+     "BunsenLabs",
+     "CachyOS",
+     "CachyOS_small",
+     "CachyOS_old_small",
+     "Calculate",
+     "CalinixOS",
+     "CalinixOS_small",
+     "Carbs",
+     "CBL-Mariner",
+     "CelOS",
+     "Center",
+     "CentOS",
+     "CentOS_small",
+     "Cereus",
+     "Chakra",
+     "ChaletOS",
+     "Chapeau",
+     "Chimera",
+     "Chimera2",
+     "Chimera_small",
+     "ChonkySealOS",
+     "Chrom",
+     "Cleanjaro",
+     "Cleanjaro_small",
+     "Clear Linux",
+     "ClearOS",
+     "Clover",
+     "Cobalt",
+     "Codex Linux",
+     "Condres",
+     "CoreOS",
+     "common-torizon",
+     "Cosmic",
+     "CRUX",
+     "CRUX_small",
+     "Crystal",
+     "Cucumber",
+     "CuerdOS",
+     "CutefishOS",
+     "CuteOS",
+     "CyberOS",
+     "cycledream",
+     "dahliaOS",
+     "DarkOS",
+     "Debian",
+     "Debian_small",
+     "Deepin",
+     "DesaOS",
+     "Devuan",
+     "Devuan_small",
+     "DietPi",
+     "DracOS",
+     "DragonFly",
+     "DragonFly_small",
+     "DragonFly_old",
+     "DraugerOS",
+     "Droidian",
+     "elbrus",
+     "Elementary",
+     "Elementary_small",
+     "Elive",
+     "Emmabuntus",
+     "ENOS",
+     "EncryptOS",
+     "EndeavourOS",
+     "EndeavourOS_small",
+     "Endless",
+     "Enso",
+     "EshanizedOS",
+     "EuroLinux",
+     "EvolutionOS",
+     "EvolutionOS_small",
+     "EvolutionOS_old",
+     "eweOS",
+     "Exherbo",
+     "Exodia",
+     "Fastfetch",
+     "Fedora",
+     "fedora-asahi-remix",
+     "Fedora_small",
+     "Fedora2_small",
+     "Fedora_old",
+     "Fedora-Silverblue",
+     "Fedora-Kinoite",
+     "Fedora-Sericea",
+     "Fedora-CoreOS",
+     "FemboyOS",
+     "Feren",
+     "Flatcar",
+     "Filotimo",
+     "Finnix",
+     "Floflis",
+     "Freebsd",
+     "freebsd_small",
+     "FreeMiNT",
+     "Frugalware",
+     "Funtoo",
+     "GalliumOS",
+     "Garuda",
+     "GarudaDragon",
+     "Garuda_small",
+     "Gentoo",
+     "Gentoo_small",
+     "GhostBSD",
+     "GhostFreak",
+     "Glaucus",
+     "gNewSense",
+     "GNOME OS",
+     "GNU",
+     "GoboLinux",
+     "GoldenDogLinux",
+     "GrapheneOS",
+     "Grombyang",
+     "Guix",
+     "Guix_small",
+     "GXDE",
+     "Haiku",
+     "Haiku2",
+     "Haiku_small",
+     "HamoniKR",
+     "HarDClanZ",
+     "HardenedBSD",
+     "HarmonyOS",
+     "Hash",
+     "HeliumOS",
+     "Huawei Cloud EulerOS",
+     "Huayra",
+     "Hybrid",
+     "HydroOS",
+     "Hyperbola",
+     "Hyperbola_small",
+     "Iglunix",
+     "InstantOS",
+     "Interix",
+     "IRIX",
+     "Ironclad",
+     "Itc",
+     "januslinux",
+     "Kaisen",
+     "Kali",
+     "Kali_small",
+     "kalpa-desktop",
+     "KaOS",
+     "KernelOS",
+     "kdelinux",
+     "KDE Neon",
+     "KibaOS",
+     "Kibojoe",
+     "KISS",
+     "kiss2",
+     "Kogaion",
+     "Korora",
+     "KrassOS",
+     "KSLinux",
+     "Kubuntu",
+     "Kylin",
+     "LainOS",
+     "langitketujuh",
+     "Laxeros",
+     "LEDE",
+     "LibreELEC",
+     "Lilidog",
+     "Lingmo",
+     "LimeOS",
+     "Linspire",
+     "Linux",
+     "LinuxFromScratch",
+     "Linux_small",
+     "LinuxLite",
+     "LinuxLite_small",
+     "linuxmint",
+     "linuxmint_small",
+     "linuxmint2",
+     "linuxmint2_small",
+     "linuxmint_old",
+     "Live Raizo",
+     "LliureX",
+     "LMDE",
+     "locos",
+     "lubuntu",
+     "Lunar",
+     "Macaroni",
+     "macOS",
+     "macOS_small",
+     "macOS2",
+     "macOS2_small",
+     "macOS3",
+     "macOS_old",
+     "MainsailOS",
+     "MainsailOS_small",
+     "Mageia",
+     "Mageia_small",
+     "mandriva",
+     "manjaro",
+     "manjaro_small",
+     "MassOS",
+     "MatuusOS",
+     "MaUI",
+     "Mauna",
+     "Meowix",
+     "Mer",
+     "MidnightBSD",
+     "MidOS",
+     "MidOS_old",
+     "Minimal_System",
+     "Minix",
+     "miraclelinux",
+     "MOS",
+     "Msys2",
+     "MX",
+     "MX_small",
+     "MX2",
+     "Namib",
+     "NebiOS",
+     "Nekos",
+     "Neptune",
+     "NetRunner",
+     "nexalinux",
+     "Nitrux",
+     "NixOS",
+     "NixOS_small",
+     "nixos_old",
+     "nixos_old_small",
+     "NixOS2",
+     "NetBSD",
+     "NetBSD2",
+     "NetBSD_small",
+     "nobara",
+     "nomadbsd",
+     "NurOS",
+     "Nurunner",
+     "NuTyX",
+     "NetHydra",
+     "Obarun",
+     "OBRevenge",
+     "ObsidianOS",
+     "Omarchy",
+     "Omarchy2",
+     "OmniOS",
+     "openKylin",
+     "openbsd",
+     "openbsd_small",
+     "OpenEuler",
+     "OpenIndiana",
+     "OpenMamba",
+     "openRuyi",
+     "OpenStage",
+     "opensuse",
+     "opensuse_small",
+     "opensuse-microos",
+     "opensuse-leap",
+     "opensuse-leap_old",
+     "opensuse-tumbleweed",
+     "opensuse-tumbleweed_small",
+     "opensuse-tumbleweed_old",
+     "opensuse-tumbleweed2",
+     "opensuse-slowroll",
+     "OpenMandriva",
+     "openwrt",
+     "openwrt_small",
+     "openwrt_old",
+     "OPNsense",
+     "ol",
+     "orchid",
+     "orchid_small",
+     "Oreon",
+     "Origami",
+     "Origami_small",
+     "OS2Warp",
+     "OS Elbrus",
+     "OSMC",
+     "OSX",
+     "OSX_small",
+     "PacBSD",
+     "Panwah",
+     "Parabola",
+     "Parabola_small",
+     "Parabola2_small",
+     "Parch",
+     "Pardus",
+     "Parrot",
+     "Parsix",
+     "PCBSD",
+     "PCLinuxOS",
+     "PearOS",
+     "Pengwin",
+     "Pentoo",
+     "Peppermint",
+     "Peropesis",
+     "PhyOS",
+     "PikaOS",
+     "PisiLinux",
+     "PNM Linux",
+     "pop",
+     "pop_small",
+     "Porteus",
+     "PostMarketOS",
+     "PostMarketOS2",
+     "PostMarketOS_small",
+     "Proxmox",
+     "PuffOS",
+     "Puppy",
+     "PureOS",
+     "PureOS_small",
+     "PrismLinux",
+     "PrismLinux_small",
+     "qts",
+     "Quasar",
+     "Q4OS",
+     "Qubes",
+     "Qubes_small",
+     "Qubyt",
+     "Quibian",
+     "Quirinux",
+     "Radix",
+     "raspbian",
+     "raspbian_small",
+     "RavynOS",
+     "RebornOS",
+     "RebornOS_small",
+     "RedCore",
+     "rhel",
+     "rhel_small",
+     "rhel_old",
+     "RedOS",
+     "RedOS_small",
+     "Redstar",
+     "Redrose",
+     "Refracta",
+     "Regata",
+     "Regolith",
+     "RhaymOS",
+     "rocky",
+     "rocky_small",
+     "ROSA",
+     "Rhino Linux",
+     "RengeOS",
+     "Sabayon",
+     "Sabotage",
+     "Sailfish",
+     "SalentOS",
+     "Salient OS",
+     "Salix",
+     "SambaBOX",
+     "Sasanqua",
+     "Scientific",
+     "secureblue",
+     "Serpent OS",
+     "semc",
+     "Septor",
+     "Serene",
+     "SharkLinux",
+     "ShastraOS",
+     "Shebang",
+     "Siduction",
+     "SkiffOS",
+     "SleeperOS",
+     "SleeperOS_small",
+     "Slitaz",
+     "SpoinkOS",
+     "Slackel",
+     "Slackware",
+     "Slackware_small",
+     "SmartOS",
+     "SnigdhaOS",
+     "Soda",
+     "Source Mage",
+     "solaris",
+     "solaris_small",
+     "Solus",
+     "Sparky",
+     "Star",
+     "Stock Linux",
+     "SteamOS",
+     "SteamDeck",
+     "SteamDeck_small",
+     "SteamDeckOled",
+     "Sulin",
+     "SummitOS",
+     "suse",
+     "suse_small",
+     "Swagarch",
+     "T2",
+     "T2_small",
+     "Tails",
+     "Tatra",
+     "TeArch",
+     "TempleOS",
+     "TileOS",
+     "Torizon OS",
+     "Trisquel",
+     "TrueNAS-Scale",
+     "Turkish",
+     "Tuxedo OS",
+     "Twister",
+     "UBLinux",
+     "UBLinux_small",
+     "ubuntu",
+     "ubuntu_small",
+     "ubuntu_old",
+     "ubuntu_old2",
+     "ubuntu_old2_small",
+     "ubuntu budgie",
+     "ubuntu cinnamon",
+     "ubuntu gnome",
+     "ubuntu kylin",
+     "ubuntu mate",
+     "ubuntu studio",
+     "ubuntu sway",
+     "ubuntu touch",
+     "ubuntu unity",
+     "Ultramarine",
+     "Ultramarine_small",
+     "Unifi",
+     "Univalent",
+     "Univention",
+     "UOS",
+     "UrukOS",
+     "uwuntu",
+     "Uzbek",
+     "Valhalla",
+     "vanilla",
+     "vanilla2",
+     "vanilla_small",
+     "Venom",
+     "Venom_small",
+     "VincentOS",
+     "Vnux",
+     "Vzlinux",
+     "void",
+     "void_small",
+     "void2",
+     "void2_small",
+     "WiiLinuxNgx",
+     "Windows Server 2025",
+     "Windows 11",
+     "Windows 11_small",
+     "Windows 8",
+     "Windows",
+     "Windows 95",
+     "WolfOS",
+     "XCP-ng",
+     "Xenia",
+     "Xenia_old",
+     "XeroArch",
+     "Xferience",
+     "Xubuntu",
+     "Xray_OS",
+     "Xinux",
+     "XJ380",
+     "Ximper",
+     "YiffOS",
+     "Zerene",
+     "Zorin",
+     "z/OS",
+     "Zraxyl"
+    ]
+   }
+  },
+  {
+   "name": "--logo-type",
+   "description": "Set the type of logo specified by \"--logo\"",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "auto",
+      "description": "If a value is provided, try built-in first, then file. Otherwise auto-detect the logo"
+     },
+     {
+      "name": "builtin",
+      "description": "Built-in ASCII art"
+     },
+     {
+      "name": "small",
+      "description": "Built-in ASCII art, small version"
+     },
+     {
+      "name": "file",
+      "description": "Text file, printed with color code replacement"
+     },
+     {
+      "name": "file-raw",
+      "description": "Text file, printed as is"
+     },
+     {
+      "name": "data",
+      "description": "Text data, printed with color code replacement"
+     },
+     {
+      "name": "data-raw",
+      "description": "Text data, printed as is"
+     },
+     {
+      "name": "sixel",
+      "description": "Image file, rendered as sixel"
+     },
+     {
+      "name": "kitty",
+      "description": "Image file, rendered using the Kitty graphics protocol"
+     },
+     {
+      "name": "kitty-direct",
+      "description": "Image file, tells the terminal emulator to read image data from the specified file"
+     },
+     {
+      "name": "kitty-icat",
+      "description": "Image file, displayed using `kitten icat`. Requires the `kitten` binary"
+     },
+     {
+      "name": "iterm",
+      "description": "Image file, rendered using the iTerm graphics protocol"
+     },
+     {
+      "name": "chafa",
+      "description": "Image file, printed as ASCII art using libchafa"
+     },
+     {
+      "name": "raw",
+      "description": "Image file, printed as raw binary string"
+     },
+     {
+      "name": "none",
+      "description": "Disable logo printing"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--logo-width",
+   "description": "Set the width of the logo (in characters) if it is an image",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--logo-height",
+   "description": "Set the height of the logo (in characters) if it is an image",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--logo-preserve-aspect-ratio",
+   "description": "Specify whether the logo should fill the specified width and height as much as possible without stretching",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--logo-color-1",
+   "description": "Override a color in the logo",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--logo-color-2",
+   "description": "Override a color in the logo",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--logo-color-3",
+   "description": "Override a color in the logo",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--logo-color-4",
+   "description": "Override a color in the logo",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--logo-color-5",
+   "description": "Override a color in the logo",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--logo-color-6",
+   "description": "Override a color in the logo",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--logo-color-7",
+   "description": "Override a color in the logo",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--logo-color-8",
+   "description": "Override a color in the logo",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--logo-color-9",
+   "description": "Override a color in the logo",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--logo-padding",
+   "description": "Set the padding on the left and right sides of the logo",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--logo-padding-left",
+   "description": "Set the padding on the left side of the logo",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--logo-padding-right",
+   "description": "Set the padding on the right side of the logo",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--logo-padding-top",
+   "description": "Set the padding at the top of the logo",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--logo-print-remaining",
+   "description": "Specify whether to print remaining logo lines when the logo is taller than the module list",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--logo-position",
+   "description": "Set the display position of the logo",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "left",
+      "description": "Left"
+     },
+     {
+      "name": "top",
+      "description": "Top"
+     },
+     {
+      "name": "right",
+      "description": "Right"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--logo-recache",
+   "description": "If true, regenerate the image logo cache",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--file",
+   "description": "Short for --logo-type file --logo <path>",
+   "args": {
+    "name": "path",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--file-raw",
+   "description": "Short for --logo-type file-raw --logo <path>",
+   "args": {
+    "name": "path",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--data",
+   "description": "Short for --logo-type data --logo <data>",
+   "args": {
+    "name": "data"
+   }
+  },
+  {
+   "name": "--data-raw",
+   "description": "Short for --logo-type data-raw --logo <data>",
+   "args": {
+    "name": "data"
+   }
+  },
+  {
+   "name": "--raw",
+   "description": "Short for --logo-type raw --logo <path>",
+   "args": {
+    "name": "path",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--sixel",
+   "description": "Short for --logo-type sixel --logo <path>",
+   "args": {
+    "name": "path",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--kitty",
+   "description": "Short for --logo-type kitty --logo <path>",
+   "args": {
+    "name": "path",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--kitty-direct",
+   "description": "Short for --logo-type kitty-direct --logo <path>",
+   "args": {
+    "name": "path",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--kitty-icat",
+   "description": "Short for --logo-type kitty-icat --logo <path>",
+   "args": {
+    "name": "path",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--iterm",
+   "description": "Short for --logo-type iterm --logo <path>",
+   "args": {
+    "name": "path",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--chafa",
+   "description": "Short for --logo-type chafa --logo <path>",
+   "args": {
+    "name": "path",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--chafa-fg-only",
+   "description": "Produce character-cell output using foreground colors only",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--chafa-symbols",
+   "description": "Specify character symbols to employ in final output",
+   "args": {
+    "name": "str"
+   }
+  },
+  {
+   "name": "--chafa-canvas-mode",
+   "description": "Determine how colors are used in the output",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "TRUECOLOR",
+      "description": "Truecolor"
+     },
+     {
+      "name": "INDEXED_256",
+      "description": "256 colors"
+     },
+     {
+      "name": "INDEXED_240",
+      "description": "256 colors, but avoid using the lower 16 whose values vary between terminal environments"
+     },
+     {
+      "name": "INDEXED_16",
+      "description": "16 colors using the aixterm ANSI extension"
+     },
+     {
+      "name": "FGBG_BGFG",
+      "description": "Default foreground and background colors, plus inversion"
+     },
+     {
+      "name": "FGBG",
+      "description": "Default foreground and background colors. No ANSI codes will be used"
+     },
+     {
+      "name": "INDEXED_8",
+      "description": "8 colors, compatible with original ANSI X3.64"
+     },
+     {
+      "name": "INDEXED_16_8",
+      "description": "16 FG colors (8 of which enabled with bold/bright) and 8 BG colors"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--chafa-color-space",
+   "description": "Set the color space used for quantization",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "RGB",
+      "description": "RGB color space. Fast but imprecise"
+     },
+     {
+      "name": "DIN99D",
+      "description": "DIN99d color space. Slower, but good perceptual color precision"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--chafa-dither-mode",
+   "description": "Set the output dithering mode (no effect with 24-bit color)",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "NONE",
+      "description": "No dithering"
+     },
+     {
+      "name": "ORDERED",
+      "description": "Ordered dithering (Bayer or similar)"
+     },
+     {
+      "name": "DIFFUSION",
+      "description": "Error diffusion dithering (Floyd-Steinberg or similar)"
+     }
+    ]
+   }
+  },
+  {
+   "name": [
+    "-s",
+    "--structure"
+   ],
+   "description": "Set the structure of the fetch",
+   "args": {
+    "name": "structure"
+   }
+  },
+  {
+   "name": "--structure-disabled",
+   "description": "Disable specific modules in the structure",
+   "args": {
+    "name": "structure"
+   }
+  },
+  {
+   "name": "--stat",
+   "description": "Show execution time (ms) for individual modules",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--pipe",
+   "description": "Disable colors",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--color",
+   "description": "Set the color of both keys and title",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--color-keys",
+   "description": "Set the color of the keys",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--color-title",
+   "description": "Set the color of the title",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--color-output",
+   "description": "Set the color of module output",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--color-separator",
+   "description": "Set the color of the key-value separator",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--duration-abbreviation",
+   "description": "Specify whether to abbreviate duration values",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--duration-space-before-unit",
+   "description": "Specify whether to put a space before the unit in duration values",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "default",
+      "description": "Use the default behavior of the module"
+     },
+     {
+      "name": "always",
+      "description": "Always put a space before the unit"
+     },
+     {
+      "name": "never",
+      "description": "Never put a space before the unit"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--key-width",
+   "description": "Align the width of keys to <num> characters",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--key-padding-left",
+   "description": "Set the left padding of keys to <num> characters",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--key-type",
+   "description": "Specify whether to show an icon before string keys",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "none",
+      "description": "Disable keys"
+     },
+     {
+      "name": "string",
+      "description": "Show string"
+     },
+     {
+      "name": "icon",
+      "description": "Show icon (requires a recent Nerd Font)"
+     },
+     {
+      "name": "both",
+      "description": "Show both icon and string (alias of `both-1`)"
+     },
+     {
+      "name": "both-0",
+      "description": "Show both icon and string with no spaces between them"
+     },
+     {
+      "name": "both-1",
+      "description": "Show both icon and string with a space between them"
+     },
+     {
+      "name": "both-2",
+      "description": "Show both icon and string with 2 spaces between them"
+     },
+     {
+      "name": "both-3",
+      "description": "Show both icon and string with 3 spaces between them"
+     },
+     {
+      "name": "both-4",
+      "description": "Show both icon and string with 4 spaces between them"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--key-language",
+   "description": "Specify the language used for module keys",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "en",
+      "description": "English"
+     },
+     {
+      "name": "ar",
+      "description": "Arabic"
+     },
+     {
+      "name": "cs",
+      "description": "Czech"
+     },
+     {
+      "name": "de",
+      "description": "German"
+     },
+     {
+      "name": "es",
+      "description": "Spanish"
+     },
+     {
+      "name": "fr",
+      "description": "French"
+     },
+     {
+      "name": "gl",
+      "description": "Galician"
+     },
+     {
+      "name": "he",
+      "description": "Hebrew"
+     },
+     {
+      "name": "id",
+      "description": "Indonesian"
+     },
+     {
+      "name": "it",
+      "description": "Italian"
+     },
+     {
+      "name": "ja",
+      "description": "Japanese"
+     },
+     {
+      "name": "ko",
+      "description": "Korean"
+     },
+     {
+      "name": "pl",
+      "description": "Polish"
+     },
+     {
+      "name": "pt",
+      "description": "Portuguese"
+     },
+     {
+      "name": "ru",
+      "description": "Russian"
+     },
+     {
+      "name": "tr",
+      "description": "Turkish"
+     },
+     {
+      "name": "uk",
+      "description": "Ukrainian"
+     },
+     {
+      "name": "vi",
+      "description": "Vietnamese"
+     },
+     {
+      "name": "zh_CN",
+      "description": "Simplified Chinese"
+     },
+     {
+      "name": "zh_TW",
+      "description": "Traditional Chinese"
+     }
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--bright-color",
+   "description": "Specify whether keys, title, and ASCII logo should be printed in bright color",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--separator",
+   "description": "Set the separator between key and value",
+   "args": {
+    "name": "str"
+   }
+  },
+  {
+   "name": "--show-errors",
+   "description": "Print errors when they occur",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--disable-linewrap",
+   "description": "Specify whether to disable line wrap during execution",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--hide-cursor",
+   "description": "Specify whether to hide the cursor during execution",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--percent-type",
+   "description": "Set the percentage output style",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--percent-ndigits",
+   "description": "Set the number of decimal places to use when formatting percentages",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--percent-color-green",
+   "description": "Set color used for the green state of percentage bars and numbers",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--percent-color-yellow",
+   "description": "Set color used for the yellow state of percentage bars and numbers",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--percent-color-red",
+   "description": "Set color used for the red state of percentage bars and numbers",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--percent-space-before-unit",
+   "description": "Specify whether to put a space before the percentage symbol",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "default",
+      "description": "Use the default behavior of the module"
+     },
+     {
+      "name": "always",
+      "description": "Always put a space before the unit"
+     },
+     {
+      "name": "never",
+      "description": "Never put a space before the unit"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--percent-width",
+   "description": "Specify the width of the percentage number, in characters",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--bar-char-elapsed",
+   "description": "Set the character used for the elapsed part of percentage bars",
+   "args": {
+    "name": "str"
+   }
+  },
+  {
+   "name": "--bar-char-total",
+   "description": "Set the character used for the total part of percentage bars",
+   "args": {
+    "name": "str"
+   }
+  },
+  {
+   "name": "--bar-border-left",
+   "description": "Set the string to use at the left border of percentage bars",
+   "args": {
+    "name": "string"
+   }
+  },
+  {
+   "name": "--bar-border-right",
+   "description": "Set the string to use at the right border of percentage bars",
+   "args": {
+    "name": "string"
+   }
+  },
+  {
+   "name": "--bar-border-left-elapsed",
+   "description": "If both bar-border-left-elapsed and bar-border-right-elapsed are set, the border is used as part of the bar content",
+   "args": {
+    "name": "string"
+   }
+  },
+  {
+   "name": "--bar-border-right-elapsed",
+   "description": "If both bar-border-left-elapsed and bar-border-right-elapsed are set, the border is used as part of the bar content",
+   "args": {
+    "name": "string"
+   }
+  },
+  {
+   "name": "--bar-color-elapsed",
+   "description": "Set the color used for the elapsed part of percentage bars",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--bar-color-total",
+   "description": "Set the color used for the total part of percentage bars",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--bar-color-border",
+   "description": "Set the color used for percentage bar borders",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--bar-width",
+   "description": "Set the width of percentage bars in characters",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--no-buffer",
+   "description": "Specify whether stdout buffering should be disabled",
+   "args": {
+    "name": "bool",
+    "suggestions": [
+     "true",
+     "false"
+    ],
+    "isOptional": true
+   }
+  },
+  {
+   "name": "--size-ndigits",
+   "description": "Set the number of decimal places to use when formatting sizes",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--size-binary-prefix",
+   "description": "Set the binary prefix to use when formatting sizes",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "IEC",
+      "description": "1024 Bytes = 1 KiB, 1024 KiB = 1 MiB, ..."
+     },
+     {
+      "name": "SI",
+      "description": "1000 Bytes = 1 kB, 1000 kB = 1 MB, ..."
+     },
+     {
+      "name": "JEDEC",
+      "description": "1024 Bytes = 1 KB, 1024 KB = 1 MB, ..."
+     }
+    ]
+   }
+  },
+  {
+   "name": "--size-max-prefix",
+   "description": "Set the largest binary prefix to use when formatting sizes",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "B",
+      "description": "Bytes"
+     },
+     {
+      "name": "kB",
+      "description": "KiB"
+     },
+     {
+      "name": "MB",
+      "description": "MiB"
+     },
+     {
+      "name": "GB",
+      "description": "GiB"
+     },
+     {
+      "name": "TB",
+      "description": "TiB"
+     },
+     {
+      "name": "PB",
+      "description": "PiB"
+     },
+     {
+      "name": "EB",
+      "description": "EiB"
+     },
+     {
+      "name": "ZB",
+      "description": "ZiB"
+     },
+     {
+      "name": "YB",
+      "description": "YiB"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--size-space-before-unit",
+   "description": "Specify whether to put a space before the unit",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "default",
+      "description": "Use the default behavior of the module"
+     },
+     {
+      "name": "always",
+      "description": "Always put a space before the unit"
+     },
+     {
+      "name": "never",
+      "description": "Never put a space before the unit"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--freq-ndigits",
+   "description": "Set the number of decimal places to use when printing CPU/GPU frequency in GHz",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--freq-space-before-unit",
+   "description": "Specify whether to put a space before the unit",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "default",
+      "description": "Use the default behavior of the module"
+     },
+     {
+      "name": "always",
+      "description": "Always put a space before the unit"
+     },
+     {
+      "name": "never",
+      "description": "Never put a space before the unit"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--fraction-ndigits",
+   "description": "Set the number of decimal places to use when printing fractional values",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--fraction-trailing-zeros",
+   "description": "Set when to keep trailing zeros",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "default",
+      "description": "Use the built-in behavior"
+     },
+     {
+      "name": "always",
+      "description": "Always keep trailing zeros"
+     },
+     {
+      "name": "never",
+      "description": "Never keep trailing zeros"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--temp-unit",
+   "description": "Set the temperature unit",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "D",
+      "description": "Default"
+     },
+     {
+      "name": "C",
+      "description": "Celsius"
+     },
+     {
+      "name": "F",
+      "description": "Fahrenheit"
+     },
+     {
+      "name": "K",
+      "description": "Kelvin"
+     }
+    ]
+   }
+  },
+  {
+   "name": "--temp-ndigits",
+   "description": "Set the number of decimal places to use when printing temperatures",
+   "args": {
+    "name": "num"
+   }
+  },
+  {
+   "name": "--temp-color-green",
+   "description": "Set color used for the green state of temperature values",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--temp-color-yellow",
+   "description": "Set color used for the yellow state of temperature values",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--temp-color-red",
+   "description": "Set color used for the red state of temperature values",
+   "args": {
+    "name": "color"
+   }
+  },
+  {
+   "name": "--temp-space-before-unit",
+   "description": "Specify whether to put a space before the unit",
+   "args": {
+    "name": "enum",
+    "suggestions": [
+     {
+      "name": "default",
+      "description": "Use the default behavior of the module"
+     },
+     {
+      "name": "always",
+      "description": "Always put a space before the unit"
+     },
+     {
+      "name": "never",
+      "description": "Never put a space before the unit"
+     }
+    ]
+   }
+  }
+ ]
+}
