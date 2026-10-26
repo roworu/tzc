@@ -1,0 +1,3496 @@
+{
+ "name": "obsidian-cli",
+ "description": "Control a running Obsidian app",
+ "subcommands": [
+  {
+   "name": "aliases",
+   "description": "List aliases in the vault",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "total",
+      "description": "Return alias count"
+     },
+     {
+      "name": "verbose",
+      "description": "Include file paths"
+     },
+     {
+      "name": "active",
+      "description": "Show aliases for active file"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "append",
+   "description": "Append content to a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "content=",
+      "description": "Content to append (required) <text>"
+     },
+     {
+      "name": "inline",
+      "description": "Append without newline"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "backlinks",
+   "description": "List backlinks to a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "Target file name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "Target file path <path>"
+     },
+     {
+      "name": "counts",
+      "description": "Include link counts"
+     },
+     {
+      "name": "total",
+      "description": "Return backlink count"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=csv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "base:create",
+   "description": "Create a new item in a base",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "Base file name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "Base file path <path>"
+     },
+     {
+      "name": "view=",
+      "description": "View name <name>"
+     },
+     {
+      "name": "name=",
+      "description": "New file name <name>"
+     },
+     {
+      "name": "content=",
+      "description": "Initial content <text>"
+     },
+     {
+      "name": "open",
+      "description": "Open file after creating"
+     },
+     {
+      "name": "newtab",
+      "description": "Open in new tab"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "base:query",
+   "description": "Query a base and return results",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "Base file name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "Base file path <path>"
+     },
+     {
+      "name": "view=",
+      "description": "View name to query <name>"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: json)"
+     },
+     {
+      "name": "format=csv",
+      "description": "Output format (default: json)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: json)"
+     },
+     {
+      "name": "format=md",
+      "description": "Output format (default: json)"
+     },
+     {
+      "name": "format=paths",
+      "description": "Output format (default: json)"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "base:views",
+   "description": "List views in the current base file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "bases",
+   "description": "List all base files in vault",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "bookmark",
+   "description": "Add a bookmark",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File to bookmark <path>"
+     },
+     {
+      "name": "subpath=",
+      "description": "Subpath (heading or block) within file <subpath>"
+     },
+     {
+      "name": "folder=",
+      "description": "Folder to bookmark <path>"
+     },
+     {
+      "name": "search=",
+      "description": "Search query to bookmark <query>"
+     },
+     {
+      "name": "url=",
+      "description": "URL to bookmark <url>"
+     },
+     {
+      "name": "title=",
+      "description": "Bookmark title <title>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "bookmarks",
+   "description": "List bookmarks",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return bookmark count"
+     },
+     {
+      "name": "verbose",
+      "description": "Include bookmark types"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=csv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "command",
+   "description": "Execute an Obsidian command",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "id=",
+      "description": "Command ID to execute (required) <command-id>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "commands",
+   "description": "List available commands",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "filter=",
+      "description": "Filter by ID prefix <prefix>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "create",
+   "description": "Create a new file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "content=",
+      "description": "Initial content <text>"
+     },
+     {
+      "name": "template=",
+      "description": "Template to use <name>"
+     },
+     {
+      "name": "overwrite",
+      "description": "Overwrite if file exists"
+     },
+     {
+      "name": "open",
+      "description": "Open file after creating"
+     },
+     {
+      "name": "newtab",
+      "description": "Open in new tab"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "daily",
+   "description": "Open daily note",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "paneType=tab",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "paneType=split",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "paneType=window",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "daily:append",
+   "description": "Append content to daily note",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "content=",
+      "description": "Content to append (required) <text>"
+     },
+     {
+      "name": "inline",
+      "description": "Append without newline"
+     },
+     {
+      "name": "open",
+      "description": "Open file after adding"
+     },
+     {
+      "name": "paneType=tab",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "paneType=split",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "paneType=window",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "daily:path",
+   "description": "Get daily note path",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "daily:prepend",
+   "description": "Prepend content to daily note",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "content=",
+      "description": "Content to prepend (required) <text>"
+     },
+     {
+      "name": "inline",
+      "description": "Prepend without newline"
+     },
+     {
+      "name": "open",
+      "description": "Open file after adding"
+     },
+     {
+      "name": "paneType=tab",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "paneType=split",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "paneType=window",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "daily:read",
+   "description": "Read daily note contents",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "deadends",
+   "description": "List files with no outgoing links",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return dead-end count"
+     },
+     {
+      "name": "all",
+      "description": "Include non-markdown files"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "delete",
+   "description": "Delete a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "permanent",
+      "description": "Skip trash, delete permanently"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "dev:cdp",
+   "description": "Run a Chrome DevTools Protocol command",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "method=",
+      "description": "CDP method to call (required) <CDP.method>"
+     },
+     {
+      "name": "params=",
+      "description": "Method parameters as JSON <json>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "dev:console",
+   "description": "Show captured console messages",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "clear",
+      "description": "Clear the console buffer"
+     },
+     {
+      "name": "limit=",
+      "description": "Max messages to show (default 50) <n>"
+     },
+     {
+      "name": "level=log",
+      "description": "Filter by log level"
+     },
+     {
+      "name": "level=warn",
+      "description": "Filter by log level"
+     },
+     {
+      "name": "level=error",
+      "description": "Filter by log level"
+     },
+     {
+      "name": "level=info",
+      "description": "Filter by log level"
+     },
+     {
+      "name": "level=debug",
+      "description": "Filter by log level"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "dev:css",
+   "description": "Inspect CSS with source locations",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "selector=",
+      "description": "CSS selector (required) <css>"
+     },
+     {
+      "name": "prop=",
+      "description": "Filter by property name <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "dev:debug",
+   "description": "Attach/detach Chrome DevTools Protocol debugger",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "on",
+      "description": "Attach debugger"
+     },
+     {
+      "name": "off",
+      "description": "Detach debugger"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "dev:dom",
+   "description": "Query DOM elements",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "selector=",
+      "description": "CSS selector (required) <css>"
+     },
+     {
+      "name": "total",
+      "description": "Return element count"
+     },
+     {
+      "name": "text",
+      "description": "Return text content"
+     },
+     {
+      "name": "inner",
+      "description": "Return innerHTML instead of outerHTML"
+     },
+     {
+      "name": "all",
+      "description": "Return all matches instead of first"
+     },
+     {
+      "name": "attr=",
+      "description": "Get attribute value <name>"
+     },
+     {
+      "name": "css=",
+      "description": "Get CSS property value <prop>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "dev:errors",
+   "description": "Show captured errors",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "clear",
+      "description": "Clear the error buffer"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "dev:mobile",
+   "description": "Toggle mobile emulation",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "on",
+      "description": "Enable mobile emulation"
+     },
+     {
+      "name": "off",
+      "description": "Disable mobile emulation"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "dev:screenshot",
+   "description": "Take a screenshot",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "path=",
+      "description": "Output file path <filename>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "devtools",
+   "description": "Toggle Electron dev tools",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "diff",
+   "description": "List or diff local/sync versions",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "from=",
+      "description": "Version number to diff from <n>"
+     },
+     {
+      "name": "to=",
+      "description": "Version number to diff to <n>"
+     },
+     {
+      "name": "filter=local",
+      "description": "Filter by version source"
+     },
+     {
+      "name": "filter=sync",
+      "description": "Filter by version source"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "eval",
+   "description": "Execute JavaScript and return result",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "code=",
+      "description": "JavaScript code to execute (required) <javascript>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "file",
+   "description": "Show file info",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "files",
+   "description": "List files in the vault",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "folder=",
+      "description": "Filter by folder <path>"
+     },
+     {
+      "name": "ext=",
+      "description": "Filter by extension <extension>"
+     },
+     {
+      "name": "total",
+      "description": "Return file count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "folder",
+   "description": "Show folder info",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "path=",
+      "description": "Folder path (required) <path>"
+     },
+     {
+      "name": "info=files",
+      "description": "Return specific info only"
+     },
+     {
+      "name": "info=folders",
+      "description": "Return specific info only"
+     },
+     {
+      "name": "info=size",
+      "description": "Return specific info only"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "folders",
+   "description": "List folders in the vault",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "folder=",
+      "description": "Filter by parent folder <path>"
+     },
+     {
+      "name": "total",
+      "description": "Return folder count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "help",
+   "description": "Show list of all available commands",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "devtools",
+      "description": "Toggle Electron dev tools"
+     },
+     {
+      "name": "dev:mobile",
+      "description": "Toggle mobile emulation"
+     },
+     {
+      "name": "dev:debug",
+      "description": "Attach/detach Chrome DevTools Protocol debugger"
+     },
+     {
+      "name": "dev:errors",
+      "description": "Show captured errors"
+     },
+     {
+      "name": "dev:screenshot",
+      "description": "Take a screenshot"
+     },
+     {
+      "name": "dev:cdp",
+      "description": "Run a Chrome DevTools Protocol command"
+     },
+     {
+      "name": "dev:css",
+      "description": "Inspect CSS with source locations"
+     },
+     {
+      "name": "dev:dom",
+      "description": "Query DOM elements"
+     },
+     {
+      "name": "dev:console",
+      "description": "Show captured console messages"
+     },
+     {
+      "name": "eval",
+      "description": "Execute JavaScript and return result"
+     },
+     {
+      "name": "commands",
+      "description": "List available commands"
+     },
+     {
+      "name": "command",
+      "description": "Execute an Obsidian command"
+     },
+     {
+      "name": "random",
+      "description": "Open a random note"
+     },
+     {
+      "name": "random:read",
+      "description": "Read a random note"
+     },
+     {
+      "name": "reload",
+      "description": "Reload the vault"
+     },
+     {
+      "name": "restart",
+      "description": "Restart the app"
+     },
+     {
+      "name": "plugin",
+      "description": "Get plugin info"
+     },
+     {
+      "name": "plugins",
+      "description": "List installed plugins"
+     },
+     {
+      "name": "plugins:enabled",
+      "description": "List enabled plugins"
+     },
+     {
+      "name": "plugins:restrict",
+      "description": "Toggle or check restricted mode"
+     },
+     {
+      "name": "themes",
+      "description": "List installed themes"
+     },
+     {
+      "name": "theme",
+      "description": "Show active theme or get info"
+     },
+     {
+      "name": "snippets",
+      "description": "List installed CSS snippets"
+     },
+     {
+      "name": "snippets:enabled",
+      "description": "List enabled CSS snippets"
+     },
+     {
+      "name": "tags",
+      "description": "List tags in the vault"
+     },
+     {
+      "name": "tasks",
+      "description": "List tasks in the vault"
+     },
+     {
+      "name": "task",
+      "description": "Show or update a task"
+     },
+     {
+      "name": "tag",
+      "description": "Get tag info"
+     },
+     {
+      "name": "properties",
+      "description": "List properties in the vault"
+     },
+     {
+      "name": "property:set",
+      "description": "Set a property on a file"
+     },
+     {
+      "name": "property:remove",
+      "description": "Remove a property from a file"
+     },
+     {
+      "name": "property:read",
+      "description": "Read a property value from a file"
+     },
+     {
+      "name": "tabs",
+      "description": "List open tabs"
+     },
+     {
+      "name": "recents",
+      "description": "List recently opened files"
+     },
+     {
+      "name": "tab:open",
+      "description": "Open a new tab"
+     },
+     {
+      "name": "workspace",
+      "description": "Show workspace tree"
+     },
+     {
+      "name": "hotkeys",
+      "description": "List hotkeys"
+     },
+     {
+      "name": "hotkey",
+      "description": "Get hotkey for a command"
+     },
+     {
+      "name": "vault",
+      "description": "Show vault info"
+     },
+     {
+      "name": "files",
+      "description": "List files in the vault"
+     },
+     {
+      "name": "folders",
+      "description": "List folders in the vault"
+     },
+     {
+      "name": "vaults",
+      "description": "List known vaults"
+     },
+     {
+      "name": "version",
+      "description": "Show Obsidian version"
+     },
+     {
+      "name": "backlinks",
+      "description": "List backlinks to a file"
+     },
+     {
+      "name": "unresolved",
+      "description": "List unresolved links in vault"
+     },
+     {
+      "name": "orphans",
+      "description": "List files with no incoming links"
+     },
+     {
+      "name": "deadends",
+      "description": "List files with no outgoing links"
+     },
+     {
+      "name": "aliases",
+      "description": "List aliases in the vault"
+     },
+     {
+      "name": "folder",
+      "description": "Show folder info"
+     },
+     {
+      "name": "file",
+      "description": "Show file info"
+     },
+     {
+      "name": "open",
+      "description": "Open a file"
+     },
+     {
+      "name": "create",
+      "description": "Create a new file"
+     },
+     {
+      "name": "append",
+      "description": "Append content to a file"
+     },
+     {
+      "name": "prepend",
+      "description": "Prepend content to a file"
+     },
+     {
+      "name": "move",
+      "description": "Move or rename a file"
+     },
+     {
+      "name": "rename",
+      "description": "Rename a file"
+     },
+     {
+      "name": "delete",
+      "description": "Delete a file"
+     },
+     {
+      "name": "read",
+      "description": "Read file contents"
+     },
+     {
+      "name": "diff",
+      "description": "List or diff local/sync versions"
+     },
+     {
+      "name": "plugin:enable",
+      "description": "Enable a plugin"
+     },
+     {
+      "name": "plugin:disable",
+      "description": "Disable a plugin"
+     },
+     {
+      "name": "plugin:reload",
+      "description": "Reload a plugin (for developers)"
+     },
+     {
+      "name": "plugin:install",
+      "description": "Install a community plugin"
+     },
+     {
+      "name": "plugin:uninstall",
+      "description": "Uninstall a community plugin"
+     },
+     {
+      "name": "snippet:enable",
+      "description": "Enable a CSS snippet"
+     },
+     {
+      "name": "snippet:disable",
+      "description": "Disable a CSS snippet"
+     },
+     {
+      "name": "theme:set",
+      "description": "Set active theme"
+     },
+     {
+      "name": "theme:install",
+      "description": "Install a community theme"
+     },
+     {
+      "name": "theme:uninstall",
+      "description": "Uninstall a theme"
+     },
+     {
+      "name": "search",
+      "description": "Search vault for text"
+     },
+     {
+      "name": "search:context",
+      "description": "Search with matching line context"
+     },
+     {
+      "name": "search:open",
+      "description": "Open search view"
+     },
+     {
+      "name": "web",
+      "description": "Open URL in web viewer"
+     },
+     {
+      "name": "base:query",
+      "description": "Query a base and return results"
+     },
+     {
+      "name": "bases",
+      "description": "List all base files in vault"
+     },
+     {
+      "name": "base:views",
+      "description": "List views in the current base file"
+     },
+     {
+      "name": "base:create",
+      "description": "Create a new item in a base"
+     },
+     {
+      "name": "bookmarks",
+      "description": "List bookmarks"
+     },
+     {
+      "name": "bookmark",
+      "description": "Add a bookmark"
+     },
+     {
+      "name": "daily",
+      "description": "Open daily note"
+     },
+     {
+      "name": "daily:path",
+      "description": "Get daily note path"
+     },
+     {
+      "name": "daily:read",
+      "description": "Read daily note contents"
+     },
+     {
+      "name": "daily:append",
+      "description": "Append content to daily note"
+     },
+     {
+      "name": "daily:prepend",
+      "description": "Prepend content to daily note"
+     },
+     {
+      "name": "history",
+      "description": "List file history versions"
+     },
+     {
+      "name": "history:list",
+      "description": "List files with history"
+     },
+     {
+      "name": "history:read",
+      "description": "Read a file history version"
+     },
+     {
+      "name": "history:restore",
+      "description": "Restore a file history version"
+     },
+     {
+      "name": "history:open",
+      "description": "Open file recovery"
+     },
+     {
+      "name": "links",
+      "description": "List outgoing links from a file"
+     },
+     {
+      "name": "outline",
+      "description": "Show headings for the current file"
+     },
+     {
+      "name": "publish:open",
+      "description": "Open file on published site"
+     },
+     {
+      "name": "publish:status",
+      "description": "List publish changes"
+     },
+     {
+      "name": "publish:list",
+      "description": "List published files"
+     },
+     {
+      "name": "publish:site",
+      "description": "Show publish site info"
+     },
+     {
+      "name": "publish:add",
+      "description": "Publish a file or all changed files"
+     },
+     {
+      "name": "publish:remove",
+      "description": "Unpublish a file"
+     },
+     {
+      "name": "sync",
+      "description": "Pause or resume sync"
+     },
+     {
+      "name": "sync:history",
+      "description": "List sync version history for a file"
+     },
+     {
+      "name": "sync:read",
+      "description": "Read a sync version"
+     },
+     {
+      "name": "sync:restore",
+      "description": "Restore a sync version"
+     },
+     {
+      "name": "sync:open",
+      "description": "Open sync history"
+     },
+     {
+      "name": "sync:deleted",
+      "description": "List deleted files in sync"
+     },
+     {
+      "name": "sync:status",
+      "description": "Show sync status"
+     },
+     {
+      "name": "templates",
+      "description": "List templates"
+     },
+     {
+      "name": "template:read",
+      "description": "Read template content"
+     },
+     {
+      "name": "template:insert",
+      "description": "Insert template into active file"
+     },
+     {
+      "name": "unique",
+      "description": "Create unique note"
+     },
+     {
+      "name": "wordcount",
+      "description": "Count words and characters"
+     },
+     {
+      "name": "workspaces",
+      "description": "List saved workspaces"
+     },
+     {
+      "name": "workspace:save",
+      "description": "Save current layout as workspace"
+     },
+     {
+      "name": "workspace:load",
+      "description": "Load a saved workspace"
+     },
+     {
+      "name": "workspace:delete",
+      "description": "Delete a saved workspace"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "history",
+   "description": "List file history versions",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "history:list",
+   "description": "List files with history",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "history:open",
+   "description": "Open file recovery",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "history:read",
+   "description": "Read a file history version",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "version=",
+      "description": "Version number (default: 1) <n>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "history:restore",
+   "description": "Restore a file history version",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "version=",
+      "description": "Version number (required) <n>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "hotkey",
+   "description": "Get hotkey for a command",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "id=",
+      "description": "Command ID (required) <command-id>"
+     },
+     {
+      "name": "verbose",
+      "description": "Show if custom or default"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "hotkeys",
+   "description": "List hotkeys",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return hotkey count"
+     },
+     {
+      "name": "verbose",
+      "description": "Show if hotkey is custom"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=csv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "all",
+      "description": "Include commands without hotkeys"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "links",
+   "description": "List outgoing links from a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "total",
+      "description": "Return link count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "move",
+   "description": "Move or rename a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "to=",
+      "description": "Destination folder or path (required) <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "open",
+   "description": "Open a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "newtab",
+      "description": "Open in new tab"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "orphans",
+   "description": "List files with no incoming links",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return orphan count"
+     },
+     {
+      "name": "all",
+      "description": "Include non-markdown files"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "outline",
+   "description": "Show headings for the current file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "format=tree",
+      "description": "Output format (default: tree)"
+     },
+     {
+      "name": "format=md",
+      "description": "Output format (default: tree)"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: tree)"
+     },
+     {
+      "name": "total",
+      "description": "Return heading count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "plugin",
+   "description": "Get plugin info",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "id=",
+      "description": "Plugin ID (required) <plugin-id>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "plugin:disable",
+   "description": "Disable a plugin",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "id=",
+      "description": "Plugin ID (required) <id>"
+     },
+     {
+      "name": "filter=core",
+      "description": "Plugin type"
+     },
+     {
+      "name": "filter=community",
+      "description": "Plugin type"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "plugin:enable",
+   "description": "Enable a plugin",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "id=",
+      "description": "Plugin ID (required) <id>"
+     },
+     {
+      "name": "filter=core",
+      "description": "Plugin type"
+     },
+     {
+      "name": "filter=community",
+      "description": "Plugin type"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "plugin:install",
+   "description": "Install a community plugin",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "id=",
+      "description": "Plugin ID (required) <id>"
+     },
+     {
+      "name": "enable",
+      "description": "Enable after install"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "plugin:reload",
+   "description": "Reload a plugin (for developers)",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "id=",
+      "description": "Plugin ID (required) <id>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "plugin:uninstall",
+   "description": "Uninstall a community plugin",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "id=",
+      "description": "Plugin ID (required) <id>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "plugins",
+   "description": "List installed plugins",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "filter=core",
+      "description": "Filter by plugin type"
+     },
+     {
+      "name": "filter=community",
+      "description": "Filter by plugin type"
+     },
+     {
+      "name": "versions",
+      "description": "Include version numbers"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=csv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "plugins:enabled",
+   "description": "List enabled plugins",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "filter=core",
+      "description": "Filter by plugin type"
+     },
+     {
+      "name": "filter=community",
+      "description": "Filter by plugin type"
+     },
+     {
+      "name": "versions",
+      "description": "Include version numbers"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=csv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "plugins:restrict",
+   "description": "Toggle or check restricted mode",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "on",
+      "description": "Enable restricted mode"
+     },
+     {
+      "name": "off",
+      "description": "Disable restricted mode"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "prepend",
+   "description": "Prepend content to a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "content=",
+      "description": "Content to prepend (required) <text>"
+     },
+     {
+      "name": "inline",
+      "description": "Prepend without newline"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "properties",
+   "description": "List properties in the vault",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "Show properties for file <name>"
+     },
+     {
+      "name": "path=",
+      "description": "Show properties for path <path>"
+     },
+     {
+      "name": "name=",
+      "description": "Get specific property count <name>"
+     },
+     {
+      "name": "total",
+      "description": "Return property count"
+     },
+     {
+      "name": "sort=",
+      "description": "Sort by count (default: name) count"
+     },
+     {
+      "name": "counts",
+      "description": "Include occurrence counts"
+     },
+     {
+      "name": "format=yaml",
+      "description": "Output format (default: yaml)"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: yaml)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: yaml)"
+     },
+     {
+      "name": "active",
+      "description": "Show properties for active file"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "property:read",
+   "description": "Read a property value from a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Property name (required) <name>"
+     },
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "property:remove",
+   "description": "Remove a property from a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Property name (required) <name>"
+     },
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "property:set",
+   "description": "Set a property on a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Property name (required) <name>"
+     },
+     {
+      "name": "value=",
+      "description": "Property value (required) <value>"
+     },
+     {
+      "name": "type=text",
+      "description": "Property type"
+     },
+     {
+      "name": "type=list",
+      "description": "Property type"
+     },
+     {
+      "name": "type=number",
+      "description": "Property type"
+     },
+     {
+      "name": "type=checkbox",
+      "description": "Property type"
+     },
+     {
+      "name": "type=date",
+      "description": "Property type"
+     },
+     {
+      "name": "type=datetime",
+      "description": "Property type"
+     },
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "publish:add",
+   "description": "Publish a file or all changed files",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "changed",
+      "description": "Publish all changed files"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "publish:list",
+   "description": "List published files",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return published file count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "publish:open",
+   "description": "Open file on published site",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "publish:remove",
+   "description": "Unpublish a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "publish:site",
+   "description": "Show publish site info",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "publish:status",
+   "description": "List publish changes",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return change count"
+     },
+     {
+      "name": "new",
+      "description": "Show new files only"
+     },
+     {
+      "name": "changed",
+      "description": "Show changed files only"
+     },
+     {
+      "name": "deleted",
+      "description": "Show deleted files only"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "random",
+   "description": "Open a random note",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "folder=",
+      "description": "Limit to folder <path>"
+     },
+     {
+      "name": "newtab",
+      "description": "Open in new tab"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "random:read",
+   "description": "Read a random note",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "folder=",
+      "description": "Limit to folder <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "read",
+   "description": "Read file contents",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "recents",
+   "description": "List recently opened files",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return recent file count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "reload",
+   "description": "Reload the vault",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "rename",
+   "description": "Rename a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "name=",
+      "description": "New file name (required) <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "restart",
+   "description": "Restart the app",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "search",
+   "description": "Search vault for text",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "query=",
+      "description": "Search query (required) <text>"
+     },
+     {
+      "name": "path=",
+      "description": "Limit to folder <folder>"
+     },
+     {
+      "name": "limit=",
+      "description": "Max files <n>"
+     },
+     {
+      "name": "total",
+      "description": "Return match count"
+     },
+     {
+      "name": "case",
+      "description": "Case sensitive"
+     },
+     {
+      "name": "format=text",
+      "description": "Output format (default: text)"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: text)"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "search:context",
+   "description": "Search with matching line context",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "query=",
+      "description": "Search query (required) <text>"
+     },
+     {
+      "name": "path=",
+      "description": "Limit to folder <folder>"
+     },
+     {
+      "name": "limit=",
+      "description": "Max files <n>"
+     },
+     {
+      "name": "case",
+      "description": "Case sensitive"
+     },
+     {
+      "name": "format=text",
+      "description": "Output format (default: text)"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: text)"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "search:open",
+   "description": "Open search view",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "query=",
+      "description": "Initial search query <text>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "snippet:disable",
+   "description": "Disable a CSS snippet",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Snippet name (required) <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "snippet:enable",
+   "description": "Enable a CSS snippet",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Snippet name (required) <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "snippets",
+   "description": "List installed CSS snippets",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "snippets:enabled",
+   "description": "List enabled CSS snippets",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "sync",
+   "description": "Pause or resume sync",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "on",
+      "description": "Resume sync"
+     },
+     {
+      "name": "off",
+      "description": "Pause sync"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "sync:deleted",
+   "description": "List deleted files in sync",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return deleted file count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "sync:history",
+   "description": "List sync version history for a file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "total",
+      "description": "Return version count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "sync:open",
+   "description": "Open sync history",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "sync:read",
+   "description": "Read a sync version",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "version=",
+      "description": "Version number (required) <n>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "sync:restore",
+   "description": "Restore a sync version",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "version=",
+      "description": "Version number (required) <n>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "sync:status",
+   "description": "Show sync status",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "tab:open",
+   "description": "Open a new tab",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "group=",
+      "description": "Tab group ID <id>"
+     },
+     {
+      "name": "file=",
+      "description": "File to open <path>"
+     },
+     {
+      "name": "view=",
+      "description": "View type to open <type>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "tabs",
+   "description": "List open tabs",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "ids",
+      "description": "Include tab IDs"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "tag",
+   "description": "Get tag info",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Tag name (required) <tag>"
+     },
+     {
+      "name": "total",
+      "description": "Return occurrence count"
+     },
+     {
+      "name": "verbose",
+      "description": "Include file list and count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "tags",
+   "description": "List tags in the vault",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "total",
+      "description": "Return tag count"
+     },
+     {
+      "name": "counts",
+      "description": "Include tag counts"
+     },
+     {
+      "name": "sort=",
+      "description": "Sort by count (default: name) count"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=csv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "active",
+      "description": "Show tags for active file"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "task",
+   "description": "Show or update a task",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "ref=",
+      "description": "Task reference (path:line) <path:line>"
+     },
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "line=",
+      "description": "Line number <n>"
+     },
+     {
+      "name": "toggle",
+      "description": "Toggle task status"
+     },
+     {
+      "name": "done",
+      "description": "Mark as done"
+     },
+     {
+      "name": "todo",
+      "description": "Mark as todo"
+     },
+     {
+      "name": "daily",
+      "description": "Use daily note"
+     },
+     {
+      "name": "status",
+      "description": "Set status character"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "tasks",
+   "description": "List tasks in the vault",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "Filter by file name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "Filter by file path <path>"
+     },
+     {
+      "name": "total",
+      "description": "Return task count"
+     },
+     {
+      "name": "done",
+      "description": "Show completed tasks"
+     },
+     {
+      "name": "todo",
+      "description": "Show incomplete tasks"
+     },
+     {
+      "name": "status",
+      "description": "Filter by status character"
+     },
+     {
+      "name": "verbose",
+      "description": "Group by file with line numbers"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: text)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: text)"
+     },
+     {
+      "name": "format=csv",
+      "description": "Output format (default: text)"
+     },
+     {
+      "name": "active",
+      "description": "Show tasks for active file"
+     },
+     {
+      "name": "daily",
+      "description": "Show tasks from daily note"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "template:insert",
+   "description": "Insert template into active file",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Template name (required) <template>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "template:read",
+   "description": "Read template content",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Template name (required) <template>"
+     },
+     {
+      "name": "resolve",
+      "description": "Resolve template variables"
+     },
+     {
+      "name": "title=",
+      "description": "Title for variable resolution <title>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "templates",
+   "description": "List templates",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return template count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "theme",
+   "description": "Show active theme or get info",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Theme name for details <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "theme:install",
+   "description": "Install a community theme",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Theme name (required) <name>"
+     },
+     {
+      "name": "enable",
+      "description": "Activate after install"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "theme:set",
+   "description": "Set active theme",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Theme name (empty for default) (required) <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "theme:uninstall",
+   "description": "Uninstall a theme",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Theme name (required) <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "themes",
+   "description": "List installed themes",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "versions",
+      "description": "Include version numbers"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "unique",
+   "description": "Create unique note",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Note name <text>"
+     },
+     {
+      "name": "content=",
+      "description": "Initial content <text>"
+     },
+     {
+      "name": "paneType=tab",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "paneType=split",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "paneType=window",
+      "description": "Pane type to open in"
+     },
+     {
+      "name": "open",
+      "description": "Open file after creating"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "unresolved",
+   "description": "List unresolved links in vault",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return unresolved link count"
+     },
+     {
+      "name": "counts",
+      "description": "Include link counts"
+     },
+     {
+      "name": "verbose",
+      "description": "Include source files"
+     },
+     {
+      "name": "format=json",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=tsv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "format=csv",
+      "description": "Output format (default: tsv)"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "vault",
+   "description": "Show vault info",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "info=name",
+      "description": "Return specific info only"
+     },
+     {
+      "name": "info=path",
+      "description": "Return specific info only"
+     },
+     {
+      "name": "info=files",
+      "description": "Return specific info only"
+     },
+     {
+      "name": "info=folders",
+      "description": "Return specific info only"
+     },
+     {
+      "name": "info=size",
+      "description": "Return specific info only"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "vaults",
+   "description": "List known vaults",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return vault count"
+     },
+     {
+      "name": "verbose",
+      "description": "Include vault paths"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "version",
+   "description": "Show Obsidian version",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "web",
+   "description": "Open URL in web viewer",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "url=",
+      "description": "URL to open (required) <url>"
+     },
+     {
+      "name": "newtab",
+      "description": "Open in new tab"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "wordcount",
+   "description": "Count words and characters",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "file=",
+      "description": "File name <name>"
+     },
+     {
+      "name": "path=",
+      "description": "File path <path>"
+     },
+     {
+      "name": "words",
+      "description": "Return word count only"
+     },
+     {
+      "name": "characters",
+      "description": "Return character count only"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "workspace",
+   "description": "Show workspace tree",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "ids",
+      "description": "Include workspace item IDs"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "workspace:delete",
+   "description": "Delete a saved workspace",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Workspace name (required) <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "workspace:load",
+   "description": "Load a saved workspace",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Workspace name (required) <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "workspace:save",
+   "description": "Save current layout as workspace",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "name=",
+      "description": "Workspace name <name>"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "workspaces",
+   "description": "List saved workspaces",
+   "args": {
+    "name": "params",
+    "suggestions": [
+     {
+      "name": "total",
+      "description": "Return workspace count"
+     },
+     {
+      "name": "vault=",
+      "description": "Target a specific vault by name"
+     }
+    ],
+    "isOptional": true,
+    "isVariadic": true
+   }
+  }
+ ]
+}

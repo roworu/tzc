@@ -256,6 +256,12 @@ __tzc_add_names() {
   (( best_len < 0 )) && return 0
   (( hidden )) && [[ $best != $__tzc_p_prefix ]] && return 0
   [[ $best == *[[:cntrl:]]* ]] && return 0
+  # a key= suggestion waits for its value, so no space after it
+  if [[ $best == *= ]]; then
+    __tzc_escape "$best" "$__tzc_p_quote" 0
+    __tzc_push "$best" "$REPLY" "$desc" "$kind" "$best_score" "$prio"
+    return 0
+  fi
   __tzc_escape "$best" "$__tzc_p_quote" 1
   __tzc_push "$best" "$REPLY " "$desc" "$kind" "$best_score" "$prio"
   return 0
