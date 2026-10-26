@@ -107,7 +107,7 @@ __tzc_box() {
   __tzc_box_regions=()
   # labels are cut only when the box is capped (inner >= 10), so the cut label
   # always fits and keeps at least one character
-  local r idx label disp style label_avail=$(( inner - 3 ))
+  local r idx label disp style label_avail=$(( inner - 4 ))
   for ((r=1; r<=rows; r++)); do
     idx=$(( top + r ))
     f=( ${=recs[idx]} )
@@ -162,9 +162,9 @@ __tzc_render_menu() {
   (( sel >= total )) && sel=$(( total - 1 ))
   (( sel < 0 )) && sel=0
 
-  # width from the labels that can be on screen and the selected description,
-  # the only description rendered; entries scrolled out of view must not widen
-  # the box. the shown rows always fall inside this row_budget window.
+  # width from the labels that can be on screen; the description wraps to it.
+  # entries scrolled out of view must not widen the box. the shown rows always
+  # fall inside this row_budget window.
   local -a f window
   f=( ${=__tzc_candidates[sel+1]} )
   local sel_desc=${f[3]} wtop=$top
@@ -174,8 +174,10 @@ __tzc_render_menu() {
   (( sel >= wtop + row_budget )) && wtop=$(( sel - row_budget + 1 ))
   window=( "${(@)__tzc_candidates[wtop+1,wtop+row_budget]}" )
   __tzc_label_width window
-  (( REPLY < ${#sel_desc} + 1 )) && REPLY=$(( ${#sel_desc} + 1 ))
   local inner=$(( REPLY + 1 ))
+  # short labels still leave the description 30 cells, or its own length
+  local desc_min=$(( ${#sel_desc} + 2 < 30 ? ${#sel_desc} + 2 : 30 ))
+  [[ -n $sel_desc ]] && (( inner < desc_min )) && inner=$desc_min
   # the setting caps the box; keep the popup anchored to the cursor
   (( inner > max_width - 2 )) && inner=$(( max_width - 2 ))
 
@@ -198,22 +200,23 @@ __tzc_render_menu() {
   local desc_extra=0
   local -a desc_lines
   if [[ -n $sel_desc ]]; then
-    __tzc_wrap_text "$sel_desc" $(( inner - 1 ))
+    __tzc_wrap_text "$sel_desc" $(( inner - 2 ))
     desc_lines=("${__tzc_wrapped[@]}")
   fi
   if (( ${#desc_lines} )); then
-    # the description counts against the row budget; keep one candidate row
-    local max_desc_lines=$(( row_budget - 2 ))
+    # the description counts against the row budget; keep at least half of it
+    # for candidates
+    local max_desc_lines=$(( row_budget / 2 - 1 ))
     (( max_desc_lines > lines - 5 )) && max_desc_lines=$(( lines - 5 ))
     (( max_desc_lines < 0 )) && max_desc_lines=0
     if (( max_desc_lines == 0 )); then
       desc_lines=()
     elif (( ${#desc_lines} > max_desc_lines )); then
       desc_lines=("${(@)desc_lines[1,max_desc_lines]}")
-      if (( ${#desc_lines[-1]} < inner - 1 )); then
+      if (( ${#desc_lines[-1]} < inner - 2 )); then
         desc_lines[-1]+="…"
       else
-        desc_lines[-1]="${desc_lines[-1][1,inner-2]}…"
+        desc_lines[-1]="${desc_lines[-1][1,inner-3]}…"
       fi
     fi
     (( ${#desc_lines} )) && desc_extra=$(( 1 + ${#desc_lines} ))
