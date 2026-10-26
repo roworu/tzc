@@ -54,20 +54,13 @@ __tzc_escape() {
     done
     (( close )) && out+=$quote
   else
-    # nothing in plain names needs escaping; skip the per-character loop
-    if [[ $text != *[[:punct:][:space:]]* ]]; then
-      REPLY=$text
-      return 0
+    if [[ $text == '~'* ]]; then
+      out='~'
+      text=${text[2,-1]}
     fi
-    for ((i=1;i<=${#text};i++)); do
-      ch=${text[i]}
-      if (( i == 1 )) && [[ $ch == '~' ]]; then out+=$ch; continue; fi
-      case $ch in
-        (' '|$'\t'|"'"|'"'|'\'|'$'|'`'|'&'|'|'|';'|'<'|'>'|'('|')'|'*'|'?'|'['|']'|\
-         '{'|'}'|'!'|'#'|'~'|'='|'%'|'^') out+="\\$ch" ;;
-        (*) out+=$ch ;;
-      esac
-    done
+    [[ -n $text ]] && out+=${(q)text}
+    # (q) leaves ! alone, which history expansion would eat
+    out=${out//!/\\!}
   fi
   REPLY=$out
   return 0
