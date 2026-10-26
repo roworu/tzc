@@ -33,8 +33,20 @@ __tzc_engine_init() {
 __tzc_spec_load() {
   emulate -L zsh
   setopt localoptions noglob
-  local name=$1 dir file
+  local name=$1 dir file blob
   [[ $name == $__tzc_spec_loaded ]] && return 0
+  # a split spec like `aws ec2 ...` loads the root and then the sub on every
+  # keystroke, so the previous blob is kept instead of sourced again
+  if [[ -n $__tzc_spec_prev && $name == $__tzc_spec_prev ]]; then
+    blob=$__tzc_spec_prev_blob
+    __tzc_spec_prev=$__tzc_spec_loaded
+    __tzc_spec_prev_blob=$__tzc_spec_blob
+    __tzc_spec_blob=$blob
+    __tzc_s_nodes=( ${(ps:\x1e:)blob} )
+    __tzc_spec_loaded=$name
+    __tzc_persist_ids=()
+    return 0
+  fi
   for dir in "$__tzc_user_specs" "$__tzc_specs_dir"; do
     [[ -n $dir ]] || continue
     file="$dir/$name.zsh"
@@ -47,6 +59,9 @@ __tzc_spec_load() {
     # than an IFS split of the multi-megabyte blob
     __tzc_s_nodes=( ${(ps:\x1e:)__tzc_s_blob} )
     (( ${#__tzc_s_nodes} )) || continue
+    __tzc_spec_prev=$__tzc_spec_loaded
+    __tzc_spec_prev_blob=$__tzc_spec_blob
+    __tzc_spec_blob=$__tzc_s_blob
     __tzc_spec_loaded=$name
     __tzc_persist_ids=()
     return 0

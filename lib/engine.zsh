@@ -21,6 +21,15 @@ typeset -ga __tzc_p_words __tzc_cmd_words __tzc_opt_ids __tzc_persistent
 typeset -ga __tzc_c_label __tzc_c_insert __tzc_c_desc __tzc_c_kind __tzc_c_score __tzc_c_prio
 typeset -ga __tzc_candidates __tzc_hist_candidates __tzc_prog_names __tzc_pkg_lines
 typeset -g __tzc_pkg_stamp=
+# __tzc_add_nodes cache: split fields of the last node list (nc) and its
+# empty-query rows (nc_e)
+typeset -g __tzc_nc_key=
+typeset -gi __tzc_nc_e=0
+typeset -ga __tzc_nc_id __tzc_nc_names __tzc_nc_desc __tzc_nc_flags __tzc_nc_prio __tzc_nc_rows
+typeset -ga __tzc_nc_e_label __tzc_nc_e_insert __tzc_nc_e_desc __tzc_nc_e_kind __tzc_nc_e_score __tzc_nc_e_prio
+# __tzc_add_from_spec cache: the walk state for the last words (w)
+typeset -g __tzc_w_key= __tzc_w_spec=
+typeset -ga __tzc_w_state __tzc_w_used __tzc_w_opt_ids
 
 # history suggestions: max entries in the history box; 0 disables. the recent
 # window is cached so keystrokes scan an array, not the whole history map.
@@ -268,24 +277,64 @@ __tzc_add_names() {
 }
 
 # add candidates for node ids in "$@"; kind is option or subcommand.
-# this is the hot path for option-heavy specs, so records are split, scored
-# and pushed inline instead of through __tzc_record/__tzc_score/__tzc_push.
+# this is the hot path for option-heavy specs, so fields are scored and pushed
+# inline instead of through __tzc_record/__tzc_score/__tzc_push.
 # used (caller-local) skips options that were already given.
 __tzc_add_nodes() {
   emulate -L zsh
-  setopt localoptions noglob
+  setopt localoptions noglob extendedglob
   local kind=$1
   shift
-  local -a f names
-  local oid flags name best best_score best_len sc label insert prio
-  local query=$__tzc_p_prefix
+  local -a names idx
+  local k oid flags name best best_score best_len sc label insert
+  local query=$__tzc_p_prefix us=$'\x1f' gs=$'\x1d'
   local bq=${(b)query} blq=${(b)${(L)query}}
   local qlen=${#query}
-  for oid in "$@"; do
-    f=( "${(@ps:\x1f:)__tzc_s_nodes[$oid]}" )
-    flags=${f[5]}
-    [[ $kind == option ]] && (( ${+used[$oid]} )) && [[ $flags != *R* ]] && continue
-    names=( ${(ps:\x1d:)f[2]} )
+  # the node list stays the same while a word is typed, so its fields are
+  # split once and kept with the rows of the empty query
+  local key="$__tzc_spec_loaded$us$kind$us$__tzc_p_quote$us$*"
+  if [[ $key != $__tzc_nc_key ]]; then
+    local -a f
+    __tzc_nc_key=$key
+    __tzc_nc_e=0
+    __tzc_nc_id=() __tzc_nc_names=() __tzc_nc_desc=() __tzc_nc_flags=()
+    __tzc_nc_prio=() __tzc_nc_rows=()
+    for oid in "$@"; do
+      f=( "${(@ps:\x1f:)__tzc_s_nodes[$oid]}" )
+      sc=${f[4]:-50}
+      (( sc > 100 )) && sc=100
+      (( sc < 0 )) && sc=0
+      __tzc_nc_id+=("$oid")
+      __tzc_nc_names+=("${f[2]}")
+      __tzc_nc_desc+=("${f[3]}")
+      __tzc_nc_flags+=("${f[5]}")
+      __tzc_nc_prio+=("$sc")
+      __tzc_nc_rows+=("${#__tzc_nc_id}$us${f[2]}")
+    done
+  fi
+  if [[ -z $query ]] && (( __tzc_nc_e )); then
+    __tzc_c_label+=("${__tzc_nc_e_label[@]}")
+    __tzc_c_insert+=("${__tzc_nc_e_insert[@]}")
+    __tzc_c_desc+=("${__tzc_nc_e_desc[@]}")
+    __tzc_c_kind+=("${__tzc_nc_e_kind[@]}")
+    __tzc_c_score+=("${__tzc_nc_e_score[@]}")
+    __tzc_c_prio+=("${__tzc_nc_e_prio[@]}")
+    return 0
+  fi
+  if [[ -z $query ]]; then
+    idx=( {1..${#__tzc_nc_id}} )
+    (( ${#__tzc_nc_id} )) || idx=()
+  elif (( qlen >= 3 )); then
+    # a superset of the matching rows; the loop scores each name
+    idx=( ${${(M)__tzc_nc_rows:#<->$us*(#i)${~bq}*}%%$us*} )
+  else
+    idx=( ${${(M)__tzc_nc_rows:#<->$us(|*$gs)(#i)${~bq}*}%%$us*} )
+  fi
+  local first=$(( ${#__tzc_c_label} + 1 ))
+  for k in "${idx[@]}"; do
+    flags=${__tzc_nc_flags[k]}
+    [[ $kind == option ]] && (( ${+used[${__tzc_nc_id[k]}]} )) && [[ $flags != *R* ]] && continue
+    names=( ${(ps:\x1d:)__tzc_nc_names[k]} )
     best= best_score= best_len=-1
     for name in "${names[@]}"; do
       if [[ $name == ${~bq}* ]]; then sc=0
@@ -307,21 +356,33 @@ __tzc_add_nodes() {
     insert="$best "
     if [[ $kind == option ]]; then
       (( ${#names} > 1 )) && label="${(j:, :)names}"
-    elif [[ -n $__tzc_p_quote || $best == *[[:punct:][:space:]]* ]]; then
-      # plain names skip the __tzc_escape call in the hot loop
+    elif [[ -n $__tzc_p_quote || $best == '~'* ]]; then
       __tzc_escape "$best" "$__tzc_p_quote" 1
       insert="$REPLY "
+    elif [[ $best == *[[:punct:][:space:]]* ]]; then
+      # __tzc_escape inline: a call per node is most of the hot loop
+      insert="${${(q)best}//!/\\!} "
     fi
-    prio=${f[4]:-50}
-    (( prio > 100 )) && prio=100
-    (( prio < 0 )) && prio=0
     __tzc_c_label+=("$label")
     __tzc_c_insert+=("$insert")
-    __tzc_c_desc+=("${f[3]}")
+    __tzc_c_desc+=("${__tzc_nc_desc[k]}")
     __tzc_c_kind+=("$kind")
     __tzc_c_score+=("$best_score")
-    __tzc_c_prio+=("$prio")
+    __tzc_c_prio+=("${__tzc_nc_prio[k]}")
   done
+  if [[ -z $query ]]; then
+    __tzc_nc_e=1
+    __tzc_nc_e_label=() __tzc_nc_e_insert=() __tzc_nc_e_desc=()
+    __tzc_nc_e_kind=() __tzc_nc_e_score=() __tzc_nc_e_prio=()
+    if (( first <= ${#__tzc_c_label} )); then
+      __tzc_nc_e_label=("${(@)__tzc_c_label[first,-1]}")
+      __tzc_nc_e_insert=("${(@)__tzc_c_insert[first,-1]}")
+      __tzc_nc_e_desc=("${(@)__tzc_c_desc[first,-1]}")
+      __tzc_nc_e_kind=("${(@)__tzc_c_kind[first,-1]}")
+      __tzc_nc_e_score=("${(@)__tzc_c_score[first,-1]}")
+      __tzc_nc_e_prio=("${(@)__tzc_c_prio[first,-1]}")
+    fi
+  fi
   return 0
 }
 
@@ -329,7 +390,7 @@ __tzc_add_commands() {
   emulate -L zsh
   setopt localoptions noglob extendedglob
   __tzc_programs
-  local query=$__tzc_p_prefix name desc score
+  local query=$__tzc_p_prefix name desc score insert
   local -a names
   if [[ -z $query ]]; then
     local i
@@ -352,9 +413,18 @@ __tzc_add_commands() {
     elif [[ $name == (#i)${~bq}* ]]; then score=1
     else score=2
     fi
-    desc=${__tzc_spec_desc[$name]}
-    __tzc_escape "$name" "$__tzc_p_quote" 1
-    __tzc_push "$name" "$REPLY " "$desc" command "$score" 50
+    if [[ -z $__tzc_p_quote && $name != '~'* ]]; then
+      insert=${${(q)name}//!/\\!}
+    else
+      __tzc_escape "$name" "$__tzc_p_quote" 1
+      insert=$REPLY
+    fi
+    __tzc_c_label+=("$name")
+    __tzc_c_insert+=("$insert ")
+    __tzc_c_desc+=("${__tzc_spec_desc[$name]}")
+    __tzc_c_kind+=(command)
+    __tzc_c_score+=("$score")
+    __tzc_c_prio+=(50)
   done
   return 0
 }
@@ -391,14 +461,21 @@ __tzc_add_packages() {
   (( ${#__tzc_pkg_lines} )) || return 0
   local query=$__tzc_p_prefix
   local -a lines
-  local line name desc count=0 score=0
+  local line name desc insert count=0 score=0
   if [[ -z $query ]]; then
     lines=( "${(@)__tzc_pkg_lines[1,200]}" )
   else
     # keep the scans off the keystroke path: exact prefix, then case-insensitive
     # prefix, then substring only when nothing matched
     local bq=${(b)query}
-    lines=( ${(M)__tzc_pkg_lines:#${~bq}*} )
+    # the cache is LC_ALL=C sorted, so exact-prefix lines are contiguous and
+    # a binary search finds the first one
+    local lo=1 hi=$(( ${#__tzc_pkg_lines} + 1 )) mid
+    while (( lo < hi )); do
+      mid=$(( (lo + hi) / 2 ))
+      if [[ ${__tzc_pkg_lines[mid]} < $query ]]; then lo=$(( mid + 1 )); else hi=$mid; fi
+    done
+    lines=( ${(M)${(@)__tzc_pkg_lines[lo,lo+999]}:#${~bq}*} )
     if (( ${#lines} == 0 )); then
       lines=( ${(M)__tzc_pkg_lines:#(#i)${~bq}*} )
       score=1
@@ -415,8 +492,18 @@ __tzc_add_packages() {
     desc=
     [[ $line == *$'\t'* ]] && desc=${line#*$'\t'}
     [[ -n $desc ]] && desc=${desc//[[:cntrl:]]/ }
-    __tzc_escape "$name" "$__tzc_p_quote" 1
-    __tzc_push "$name" "$REPLY " "$desc" suggestion "$score" 50
+    if [[ -z $__tzc_p_quote && $name != '~'* ]]; then
+      insert=${${(q)name}//!/\\!}
+    else
+      __tzc_escape "$name" "$__tzc_p_quote" 1
+      insert=$REPLY
+    fi
+    __tzc_c_label+=("$name")
+    __tzc_c_insert+=("$insert ")
+    __tzc_c_desc+=("$desc")
+    __tzc_c_kind+=(suggestion)
+    __tzc_c_score+=("$score")
+    __tzc_c_prio+=(50)
     (( ++count >= 200 )) && break
   done
   return 0
@@ -444,25 +531,67 @@ __tzc_add_paths() {
   else
     dir="$__tzc_cwd/$dir_part"
   fi
-  # list the directory and match in the loop: backslash escapes from ${(b)}
-  # are not honoured for filename generation
+  # list the directory and match with array filters: backslash escapes from
+  # ${(b)} are not honoured for filename generation
   [[ $name_part == .* ]] && setopt localoptions globdots
-  local -a entries
-  entries=("$dir"/*(N))
-  local entry entry_name sc count=0
-  for entry in "${entries[@]}"; do
-    entry_name=${entry:t}
-    [[ -n $entry_name && $entry_name != *[[:cntrl:]]* ]] || continue
-    __tzc_score "$entry_name" "$name_part" || continue
-    (( count++ > 5000 )) && break
-    sc=$REPLY
-    if [[ -d $entry ]]; then
-      __tzc_escape "$dir_part$entry_name/" "$__tzc_p_quote" 0
-      __tzc_push "$entry_name/" "$REPLY" "" folder "$sc" 50
-    elif (( files )); then
-      __tzc_escape "$dir_part$entry_name" "$__tzc_p_quote" 1
-      __tzc_push "$entry_name" "$REPLY " "" file "$sc" 50
+  local -a dirs others all prefix ci sub ins top
+  dirs=( "$dir"/*(N-/:t) )
+  (( files )) && others=( "$dir"/*(N^-/:t) )
+  # after the globs, which keep the locale order
+  local LC_COLLATE=C
+  local bq=${(b)name_part} kind lsuf tail close sc us=$'\x1f' rs=$'\x1e'
+  local tilde= rest=$dir_part
+  [[ -z $__tzc_p_quote && $rest == '~'* ]] && { tilde='~'; rest=${rest[2,-1]} }
+  for kind in folder file; do
+    if [[ $kind == folder ]]; then
+      all=( ${dirs:#*[[:cntrl:]]*} ) lsuf=/ tail= close=0
+    else
+      all=( ${others:#*[[:cntrl:]]*} ) lsuf= tail=' ' close=1
     fi
+    # score 0 exact prefix, 1 case-insensitive prefix, 2 substring (3+ chars)
+    prefix=( ${(M)all:#${~bq}*} )
+    ci=( ${(M)all:#(#i)${~bq}*} )
+    sub=()
+    if (( ${#name_part} >= 3 )); then
+      sub=( ${(M)all:#(#i)*${~bq}*} )
+      sub=( ${sub:|ci} )
+    fi
+    ci=( ${ci:|prefix} )
+    for sc in 0 1 2; do
+      case $sc in
+        (0) all=( $prefix ) ;;
+        (1) all=( $ci ) ;;
+        (2) all=( $sub ) ;;
+      esac
+      (( ${#all} )) || continue
+      # only 200 rows are shown and a group sorts by lowercase label, so keep
+      # its first 400 by that order (margin for dedupe) before keying them all
+      if (( ${#all} > 400 )); then
+        ins=( "${(@)all/%/$rs}" )
+        top=( "${(@)${(@L)all}/%/$us}" )
+        top=( ${(ps:\x1e:)${(j::)top:^ins}} )
+        top=( ${${(o)top}[1,400]} )
+        top=( ${top#*$us} )
+        all=( ${all:*top} )
+      fi
+      if [[ -z $__tzc_p_quote ]]; then
+        # __tzc_escape for the whole list at once
+        ins=( "${(@q)${(@)${(@)all/#/$rest}/%/$lsuf}}" )
+        ins=( "${(@)${(@)ins//!/\\!}/#/$tilde}" )
+      else
+        ins=()
+        for name in "${all[@]}"; do
+          __tzc_escape "$dir_part$name$lsuf" "$__tzc_p_quote" $close
+          ins+=("$REPLY")
+        done
+      fi
+      __tzc_c_label+=( "${(@)all/%/$lsuf}" )
+      __tzc_c_insert+=( "${(@)ins/%/$tail}" )
+      __tzc_c_desc+=( "${(@)all/*/}" )
+      __tzc_c_kind+=( "${(@)all/*/$kind}" )
+      __tzc_c_score+=( "${(@)all/*/$sc}" )
+      __tzc_c_prio+=( "${(@)all/*/50}" )
+    done
   done
   return 0
 }
@@ -589,64 +718,86 @@ __tzc_collect_persistent() {
   return 0
 }
 
-# walk the command spec; words are the complete words after the command
+# walk the spec of command $1; the rest are the complete words after it.
+# returns 1 when the command has no spec.
 __tzc_add_from_spec() {
   emulate -L zsh
   setopt localoptions noglob
+  local cmd=$1
+  shift
   local -a words=("$@")
-  __tzc_node=1
-  __tzc_persistent=()
   typeset -A used
   local pending=0 pending_idx=0 arg_index=0 options_done=0
   local word opt_name has_value id count
   local -a reply
-  __tzc_collect_persistent 1
-  __tzc_build_opt_ids
-  for word in "${words[@]}"; do
-    if (( pending )); then
-      (( pending_idx++ ))
-      __tzc_opt_arg_count "$pending"
-      count=$REPLY
-      (( pending_idx < count )) || pending=0
-      continue
-    fi
-    if (( ! options_done )) && [[ $word == '--' ]]; then
-      options_done=1
-      continue
-    fi
-    if (( ! options_done )) && [[ $word == -?* ]]; then
-      opt_name=${word%%=*}
-      has_value=0
-      [[ $word == *=* ]] && has_value=1
-      if __tzc_find_named "$opt_name" "${__tzc_opt_ids[@]}"; then
-        id=$REPLY
-        used[$id]=1
-        if (( ! has_value )) && __tzc_opt_takes_value "$id"; then
-          pending=$id
-          pending_idx=0
-        fi
-      fi
-      continue
-    fi
-    if (( arg_index == 0 )); then
-      __tzc_ids "$__tzc_node" 9
-      if __tzc_find_named "$word" "${reply[@]}"; then
-        __tzc_node=$REPLY
-        # a split subcommand continues in its own spec, which carries the
-        # inherited persistent options
-        __tzc_record "$__tzc_node"
-        if __tzc_spec_load "$__tzc_spec_loaded/${__tzc_f[2]%%$'\x1d'*}"; then
-          __tzc_node=1
-          __tzc_persistent=()
-          used=()
-        fi
-        __tzc_collect_persistent "$__tzc_node"
-        __tzc_build_opt_ids
+  # the words before the typed one stay the same while it is typed, so the
+  # walk is kept and a split spec does not reload its root every keystroke
+  local wkey="$cmd"$'\x1f'"${#words}"$'\x1f'"${(pj:\x1f:)words}"
+  if [[ $wkey == $__tzc_w_key && $__tzc_spec_loaded == $__tzc_w_spec ]]; then
+    __tzc_node=${__tzc_w_state[1]}
+    pending=${__tzc_w_state[2]}
+    pending_idx=${__tzc_w_state[3]}
+    arg_index=${__tzc_w_state[4]}
+    options_done=${__tzc_w_state[5]}
+    used=( "${(@)__tzc_w_used}" )
+    __tzc_opt_ids=( "${(@)__tzc_w_opt_ids}" )
+  else
+    __tzc_spec_load "$cmd" || return 1
+    __tzc_node=1
+    __tzc_persistent=()
+    __tzc_collect_persistent 1
+    __tzc_build_opt_ids
+    for word in "${words[@]}"; do
+      if (( pending )); then
+        (( pending_idx++ ))
+        __tzc_opt_arg_count "$pending"
+        count=$REPLY
+        (( pending_idx < count )) || pending=0
         continue
       fi
-    fi
-    (( arg_index++ ))
-  done
+      if (( ! options_done )) && [[ $word == '--' ]]; then
+        options_done=1
+        continue
+      fi
+      if (( ! options_done )) && [[ $word == -?* ]]; then
+        opt_name=${word%%=*}
+        has_value=0
+        [[ $word == *=* ]] && has_value=1
+        if __tzc_find_named "$opt_name" "${__tzc_opt_ids[@]}"; then
+          id=$REPLY
+          used[$id]=1
+          if (( ! has_value )) && __tzc_opt_takes_value "$id"; then
+            pending=$id
+            pending_idx=0
+          fi
+        fi
+        continue
+      fi
+      if (( arg_index == 0 )); then
+        __tzc_ids "$__tzc_node" 9
+        if __tzc_find_named "$word" "${reply[@]}"; then
+          __tzc_node=$REPLY
+          # a split subcommand continues in its own spec, which carries the
+          # inherited persistent options
+          __tzc_record "$__tzc_node"
+          if __tzc_spec_load "$__tzc_spec_loaded/${__tzc_f[2]%%$'\x1d'*}"; then
+            __tzc_node=1
+            __tzc_persistent=()
+            used=()
+          fi
+          __tzc_collect_persistent "$__tzc_node"
+          __tzc_build_opt_ids
+          continue
+        fi
+      fi
+      (( arg_index++ ))
+    done
+    __tzc_w_key=$wkey
+    __tzc_w_spec=$__tzc_spec_loaded
+    __tzc_w_state=( $__tzc_node $pending $pending_idx $arg_index $options_done )
+    __tzc_w_used=( "${(@kv)used}" )
+    __tzc_w_opt_ids=( "${(@)__tzc_opt_ids}" )
+  fi
 
   if (( pending )); then
     __tzc_ids "$pending" 10
@@ -682,7 +833,8 @@ __tzc_add_from_spec() {
 __tzc_sort_emit() {
   emulate -L zsh
   setopt localoptions noglob
-  local -a keys seen_inserts
+  local -a keys
+  local -A seen
   local i key label kind prio score ko insert
   for ((i=1;i<=${#__tzc_c_label};i++)); do
     label=${__tzc_c_label[i]}
@@ -700,8 +852,8 @@ __tzc_sort_emit() {
     i=${key##*$'\x1f'}
     insert=${__tzc_c_insert[i]}
     [[ -n $insert ]] || continue
-    (( ${seen_inserts[(Ie)$insert]} )) && continue
-    seen_inserts+=("$insert")
+    (( ${+seen[$insert]} )) && continue
+    seen[$insert]=1
     __tzc_candidates+=("${__tzc_c_label[i]}"$'\x1f'"$insert"$'\x1f'"${__tzc_c_desc[i]}"$'\x1f'"${__tzc_c_kind[i]}")
     (( ${#__tzc_candidates} >= 200 )) && break
   done
@@ -744,8 +896,8 @@ __tzc_complete() {
   else
     local command=${__tzc_cmd_words[1]}
     local name=${command##*/}
-    if [[ $command != */* ]] && __tzc_spec_load "$name"; then
-      __tzc_add_from_spec "${(@)__tzc_cmd_words[2,-1]}"
+    if [[ $command != */* ]] && __tzc_add_from_spec "$name" "${(@)__tzc_cmd_words[2,-1]}"; then
+      :
     elif [[ $__tzc_p_prefix != -* ]]; then
       __tzc_add_paths 1
     fi
