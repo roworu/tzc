@@ -1,0 +1,551 @@
+{
+ "name": "appintegrations",
+ "description": "Amazon AppIntegrations actions Amazon AppIntegrations data types The Amazon AppIntegrations service enables you to configure and reuse connections to external applications.",
+ "subcommands": [
+  {
+   "name": "create-application",
+   "description": "Creates and persists an Application resource.",
+   "options": [
+    {
+     "name": "--application-config",
+     "args": {}
+    },
+    {
+     "name": "--application-source-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-type",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "SERVICE",
+       "MCP_SERVER"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--iframe-config",
+     "args": {}
+    },
+    {
+     "name": "--initialization-timeout",
+     "args": {}
+    },
+    {
+     "name": "--is-service"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-is-service"
+    },
+    {
+     "name": "--permissions",
+     "args": {}
+    },
+    {
+     "name": "--publications",
+     "args": {}
+    },
+    {
+     "name": "--subscriptions",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-integration",
+   "description": "Creates and persists a DataIntegration resource.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--file-configuration",
+     "args": {}
+    },
+    {
+     "name": "--kms-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-configuration",
+     "args": {}
+    },
+    {
+     "name": "--schedule-config",
+     "args": {}
+    },
+    {
+     "name": "--source-uri",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-integration-association",
+   "description": "Creates and persists a DataIntegrationAssociation resource.",
+   "options": [
+    {
+     "name": "--client-association-metadata",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-integration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-uri",
+     "args": {}
+    },
+    {
+     "name": "--execution-configuration",
+     "args": {}
+    },
+    {
+     "name": "--object-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-integration",
+   "description": "Creates an EventIntegration, given a specified name, description, and a reference to an Amazon EventBridge bus in your account and a partner event source that pushes events to that bus.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-bridge-bus",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes the Application.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-integration",
+   "description": "Deletes the DataIntegration.",
+   "options": [
+    {
+     "name": "--data-integration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-integration",
+   "description": "Deletes the specified existing event integration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application",
+   "description": "Get an Application resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-integration",
+   "description": "Returns information about the DataIntegration.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event-integration",
+   "description": "Returns information about the event integration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-application-associations",
+   "description": "Returns a paginated list of application associations for an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists applications in the account.",
+   "options": [
+    {
+     "name": "--application-type",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "SERVICE",
+       "MCP_SERVER"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-integration-associations",
+   "description": "Returns a paginated list of DataIntegration associations in the account.",
+   "options": [
+    {
+     "name": "--data-integration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-integrations",
+   "description": "Returns a paginated list of DataIntegrations in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-integration-associations",
+   "description": "Returns a paginated list of event integration associations in the account.",
+   "options": [
+    {
+     "name": "--event-integration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-integrations",
+   "description": "Returns a paginated list of event integrations in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds the specified tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates and persists an Application resource.",
+   "options": [
+    {
+     "name": "--application-config",
+     "args": {}
+    },
+    {
+     "name": "--application-source-config",
+     "args": {}
+    },
+    {
+     "name": "--application-type",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "SERVICE",
+       "MCP_SERVER"
+      ]
+     }
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--iframe-config",
+     "args": {}
+    },
+    {
+     "name": "--initialization-timeout",
+     "args": {}
+    },
+    {
+     "name": "--is-service"
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-is-service"
+    },
+    {
+     "name": "--permissions",
+     "args": {}
+    },
+    {
+     "name": "--publications",
+     "args": {}
+    },
+    {
+     "name": "--subscriptions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-data-integration",
+   "description": "Updates the description of a DataIntegration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-data-integration-association",
+   "description": "Updates and persists a DataIntegrationAssociation resource.",
+   "options": [
+    {
+     "name": "--data-integration-association-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-integration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-event-integration",
+   "description": "Updates the description of an event integration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

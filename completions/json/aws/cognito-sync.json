@@ -1,0 +1,352 @@
+{
+ "name": "cognito-sync",
+ "description": "Amazon Cognito Sync Amazon Cognito Sync provides an AWS service and client library that enable cross-device syncing of application-related user data.",
+ "subcommands": [
+  {
+   "name": "bulk-publish",
+   "description": "Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream.",
+   "options": [
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset",
+   "description": "Deletes the specific dataset.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset",
+   "description": "Gets meta data about a dataset by identity and dataset name.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-identity-pool-usage",
+   "description": "Gets usage details (for example, data storage) about a particular identity pool.",
+   "options": [
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-identity-usage",
+   "description": "Gets usage information for an identity, including number of datasets and data usage.",
+   "options": [
+    {
+     "name": "--identity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bulk-publish-details",
+   "description": "Get the status of the last BulkPublish operation for an identity pool.This API can only be called with developer credentials.",
+   "options": [
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cognito-events",
+   "description": "Gets the events and the corresponding Lambda functions associated with an identity pool.This API can only be called with developer credentials.",
+   "options": [
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-identity-pool-configuration",
+   "description": "Gets the configuration settings of an identity pool.This API can only be called with developer credentials.",
+   "options": [
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-datasets",
+   "description": "Lists datasets for an identity.",
+   "options": [
+    {
+     "name": "--identity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-identity-pool-usage",
+   "description": "Gets a list of identity pools registered with Cognito.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-records",
+   "description": "Gets paginated records, optionally changed after a particular sync count for a dataset and identity.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--last-sync-count",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sync-session-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-device",
+   "description": "Registers a device to receive push sync notifications.This API can only be called with temporary credentials provided by Cognito Identity.",
+   "options": [
+    {
+     "name": "--identity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--platform",
+     "args": {
+      "suggestions": [
+       "APNS",
+       "APNS_SANDBOX",
+       "GCM",
+       "ADM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-cognito-events",
+   "description": "Sets the AWS Lambda function for a given event type for an identity pool.",
+   "options": [
+    {
+     "name": "--events",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-identity-pool-configuration",
+   "description": "Sets the necessary configuration for push sync.This API can only be called with developer credentials.",
+   "options": [
+    {
+     "name": "--cognito-streams",
+     "args": {}
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--push-sync",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "subscribe-to-dataset",
+   "description": "Subscribes to receive notifications when a dataset is modified by another device.This API can only be called with temporary credentials provided by Cognito Identity.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "unsubscribe-from-dataset",
+   "description": "Unsubscribes from receiving notifications when a dataset is modified by another device.This API can only be called with temporary credentials provided by Cognito Identity.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-records",
+   "description": "Posts updates to records and adds and deletes records for a dataset and user.",
+   "options": [
+    {
+     "name": "--client-context",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-id",
+     "args": {}
+    },
+    {
+     "name": "--identity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--record-patches",
+     "args": {}
+    },
+    {
+     "name": "--sync-session-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

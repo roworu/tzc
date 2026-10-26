@@ -1,0 +1,1047 @@
+{
+ "name": "machinelearning",
+ "description": "Definition of the public APIs exposed by Amazon Machine Learning",
+ "subcommands": [
+  {
+   "name": "add-tags",
+   "description": "Adds one or more tags to an object, up to a limit of 10.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "BatchPrediction",
+       "DataSource",
+       "Evaluation",
+       "MLModel"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-batch-prediction",
+   "description": "Generates predictions for a group of observations.",
+   "options": [
+    {
+     "name": "--batch-prediction-data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--batch-prediction-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--batch-prediction-name",
+     "args": {}
+    },
+    {
+     "name": "--ml-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-uri",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-source-from-rds",
+   "description": "Creates a DataSource object from an Amazon Relational Database Service (Amazon RDS).",
+   "options": [
+    {
+     "name": "--compute-statistics"
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-name",
+     "args": {}
+    },
+    {
+     "name": "--no-compute-statistics"
+    },
+    {
+     "name": "--rds-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-source-from-redshift",
+   "description": "Creates a DataSource from a database hosted on an Amazon Redshift cluster.",
+   "options": [
+    {
+     "name": "--compute-statistics"
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-name",
+     "args": {}
+    },
+    {
+     "name": "--data-spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-compute-statistics"
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-source-from-s3",
+   "description": "Creates a DataSource object.",
+   "options": [
+    {
+     "name": "--compute-statistics"
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-name",
+     "args": {}
+    },
+    {
+     "name": "--data-spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-compute-statistics"
+    }
+   ]
+  },
+  {
+   "name": "create-evaluation",
+   "description": "Creates a new Evaluation of an MLModel.",
+   "options": [
+    {
+     "name": "--evaluation-data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--evaluation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--evaluation-name",
+     "args": {}
+    },
+    {
+     "name": "--ml-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-ml-model",
+   "description": "Creates a new MLModel using the DataSource and the recipe as information sources.",
+   "options": [
+    {
+     "name": "--ml-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ml-model-name",
+     "args": {}
+    },
+    {
+     "name": "--ml-model-type",
+     "args": {
+      "suggestions": [
+       "REGRESSION",
+       "BINARY",
+       "MULTICLASS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--recipe",
+     "args": {}
+    },
+    {
+     "name": "--recipe-uri",
+     "args": {}
+    },
+    {
+     "name": "--training-data-source-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-realtime-endpoint",
+   "description": "Creates a real-time endpoint for the MLModel.",
+   "options": [
+    {
+     "name": "--ml-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-batch-prediction",
+   "description": "Assigns the DELETED status to a BatchPrediction, rendering it unusable.",
+   "options": [
+    {
+     "name": "--batch-prediction-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-source",
+   "description": "Assigns the DELETED status to a DataSource, rendering it unusable.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-evaluation",
+   "description": "Assigns the DELETED status to an Evaluation, rendering it unusable.",
+   "options": [
+    {
+     "name": "--evaluation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ml-model",
+   "description": "Assigns the DELETED status to an MLModel, rendering it unusable.",
+   "options": [
+    {
+     "name": "--ml-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-realtime-endpoint",
+   "description": "Deletes a real time endpoint of an MLModel.",
+   "options": [
+    {
+     "name": "--ml-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tags",
+   "description": "Deletes the specified tags associated with an ML object.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "BatchPrediction",
+       "DataSource",
+       "Evaluation",
+       "MLModel"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-batch-predictions",
+   "description": "Returns a list of BatchPrediction operations that match the search criteria in the request.",
+   "options": [
+    {
+     "name": "--eq",
+     "args": {}
+    },
+    {
+     "name": "--filter-variable",
+     "args": {
+      "suggestions": [
+       "CreatedAt",
+       "LastUpdatedAt",
+       "Status",
+       "Name",
+       "IAMUser",
+       "MLModelId",
+       "DataSourceId",
+       "DataURI"
+      ]
+     }
+    },
+    {
+     "name": "--ge",
+     "args": {}
+    },
+    {
+     "name": "--gt",
+     "args": {}
+    },
+    {
+     "name": "--le",
+     "args": {}
+    },
+    {
+     "name": "--lt",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ne",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "asc",
+       "dsc"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-data-sources",
+   "description": "Returns a list of DataSource that match the search criteria in the request.",
+   "options": [
+    {
+     "name": "--eq",
+     "args": {}
+    },
+    {
+     "name": "--filter-variable",
+     "args": {
+      "suggestions": [
+       "CreatedAt",
+       "LastUpdatedAt",
+       "Status",
+       "Name",
+       "DataLocationS3",
+       "IAMUser"
+      ]
+     }
+    },
+    {
+     "name": "--ge",
+     "args": {}
+    },
+    {
+     "name": "--gt",
+     "args": {}
+    },
+    {
+     "name": "--le",
+     "args": {}
+    },
+    {
+     "name": "--lt",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ne",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "asc",
+       "dsc"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-evaluations",
+   "description": "Returns a list of DescribeEvaluations that match the search criteria in the request.",
+   "options": [
+    {
+     "name": "--eq",
+     "args": {}
+    },
+    {
+     "name": "--filter-variable",
+     "args": {
+      "suggestions": [
+       "CreatedAt",
+       "LastUpdatedAt",
+       "Status",
+       "Name",
+       "IAMUser",
+       "MLModelId",
+       "DataSourceId",
+       "DataURI"
+      ]
+     }
+    },
+    {
+     "name": "--ge",
+     "args": {}
+    },
+    {
+     "name": "--gt",
+     "args": {}
+    },
+    {
+     "name": "--le",
+     "args": {}
+    },
+    {
+     "name": "--lt",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ne",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "asc",
+       "dsc"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-ml-models",
+   "description": "Returns a list of MLModel that match the search criteria in the request.",
+   "options": [
+    {
+     "name": "--eq",
+     "args": {}
+    },
+    {
+     "name": "--filter-variable",
+     "args": {
+      "suggestions": [
+       "CreatedAt",
+       "LastUpdatedAt",
+       "Status",
+       "Name",
+       "IAMUser",
+       "TrainingDataSourceId",
+       "RealtimeEndpointStatus",
+       "MLModelType",
+       "Algorithm",
+       "TrainingDataURI"
+      ]
+     }
+    },
+    {
+     "name": "--ge",
+     "args": {}
+    },
+    {
+     "name": "--gt",
+     "args": {}
+    },
+    {
+     "name": "--le",
+     "args": {}
+    },
+    {
+     "name": "--lt",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ne",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "asc",
+       "dsc"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tags",
+   "description": "Describes one or more of the tags for your Amazon ML object.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "BatchPrediction",
+       "DataSource",
+       "Evaluation",
+       "MLModel"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-batch-prediction",
+   "description": "Returns a BatchPrediction that includes detailed metadata, status, and data file information for a Batch Prediction request.",
+   "options": [
+    {
+     "name": "--batch-prediction-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-source",
+   "description": "Returns a DataSource that includes metadata and data file information, as well as the current status of the DataSource.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-verbose"
+    },
+    {
+     "name": "--verbose"
+    }
+   ]
+  },
+  {
+   "name": "get-evaluation",
+   "description": "Returns an Evaluation that includes metadata as well as the current status of the Evaluation.",
+   "options": [
+    {
+     "name": "--evaluation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ml-model",
+   "description": "Returns an MLModel that includes detailed metadata, data source information, and the current status of the MLModel.",
+   "options": [
+    {
+     "name": "--ml-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-verbose"
+    },
+    {
+     "name": "--verbose"
+    }
+   ]
+  },
+  {
+   "name": "predict",
+   "description": "Generates a prediction for the observation using the specified ML Model.",
+   "options": [
+    {
+     "name": "--ml-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--predict-endpoint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--record",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-batch-prediction",
+   "description": "Updates the BatchPredictionName of a BatchPrediction.",
+   "options": [
+    {
+     "name": "--batch-prediction-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--batch-prediction-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-source",
+   "description": "Updates the DataSourceName of a DataSource.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-evaluation",
+   "description": "Updates the EvaluationName of an Evaluation.",
+   "options": [
+    {
+     "name": "--evaluation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--evaluation-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-ml-model",
+   "description": "Updates the MLModelName and the ScoreThreshold of an MLModel.",
+   "options": [
+    {
+     "name": "--ml-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ml-model-name",
+     "args": {}
+    },
+    {
+     "name": "--score-threshold",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "batch-prediction-available",
+     "description": "Wait until JMESPath query Results[].Status returns COMPLETED for all elements when polling with ``describe-batch-predictions``.",
+     "options": [
+      {
+       "name": "--eq",
+       "args": {}
+      },
+      {
+       "name": "--filter-variable",
+       "args": {
+        "suggestions": [
+         "CreatedAt",
+         "LastUpdatedAt",
+         "Status",
+         "Name",
+         "IAMUser",
+         "MLModelId",
+         "DataSourceId",
+         "DataURI"
+        ]
+       }
+      },
+      {
+       "name": "--ge",
+       "args": {}
+      },
+      {
+       "name": "--gt",
+       "args": {}
+      },
+      {
+       "name": "--le",
+       "args": {}
+      },
+      {
+       "name": "--lt",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--ne",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--prefix",
+       "args": {}
+      },
+      {
+       "name": "--sort-order",
+       "args": {
+        "suggestions": [
+         "asc",
+         "dsc"
+        ]
+       }
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "data-source-available",
+     "description": "Wait until JMESPath query Results[].Status returns COMPLETED for all elements when polling with ``describe-data-sources``.",
+     "options": [
+      {
+       "name": "--eq",
+       "args": {}
+      },
+      {
+       "name": "--filter-variable",
+       "args": {
+        "suggestions": [
+         "CreatedAt",
+         "LastUpdatedAt",
+         "Status",
+         "Name",
+         "DataLocationS3",
+         "IAMUser"
+        ]
+       }
+      },
+      {
+       "name": "--ge",
+       "args": {}
+      },
+      {
+       "name": "--gt",
+       "args": {}
+      },
+      {
+       "name": "--le",
+       "args": {}
+      },
+      {
+       "name": "--lt",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--ne",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--prefix",
+       "args": {}
+      },
+      {
+       "name": "--sort-order",
+       "args": {
+        "suggestions": [
+         "asc",
+         "dsc"
+        ]
+       }
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "evaluation-available",
+     "description": "Wait until JMESPath query Results[].Status returns COMPLETED for all elements when polling with ``describe-evaluations``.",
+     "options": [
+      {
+       "name": "--eq",
+       "args": {}
+      },
+      {
+       "name": "--filter-variable",
+       "args": {
+        "suggestions": [
+         "CreatedAt",
+         "LastUpdatedAt",
+         "Status",
+         "Name",
+         "IAMUser",
+         "MLModelId",
+         "DataSourceId",
+         "DataURI"
+        ]
+       }
+      },
+      {
+       "name": "--ge",
+       "args": {}
+      },
+      {
+       "name": "--gt",
+       "args": {}
+      },
+      {
+       "name": "--le",
+       "args": {}
+      },
+      {
+       "name": "--lt",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--ne",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--prefix",
+       "args": {}
+      },
+      {
+       "name": "--sort-order",
+       "args": {
+        "suggestions": [
+         "asc",
+         "dsc"
+        ]
+       }
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "ml-model-available",
+     "description": "Wait until JMESPath query Results[].Status returns COMPLETED for all elements when polling with ``describe-ml-models``.",
+     "options": [
+      {
+       "name": "--eq",
+       "args": {}
+      },
+      {
+       "name": "--filter-variable",
+       "args": {
+        "suggestions": [
+         "CreatedAt",
+         "LastUpdatedAt",
+         "Status",
+         "Name",
+         "IAMUser",
+         "TrainingDataSourceId",
+         "RealtimeEndpointStatus",
+         "MLModelType",
+         "Algorithm",
+         "TrainingDataURI"
+        ]
+       }
+      },
+      {
+       "name": "--ge",
+       "args": {}
+      },
+      {
+       "name": "--gt",
+       "args": {}
+      },
+      {
+       "name": "--le",
+       "args": {}
+      },
+      {
+       "name": "--lt",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--ne",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--prefix",
+       "args": {}
+      },
+      {
+       "name": "--sort-order",
+       "args": {
+        "suggestions": [
+         "asc",
+         "dsc"
+        ]
+       }
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,529 @@
+{
+ "name": "greengrassv2",
+ "description": "IoT Greengrass brings local compute, messaging, data management, sync, and ML inference capabilities to edge devices.",
+ "subcommands": [
+  {
+   "name": "associate-service-role-to-account",
+   "description": "Associates a Greengrass service role with IoT Greengrass for your Amazon Web Services account in this Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-associate-client-device-with-core-device",
+   "description": "Associates a list of client devices with a core device.",
+   "options": [
+    {
+     "name": "--core-device-thing-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entries",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-disassociate-client-device-from-core-device",
+   "description": "Disassociates a list of client devices from a core device.",
+   "options": [
+    {
+     "name": "--core-device-thing-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entries",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-deployment",
+   "description": "Cancels a deployment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-component-version",
+   "description": "Creates a component.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--inline-recipe",
+     "args": {}
+    },
+    {
+     "name": "--lambda-function",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-deployment",
+   "description": "Creates a continuous deployment for a target, which is a Greengrass core device or group of core devices.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--components",
+     "args": {}
+    },
+    {
+     "name": "--deployment-name",
+     "args": {}
+    },
+    {
+     "name": "--deployment-policies",
+     "args": {}
+    },
+    {
+     "name": "--iot-job-configuration",
+     "args": {}
+    },
+    {
+     "name": "--parent-target-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-component",
+   "description": "Deletes a version of a component from IoT Greengrass.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-core-device",
+   "description": "Deletes a Greengrass core device, which is an IoT thing.",
+   "options": [
+    {
+     "name": "--core-device-thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-deployment",
+   "description": "Deletes a deployment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-component",
+   "description": "Retrieves metadata for a version of a component.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-service-role-from-account",
+   "description": "Disassociates the Greengrass service role from IoT Greengrass for your Amazon Web Services account in this Amazon Web Services Region."
+  },
+  {
+   "name": "get-component",
+   "description": "Gets the recipe for a version of a component.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recipe-output-format",
+     "args": {
+      "suggestions": [
+       "JSON",
+       "YAML"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-component-version-artifact",
+   "description": "Gets the pre-signed URL to download a public or a Lambda component artifact.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--artifact-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iot-endpoint-type",
+     "args": {
+      "suggestions": [
+       "fips",
+       "standard"
+      ]
+     }
+    },
+    {
+     "name": "--s3-endpoint-type",
+     "args": {
+      "suggestions": [
+       "REGIONAL",
+       "GLOBAL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-connectivity-info",
+   "description": "Retrieves connectivity information for a Greengrass core device.",
+   "options": [
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-core-device",
+   "description": "Retrieves metadata for a Greengrass core device.",
+   "options": [
+    {
+     "name": "--core-device-thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment",
+   "description": "Gets a deployment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-role-for-account",
+   "description": "Gets the service role associated with IoT Greengrass for your Amazon Web Services account in this Amazon Web Services Region."
+  },
+  {
+   "name": "list-client-devices-associated-with-core-device",
+   "description": "Retrieves a paginated list of client devices that are associated with a core device.",
+   "options": [
+    {
+     "name": "--core-device-thing-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-component-versions",
+   "description": "Retrieves a paginated list of all versions for a component.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-components",
+   "description": "Retrieves a paginated list of component summaries.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "PRIVATE",
+       "PUBLIC"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-core-devices",
+   "description": "Retrieves a paginated list of Greengrass core devices.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--runtime",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "HEALTHY",
+       "UNHEALTHY"
+      ]
+     }
+    },
+    {
+     "name": "--thing-group-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployments",
+   "description": "Retrieves a paginated list of deployments.",
+   "options": [
+    {
+     "name": "--history-filter",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "LATEST_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parent-target-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-effective-deployments",
+   "description": "Retrieves a paginated list of deployment jobs that IoT Greengrass sends to Greengrass core devices.",
+   "options": [
+    {
+     "name": "--core-device-thing-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-installed-components",
+   "description": "Retrieves a paginated list of the components that a Greengrass core device runs.",
+   "options": [
+    {
+     "name": "--core-device-thing-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--topology-filter",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "ROOT"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves the list of tags for an IoT Greengrass resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resolve-component-candidates",
+   "description": "Retrieves a list of components that meet the component, version, and platform requirements of a deployment.",
+   "options": [
+    {
+     "name": "--component-candidates",
+     "args": {}
+    },
+    {
+     "name": "--platform",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to an IoT Greengrass resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from an IoT Greengrass resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-connectivity-info",
+   "description": "Updates connectivity information for a Greengrass core device.",
+   "options": [
+    {
+     "name": "--connectivity-info",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

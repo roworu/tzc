@@ -1,0 +1,94 @@
+{
+ "name": "dynamodbstreams",
+ "description": "Amazon DynamoDB Amazon DynamoDB Streams provides API actions for accessing streams and processing stream records.",
+ "subcommands": [
+  {
+   "name": "describe-stream",
+   "description": "Returns information about a stream, including the current status of the stream, its Amazon Resource Name (ARN), the composition of its shards, and its corresponding DynamoDB table.",
+   "options": [
+    {
+     "name": "--exclusive-start-shard-id",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--shard-filter",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-records",
+   "description": "Retrieves the stream records from a given shard.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--shard-iterator",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-shard-iterator",
+   "description": "Returns a shard iterator.",
+   "options": [
+    {
+     "name": "--sequence-number",
+     "args": {}
+    },
+    {
+     "name": "--shard-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shard-iterator-type",
+     "args": {
+      "suggestions": [
+       "TRIM_HORIZON",
+       "LATEST",
+       "AT_SEQUENCE_NUMBER",
+       "AFTER_SEQUENCE_NUMBER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-streams",
+   "description": "Returns an array of stream ARNs associated with the current account and endpoint.",
+   "options": [
+    {
+     "name": "--exclusive-start-stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

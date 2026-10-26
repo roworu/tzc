@@ -1,0 +1,850 @@
+{
+ "name": "m2",
+ "description": "Amazon Web Services Mainframe Modernization provides tools and resources to help you plan and implement migration and modernization from mainframes to Amazon Web Services managed runtime environments.",
+ "subcommands": [
+  {
+   "name": "cancel-batch-job-execution",
+   "description": "Cancels the running of a specific batch job execution.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-secrets-manager-arn",
+     "args": {}
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates a new application with given parameters.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine-type",
+     "args": {
+      "suggestions": [
+       "microfocus",
+       "bluage"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-set-export-task",
+   "description": "Starts a data set export task for a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--export-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-set-import-task",
+   "description": "Starts a data set import task for a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--import-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-deployment",
+   "description": "Creates and starts a deployment to deploy an application into a runtime environment.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment",
+   "description": "Creates a runtime environment for a given runtime engine.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine-type",
+     "args": {
+      "suggestions": [
+       "microfocus",
+       "bluage"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--high-availability-config",
+     "args": {}
+    },
+    {
+     "name": "--instance-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "dual"
+      ]
+     }
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--storage-configurations",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-from-environment",
+   "description": "Deletes a specific application from the specific runtime environment where it was previously deployed.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment",
+   "description": "Deletes a specific runtime environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application",
+   "description": "Describes the details of a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application-version",
+   "description": "Returns details about a specific version of a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-batch-job-execution",
+   "description": "Gets the details of a specific batch job execution for a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-set-details",
+   "description": "Gets the details of a specific data set.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-set-export-task",
+   "description": "Gets the status of a data set import task initiated with the CreateDataSetExportTask operation.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-set-import-task",
+   "description": "Gets the status of a data set import task initiated with the CreateDataSetImportTask operation.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment",
+   "description": "Gets details of a specific deployment with a given deployment identifier.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment",
+   "description": "Describes a specific runtime environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-signed-bluinsights-url",
+   "description": "Gets a single sign-on URL that can be used to connect to AWS Blu Insights."
+  },
+  {
+   "name": "list-application-versions",
+   "description": "Returns a list of the application versions for a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists the applications associated with a specific Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-batch-job-definitions",
+   "description": "Lists all the available batch job definitions based on the batch job resources uploaded during the application creation.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-batch-job-executions",
+   "description": "Lists historical, current, and scheduled batch job executions for a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-ids",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--started-after",
+     "args": {}
+    },
+    {
+     "name": "--started-before",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Submitting",
+       "Holding",
+       "Dispatching",
+       "Running",
+       "Cancelling",
+       "Cancelled",
+       "Succeeded",
+       "Failed",
+       "Purged",
+       "Succeeded With Warning"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-batch-job-restart-points",
+   "description": "Lists all the job steps for a JCL file to restart a batch job.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-secrets-manager-arn",
+     "args": {}
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-data-set-export-history",
+   "description": "Lists the data set exports for the specified application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-set-import-history",
+   "description": "Lists the data set imports for the specified application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-sets",
+   "description": "Lists the data sets imported for a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-filter",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployments",
+   "description": "Returns a list of all deployments of a specific application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-engine-versions",
+   "description": "Lists the available engine versions.",
+   "options": [
+    {
+     "name": "--engine-type",
+     "args": {
+      "suggestions": [
+       "microfocus",
+       "bluage"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environments",
+   "description": "Lists the runtime environments.",
+   "options": [
+    {
+     "name": "--engine-type",
+     "args": {
+      "suggestions": [
+       "microfocus",
+       "bluage"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-application",
+   "description": "Starts an application that is currently stopped.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-batch-job",
+   "description": "Starts a batch job and returns the unique identifier of this execution of the batch job.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-secrets-manager-arn",
+     "args": {}
+    },
+    {
+     "name": "--batch-job-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-params",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-application",
+   "description": "Stops a running application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-stop"
+    },
+    {
+     "name": "--no-force-stop"
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates an application and creates a new version.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-application-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--definition",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-environment",
+   "description": "Updates the configuration details for a specific runtime environment.",
+   "options": [
+    {
+     "name": "--apply-during-maintenance-window"
+    },
+    {
+     "name": "--desired-capacity",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-update"
+    },
+    {
+     "name": "--instance-type",
+     "args": {}
+    },
+    {
+     "name": "--no-apply-during-maintenance-window"
+    },
+    {
+     "name": "--no-force-update"
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

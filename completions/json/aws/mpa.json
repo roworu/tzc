@@ -1,0 +1,399 @@
+{
+ "name": "mpa",
+ "description": "Multi-party approval is a capability of Organizations that allows you to protect a predefined list of operations through a distributed approval process.",
+ "subcommands": [
+  {
+   "name": "cancel-session",
+   "description": "Cancels an approval session.",
+   "options": [
+    {
+     "name": "--session-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-approval-team",
+   "description": "Creates a new approval team.",
+   "options": [
+    {
+     "name": "--approval-strategy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--approvers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policies",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-identity-source",
+   "description": "Creates a new identity source.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identity-source-parameters",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-identity-source",
+   "description": "Deletes an identity source.",
+   "options": [
+    {
+     "name": "--identity-source-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-inactive-approval-team-version",
+   "description": "Deletes an inactive approval team.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-approval-team",
+   "description": "Returns details for an approval team.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-identity-source",
+   "description": "Returns details for an identity source.",
+   "options": [
+    {
+     "name": "--identity-source-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy-version",
+   "description": "Returns details for the version of a policy.",
+   "options": [
+    {
+     "name": "--policy-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Returns details about a policy for a resource.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "AWS_MANAGED",
+       "AWS_RAM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-session",
+   "description": "Returns details for an approval session.",
+   "options": [
+    {
+     "name": "--session-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-approval-teams",
+   "description": "Returns a list of approval teams.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-identity-sources",
+   "description": "Returns a list of identity sources.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policies",
+   "description": "Returns a list of policies.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policy-versions",
+   "description": "Returns a list of the versions for policies.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-policies",
+   "description": "Returns a list of policies for a resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sessions",
+   "description": "Returns a list of approval sessions.",
+   "options": [
+    {
+     "name": "--approval-team-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of the tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-active-approval-team-deletion",
+   "description": "Starts the deletion process for an active approval team.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pending-window-days",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-approval-team-baseline",
+   "description": "Starts a baseline session for specified approvers on an ACTIVE approval team.",
+   "options": [
+    {
+     "name": "--approver-ids",
+     "args": {}
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Creates or updates a resource tag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a resource tag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-approval-team",
+   "description": "Updates an approval team.",
+   "options": [
+    {
+     "name": "--approval-strategy",
+     "args": {}
+    },
+    {
+     "name": "--approvers",
+     "args": {}
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--update-actions",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,430 @@
+{
+ "name": "backup-gateway",
+ "description": "Backup gateway Backup gateway connects Backup to your hypervisor, so you can create, store, and restore backups of your virtual machines (VMs) anywhere, whether on-premises or in the VMware Cloud (VMC) on Amazon Web Services.",
+ "subcommands": [
+  {
+   "name": "associate-gateway-to-server",
+   "description": "Associates a backup gateway with your server.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-gateway",
+   "description": "Creates a backup gateway.",
+   "options": [
+    {
+     "name": "--activation-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-type",
+     "args": {
+      "suggestions": [
+       "BACKUP_VM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-gateway",
+   "description": "Deletes a backup gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-hypervisor",
+   "description": "Deletes a hypervisor.",
+   "options": [
+    {
+     "name": "--hypervisor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-gateway-from-server",
+   "description": "Disassociates a backup gateway from the specified server.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bandwidth-rate-limit-schedule",
+   "description": "Retrieves the bandwidth rate limit schedule for a specified gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-gateway",
+   "description": "By providing the ARN (Amazon Resource Name), this API returns the gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-hypervisor",
+   "description": "This action requests information about the specified hypervisor to which the gateway will connect.",
+   "options": [
+    {
+     "name": "--hypervisor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-hypervisor-property-mappings",
+   "description": "This action retrieves the property mappings for the specified hypervisor.",
+   "options": [
+    {
+     "name": "--hypervisor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-virtual-machine",
+   "description": "By providing the ARN (Amazon Resource Name), this API returns the virtual machine.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-hypervisor-configuration",
+   "description": "Connect to a hypervisor by importing its configuration.",
+   "options": [
+    {
+     "name": "--host",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-gateways",
+   "description": "Lists backup gateways owned by an Amazon Web Services account in an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-hypervisors",
+   "description": "Lists your hypervisors.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags applied to the resource identified by its Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-virtual-machines",
+   "description": "Lists your virtual machines.",
+   "options": [
+    {
+     "name": "--hypervisor-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bandwidth-rate-limit-schedule",
+   "description": "This action sets the bandwidth rate limit schedule for a specified gateway.",
+   "options": [
+    {
+     "name": "--bandwidth-rate-limit-intervals",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-hypervisor-property-mappings",
+   "description": "This action sets the property mappings for the specified hypervisor.",
+   "options": [
+    {
+     "name": "--hypervisor-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vmware-to-aws-tag-mappings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-maintenance-start-time",
+   "description": "Set the maintenance start time for a gateway.",
+   "options": [
+    {
+     "name": "--day-of-month",
+     "args": {}
+    },
+    {
+     "name": "--day-of-week",
+     "args": {}
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hour-of-day",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minute-of-hour",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-virtual-machines-metadata-sync",
+   "description": "This action sends a request to sync metadata across the specified virtual machines.",
+   "options": [
+    {
+     "name": "--hypervisor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tag the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-hypervisor-configuration",
+   "description": "Tests your hypervisor configuration to validate that backup gateway can connect with the hypervisor and its resources.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--host",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-gateway-information",
+   "description": "Updates a gateway's name.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-display-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-gateway-software-now",
+   "description": "Updates the gateway virtual machine (VM) software.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-hypervisor",
+   "description": "Updates a hypervisor metadata, including its host, username, and password.",
+   "options": [
+    {
+     "name": "--host",
+     "args": {}
+    },
+    {
+     "name": "--hypervisor-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

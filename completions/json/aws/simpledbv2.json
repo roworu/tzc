@@ -1,0 +1,97 @@
+{
+ "name": "simpledbv2",
+ "description": "Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud.",
+ "subcommands": [
+  {
+   "name": "get-export",
+   "description": "Returns information for an existing domain export.",
+   "options": [
+    {
+     "name": "--export-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-exports",
+   "description": "Lists all exports that were created.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-domain-export",
+   "description": "Initiates the export of a SimpleDB domain to an S3 bucket.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--s3-key-prefix",
+     "args": {}
+    },
+    {
+     "name": "--s3-sse-algorithm",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "KMS"
+      ]
+     }
+    },
+    {
+     "name": "--s3-sse-kms-key-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "export-succeeded",
+     "description": "Wait until JMESPath query exportStatus returns SUCCEEDED when polling with ``get-export``.",
+     "options": [
+      {
+       "name": "--export-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+{
+ "name": "lambda-core",
+ "description": "AWS Lambda Core is a set of APIs for managing shared infrastructure resources used by AWS Lambda.",
+ "subcommands": [
+  {
+   "name": "create-network-connector",
+   "description": "Creates a network connector that enables Lambda compute resources to route outbound traffic through your Amazon VPC.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operator-role",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-network-connector",
+   "description": "Initiates deletion of a network connector.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-network-connector",
+   "description": "Retrieves the current configuration, state, and metadata of a network connector.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-network-connectors",
+   "description": "Returns a paginated list of network connectors in your account for the current Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "ACTIVE",
+       "INACTIVE",
+       "FAILED",
+       "DELETING",
+       "DELETE_FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-network-connector",
+   "description": "Updates the VPC configuration or operator role of an existing network connector.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operator-role",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

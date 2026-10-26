@@ -1,0 +1,895 @@
+{
+ "name": "notifications",
+ "description": "The User Notifications API Reference provides descriptions, API request parameters, and the JSON response for each of the User Notifications API actions.",
+ "subcommands": [
+  {
+   "name": "associate-channel",
+   "description": "Associates a delivery Channel with a particular NotificationConfiguration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-managed-notification-account-contact",
+   "description": "Associates an Account Contact with a particular ManagedNotificationConfiguration.",
+   "options": [
+    {
+     "name": "--contact-identifier",
+     "args": {
+      "suggestions": [
+       "ACCOUNT_PRIMARY",
+       "ACCOUNT_ALTERNATE_BILLING",
+       "ACCOUNT_ALTERNATE_OPERATIONS",
+       "ACCOUNT_ALTERNATE_SECURITY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--managed-notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-managed-notification-additional-channel",
+   "description": "Associates an additional Channel with a particular ManagedNotificationConfiguration.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-organizational-unit",
+   "description": "Associates an organizational unit with a notification configuration.",
+   "options": [
+    {
+     "name": "--notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organizational-unit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-event-rule",
+   "description": "Creates an EventRule that is associated with a specified NotificationConfiguration.",
+   "options": [
+    {
+     "name": "--event-pattern",
+     "args": {}
+    },
+    {
+     "name": "--event-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--regions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-notification-configuration",
+   "description": "Creates a new NotificationConfiguration.",
+   "options": [
+    {
+     "name": "--aggregation-duration",
+     "args": {
+      "suggestions": [
+       "LONG",
+       "SHORT",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-event-rule",
+   "description": "Deletes an EventRule.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-notification-configuration",
+   "description": "Deletes a NotificationConfiguration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-notification-hub",
+   "description": "Deregisters a NotificationConfiguration in the specified Region.",
+   "options": [
+    {
+     "name": "--notification-hub-region",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-notifications-access-for-organization",
+   "description": "Disables service trust between User Notifications and Amazon Web Services Organizations."
+  },
+  {
+   "name": "disassociate-channel",
+   "description": "Disassociates a Channel from a specified NotificationConfiguration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-managed-notification-account-contact",
+   "description": "Disassociates an Account Contact with a particular ManagedNotificationConfiguration.",
+   "options": [
+    {
+     "name": "--contact-identifier",
+     "args": {
+      "suggestions": [
+       "ACCOUNT_PRIMARY",
+       "ACCOUNT_ALTERNATE_BILLING",
+       "ACCOUNT_ALTERNATE_OPERATIONS",
+       "ACCOUNT_ALTERNATE_SECURITY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--managed-notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-managed-notification-additional-channel",
+   "description": "Disassociates an additional Channel from a particular ManagedNotificationConfiguration.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-organizational-unit",
+   "description": "Removes the association between an organizational unit and a notification configuration.",
+   "options": [
+    {
+     "name": "--notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organizational-unit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-notifications-access-for-organization",
+   "description": "Enables service trust between User Notifications and Amazon Web Services Organizations."
+  },
+  {
+   "name": "get-event-rule",
+   "description": "Returns a specified EventRule.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-notification-child-event",
+   "description": "Returns the child event of a specific given ManagedNotificationEvent.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "de_DE",
+       "en_CA",
+       "en_US",
+       "en_UK",
+       "es_ES",
+       "fr_CA",
+       "fr_FR",
+       "id_ID",
+       "it_IT",
+       "ja_JP",
+       "ko_KR",
+       "pt_BR",
+       "tr_TR",
+       "zh_CN",
+       "zh_TW"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-managed-notification-configuration",
+   "description": "Returns a specified ManagedNotificationConfiguration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-notification-event",
+   "description": "Returns a specified ManagedNotificationEvent.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "de_DE",
+       "en_CA",
+       "en_US",
+       "en_UK",
+       "es_ES",
+       "fr_CA",
+       "fr_FR",
+       "id_ID",
+       "it_IT",
+       "ja_JP",
+       "ko_KR",
+       "pt_BR",
+       "tr_TR",
+       "zh_CN",
+       "zh_TW"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-notification-configuration",
+   "description": "Returns a specified NotificationConfiguration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-notification-event",
+   "description": "Returns a specified NotificationEvent.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "de_DE",
+       "en_CA",
+       "en_US",
+       "en_UK",
+       "es_ES",
+       "fr_CA",
+       "fr_FR",
+       "id_ID",
+       "it_IT",
+       "ja_JP",
+       "ko_KR",
+       "pt_BR",
+       "tr_TR",
+       "zh_CN",
+       "zh_TW"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-notifications-access-for-organization",
+   "description": "Returns the AccessStatus of Service Trust Enablement for User Notifications and Amazon Web Services Organizations."
+  },
+  {
+   "name": "list-channels",
+   "description": "Returns a list of Channels for a NotificationConfiguration.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-rules",
+   "description": "Returns a list of EventRules according to specified filters, in reverse chronological order (newest first).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-notification-channel-associations",
+   "description": "Returns a list of Account contacts and Channels associated with a ManagedNotificationConfiguration, in paginated format.",
+   "options": [
+    {
+     "name": "--managed-notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-notification-child-events",
+   "description": "Returns a list of ManagedNotificationChildEvents for a specified aggregate ManagedNotificationEvent, ordered by creation time in reverse chronological order (newest first).",
+   "options": [
+    {
+     "name": "--aggregate-managed-notification-event-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "de_DE",
+       "en_CA",
+       "en_US",
+       "en_UK",
+       "es_ES",
+       "fr_CA",
+       "fr_FR",
+       "id_ID",
+       "it_IT",
+       "ja_JP",
+       "ko_KR",
+       "pt_BR",
+       "tr_TR",
+       "zh_CN",
+       "zh_TW"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organizational-unit-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--related-account",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-notification-configurations",
+   "description": "Returns a list of Managed Notification Configurations according to specified filters, ordered by creation time in reverse chronological order (newest first).",
+   "options": [
+    {
+     "name": "--channel-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-notification-events",
+   "description": "Returns a list of Managed Notification Events according to specified filters, ordered by creation time in reverse chronological order (newest first).",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "de_DE",
+       "en_CA",
+       "en_US",
+       "en_UK",
+       "es_ES",
+       "fr_CA",
+       "fr_FR",
+       "id_ID",
+       "it_IT",
+       "ja_JP",
+       "ko_KR",
+       "pt_BR",
+       "tr_TR",
+       "zh_CN",
+       "zh_TW"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organizational-unit-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--related-account",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-member-accounts",
+   "description": "Returns a list of member accounts associated with a notification configuration.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--member-account",
+     "args": {}
+    },
+    {
+     "name": "--notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organizational-unit-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "PENDING",
+       "INACTIVE",
+       "CREATING",
+       "DELETING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-notification-configurations",
+   "description": "Returns a list of abbreviated NotificationConfigurations according to specified filters, in reverse chronological order (newest first).",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {}
+    },
+    {
+     "name": "--event-rule-source",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "PARTIALLY_ACTIVE",
+       "INACTIVE",
+       "DELETING"
+      ]
+     }
+    },
+    {
+     "name": "--subtype",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "ADMIN_MANAGED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-notification-events",
+   "description": "Returns a list of NotificationEvents according to specified filters, in reverse chronological order (newest first).",
+   "options": [
+    {
+     "name": "--aggregate-notification-event-arn",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--include-child-events"
+    },
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "de_DE",
+       "en_CA",
+       "en_US",
+       "en_UK",
+       "es_ES",
+       "fr_CA",
+       "fr_FR",
+       "id_ID",
+       "it_IT",
+       "ja_JP",
+       "ko_KR",
+       "pt_BR",
+       "tr_TR",
+       "zh_CN",
+       "zh_TW"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-child-events"
+    },
+    {
+     "name": "--organizational-unit-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-notification-hubs",
+   "description": "Returns a list of NotificationHubs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-organizational-units",
+   "description": "Returns a list of organizational units associated with a notification configuration.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--notification-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags for a specified Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-notification-hub",
+   "description": "Registers a NotificationConfiguration in the specified Region.",
+   "options": [
+    {
+     "name": "--notification-hub-region",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tags the resource with a tag key and value.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Untags a resource with a specified Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-event-rule",
+   "description": "Updates an existing EventRule.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-pattern",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-notification-configuration",
+   "description": "Updates a NotificationConfiguration.",
+   "options": [
+    {
+     "name": "--aggregation-duration",
+     "args": {
+      "suggestions": [
+       "LONG",
+       "SHORT",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

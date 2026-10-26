@@ -1,0 +1,273 @@
+{
+ "name": "kinesis-video-archived-media",
+ "subcommands": [
+  {
+   "name": "get-clip",
+   "description": "Downloads an MP4 file (clip) containing the archived, on-demand media from the specified video stream over the specified time range.",
+   "options": [
+    {
+     "name": "--clip-fragment-selector",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-dash-streaming-session-url",
+   "description": "Retrieves an MPEG Dynamic Adaptive Streaming over HTTP (DASH) URL for the stream.",
+   "options": [
+    {
+     "name": "--dash-fragment-selector",
+     "args": {}
+    },
+    {
+     "name": "--display-fragment-number",
+     "args": {
+      "suggestions": [
+       "ALWAYS",
+       "NEVER"
+      ]
+     }
+    },
+    {
+     "name": "--display-fragment-timestamp",
+     "args": {
+      "suggestions": [
+       "ALWAYS",
+       "NEVER"
+      ]
+     }
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--max-manifest-fragment-results",
+     "args": {}
+    },
+    {
+     "name": "--playback-mode",
+     "args": {
+      "suggestions": [
+       "LIVE",
+       "LIVE_REPLAY",
+       "ON_DEMAND"
+      ]
+     }
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-hls-streaming-session-url",
+   "description": "Retrieves an HTTP Live Streaming (HLS) URL for the stream.",
+   "options": [
+    {
+     "name": "--container-format",
+     "args": {
+      "suggestions": [
+       "FRAGMENTED_MP4",
+       "MPEG_TS"
+      ]
+     }
+    },
+    {
+     "name": "--discontinuity-mode",
+     "args": {
+      "suggestions": [
+       "ALWAYS",
+       "NEVER",
+       "ON_DISCONTINUITY"
+      ]
+     }
+    },
+    {
+     "name": "--display-fragment-timestamp",
+     "args": {
+      "suggestions": [
+       "ALWAYS",
+       "NEVER"
+      ]
+     }
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--hls-fragment-selector",
+     "args": {}
+    },
+    {
+     "name": "--max-media-playlist-fragment-results",
+     "args": {}
+    },
+    {
+     "name": "--playback-mode",
+     "args": {
+      "suggestions": [
+       "LIVE",
+       "LIVE_REPLAY",
+       "ON_DEMAND"
+      ]
+     }
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-images",
+   "description": "Retrieves a list of images corresponding to each timestamp for a given time range, sampling interval, and image format configuration.",
+   "options": [
+    {
+     "name": "--end-timestamp",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "JPEG",
+       "PNG"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--format-config",
+     "args": {}
+    },
+    {
+     "name": "--height-pixels",
+     "args": {}
+    },
+    {
+     "name": "--image-selector-type",
+     "args": {
+      "suggestions": [
+       "PRODUCER_TIMESTAMP",
+       "SERVER_TIMESTAMP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sampling-interval",
+     "args": {}
+    },
+    {
+     "name": "--start-timestamp",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    },
+    {
+     "name": "--width-pixels",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-media-for-fragment-list",
+   "description": "Gets media for a list of fragments (specified by fragment number) from the archived data in an Amazon Kinesis video stream.",
+   "options": [
+    {
+     "name": "--fragments",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fragments",
+   "description": "Returns a list of Fragment objects from the specified stream and timestamp range within the archived data.",
+   "options": [
+    {
+     "name": "--fragment-selector",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

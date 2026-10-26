@@ -1,0 +1,764 @@
+{
+ "name": "snowball",
+ "description": "The Amazon Web Services Snow Family provides a petabyte-scale data transport solution that uses secure devices to transfer large amounts of data between your on-premises data centers and Amazon Simple Storage Service (Amazon S3).",
+ "subcommands": [
+  {
+   "name": "cancel-cluster",
+   "description": "Cancels a cluster job.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-job",
+   "description": "Cancels the specified job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-address",
+   "description": "Creates an address for a Snow device to be shipped to.",
+   "options": [
+    {
+     "name": "--address",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Creates an empty cluster.",
+   "options": [
+    {
+     "name": "--address-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--force-create-jobs"
+    },
+    {
+     "name": "--forwarding-address-id",
+     "args": {}
+    },
+    {
+     "name": "--initial-cluster-size",
+     "args": {}
+    },
+    {
+     "name": "--job-type",
+     "args": {
+      "suggestions": [
+       "IMPORT",
+       "EXPORT",
+       "LOCAL_USE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--long-term-pricing-ids",
+     "args": {}
+    },
+    {
+     "name": "--no-force-create-jobs"
+    },
+    {
+     "name": "--notification",
+     "args": {}
+    },
+    {
+     "name": "--on-device-service-configuration",
+     "args": {}
+    },
+    {
+     "name": "--remote-management",
+     "args": {
+      "suggestions": [
+       "INSTALLED_ONLY",
+       "INSTALLED_AUTOSTART",
+       "NOT_INSTALLED"
+      ]
+     }
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--shipping-option",
+     "args": {
+      "suggestions": [
+       "SECOND_DAY",
+       "NEXT_DAY",
+       "EXPRESS",
+       "STANDARD"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--snowball-capacity-preference",
+     "args": {
+      "suggestions": [
+       "T50",
+       "T80",
+       "T100",
+       "T42",
+       "T98",
+       "T8",
+       "T14",
+       "T32",
+       "NoPreference",
+       "T240",
+       "T13"
+      ]
+     }
+    },
+    {
+     "name": "--snowball-type",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "EDGE",
+       "EDGE_C",
+       "EDGE_CG",
+       "EDGE_S",
+       "SNC1_HDD",
+       "SNC1_SSD",
+       "V3_5C",
+       "V3_5S",
+       "RACK_5U_C"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tax-documents",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-job",
+   "description": "Creates a job to import or export data between Amazon S3 and your on-premises data center.",
+   "options": [
+    {
+     "name": "--address-id",
+     "args": {}
+    },
+    {
+     "name": "--cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--device-configuration",
+     "args": {}
+    },
+    {
+     "name": "--forwarding-address-id",
+     "args": {}
+    },
+    {
+     "name": "--impact-level",
+     "args": {
+      "suggestions": [
+       "IL2",
+       "IL4",
+       "IL5",
+       "IL6",
+       "IL99"
+      ]
+     }
+    },
+    {
+     "name": "--job-type",
+     "args": {
+      "suggestions": [
+       "IMPORT",
+       "EXPORT",
+       "LOCAL_USE"
+      ]
+     }
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--long-term-pricing-id",
+     "args": {}
+    },
+    {
+     "name": "--notification",
+     "args": {}
+    },
+    {
+     "name": "--on-device-service-configuration",
+     "args": {}
+    },
+    {
+     "name": "--pickup-details",
+     "args": {}
+    },
+    {
+     "name": "--remote-management",
+     "args": {
+      "suggestions": [
+       "INSTALLED_ONLY",
+       "INSTALLED_AUTOSTART",
+       "NOT_INSTALLED"
+      ]
+     }
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--shipping-option",
+     "args": {
+      "suggestions": [
+       "SECOND_DAY",
+       "NEXT_DAY",
+       "EXPRESS",
+       "STANDARD"
+      ]
+     }
+    },
+    {
+     "name": "--snowball-capacity-preference",
+     "args": {
+      "suggestions": [
+       "T50",
+       "T80",
+       "T100",
+       "T42",
+       "T98",
+       "T8",
+       "T14",
+       "T32",
+       "NoPreference",
+       "T240",
+       "T13"
+      ]
+     }
+    },
+    {
+     "name": "--snowball-type",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "EDGE",
+       "EDGE_C",
+       "EDGE_CG",
+       "EDGE_S",
+       "SNC1_HDD",
+       "SNC1_SSD",
+       "V3_5C",
+       "V3_5S",
+       "RACK_5U_C"
+      ]
+     }
+    },
+    {
+     "name": "--tax-documents",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-long-term-pricing",
+   "description": "Creates a job with the long-term usage option for a device.",
+   "options": [
+    {
+     "name": "--is-long-term-pricing-auto-renew"
+    },
+    {
+     "name": "--long-term-pricing-type",
+     "args": {
+      "suggestions": [
+       "OneYear",
+       "ThreeYear",
+       "OneMonth"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-is-long-term-pricing-auto-renew"
+    },
+    {
+     "name": "--snowball-type",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "EDGE",
+       "EDGE_C",
+       "EDGE_CG",
+       "EDGE_S",
+       "SNC1_HDD",
+       "SNC1_SSD",
+       "V3_5C",
+       "V3_5S",
+       "RACK_5U_C"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-return-shipping-label",
+   "description": "Creates a shipping label that will be used to return the Snow device to Amazon Web Services.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shipping-option",
+     "args": {
+      "suggestions": [
+       "SECOND_DAY",
+       "NEXT_DAY",
+       "EXPRESS",
+       "STANDARD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-address",
+   "description": "Takes an AddressId and returns specific details about that address in the form of an Address object.",
+   "options": [
+    {
+     "name": "--address-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-addresses",
+   "description": "Returns a specified number of ADDRESS objects.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster",
+   "description": "Returns information about a specific cluster including shipping information, cluster status, and other important metadata.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job",
+   "description": "Returns information about a specific job including shipping information, job status, and other important metadata.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-return-shipping-label",
+   "description": "Information on the shipping label of a Snow device that is being returned to Amazon Web Services.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job-manifest",
+   "description": "Returns a link to an Amazon S3 presigned URL for the manifest file associated with the specified JobId value.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job-unlock-code",
+   "description": "Returns the UnlockCode code value for the specified job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-snowball-usage",
+   "description": "Returns information about the Snow Family service limit for your account, and also the number of Snow devices your account has in use."
+  },
+  {
+   "name": "get-software-updates",
+   "description": "Returns an Amazon S3 presigned URL for an update file associated with a specified JobId.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-cluster-jobs",
+   "description": "Returns an array of JobListEntry objects of the specified length.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-clusters",
+   "description": "Returns an array of ClusterListEntry objects of the specified length.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-compatible-images",
+   "description": "This action returns a list of the different Amazon EC2-compatible Amazon Machine Images (AMIs) that are owned by your Amazon Web Services accountthat would be supported for use on a Snow device.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "Returns an array of JobListEntry objects of the specified length.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-long-term-pricing",
+   "description": "Lists all long-term pricing types.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pickup-locations",
+   "description": "A list of locations from which the customer can choose to pickup a device.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-versions",
+   "description": "Lists all supported versions for Snow on-device services.",
+   "options": [
+    {
+     "name": "--dependent-services",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {
+      "suggestions": [
+       "KUBERNETES",
+       "EKS_ANYWHERE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cluster",
+   "description": "While a cluster's ClusterState value is in the AwaitingQuorum state, you can update some of the information associated with a cluster.",
+   "options": [
+    {
+     "name": "--address-id",
+     "args": {}
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--forwarding-address-id",
+     "args": {}
+    },
+    {
+     "name": "--notification",
+     "args": {}
+    },
+    {
+     "name": "--on-device-service-configuration",
+     "args": {}
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--shipping-option",
+     "args": {
+      "suggestions": [
+       "SECOND_DAY",
+       "NEXT_DAY",
+       "EXPRESS",
+       "STANDARD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-job",
+   "description": "While a job's JobState value is New, you can update some of the information associated with a job.",
+   "options": [
+    {
+     "name": "--address-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--forwarding-address-id",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification",
+     "args": {}
+    },
+    {
+     "name": "--on-device-service-configuration",
+     "args": {}
+    },
+    {
+     "name": "--pickup-details",
+     "args": {}
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--shipping-option",
+     "args": {
+      "suggestions": [
+       "SECOND_DAY",
+       "NEXT_DAY",
+       "EXPRESS",
+       "STANDARD"
+      ]
+     }
+    },
+    {
+     "name": "--snowball-capacity-preference",
+     "args": {
+      "suggestions": [
+       "T50",
+       "T80",
+       "T100",
+       "T42",
+       "T98",
+       "T8",
+       "T14",
+       "T32",
+       "NoPreference",
+       "T240",
+       "T13"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-job-shipment-state",
+   "description": "Updates the state when a shipment state changes to a different state.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shipment-state",
+     "args": {
+      "suggestions": [
+       "RECEIVED",
+       "RETURNED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-long-term-pricing",
+   "description": "Updates the long-term pricing type.",
+   "options": [
+    {
+     "name": "--is-long-term-pricing-auto-renew"
+    },
+    {
+     "name": "--long-term-pricing-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-is-long-term-pricing-auto-renew"
+    },
+    {
+     "name": "--replacement-job",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

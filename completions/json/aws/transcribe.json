@@ -1,0 +1,1108 @@
+{
+ "name": "transcribe",
+ "description": "Amazon Transcribe offers three main types of batch transcription: Standard, Medical, and Call Analytics.",
+ "subcommands": [
+  {
+   "name": "create-call-analytics-category",
+   "description": "Creates a new Call Analytics category.",
+   "options": [
+    {
+     "name": "--category-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-type",
+     "args": {
+      "suggestions": [
+       "REAL_TIME",
+       "POST_CALL"
+      ]
+     }
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-language-model",
+   "description": "Creates a new custom language model.",
+   "options": [
+    {
+     "name": "--base-model-name",
+     "args": {
+      "suggestions": [
+       "NarrowBand",
+       "WideBand"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--input-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--language-code",
+     "args": {
+      "suggestions": [
+       "en-US",
+       "hi-IN",
+       "es-US",
+       "en-GB",
+       "en-AU",
+       "de-DE",
+       "ja-JP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-medical-vocabulary",
+   "description": "Creates a new custom medical vocabulary.",
+   "options": [
+    {
+     "name": "--language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vocabulary-file-uri",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vocabulary-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vocabulary",
+   "description": "Creates a new custom vocabulary.",
+   "options": [
+    {
+     "name": "--data-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--phrases",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vocabulary-file-uri",
+     "args": {}
+    },
+    {
+     "name": "--vocabulary-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vocabulary-filter",
+   "description": "Creates a new custom vocabulary filter.",
+   "options": [
+    {
+     "name": "--data-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vocabulary-filter-file-uri",
+     "args": {}
+    },
+    {
+     "name": "--vocabulary-filter-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--words",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-call-analytics-category",
+   "description": "Deletes a Call Analytics category.",
+   "options": [
+    {
+     "name": "--category-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-call-analytics-job",
+   "description": "Deletes a Call Analytics job.",
+   "options": [
+    {
+     "name": "--call-analytics-job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-language-model",
+   "description": "Deletes a custom language model.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-medical-scribe-job",
+   "description": "Deletes a Medical Scribe job.",
+   "options": [
+    {
+     "name": "--medical-scribe-job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-medical-transcription-job",
+   "description": "Deletes a medical transcription job.",
+   "options": [
+    {
+     "name": "--medical-transcription-job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-medical-vocabulary",
+   "description": "Deletes a custom medical vocabulary.",
+   "options": [
+    {
+     "name": "--vocabulary-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-transcription-job",
+   "description": "Deletes a transcription job.",
+   "options": [
+    {
+     "name": "--transcription-job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vocabulary",
+   "description": "Deletes a custom vocabulary.",
+   "options": [
+    {
+     "name": "--vocabulary-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vocabulary-filter",
+   "description": "Deletes a custom vocabulary filter.",
+   "options": [
+    {
+     "name": "--vocabulary-filter-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-language-model",
+   "description": "Provides information about the specified custom language model.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-call-analytics-category",
+   "description": "Provides information about the specified Call Analytics category.",
+   "options": [
+    {
+     "name": "--category-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-call-analytics-job",
+   "description": "Provides information about the specified Call Analytics job.",
+   "options": [
+    {
+     "name": "--call-analytics-job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-medical-scribe-job",
+   "description": "Provides information about the specified Medical Scribe job.",
+   "options": [
+    {
+     "name": "--medical-scribe-job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-medical-transcription-job",
+   "description": "Provides information about the specified medical transcription job.",
+   "options": [
+    {
+     "name": "--medical-transcription-job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-medical-vocabulary",
+   "description": "Provides information about the specified custom medical vocabulary.",
+   "options": [
+    {
+     "name": "--vocabulary-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-transcription-job",
+   "description": "Provides information about the specified transcription job.",
+   "options": [
+    {
+     "name": "--transcription-job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vocabulary",
+   "description": "Provides information about the specified custom vocabulary.",
+   "options": [
+    {
+     "name": "--vocabulary-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vocabulary-filter",
+   "description": "Provides information about the specified custom vocabulary filter.",
+   "options": [
+    {
+     "name": "--vocabulary-filter-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-call-analytics-categories",
+   "description": "Provides a list of Call Analytics categories, including all rules that make up each category.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-call-analytics-jobs",
+   "description": "Provides a list of Call Analytics jobs that match the specified criteria.",
+   "options": [
+    {
+     "name": "--job-name-contains",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "IN_PROGRESS",
+       "FAILED",
+       "COMPLETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-language-models",
+   "description": "Provides a list of custom language models that match the specified criteria.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "FAILED",
+       "COMPLETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-medical-scribe-jobs",
+   "description": "Provides a list of Medical Scribe jobs that match the specified criteria.",
+   "options": [
+    {
+     "name": "--job-name-contains",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "IN_PROGRESS",
+       "FAILED",
+       "COMPLETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-medical-transcription-jobs",
+   "description": "Provides a list of medical transcription jobs that match the specified criteria.",
+   "options": [
+    {
+     "name": "--job-name-contains",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "IN_PROGRESS",
+       "FAILED",
+       "COMPLETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-medical-vocabularies",
+   "description": "Provides a list of custom medical vocabularies that match the specified criteria.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--state-equals",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "READY",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags associated with the specified transcription job, vocabulary, model, or resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-transcription-jobs",
+   "description": "Provides a list of transcription jobs that match the specified criteria.",
+   "options": [
+    {
+     "name": "--job-name-contains",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "IN_PROGRESS",
+       "FAILED",
+       "COMPLETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-vocabularies",
+   "description": "Provides a list of custom vocabularies that match the specified criteria.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--state-equals",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "READY",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-vocabulary-filters",
+   "description": "Provides a list of custom vocabulary filters that match the specified criteria.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-call-analytics-job",
+   "description": "Transcribes the audio from a customer service call and applies any additional Request Parameters you choose to include in your request.",
+   "options": [
+    {
+     "name": "--call-analytics-job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-definitions",
+     "args": {}
+    },
+    {
+     "name": "--data-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--media",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-encryption-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--output-location",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-medical-scribe-job",
+   "description": "Transcribes patient-clinician conversations and generates clinical notes.",
+   "options": [
+    {
+     "name": "--channel-definitions",
+     "args": {}
+    },
+    {
+     "name": "--data-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--media",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--medical-scribe-context",
+     "args": {}
+    },
+    {
+     "name": "--medical-scribe-job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-encryption-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-medical-transcription-job",
+   "description": "Transcribes the audio from a medical dictation or conversation and applies any additional Request Parameters you choose to include in your request.",
+   "options": [
+    {
+     "name": "--content-identification-type",
+     "args": {
+      "suggestions": [
+       "PHI"
+      ]
+     }
+    },
+    {
+     "name": "--kms-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-format",
+     "args": {
+      "suggestions": [
+       "mp3",
+       "mp4",
+       "wav",
+       "flac",
+       "ogg",
+       "amr",
+       "webm",
+       "m4a"
+      ]
+     }
+    },
+    {
+     "name": "--media-sample-rate-hertz",
+     "args": {}
+    },
+    {
+     "name": "--medical-transcription-job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-encryption-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--output-key",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--specialty",
+     "args": {
+      "suggestions": [
+       "PRIMARYCARE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "CONVERSATION",
+       "DICTATION"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-transcription-job",
+   "description": "Transcribes the audio from a media file and applies any additional Request Parameters you choose to include in your request.",
+   "options": [
+    {
+     "name": "--content-redaction",
+     "args": {}
+    },
+    {
+     "name": "--identify-language"
+    },
+    {
+     "name": "--identify-multiple-languages"
+    },
+    {
+     "name": "--job-execution-settings",
+     "args": {}
+    },
+    {
+     "name": "--kms-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--language-code",
+     "args": {}
+    },
+    {
+     "name": "--language-id-settings",
+     "args": {}
+    },
+    {
+     "name": "--language-options",
+     "args": {}
+    },
+    {
+     "name": "--media",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-format",
+     "args": {
+      "suggestions": [
+       "mp3",
+       "mp4",
+       "wav",
+       "flac",
+       "ogg",
+       "amr",
+       "webm",
+       "m4a"
+      ]
+     }
+    },
+    {
+     "name": "--media-sample-rate-hertz",
+     "args": {}
+    },
+    {
+     "name": "--model-settings",
+     "args": {}
+    },
+    {
+     "name": "--no-identify-language"
+    },
+    {
+     "name": "--no-identify-multiple-languages"
+    },
+    {
+     "name": "--output-bucket-name",
+     "args": {}
+    },
+    {
+     "name": "--output-encryption-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--output-key",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--subtitles",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--toxicity-detection",
+     "args": {}
+    },
+    {
+     "name": "--transcription-job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more custom tags, each in the form of a key:value pair, to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified Amazon Transcribe resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-call-analytics-category",
+   "description": "Updates the specified Call Analytics category with new rules.",
+   "options": [
+    {
+     "name": "--category-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-type",
+     "args": {
+      "suggestions": [
+       "REAL_TIME",
+       "POST_CALL"
+      ]
+     }
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-medical-vocabulary",
+   "description": "Updates an existing custom medical vocabulary with new values.",
+   "options": [
+    {
+     "name": "--language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vocabulary-file-uri",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vocabulary-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-vocabulary",
+   "description": "Updates an existing custom vocabulary with new values.",
+   "options": [
+    {
+     "name": "--data-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--phrases",
+     "args": {}
+    },
+    {
+     "name": "--vocabulary-file-uri",
+     "args": {}
+    },
+    {
+     "name": "--vocabulary-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-vocabulary-filter",
+   "description": "Updates an existing custom vocabulary filter with a new list of words.",
+   "options": [
+    {
+     "name": "--data-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--vocabulary-filter-file-uri",
+     "args": {}
+    },
+    {
+     "name": "--vocabulary-filter-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--words",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "call-analytics-job-completed",
+     "description": "Wait until JMESPath query CallAnalyticsJob.CallAnalyticsJobStatus returns COMPLETED when polling with ``get-call-analytics-job``.",
+     "options": [
+      {
+       "name": "--call-analytics-job-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "language-model-completed",
+     "description": "Wait until JMESPath query LanguageModel.ModelStatus returns COMPLETED when polling with ``describe-language-model``.",
+     "options": [
+      {
+       "name": "--model-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "medical-scribe-job-completed",
+     "description": "Wait until JMESPath query MedicalScribeJob.MedicalScribeJobStatus returns COMPLETED when polling with ``get-medical-scribe-job``.",
+     "options": [
+      {
+       "name": "--medical-scribe-job-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "medical-transcription-job-completed",
+     "description": "Wait until JMESPath query MedicalTranscriptionJob.TranscriptionJobStatus returns COMPLETED when polling with ``get-medical-transcription-job``.",
+     "options": [
+      {
+       "name": "--medical-transcription-job-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "medical-vocabulary-ready",
+     "description": "Wait until JMESPath query VocabularyState returns READY when polling with ``get-medical-vocabulary``.",
+     "options": [
+      {
+       "name": "--vocabulary-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "transcription-job-completed",
+     "description": "Wait until JMESPath query TranscriptionJob.TranscriptionJobStatus returns COMPLETED when polling with ``get-transcription-job``.",
+     "options": [
+      {
+       "name": "--transcription-job-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "vocabulary-ready",
+     "description": "Wait until JMESPath query VocabularyState returns READY when polling with ``get-vocabulary``.",
+     "options": [
+      {
+       "name": "--vocabulary-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

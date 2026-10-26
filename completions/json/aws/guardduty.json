@@ -1,0 +1,1953 @@
+{
+ "name": "guardduty",
+ "description": "Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following foundational data sources - VPC flow logs, Amazon Web Services CloudTrail management event logs, CloudTrail S3 data event logs, EKS audit logs, DNS logs, Amazon EBS volume data, runtime activity belonging to container workloads, such as Amazon EKS, Amazon ECS (including Amazon Web Services Fargate), and Amazon EC2 instances.",
+ "subcommands": [
+  {
+   "name": "accept-administrator-invitation",
+   "description": "Accepts the invitation to be a member account and get monitored by a GuardDuty administrator account that sent the invitation.",
+   "options": [
+    {
+     "name": "--administrator-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--invitation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "accept-invitation",
+   "description": "Accepts the invitation to be monitored by a GuardDuty administrator account.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--invitation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--master-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "archive-findings",
+   "description": "Archives GuardDuty findings that are specified by the list of finding IDs.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-detector",
+   "description": "Creates a single GuardDuty detector.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-sources",
+     "args": {}
+    },
+    {
+     "name": "--enable",
+     "priority": 75
+    },
+    {
+     "name": "--features",
+     "args": {}
+    },
+    {
+     "name": "--finding-publishing-frequency",
+     "args": {
+      "suggestions": [
+       "FIFTEEN_MINUTES",
+       "ONE_HOUR",
+       "SIX_HOURS"
+      ]
+     }
+    },
+    {
+     "name": "--no-enable"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-filter",
+   "description": "Creates a filter using the specified finding criteria.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "NOOP",
+       "ARCHIVE"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-criteria",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rank",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-investigation",
+   "description": "This API is currently available as a preview.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trigger-prompt",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-ip-set",
+   "description": "Creates a new IPSet, which is called a trusted IP list in the console user interface.",
+   "options": [
+    {
+     "name": "--activate",
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "TXT",
+       "STIX",
+       "OTX_CSV",
+       "ALIEN_VAULT",
+       "PROOF_POINT",
+       "FIRE_EYE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-activate"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-malware-protection-plan",
+   "description": "Creates a new Malware Protection plan for the protected resource.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--protected-resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-members",
+   "description": "Creates member accounts of the current Amazon Web Services account by specifying a list of Amazon Web Services account IDs.",
+   "options": [
+    {
+     "name": "--account-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-publishing-destination",
+   "description": "Creates a publishing destination where you can export your GuardDuty findings.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destination-properties",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-type",
+     "args": {
+      "suggestions": [
+       "S3"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-sample-findings",
+   "description": "Generates sample findings of types specified by the list of finding types.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-types",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-threat-entity-set",
+   "description": "Creates a new threat entity set.",
+   "options": [
+    {
+     "name": "--activate",
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "TXT",
+       "STIX",
+       "OTX_CSV",
+       "ALIEN_VAULT",
+       "PROOF_POINT",
+       "FIRE_EYE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-activate"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-threat-intel-set",
+   "description": "Creates a new ThreatIntelSet.",
+   "options": [
+    {
+     "name": "--activate",
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "TXT",
+       "STIX",
+       "OTX_CSV",
+       "ALIEN_VAULT",
+       "PROOF_POINT",
+       "FIRE_EYE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-activate"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-trusted-entity-set",
+   "description": "Creates a new trusted entity set.",
+   "options": [
+    {
+     "name": "--activate",
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "TXT",
+       "STIX",
+       "OTX_CSV",
+       "ALIEN_VAULT",
+       "PROOF_POINT",
+       "FIRE_EYE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-activate"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "decline-invitations",
+   "description": "Declines invitations sent to the current member account by Amazon Web Services accounts specified by their account IDs.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-detector",
+   "description": "Deletes an Amazon GuardDuty detector that is specified by the detector ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-filter",
+   "description": "Deletes the filter specified by the filter name.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-invitations",
+   "description": "Deletes invitations sent to the current member account by Amazon Web Services accounts specified by their account IDs.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ip-set",
+   "description": "Deletes the IPSet specified by the ipSetId.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-malware-protection-plan",
+   "description": "Deletes the Malware Protection plan ID associated with the Malware Protection plan resource.",
+   "options": [
+    {
+     "name": "--malware-protection-plan-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-members",
+   "description": "Deletes GuardDuty member accounts (to the current GuardDuty administrator account) specified by the account IDs.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-publishing-destination",
+   "description": "Deletes the publishing definition with the specified destinationId.",
+   "options": [
+    {
+     "name": "--destination-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-threat-entity-set",
+   "description": "Deletes the threat entity set that is associated with the specified threatEntitySetId.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-entity-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-threat-intel-set",
+   "description": "Deletes the ThreatIntelSet specified by the ThreatIntelSet ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-intel-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-trusted-entity-set",
+   "description": "Deletes the trusted entity set that is associated with the specified trustedEntitySetId.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trusted-entity-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-malware-scans",
+   "description": "Returns a list of malware scans.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-criteria",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-configuration",
+   "description": "Returns information about the account selected as the delegated administrator for GuardDuty.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-publishing-destination",
+   "description": "Returns information about the publishing destination specified by the provided destinationId.",
+   "options": [
+    {
+     "name": "--destination-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-organization-admin-account",
+   "description": "Removes the existing GuardDuty delegated administrator of the organization.",
+   "options": [
+    {
+     "name": "--admin-account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-from-administrator-account",
+   "description": "Disassociates the current GuardDuty member account from its administrator account.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-from-master-account",
+   "description": "Disassociates the current GuardDuty member account from its administrator account.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-members",
+   "description": "Disassociates GuardDuty member accounts (from the current administrator account) specified by the account IDs.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-organization-admin-account",
+   "description": "Designates an Amazon Web Services account within the organization as your GuardDuty delegated administrator.",
+   "options": [
+    {
+     "name": "--admin-account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-administrator-account",
+   "description": "Provides the details of the GuardDuty administrator account associated with the current GuardDuty member account.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-coverage-statistics",
+   "description": "Retrieves aggregated statistics for your account.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--statistics-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-detector",
+   "description": "Retrieves a GuardDuty detector specified by the detectorId.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-filter",
+   "description": "Returns the details of the filter specified by the filter name.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-findings",
+   "description": "Describes Amazon GuardDuty findings specified by finding IDs.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-criteria",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-findings-statistics",
+   "description": "Lists GuardDuty findings statistics for the specified detector ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-criteria",
+     "args": {}
+    },
+    {
+     "name": "--finding-statistic-types",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "DATE",
+       "FINDING_TYPE",
+       "RESOURCE",
+       "SEVERITY"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--order-by",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-investigation",
+   "description": "This API is currently available as a preview.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--investigation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-invitations-count",
+   "description": "Returns the count of all GuardDuty membership invitations that were sent to the current member account except the currently accepted invitation."
+  },
+  {
+   "name": "get-ip-set",
+   "description": "Retrieves the IPSet specified by the ipSetId.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-malware-protection-plan",
+   "description": "Retrieves the Malware Protection plan details associated with a Malware Protection plan ID.",
+   "options": [
+    {
+     "name": "--malware-protection-plan-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-malware-scan",
+   "description": "Retrieves the detailed information for a specific malware scan.",
+   "options": [
+    {
+     "name": "--scan-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-malware-scan-settings",
+   "description": "Returns the details of the malware scan settings.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-master-account",
+   "description": "Provides the details for the GuardDuty administrator account associated with the current GuardDuty member account.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-member-detectors",
+   "description": "Describes which data sources are enabled for the member account's detector.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-members",
+   "description": "Retrieves GuardDuty member accounts (of the current GuardDuty administrator account) specified by the account IDs.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-organization-statistics",
+   "description": "Retrieves how many active member accounts have each feature enabled within GuardDuty."
+  },
+  {
+   "name": "get-remaining-free-trial-days",
+   "description": "Provides the number of days left for each data source used in the free trial period.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-threat-entity-set",
+   "description": "Retrieves the threat entity set associated with the specified threatEntitySetId.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-entity-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-threat-intel-set",
+   "description": "Retrieves the ThreatIntelSet that is specified by the ThreatIntelSet ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-intel-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-trusted-entity-set",
+   "description": "Retrieves the trusted entity set associated with the specified trustedEntitySetId.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trusted-entity-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-usage-statistics",
+   "description": "Lists Amazon GuardDuty usage statistics over the last 30 days for the specified detector ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--unit",
+     "args": {}
+    },
+    {
+     "name": "--usage-criteria",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--usage-statistic-type",
+     "args": {
+      "suggestions": [
+       "SUM_BY_ACCOUNT",
+       "SUM_BY_DATA_SOURCE",
+       "SUM_BY_RESOURCE",
+       "TOP_RESOURCES",
+       "SUM_BY_FEATURES",
+       "TOP_ACCOUNTS_BY_FEATURE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "invite-members",
+   "description": "Invites Amazon Web Services accounts to become members of an organization administered by the Amazon Web Services account that invokes this API.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disable-email-notification"
+    },
+    {
+     "name": "--message",
+     "args": {}
+    },
+    {
+     "name": "--no-disable-email-notification"
+    }
+   ]
+  },
+  {
+   "name": "list-coverage",
+   "description": "Lists coverage details for your GuardDuty account.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-criteria",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-detectors",
+   "description": "Lists detectorIds of all the existing Amazon GuardDuty detector resources.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-filters",
+   "description": "Returns a paginated list of the current filters.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-findings",
+   "description": "Lists GuardDuty findings for the specified detector ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-criteria",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-investigations",
+   "description": "This API is currently available as a preview.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-criteria",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-invitations",
+   "description": "Lists all GuardDuty membership invitations that were sent to the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ip-sets",
+   "description": "Lists the IPSets of the GuardDuty service specified by the detector ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-malware-protection-plans",
+   "description": "Lists the Malware Protection plan IDs associated with the protected resources in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-malware-scans",
+   "description": "Returns a list of malware scans.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-criteria",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-members",
+   "description": "Lists details about all member accounts for the current GuardDuty administrator account.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--only-associated",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-organization-admin-accounts",
+   "description": "Lists the accounts designated as GuardDuty delegated administrators.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-publishing-destinations",
+   "description": "Returns a list of publishing destinations associated with the specified detectorId.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-threat-entity-sets",
+   "description": "Lists the threat entity sets associated with the specified GuardDuty detector ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-threat-intel-sets",
+   "description": "Lists the ThreatIntelSets of the GuardDuty service specified by the detector ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-trusted-entity-sets",
+   "description": "Lists the trusted entity sets associated with the specified GuardDuty detector ID.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-object-malware-scan",
+   "description": "Initiates a malware scan for a specific S3 object.",
+   "options": [
+    {
+     "name": "--s3-object",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-malware-scan",
+   "description": "Initiates the malware scan.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-monitoring-members",
+   "description": "Turns on GuardDuty monitoring of the specified member accounts.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-monitoring-members",
+   "description": "Stops GuardDuty monitoring for the specified member accounts.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "unarchive-findings",
+   "description": "Unarchives GuardDuty findings specified by the findingIds.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-detector",
+   "description": "Updates the GuardDuty detector specified by the detector ID.",
+   "options": [
+    {
+     "name": "--data-sources",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable"
+    },
+    {
+     "name": "--features",
+     "args": {}
+    },
+    {
+     "name": "--finding-publishing-frequency",
+     "args": {
+      "suggestions": [
+       "FIFTEEN_MINUTES",
+       "ONE_HOUR",
+       "SIX_HOURS"
+      ]
+     }
+    },
+    {
+     "name": "--no-enable"
+    }
+   ]
+  },
+  {
+   "name": "update-filter",
+   "description": "Updates the filter specified by the filter name.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "NOOP",
+       "ARCHIVE"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-criteria",
+     "args": {}
+    },
+    {
+     "name": "--rank",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-findings-feedback",
+   "description": "Marks the specified GuardDuty findings as useful or not useful.",
+   "options": [
+    {
+     "name": "--comments",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feedback",
+     "args": {
+      "suggestions": [
+       "USEFUL",
+       "NOT_USEFUL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--finding-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-ip-set",
+   "description": "Updates the IPSet specified by the IPSet ID.",
+   "options": [
+    {
+     "name": "--activate"
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--ip-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-activate"
+    }
+   ]
+  },
+  {
+   "name": "update-malware-protection-plan",
+   "description": "Updates an existing Malware Protection plan resource.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {}
+    },
+    {
+     "name": "--malware-protection-plan-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protected-resource",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-malware-scan-settings",
+   "description": "Updates the malware scan settings.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ebs-snapshot-preservation",
+     "args": {
+      "suggestions": [
+       "NO_RETENTION",
+       "RETENTION_WITH_FINDING"
+      ]
+     }
+    },
+    {
+     "name": "--scan-resource-criteria",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-member-detectors",
+   "description": "Contains information on member accounts to be updated.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-sources",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--features",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-organization-configuration",
+   "description": "Configures the delegated administrator account with the provided values.",
+   "options": [
+    {
+     "name": "--auto-enable"
+    },
+    {
+     "name": "--auto-enable-organization-members",
+     "args": {
+      "suggestions": [
+       "NEW",
+       "ALL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--data-sources",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--features",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-enable"
+    }
+   ]
+  },
+  {
+   "name": "update-publishing-destination",
+   "description": "Updates information about the publishing destination specified by the destinationId.",
+   "options": [
+    {
+     "name": "--destination-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-properties",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-threat-entity-set",
+   "description": "Updates the threat entity set associated with the specified threatEntitySetId.",
+   "options": [
+    {
+     "name": "--activate"
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-activate"
+    },
+    {
+     "name": "--threat-entity-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-threat-intel-set",
+   "description": "Updates the ThreatIntelSet specified by the ThreatIntelSet ID.",
+   "options": [
+    {
+     "name": "--activate"
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-activate"
+    },
+    {
+     "name": "--threat-intel-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-trusted-entity-set",
+   "description": "Updates the trusted entity set associated with the specified trustedEntitySetId.",
+   "options": [
+    {
+     "name": "--activate"
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-activate"
+    },
+    {
+     "name": "--trusted-entity-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

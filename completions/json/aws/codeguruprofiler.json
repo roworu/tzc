@@ -1,0 +1,527 @@
+{
+ "name": "codeguruprofiler",
+ "description": "This section provides documentation for the Amazon CodeGuru Profiler API operations.",
+ "subcommands": [
+  {
+   "name": "add-notification-channels",
+   "description": "Add up to 2 anomaly notifications channels for a profiling group.",
+   "options": [
+    {
+     "name": "--channels",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-frame-metric-data",
+   "description": "Returns the time series of values for a requested list of frame metrics from a time period.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--frame-metrics",
+     "args": {}
+    },
+    {
+     "name": "--period",
+     "args": {}
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--target-resolution",
+     "args": {
+      "suggestions": [
+       "PT5M",
+       "PT1H",
+       "P1D"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "configure-agent",
+   "description": "Used by profiler agents to report their current state and to receive remote configuration updates.",
+   "options": [
+    {
+     "name": "--fleet-instance-id",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-profiling-group",
+   "description": "Creates a profiling group.",
+   "options": [
+    {
+     "name": "--agent-orchestration-config",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--compute-platform",
+     "args": {
+      "suggestions": [
+       "Default",
+       "AWSLambda"
+      ]
+     }
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-profiling-group",
+   "description": "Deletes a profiling group.",
+   "options": [
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-profiling-group",
+   "description": "Returns a ProfilingGroupDescription object that contains information about the requested profiling group.",
+   "options": [
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-findings-report-account-summary",
+   "description": "Returns a list of FindingsReportSummary objects that contain analysis results for all profiling groups in your AWS account.",
+   "options": [
+    {
+     "name": "--daily-reports-only"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-daily-reports-only"
+    }
+   ]
+  },
+  {
+   "name": "get-notification-configuration",
+   "description": "Get the current configuration for anomaly notifications for a profiling group.",
+   "options": [
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy",
+   "description": "Returns the JSON-formatted resource-based policy on a profiling group.",
+   "options": [
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile",
+   "description": "Gets the aggregated profile of a profiling group for a specified time range.",
+   "options": [
+    {
+     "name": "--accept",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-depth",
+     "args": {}
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {}
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-recommendations",
+   "description": "Returns a list of Recommendation objects that contain recommendations for a profiling group for a given time period.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--locale",
+     "args": {}
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-findings-reports",
+   "description": "List the available reports for a given profiling group and time range.",
+   "options": [
+    {
+     "name": "--daily-reports-only"
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-daily-reports-only"
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-profile-times",
+   "description": "Lists the start times of the available aggregated profiles of a profiling group for an aggregation period within the specified time range.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order-by",
+     "args": {
+      "suggestions": [
+       "TimestampDescending",
+       "TimestampAscending"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--period",
+     "args": {
+      "suggestions": [
+       "PT5M",
+       "PT1H",
+       "P1D"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-profiling-groups",
+   "description": "Returns a list of profiling groups.",
+   "options": [
+    {
+     "name": "--include-description"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-include-description"
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of the tags that are assigned to a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "post-agent-profile",
+   "description": "Submits profiling data to an aggregated profile of a profiling group.",
+   "options": [
+    {
+     "name": "--agent-profile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-token",
+     "args": {}
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-permission",
+   "description": "Adds permissions to a profiling group's resource-based policy that are provided using an action group.",
+   "options": [
+    {
+     "name": "--action-group",
+     "args": {
+      "suggestions": [
+       "agentPermissions"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--principals",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-notification-channel",
+   "description": "Remove one anomaly notifications channel for a profiling group.",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-permission",
+   "description": "Removes permissions from a profiling group's resource-based policy that are provided using an action group.",
+   "options": [
+    {
+     "name": "--action-group",
+     "args": {
+      "suggestions": [
+       "agentPermissions"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "submit-feedback",
+   "description": "Sends feedback to CodeGuru Profiler about whether the anomaly detected by the analysis is useful or not.",
+   "options": [
+    {
+     "name": "--anomaly-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "Positive",
+       "Negative"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Use to assign one or more tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Use to remove one or more tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-profiling-group",
+   "description": "Updates a profiling group.",
+   "options": [
+    {
+     "name": "--agent-orchestration-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profiling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,968 @@
+{
+ "name": "kinesis",
+ "description": "Amazon Kinesis Data Streams Service API Reference Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big data.",
+ "subcommands": [
+  {
+   "name": "add-tags-to-stream",
+   "description": "Adds or updates tags for the specified Kinesis data stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-stream",
+   "description": "Creates a Kinesis data stream.",
+   "options": [
+    {
+     "name": "--max-record-size-in-ki-b",
+     "args": {}
+    },
+    {
+     "name": "--shard-count",
+     "args": {}
+    },
+    {
+     "name": "--stream-mode-details",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--warm-throughput-mi-bps",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "decrease-stream-retention-period",
+   "description": "Decreases the Kinesis data stream's retention period, which is the length of time data records are accessible after they are added to the stream.",
+   "options": [
+    {
+     "name": "--retention-period-hours",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Delete a policy for the specified data stream or consumer.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-stream",
+   "description": "Deletes a Kinesis data stream and all its shards and data.",
+   "options": [
+    {
+     "name": "--enforce-consumer-deletion"
+    },
+    {
+     "name": "--no-enforce-consumer-deletion"
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "deregister-stream-consumer",
+   "description": "To deregister a consumer, provide its ARN.",
+   "options": [
+    {
+     "name": "--consumer-arn",
+     "args": {}
+    },
+    {
+     "name": "--consumer-name",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-account-settings",
+   "description": "Describes the account-level settings for Amazon Kinesis Data Streams."
+  },
+  {
+   "name": "describe-limits",
+   "description": "Describes the shard limits and usage for the account."
+  },
+  {
+   "name": "describe-stream",
+   "description": "Describes the specified Kinesis data stream.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-stream-consumer",
+   "description": "To get the description of a registered consumer, provide the ARN of the consumer.",
+   "options": [
+    {
+     "name": "--consumer-arn",
+     "args": {}
+    },
+    {
+     "name": "--consumer-name",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-stream-summary",
+   "description": "Provides a summarized description of the specified Kinesis data stream without the shard list.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disable-enhanced-monitoring",
+   "description": "Disables enhanced monitoring.",
+   "options": [
+    {
+     "name": "--shard-level-metrics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "enable-enhanced-monitoring",
+   "description": "Enables enhanced Kinesis data stream monitoring for shard-level metrics.",
+   "options": [
+    {
+     "name": "--shard-level-metrics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-records",
+   "description": "Gets data records from a Kinesis data stream's shard.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--shard-iterator",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Returns a policy attached to the specified data stream or consumer.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-shard-iterator",
+   "description": "Gets an Amazon Kinesis shard iterator.",
+   "options": [
+    {
+     "name": "--shard-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shard-iterator-type",
+     "args": {
+      "suggestions": [
+       "AT_SEQUENCE_NUMBER",
+       "AFTER_SEQUENCE_NUMBER",
+       "TRIM_HORIZON",
+       "LATEST",
+       "AT_TIMESTAMP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-sequence-number",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    },
+    {
+     "name": "--timestamp",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "increase-stream-retention-period",
+   "description": "Increases the Kinesis data stream's retention period, which is the length of time data records are accessible after they are added to the stream.",
+   "options": [
+    {
+     "name": "--retention-period-hours",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-shards",
+   "description": "Lists the shards in a stream and provides information about each shard.",
+   "options": [
+    {
+     "name": "--exclusive-start-shard-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--shard-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-creation-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stream-consumers",
+   "description": "Lists the consumers registered to receive data from a stream using enhanced fan-out, and provides information about each consumer.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-creation-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-streams",
+   "description": "Lists your Kinesis data streams.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List all tags added to the specified Kinesis resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-stream",
+   "description": "Lists the tags for the specified Kinesis data stream.",
+   "options": [
+    {
+     "name": "--exclusive-start-tag-key",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "merge-shards",
+   "description": "Merges two adjacent shards in a Kinesis data stream and combines them into a single shard to reduce the stream's capacity to ingest and transport data.",
+   "options": [
+    {
+     "name": "--adjacent-shard-to-merge",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shard-to-merge",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-record",
+   "description": "Writes a single data record into an Amazon Kinesis data stream.",
+   "options": [
+    {
+     "name": "--data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--explicit-hash-key",
+     "args": {}
+    },
+    {
+     "name": "--partition-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sequence-number-for-ordering",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-records",
+   "description": "Writes multiple data records into a Kinesis data stream in a single call (also referred to as a PutRecords request).",
+   "options": [
+    {
+     "name": "--records",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Attaches a resource-based policy to a data stream or registered consumer.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-stream-consumer",
+   "description": "Registers a consumer with a Kinesis data stream.",
+   "options": [
+    {
+     "name": "--consumer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-stream",
+   "description": "Removes tags from the specified Kinesis data stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "split-shard",
+   "description": "Splits a shard into two new shards in the Kinesis data stream, to increase the stream's capacity to ingest and transport data.",
+   "options": [
+    {
+     "name": "--new-starting-hash-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shard-to-split",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-stream-encryption",
+   "description": "Enables or updates server-side encryption using an Amazon Web Services KMS key for a specified stream.",
+   "options": [
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "KMS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-stream-encryption",
+   "description": "Disables server-side encryption for a specified stream.",
+   "options": [
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "KMS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for the specified Kinesis resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the specified Kinesis resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-account-settings",
+   "description": "Updates the account-level settings for Amazon Kinesis Data Streams.",
+   "options": [
+    {
+     "name": "--minimum-throughput-billing-commitment",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-max-record-size",
+   "description": "This allows you to update the MaxRecordSize of a single record that you can write to, and read from a stream.",
+   "options": [
+    {
+     "name": "--max-record-size-in-ki-b",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-shard-count",
+   "description": "Updates the shard count of the specified stream to the specified number of shards.",
+   "options": [
+    {
+     "name": "--scaling-type",
+     "args": {
+      "suggestions": [
+       "UNIFORM_SCALING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    },
+    {
+     "name": "--target-shard-count",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-stream-mode",
+   "description": "Updates the capacity mode of the data stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-mode-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--warm-throughput-mi-bps",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-stream-warm-throughput",
+   "description": "Updates the warm throughput configuration for the specified Amazon Kinesis Data Streams on-demand data stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    },
+    {
+     "name": "--warm-throughput-mi-bps",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "stream-exists",
+     "description": "Wait until JMESPath query StreamDescription.StreamStatus returns ACTIVE when polling with ``describe-stream``.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--stream-arn",
+       "args": {}
+      },
+      {
+       "name": "--stream-id",
+       "args": {}
+      },
+      {
+       "name": "--stream-name",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "stream-not-exists",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-stream``.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--stream-arn",
+       "args": {}
+      },
+      {
+       "name": "--stream-id",
+       "args": {}
+      },
+      {
+       "name": "--stream-name",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,441 @@
+{
+ "name": "medical-imaging",
+ "description": "This is the AWS HealthImaging API Reference.",
+ "subcommands": [
+  {
+   "name": "copy-image-set",
+   "description": "Copy an image set.",
+   "options": [
+    {
+     "name": "--copy-image-set-information",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--no-promote-to-primary"
+    },
+    {
+     "name": "--promote-to-primary"
+    },
+    {
+     "name": "--source-image-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-datastore",
+   "description": "Create a data store.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--datastore-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--lambda-authorizer-arn",
+     "args": {}
+    },
+    {
+     "name": "--lossless-storage-format",
+     "args": {
+      "suggestions": [
+       "HTJ2K",
+       "JPEG_2000_LOSSLESS"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-datastore",
+   "description": "Delete a data store.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-image-set",
+   "description": "Delete an image set.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-datastore",
+   "description": "Get data store properties.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dicom-import-job",
+   "description": "Get the import job properties to learn more about the job or job progress.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-image-frame",
+   "description": "Get an image frame (pixel data) for an image set.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-frame-information",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-image-set",
+   "description": "Get image set properties.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-image-set-metadata",
+   "description": "Get metadata attributes for an image set.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-datastores",
+   "description": "List data stores.",
+   "options": [
+    {
+     "name": "--datastore-status",
+     "args": {
+      "suggestions": [
+       "CREATING",
+       "CREATE_FAILED",
+       "ACTIVE",
+       "DELETING",
+       "DELETED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dicom-import-jobs",
+   "description": "List import jobs created for a specific data store.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "IN_PROGRESS",
+       "COMPLETED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-image-set-versions",
+   "description": "List image set versions.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags associated with a medical imaging resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-image-sets",
+   "description": "Search image sets based on defined input attributes.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-criteria",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-dicom-import-job",
+   "description": "Start importing bulk data into an ACTIVE data store.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--import-configuration",
+     "args": {}
+    },
+    {
+     "name": "--input-owner-account-id",
+     "args": {}
+    },
+    {
+     "name": "--input-s3-uri",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--output-s3-uri",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds a user-specifed key and value tag to a medical imaging resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a medical imaging resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-image-set-metadata",
+   "description": "Update image set metadata attributes.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--image-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-study-image-sets"
+    },
+    {
+     "name": "--latest-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--no-include-study-image-sets"
+    },
+    {
+     "name": "--update-image-set-metadata-updates",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

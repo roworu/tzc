@@ -22,6 +22,11 @@ Create or edit a spec in `json/`, then regenerate and compile:
 
 Python 3 is required for that step
 
+## Split specs
+
+`python3 tools/split.py json/<cmd>.json` moves each subcommand to
+`json/<cmd>/<sub>.json`, loaded only when that subcommand is typed.
+
 ## Spec schema
 
 `tools/convert.py` reads this subset of a spec:

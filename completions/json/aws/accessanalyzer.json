@@ -1,0 +1,914 @@
+{
+ "name": "accessanalyzer",
+ "description": "Identity and Access Management Access Analyzer helps you to set, verify, and refine your IAM policies by providing a suite of capabilities.",
+ "subcommands": [
+  {
+   "name": "apply-archive-rule",
+   "description": "Retroactively applies the archive rule to existing findings that meet the archive rule criteria.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-policy-generation",
+   "description": "Cancels the requested policy generation.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "check-access-not-granted",
+   "description": "Checks whether the specified access isn't allowed by a policy.",
+   "options": [
+    {
+     "name": "--access",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "IDENTITY_POLICY",
+       "RESOURCE_POLICY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "check-no-new-access",
+   "description": "Checks whether new access is allowed for an updated policy when compared to the existing policy.",
+   "options": [
+    {
+     "name": "--existing-policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "IDENTITY_POLICY",
+       "RESOURCE_POLICY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "check-no-public-access",
+   "description": "Checks whether a resource policy can grant public access to the specified resource type.",
+   "options": [
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-access-preview",
+   "description": "Creates an access preview that allows you to preview IAM Access Analyzer findings for your resource before deploying resource permissions.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configurations",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-analyzer",
+   "description": "Creates an analyzer for your account.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--archive-rules",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "ORGANIZATION",
+       "ACCOUNT_UNUSED_ACCESS",
+       "ORGANIZATION_UNUSED_ACCESS",
+       "ACCOUNT_INTERNAL_ACCESS",
+       "ORGANIZATION_INTERNAL_ACCESS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-archive-rule",
+   "description": "Creates an archive rule for the specified analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-service-linked-analyzer",
+   "description": "Creates a service-linked analyzer managed by an Amazon Web Services service.",
+   "options": [
+    {
+     "name": "--archive-rules",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "ORGANIZATION",
+       "ACCOUNT_UNUSED_ACCESS",
+       "ORGANIZATION_UNUSED_ACCESS",
+       "ACCOUNT_INTERNAL_ACCESS",
+       "ORGANIZATION_INTERNAL_ACCESS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-analyzer",
+   "description": "Deletes the specified analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-archive-rule",
+   "description": "Deletes the specified archive rule.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-linked-analyzer",
+   "description": "Deletes a service-linked analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "generate-finding-recommendation",
+   "description": "Creates a recommendation for an unused permissions finding.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-preview",
+   "description": "Retrieves information about an access preview for the specified analyzer.",
+   "options": [
+    {
+     "name": "--access-preview-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-analyzed-resource",
+   "description": "Retrieves information about a resource that was analyzed.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-analyzer",
+   "description": "Retrieves information about the specified analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-archive-rule",
+   "description": "Retrieves information about an archive rule.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-finding",
+   "description": "Retrieves information about the specified finding.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-finding-recommendation",
+   "description": "Retrieves information about a finding recommendation for the specified analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-finding-v2",
+   "description": "Retrieves information about the specified finding.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-findings-statistics",
+   "description": "Retrieves a list of aggregated finding statistics for an external access or unused access analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-generated-policy",
+   "description": "Retrieves the policy that was generated using StartPolicyGeneration.",
+   "options": [
+    {
+     "name": "--include-resource-placeholders"
+    },
+    {
+     "name": "--include-service-level-template"
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-resource-placeholders"
+    },
+    {
+     "name": "--no-include-service-level-template"
+    }
+   ]
+  },
+  {
+   "name": "list-access-preview-findings",
+   "description": "Retrieves a list of access preview findings generated by the specified access preview.",
+   "options": [
+    {
+     "name": "--access-preview-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-access-previews",
+   "description": "Retrieves a list of access previews for the specified analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-analyzed-resources",
+   "description": "Retrieves a list of resources of the specified type that have been analyzed by the specified analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "AWS::S3::Bucket",
+       "AWS::IAM::Role",
+       "AWS::SQS::Queue",
+       "AWS::Lambda::Function",
+       "AWS::Lambda::LayerVersion",
+       "AWS::KMS::Key",
+       "AWS::SecretsManager::Secret",
+       "AWS::EFS::FileSystem",
+       "AWS::EC2::Snapshot",
+       "AWS::ECR::Repository",
+       "AWS::RDS::DBSnapshot",
+       "AWS::RDS::DBClusterSnapshot",
+       "AWS::SNS::Topic",
+       "AWS::S3Express::DirectoryBucket",
+       "AWS::DynamoDB::Table",
+       "AWS::DynamoDB::Stream",
+       "AWS::IAM::User"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-analyzers",
+   "description": "Retrieves a list of analyzers.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "ORGANIZATION",
+       "ACCOUNT_UNUSED_ACCESS",
+       "ORGANIZATION_UNUSED_ACCESS",
+       "ACCOUNT_INTERNAL_ACCESS",
+       "ORGANIZATION_INTERNAL_ACCESS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-archive-rules",
+   "description": "Retrieves a list of archive rules created for the specified analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-findings",
+   "description": "Retrieves a list of findings generated by the specified analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-findings-v2",
+   "description": "Retrieves a list of findings generated by the specified analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policy-generations",
+   "description": "Lists all of the policy generations requested in the last seven days.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves a list of tags applied to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-policy-generation",
+   "description": "Starts the policy generation request.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cloud-trail-details",
+     "args": {}
+    },
+    {
+     "name": "--policy-generation-details",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-resource-scan",
+   "description": "Immediately starts a scan of the policies applied to the specified resource.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-owner-account",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds a tag to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-analyzer",
+   "description": "Modifies the configuration of an existing analyzer.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-archive-rule",
+   "description": "Updates the criteria and values for the specified archive rule.",
+   "options": [
+    {
+     "name": "--analyzer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-findings",
+   "description": "Updates the status for the specified findings.",
+   "options": [
+    {
+     "name": "--analyzer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--ids",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "ARCHIVED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-policy",
+   "description": "Requests the validation of a policy and returns a list of findings.",
+   "options": [
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "DE",
+       "EN",
+       "ES",
+       "FR",
+       "IT",
+       "JA",
+       "KO",
+       "PT_BR",
+       "ZH_CN",
+       "ZH_TW"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "IDENTITY_POLICY",
+       "RESOURCE_POLICY",
+       "SERVICE_CONTROL_POLICY",
+       "RESOURCE_CONTROL_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--validate-policy-resource-type",
+     "args": {
+      "suggestions": [
+       "AWS::S3::Bucket",
+       "AWS::S3::AccessPoint",
+       "AWS::S3::MultiRegionAccessPoint",
+       "AWS::S3ObjectLambda::AccessPoint",
+       "AWS::IAM::AssumeRolePolicyDocument",
+       "AWS::DynamoDB::Table"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

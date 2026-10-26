@@ -1,0 +1,1421 @@
+{
+ "name": "partnercentral-selling",
+ "description": "AWS Partner Central API for Selling AWS Partner Central API for Selling Reference Guide This Amazon Web Services (AWS) Partner Central API reference is designed to help AWS Partners integrate Customer Relationship Management (CRM) systems with AWS Partner Central.",
+ "subcommands": [
+  {
+   "name": "accept-engagement-invitation",
+   "description": "Use the AcceptEngagementInvitation action to accept an engagement invitation shared by AWS.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "assign-opportunity",
+   "description": "Enables you to reassign an existing Opportunity to another user within your Partner Central account.",
+   "options": [
+    {
+     "name": "--assignee",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-opportunity",
+   "description": "Enables you to create a formal association between an Opportunity and various related entities, enriching the context and details of the opportunity for better collaboration and decision making.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--opportunity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--related-entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--related-entity-type",
+     "args": {
+      "suggestions": [
+       "Solutions",
+       "AwsProducts",
+       "AwsMarketplaceOffers",
+       "AwsMarketplaceOfferSets",
+       "AwsMarketplaceSolutions",
+       "AwsMarketplaceProducts"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-engagement",
+   "description": "The CreateEngagement action allows you to create an Engagement, which serves as a collaborative space between different parties such as AWS Partners and AWS Sellers.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--contexts",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-engagement-context",
+   "description": "Creates a new context within an existing engagement.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "CustomerProject",
+       "Lead",
+       "ProspectingResult"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-engagement-invitation",
+   "description": "This action creates an invitation from a sender to a single receiver to join an engagement.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--invitation",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-opportunity",
+   "description": "Creates an Opportunity record in Partner Central.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--customer",
+     "args": {}
+    },
+    {
+     "name": "--life-cycle",
+     "args": {}
+    },
+    {
+     "name": "--marketing",
+     "args": {}
+    },
+    {
+     "name": "--national-security",
+     "args": {
+      "suggestions": [
+       "Yes",
+       "No"
+      ]
+     }
+    },
+    {
+     "name": "--opportunity-team",
+     "args": {}
+    },
+    {
+     "name": "--opportunity-type",
+     "args": {
+      "suggestions": [
+       "Net New Business",
+       "Flat Renewal",
+       "Expansion"
+      ]
+     }
+    },
+    {
+     "name": "--origin",
+     "args": {
+      "suggestions": [
+       "AWS Referral",
+       "Partner Referral"
+      ]
+     }
+    },
+    {
+     "name": "--partner-opportunity-identifier",
+     "args": {}
+    },
+    {
+     "name": "--primary-needs-from-aws",
+     "args": {}
+    },
+    {
+     "name": "--project",
+     "args": {}
+    },
+    {
+     "name": "--software-revenue",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-resource-snapshot",
+   "description": "This action allows you to create an immutable snapshot of a specific resource, such as an opportunity, within the context of an engagement.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-snapshot-template-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Opportunity"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-resource-snapshot-job",
+   "description": "Use this action to create a job to generate a snapshot of the specified resource within an engagement.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-snapshot-template-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Opportunity"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-snapshot-job",
+   "description": "Use this action to deletes a previously created resource snapshot job.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-snapshot-job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-opportunity",
+   "description": "Allows you to remove an existing association between an Opportunity and related entities, such as a Partner Solution, Amazon Web Services product, or an Amazon Web Services Marketplace offer.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--opportunity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--related-entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--related-entity-type",
+     "args": {
+      "suggestions": [
+       "Solutions",
+       "AwsProducts",
+       "AwsMarketplaceOffers",
+       "AwsMarketplaceOfferSets",
+       "AwsMarketplaceSolutions",
+       "AwsMarketplaceProducts"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-aws-opportunity-summary",
+   "description": "Retrieves a summary of an AWS Opportunity.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--related-opportunity-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-engagement",
+   "description": "Use this action to retrieve the engagement record for a given EngagementIdentifier.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-engagement-invitation",
+   "description": "Retrieves the details of an engagement invitation shared by AWS with a partner.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-opportunity",
+   "description": "Fetches the Opportunity record from Partner Central by a given Identifier.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-prospecting-from-engagement-task",
+   "description": "Retrieves the details and current status of a prospecting task previously started with StartProspectingFromEngagementTask to enable polling for completion and access to per-engagement processing results.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-snapshot",
+   "description": "Use this action to retrieve a specific snapshot record.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-snapshot-template-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Opportunity"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-snapshot-job",
+   "description": "Use this action to retrieves information about a specific resource snapshot job.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-snapshot-job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-selling-system-settings",
+   "description": "Retrieves the currently set system settings, which include the IAM Role used for resource snapshot jobs.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-engagement-by-accepting-invitation-tasks",
+   "description": "Lists all in-progress, completed, or failed StartEngagementByAcceptingInvitationTask tasks that were initiated by the caller's account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engagement-invitation-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--opportunity-identifier",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-identifier",
+     "args": {}
+    },
+    {
+     "name": "--task-status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-engagement-from-opportunity-tasks",
+   "description": "Lists all in-progress, completed, or failed EngagementFromOpportunity tasks that were initiated by the caller's account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--opportunity-identifier",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-identifier",
+     "args": {}
+    },
+    {
+     "name": "--task-status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-engagement-invitations",
+   "description": "Retrieves a list of engagement invitations sent to the partner.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--participant-type",
+     "args": {
+      "suggestions": [
+       "SENDER",
+       "RECEIVER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--payload-type",
+     "args": {}
+    },
+    {
+     "name": "--sender-aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-engagement-members",
+   "description": "Retrieves the details of member partners in an Engagement.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-engagement-resource-associations",
+   "description": "Lists the associations between resources and engagements where the caller is a member and has at least one snapshot in the engagement.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--created-by",
+     "args": {}
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Opportunity"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-engagements",
+   "description": "This action allows users to retrieve a list of Engagement records from Partner Central.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--context-types",
+     "args": {}
+    },
+    {
+     "name": "--created-by",
+     "args": {}
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {}
+    },
+    {
+     "name": "--exclude-context-types",
+     "args": {}
+    },
+    {
+     "name": "--exclude-created-by",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-opportunities",
+   "description": "This request accepts a list of filters that retrieve opportunity subsets as well as sort options.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--created-date",
+     "args": {}
+    },
+    {
+     "name": "--customer-company-name",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {}
+    },
+    {
+     "name": "--last-modified-date",
+     "args": {}
+    },
+    {
+     "name": "--life-cycle-review-status",
+     "args": {}
+    },
+    {
+     "name": "--life-cycle-stage",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-close-date",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-opportunity-from-engagement-tasks",
+   "description": "Lists all in-progress, completed, or failed opportunity creation tasks from engagements that were initiated by the caller's account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--context-identifier",
+     "args": {}
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--opportunity-identifier",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-identifier",
+     "args": {}
+    },
+    {
+     "name": "--task-status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-prospecting-from-engagement-tasks",
+   "description": "Lists all prospecting tasks initiated by the caller's account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--start-after",
+     "args": {}
+    },
+    {
+     "name": "--start-before",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-identifier",
+     "args": {}
+    },
+    {
+     "name": "--task-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-snapshot-jobs",
+   "description": "Lists resource snapshot jobs owned by the customer.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Running",
+       "Stopped"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-resource-snapshots",
+   "description": "Retrieves a list of resource view snapshots based on specified criteria.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--created-by",
+     "args": {}
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--resource-snapshot-template-identifier",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Opportunity"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-solutions",
+   "description": "Retrieves a list of Partner Solutions that the partner registered on Partner Central.",
+   "options": [
+    {
+     "name": "--aws-marketplace-solution-arn",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-selling-system-settings",
+   "description": "Updates the currently set system settings, which include the IAM Role used for resource snapshot jobs.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-snapshot-job-role-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reject-engagement-invitation",
+   "description": "This action rejects an EngagementInvitation that AWS shared.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rejection-reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-engagement-by-accepting-invitation-task",
+   "description": "This action starts the engagement by accepting an EngagementInvitation.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-engagement-from-opportunity-task",
+   "description": "Similar to StartEngagementByAcceptingInvitationTask, this action is asynchronous and performs multiple steps before completion.",
+   "options": [
+    {
+     "name": "--aws-submission",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-opportunity-from-engagement-task",
+   "description": "This action creates an opportunity from an existing engagement context.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--context-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-prospecting-from-engagement-task",
+   "description": "Starts a task to convert one or more engagement contexts into new prospecting leads.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-resource-snapshot-job",
+   "description": "Starts a resource snapshot job that has been previously created.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-snapshot-job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-resource-snapshot-job",
+   "description": "Stops a resource snapshot job.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-snapshot-job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "submit-opportunity",
+   "description": "Use this action to submit an Opportunity that was previously created by partner for AWS review.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--involvement-type",
+     "args": {
+      "suggestions": [
+       "For Visibility Only",
+       "Co-Sell"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--visibility",
+     "args": {
+      "suggestions": [
+       "Full",
+       "Limited"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag or tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-engagement-context",
+   "description": "Updates the context information for an existing engagement with new or modified data.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--context-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engagement-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engagement-last-modified-at",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "CustomerProject",
+       "Lead",
+       "ProspectingResult"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-opportunity",
+   "description": "Updates the Opportunity record identified by a given Identifier.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--customer",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--last-modified-date",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--life-cycle",
+     "args": {}
+    },
+    {
+     "name": "--marketing",
+     "args": {}
+    },
+    {
+     "name": "--national-security",
+     "args": {
+      "suggestions": [
+       "Yes",
+       "No"
+      ]
+     }
+    },
+    {
+     "name": "--opportunity-type",
+     "args": {
+      "suggestions": [
+       "Net New Business",
+       "Flat Renewal",
+       "Expansion"
+      ]
+     }
+    },
+    {
+     "name": "--partner-opportunity-identifier",
+     "args": {}
+    },
+    {
+     "name": "--primary-needs-from-aws",
+     "args": {}
+    },
+    {
+     "name": "--project",
+     "args": {}
+    },
+    {
+     "name": "--software-revenue",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

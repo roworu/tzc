@@ -1,0 +1,641 @@
+{
+ "name": "arc-region-switch",
+ "description": "Amazon Application Recovery Controller (ARC) Region switch helps you to quickly and reliably shift traffic away from an impaired Amazon Web Services Region to a healthy Region.",
+ "subcommands": [
+  {
+   "name": "approve-plan-execution-step",
+   "description": "Approves a step in a plan execution that requires manual approval.",
+   "options": [
+    {
+     "name": "--approval",
+     "args": {
+      "suggestions": [
+       "approve",
+       "decline"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-plan-execution",
+   "description": "Cancels an in-progress plan execution.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plan-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-plan",
+   "description": "Creates a new Region switch plan.",
+   "options": [
+    {
+     "name": "--associated-alarms",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-region",
+     "args": {}
+    },
+    {
+     "name": "--recovery-approach",
+     "args": {
+      "suggestions": [
+       "activeActive",
+       "activePassive"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--recovery-time-objective-minutes",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--triggers",
+     "args": {}
+    },
+    {
+     "name": "--workflows",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-plan",
+   "description": "Deletes a Region switch plan.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-plan",
+   "description": "Retrieves detailed information about a Region switch plan.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-plan-evaluation-status",
+   "description": "Retrieves the evaluation status of a Region switch plan.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--plan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-plan-execution",
+   "description": "Retrieves detailed information about a specific plan execution.",
+   "options": [
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--plan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-plan-in-region",
+   "description": "Retrieves information about a Region switch plan in a specific Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-plan-execution-events",
+   "description": "Lists the events that occurred during a plan execution.",
+   "options": [
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--plan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-plan-executions",
+   "description": "Lists the executions of a Region switch plan.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--plan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "inProgress",
+       "pausedByFailedStep",
+       "pausedByOperator",
+       "completed",
+       "completedWithExceptions",
+       "canceled",
+       "planExecutionTimedOut",
+       "pendingManualApproval",
+       "failed",
+       "pending",
+       "completedMonitoringApplicationHealth"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-plans",
+   "description": "Lists all Region switch plans in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-plans-in-region",
+   "description": "Lists all Region switch plans in your Amazon Web Services account that are available in the current Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-route53-health-checks",
+   "description": "List the Amazon Route 53 health checks.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--record-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-route53-health-checks-in-region",
+   "description": "List the Amazon Route 53 health checks in a specific Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--record-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags attached to a Region switch resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-plan-execution",
+   "description": "Starts the execution of a Region switch plan.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "activate",
+       "deactivate",
+       "postRecovery"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--latest-version",
+     "args": {}
+    },
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "graceful",
+       "ungraceful"
+      ]
+     }
+    },
+    {
+     "name": "--plan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recovery-execution-id",
+     "args": {}
+    },
+    {
+     "name": "--target-region",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a Region switch resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a Region switch resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-plan",
+   "description": "Updates an existing Region switch plan.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--associated-alarms",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recovery-time-objective-minutes",
+     "args": {}
+    },
+    {
+     "name": "--report-configuration",
+     "args": {}
+    },
+    {
+     "name": "--triggers",
+     "args": {}
+    },
+    {
+     "name": "--workflows",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-plan-execution",
+   "description": "Updates an in-progress plan execution.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "switchToGraceful",
+       "switchToUngraceful",
+       "pause",
+       "resume"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plan-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-plan-execution-step",
+   "description": "Updates a specific step in an in-progress plan execution.",
+   "options": [
+    {
+     "name": "--action-to-take",
+     "args": {
+      "suggestions": [
+       "switchToUngraceful",
+       "skip"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--comment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "plan-evaluation-status-passed",
+     "description": "Wait until JMESPath query evaluationState returns passed when polling with ``get-plan-evaluation-status``.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--plan-arn",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "plan-execution-completed",
+     "description": "Wait until JMESPath query executionState returns completed when polling with ``get-plan-execution``.",
+     "options": [
+      {
+       "name": "--execution-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--plan-arn",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

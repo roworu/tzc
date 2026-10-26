@@ -1,0 +1,2069 @@
+{
+ "name": "codecommit",
+ "description": "CodeCommit This is the CodeCommit API Reference.",
+ "subcommands": [
+  {
+   "name": "associate-approval-rule-template-with-repository",
+   "description": "Creates an association between an approval rule template and a specified repository.",
+   "options": [
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-associate-approval-rule-template-with-repositories",
+   "description": "Creates an association between an approval rule template and one or more specified repositories.",
+   "options": [
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-describe-merge-conflicts",
+   "description": "Returns information about one or more merge conflicts in the attempted merge of two commit specifiers using the squash or three-way merge strategy.",
+   "options": [
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--destination-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-paths",
+     "args": {}
+    },
+    {
+     "name": "--max-conflict-files",
+     "args": {}
+    },
+    {
+     "name": "--max-merge-hunks",
+     "args": {}
+    },
+    {
+     "name": "--merge-option",
+     "args": {
+      "suggestions": [
+       "FAST_FORWARD_MERGE",
+       "SQUASH_MERGE",
+       "THREE_WAY_MERGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-specifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-disassociate-approval-rule-template-from-repositories",
+   "description": "Removes the association between an approval rule template and one or more specified repositories.",
+   "options": [
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-commits",
+   "description": "Returns information about the contents of one or more commits in a repository.",
+   "options": [
+    {
+     "name": "--commit-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-repositories",
+   "description": "Returns information about one or more repositories.",
+   "options": [
+    {
+     "name": "--repository-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-approval-rule-template",
+   "description": "Creates a template for approval rules that can then be associated with one or more repositories in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--approval-rule-template-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--approval-rule-template-description",
+     "args": {}
+    },
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-branch",
+   "description": "Creates a branch in a repository and points the branch to a commit.",
+   "options": [
+    {
+     "name": "--branch-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--commit-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-commit",
+   "description": "Creates a commit for a repository on the tip of a specified branch.",
+   "options": [
+    {
+     "name": "--author-name",
+     "args": {}
+    },
+    {
+     "name": "--branch-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--delete-files",
+     "args": {}
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--keep-empty-folders"
+    },
+    {
+     "name": "--no-keep-empty-folders"
+    },
+    {
+     "name": "--parent-commit-id",
+     "args": {}
+    },
+    {
+     "name": "--put-files",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--set-file-modes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-pull-request",
+   "description": "Creates a pull request in the specified repository.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-pull-request-approval-rule",
+   "description": "Creates an approval rule for a pull request.",
+   "options": [
+    {
+     "name": "--approval-rule-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--approval-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-repository",
+   "description": "Creates a new, empty repository.",
+   "options": [
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-description",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-unreferenced-merge-commit",
+   "description": "Creates an unreferenced commit that represents the result of merging two branches using a specified merge strategy.",
+   "options": [
+    {
+     "name": "--author-name",
+     "args": {}
+    },
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution",
+     "args": {}
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--destination-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--keep-empty-folders"
+    },
+    {
+     "name": "--merge-option",
+     "args": {
+      "suggestions": [
+       "FAST_FORWARD_MERGE",
+       "SQUASH_MERGE",
+       "THREE_WAY_MERGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-keep-empty-folders"
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-specifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "credential-helper",
+   "description": "Provide a SigV4 compatible user name and password for git smart HTTP These commands are consumed by git and should not used directly.",
+   "subcommands": [
+    {
+     "name": "erase",
+     "description": "This operation does nothing, no credentials are ever stored"
+    },
+    {
+     "name": "get",
+     "description": "get a username SigV4 credential pair based on protocol, host and path provided from standard in.",
+     "options": [
+      {
+       "name": "--ignore-host-check"
+      }
+     ]
+    },
+    {
+     "name": "store",
+     "description": "This operation does nothing, credentials are calculated each time"
+    }
+   ]
+  },
+  {
+   "name": "delete-approval-rule-template",
+   "description": "Deletes a specified approval rule template.",
+   "options": [
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-branch",
+   "description": "Deletes a branch from a repository, unless that branch is the default branch for the repository.",
+   "options": [
+    {
+     "name": "--branch-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-comment-content",
+   "description": "Deletes the content of a comment made on a change, file, or commit in a repository.",
+   "options": [
+    {
+     "name": "--comment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-file",
+   "description": "Deletes a specified file from a specified branch.",
+   "options": [
+    {
+     "name": "--branch-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--file-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--keep-empty-folders"
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-keep-empty-folders"
+    },
+    {
+     "name": "--parent-commit-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-pull-request-approval-rule",
+   "description": "Deletes an approval rule from a specified pull request.",
+   "options": [
+    {
+     "name": "--approval-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-repository",
+   "description": "Deletes a repository.",
+   "options": [
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-merge-conflicts",
+   "description": "Returns information about one or more merge conflicts in the attempted merge of two commit specifiers using the squash or three-way merge strategy.",
+   "options": [
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--destination-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-merge-hunks",
+     "args": {}
+    },
+    {
+     "name": "--merge-option",
+     "args": {
+      "suggestions": [
+       "FAST_FORWARD_MERGE",
+       "SQUASH_MERGE",
+       "THREE_WAY_MERGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-specifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-pull-request-events",
+   "description": "Returns information about one or more pull request events.",
+   "options": [
+    {
+     "name": "--actor-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pull-request-event-type",
+     "args": {
+      "suggestions": [
+       "PULL_REQUEST_CREATED",
+       "PULL_REQUEST_STATUS_CHANGED",
+       "PULL_REQUEST_SOURCE_REFERENCE_UPDATED",
+       "PULL_REQUEST_MERGE_STATE_CHANGED",
+       "PULL_REQUEST_APPROVAL_RULE_CREATED",
+       "PULL_REQUEST_APPROVAL_RULE_UPDATED",
+       "PULL_REQUEST_APPROVAL_RULE_DELETED",
+       "PULL_REQUEST_APPROVAL_RULE_OVERRIDDEN",
+       "PULL_REQUEST_APPROVAL_STATE_CHANGED"
+      ]
+     }
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-approval-rule-template-from-repository",
+   "description": "Removes the association between a template and a repository so that approval rules based on the template are not automatically created when pull requests are created in the specified repository.",
+   "options": [
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "evaluate-pull-request-approval-rules",
+   "description": "Evaluates whether a pull request has met all the conditions specified in its associated approval rules.",
+   "options": [
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-approval-rule-template",
+   "description": "Returns information about a specified approval rule template.",
+   "options": [
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-blob",
+   "description": "Returns the base-64 encoded content of an individual blob in a repository.",
+   "options": [
+    {
+     "name": "--blob-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-branch",
+   "description": "Returns information about a repository branch, including its name and the last commit ID.",
+   "options": [
+    {
+     "name": "--branch-name",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-comment",
+   "description": "Returns the content of a comment made on a change, file, or commit in a repository.",
+   "options": [
+    {
+     "name": "--comment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-comment-reactions",
+   "description": "Returns information about reactions to a specified comment ID.",
+   "options": [
+    {
+     "name": "--comment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--reaction-user-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-comments-for-compared-commit",
+   "description": "Returns information about comments made on the comparison between two commits.",
+   "options": [
+    {
+     "name": "--after-commit-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--before-commit-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-comments-for-pull-request",
+   "description": "Returns comments made on a pull request.",
+   "options": [
+    {
+     "name": "--after-commit-id",
+     "args": {}
+    },
+    {
+     "name": "--before-commit-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-commit",
+   "description": "Returns information about a commit, including commit message and committer information.",
+   "options": [
+    {
+     "name": "--commit-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-differences",
+   "description": "Returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID, or other fully qualified reference).",
+   "options": [
+    {
+     "name": "--after-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--after-path",
+     "args": {}
+    },
+    {
+     "name": "--before-commit-specifier",
+     "args": {}
+    },
+    {
+     "name": "--before-path",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-file",
+   "description": "Returns the base-64 encoded contents of a specified file and its metadata.",
+   "options": [
+    {
+     "name": "--commit-specifier",
+     "args": {}
+    },
+    {
+     "name": "--file-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-folder",
+   "description": "Returns the contents of a specified folder in a repository.",
+   "options": [
+    {
+     "name": "--commit-specifier",
+     "args": {}
+    },
+    {
+     "name": "--folder-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-merge-commit",
+   "description": "Returns information about a specified merge commit.",
+   "options": [
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--destination-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-specifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-merge-conflicts",
+   "description": "Returns information about merge conflicts between the before and after commit IDs for a pull request in a repository.",
+   "options": [
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--destination-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-conflict-files",
+     "args": {}
+    },
+    {
+     "name": "--merge-option",
+     "args": {
+      "suggestions": [
+       "FAST_FORWARD_MERGE",
+       "SQUASH_MERGE",
+       "THREE_WAY_MERGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-specifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-merge-options",
+   "description": "Returns information about the merge options available for merging two specified branches.",
+   "options": [
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--destination-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-specifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pull-request",
+   "description": "Gets information about a pull request in a specified repository.",
+   "options": [
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pull-request-approval-states",
+   "description": "Gets information about the approval states for a specified pull request.",
+   "options": [
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pull-request-override-state",
+   "description": "Returns information about whether approval rules have been set aside (overridden) for a pull request, and if so, the Amazon Resource Name (ARN) of the user or identity that overrode the rules and their requirements for the pull request.",
+   "options": [
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-repository",
+   "description": "Returns information about a repository.",
+   "options": [
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-repository-triggers",
+   "description": "Gets information about triggers configured for a repository.",
+   "options": [
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-approval-rule-templates",
+   "description": "Lists all approval rule templates in the specified Amazon Web Services Region in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-associated-approval-rule-templates-for-repository",
+   "description": "Lists all approval rule templates that are associated with a specified repository.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-branches",
+   "description": "Gets information about one or more branches in a repository.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-file-commit-history",
+   "description": "Retrieves a list of commits and changes to a specified file.",
+   "options": [
+    {
+     "name": "--commit-specifier",
+     "args": {}
+    },
+    {
+     "name": "--file-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-pull-requests",
+   "description": "Returns a list of pull requests for a specified repository.",
+   "options": [
+    {
+     "name": "--author-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pull-request-status",
+     "args": {
+      "suggestions": [
+       "OPEN",
+       "CLOSED"
+      ]
+     }
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-repositories",
+   "description": "Gets information about one or more repositories.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ascending",
+       "descending"
+      ]
+     }
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "repositoryName",
+       "lastModifiedDate"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-repositories-for-approval-rule-template",
+   "description": "Lists all repositories associated with the specified approval rule template.",
+   "options": [
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets information about Amazon Web Servicestags for a specified Amazon Resource Name (ARN) in CodeCommit.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "merge-branches-by-fast-forward",
+   "description": "Merges two branches using the fast-forward merge strategy.",
+   "options": [
+    {
+     "name": "--destination-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-branch",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "merge-branches-by-squash",
+   "description": "Merges two branches using the squash merge strategy.",
+   "options": [
+    {
+     "name": "--author-name",
+     "args": {}
+    },
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution",
+     "args": {}
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--destination-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--keep-empty-folders"
+    },
+    {
+     "name": "--no-keep-empty-folders"
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-branch",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "merge-branches-by-three-way",
+   "description": "Merges two specified branches using the three-way merge strategy.",
+   "options": [
+    {
+     "name": "--author-name",
+     "args": {}
+    },
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution",
+     "args": {}
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--destination-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--keep-empty-folders"
+    },
+    {
+     "name": "--no-keep-empty-folders"
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-specifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-branch",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "merge-pull-request-by-fast-forward",
+   "description": "Attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the specified commit using the fast-forward merge strategy.",
+   "options": [
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "merge-pull-request-by-squash",
+   "description": "Attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the specified commit using the squash merge strategy.",
+   "options": [
+    {
+     "name": "--author-name",
+     "args": {}
+    },
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution",
+     "args": {}
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--keep-empty-folders"
+    },
+    {
+     "name": "--no-keep-empty-folders"
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "merge-pull-request-by-three-way",
+   "description": "Attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the specified commit using the three-way merge strategy.",
+   "options": [
+    {
+     "name": "--author-name",
+     "args": {}
+    },
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--conflict-detail-level",
+     "args": {
+      "suggestions": [
+       "FILE_LEVEL",
+       "LINE_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--conflict-resolution",
+     "args": {}
+    },
+    {
+     "name": "--conflict-resolution-strategy",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ACCEPT_SOURCE",
+       "ACCEPT_DESTINATION",
+       "AUTOMERGE"
+      ]
+     }
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--keep-empty-folders"
+    },
+    {
+     "name": "--no-keep-empty-folders"
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-commit-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "override-pull-request-approval-rules",
+   "description": "Sets aside (overrides) all approval rule requirements for a specified pull request.",
+   "options": [
+    {
+     "name": "--override-status",
+     "args": {
+      "suggestions": [
+       "OVERRIDE",
+       "REVOKE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "post-comment-for-compared-commit",
+   "description": "Posts a comment on the comparison between two commits.",
+   "options": [
+    {
+     "name": "--after-commit-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--before-commit-id",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "post-comment-for-pull-request",
+   "description": "Posts a comment on a pull request.",
+   "options": [
+    {
+     "name": "--after-commit-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--before-commit-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "post-comment-reply",
+   "description": "Posts a comment in reply to an existing comment on a comparison between commits or a pull request.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--in-reply-to",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-comment-reaction",
+   "description": "Adds or updates a reaction to a specified comment for the user whose identity is used to make the request.",
+   "options": [
+    {
+     "name": "--comment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reaction-value",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-file",
+   "description": "Adds or updates a file in a branch in an CodeCommit repository, and generates a commit for the addition in the specified branch.",
+   "options": [
+    {
+     "name": "--branch-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--file-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-mode",
+     "args": {
+      "suggestions": [
+       "EXECUTABLE",
+       "NORMAL",
+       "SYMLINK"
+      ]
+     }
+    },
+    {
+     "name": "--file-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--parent-commit-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-repository-triggers",
+   "description": "Replaces all triggers for a repository.",
+   "options": [
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--triggers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a resource in CodeCommit.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-repository-triggers",
+   "description": "Tests the functionality of repository triggers by sending information to the trigger target.",
+   "options": [
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--triggers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags for a resource in CodeCommit.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-approval-rule-template-content",
+   "description": "Updates the content of an approval rule template.",
+   "options": [
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--existing-rule-content-sha256",
+     "args": {}
+    },
+    {
+     "name": "--new-rule-content",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-approval-rule-template-description",
+   "description": "Updates the description for a specified approval rule template.",
+   "options": [
+    {
+     "name": "--approval-rule-template-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-approval-rule-template-name",
+   "description": "Updates the name of a specified approval rule template.",
+   "options": [
+    {
+     "name": "--new-approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--old-approval-rule-template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-comment",
+   "description": "Replaces the contents of a comment.",
+   "options": [
+    {
+     "name": "--comment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-default-branch",
+   "description": "Sets or changes the default branch name for the specified repository.",
+   "options": [
+    {
+     "name": "--default-branch-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pull-request-approval-rule-content",
+   "description": "Updates the structure of an approval rule created specifically for a pull request.",
+   "options": [
+    {
+     "name": "--approval-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--existing-rule-content-sha256",
+     "args": {}
+    },
+    {
+     "name": "--new-rule-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pull-request-approval-state",
+   "description": "Updates the state of a user's approval on a pull request.",
+   "options": [
+    {
+     "name": "--approval-state",
+     "args": {
+      "suggestions": [
+       "APPROVE",
+       "REVOKE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pull-request-description",
+   "description": "Replaces the contents of the description of a pull request.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pull-request-status",
+   "description": "Updates the status of a pull request.",
+   "options": [
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pull-request-status",
+     "args": {
+      "suggestions": [
+       "OPEN",
+       "CLOSED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pull-request-title",
+   "description": "Replaces the title of a pull request.",
+   "options": [
+    {
+     "name": "--pull-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-repository-description",
+   "description": "Sets or changes the comment or description for a repository.",
+   "options": [
+    {
+     "name": "--repository-description",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-repository-encryption-key",
+   "description": "Updates the Key Management Service encryption key used to encrypt and decrypt a CodeCommit repository.",
+   "options": [
+    {
+     "name": "--kms-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-repository-name",
+   "description": "Renames a repository.",
+   "options": [
+    {
+     "name": "--new-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--old-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

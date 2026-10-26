@@ -1,0 +1,2304 @@
+{
+ "name": "qbusiness",
+ "description": "This is the Amazon Q Business API Reference.",
+ "subcommands": [
+  {
+   "name": "associate-permission",
+   "description": "Adds or updates a permission policy for a Amazon Q Business application, allowing cross-account access for an ISV.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditions",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-document",
+   "description": "Asynchronously deletes one or more documents added using the BatchPutDocument API from an Amazon Q Business index.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-sync-id",
+     "args": {}
+    },
+    {
+     "name": "--documents",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-put-document",
+   "description": "Adds one or more documents to an Amazon Q Business index.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-sync-id",
+     "args": {}
+    },
+    {
+     "name": "--documents",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-subscription",
+   "description": "Unsubscribes a user or a group from their pricing tier in an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "chat-sync",
+   "description": "Starts or continues a non-streaming Amazon Q Business conversation.",
+   "options": [
+    {
+     "name": "--action-execution",
+     "args": {}
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attachments",
+     "args": {}
+    },
+    {
+     "name": "--attribute-filter",
+     "args": {}
+    },
+    {
+     "name": "--auth-challenge-response",
+     "args": {}
+    },
+    {
+     "name": "--chat-mode",
+     "args": {
+      "suggestions": [
+       "RETRIEVAL_MODE",
+       "CREATOR_MODE",
+       "PLUGIN_MODE"
+      ]
+     }
+    },
+    {
+     "name": "--chat-mode-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--conversation-id",
+     "args": {}
+    },
+    {
+     "name": "--parent-message-id",
+     "args": {}
+    },
+    {
+     "name": "--user-groups",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    },
+    {
+     "name": "--user-message",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "check-document-access",
+   "description": "Verifies if a user has access permissions for a specified document and returns the actual ACL attached to the document.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-anonymous-web-experience-url",
+   "description": "Creates a unique URL for anonymous Amazon Q Business web experience.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-duration-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--web-experience-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--attachments-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-ids-for-oidc",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--iam-identity-provider-arn",
+     "args": {}
+    },
+    {
+     "name": "--identity-center-instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--identity-type",
+     "args": {
+      "suggestions": [
+       "AWS_IAM_IDP_SAML",
+       "AWS_IAM_IDP_OIDC",
+       "AWS_IAM_IDC",
+       "AWS_QUICKSIGHT_IDP",
+       "ANONYMOUS"
+      ]
+     }
+    },
+    {
+     "name": "--personalization-configuration",
+     "args": {}
+    },
+    {
+     "name": "--q-apps-configuration",
+     "args": {}
+    },
+    {
+     "name": "--quick-sight-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-chat-response-configuration",
+   "description": "Creates a new chat response configuration for an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--response-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-accessor",
+   "description": "Creates a new data accessor for an ISV to access data from a Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--action-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-detail",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-source",
+   "description": "Creates a data source connector for an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-enrichment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-extraction-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--sync-schedule",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-index",
+   "description": "Creates an Amazon Q Business index.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capacity-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ENTERPRISE",
+       "STARTER"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-plugin",
+   "description": "Creates an Amazon Q Business plugin.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--custom-plugin-configuration",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-url",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SERVICE_NOW",
+       "SALESFORCE",
+       "JIRA",
+       "ZENDESK",
+       "CUSTOM",
+       "QUICKSIGHT",
+       "SERVICENOW_NOW_PLATFORM",
+       "JIRA_CLOUD",
+       "SALESFORCE_CRM",
+       "ZENDESK_SUITE",
+       "ATLASSIAN_CONFLUENCE",
+       "GOOGLE_CALENDAR",
+       "MICROSOFT_TEAMS",
+       "MICROSOFT_EXCHANGE",
+       "PAGERDUTY_ADVANCE",
+       "SMARTSHEET",
+       "ASANA"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-retriever",
+   "description": "Adds a retriever to your Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "NATIVE_INDEX",
+       "KENDRA_INDEX"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-subscription",
+   "description": "Subscribes an IAM Identity Center user or a group to a pricing tier for an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "Q_LITE",
+       "Q_BUSINESS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "Creates a universally unique identifier (UUID) mapped to a list of local user ids within an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--user-aliases",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-web-experience",
+   "description": "Creates an Amazon Q Business web experience.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--browser-extension-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--customization-configuration",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-configuration",
+     "args": {}
+    },
+    {
+     "name": "--origins",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--sample-prompts-control-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--subtitle",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {}
+    },
+    {
+     "name": "--welcome-message",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-attachment",
+   "description": "Deletes an attachment associated with a specific Amazon Q Business conversation.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attachment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conversation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-chat-controls-configuration",
+   "description": "Deletes chat controls configured for an existing Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-chat-response-configuration",
+   "description": "Deletes a specified chat response configuration from an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--chat-response-configuration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-conversation",
+   "description": "Deletes an Amazon Q Business web experience conversation.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conversation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-data-accessor",
+   "description": "Deletes a specified data accessor.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-accessor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-source",
+   "description": "Deletes an Amazon Q Business data source connector.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-group",
+   "description": "Deletes a group so that all users and sub groups that belong to the group can no longer access documents only available to that group.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-index",
+   "description": "Deletes an Amazon Q Business index.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-plugin",
+   "description": "Deletes an Amazon Q Business plugin.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plugin-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-retriever",
+   "description": "Deletes the retriever used by an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retriever-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user",
+   "description": "Deletes a user by email id.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-web-experience",
+   "description": "Deletes an Amazon Q Business web experience.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--web-experience-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-permission",
+   "description": "Removes a permission policy from a Amazon Q Business application, revoking the cross-account access that was previously granted to an ISV.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application",
+   "description": "Gets information about an existing Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-chat-controls-configuration",
+   "description": "Gets information about chat controls configured for an existing Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-chat-response-configuration",
+   "description": "Retrieves detailed information about a specific chat response configuration from an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--chat-response-configuration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-accessor",
+   "description": "Retrieves information about a specified data accessor.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-accessor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-source",
+   "description": "Gets information about an existing Amazon Q Business data source connector.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-document-content",
+   "description": "Retrieves the content of a document that was ingested into Amazon Q Business.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-format",
+     "args": {
+      "suggestions": [
+       "RAW",
+       "EXTRACTED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-group",
+   "description": "Describes a group by group name.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-index",
+   "description": "Gets information about an existing Amazon Q Business index.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-media",
+   "description": "Returns the image bytes corresponding to a media object.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conversation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-plugin",
+   "description": "Gets information about an existing Amazon Q Business plugin.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plugin-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy",
+   "description": "Retrieves the current permission policy for a Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-retriever",
+   "description": "Gets information about an existing retriever used by an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retriever-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user",
+   "description": "Describes the universally unique identifier (UUID) associated with a local user in a data source.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-web-experience",
+   "description": "Gets information about an existing Amazon Q Business web experience.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--web-experience-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists Amazon Q Business applications.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-attachments",
+   "description": "Gets a list of attachments associated with an Amazon Q Business web experience or a list of attachements associated with a specific Amazon Q Business conversation.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conversation-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-chat-response-configurations",
+   "description": "Retrieves a list of all chat response configurations available in a specified Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-conversations",
+   "description": "Lists one or more Amazon Q Business conversations.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-accessors",
+   "description": "Lists the data accessors for a Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-source-sync-jobs",
+   "description": "Get information about an Amazon Q Business data source connector synchronization.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {
+      "suggestions": [
+       "FAILED",
+       "SUCCEEDED",
+       "SYNCING",
+       "INCOMPLETE",
+       "STOPPING",
+       "ABORTED",
+       "SYNCING_INDEXING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-data-sources",
+   "description": "Lists the Amazon Q Business data source connectors that you have created.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-documents",
+   "description": "A list of documents attached to an index.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-ids",
+     "args": {}
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-groups",
+   "description": "Provides a list of groups that are mapped to users.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {}
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--updated-earlier-than",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-indices",
+   "description": "Lists the Amazon Q Business indices you have created.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-messages",
+   "description": "Gets a list of messages associated with an Amazon Q Business web experience.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conversation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-plugin-actions",
+   "description": "Lists configured Amazon Q Business actions for a specific plugin in an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--plugin-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-plugin-type-actions",
+   "description": "Lists configured Amazon Q Business actions for any plugin type\u2014both built-in and custom.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--plugin-type",
+     "args": {
+      "suggestions": [
+       "SERVICE_NOW",
+       "SALESFORCE",
+       "JIRA",
+       "ZENDESK",
+       "CUSTOM",
+       "QUICKSIGHT",
+       "SERVICENOW_NOW_PLATFORM",
+       "JIRA_CLOUD",
+       "SALESFORCE_CRM",
+       "ZENDESK_SUITE",
+       "ATLASSIAN_CONFLUENCE",
+       "GOOGLE_CALENDAR",
+       "MICROSOFT_TEAMS",
+       "MICROSOFT_EXCHANGE",
+       "PAGERDUTY_ADVANCE",
+       "SMARTSHEET",
+       "ASANA"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-plugin-type-metadata",
+   "description": "Lists metadata for all Amazon Q Business plugin types.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-plugins",
+   "description": "Lists configured Amazon Q Business plugins.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-retrievers",
+   "description": "Lists the retriever used by an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subscriptions",
+   "description": "Lists all subscriptions created in an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets a list of tags associated with a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-web-experiences",
+   "description": "Lists one or more Amazon Q Business Web Experiences.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-feedback",
+   "description": "Enables your end user to provide feedback on their Amazon Q Business generated chat responses.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conversation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-copied-at",
+     "args": {}
+    },
+    {
+     "name": "--message-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-usefulness",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-group",
+   "description": "Create, or updates, a mapping of users\u2014who have access to a document\u2014to groups.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {}
+    },
+    {
+     "name": "--group-members",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "INDEX",
+       "DATASOURCE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-relevant-content",
+   "description": "Searches for relevant content in a Amazon Q Business application based on a query.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attribute-filter",
+     "args": {}
+    },
+    {
+     "name": "--content-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-text",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-data-source-sync-job",
+   "description": "Starts a data source connector synchronization job.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-data-source-sync-job",
+   "description": "Stops an Amazon Q Business data source connector synchronization job already in progress.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds the specified tag to the specified Amazon Q Business application or data source resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from an Amazon Q Business application or a data source.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates an existing Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attachments-configuration",
+     "args": {}
+    },
+    {
+     "name": "--auto-subscription-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--identity-center-instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--personalization-configuration",
+     "args": {}
+    },
+    {
+     "name": "--q-apps-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-chat-controls-configuration",
+   "description": "Updates a set of chat controls configured for an existing Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--blocked-phrases-configuration-update",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--creator-mode-configuration",
+     "args": {}
+    },
+    {
+     "name": "--hallucination-reduction-configuration",
+     "args": {}
+    },
+    {
+     "name": "--orchestration-configuration",
+     "args": {}
+    },
+    {
+     "name": "--response-scope",
+     "args": {
+      "suggestions": [
+       "ENTERPRISE_CONTENT_ONLY",
+       "EXTENDED_KNOWLEDGE_ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--topic-configurations-to-create-or-update",
+     "args": {}
+    },
+    {
+     "name": "--topic-configurations-to-delete",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-chat-response-configuration",
+   "description": "Updates an existing chat response configuration in an Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--chat-response-configuration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--response-configurations",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-accessor",
+   "description": "Updates an existing data accessor.",
+   "options": [
+    {
+     "name": "--action-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-detail",
+     "args": {}
+    },
+    {
+     "name": "--data-accessor-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-data-source",
+   "description": "Updates an existing Amazon Q Business data source connector.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--document-enrichment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-extraction-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--sync-schedule",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-index",
+   "description": "Updates an Amazon Q Business index.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capacity-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--document-attribute-configurations",
+     "args": {}
+    },
+    {
+     "name": "--index-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-plugin",
+   "description": "Updates an Amazon Q Business plugin.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-configuration",
+     "args": {}
+    },
+    {
+     "name": "--custom-plugin-configuration",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--plugin-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-url",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-retriever",
+   "description": "Updates the retriever used for your Amazon Q Business application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--retriever-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-subscription",
+   "description": "Updates the pricing tier for an Amazon Q Business subscription.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "Q_LITE",
+       "Q_BUSINESS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-user",
+   "description": "Updates a information associated with a user id.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-aliases-to-delete",
+     "args": {}
+    },
+    {
+     "name": "--user-aliases-to-update",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-web-experience",
+   "description": "Updates an Amazon Q Business web experience.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-configuration",
+     "args": {}
+    },
+    {
+     "name": "--browser-extension-configuration",
+     "args": {}
+    },
+    {
+     "name": "--customization-configuration",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-configuration",
+     "args": {}
+    },
+    {
+     "name": "--origins",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--sample-prompts-control-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--subtitle",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {}
+    },
+    {
+     "name": "--web-experience-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--welcome-message",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

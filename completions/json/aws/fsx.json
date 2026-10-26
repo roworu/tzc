@@ -1,0 +1,1303 @@
+{
+ "name": "fsx",
+ "description": "Amazon FSx is a fully managed service that makes it easy for storage and application administrators to launch and use shared file storage.",
+ "subcommands": [
+  {
+   "name": "associate-file-system-aliases",
+   "description": "Use this action to associate one or more Domain Name Server (DNS) aliases with an existing Amazon FSx for Windows File Server file system.",
+   "options": [
+    {
+     "name": "--aliases",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-data-repository-task",
+   "description": "Cancels an existing Amazon FSx for Lustre data repository task if that task is in either the PENDING or EXECUTING state.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-backup",
+   "description": "Copies an existing backup within the same Amazon Web Services account to another Amazon Web Services Region (cross-Region copy) or within the same Amazon Web Services Region (in-Region copy).",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--source-backup-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-region",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "copy-snapshot-and-update-volume",
+   "description": "Updates an existing volume by using a snapshot from another Amazon FSx for OpenZFS file system.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--copy-strategy",
+     "args": {
+      "suggestions": [
+       "CLONE",
+       "FULL_COPY",
+       "INCREMENTAL_COPY"
+      ]
+     }
+    },
+    {
+     "name": "--options",
+     "args": {}
+    },
+    {
+     "name": "--source-snapshot-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--volume-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-and-attach-s3-access-point",
+   "description": "Creates an S3 access point and attaches it to an Amazon FSx volume.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ontap-configuration",
+     "args": {}
+    },
+    {
+     "name": "--open-zfs-configuration",
+     "args": {}
+    },
+    {
+     "name": "--s3-access-point",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "OPENZFS",
+       "ONTAP"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-backup",
+   "description": "Creates a backup of an existing Amazon FSx for Windows File Server file system, Amazon FSx for Lustre file system, Amazon FSx for NetApp ONTAP volume, or Amazon FSx for OpenZFS file system.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--volume-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-repository-association",
+   "description": "Creates an Amazon FSx for Lustre data repository association (DRA).",
+   "options": [
+    {
+     "name": "--batch-import-meta-data-on-create"
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--data-repository-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-system-path",
+     "args": {}
+    },
+    {
+     "name": "--imported-file-chunk-size",
+     "args": {}
+    },
+    {
+     "name": "--no-batch-import-meta-data-on-create"
+    },
+    {
+     "name": "--s3",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-repository-task",
+   "description": "Creates an Amazon FSx for Lustre data repository task.",
+   "options": [
+    {
+     "name": "--capacity-to-release",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--paths",
+     "args": {}
+    },
+    {
+     "name": "--release-configuration",
+     "args": {}
+    },
+    {
+     "name": "--report",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "EXPORT_TO_REPOSITORY",
+       "IMPORT_METADATA_FROM_REPOSITORY",
+       "RELEASE_DATA_FROM_FILESYSTEM",
+       "AUTO_RELEASE_DATA"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-file-cache",
+   "description": "Creates a new Amazon File Cache resource.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-data-repository-associations"
+    },
+    {
+     "name": "--data-repository-associations",
+     "args": {}
+    },
+    {
+     "name": "--file-cache-type",
+     "args": {
+      "suggestions": [
+       "LUSTRE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--file-cache-type-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--lustre-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-tags-to-data-repository-associations"
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--storage-capacity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-file-system",
+   "description": "Creates a new, empty Amazon FSx file system.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-type",
+     "args": {
+      "suggestions": [
+       "WINDOWS",
+       "LUSTRE",
+       "ONTAP",
+       "OPENZFS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--file-system-type-version",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--lustre-configuration",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL"
+      ]
+     }
+    },
+    {
+     "name": "--ontap-configuration",
+     "args": {}
+    },
+    {
+     "name": "--open-zfs-configuration",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--storage-capacity",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {
+      "suggestions": [
+       "SSD",
+       "HDD",
+       "INTELLIGENT_TIERING"
+      ]
+     }
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--windows-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-file-system-from-backup",
+   "description": "Creates a new Amazon FSx for Lustre, Amazon FSx for Windows File Server, or Amazon FSx for OpenZFS file system from an existing Amazon FSx backup.",
+   "options": [
+    {
+     "name": "--backup-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-type-version",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--lustre-configuration",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL"
+      ]
+     }
+    },
+    {
+     "name": "--open-zfs-configuration",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--storage-capacity",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {
+      "suggestions": [
+       "SSD",
+       "HDD",
+       "INTELLIGENT_TIERING"
+      ]
+     }
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--windows-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot",
+   "description": "Creates a snapshot of an existing Amazon FSx for OpenZFS volume.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--volume-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-storage-virtual-machine",
+   "description": "Creates a storage virtual machine (SVM) for an Amazon FSx for ONTAP file system.",
+   "options": [
+    {
+     "name": "--active-directory-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--root-volume-security-style",
+     "args": {
+      "suggestions": [
+       "UNIX",
+       "NTFS",
+       "MIXED"
+      ]
+     }
+    },
+    {
+     "name": "--svm-admin-password",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-volume",
+   "description": "Creates an FSx for ONTAP or Amazon FSx for OpenZFS storage volume.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ontap-configuration",
+     "args": {}
+    },
+    {
+     "name": "--open-zfs-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--volume-type",
+     "args": {
+      "suggestions": [
+       "ONTAP",
+       "OPENZFS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-volume-from-backup",
+   "description": "Creates a new Amazon FSx for NetApp ONTAP volume from an existing Amazon FSx volume backup.",
+   "options": [
+    {
+     "name": "--backup-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ontap-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-backup",
+   "description": "Deletes an Amazon FSx backup.",
+   "options": [
+    {
+     "name": "--backup-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-data-repository-association",
+   "description": "Deletes a data repository association on an Amazon FSx for Lustre file system.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--delete-data-in-file-system"
+    },
+    {
+     "name": "--no-delete-data-in-file-system"
+    }
+   ]
+  },
+  {
+   "name": "delete-file-cache",
+   "description": "Deletes an Amazon File Cache resource.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-cache-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-file-system",
+   "description": "Deletes a file system.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lustre-configuration",
+     "args": {}
+    },
+    {
+     "name": "--open-zfs-configuration",
+     "args": {}
+    },
+    {
+     "name": "--windows-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-snapshot",
+   "description": "Deletes an Amazon FSx for OpenZFS snapshot.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-storage-virtual-machine",
+   "description": "Deletes an existing Amazon FSx for ONTAP storage virtual machine (SVM).",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--storage-virtual-machine-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-volume",
+   "description": "Deletes an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--ontap-configuration",
+     "args": {}
+    },
+    {
+     "name": "--open-zfs-configuration",
+     "args": {}
+    },
+    {
+     "name": "--volume-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-backups",
+   "description": "Returns the description of a specific Amazon FSx backup, if a BackupIds value is provided for that backup.",
+   "options": [
+    {
+     "name": "--backup-ids",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-data-repository-associations",
+   "description": "Returns the description of specific Amazon FSx for Lustre or Amazon File Cache data repository associations, if one or more AssociationIds values are provided in the request, or if filters are used in the request.",
+   "options": [
+    {
+     "name": "--association-ids",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-data-repository-tasks",
+   "description": "Returns the description of specific Amazon FSx for Lustre or Amazon File Cache data repository tasks, if one or more TaskIds values are provided in the request, or if filters are used in the request.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--task-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-file-caches",
+   "description": "Returns the description of a specific Amazon File Cache resource, if a FileCacheIds value is provided for that cache.",
+   "options": [
+    {
+     "name": "--file-cache-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-file-system-aliases",
+   "description": "Returns the DNS aliases that are associated with the specified Amazon FSx for Windows File Server file system.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-file-systems",
+   "description": "Returns the description of specific Amazon FSx file systems, if a FileSystemIds value is provided for that file system.",
+   "options": [
+    {
+     "name": "--file-system-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-s3-access-point-attachments",
+   "description": "Describes one or more S3 access points attached to Amazon FSx volumes.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-shared-vpc-configuration",
+   "description": "Indicates whether participant accounts in your organization can create Amazon FSx for NetApp ONTAP Multi-AZ file systems in subnets that are shared by a virtual private cloud (VPC) owner."
+  },
+  {
+   "name": "describe-snapshots",
+   "description": "Returns the description of specific Amazon FSx for OpenZFS snapshots, if a SnapshotIds value is provided.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-shared"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-shared"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-ids",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-storage-virtual-machines",
+   "description": "Describes one or more Amazon FSx for NetApp ONTAP storage virtual machines (SVMs).",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--storage-virtual-machine-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-volumes",
+   "description": "Describes one or more Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volumes.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--volume-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "detach-and-delete-s3-access-point",
+   "description": "Detaches an S3 access point from an Amazon FSx volume and deletes the S3 access point.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-file-system-aliases",
+   "description": "Use this action to disassociate, or remove, one or more Domain Name Service (DNS) aliases from an Amazon FSx for Windows File Server file system.",
+   "options": [
+    {
+     "name": "--aliases",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags for Amazon FSx resources.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "release-file-system-nfs-v3-locks",
+   "description": "Releases the file system lock from an Amazon FSx for OpenZFS file system.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-volume-from-snapshot",
+   "description": "Returns an Amazon FSx for OpenZFS volume to the state saved by the specified snapshot.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--options",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--volume-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-misconfigured-state-recovery",
+   "description": "After performing steps to repair the Active Directory configuration of an FSx for Windows File Server file system, use this action to initiate the process of Amazon FSx attempting to reconnect to the file system.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tags an Amazon FSx resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "This action removes a tag from an Amazon FSx resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-repository-association",
+   "description": "Updates the configuration of an existing data repository association on an Amazon FSx for Lustre file system.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--imported-file-chunk-size",
+     "args": {}
+    },
+    {
+     "name": "--s3",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-file-cache",
+   "description": "Updates the configuration of an existing Amazon File Cache resource.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-cache-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lustre-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-file-system",
+   "description": "Use this operation to update the configuration of an existing Amazon FSx file system.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-system-type-version",
+     "args": {}
+    },
+    {
+     "name": "--lustre-configuration",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL"
+      ]
+     }
+    },
+    {
+     "name": "--ontap-configuration",
+     "args": {}
+    },
+    {
+     "name": "--open-zfs-configuration",
+     "args": {}
+    },
+    {
+     "name": "--storage-capacity",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {
+      "suggestions": [
+       "SSD",
+       "HDD",
+       "INTELLIGENT_TIERING"
+      ]
+     }
+    },
+    {
+     "name": "--windows-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-shared-vpc-configuration",
+   "description": "Configures whether participant accounts in your organization can create Amazon FSx for NetApp ONTAP Multi-AZ file systems in subnets that are shared by a virtual private cloud (VPC) owner.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--enable-fsx-route-table-updates-from-participant-accounts",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-snapshot",
+   "description": "Updates the name of an Amazon FSx for OpenZFS snapshot.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-storage-virtual-machine",
+   "description": "Updates an FSx for ONTAP storage virtual machine (SVM).",
+   "options": [
+    {
+     "name": "--active-directory-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--storage-virtual-machine-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--svm-admin-password",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-volume",
+   "description": "Updates the configuration of an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--ontap-configuration",
+     "args": {}
+    },
+    {
+     "name": "--open-zfs-configuration",
+     "args": {}
+    },
+    {
+     "name": "--volume-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

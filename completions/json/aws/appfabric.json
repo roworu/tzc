@@ -1,0 +1,537 @@
+{
+ "name": "appfabric",
+ "description": "Amazon Web Services AppFabric quickly connects software as a service (SaaS) applications across your organization.",
+ "subcommands": [
+  {
+   "name": "batch-get-user-access-tasks",
+   "description": "Gets user access details in a batch request.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "connect-app-authorization",
+   "description": "Establishes a connection between Amazon Web Services AppFabric and an application, which allows AppFabric to call the APIs of the application.",
+   "options": [
+    {
+     "name": "--app-authorization-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-request",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-app-authorization",
+   "description": "Creates an app authorization within an app bundle, which allows AppFabric to connect to an application.",
+   "options": [
+    {
+     "name": "--app",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "oauth2",
+       "apiKey"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--credential",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tenant",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-app-bundle",
+   "description": "Creates an app bundle to collect data from an application using AppFabric.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--customer-managed-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-ingestion",
+   "description": "Creates a data ingestion for an application.",
+   "options": [
+    {
+     "name": "--app",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--ingestion-type",
+     "args": {
+      "suggestions": [
+       "auditLog"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tenant-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-ingestion-destination",
+   "description": "Creates an ingestion destination, which specifies how an application's ingested data is processed by Amazon Web Services AppFabric and where it's delivered.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destination-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--processing-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-app-authorization",
+   "description": "Deletes an app authorization.",
+   "options": [
+    {
+     "name": "--app-authorization-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-app-bundle",
+   "description": "Deletes an app bundle.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ingestion",
+   "description": "Deletes an ingestion.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ingestion-destination",
+   "description": "Deletes an ingestion destination.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-destination-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-app-authorization",
+   "description": "Returns information about an app authorization.",
+   "options": [
+    {
+     "name": "--app-authorization-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-app-bundle",
+   "description": "Returns information about an app bundle.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ingestion",
+   "description": "Returns information about an ingestion.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ingestion-destination",
+   "description": "Returns information about an ingestion destination.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-destination-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-app-authorizations",
+   "description": "Returns a list of all app authorizations configured for an app bundle.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-bundles",
+   "description": "Returns a list of app bundles.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ingestion-destinations",
+   "description": "Returns a list of all ingestion destinations configured for an ingestion.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ingestions",
+   "description": "Returns a list of all ingestions configured for an app bundle.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-ingestion",
+   "description": "Starts (enables) an ingestion, which collects data from an application.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-user-access-tasks",
+   "description": "Starts the tasks to search user access status for a specific email address.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-ingestion",
+   "description": "Stops (disables) an ingestion.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag or tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-app-authorization",
+   "description": "Updates an app authorization within an app bundle, which allows AppFabric to connect to an application.",
+   "options": [
+    {
+     "name": "--app-authorization-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--credential",
+     "args": {}
+    },
+    {
+     "name": "--tenant",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-ingestion-destination",
+   "description": "Updates an ingestion destination, which specifies how an application's ingested data is processed by Amazon Web Services AppFabric and where it's delivered.",
+   "options": [
+    {
+     "name": "--app-bundle-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-destination-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

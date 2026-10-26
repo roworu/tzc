@@ -1,0 +1,607 @@
+{
+ "name": "efs",
+ "description": "Amazon Elastic File System Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac instances in the Amazon Web Services Cloud.",
+ "subcommands": [
+  {
+   "name": "create-access-point",
+   "description": "Creates an EFS access point.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--posix-user",
+     "args": {}
+    },
+    {
+     "name": "--root-directory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-file-system",
+   "description": "Creates a new, empty file system.",
+   "options": [
+    {
+     "name": "--availability-zone-name",
+     "args": {}
+    },
+    {
+     "name": "--backup"
+    },
+    {
+     "name": "--creation-token",
+     "args": {}
+    },
+    {
+     "name": "--encrypted"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-backup"
+    },
+    {
+     "name": "--no-encrypted"
+    },
+    {
+     "name": "--performance-mode",
+     "args": {
+      "suggestions": [
+       "generalPurpose",
+       "maxIO"
+      ]
+     }
+    },
+    {
+     "name": "--provisioned-throughput-in-mibps",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--throughput-mode",
+     "args": {
+      "suggestions": [
+       "bursting",
+       "provisioned",
+       "elastic"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-mount-target",
+   "description": "Creates a mount target for a file system.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-address",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4_ONLY",
+       "IPV6_ONLY",
+       "DUAL_STACK"
+      ]
+     }
+    },
+    {
+     "name": "--ipv6-address",
+     "args": {}
+    },
+    {
+     "name": "--security-groups",
+     "args": {}
+    },
+    {
+     "name": "--subnet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-replication-configuration",
+   "description": "Creates a replication con\ufb01guration to either a new or existing EFS file system.",
+   "options": [
+    {
+     "name": "--destinations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-tags",
+   "description": "DEPRECATED - CreateTags is deprecated and not maintained.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-point",
+   "description": "Deletes the specified access point.",
+   "options": [
+    {
+     "name": "--access-point-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-file-system",
+   "description": "Deletes a file system, permanently severing access to its contents.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-file-system-policy",
+   "description": "Deletes the FileSystemPolicy for the specified file system.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-mount-target",
+   "description": "Deletes the specified mount target.",
+   "options": [
+    {
+     "name": "--mount-target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-configuration",
+   "description": "Deletes a replication configuration.",
+   "options": [
+    {
+     "name": "--deletion-mode",
+     "args": {
+      "suggestions": [
+       "ALL_CONFIGURATIONS",
+       "LOCAL_CONFIGURATION_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--source-file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tags",
+   "description": "DEPRECATED - DeleteTags is deprecated and not maintained.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-access-points",
+   "description": "Returns the description of a specific Amazon EFS access point if the AccessPointId is provided.",
+   "options": [
+    {
+     "name": "--access-point-id",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-account-preferences",
+   "description": "Returns the account preferences settings for the Amazon Web Services account associated with the user making the request, in the current Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-backup-policy",
+   "description": "Returns the backup policy for the specified EFS file system.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-file-system-policy",
+   "description": "Returns the FileSystemPolicy for the specified EFS file system.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-file-systems",
+   "description": "Returns the description of a specific Amazon EFS file system if either the file system CreationToken or the FileSystemId is provided.",
+   "options": [
+    {
+     "name": "--creation-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-lifecycle-configuration",
+   "description": "Returns the current LifecycleConfiguration object for the specified EFS file system.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-mount-target-security-groups",
+   "description": "Returns the security groups currently in effect for a mount target.",
+   "options": [
+    {
+     "name": "--mount-target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-mount-targets",
+   "description": "Returns the descriptions of all the current mount targets, or a specific mount target, for a file system.",
+   "options": [
+    {
+     "name": "--access-point-id",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mount-target-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-configurations",
+   "description": "Retrieves the replication configuration for a specific file system.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tags",
+   "description": "DEPRECATED - The DescribeTags action is deprecated and not maintained.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags for a top-level EFS resource.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-mount-target-security-groups",
+   "description": "Modifies the set of security groups in effect for a mount target.",
+   "options": [
+    {
+     "name": "--mount-target-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-groups",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-account-preferences",
+   "description": "Use this operation to set the account preference in the current Amazon Web Services Region to use long 17 character (63 bit) or short 8 character (32 bit) resource IDs for new EFS file system and mount target resources.",
+   "options": [
+    {
+     "name": "--resource-id-type",
+     "args": {
+      "suggestions": [
+       "LONG_ID",
+       "SHORT_ID"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-backup-policy",
+   "description": "Updates the file system's backup policy.",
+   "options": [
+    {
+     "name": "--backup-policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-file-system-policy",
+   "description": "Applies an Amazon EFS FileSystemPolicy to an Amazon EFS file system.",
+   "options": [
+    {
+     "name": "--bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-lifecycle-configuration",
+   "description": "Use this action to manage storage for your file system.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lifecycle-policies",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Creates a tag for an EFS resource.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from an EFS resource.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-file-system",
+   "description": "Updates the throughput mode or the amount of provisioned throughput of an existing file system.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioned-throughput-in-mibps",
+     "args": {}
+    },
+    {
+     "name": "--throughput-mode",
+     "args": {
+      "suggestions": [
+       "bursting",
+       "provisioned",
+       "elastic"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-file-system-protection",
+   "description": "Updates protection on the file system.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-overwrite-protection",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED",
+       "REPLICATING"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

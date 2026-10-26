@@ -1,0 +1,3277 @@
+{
+ "name": "cognito-idp",
+ "description": "With the Amazon Cognito user pools API, you can configure user pools and authenticate users.",
+ "subcommands": [
+  {
+   "name": "add-custom-attributes",
+   "description": "Adds additional user attributes to the user pool schema.",
+   "options": [
+    {
+     "name": "--custom-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-user-pool-client-secret",
+   "description": "Creates a new client secret for an existing confidential user pool app client.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-secret",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-add-user-to-group",
+   "description": "Adds a user to a group.",
+   "options": [
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-confirm-sign-up",
+   "description": "Confirms user sign-up as an administrator.",
+   "options": [
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-create-user",
+   "description": "Creates a new user in the specified user pool.",
+   "options": [
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--desired-delivery-mediums",
+     "args": {}
+    },
+    {
+     "name": "--force-alias-creation"
+    },
+    {
+     "name": "--message-action",
+     "args": {
+      "suggestions": [
+       "RESEND",
+       "SUPPRESS"
+      ]
+     }
+    },
+    {
+     "name": "--no-force-alias-creation"
+    },
+    {
+     "name": "--temporary-password",
+     "args": {}
+    },
+    {
+     "name": "--user-attributes",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "admin-delete-user",
+   "description": "Deletes a user profile in your user pool.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-delete-user-attributes",
+   "description": "Deletes attribute values from a user.",
+   "options": [
+    {
+     "name": "--user-attribute-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-disable-provider-for-user",
+   "description": "Prevents the user from signing in with the specified external (SAML or social) identity provider (IdP).",
+   "options": [
+    {
+     "name": "--user",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-disable-user",
+   "description": "Deactivates a user profile and revokes all access tokens for the user.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-enable-user",
+   "description": "Activates sign-in for a user profile that previously had sign-in access disabled.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-forget-device",
+   "description": "Forgets, or deletes, a remembered device from a user's profile.",
+   "options": [
+    {
+     "name": "--device-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-get-device",
+   "description": "Given the device key, returns details for a user's device.",
+   "options": [
+    {
+     "name": "--device-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-get-user",
+   "description": "Given a username, returns details about a user profile in a user pool.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-get-user-auth-factors",
+   "description": "Lists the authentication options for a user in a user pool.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-initiate-auth",
+   "description": "Starts sign-in for applications with a server-side component, for example a traditional web application.",
+   "options": [
+    {
+     "name": "--analytics-metadata",
+     "args": {}
+    },
+    {
+     "name": "--auth-flow",
+     "args": {
+      "suggestions": [
+       "USER_SRP_AUTH",
+       "REFRESH_TOKEN_AUTH",
+       "REFRESH_TOKEN",
+       "CUSTOM_AUTH",
+       "ADMIN_NO_SRP_AUTH",
+       "USER_PASSWORD_AUTH",
+       "ADMIN_USER_PASSWORD_AUTH",
+       "USER_AUTH"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--auth-parameters",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--context-data",
+     "args": {}
+    },
+    {
+     "name": "--session",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-link-provider-for-user",
+   "description": "Links an existing user account in a user pool, or DestinationUser, to an identity from an external IdP, or SourceUser, based on a specified attribute name and value from the external IdP.",
+   "options": [
+    {
+     "name": "--destination-user",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-user",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-list-devices",
+   "description": "Lists a user's registered devices.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--pagination-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-list-groups-for-user",
+   "description": "Lists the groups that a user belongs to.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-list-user-auth-events",
+   "description": "Requests a history of user activity and any risks detected as part of Amazon Cognito threat protection.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-remove-user-from-group",
+   "description": "Given a username and a group name, removes them from the group.",
+   "options": [
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-reset-user-password",
+   "description": "Begins the password reset process.",
+   "options": [
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-respond-to-auth-challenge",
+   "description": "Some API operations in a user pool generate a challenge, like a prompt for an MFA code, for device authentication that bypasses MFA, or for a custom authentication challenge.",
+   "options": [
+    {
+     "name": "--analytics-metadata",
+     "args": {}
+    },
+    {
+     "name": "--challenge-name",
+     "args": {
+      "suggestions": [
+       "SMS_MFA",
+       "EMAIL_OTP",
+       "SOFTWARE_TOKEN_MFA",
+       "SELECT_MFA_TYPE",
+       "MFA_SETUP",
+       "PASSWORD_VERIFIER",
+       "CUSTOM_CHALLENGE",
+       "SELECT_CHALLENGE",
+       "DEVICE_SRP_AUTH",
+       "DEVICE_PASSWORD_VERIFIER",
+       "ADMIN_NO_SRP_AUTH",
+       "NEW_PASSWORD_REQUIRED",
+       "SMS_OTP",
+       "PASSWORD",
+       "WEB_AUTHN",
+       "PASSWORD_SRP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--challenge-responses",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--context-data",
+     "args": {}
+    },
+    {
+     "name": "--session",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-set-user-mfa-preference",
+   "description": "Sets the user's multi-factor authentication (MFA) preference, including which MFA options are activated, and if any are preferred.",
+   "options": [
+    {
+     "name": "--email-mfa-settings",
+     "args": {}
+    },
+    {
+     "name": "--sms-mfa-settings",
+     "args": {}
+    },
+    {
+     "name": "--software-token-mfa-settings",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--web-authn-mfa-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "admin-set-user-password",
+   "description": "Sets the specified user's password in a user pool.",
+   "options": [
+    {
+     "name": "--no-permanent"
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permanent"
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-set-user-settings",
+   "description": "This action is no longer supported.",
+   "options": [
+    {
+     "name": "--mfa-options",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-update-auth-event-feedback",
+   "description": "Provides the feedback for an authentication event generated by threat protection features.",
+   "options": [
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feedback-value",
+     "args": {
+      "suggestions": [
+       "Valid",
+       "Invalid"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-update-device-status",
+   "description": "Updates the status of a user's device so that it is marked as remembered or not remembered for the purpose of device authentication.",
+   "options": [
+    {
+     "name": "--device-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-remembered-status",
+     "args": {
+      "suggestions": [
+       "remembered",
+       "not_remembered"
+      ]
+     }
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-update-user-attributes",
+   "description": "Updates the specified user's attributes.",
+   "options": [
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--user-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "admin-user-global-sign-out",
+   "description": "Invalidates the identity, access, and refresh tokens that Amazon Cognito issued to a user.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-software-token",
+   "description": "Begins setup of time-based one-time password (TOTP) multi-factor authentication (MFA) for a user, with a unique private key that Amazon Cognito generates and returns in the API response.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {}
+    },
+    {
+     "name": "--session",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "change-password",
+   "description": "Changes the password for the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--previous-password",
+     "args": {}
+    },
+    {
+     "name": "--proposed-password",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "complete-web-authn-registration",
+   "description": "Completes registration of a passkey authenticator for the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--credential",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "confirm-device",
+   "description": "Confirms a device that a user wants to remember.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-name",
+     "args": {}
+    },
+    {
+     "name": "--device-secret-verifier-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "confirm-forgot-password",
+   "description": "This public API operation accepts a confirmation code that Amazon Cognito sent to a user and accepts a new password for that user.",
+   "options": [
+    {
+     "name": "--analytics-metadata",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--confirmation-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-hash",
+     "args": {}
+    },
+    {
+     "name": "--user-context-data",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "confirm-sign-up",
+   "description": "Confirms the account of a new user.",
+   "options": [
+    {
+     "name": "--analytics-metadata",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--confirmation-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-alias-creation"
+    },
+    {
+     "name": "--no-force-alias-creation"
+    },
+    {
+     "name": "--secret-hash",
+     "args": {}
+    },
+    {
+     "name": "--session",
+     "args": {}
+    },
+    {
+     "name": "--user-context-data",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-group",
+   "description": "Creates a new group in the specified user pool.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--precedence",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-identity-provider",
+   "description": "Adds a configuration and trust relationship between a third-party identity provider (IdP) and a user pool.",
+   "options": [
+    {
+     "name": "--attribute-mapping",
+     "args": {}
+    },
+    {
+     "name": "--idp-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--provider-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider-type",
+     "args": {
+      "suggestions": [
+       "SAML",
+       "Facebook",
+       "Google",
+       "LoginWithAmazon",
+       "SignInWithApple",
+       "OIDC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-managed-login-branding",
+   "description": "Creates a new set of branding settings for a user pool style and associates it with an app client.",
+   "options": [
+    {
+     "name": "--assets",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-use-cognito-provided-values"
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--use-cognito-provided-values"
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-resource-server",
+   "description": "Creates a new OAuth2.0 resource server and defines custom scopes within it.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scopes",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-terms",
+   "description": "Creates terms documents for the requested app client.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enforcement",
+     "args": {
+      "suggestions": [
+       "NONE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--links",
+     "args": {}
+    },
+    {
+     "name": "--terms-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--terms-source",
+     "args": {
+      "suggestions": [
+       "LINK"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user-import-job",
+   "description": "Creates a user import job.",
+   "options": [
+    {
+     "name": "--cloud-watch-logs-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password-hashing-algorithm",
+     "args": {
+      "suggestions": [
+       "BCRYPT",
+       "SCRYPT",
+       "ARGON2ID",
+       "PBKDF2_SHA256"
+      ]
+     }
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user-pool",
+   "description": "Creates a new Amazon Cognito user pool.",
+   "options": [
+    {
+     "name": "--account-recovery-setting",
+     "args": {}
+    },
+    {
+     "name": "--admin-create-user-config",
+     "args": {}
+    },
+    {
+     "name": "--alias-attributes",
+     "args": {}
+    },
+    {
+     "name": "--auto-verified-attributes",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--device-configuration",
+     "args": {}
+    },
+    {
+     "name": "--email-configuration",
+     "args": {}
+    },
+    {
+     "name": "--email-verification-message",
+     "args": {}
+    },
+    {
+     "name": "--email-verification-subject",
+     "args": {}
+    },
+    {
+     "name": "--issuer-configuration",
+     "args": {}
+    },
+    {
+     "name": "--key-configuration",
+     "args": {}
+    },
+    {
+     "name": "--lambda-config",
+     "args": {}
+    },
+    {
+     "name": "--mfa-configuration",
+     "args": {
+      "suggestions": [
+       "OFF",
+       "ON",
+       "OPTIONAL"
+      ]
+     }
+    },
+    {
+     "name": "--policies",
+     "args": {}
+    },
+    {
+     "name": "--pool-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    },
+    {
+     "name": "--sms-authentication-message",
+     "args": {}
+    },
+    {
+     "name": "--sms-configuration",
+     "args": {}
+    },
+    {
+     "name": "--sms-verification-message",
+     "args": {}
+    },
+    {
+     "name": "--user-attribute-update-settings",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-add-ons",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-tags",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-tier",
+     "args": {
+      "suggestions": [
+       "LITE",
+       "ESSENTIALS",
+       "PLUS"
+      ]
+     }
+    },
+    {
+     "name": "--username-attributes",
+     "args": {}
+    },
+    {
+     "name": "--username-configuration",
+     "args": {}
+    },
+    {
+     "name": "--verification-message-template",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-user-pool-client",
+   "description": "Creates an app client in a user pool.",
+   "options": [
+    {
+     "name": "--access-token-validity",
+     "args": {}
+    },
+    {
+     "name": "--allowed-o-auth-flows",
+     "args": {}
+    },
+    {
+     "name": "--allowed-o-auth-flows-user-pool-client"
+    },
+    {
+     "name": "--allowed-o-auth-scopes",
+     "args": {}
+    },
+    {
+     "name": "--analytics-configuration",
+     "args": {}
+    },
+    {
+     "name": "--auth-session-validity",
+     "args": {}
+    },
+    {
+     "name": "--callback-urls",
+     "args": {}
+    },
+    {
+     "name": "--client-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-secret",
+     "args": {}
+    },
+    {
+     "name": "--default-redirect-uri",
+     "args": {}
+    },
+    {
+     "name": "--enable-propagate-additional-user-context-data"
+    },
+    {
+     "name": "--enable-token-revocation"
+    },
+    {
+     "name": "--explicit-auth-flows",
+     "args": {}
+    },
+    {
+     "name": "--generate-secret"
+    },
+    {
+     "name": "--id-token-validity",
+     "args": {}
+    },
+    {
+     "name": "--logout-urls",
+     "args": {}
+    },
+    {
+     "name": "--no-allowed-o-auth-flows-user-pool-client"
+    },
+    {
+     "name": "--no-enable-propagate-additional-user-context-data"
+    },
+    {
+     "name": "--no-enable-token-revocation"
+    },
+    {
+     "name": "--no-generate-secret"
+    },
+    {
+     "name": "--prevent-user-existence-errors",
+     "args": {
+      "suggestions": [
+       "LEGACY",
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--read-attributes",
+     "args": {}
+    },
+    {
+     "name": "--refresh-token-rotation",
+     "args": {}
+    },
+    {
+     "name": "--refresh-token-validity",
+     "args": {}
+    },
+    {
+     "name": "--supported-identity-providers",
+     "args": {}
+    },
+    {
+     "name": "--token-validity-units",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--write-attributes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-user-pool-domain",
+   "description": "A user pool domain hosts managed login, an authorization server and web server for authentication in your application.",
+   "options": [
+    {
+     "name": "--custom-domain-config",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-login-version",
+     "args": {}
+    },
+    {
+     "name": "--routing",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user-pool-replica",
+   "description": "Creates a replica of an existing user pool in a specified Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-group",
+   "description": "Deletes a group from the specified user pool.",
+   "options": [
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-identity-provider",
+   "description": "Deletes a user pool identity provider (IdP).",
+   "options": [
+    {
+     "name": "--provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-managed-login-branding",
+   "description": "Deletes a managed login branding style.",
+   "options": [
+    {
+     "name": "--managed-login-branding-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-server",
+   "description": "Deletes a resource server.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-terms",
+   "description": "Deletes the terms documents with the requested ID from your app client.",
+   "options": [
+    {
+     "name": "--terms-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user",
+   "description": "Deletes the profile of the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user-attributes",
+   "description": "Deletes attributes from the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-attribute-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user-pool",
+   "description": "Deletes a user pool.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user-pool-client",
+   "description": "Deletes a user pool app client.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user-pool-client-secret",
+   "description": "Deletes a specific client secret from a user pool app client.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-secret-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user-pool-domain",
+   "description": "Given a user pool ID and domain identifier, deletes a user pool domain.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user-pool-replica",
+   "description": "Deletes a secondary replica user pool.",
+   "options": [
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-web-authn-credential",
+   "description": "Deletes a registered passkey, or WebAuthn, authenticator for the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--credential-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-identity-provider",
+   "description": "Given a user pool ID and identity provider (IdP) name, returns details about the IdP.",
+   "options": [
+    {
+     "name": "--provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-managed-login-branding",
+   "description": "Given the ID of a managed login branding style, returns detailed information about the style.",
+   "options": [
+    {
+     "name": "--managed-login-branding-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-return-merged-resources"
+    },
+    {
+     "name": "--return-merged-resources"
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-managed-login-branding-by-client",
+   "description": "Given the ID of a user pool app client, returns detailed information about the style assigned to the app client.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-return-merged-resources"
+    },
+    {
+     "name": "--return-merged-resources"
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-server",
+   "description": "Describes a resource server.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-risk-configuration",
+   "description": "Given an app client or user pool ID where threat protection is configured, describes the risk configuration.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-terms",
+   "description": "Returns details for the requested terms documents ID.",
+   "options": [
+    {
+     "name": "--terms-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-user-import-job",
+   "description": "Describes a user import job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-user-pool",
+   "description": "Given a user pool ID, returns configuration information.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-user-pool-client",
+   "description": "Given an app client ID, returns configuration information.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-user-pool-domain",
+   "description": "Given a user pool domain name, returns information about the domain configuration.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "forget-device",
+   "description": "Given a device key, deletes a remembered device as the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {}
+    },
+    {
+     "name": "--device-key",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "forgot-password",
+   "description": "Sends a password-reset confirmation code to the email address or phone number of the requested username.",
+   "options": [
+    {
+     "name": "--analytics-metadata",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--secret-hash",
+     "args": {}
+    },
+    {
+     "name": "--user-context-data",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-csv-header",
+   "description": "Given a user pool ID, generates a comma-separated value (CSV) list populated with available user attributes in the user pool.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-device",
+   "description": "Given a device key, returns information about a remembered device for the current user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {}
+    },
+    {
+     "name": "--device-key",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-group",
+   "description": "Given a user pool ID and a group name, returns information about the user group.",
+   "options": [
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-identity-provider-by-identifier",
+   "description": "Given the identifier of an identity provider (IdP), for example examplecorp, returns information about the user pool configuration for that IdP.",
+   "options": [
+    {
+     "name": "--idp-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-log-delivery-configuration",
+   "description": "Given a user pool ID, returns the logging configuration.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-provisioned-limit",
+   "description": "Returns the current provisioned limit for a specific API category.",
+   "options": [
+    {
+     "name": "--limit-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-signing-certificate",
+   "description": "Given a user pool ID, returns the signing certificate for SAML 2.0 federation.",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-tokens-from-refresh-token",
+   "description": "Given a refresh token, issues new ID, access, and optionally refresh tokens for the user who owns the submitted token.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--client-secret",
+     "args": {}
+    },
+    {
+     "name": "--device-key",
+     "args": {}
+    },
+    {
+     "name": "--refresh-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ui-customization",
+   "description": "Given a user pool ID or app client, returns information about classic hosted UI branding that you applied, if any.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user",
+   "description": "Gets user attributes and and MFA settings for the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user-attribute-verification-code",
+   "description": "Given an attribute name, sends a user attribute verification code for the specified attribute name to the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-user-auth-factors",
+   "description": "Lists the authentication options for the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user-pool-mfa-config",
+   "description": "Given a user pool ID, returns configuration for sign-in with WebAuthn authenticators and for multi-factor authentication (MFA).",
+   "options": [
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "global-sign-out",
+   "description": "Invalidates the identity, access, and refresh tokens that Amazon Cognito issued to a user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "initiate-auth",
+   "description": "Declares an authentication flow and initiates sign-in for a user in the Amazon Cognito user directory.",
+   "options": [
+    {
+     "name": "--analytics-metadata",
+     "args": {}
+    },
+    {
+     "name": "--auth-flow",
+     "args": {
+      "suggestions": [
+       "USER_SRP_AUTH",
+       "REFRESH_TOKEN_AUTH",
+       "REFRESH_TOKEN",
+       "CUSTOM_AUTH",
+       "ADMIN_NO_SRP_AUTH",
+       "USER_PASSWORD_AUTH",
+       "ADMIN_USER_PASSWORD_AUTH",
+       "USER_AUTH"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--auth-parameters",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--session",
+     "args": {}
+    },
+    {
+     "name": "--user-context-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-devices",
+   "description": "Lists the devices that Amazon Cognito has registered to the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--pagination-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-groups",
+   "description": "Given a user pool ID, returns user pool groups and their details.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-identity-providers",
+   "description": "Given a user pool ID, returns information about configured identity providers (IdPs).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-resource-servers",
+   "description": "Given a user pool ID, returns all resource servers and their details.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags that are assigned to an Amazon Cognito user pool.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-terms",
+   "description": "Returns details about all terms documents for the requested user pool.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-user-import-jobs",
+   "description": "Given a user pool ID, returns user import jobs and their details.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pagination-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-user-pool-client-secrets",
+   "description": "Lists all client secrets associated with a user pool app client.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-user-pool-clients",
+   "description": "Given a user pool ID, lists app clients.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-user-pool-replicas",
+   "description": "Lists all replicas for a user pool, including both primary and secondary replicas.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-user-pools",
+   "description": "Lists user pools and their details in the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-users",
+   "description": "Given a user pool ID, returns a list of users and their basic details in a user pool.",
+   "options": [
+    {
+     "name": "--attributes-to-get",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-users-in-group",
+   "description": "Given a user pool ID and a group name, returns a list of users in the group.",
+   "options": [
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-web-authn-credentials",
+   "description": "Generates a list of the currently signed-in user's registered passkey, or WebAuthn, credentials.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "resend-confirmation-code",
+   "description": "Resends the code that confirms a new account for a user who has signed up in your user pool.",
+   "options": [
+    {
+     "name": "--analytics-metadata",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--secret-hash",
+     "args": {}
+    },
+    {
+     "name": "--user-context-data",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "respond-to-auth-challenge",
+   "description": "Some API operations in a user pool generate a challenge, like a prompt for an MFA code, for device authentication that bypasses MFA, or for a custom authentication challenge.",
+   "options": [
+    {
+     "name": "--analytics-metadata",
+     "args": {}
+    },
+    {
+     "name": "--challenge-name",
+     "args": {
+      "suggestions": [
+       "SMS_MFA",
+       "EMAIL_OTP",
+       "SOFTWARE_TOKEN_MFA",
+       "SELECT_MFA_TYPE",
+       "MFA_SETUP",
+       "PASSWORD_VERIFIER",
+       "CUSTOM_CHALLENGE",
+       "SELECT_CHALLENGE",
+       "DEVICE_SRP_AUTH",
+       "DEVICE_PASSWORD_VERIFIER",
+       "ADMIN_NO_SRP_AUTH",
+       "NEW_PASSWORD_REQUIRED",
+       "SMS_OTP",
+       "PASSWORD",
+       "WEB_AUTHN",
+       "PASSWORD_SRP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--challenge-responses",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--session",
+     "args": {}
+    },
+    {
+     "name": "--user-context-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "revoke-token",
+   "description": "Revokes all of the access tokens generated by, and at the same time as, the specified refresh token.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-secret",
+     "args": {}
+    },
+    {
+     "name": "--token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-log-delivery-configuration",
+   "description": "Sets up or modifies the logging configuration of a user pool.",
+   "options": [
+    {
+     "name": "--log-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-risk-configuration",
+   "description": "Configures threat protection for a user pool or app client.",
+   "options": [
+    {
+     "name": "--account-takeover-risk-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {}
+    },
+    {
+     "name": "--compromised-credentials-risk-configuration",
+     "args": {}
+    },
+    {
+     "name": "--risk-exception-configuration",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-ui-customization",
+   "description": "Configures UI branding settings for domains with the hosted UI (classic) branding version.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {}
+    },
+    {
+     "name": "--css",
+     "args": {}
+    },
+    {
+     "name": "--image-file",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-user-mfa-preference",
+   "description": "Set the user's multi-factor authentication (MFA) method preference, including which MFA factors are activated and if any are preferred.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email-mfa-settings",
+     "args": {}
+    },
+    {
+     "name": "--sms-mfa-settings",
+     "args": {}
+    },
+    {
+     "name": "--software-token-mfa-settings",
+     "args": {}
+    },
+    {
+     "name": "--web-authn-mfa-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "set-user-pool-mfa-config",
+   "description": "Sets user pool multi-factor authentication (MFA) and passkey configuration.",
+   "options": [
+    {
+     "name": "--email-mfa-configuration",
+     "args": {}
+    },
+    {
+     "name": "--mfa-configuration",
+     "args": {
+      "suggestions": [
+       "OFF",
+       "ON",
+       "OPTIONAL"
+      ]
+     }
+    },
+    {
+     "name": "--sms-mfa-configuration",
+     "args": {}
+    },
+    {
+     "name": "--software-token-mfa-configuration",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--web-authn-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "set-user-settings",
+   "description": "This action is no longer supported.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mfa-options",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "sign-up",
+   "description": "Registers a user with an app client and requests a user name, password, and user attributes in the user pool.",
+   "options": [
+    {
+     "name": "--analytics-metadata",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--secret-hash",
+     "args": {}
+    },
+    {
+     "name": "--user-attributes",
+     "args": {}
+    },
+    {
+     "name": "--user-context-data",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-user-import-job",
+   "description": "Instructs your user pool to start importing users from a CSV file that contains their usernames and attributes.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-web-authn-registration",
+   "description": "Requests credential creation options from your user pool for the currently signed-in user.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-user-import-job",
+   "description": "Instructs your user pool to stop a running job that's importing users from a CSV file that contains their usernames and attributes.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns a set of tags to an Amazon Cognito user pool.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Given tag IDs that you previously assigned to a user pool, removes them.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-auth-event-feedback",
+   "description": "Provides the feedback for an authentication event generated by threat protection features.",
+   "options": [
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feedback-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feedback-value",
+     "args": {
+      "suggestions": [
+       "Valid",
+       "Invalid"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-device-status",
+   "description": "Updates the status of a the currently signed-in user's device so that it is marked as remembered or not remembered for the purpose of device authentication.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-remembered-status",
+     "args": {
+      "suggestions": [
+       "remembered",
+       "not_remembered"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-group",
+   "description": "Given the name of a user pool group, updates any of the properties for precedence, IAM role, or description.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--precedence",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-identity-provider",
+   "description": "Modifies the configuration and trust relationship between a third-party identity provider (IdP) and a user pool.",
+   "options": [
+    {
+     "name": "--attribute-mapping",
+     "args": {}
+    },
+    {
+     "name": "--idp-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--provider-details",
+     "args": {}
+    },
+    {
+     "name": "--provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-managed-login-branding",
+   "description": "Configures the branding settings for a user pool style.",
+   "options": [
+    {
+     "name": "--assets",
+     "args": {}
+    },
+    {
+     "name": "--managed-login-branding-id",
+     "args": {}
+    },
+    {
+     "name": "--no-use-cognito-provided-values"
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--use-cognito-provided-values"
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-provisioned-limit",
+   "description": "Sets the provisioned limit for a specific API category.",
+   "options": [
+    {
+     "name": "--limit-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requested-limit-value",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-resource-server",
+   "description": "Updates the name and scopes of a resource server.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scopes",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-terms",
+   "description": "Modifies existing terms documents for the requested app client.",
+   "options": [
+    {
+     "name": "--enforcement",
+     "args": {
+      "suggestions": [
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--links",
+     "args": {}
+    },
+    {
+     "name": "--terms-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--terms-name",
+     "args": {}
+    },
+    {
+     "name": "--terms-source",
+     "args": {
+      "suggestions": [
+       "LINK"
+      ]
+     }
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-user-attributes",
+   "description": "Updates the currently signed-in user's attributes.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-metadata",
+     "args": {}
+    },
+    {
+     "name": "--user-attributes",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-user-pool",
+   "description": "Updates the configuration of a user pool.",
+   "options": [
+    {
+     "name": "--account-recovery-setting",
+     "args": {}
+    },
+    {
+     "name": "--admin-create-user-config",
+     "args": {}
+    },
+    {
+     "name": "--auto-verified-attributes",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--device-configuration",
+     "args": {}
+    },
+    {
+     "name": "--email-configuration",
+     "args": {}
+    },
+    {
+     "name": "--email-verification-message",
+     "args": {}
+    },
+    {
+     "name": "--email-verification-subject",
+     "args": {}
+    },
+    {
+     "name": "--issuer-configuration",
+     "args": {}
+    },
+    {
+     "name": "--key-configuration",
+     "args": {}
+    },
+    {
+     "name": "--lambda-config",
+     "args": {}
+    },
+    {
+     "name": "--mfa-configuration",
+     "args": {
+      "suggestions": [
+       "OFF",
+       "ON",
+       "OPTIONAL"
+      ]
+     }
+    },
+    {
+     "name": "--policies",
+     "args": {}
+    },
+    {
+     "name": "--pool-name",
+     "args": {}
+    },
+    {
+     "name": "--sms-authentication-message",
+     "args": {}
+    },
+    {
+     "name": "--sms-configuration",
+     "args": {}
+    },
+    {
+     "name": "--sms-verification-message",
+     "args": {}
+    },
+    {
+     "name": "--user-attribute-update-settings",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-add-ons",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-tags",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-tier",
+     "args": {
+      "suggestions": [
+       "LITE",
+       "ESSENTIALS",
+       "PLUS"
+      ]
+     }
+    },
+    {
+     "name": "--verification-message-template",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-user-pool-client",
+   "description": "Given a user pool app client ID, updates the configuration.",
+   "options": [
+    {
+     "name": "--access-token-validity",
+     "args": {}
+    },
+    {
+     "name": "--allowed-o-auth-flows",
+     "args": {}
+    },
+    {
+     "name": "--allowed-o-auth-flows-user-pool-client"
+    },
+    {
+     "name": "--allowed-o-auth-scopes",
+     "args": {}
+    },
+    {
+     "name": "--analytics-configuration",
+     "args": {}
+    },
+    {
+     "name": "--auth-session-validity",
+     "args": {}
+    },
+    {
+     "name": "--callback-urls",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-name",
+     "args": {}
+    },
+    {
+     "name": "--default-redirect-uri",
+     "args": {}
+    },
+    {
+     "name": "--enable-propagate-additional-user-context-data"
+    },
+    {
+     "name": "--enable-token-revocation"
+    },
+    {
+     "name": "--explicit-auth-flows",
+     "args": {}
+    },
+    {
+     "name": "--id-token-validity",
+     "args": {}
+    },
+    {
+     "name": "--logout-urls",
+     "args": {}
+    },
+    {
+     "name": "--no-allowed-o-auth-flows-user-pool-client"
+    },
+    {
+     "name": "--no-enable-propagate-additional-user-context-data"
+    },
+    {
+     "name": "--no-enable-token-revocation"
+    },
+    {
+     "name": "--prevent-user-existence-errors",
+     "args": {
+      "suggestions": [
+       "LEGACY",
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--read-attributes",
+     "args": {}
+    },
+    {
+     "name": "--refresh-token-rotation",
+     "args": {}
+    },
+    {
+     "name": "--refresh-token-validity",
+     "args": {}
+    },
+    {
+     "name": "--supported-identity-providers",
+     "args": {}
+    },
+    {
+     "name": "--token-validity-units",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--write-attributes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-user-pool-domain",
+   "description": "A user pool domain hosts managed login, an authorization server and web server for authentication in your application.",
+   "options": [
+    {
+     "name": "--custom-domain-config",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-login-version",
+     "args": {}
+    },
+    {
+     "name": "--routing",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-user-pool-replica",
+   "description": "Updates replica-specific settings for a user pool replica.",
+   "options": [
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--user-pool-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-software-token",
+   "description": "Registers the current user's time-based one-time password (TOTP) authenticator with a code generated in their authenticator app from a private key that's supplied by your user pool.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {}
+    },
+    {
+     "name": "--friendly-device-name",
+     "args": {}
+    },
+    {
+     "name": "--session",
+     "args": {}
+    },
+    {
+     "name": "--user-code",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-user-attribute",
+   "description": "Submits a verification code for a signed-in user who has added or changed a value of an auto-verified attribute.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

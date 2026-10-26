@@ -1,0 +1,1173 @@
+{
+ "name": "memorydb",
+ "description": "MemoryDB is a fully managed, Redis OSS-compatible, in-memory database that delivers ultra-fast performance and Multi-AZ durability for modern applications built using microservices architectures.",
+ "subcommands": [
+  {
+   "name": "batch-update-cluster",
+   "description": "Apply the service update to a list of clusters supplied.",
+   "options": [
+    {
+     "name": "--cluster-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-update",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "copy-snapshot",
+   "description": "Makes a copy of an existing snapshot.",
+   "options": [
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--source-snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-bucket",
+     "args": {}
+    },
+    {
+     "name": "--target-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-acl",
+   "description": "Creates an Access Control List.",
+   "options": [
+    {
+     "name": "--acl-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Creates a cluster.",
+   "options": [
+    {
+     "name": "--acl-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-tiering"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--ip-discovery",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-cluster-name",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6",
+       "dual_stack"
+      ]
+     }
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-data-tiering"
+    },
+    {
+     "name": "--no-tls-enabled"
+    },
+    {
+     "name": "--node-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--num-replicas-per-shard",
+     "args": {}
+    },
+    {
+     "name": "--num-shards",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-arns",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-retention-limit",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-window",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tls-enabled"
+    }
+   ]
+  },
+  {
+   "name": "create-multi-region-cluster",
+   "description": "Creates a new multi-Region cluster.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-cluster-name-suffix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--multi-region-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--no-tls-enabled"
+    },
+    {
+     "name": "--node-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--num-shards",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tls-enabled"
+    }
+   ]
+  },
+  {
+   "name": "create-parameter-group",
+   "description": "Creates a new MemoryDB parameter group.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot",
+   "description": "Creates a copy of an entire cluster at a specific moment in time.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-subnet-group",
+   "description": "Creates a subnet group.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "Creates a MemoryDB user.",
+   "options": [
+    {
+     "name": "--access-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-mode",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-acl",
+   "description": "Deletes an Access Control List.",
+   "options": [
+    {
+     "name": "--acl-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Deletes a cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--final-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-cluster-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-multi-region-cluster",
+   "description": "Deletes an existing multi-Region cluster.",
+   "options": [
+    {
+     "name": "--multi-region-cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-parameter-group",
+   "description": "Deletes the specified parameter group.",
+   "options": [
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-snapshot",
+   "description": "Deletes an existing snapshot.",
+   "options": [
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subnet-group",
+   "description": "Deletes a subnet group.",
+   "options": [
+    {
+     "name": "--subnet-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user",
+   "description": "Deletes a user.",
+   "options": [
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-acls",
+   "description": "Returns a list of ACLs.",
+   "options": [
+    {
+     "name": "--acl-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-clusters",
+   "description": "Returns information about all provisioned clusters if no cluster identifier is specified, or about a specific cluster if a cluster name is supplied.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-show-shard-details"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--show-shard-details"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-engine-versions",
+   "description": "Returns a list of the available Redis OSS engine versions.",
+   "options": [
+    {
+     "name": "--default-only"
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-default-only"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-family",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-events",
+   "description": "Returns events related to clusters, security groups, and parameter groups.",
+   "options": [
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-name",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "node",
+       "parameter-group",
+       "subnet-group",
+       "cluster",
+       "user",
+       "acl"
+      ]
+     }
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-multi-region-clusters",
+   "description": "Returns details about one or more multi-Region clusters.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-cluster-name",
+     "args": {}
+    },
+    {
+     "name": "--no-show-cluster-details"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--show-cluster-details"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-multi-region-parameter-groups",
+   "description": "Returns a list of multi-region parameter groups.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-multi-region-parameters",
+   "description": "Returns the detailed parameter list for a particular multi-region parameter group.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-parameter-groups",
+   "description": "Returns a list of parameter group descriptions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-parameters",
+   "description": "Returns the detailed parameter list for a particular parameter group.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-nodes",
+   "description": "Returns information about reserved nodes for this account, or about a specified reserved node.",
+   "options": [
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--node-type",
+     "args": {}
+    },
+    {
+     "name": "--offering-type",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reservation-id",
+     "args": {}
+    },
+    {
+     "name": "--reserved-nodes-offering-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-nodes-offerings",
+   "description": "Lists available reserved node offerings.",
+   "options": [
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--node-type",
+     "args": {}
+    },
+    {
+     "name": "--offering-type",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reserved-nodes-offering-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-service-updates",
+   "description": "Returns details of the service updates.",
+   "options": [
+    {
+     "name": "--cluster-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-update-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-snapshots",
+   "description": "Returns information about cluster snapshots.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-show-detail"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--show-detail"
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-subnet-groups",
+   "description": "Returns a list of subnet group descriptions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subnet-group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-users",
+   "description": "Returns a list of users.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "failover-shard",
+   "description": "Used to failover a shard.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shard-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-allowed-multi-region-cluster-updates",
+   "description": "Lists the allowed updates for a multi-Region cluster.",
+   "options": [
+    {
+     "name": "--multi-region-cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-allowed-node-type-updates",
+   "description": "Lists all available node types that you can scale to from your cluster's current node type.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags",
+   "description": "Lists all tags currently on a named resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "purchase-reserved-nodes-offering",
+   "description": "Allows you to purchase a reserved node offering.",
+   "options": [
+    {
+     "name": "--node-count",
+     "args": {}
+    },
+    {
+     "name": "--reservation-id",
+     "args": {}
+    },
+    {
+     "name": "--reserved-nodes-offering-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reset-parameter-group",
+   "description": "Modifies the parameters of a parameter group to the engine or system default value.",
+   "options": [
+    {
+     "name": "--all-parameters"
+    },
+    {
+     "name": "--no-all-parameters"
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameter-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Use this operation to add tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Use this operation to remove tags on a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-acl",
+   "description": "Changes the list of users that belong to the Access Control List.",
+   "options": [
+    {
+     "name": "--acl-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-names-to-add",
+     "args": {}
+    },
+    {
+     "name": "--user-names-to-remove",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-cluster",
+   "description": "Modifies the settings for a cluster.",
+   "options": [
+    {
+     "name": "--acl-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--ip-discovery",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--node-type",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--replica-configuration",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--shard-configuration",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-retention-limit",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-window",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-multi-region-cluster",
+   "description": "Updates the configuration of an existing multi-Region cluster.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--multi-region-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--node-type",
+     "args": {}
+    },
+    {
+     "name": "--shard-configuration",
+     "args": {}
+    },
+    {
+     "name": "--update-strategy",
+     "args": {
+      "suggestions": [
+       "coordinated",
+       "uncoordinated"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-parameter-group",
+   "description": "Updates the parameters of a parameter group.",
+   "options": [
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameter-name-values",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-subnet-group",
+   "description": "Updates a subnet group.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-user",
+   "description": "Changes user password(s) and/or access string.",
+   "options": [
+    {
+     "name": "--access-string",
+     "args": {}
+    },
+    {
+     "name": "--authentication-mode",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

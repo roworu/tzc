@@ -1,0 +1,1555 @@
+{
+ "name": "kms",
+ "description": "Key Management Service Key Management Service (KMS) is an encryption and key management web service.",
+ "subcommands": [
+  {
+   "name": "cancel-key-deletion",
+   "description": "Cancels the deletion of a KMS key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "connect-custom-key-store",
+   "description": "Connects or reconnects a custom key store to its backing key store.",
+   "options": [
+    {
+     "name": "--custom-key-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-alias",
+   "description": "Creates a friendly name for a KMS key.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-custom-key-store",
+   "description": "Creates a custom key store backed by a key store that you own and manage.",
+   "options": [
+    {
+     "name": "--cloud-hsm-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--custom-key-store-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-key-store-type",
+     "args": {
+      "suggestions": [
+       "AWS_CLOUDHSM",
+       "EXTERNAL_KEY_STORE"
+      ]
+     }
+    },
+    {
+     "name": "--key-store-password",
+     "args": {}
+    },
+    {
+     "name": "--trust-anchor-certificate",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-authentication-credential",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-connectivity",
+     "args": {
+      "suggestions": [
+       "PUBLIC_ENDPOINT",
+       "VPC_ENDPOINT_SERVICE"
+      ]
+     }
+    },
+    {
+     "name": "--xks-proxy-uri-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-uri-path",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-vpc-endpoint-service-name",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-vpc-endpoint-service-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-grant",
+   "description": "Adds a grant to a KMS key.",
+   "options": [
+    {
+     "name": "--constraints",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--grantee-principal",
+     "args": {}
+    },
+    {
+     "name": "--grantee-service-principal",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--operations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retiring-principal",
+     "args": {}
+    },
+    {
+     "name": "--retiring-service-principal",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-key",
+   "description": "Creates a unique customer managed KMS key in your Amazon Web Services account and Region.",
+   "options": [
+    {
+     "name": "--bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--custom-key-store-id",
+     "args": {}
+    },
+    {
+     "name": "--customer-master-key-spec",
+     "args": {
+      "suggestions": [
+       "RSA_2048",
+       "RSA_3072",
+       "RSA_4096",
+       "ECC_NIST_P256",
+       "ECC_NIST_P384",
+       "ECC_NIST_P521",
+       "ECC_SECG_P256K1",
+       "SYMMETRIC_DEFAULT",
+       "HMAC_224",
+       "HMAC_256",
+       "HMAC_384",
+       "HMAC_512",
+       "SM2"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--key-spec",
+     "args": {
+      "suggestions": [
+       "RSA_2048",
+       "RSA_3072",
+       "RSA_4096",
+       "ECC_NIST_P256",
+       "ECC_NIST_P384",
+       "ECC_NIST_P521",
+       "ECC_SECG_P256K1",
+       "SYMMETRIC_DEFAULT",
+       "HMAC_224",
+       "HMAC_256",
+       "HMAC_384",
+       "HMAC_512",
+       "SM2",
+       "ML_DSA_44",
+       "ML_DSA_65",
+       "ML_DSA_87",
+       "ECC_NIST_EDWARDS25519"
+      ]
+     }
+    },
+    {
+     "name": "--key-usage",
+     "args": {
+      "suggestions": [
+       "SIGN_VERIFY",
+       "ENCRYPT_DECRYPT",
+       "GENERATE_VERIFY_MAC",
+       "KEY_AGREEMENT"
+      ]
+     }
+    },
+    {
+     "name": "--multi-region"
+    },
+    {
+     "name": "--no-bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--no-multi-region"
+    },
+    {
+     "name": "--origin",
+     "args": {
+      "suggestions": [
+       "AWS_KMS",
+       "EXTERNAL",
+       "AWS_CLOUDHSM",
+       "EXTERNAL_KEY_STORE"
+      ]
+     }
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--xks-key-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "decrypt",
+   "description": "Decrypts ciphertext that was encrypted by a KMS key using any of the following operations: Encrypt GenerateDataKey GenerateDataKeyPair GenerateDataKeyWithoutPlaintext GenerateDataKeyPairWithoutPlaintext You can use this operation to decrypt ciphertext that was encrypted under a symmetric encryption KMS key or an asymmetric encryption KMS key.",
+   "options": [
+    {
+     "name": "--ciphertext-blob",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--dry-run-modifiers",
+     "args": {}
+    },
+    {
+     "name": "--encryption-algorithm",
+     "args": {
+      "suggestions": [
+       "SYMMETRIC_DEFAULT",
+       "RSAES_OAEP_SHA_1",
+       "RSAES_OAEP_SHA_256",
+       "SM2PKE"
+      ]
+     }
+    },
+    {
+     "name": "--encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--recipient",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-alias",
+   "description": "Deletes the specified alias.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-key-store",
+   "description": "Deletes a custom key store.",
+   "options": [
+    {
+     "name": "--custom-key-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-imported-key-material",
+   "description": "Deletes key material that was previously imported.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-material-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "derive-shared-secret",
+   "description": "Derives a shared secret using a key agreement algorithm.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-agreement-algorithm",
+     "args": {
+      "suggestions": [
+       "ECDH"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--public-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recipient",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-custom-key-stores",
+   "description": "Gets information about custom key stores in the account and Region.",
+   "options": [
+    {
+     "name": "--custom-key-store-id",
+     "args": {}
+    },
+    {
+     "name": "--custom-key-store-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-key",
+   "description": "Provides detailed information about a KMS key.",
+   "options": [
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-key",
+   "description": "Sets the state of a KMS key to disabled.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-key-rotation",
+   "description": "Disables automatic rotation of the key material of the specified symmetric encryption KMS key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disconnect-custom-key-store",
+   "description": "Disconnects the custom key store from its backing key store.",
+   "options": [
+    {
+     "name": "--custom-key-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-key",
+   "description": "Sets the key state of a KMS key to enabled.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-key-rotation",
+   "description": "Enables automatic rotation of the key material of the specified symmetric encryption KMS key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rotation-period-in-days",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "encrypt",
+   "description": "Encrypts plaintext of up to 4,096 bytes using a KMS key.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encryption-algorithm",
+     "args": {
+      "suggestions": [
+       "SYMMETRIC_DEFAULT",
+       "RSAES_OAEP_SHA_1",
+       "RSAES_OAEP_SHA_256",
+       "SM2PKE"
+      ]
+     }
+    },
+    {
+     "name": "--encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--plaintext",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-data-key",
+   "description": "Returns a unique symmetric data key for use outside of KMS.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-spec",
+     "args": {
+      "suggestions": [
+       "AES_256",
+       "AES_128"
+      ]
+     }
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--number-of-bytes",
+     "args": {}
+    },
+    {
+     "name": "--recipient",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "generate-data-key-pair",
+   "description": "Returns a unique asymmetric data key pair for use outside of KMS.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-pair-spec",
+     "args": {
+      "suggestions": [
+       "RSA_2048",
+       "RSA_3072",
+       "RSA_4096",
+       "ECC_NIST_P256",
+       "ECC_NIST_P384",
+       "ECC_NIST_P521",
+       "ECC_SECG_P256K1",
+       "SM2",
+       "ECC_NIST_EDWARDS25519"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--recipient",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "generate-data-key-pair-without-plaintext",
+   "description": "Returns a unique asymmetric data key pair for use outside of KMS.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-pair-spec",
+     "args": {
+      "suggestions": [
+       "RSA_2048",
+       "RSA_3072",
+       "RSA_4096",
+       "ECC_NIST_P256",
+       "ECC_NIST_P384",
+       "ECC_NIST_P521",
+       "ECC_SECG_P256K1",
+       "SM2",
+       "ECC_NIST_EDWARDS25519"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "generate-data-key-without-plaintext",
+   "description": "Returns a unique symmetric data key for use outside of KMS.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-spec",
+     "args": {
+      "suggestions": [
+       "AES_256",
+       "AES_128"
+      ]
+     }
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--number-of-bytes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "generate-mac",
+   "description": "Generates a hash-based message authentication code (HMAC) for a message using an HMAC KMS key and a MAC algorithm that the key supports.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mac-algorithm",
+     "args": {
+      "suggestions": [
+       "HMAC_SHA_224",
+       "HMAC_SHA_256",
+       "HMAC_SHA_384",
+       "HMAC_SHA_512"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "generate-random",
+   "description": "Returns a random byte string that is cryptographically secure.",
+   "options": [
+    {
+     "name": "--custom-key-store-id",
+     "args": {}
+    },
+    {
+     "name": "--number-of-bytes",
+     "args": {}
+    },
+    {
+     "name": "--recipient",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-key-last-usage",
+   "description": "Returns usage information about the last successful cryptographic operation performed with a specified KMS key, including the operation type, timestamp, and associated CloudTrail event ID.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-key-policy",
+   "description": "Gets a key policy attached to the specified KMS key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-key-rotation-status",
+   "description": "Provides detailed information about the rotation status for a KMS key, including whether automatic rotation of the key material is enabled for the specified KMS key, the rotation period, and the next scheduled rotation date.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-parameters-for-import",
+   "description": "Returns the public key and an import token you need to import or reimport key material for a KMS key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--wrapping-algorithm",
+     "args": {
+      "suggestions": [
+       "RSAES_PKCS1_V1_5",
+       "RSAES_OAEP_SHA_1",
+       "RSAES_OAEP_SHA_256",
+       "RSA_AES_KEY_WRAP_SHA_1",
+       "RSA_AES_KEY_WRAP_SHA_256",
+       "SM2PKE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--wrapping-key-spec",
+     "args": {
+      "suggestions": [
+       "RSA_2048",
+       "RSA_3072",
+       "RSA_4096",
+       "SM2"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-public-key",
+   "description": "Returns the public key of an asymmetric KMS key.",
+   "options": [
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-key-material",
+   "description": "Imports or reimports key material into an existing KMS key that was created without key material.",
+   "options": [
+    {
+     "name": "--encrypted-key-material",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expiration-model",
+     "args": {
+      "suggestions": [
+       "KEY_MATERIAL_EXPIRES",
+       "KEY_MATERIAL_DOES_NOT_EXPIRE"
+      ]
+     }
+    },
+    {
+     "name": "--import-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--import-type",
+     "args": {
+      "suggestions": [
+       "NEW_KEY_MATERIAL",
+       "EXISTING_KEY_MATERIAL"
+      ]
+     }
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-material-description",
+     "args": {}
+    },
+    {
+     "name": "--key-material-id",
+     "args": {}
+    },
+    {
+     "name": "--valid-to",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-aliases",
+   "description": "Gets a list of aliases in the caller's Amazon Web Services account and region.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-grants",
+   "description": "Gets a list of all grants for the specified KMS key.",
+   "options": [
+    {
+     "name": "--grant-id",
+     "args": {}
+    },
+    {
+     "name": "--grantee-principal",
+     "args": {}
+    },
+    {
+     "name": "--grantee-service-principal",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-key-policies",
+   "description": "Gets the names of the key policies that are attached to a KMS key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-key-rotations",
+   "description": "Returns information about the key materials associated with the specified KMS key.",
+   "options": [
+    {
+     "name": "--include-key-material",
+     "args": {
+      "suggestions": [
+       "ALL_KEY_MATERIAL",
+       "ROTATIONS_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-keys",
+   "description": "Gets a list of all KMS keys in the caller's Amazon Web Services account and Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-tags",
+   "description": "Returns all tags on the specified KMS key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-retirable-grants",
+   "description": "Returns information about all grants in the Amazon Web Services account and Region that have the specified retiring principal or retiring service principal.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--retiring-principal",
+     "args": {}
+    },
+    {
+     "name": "--retiring-service-principal",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-key-policy",
+   "description": "Attaches a key policy to the specified KMS key.",
+   "options": [
+    {
+     "name": "--bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "re-encrypt",
+   "description": "Decrypts ciphertext and then reencrypts it entirely within KMS.",
+   "options": [
+    {
+     "name": "--ciphertext-blob",
+     "args": {}
+    },
+    {
+     "name": "--destination-encryption-algorithm",
+     "args": {
+      "suggestions": [
+       "SYMMETRIC_DEFAULT",
+       "RSAES_OAEP_SHA_1",
+       "RSAES_OAEP_SHA_256",
+       "SM2PKE"
+      ]
+     }
+    },
+    {
+     "name": "--destination-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--destination-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--dry-run-modifiers",
+     "args": {}
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--source-encryption-algorithm",
+     "args": {
+      "suggestions": [
+       "SYMMETRIC_DEFAULT",
+       "RSAES_OAEP_SHA_1",
+       "RSAES_OAEP_SHA_256",
+       "SM2PKE"
+      ]
+     }
+    },
+    {
+     "name": "--source-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--source-key-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "replicate-key",
+   "description": "Replicates a multi-Region key into the specified Region.",
+   "options": [
+    {
+     "name": "--bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--replica-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "retire-grant",
+   "description": "Deletes a grant.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--grant-id",
+     "args": {}
+    },
+    {
+     "name": "--grant-token",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "revoke-grant",
+   "description": "Deletes the specified grant.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--grant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "rotate-key-on-demand",
+   "description": "Immediately initiates rotation of the key material of the specified symmetric encryption KMS key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "schedule-key-deletion",
+   "description": "Schedules the deletion of a KMS key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pending-window-in-days",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "sign",
+   "description": "Creates a digital signature for a message or message digest by using the private key in an asymmetric signing KMS key.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-type",
+     "args": {
+      "suggestions": [
+       "RAW",
+       "DIGEST",
+       "EXTERNAL_MU"
+      ]
+     }
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--signing-algorithm",
+     "args": {
+      "suggestions": [
+       "RSASSA_PSS_SHA_256",
+       "RSASSA_PSS_SHA_384",
+       "RSASSA_PSS_SHA_512",
+       "RSASSA_PKCS1_V1_5_SHA_256",
+       "RSASSA_PKCS1_V1_5_SHA_384",
+       "RSASSA_PKCS1_V1_5_SHA_512",
+       "ECDSA_SHA_256",
+       "ECDSA_SHA_384",
+       "ECDSA_SHA_512",
+       "SM2DSA",
+       "ML_DSA_SHAKE_256",
+       "ED25519_SHA_512",
+       "ED25519_PH_SHA_512"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or edits tags on a customer managed key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes tags from a customer managed key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-alias",
+   "description": "Associates an existing KMS alias with a different KMS key.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-custom-key-store",
+   "description": "Changes the properties of a custom key store.",
+   "options": [
+    {
+     "name": "--cloud-hsm-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--custom-key-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-store-password",
+     "args": {}
+    },
+    {
+     "name": "--new-custom-key-store-name",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-authentication-credential",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-connectivity",
+     "args": {
+      "suggestions": [
+       "PUBLIC_ENDPOINT",
+       "VPC_ENDPOINT_SERVICE"
+      ]
+     }
+    },
+    {
+     "name": "--xks-proxy-uri-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-uri-path",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-vpc-endpoint-service-name",
+     "args": {}
+    },
+    {
+     "name": "--xks-proxy-vpc-endpoint-service-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-key-description",
+   "description": "Updates the description of a KMS key.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-primary-region",
+   "description": "Changes the primary key of a multi-Region key.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-region",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify",
+   "description": "Verifies a digital signature that was generated by the Sign operation.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-type",
+     "args": {
+      "suggestions": [
+       "RAW",
+       "DIGEST",
+       "EXTERNAL_MU"
+      ]
+     }
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--signature",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signing-algorithm",
+     "args": {
+      "suggestions": [
+       "RSASSA_PSS_SHA_256",
+       "RSASSA_PSS_SHA_384",
+       "RSASSA_PSS_SHA_512",
+       "RSASSA_PKCS1_V1_5_SHA_256",
+       "RSASSA_PKCS1_V1_5_SHA_384",
+       "RSASSA_PKCS1_V1_5_SHA_512",
+       "ECDSA_SHA_256",
+       "ECDSA_SHA_384",
+       "ECDSA_SHA_512",
+       "SM2DSA",
+       "ML_DSA_SHAKE_256",
+       "ED25519_SHA_512",
+       "ED25519_PH_SHA_512"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-mac",
+   "description": "Verifies the hash-based message authentication code (HMAC) for a specified message, HMAC KMS key, and MAC algorithm.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--grant-tokens",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mac",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mac-algorithm",
+     "args": {
+      "suggestions": [
+       "HMAC_SHA_224",
+       "HMAC_SHA_256",
+       "HMAC_SHA_384",
+       "HMAC_SHA_512"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  }
+ ]
+}

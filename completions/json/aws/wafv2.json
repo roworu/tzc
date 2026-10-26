@@ -1,0 +1,1840 @@
+{
+ "name": "wafv2",
+ "description": "WAF This is the latest version of the WAF API, released in November, 2019.",
+ "subcommands": [
+  {
+   "name": "associate-web-acl",
+   "description": "Associates a web ACL with a resource, to protect the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--web-acl-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "check-capacity",
+   "description": "Returns the web ACL capacity unit (WCU) requirements for a specified scope and set of rules.",
+   "options": [
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-api-key",
+   "description": "Creates an API key that contains a set of token domains.",
+   "options": [
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--token-domains",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-ip-set",
+   "description": "Creates an IPSet, which you use to identify web requests that originate from specific IP addresses or ranges of IP addresses.",
+   "options": [
+    {
+     "name": "--addresses",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-version",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-regex-pattern-set",
+   "description": "Creates a RegexPatternSet, which you reference in a RegexPatternSetReferenceStatement, to have WAF inspect a web request component for the specified patterns.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--regular-expression-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-rule-group",
+   "description": "Creates a RuleGroup per the specifications provided.",
+   "options": [
+    {
+     "name": "--capacity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-response-bodies",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--monetization-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--visibility-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-web-acl",
+   "description": "Creates a WebACL per the specifications provided.",
+   "options": [
+    {
+     "name": "--application-config",
+     "args": {}
+    },
+    {
+     "name": "--association-config",
+     "args": {}
+    },
+    {
+     "name": "--captcha-config",
+     "args": {}
+    },
+    {
+     "name": "--challenge-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-response-bodies",
+     "args": {}
+    },
+    {
+     "name": "--data-protection-config",
+     "args": {}
+    },
+    {
+     "name": "--default-action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--monetization-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--on-source-d-do-s-protection-config",
+     "args": {}
+    },
+    {
+     "name": "--rules",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--token-domains",
+     "args": {}
+    },
+    {
+     "name": "--visibility-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-api-key",
+   "description": "Deletes the specified API key.",
+   "options": [
+    {
+     "name": "--api-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-firewall-manager-rule-groups",
+   "description": "Deletes all rule groups that are managed by Firewall Manager from the specified WebACL.",
+   "options": [
+    {
+     "name": "--web-acl-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--web-acl-lock-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ip-set",
+   "description": "Deletes the specified IPSet.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-logging-configuration",
+   "description": "Deletes the LoggingConfiguration from the specified web ACL.",
+   "options": [
+    {
+     "name": "--log-scope",
+     "args": {
+      "suggestions": [
+       "CUSTOMER",
+       "SECURITY_LAKE",
+       "CLOUDWATCH_TELEMETRY_RULE_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--log-type",
+     "args": {
+      "suggestions": [
+       "WAF_LOGS"
+      ]
+     }
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-permission-policy",
+   "description": "Permanently deletes an IAM policy from the specified rule group.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-regex-pattern-set",
+   "description": "Deletes the specified RegexPatternSet.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-rule-group",
+   "description": "Deletes the specified RuleGroup.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-web-acl",
+   "description": "Deletes the specified WebACL.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-all-managed-products",
+   "description": "Provides high-level information for the Amazon Web Services Managed Rules rule groups and Amazon Web Services Marketplace managed rule groups.",
+   "options": [
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-managed-products-by-vendor",
+   "description": "Provides high-level information for the managed rule groups owned by a specific vendor.",
+   "options": [
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--vendor-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-managed-rule-group",
+   "description": "Provides high-level information for a managed rule group, including descriptions of the rules.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--vendor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-web-acl",
+   "description": "Disassociates the specified resource from its web ACL association, if it has one.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-mobile-sdk-release-url",
+   "description": "Generates a presigned download URL for the specified release of the mobile SDK.",
+   "options": [
+    {
+     "name": "--platform",
+     "args": {
+      "suggestions": [
+       "IOS",
+       "ANDROID"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--release-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-decrypted-api-key",
+   "description": "Returns your API key in decrypted form.",
+   "options": [
+    {
+     "name": "--api-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ip-set",
+   "description": "Retrieves the specified IPSet.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-logging-configuration",
+   "description": "Returns the LoggingConfiguration for the specified web ACL.",
+   "options": [
+    {
+     "name": "--log-scope",
+     "args": {
+      "suggestions": [
+       "CUSTOMER",
+       "SECURITY_LAKE",
+       "CLOUDWATCH_TELEMETRY_RULE_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--log-type",
+     "args": {
+      "suggestions": [
+       "WAF_LOGS"
+      ]
+     }
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-rule-set",
+   "description": "Retrieves the specified managed rule set.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-mobile-sdk-release",
+   "description": "Retrieves information for the specified mobile SDK release, including release notes and tags.",
+   "options": [
+    {
+     "name": "--platform",
+     "args": {
+      "suggestions": [
+       "IOS",
+       "ANDROID"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--release-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-permission-policy",
+   "description": "Returns the IAM policy that is attached to the specified rule group.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-rate-based-statement-managed-keys",
+   "description": "Retrieves the IP addresses that are currently blocked by a rate-based rule instance.",
+   "options": [
+    {
+     "name": "--rule-group-rule-name",
+     "args": {}
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--web-acl-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--web-acl-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-regex-pattern-set",
+   "description": "Retrieves the specified RegexPatternSet.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-revenue-statistics",
+   "description": "Retrieves ranked monetization statistics.",
+   "options": [
+    {
+     "name": "--currency",
+     "args": {
+      "suggestions": [
+       "USDC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "CATEGORY",
+       "INTENT",
+       "ORGANIZATION",
+       "WEBACL"
+      ]
+     }
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "REVENUE",
+       "PERCENTAGE",
+       "NAME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--statistic-type",
+     "args": {
+      "suggestions": [
+       "TOP_SOURCES_BY_REVENUE",
+       "TOP_PATHS_BY_REVENUE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--time-window",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-revenue-statistics-summary",
+   "description": "Retrieves a summary of monetization revenue for the specified time window.",
+   "options": [
+    {
+     "name": "--currency",
+     "args": {
+      "suggestions": [
+       "USDC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--time-window",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-revenue-statistics-time-series",
+   "description": "Retrieves time series data for monetization revenue.",
+   "options": [
+    {
+     "name": "--currency",
+     "args": {
+      "suggestions": [
+       "USDC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "CATEGORY",
+       "INTENT",
+       "ORGANIZATION",
+       "WEBACL"
+      ]
+     }
+    },
+    {
+     "name": "--interval",
+     "args": {
+      "suggestions": [
+       "MINUTELY",
+       "FIVE_MINUTELY",
+       "HOURLY",
+       "DAILY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--statistic-type",
+     "args": {
+      "suggestions": [
+       "DATE_HISTOGRAM",
+       "PAYMENT_TRAFFIC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--time-window",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-rule-group",
+   "description": "Retrieves the specified RuleGroup.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-sampled-requests",
+   "description": "Gets detailed information about a specified number of requests--a sample--that WAF randomly selects from among the first 5,000 requests that your Amazon Web Services resource received during a time range that you choose.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-metric-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--time-window",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--web-acl-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-top-path-statistics-by-traffic",
+   "description": "Retrieves aggregated statistics about the top URI paths accessed by bot traffic for a specified web ACL and time window.",
+   "options": [
+    {
+     "name": "--bot-category",
+     "args": {}
+    },
+    {
+     "name": "--bot-name",
+     "args": {}
+    },
+    {
+     "name": "--bot-organization",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--number-of-top-traffic-bots-per-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--time-window",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--uri-path-prefix",
+     "args": {}
+    },
+    {
+     "name": "--web-acl-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-web-acl",
+   "description": "Retrieves the specified WebACL.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-web-acl-for-resource",
+   "description": "Retrieves the WebACL for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-api-keys",
+   "description": "Retrieves a list of the API keys that you've defined for the specified scope.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-available-managed-rule-group-versions",
+   "description": "Returns a list of the available versions for the specified managed rule group.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--vendor-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-available-managed-rule-groups",
+   "description": "Retrieves an array of managed rule groups that are available for you to use.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-ip-sets",
+   "description": "Retrieves an array of IPSetSummary objects for the IP sets that you manage.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-logging-configurations",
+   "description": "Retrieves an array of your LoggingConfiguration objects.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--log-scope",
+     "args": {
+      "suggestions": [
+       "CUSTOMER",
+       "SECURITY_LAKE",
+       "CLOUDWATCH_TELEMETRY_RULE_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-managed-rule-sets",
+   "description": "Retrieves the managed rule sets that you own.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-mobile-sdk-releases",
+   "description": "Retrieves a list of the available releases for the mobile SDK and the specified device platform.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--platform",
+     "args": {
+      "suggestions": [
+       "IOS",
+       "ANDROID"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-regex-pattern-sets",
+   "description": "Retrieves an array of RegexPatternSetSummary objects for the regex pattern sets that you manage.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-resources-for-web-acl",
+   "description": "Retrieves an array of the Amazon Resource Names (ARNs) for the resources that are associated with the specified web ACL.",
+   "options": [
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "APPLICATION_LOAD_BALANCER",
+       "API_GATEWAY",
+       "APPSYNC",
+       "COGNITO_USER_POOL",
+       "APP_RUNNER_SERVICE",
+       "VERIFIED_ACCESS_INSTANCE",
+       "AMPLIFY",
+       "AGENTCORE_GATEWAY"
+      ]
+     }
+    },
+    {
+     "name": "--web-acl-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-rule-groups",
+   "description": "Retrieves an array of RuleGroupSummary objects for the rule groups that you manage.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-settlement-records",
+   "description": "Retrieves individual settlement transaction records for monetization.",
+   "options": [
+    {
+     "name": "--currency",
+     "args": {
+      "suggestions": [
+       "USDC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "TIMESTAMP",
+       "AMOUNT",
+       "NAME",
+       "STATUS"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--time-window",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves the TagInfoForResource for the specified resource.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-web-acls",
+   "description": "Retrieves an array of WebACLSummary objects for the web ACLs that you manage.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-marker",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-logging-configuration",
+   "description": "Enables the specified LoggingConfiguration, to start logging from a web ACL, according to the configuration provided.",
+   "options": [
+    {
+     "name": "--logging-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-managed-rule-set-versions",
+   "description": "Defines the versions of your managed rule set that you are offering to the customers.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommended-version",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--versions-to-publish",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-permission-policy",
+   "description": "Use this to share a rule group with other accounts.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates tags with the specified Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Disassociates tags from an Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-ip-set",
+   "description": "Updates the specified IPSet.",
+   "options": [
+    {
+     "name": "--addresses",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-managed-rule-set-version-expiry-date",
+   "description": "Updates the expiration information for your managed rule set.",
+   "options": [
+    {
+     "name": "--expiry-timestamp",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--version-to-expire",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-regex-pattern-set",
+   "description": "Updates the specified RegexPatternSet.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--regular-expression-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-rule-group",
+   "description": "Updates the specified RuleGroup.",
+   "options": [
+    {
+     "name": "--custom-response-bodies",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--monetization-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--visibility-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-web-acl",
+   "description": "Updates the specified WebACL.",
+   "options": [
+    {
+     "name": "--application-config",
+     "args": {}
+    },
+    {
+     "name": "--association-config",
+     "args": {}
+    },
+    {
+     "name": "--captcha-config",
+     "args": {}
+    },
+    {
+     "name": "--challenge-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-response-bodies",
+     "args": {}
+    },
+    {
+     "name": "--data-protection-config",
+     "args": {}
+    },
+    {
+     "name": "--default-action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--monetization-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--on-source-d-do-s-protection-config",
+     "args": {}
+    },
+    {
+     "name": "--rules",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT",
+       "REGIONAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--token-domains",
+     "args": {}
+    },
+    {
+     "name": "--visibility-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

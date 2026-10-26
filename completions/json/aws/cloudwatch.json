@@ -1,0 +1,1499 @@
+{
+ "name": "cloudwatch",
+ "description": "Amazon CloudWatch enables you to publish, monitor, and manage various metrics, as well as configure alarm actions based on data from metrics.",
+ "subcommands": [
+  {
+   "name": "associate-dataset-kms-key",
+   "description": "Associates an Amazon Web Services Key Management Service (Amazon Web Services KMS) customer managed key with the specified dataset.",
+   "options": [
+    {
+     "name": "--dataset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-alarm-mute-rule",
+   "description": "Deletes a specific alarm mute rule.",
+   "options": [
+    {
+     "name": "--alarm-mute-rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-alarms",
+   "description": "Deletes the specified alarms.",
+   "options": [
+    {
+     "name": "--alarm-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-anomaly-detector",
+   "description": "Deletes the specified anomaly detection model from your account.",
+   "options": [
+    {
+     "name": "--anomaly-detector-id",
+     "args": {}
+    },
+    {
+     "name": "--dimensions",
+     "args": {}
+    },
+    {
+     "name": "--metric-math-anomaly-detector",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--single-metric-anomaly-detector",
+     "args": {}
+    },
+    {
+     "name": "--stat",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-dashboards",
+   "description": "Deletes all dashboards that you specify.",
+   "options": [
+    {
+     "name": "--dashboard-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-insight-rules",
+   "description": "Permanently deletes the specified Contributor Insights rules.",
+   "options": [
+    {
+     "name": "--rule-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-metric-stream",
+   "description": "Permanently deletes the metric stream that you specify.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-alarm-contributors",
+   "description": "Returns the information of the current alarm contributors that are in ALARM state.",
+   "options": [
+    {
+     "name": "--alarm-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-alarm-history",
+   "description": "Retrieves the history for the specified alarm.",
+   "options": [
+    {
+     "name": "--alarm-contributor-id",
+     "args": {}
+    },
+    {
+     "name": "--alarm-name",
+     "args": {}
+    },
+    {
+     "name": "--alarm-types",
+     "args": {}
+    },
+    {
+     "name": "--end-date",
+     "args": {}
+    },
+    {
+     "name": "--history-item-type",
+     "args": {
+      "suggestions": [
+       "ConfigurationUpdate",
+       "StateUpdate",
+       "Action",
+       "AlarmContributorStateUpdate",
+       "AlarmContributorAction"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scan-by",
+     "args": {
+      "suggestions": [
+       "TimestampDescending",
+       "TimestampAscending"
+      ]
+     }
+    },
+    {
+     "name": "--start-date",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-alarms",
+   "description": "Retrieves the specified alarms.",
+   "options": [
+    {
+     "name": "--action-prefix",
+     "args": {}
+    },
+    {
+     "name": "--alarm-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--alarm-names",
+     "args": {}
+    },
+    {
+     "name": "--alarm-types",
+     "args": {}
+    },
+    {
+     "name": "--children-of-alarm-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parents-of-alarm-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state-value",
+     "args": {
+      "suggestions": [
+       "OK",
+       "ALARM",
+       "INSUFFICIENT_DATA"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-alarms-for-metric",
+   "description": "Retrieves the alarms for the specified metric.",
+   "options": [
+    {
+     "name": "--dimensions",
+     "args": {}
+    },
+    {
+     "name": "--extended-statistic",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {}
+    },
+    {
+     "name": "--statistic",
+     "args": {
+      "suggestions": [
+       "SampleCount",
+       "Average",
+       "Sum",
+       "Minimum",
+       "Maximum"
+      ]
+     }
+    },
+    {
+     "name": "--unit",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-anomaly-detectors",
+   "description": "Lists the anomaly detection models that you have created in your account.",
+   "options": [
+    {
+     "name": "--anomaly-detector-ids",
+     "args": {}
+    },
+    {
+     "name": "--anomaly-detector-types",
+     "args": {}
+    },
+    {
+     "name": "--dimensions",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-insight-rules",
+   "description": "Returns a list of all the Contributor Insights rules in your account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disable-alarm-actions",
+   "description": "Disables the actions for the specified alarms.",
+   "options": [
+    {
+     "name": "--alarm-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-insight-rules",
+   "description": "Disables the specified Contributor Insights rules.",
+   "options": [
+    {
+     "name": "--rule-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-dataset-kms-key",
+   "description": "Removes the customer managed Amazon Web Services Key Management Service (Amazon Web Services KMS) key association from the specified dataset.",
+   "options": [
+    {
+     "name": "--dataset-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-alarm-actions",
+   "description": "Enables the actions for the specified alarms.",
+   "options": [
+    {
+     "name": "--alarm-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-insight-rules",
+   "description": "Enables the specified Contributor Insights rules.",
+   "options": [
+    {
+     "name": "--rule-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-alarm-mute-rule",
+   "description": "Retrieves details for a specific alarm mute rule.",
+   "options": [
+    {
+     "name": "--alarm-mute-rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dashboard",
+   "description": "Displays the details of the dashboard that you specify.",
+   "options": [
+    {
+     "name": "--dashboard-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dataset",
+   "description": "Returns information about the specified dataset.",
+   "options": [
+    {
+     "name": "--dataset-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-insight-rule-report",
+   "description": "This operation returns the time series data collected by a Contributor Insights rule.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-contributor-count",
+     "args": {}
+    },
+    {
+     "name": "--metrics",
+     "args": {}
+    },
+    {
+     "name": "--order-by",
+     "args": {}
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-metric-data",
+   "description": "You can use the GetMetricData API to retrieve CloudWatch metric values.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--label-options",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-data-queries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scan-by",
+     "args": {
+      "suggestions": [
+       "TimestampDescending",
+       "TimestampAscending"
+      ]
+     }
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-metric-statistics",
+   "description": "Gets statistics for the specified metric.",
+   "options": [
+    {
+     "name": "--dimensions",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--extended-statistics",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistics",
+     "args": {}
+    },
+    {
+     "name": "--unit",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-metric-stream",
+   "description": "Returns information about the metric stream that you specify.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-metric-widget-image",
+   "description": "You can use the GetMetricWidgetImage API to retrieve a snapshot graph of one or more Amazon CloudWatch metrics as a bitmap image.",
+   "options": [
+    {
+     "name": "--metric-widget",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-format",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-o-tel-enrichment",
+   "description": "Returns the current status of vended metric enrichment for the account, including whether CloudWatch vended metrics are enriched with resource ARN and resource tag labels and queryable using PromQL."
+  },
+  {
+   "name": "get-otel-enrichment",
+   "description": "Returns the current status of vended metric enrichment for the account, including whether CloudWatch vended metrics are enriched with resource ARN and resource tag labels and queryable using PromQL."
+  },
+  {
+   "name": "list-alarm-mute-rules",
+   "description": "Lists alarm mute rules in your Amazon Web Services account and region.",
+   "options": [
+    {
+     "name": "--alarm-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--statuses",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dashboards",
+   "description": "Returns a list of the dashboards for your account.",
+   "options": [
+    {
+     "name": "--dashboard-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-insight-rules",
+   "description": "Returns a list that contains the number of managed Contributor Insights rules in your account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-metric-streams",
+   "description": "Returns a list of metric streams in this account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-metrics",
+   "description": "List the specified metrics.",
+   "options": [
+    {
+     "name": "--dimensions",
+     "args": {}
+    },
+    {
+     "name": "--include-linked-accounts"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--no-include-linked-accounts"
+    },
+    {
+     "name": "--owning-account",
+     "args": {}
+    },
+    {
+     "name": "--recently-active",
+     "args": {
+      "suggestions": [
+       "PT3H"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Displays the tags associated with a CloudWatch resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-alarm-mute-rule",
+   "description": "Creates or updates an alarm mute rule.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expire-date",
+     "args": {}
+    },
+    {
+     "name": "--mute-targets",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-date",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-anomaly-detector",
+   "description": "Creates an anomaly detection model for a CloudWatch metric.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--dimensions",
+     "args": {}
+    },
+    {
+     "name": "--metric-characteristics",
+     "args": {}
+    },
+    {
+     "name": "--metric-math-anomaly-detector",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--single-metric-anomaly-detector",
+     "args": {}
+    },
+    {
+     "name": "--stat",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-composite-alarm",
+   "description": "Creates or updates a composite alarm.",
+   "options": [
+    {
+     "name": "--actions-enabled"
+    },
+    {
+     "name": "--actions-suppressor",
+     "args": {}
+    },
+    {
+     "name": "--actions-suppressor-extension-period",
+     "args": {}
+    },
+    {
+     "name": "--actions-suppressor-wait-period",
+     "args": {}
+    },
+    {
+     "name": "--alarm-actions",
+     "args": {}
+    },
+    {
+     "name": "--alarm-description",
+     "args": {}
+    },
+    {
+     "name": "--alarm-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--alarm-rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--insufficient-data-actions",
+     "args": {}
+    },
+    {
+     "name": "--no-actions-enabled"
+    },
+    {
+     "name": "--ok-actions",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-dashboard",
+   "description": "Creates a dashboard if it does not already exist, or updates an existing dashboard.",
+   "options": [
+    {
+     "name": "--dashboard-body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dashboard-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-insight-rule",
+   "description": "Creates a Contributor Insights rule.",
+   "options": [
+    {
+     "name": "--apply-on-transformed-logs"
+    },
+    {
+     "name": "--no-apply-on-transformed-logs"
+    },
+    {
+     "name": "--rule-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-state",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-log-alarm",
+   "description": "Creates or updates a log alarm.",
+   "options": [
+    {
+     "name": "--action-log-line-count",
+     "args": {}
+    },
+    {
+     "name": "--action-log-line-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--actions-enabled"
+    },
+    {
+     "name": "--alarm-actions",
+     "args": {}
+    },
+    {
+     "name": "--alarm-description",
+     "args": {}
+    },
+    {
+     "name": "--alarm-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--comparison-operator",
+     "args": {
+      "suggestions": [
+       "GreaterThanOrEqualToThreshold",
+       "GreaterThanThreshold",
+       "LessThanThreshold",
+       "LessThanOrEqualToThreshold",
+       "LessThanLowerOrGreaterThanUpperThreshold",
+       "LessThanLowerThreshold",
+       "GreaterThanUpperThreshold"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--insufficient-data-actions",
+     "args": {}
+    },
+    {
+     "name": "--no-actions-enabled"
+    },
+    {
+     "name": "--ok-actions",
+     "args": {}
+    },
+    {
+     "name": "--query-results-to-alarm",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-results-to-evaluate",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduled-query-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--threshold",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--treat-missing-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-managed-insight-rules",
+   "description": "Creates a managed Contributor Insights rule for a specified Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--managed-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-metric-alarm",
+   "description": "Creates or updates an alarm and associates it with the specified metric, metric math expression, anomaly detection model, Metrics Insights query, or PromQL query.",
+   "options": [
+    {
+     "name": "--actions-enabled"
+    },
+    {
+     "name": "--alarm-actions",
+     "args": {}
+    },
+    {
+     "name": "--alarm-description",
+     "args": {}
+    },
+    {
+     "name": "--alarm-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--comparison-operator",
+     "args": {
+      "suggestions": [
+       "GreaterThanOrEqualToThreshold",
+       "GreaterThanThreshold",
+       "LessThanThreshold",
+       "LessThanOrEqualToThreshold",
+       "LessThanLowerOrGreaterThanUpperThreshold",
+       "LessThanLowerThreshold",
+       "GreaterThanUpperThreshold"
+      ]
+     }
+    },
+    {
+     "name": "--datapoints-to-alarm",
+     "args": {}
+    },
+    {
+     "name": "--dimensions",
+     "args": {}
+    },
+    {
+     "name": "--evaluate-low-sample-count-percentile",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-criteria",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-interval",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-periods",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-window",
+     "args": {}
+    },
+    {
+     "name": "--extended-statistic",
+     "args": {}
+    },
+    {
+     "name": "--insufficient-data-actions",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {}
+    },
+    {
+     "name": "--metrics",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--no-actions-enabled"
+    },
+    {
+     "name": "--ok-actions",
+     "args": {}
+    },
+    {
+     "name": "--period",
+     "args": {}
+    },
+    {
+     "name": "--statistic",
+     "args": {
+      "suggestions": [
+       "SampleCount",
+       "Average",
+       "Sum",
+       "Minimum",
+       "Maximum"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--threshold",
+     "args": {}
+    },
+    {
+     "name": "--threshold-metric-id",
+     "args": {}
+    },
+    {
+     "name": "--treat-missing-data",
+     "args": {}
+    },
+    {
+     "name": "--unit",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-metric-data",
+   "description": "Publishes metric data to Amazon CloudWatch.",
+   "options": [
+    {
+     "name": "--dimensions",
+     "args": {}
+    },
+    {
+     "name": "--entity-metric-data",
+     "args": {}
+    },
+    {
+     "name": "--metric-data",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-strict-entity-validation"
+    },
+    {
+     "name": "--statistic-values",
+     "args": {}
+    },
+    {
+     "name": "--storage-resolution",
+     "args": {}
+    },
+    {
+     "name": "--strict-entity-validation"
+    },
+    {
+     "name": "--timestamp",
+     "args": {}
+    },
+    {
+     "name": "--unit",
+     "args": {}
+    },
+    {
+     "name": "--value",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-metric-stream",
+   "description": "Creates or updates a metric stream.",
+   "options": [
+    {
+     "name": "--exclude-filters",
+     "args": {}
+    },
+    {
+     "name": "--firehose-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-filters",
+     "args": {}
+    },
+    {
+     "name": "--include-linked-accounts-metrics"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-linked-accounts-metrics"
+    },
+    {
+     "name": "--output-format",
+     "args": {
+      "suggestions": [
+       "json",
+       "opentelemetry0.7",
+       "opentelemetry1.0"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistics-configurations",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "set-alarm-state",
+   "description": "Temporarily sets the state of an alarm for testing purposes.",
+   "options": [
+    {
+     "name": "--alarm-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state-reason",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state-reason-data",
+     "args": {}
+    },
+    {
+     "name": "--state-value",
+     "args": {
+      "suggestions": [
+       "OK",
+       "ALARM",
+       "INSUFFICIENT_DATA"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-metric-streams",
+   "description": "Starts the streaming of metrics for one or more of your metric streams.",
+   "options": [
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-o-tel-enrichment",
+   "description": "Enables enrichment and PromQL access for CloudWatch vended metrics for supported Amazon Web Services resources in the account."
+  },
+  {
+   "name": "start-otel-enrichment",
+   "description": "Enables enrichment and PromQL access for CloudWatch vended metrics for supported Amazon Web Services resources in the account."
+  },
+  {
+   "name": "stop-metric-streams",
+   "description": "Stops the streaming of metrics for one or more of your metric streams.",
+   "options": [
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-o-tel-enrichment",
+   "description": "Disables enrichment and PromQL access for CloudWatch vended metrics for supported Amazon Web Services resources in the account."
+  },
+  {
+   "name": "stop-otel-enrichment",
+   "description": "Disables enrichment and PromQL access for CloudWatch vended metrics for supported Amazon Web Services resources in the account."
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified CloudWatch resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "alarm-exists",
+     "description": "Wait until JMESPath query length(MetricAlarms[]) > `0` returns True when polling with ``describe-alarms``.",
+     "options": [
+      {
+       "name": "--action-prefix",
+       "args": {}
+      },
+      {
+       "name": "--alarm-name-prefix",
+       "args": {}
+      },
+      {
+       "name": "--alarm-names",
+       "args": {}
+      },
+      {
+       "name": "--alarm-types",
+       "args": {}
+      },
+      {
+       "name": "--children-of-alarm-name",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--parents-of-alarm-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--state-value",
+       "args": {
+        "suggestions": [
+         "OK",
+         "ALARM",
+         "INSUFFICIENT_DATA"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "name": "alarm-mute-rule-exists",
+     "description": "Wait until 200 response is received when polling with ``get-alarm-mute-rule``.",
+     "options": [
+      {
+       "name": "--alarm-mute-rule-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "composite-alarm-exists",
+     "description": "Wait until JMESPath query length(CompositeAlarms[]) > `0` returns True when polling with ``describe-alarms``.",
+     "options": [
+      {
+       "name": "--action-prefix",
+       "args": {}
+      },
+      {
+       "name": "--alarm-name-prefix",
+       "args": {}
+      },
+      {
+       "name": "--alarm-names",
+       "args": {}
+      },
+      {
+       "name": "--alarm-types",
+       "args": {}
+      },
+      {
+       "name": "--children-of-alarm-name",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--parents-of-alarm-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--state-value",
+       "args": {
+        "suggestions": [
+         "OK",
+         "ALARM",
+         "INSUFFICIENT_DATA"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "name": "log-alarm-exists",
+     "description": "Wait until JMESPath query length(LogAlarms[]) > `0` returns True when polling with ``describe-alarms``.",
+     "options": [
+      {
+       "name": "--action-prefix",
+       "args": {}
+      },
+      {
+       "name": "--alarm-name-prefix",
+       "args": {}
+      },
+      {
+       "name": "--alarm-names",
+       "args": {}
+      },
+      {
+       "name": "--alarm-types",
+       "args": {}
+      },
+      {
+       "name": "--children-of-alarm-name",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--parents-of-alarm-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--state-value",
+       "args": {
+        "suggestions": [
+         "OK",
+         "ALARM",
+         "INSUFFICIENT_DATA"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

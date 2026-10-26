@@ -1,0 +1,715 @@
+{
+ "name": "b2bi",
+ "description": "This is the Amazon Web Services B2B Data Interchange API Reference.",
+ "subcommands": [
+  {
+   "name": "create-capability",
+   "description": "Instantiates a capability based on the specified parameters.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instructions-documents",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "edi"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-partnership",
+   "description": "Creates a partnership between a customer and a trading partner, based on the supplied parameters.",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capability-options",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--phone",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-profile",
+   "description": "Creates a customer profile.",
+   "options": [
+    {
+     "name": "--business-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--logging",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--phone",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-starter-mapping-template",
+   "description": "Amazon Web Services B2B Data Interchange uses a mapping template in JSONata or XSLT format to transform a customer input file into a JSON or XML file that can be converted to EDI.",
+   "options": [
+    {
+     "name": "--mapping-type",
+     "args": {
+      "suggestions": [
+       "JSONATA",
+       "XSLT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--output-sample-location",
+     "args": {}
+    },
+    {
+     "name": "--template-details",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-transformer",
+   "description": "Creates a transformer.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--edi-type",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "XML",
+       "JSON",
+       "NOT_USED"
+      ]
+     }
+    },
+    {
+     "name": "--input-conversion",
+     "args": {}
+    },
+    {
+     "name": "--mapping",
+     "args": {}
+    },
+    {
+     "name": "--mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-conversion",
+     "args": {}
+    },
+    {
+     "name": "--sample-document",
+     "args": {}
+    },
+    {
+     "name": "--sample-documents",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-capability",
+   "description": "Deletes the specified capability.",
+   "options": [
+    {
+     "name": "--capability-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-partnership",
+   "description": "Deletes the specified partnership.",
+   "options": [
+    {
+     "name": "--partnership-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-profile",
+   "description": "Deletes the specified profile.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-transformer",
+   "description": "Deletes the specified transformer.",
+   "options": [
+    {
+     "name": "--transformer-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-mapping",
+   "description": "Takes sample input and output documents and uses Amazon Bedrock to generate a mapping automatically.",
+   "options": [
+    {
+     "name": "--input-file-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mapping-type",
+     "args": {
+      "suggestions": [
+       "JSONATA",
+       "XSLT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--output-file-content",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-capability",
+   "description": "Retrieves the details for the specified capability.",
+   "options": [
+    {
+     "name": "--capability-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-partnership",
+   "description": "Retrieves the details for a partnership, based on the partner and profile IDs specified.",
+   "options": [
+    {
+     "name": "--partnership-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile",
+   "description": "Retrieves the details for the profile specified by the profile ID.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-transformer",
+   "description": "Retrieves the details for the transformer specified by the transformer ID.",
+   "options": [
+    {
+     "name": "--transformer-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-transformer-job",
+   "description": "Returns the details of the transformer run, based on the Transformer job ID.",
+   "options": [
+    {
+     "name": "--transformer-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transformer-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-capabilities",
+   "description": "Lists the capabilities associated with your Amazon Web Services account for your current or specified region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-partnerships",
+   "description": "Lists the partnerships associated with your Amazon Web Services account for your current or specified region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-profiles",
+   "description": "Lists the profiles associated with your Amazon Web Services account for your current or specified region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-transformers",
+   "description": "Lists the available transformers.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-transformer-job",
+   "description": "Runs a job, using a transformer, to parse input EDI (electronic data interchange) file into the output structures used by Amazon Web Services B2B Data Interchange.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--input-file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transformer-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Attaches a key-value pair to a resource, as identified by its Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-conversion",
+   "description": "This operation mimics the latter half of a typical Outbound EDI request.",
+   "options": [
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-mapping",
+   "description": "Maps the input file according to the provided template file.",
+   "options": [
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "XML",
+       "JSON",
+       "NOT_USED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--input-file-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mapping-template",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-parsing",
+   "description": "Parses the input EDI (electronic data interchange) file.",
+   "options": [
+    {
+     "name": "--advanced-options",
+     "args": {}
+    },
+    {
+     "name": "--edi-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "XML",
+       "JSON",
+       "NOT_USED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--input-file",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Detaches a key-value pair from the specified resource, as identified by its Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-capability",
+   "description": "Updates some of the parameters for a capability, based on the specified parameters.",
+   "options": [
+    {
+     "name": "--capability-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--instructions-documents",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-partnership",
+   "description": "Updates some of the parameters for a partnership between a customer and trading partner.",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--capability-options",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--partnership-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-profile",
+   "description": "Updates the specified parameters for a profile.",
+   "options": [
+    {
+     "name": "--business-name",
+     "args": {}
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--phone",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-transformer",
+   "description": "Updates the specified parameters for a transformer.",
+   "options": [
+    {
+     "name": "--edi-type",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "XML",
+       "JSON",
+       "NOT_USED"
+      ]
+     }
+    },
+    {
+     "name": "--input-conversion",
+     "args": {}
+    },
+    {
+     "name": "--mapping",
+     "args": {}
+    },
+    {
+     "name": "--mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--output-conversion",
+     "args": {}
+    },
+    {
+     "name": "--sample-document",
+     "args": {}
+    },
+    {
+     "name": "--sample-documents",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "active",
+       "inactive"
+      ]
+     }
+    },
+    {
+     "name": "--transformer-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "transformer-job-succeeded",
+     "description": "Wait until JMESPath query status returns succeeded when polling with ``get-transformer-job``.",
+     "options": [
+      {
+       "name": "--transformer-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--transformer-job-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

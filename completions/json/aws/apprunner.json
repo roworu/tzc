@@ -1,0 +1,642 @@
+{
+ "name": "apprunner",
+ "description": "App Runner App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an existing container image or source code to a running service in the Amazon Web Services Cloud in seconds.",
+ "subcommands": [
+  {
+   "name": "associate-custom-domain",
+   "description": "Associate your own domain name with the App Runner subdomain URL of your App Runner service.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-www-subdomain"
+    },
+    {
+     "name": "--no-enable-www-subdomain"
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-auto-scaling-configuration",
+   "description": "Create an App Runner automatic scaling configuration resource.",
+   "options": [
+    {
+     "name": "--auto-scaling-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-concurrency",
+     "args": {}
+    },
+    {
+     "name": "--max-size",
+     "args": {}
+    },
+    {
+     "name": "--min-size",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-connection",
+   "description": "Create an App Runner connection resource.",
+   "options": [
+    {
+     "name": "--connection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider-type",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-observability-configuration",
+   "description": "Create an App Runner observability configuration resource.",
+   "options": [
+    {
+     "name": "--observability-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--trace-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service",
+   "description": "Create an App Runner service.",
+   "options": [
+    {
+     "name": "--auto-scaling-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--health-check-configuration",
+     "args": {}
+    },
+    {
+     "name": "--instance-configuration",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--observability-configuration",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-connector",
+   "description": "Create an App Runner VPC connector resource.",
+   "options": [
+    {
+     "name": "--security-groups",
+     "args": {}
+    },
+    {
+     "name": "--subnets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-connector-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-ingress-connection",
+   "description": "Create an App Runner VPC Ingress Connection resource.",
+   "options": [
+    {
+     "name": "--ingress-vpc-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-ingress-connection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-auto-scaling-configuration",
+   "description": "Delete an App Runner automatic scaling configuration resource.",
+   "options": [
+    {
+     "name": "--auto-scaling-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delete-all-revisions"
+    },
+    {
+     "name": "--no-delete-all-revisions"
+    }
+   ]
+  },
+  {
+   "name": "delete-connection",
+   "description": "Delete an App Runner connection.",
+   "options": [
+    {
+     "name": "--connection-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-observability-configuration",
+   "description": "Delete an App Runner observability configuration resource.",
+   "options": [
+    {
+     "name": "--observability-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service",
+   "description": "Delete an App Runner service.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-connector",
+   "description": "Delete an App Runner VPC connector resource.",
+   "options": [
+    {
+     "name": "--vpc-connector-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-ingress-connection",
+   "description": "Delete an App Runner VPC Ingress Connection resource that's associated with an App Runner service.",
+   "options": [
+    {
+     "name": "--vpc-ingress-connection-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-auto-scaling-configuration",
+   "description": "Return a full description of an App Runner automatic scaling configuration resource.",
+   "options": [
+    {
+     "name": "--auto-scaling-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-custom-domains",
+   "description": "Return a description of custom domain names that are associated with an App Runner service.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-observability-configuration",
+   "description": "Return a full description of an App Runner observability configuration resource.",
+   "options": [
+    {
+     "name": "--observability-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-service",
+   "description": "Return a full description of an App Runner service.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-vpc-connector",
+   "description": "Return a description of an App Runner VPC connector resource.",
+   "options": [
+    {
+     "name": "--vpc-connector-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-vpc-ingress-connection",
+   "description": "Return a full description of an App Runner VPC Ingress Connection resource.",
+   "options": [
+    {
+     "name": "--vpc-ingress-connection-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-custom-domain",
+   "description": "Disassociate a custom domain name from an App Runner service.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-auto-scaling-configurations",
+   "description": "Returns a list of active App Runner automatic scaling configurations in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--auto-scaling-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--latest-only"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-latest-only"
+    }
+   ]
+  },
+  {
+   "name": "list-connections",
+   "description": "Returns a list of App Runner connections that are associated with your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--connection-name",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-observability-configurations",
+   "description": "Returns a list of active App Runner observability configurations in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--latest-only"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-latest-only"
+    },
+    {
+     "name": "--observability-configuration-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-operations",
+   "description": "Return a list of operations that occurred on an App Runner service.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "Returns a list of running App Runner services in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services-for-auto-scaling-configuration",
+   "description": "Returns a list of the associated App Runner services using an auto scaling configuration.",
+   "options": [
+    {
+     "name": "--auto-scaling-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List tags that are associated with for an App Runner resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-connectors",
+   "description": "Returns a list of App Runner VPC connectors in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-ingress-connections",
+   "description": "Return a list of App Runner VPC Ingress Connections in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "pause-service",
+   "description": "Pause an active App Runner service.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resume-service",
+   "description": "Resume an active App Runner service.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-deployment",
+   "description": "Initiate a manual deployment of the latest commit in a source code repository or the latest image in a source image repository to an App Runner service.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add tags to, or update the tag values of, an App Runner resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove tags from an App Runner resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-default-auto-scaling-configuration",
+   "description": "Update an auto scaling configuration to be the default.",
+   "options": [
+    {
+     "name": "--auto-scaling-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service",
+   "description": "Update an App Runner service.",
+   "options": [
+    {
+     "name": "--auto-scaling-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--health-check-configuration",
+     "args": {}
+    },
+    {
+     "name": "--instance-configuration",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--observability-configuration",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-vpc-ingress-connection",
+   "description": "Update an existing App Runner VPC Ingress Connection resource.",
+   "options": [
+    {
+     "name": "--ingress-vpc-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-ingress-connection-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

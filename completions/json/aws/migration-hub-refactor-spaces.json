@@ -1,0 +1,553 @@
+{
+ "name": "migration-hub-refactor-spaces",
+ "description": "Amazon Web Services Migration Hub Refactor Spaces This API reference provides descriptions, syntax, and other details about each of the actions and data types for Amazon Web Services Migration Hub Refactor Spaces (Refactor Spaces).",
+ "subcommands": [
+  {
+   "name": "create-application",
+   "description": "Creates an Amazon Web Services Migration Hub Refactor Spaces application.",
+   "options": [
+    {
+     "name": "--api-gateway-proxy",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--proxy-type",
+     "args": {
+      "suggestions": [
+       "API_GATEWAY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment",
+   "description": "Creates an Amazon Web Services Migration Hub Refactor Spaces environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-fabric-type",
+     "args": {
+      "suggestions": [
+       "TRANSIT_GATEWAY",
+       "NONE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-route",
+   "description": "Creates an Amazon Web Services Migration Hub Refactor Spaces route.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--default-route",
+     "args": {}
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-type",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "URI_PATH"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--uri-path-route",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service",
+   "description": "Creates an Amazon Web Services Migration Hub Refactor Spaces service.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {
+      "suggestions": [
+       "LAMBDA",
+       "URL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lambda-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--url-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes an Amazon Web Services Migration Hub Refactor Spaces application.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment",
+   "description": "Deletes an Amazon Web Services Migration Hub Refactor Spaces environment.",
+   "options": [
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes the resource policy set for the environment.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-route",
+   "description": "Deletes an Amazon Web Services Migration Hub Refactor Spaces route.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service",
+   "description": "Deletes an Amazon Web Services Migration Hub Refactor Spaces service.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application",
+   "description": "Gets an Amazon Web Services Migration Hub Refactor Spaces application.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment",
+   "description": "Gets an Amazon Web Services Migration Hub Refactor Spaces environment.",
+   "options": [
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Gets the resource-based permission policy that is set for the given environment.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-route",
+   "description": "Gets an Amazon Web Services Migration Hub Refactor Spaces route.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service",
+   "description": "Gets an Amazon Web Services Migration Hub Refactor Spaces service.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists all the Amazon Web Services Migration Hub Refactor Spaces applications within an environment.",
+   "options": [
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-vpcs",
+   "description": "Lists all Amazon Web Services Migration Hub Refactor Spaces service virtual private clouds (VPCs) that are part of the environment.",
+   "options": [
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environments",
+   "description": "Lists Amazon Web Services Migration Hub Refactor Spaces environments owned by a caller account or shared with the caller account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-routes",
+   "description": "Lists all the Amazon Web Services Migration Hub Refactor Spaces routes within an application.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "Lists all the Amazon Web Services Migration Hub Refactor Spaces services within an application.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags of a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Attaches a resource-based permission policy to the Amazon Web Services Migration Hub Refactor Spaces environment.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Removes the tags of a given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Adds to or modifies the tags of the given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-route",
+   "description": "Updates an Amazon Web Services Migration Hub Refactor Spaces route.",
+   "options": [
+    {
+     "name": "--activation-state",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,263 @@
+{
+ "name": "dlm",
+ "description": "Amazon Data Lifecycle Manager With Amazon Data Lifecycle Manager, you can manage the lifecycle of your Amazon Web Services resources.",
+ "subcommands": [
+  {
+   "name": "create-default-role",
+   "description": "Creates the default IAM role which will be used by Lifecycle service.",
+   "options": [
+    {
+     "name": "--iam-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "snapshot",
+       "image"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-lifecycle-policy",
+   "description": "Creates an Amazon Data Lifecycle Manager lifecycle policy.",
+   "options": [
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--create-interval",
+     "args": {}
+    },
+    {
+     "name": "--cross-region-copy-targets",
+     "args": {}
+    },
+    {
+     "name": "--default-policy",
+     "args": {
+      "suggestions": [
+       "VOLUME",
+       "INSTANCE"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exclusions",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--extend-deletion"
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--no-extend-deletion"
+    },
+    {
+     "name": "--policy-details",
+     "args": {}
+    },
+    {
+     "name": "--retain-interval",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-lifecycle-policy",
+   "description": "Deletes the specified lifecycle policy and halts the automated operations that the policy specified.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-lifecycle-policies",
+   "description": "Gets summary information about all or the specified data lifecycle policies.",
+   "options": [
+    {
+     "name": "--default-policy-type",
+     "args": {
+      "suggestions": [
+       "VOLUME",
+       "INSTANCE",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--policy-ids",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED",
+       "ERROR"
+      ]
+     }
+    },
+    {
+     "name": "--tags-to-add",
+     "args": {}
+    },
+    {
+     "name": "--target-tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-lifecycle-policy",
+   "description": "Gets detailed information about the specified lifecycle policy.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds the specified tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-lifecycle-policy",
+   "description": "Updates the specified lifecycle policy.",
+   "options": [
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--create-interval",
+     "args": {}
+    },
+    {
+     "name": "--cross-region-copy-targets",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--exclusions",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--extend-deletion"
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--no-extend-deletion"
+    },
+    {
+     "name": "--policy-details",
+     "args": {}
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retain-interval",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

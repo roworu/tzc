@@ -1,0 +1,497 @@
+{
+ "name": "invoicing",
+ "description": "Amazon Web Services Invoice Configuration You can use Amazon Web Services Invoice Configuration APIs to programmatically create, update, delete, get, and list invoice units.",
+ "subcommands": [
+  {
+   "name": "batch-get-invoice-profile",
+   "description": "This gets the invoice profile associated with a set of accounts.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-invoice-unit",
+   "description": "This creates a new invoice unit with the provided definition.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--invoice-receiver",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-tax-inheritance-disabled"
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tax-inheritance-disabled"
+    }
+   ]
+  },
+  {
+   "name": "create-procurement-portal-preference",
+   "description": "This feature API is subject to changing at any time.",
+   "options": [
+    {
+     "name": "--buyer-domain",
+     "args": {
+      "suggestions": [
+       "NetworkID"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--buyer-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--contacts",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--einvoice-delivery-enabled",
+     "priority": 75
+    },
+    {
+     "name": "--einvoice-delivery-preference",
+     "args": {}
+    },
+    {
+     "name": "--no-einvoice-delivery-enabled"
+    },
+    {
+     "name": "--no-purchase-order-retrieval-enabled"
+    },
+    {
+     "name": "--procurement-portal-instance-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--procurement-portal-name",
+     "args": {
+      "suggestions": [
+       "SAP_BUSINESS_NETWORK",
+       "COUPA"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--procurement-portal-shared-secret",
+     "args": {}
+    },
+    {
+     "name": "--purchase-order-retrieval-enabled",
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--selector",
+     "args": {}
+    },
+    {
+     "name": "--supplier-domain",
+     "args": {
+      "suggestions": [
+       "NetworkID"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--supplier-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-env-preference",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-invoice-unit",
+   "description": "This deletes an invoice unit with the provided invoice unit ARN.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--invoice-unit-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-procurement-portal-preference",
+   "description": "This feature API is subject to changing at any time.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--procurement-portal-preference-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-invoice-pdf",
+   "description": "Returns a URL to download the invoice document and supplemental documents associated with an invoice.",
+   "options": [
+    {
+     "name": "--invoice-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-invoice-unit",
+   "description": "This retrieves the invoice unit definition.",
+   "options": [
+    {
+     "name": "--as-of",
+     "args": {}
+    },
+    {
+     "name": "--invoice-unit-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-procurement-portal-preference",
+   "description": "This feature API is subject to changing at any time.",
+   "options": [
+    {
+     "name": "--procurement-portal-preference-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-invoice-summaries",
+   "description": "Retrieves your invoice details programmatically, without line item details.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--selector",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-invoice-units",
+   "description": "This fetches a list of all invoice unit definitions for a given account, as of the provided AsOf date.",
+   "options": [
+    {
+     "name": "--as-of",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-procurement-portal-preferences",
+   "description": "This feature API is subject to changing at any time.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-procurement-portal-preference",
+   "description": "This feature API is subject to changing at any time.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--contacts",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--einvoice-delivery-enabled",
+     "priority": 75
+    },
+    {
+     "name": "--einvoice-delivery-preference",
+     "args": {}
+    },
+    {
+     "name": "--no-einvoice-delivery-enabled"
+    },
+    {
+     "name": "--no-purchase-order-retrieval-enabled"
+    },
+    {
+     "name": "--procurement-portal-instance-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--procurement-portal-preference-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--procurement-portal-shared-secret",
+     "args": {}
+    },
+    {
+     "name": "--purchase-order-retrieval-enabled",
+     "priority": 75
+    },
+    {
+     "name": "--selector",
+     "args": {}
+    },
+    {
+     "name": "--test-env-preference",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-procurement-portal-validation",
+   "description": "This feature API is subject to changing at any time.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--procurement-portal-preference-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds a tag to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-invoice-unit",
+   "description": "You can update the invoice unit configuration at any time, and Amazon Web Services will use the latest configuration at the end of the month.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--invoice-unit-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-tax-inheritance-disabled"
+    },
+    {
+     "name": "--rule",
+     "args": {}
+    },
+    {
+     "name": "--tax-inheritance-disabled"
+    }
+   ]
+  },
+  {
+   "name": "update-procurement-portal-preference-status",
+   "description": "This feature API is subject to changing at any time.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--einvoice-delivery-preference-status",
+     "args": {
+      "suggestions": [
+       "PENDING_VERIFICATION",
+       "VALIDATED",
+       "TEST_INITIALIZED",
+       "TEST_INITIALIZATION_FAILED",
+       "TEST_FAILED",
+       "ACTIVE",
+       "SUSPENDED"
+      ]
+     }
+    },
+    {
+     "name": "--einvoice-delivery-preference-status-reason",
+     "args": {}
+    },
+    {
+     "name": "--procurement-portal-preference-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--purchase-order-retrieval-preference-status",
+     "args": {
+      "suggestions": [
+       "PENDING_VERIFICATION",
+       "VALIDATED",
+       "TEST_INITIALIZED",
+       "TEST_INITIALIZATION_FAILED",
+       "TEST_FAILED",
+       "ACTIVE",
+       "SUSPENDED"
+      ]
+     }
+    },
+    {
+     "name": "--purchase-order-retrieval-preference-status-reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "verify-procurement-portal-validation",
+   "description": "This feature API is subject to changing at any time.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--procurement-portal-preference-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

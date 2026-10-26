@@ -1,0 +1,3091 @@
+{
+ "name": "gamelift",
+ "description": "Amazon GameLift Servers provides solutions for hosting session-based multiplayer game servers in the cloud, including tools for deploying, operating, and scaling game servers.",
+ "subcommands": [
+  {
+   "name": "accept-match",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Registers a player's acceptance or rejection of a proposed FlexMatch match.",
+   "options": [
+    {
+     "name": "--acceptance-type",
+     "args": {
+      "suggestions": [
+       "ACCEPT",
+       "REJECT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--player-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ticket-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "claim-game-server",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Locates an available game server and temporarily reserves it to host gameplay and players.",
+   "options": [
+    {
+     "name": "--filter-option",
+     "args": {}
+    },
+    {
+     "name": "--game-server-data",
+     "args": {}
+    },
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-server-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-alias",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Creates an alias for a fleet.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--routing-strategy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-build",
+   "description": "This API works with the following fleet types: EC2, Anywhere Creates a new Amazon GameLift Servers build resource for your game server binary files.",
+   "options": [
+    {
+     "name": "--build-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--operating-system",
+     "args": {
+      "suggestions": [
+       "WINDOWS_2012",
+       "AMAZON_LINUX",
+       "AMAZON_LINUX_2",
+       "WINDOWS_2016",
+       "AMAZON_LINUX_2023",
+       "WINDOWS_2022"
+      ]
+     }
+    },
+    {
+     "name": "--server-sdk-version",
+     "args": {}
+    },
+    {
+     "name": "--storage-location",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-container-fleet",
+   "description": "This API works with the following fleet types: Container Creates a managed fleet of Amazon Elastic Compute Cloud (Amazon EC2) instances to host your containerized game servers.",
+   "options": [
+    {
+     "name": "--billing-type",
+     "args": {
+      "suggestions": [
+       "ON_DEMAND",
+       "SPOT"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--fleet-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-server-container-group-definition-name",
+     "args": {}
+    },
+    {
+     "name": "--game-server-container-groups-per-instance",
+     "args": {}
+    },
+    {
+     "name": "--game-session-creation-limit-policy",
+     "args": {}
+    },
+    {
+     "name": "--instance-connection-port-range",
+     "args": {}
+    },
+    {
+     "name": "--instance-inbound-permissions",
+     "args": {}
+    },
+    {
+     "name": "--instance-type",
+     "args": {}
+    },
+    {
+     "name": "--locations",
+     "args": {}
+    },
+    {
+     "name": "--log-configuration",
+     "args": {}
+    },
+    {
+     "name": "--metric-groups",
+     "args": {}
+    },
+    {
+     "name": "--new-game-session-protection-policy",
+     "args": {
+      "suggestions": [
+       "NoProtection",
+       "FullProtection"
+      ]
+     }
+    },
+    {
+     "name": "--per-instance-container-group-definition-name",
+     "args": {}
+    },
+    {
+     "name": "--player-gateway-mode",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "ENABLED",
+       "REQUIRED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-container-group-definition",
+   "description": "This API works with the following fleet types: Container Creates a ContainerGroupDefinition that describes a set of containers for hosting your game server with Amazon GameLift Servers managed containers hosting.",
+   "options": [
+    {
+     "name": "--container-group-type",
+     "args": {
+      "suggestions": [
+       "GAME_SERVER",
+       "PER_INSTANCE"
+      ]
+     }
+    },
+    {
+     "name": "--game-server-container-definition",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operating-system",
+     "args": {
+      "suggestions": [
+       "AMAZON_LINUX_2023"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--support-container-definitions",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--total-memory-limit-mebibytes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--total-vcpu-limit",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-fleet",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Creates a fleet of compute resources to host your game servers.",
+   "options": [
+    {
+     "name": "--anywhere-configuration",
+     "args": {}
+    },
+    {
+     "name": "--build-id",
+     "args": {}
+    },
+    {
+     "name": "--certificate-configuration",
+     "args": {}
+    },
+    {
+     "name": "--compute-type",
+     "args": {
+      "suggestions": [
+       "EC2",
+       "ANYWHERE"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--ec2-inbound-permissions",
+     "args": {}
+    },
+    {
+     "name": "--ec2-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--fleet-type",
+     "args": {
+      "suggestions": [
+       "ON_DEMAND",
+       "SPOT"
+      ]
+     }
+    },
+    {
+     "name": "--instance-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--instance-role-credentials-provider",
+     "args": {
+      "suggestions": [
+       "SHARED_CREDENTIAL_FILE"
+      ]
+     }
+    },
+    {
+     "name": "--locations",
+     "args": {}
+    },
+    {
+     "name": "--log-paths",
+     "args": {}
+    },
+    {
+     "name": "--metric-groups",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-game-session-protection-policy",
+     "args": {
+      "suggestions": [
+       "NoProtection",
+       "FullProtection"
+      ]
+     }
+    },
+    {
+     "name": "--peer-vpc-aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--peer-vpc-id",
+     "args": {}
+    },
+    {
+     "name": "--player-gateway-configuration",
+     "args": {}
+    },
+    {
+     "name": "--player-gateway-mode",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "ENABLED",
+       "REQUIRED"
+      ]
+     }
+    },
+    {
+     "name": "--resource-creation-limit-policy",
+     "args": {}
+    },
+    {
+     "name": "--runtime-configuration",
+     "args": {}
+    },
+    {
+     "name": "--script-id",
+     "args": {}
+    },
+    {
+     "name": "--server-launch-parameters",
+     "args": {}
+    },
+    {
+     "name": "--server-launch-path",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-fleet-locations",
+   "description": "This API works with the following fleet types: EC2, Container Adds remote locations to an EC2 and begins populating the new locations with instances.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--locations",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-game-server-group",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Creates a Amazon GameLift Servers FleetIQ game server group for managing game hosting on a collection of Amazon Elastic Compute Cloud instances for game hosting.",
+   "options": [
+    {
+     "name": "--auto-scaling-policy",
+     "args": {}
+    },
+    {
+     "name": "--balancing-strategy",
+     "args": {
+      "suggestions": [
+       "SPOT_ONLY",
+       "SPOT_PREFERRED",
+       "ON_DEMAND_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-server-protection-policy",
+     "args": {
+      "suggestions": [
+       "NO_PROTECTION",
+       "FULL_PROTECTION"
+      ]
+     }
+    },
+    {
+     "name": "--instance-definitions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--launch-template",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-size",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--min-size",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-subnets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-game-session",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Creates a multiplayer game session for players in a specific fleet location.",
+   "options": [
+    {
+     "name": "--alias-id",
+     "args": {}
+    },
+    {
+     "name": "--creator-id",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {}
+    },
+    {
+     "name": "--game-properties",
+     "args": {}
+    },
+    {
+     "name": "--game-session-data",
+     "args": {}
+    },
+    {
+     "name": "--game-session-id",
+     "args": {}
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--maximum-player-session-count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-game-session-queue",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Creates a placement queue that processes requests for new game sessions.",
+   "options": [
+    {
+     "name": "--custom-event-data",
+     "args": {}
+    },
+    {
+     "name": "--destinations",
+     "args": {}
+    },
+    {
+     "name": "--filter-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-target",
+     "args": {}
+    },
+    {
+     "name": "--player-latency-policies",
+     "args": {}
+    },
+    {
+     "name": "--priority-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout-in-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location",
+   "description": "This API works with the following fleet types: Anywhere Creates a custom location for use in an Anywhere fleet.",
+   "options": [
+    {
+     "name": "--location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-matchmaking-configuration",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Defines a new matchmaking configuration for use with FlexMatch.",
+   "options": [
+    {
+     "name": "--acceptance-required",
+     "priority": 75
+    },
+    {
+     "name": "--acceptance-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--additional-player-count",
+     "args": {}
+    },
+    {
+     "name": "--backfill-mode",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--custom-event-data",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--flex-match-mode",
+     "args": {
+      "suggestions": [
+       "STANDALONE",
+       "WITH_QUEUE"
+      ]
+     }
+    },
+    {
+     "name": "--game-properties",
+     "args": {}
+    },
+    {
+     "name": "--game-session-data",
+     "args": {}
+    },
+    {
+     "name": "--game-session-queue-arns",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-acceptance-required"
+    },
+    {
+     "name": "--notification-target",
+     "args": {}
+    },
+    {
+     "name": "--request-timeout-seconds",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-matchmaking-rule-set",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Creates a new rule set for FlexMatch matchmaking.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-set-body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-player-session",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Reserves an open player slot in a game session for a player.",
+   "options": [
+    {
+     "name": "--game-session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--player-data",
+     "args": {}
+    },
+    {
+     "name": "--player-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-player-sessions",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Reserves open slots in a game session for a group of players.",
+   "options": [
+    {
+     "name": "--game-session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--player-data-map",
+     "args": {}
+    },
+    {
+     "name": "--player-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-script",
+   "description": "This API works with the following fleet types: EC2, Anywhere Creates a new script record for your Amazon GameLift Servers Realtime script.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--node-js-version",
+     "args": {}
+    },
+    {
+     "name": "--script-version",
+     "args": {}
+    },
+    {
+     "name": "--storage-location",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--zip-file",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-peering-authorization",
+   "description": "This API works with the following fleet types: EC2 Requests authorization to create or delete a peer connection between the VPC for your Amazon GameLift Servers fleet and a virtual private cloud (VPC) in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--game-lift-aws-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peer-vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-peering-connection",
+   "description": "This API works with the following fleet types: EC2 Establishes a VPC peering connection between a virtual private cloud (VPC) in an Amazon Web Services account with the VPC for your Amazon GameLift Servers fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peer-vpc-aws-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peer-vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-alias",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Deletes an alias.",
+   "options": [
+    {
+     "name": "--alias-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-build",
+   "description": "This API works with the following fleet types: EC2 Deletes a build.",
+   "options": [
+    {
+     "name": "--build-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-container-fleet",
+   "description": "This API works with the following fleet types: Container Deletes all resources and information related to a container fleet and shuts down currently running fleet instances, including those in remote locations.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-container-group-definition",
+   "description": "This API works with the following fleet types: Container Request options: Deletes a container group definition.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-count-to-retain",
+     "args": {}
+    },
+    {
+     "name": "--version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-fleet",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Deletes all resources and information related to a fleet and shuts down any currently running fleet instances, including those in remote locations.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-fleet-locations",
+   "description": "This API works with the following fleet types: EC2, Container Removes locations from a multi-location fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--locations",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-game-server-group",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Terminates a game server group and permanently deletes the game server group record.",
+   "options": [
+    {
+     "name": "--delete-option",
+     "args": {
+      "suggestions": [
+       "SAFE_DELETE",
+       "FORCE_DELETE",
+       "RETAIN"
+      ]
+     }
+    },
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-game-session-queue",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Deletes a game session queue.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-location",
+   "description": "This API works with the following fleet types: Anywhere Deletes a custom location.",
+   "options": [
+    {
+     "name": "--location-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-matchmaking-configuration",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Permanently removes a FlexMatch matchmaking configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-matchmaking-rule-set",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Deletes an existing matchmaking rule set.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scaling-policy",
+   "description": "This API works with the following fleet types: EC2 Deletes a fleet scaling policy.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-script",
+   "description": "This API works with the following fleet types: EC2 Deletes a Realtime script.",
+   "options": [
+    {
+     "name": "--script-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-peering-authorization",
+   "description": "This API works with the following fleet types: EC2 Cancels a pending VPC peering authorization for the specified VPC.",
+   "options": [
+    {
+     "name": "--game-lift-aws-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peer-vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-peering-connection",
+   "description": "This API works with the following fleet types: EC2 Removes a VPC peering connection.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-peering-connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-compute",
+   "description": "This API works with the following fleet types: Anywhere Removes a compute resource from an Anywhere fleet.",
+   "options": [
+    {
+     "name": "--compute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-game-server",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Removes the game server from a game server group.",
+   "options": [
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-alias",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves properties for an alias.",
+   "options": [
+    {
+     "name": "--alias-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-build",
+   "description": "This API works with the following fleet types: EC2 Retrieves properties for a custom game build.",
+   "options": [
+    {
+     "name": "--build-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-compute",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves properties for a specific compute resource in an Amazon GameLift Servers fleet.",
+   "options": [
+    {
+     "name": "--compute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-container-fleet",
+   "description": "This API works with the following fleet types: Container Retrieves the properties for a container fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-container-group-definition",
+   "description": "This API works with the following fleet types: Container Retrieves the properties of a container group definition, including all container definitions in the group.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-container-group-port-mappings",
+   "description": "This API works with the following fleet types: Container Retrieves the port mappings for a container group running on a container fleet.",
+   "options": [
+    {
+     "name": "--compute-name",
+     "args": {}
+    },
+    {
+     "name": "--container-group-type",
+     "args": {
+      "suggestions": [
+       "GAME_SERVER",
+       "PER_INSTANCE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--container-name",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-ec2-instance-limits",
+   "description": "This API works with the following fleet types: EC2 Retrieves the instance limits and current utilization for an Amazon Web Services Region or location.",
+   "options": [
+    {
+     "name": "--ec2-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-attributes",
+   "description": "This API works with the following fleet types: EC2, Anywhere Retrieves core fleet-wide properties for fleets in an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--fleet-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-capacity",
+   "description": "This API works with the following fleet types: EC2, Container Retrieves the resource capacity settings for one or more fleets.",
+   "options": [
+    {
+     "name": "--fleet-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-deployment",
+   "description": "This API works with the following fleet types: Container Retrieves information about a managed container fleet deployment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-events",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves entries from a fleet's event log.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-location-attributes",
+   "description": "This API works with the following fleet types: EC2, Container Retrieves information on a fleet's remote locations, including life-cycle status and any suspended fleet activity.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--locations",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-location-capacity",
+   "description": "This API works with the following fleet types: EC2, Container Retrieves the resource capacity settings for a fleet location.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-location-utilization",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves current usage data for a fleet location.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-port-settings",
+   "description": "This API works with the following fleet types: EC2, Container Retrieves a fleet's inbound connection permissions.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-utilization",
+   "description": "This API works with the following fleet types: EC2, Container Retrieves utilization statistics for one or more fleets.",
+   "options": [
+    {
+     "name": "--fleet-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-game-server",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Retrieves information for a registered game server.",
+   "options": [
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-game-server-group",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Retrieves information on a game server group.",
+   "options": [
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-game-server-instances",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Retrieves status information about the Amazon EC2 instances associated with a Amazon GameLift Servers FleetIQ game server group.",
+   "options": [
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-game-session-details",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves additional game session properties, including the game session protection policy in force, a set of one or more game sessions in a specific fleet location.",
+   "options": [
+    {
+     "name": "--alias-id",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {}
+    },
+    {
+     "name": "--game-session-id",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-game-session-placement",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves information, including current status, about a game session placement request.",
+   "options": [
+    {
+     "name": "--placement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-game-session-queues",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves the properties for one or more game session queues.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-game-sessions",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves a set of one or more game sessions in a specific fleet location.",
+   "options": [
+    {
+     "name": "--alias-id",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {}
+    },
+    {
+     "name": "--game-session-id",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-instances",
+   "description": "This API works with the following fleet types:EC2, Container Retrieves information about the EC2 instances in an Amazon GameLift Servers managed fleet, including instance ID, connection data, and status.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-matchmaking",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves one or more matchmaking tickets.",
+   "options": [
+    {
+     "name": "--ticket-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-matchmaking-configurations",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves the details of FlexMatch matchmaking configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--rule-set-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-matchmaking-rule-sets",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves the details for FlexMatch matchmaking rule sets.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-player-sessions",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves properties for one or more player sessions.",
+   "options": [
+    {
+     "name": "--game-session-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--player-id",
+     "args": {}
+    },
+    {
+     "name": "--player-session-id",
+     "args": {}
+    },
+    {
+     "name": "--player-session-status-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-runtime-configuration",
+   "description": "This API works with the following fleet types: EC2 Retrieves a fleet's runtime configuration settings.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-scaling-policies",
+   "description": "This API works with the following fleet types: EC2 Retrieves all scaling policies applied to a fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "UPDATE_REQUESTED",
+       "UPDATING",
+       "DELETE_REQUESTED",
+       "DELETING",
+       "DELETED",
+       "ERROR"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-script",
+   "description": "This API works with the following fleet types: EC2 Retrieves properties for a Realtime script.",
+   "options": [
+    {
+     "name": "--script-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-vpc-peering-authorizations",
+   "description": "This API works with the following fleet types: EC2 Retrieves valid VPC peering authorizations that are pending for the Amazon Web Services account."
+  },
+  {
+   "name": "describe-vpc-peering-connections",
+   "description": "This API works with the following fleet types: EC2 Retrieves information on VPC peering connections.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-compute-access",
+   "description": "This API works with the following fleet types: EC2, Container Requests authorization to remotely connect to a hosting resource in a Amazon GameLift Servers managed fleet.",
+   "options": [
+    {
+     "name": "--compute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-compute-auth-token",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Requests an authentication token from Amazon GameLift Servers for a compute resource in an Amazon GameLift Servers fleet.",
+   "options": [
+    {
+     "name": "--compute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-game-session-log",
+   "description": "Download a compressed log file for a game session.",
+   "options": [
+    {
+     "name": "--game-session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--save-as",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-game-session-log-url",
+   "description": "This API works with the following fleet types: EC2 Retrieves the location of stored game session logs for a specified game session on Amazon GameLift Servers managed fleets.",
+   "options": [
+    {
+     "name": "--game-session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instance-access",
+   "description": "This API works with the following fleet types: EC2 Requests authorization to remotely connect to an instance in an Amazon GameLift Servers managed fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-player-connection-details",
+   "description": "This API works with the following fleet types: EC2 (server SDK 5.x or later), Container Retrieves connection details for game clients to connect to game sessions.",
+   "options": [
+    {
+     "name": "--game-session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--player-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-aliases",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves all aliases for this Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--routing-strategy-type",
+     "args": {
+      "suggestions": [
+       "SIMPLE",
+       "TERMINAL"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-builds",
+   "description": "This API works with the following fleet types: EC2 Retrieves build resources for all builds associated with the Amazon Web Services account in use.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "INITIALIZED",
+       "READY",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-compute",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves information on the compute resources in an Amazon GameLift Servers fleet.",
+   "options": [
+    {
+     "name": "--compute-status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "IMPAIRED"
+      ]
+     }
+    },
+    {
+     "name": "--container-group-definition-name",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-container-fleets",
+   "description": "This API works with the following fleet types: Container Retrieves a collection of container fleet resources in an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--container-group-definition-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-container-group-definition-versions",
+   "description": "This API works with the following fleet types: Container Retrieves all versions of a container group definition.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-container-group-definitions",
+   "description": "This API works with the following fleet types: Container Retrieves container group definitions for the Amazon Web Services account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--container-group-type",
+     "args": {
+      "suggestions": [
+       "GAME_SERVER",
+       "PER_INSTANCE"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fleet-deployments",
+   "description": "This API works with the following fleet types: Container Retrieves a collection of container fleet deployments in an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fleets",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves a collection of fleet resources in an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--build-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--script-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-game-server-groups",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Lists a game server groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-game-servers",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Retrieves information on all game servers that are currently active in a specified game server group.",
+   "options": [
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-locations",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Lists all custom and Amazon Web Services locations where Amazon GameLift Servers can host game servers.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-scripts",
+   "description": "This API works with the following fleet types: EC2 Retrieves script records for all Realtime scripts that are associated with the Amazon Web Services account in use.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves all tags assigned to a Amazon GameLift Servers resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-scaling-policy",
+   "description": "This API works with the following fleet types: EC2 Creates or updates a scaling policy for a fleet.",
+   "options": [
+    {
+     "name": "--comparison-operator",
+     "args": {
+      "suggestions": [
+       "GreaterThanOrEqualToThreshold",
+       "GreaterThanThreshold",
+       "LessThanThreshold",
+       "LessThanOrEqualToThreshold"
+      ]
+     }
+    },
+    {
+     "name": "--evaluation-periods",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "ActivatingGameSessions",
+       "ActiveGameSessions",
+       "ActiveInstances",
+       "AvailableGameSessions",
+       "AvailablePlayerSessions",
+       "CurrentPlayerSessions",
+       "IdleInstances",
+       "PercentAvailableGameSessions",
+       "PercentIdleInstances",
+       "QueueDepth",
+       "WaitTime",
+       "ConcurrentActivatableGameSessions"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "RuleBased",
+       "TargetBased"
+      ]
+     }
+    },
+    {
+     "name": "--scaling-adjustment",
+     "args": {}
+    },
+    {
+     "name": "--scaling-adjustment-type",
+     "args": {
+      "suggestions": [
+       "ChangeInCapacity",
+       "ExactCapacity",
+       "PercentChangeInCapacity"
+      ]
+     }
+    },
+    {
+     "name": "--target-configuration",
+     "args": {}
+    },
+    {
+     "name": "--threshold",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-compute",
+   "description": "This API works with the following fleet types: Anywhere, Container Registers a compute resource in an Amazon GameLift Servers Anywhere fleet.",
+   "options": [
+    {
+     "name": "--certificate-path",
+     "args": {}
+    },
+    {
+     "name": "--compute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dns-name",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-address",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-game-server",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Creates a new game server resource and notifies Amazon GameLift Servers FleetIQ that the game server is ready to host gameplay and players.",
+   "options": [
+    {
+     "name": "--connection-info",
+     "args": {}
+    },
+    {
+     "name": "--game-server-data",
+     "args": {}
+    },
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "request-upload-credentials",
+   "description": "This API works with the following fleet types: EC2 Retrieves a fresh set of credentials for use when uploading a new set of game build files to Amazon GameLift Servers's Amazon S3.",
+   "options": [
+    {
+     "name": "--build-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resolve-alias",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Attempts to retrieve a fleet ID that is associated with an alias.",
+   "options": [
+    {
+     "name": "--alias-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resume-game-server-group",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Reinstates activity on a game server group after it has been suspended.",
+   "options": [
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resume-actions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-game-sessions",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Retrieves all active game sessions that match a set of search criteria and sorts them into a specified order.",
+   "options": [
+    {
+     "name": "--alias-id",
+     "args": {}
+    },
+    {
+     "name": "--filter-expression",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-expression",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-fleet-actions",
+   "description": "This API works with the following fleet types: EC2, Container Resumes certain types of activity on fleet instances that were suspended with StopFleetActions.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-game-session-placement",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Makes a request to start a new game session using a game session queue.",
+   "options": [
+    {
+     "name": "--desired-player-sessions",
+     "args": {}
+    },
+    {
+     "name": "--game-properties",
+     "args": {}
+    },
+    {
+     "name": "--game-session-data",
+     "args": {}
+    },
+    {
+     "name": "--game-session-name",
+     "args": {}
+    },
+    {
+     "name": "--game-session-queue-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--maximum-player-session-count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--placement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--player-latencies",
+     "args": {}
+    },
+    {
+     "name": "--priority-configuration-override",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-match-backfill",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Finds new players to fill open slots in currently running game sessions.",
+   "options": [
+    {
+     "name": "--configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-session-arn",
+     "args": {}
+    },
+    {
+     "name": "--players",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ticket-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-matchmaking",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Uses FlexMatch to create a game match for a group of players based on custom matchmaking rules.",
+   "options": [
+    {
+     "name": "--configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--players",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ticket-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-fleet-actions",
+   "description": "This API works with the following fleet types: EC2, Container Suspends certain types of activity in a fleet location.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-game-session-placement",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Cancels a game session placement that's in PENDING status.",
+   "options": [
+    {
+     "name": "--placement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-matchmaking",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Cancels a matchmaking ticket or match backfill ticket that is currently being processed.",
+   "options": [
+    {
+     "name": "--ticket-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "suspend-game-server-group",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Temporarily stops activity on a game server group without terminating instances or the game server group.",
+   "options": [
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--suspend-actions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Assigns a tag to an Amazon GameLift Servers resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-game-session",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Ends a game session that's currently in progress.",
+   "options": [
+    {
+     "name": "--game-session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--termination-mode",
+     "args": {
+      "suggestions": [
+       "TRIGGER_ON_PROCESS_TERMINATE",
+       "FORCE_TERMINATE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Removes a tag assigned to a Amazon GameLift Servers resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-alias",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Updates properties for an alias.",
+   "options": [
+    {
+     "name": "--alias-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--routing-strategy",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-build",
+   "description": "This API works with the following fleet types: EC2 Updates metadata in a build resource, including the build name and version.",
+   "options": [
+    {
+     "name": "--build-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--build-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-container-fleet",
+   "description": "This API works with the following fleet types: Container Updates the properties of a managed container fleet.",
+   "options": [
+    {
+     "name": "--deployment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-server-container-group-definition-name",
+     "args": {}
+    },
+    {
+     "name": "--game-server-container-groups-per-instance",
+     "args": {}
+    },
+    {
+     "name": "--game-session-creation-limit-policy",
+     "args": {}
+    },
+    {
+     "name": "--instance-connection-port-range",
+     "args": {}
+    },
+    {
+     "name": "--instance-inbound-permission-authorizations",
+     "args": {}
+    },
+    {
+     "name": "--instance-inbound-permission-revocations",
+     "args": {}
+    },
+    {
+     "name": "--log-configuration",
+     "args": {}
+    },
+    {
+     "name": "--metric-groups",
+     "args": {}
+    },
+    {
+     "name": "--new-game-session-protection-policy",
+     "args": {
+      "suggestions": [
+       "NoProtection",
+       "FullProtection"
+      ]
+     }
+    },
+    {
+     "name": "--per-instance-container-group-definition-name",
+     "args": {}
+    },
+    {
+     "name": "--remove-attributes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-container-group-definition",
+   "description": "This API works with the following fleet types: Container Updates properties in an existing container group definition.",
+   "options": [
+    {
+     "name": "--game-server-container-definition",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operating-system",
+     "args": {
+      "suggestions": [
+       "AMAZON_LINUX_2023"
+      ]
+     }
+    },
+    {
+     "name": "--source-version-number",
+     "args": {}
+    },
+    {
+     "name": "--support-container-definitions",
+     "args": {}
+    },
+    {
+     "name": "--total-memory-limit-mebibytes",
+     "args": {}
+    },
+    {
+     "name": "--total-vcpu-limit",
+     "args": {}
+    },
+    {
+     "name": "--version-description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-fleet-attributes",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Updates a fleet's mutable attributes, such as game session protection and resource creation limits.",
+   "options": [
+    {
+     "name": "--anywhere-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-groups",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--new-game-session-protection-policy",
+     "args": {
+      "suggestions": [
+       "NoProtection",
+       "FullProtection"
+      ]
+     }
+    },
+    {
+     "name": "--resource-creation-limit-policy",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-fleet-capacity",
+   "description": "This API works with the following fleet types: EC2, Container Updates capacity settings for a managed EC2 fleet or managed container fleet.",
+   "options": [
+    {
+     "name": "--desired-instances",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--managed-capacity-configuration",
+     "args": {}
+    },
+    {
+     "name": "--max-size",
+     "args": {}
+    },
+    {
+     "name": "--min-size",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-fleet-port-settings",
+   "description": "This API works with the following fleet types: EC2, Container Updates permissions that allow inbound traffic to connect to game sessions in the fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--inbound-permission-authorizations",
+     "args": {}
+    },
+    {
+     "name": "--inbound-permission-revocations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-game-server",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Updates information about a registered game server to help Amazon GameLift Servers FleetIQ track game server availability.",
+   "options": [
+    {
+     "name": "--game-server-data",
+     "args": {}
+    },
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--health-check",
+     "args": {
+      "suggestions": [
+       "HEALTHY"
+      ]
+     }
+    },
+    {
+     "name": "--utilization-status",
+     "args": {
+      "suggestions": [
+       "AVAILABLE",
+       "UTILIZED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-game-server-group",
+   "description": "This API works with the following fleet types: EC2 (FleetIQ) Updates Amazon GameLift Servers FleetIQ-specific properties for a game server group.",
+   "options": [
+    {
+     "name": "--balancing-strategy",
+     "args": {
+      "suggestions": [
+       "SPOT_ONLY",
+       "SPOT_PREFERRED",
+       "ON_DEMAND_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--game-server-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--game-server-protection-policy",
+     "args": {
+      "suggestions": [
+       "NO_PROTECTION",
+       "FULL_PROTECTION"
+      ]
+     }
+    },
+    {
+     "name": "--instance-definitions",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-game-session",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Updates the mutable properties of a game session.",
+   "options": [
+    {
+     "name": "--game-properties",
+     "args": {}
+    },
+    {
+     "name": "--game-session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--maximum-player-session-count",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--player-session-creation-policy",
+     "args": {
+      "suggestions": [
+       "ACCEPT_ALL",
+       "DENY_ALL"
+      ]
+     }
+    },
+    {
+     "name": "--protection-policy",
+     "args": {
+      "suggestions": [
+       "NoProtection",
+       "FullProtection"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-game-session-queue",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Updates the configuration of a game session queue, which determines how the queue processes new game session requests.",
+   "options": [
+    {
+     "name": "--custom-event-data",
+     "args": {}
+    },
+    {
+     "name": "--destinations",
+     "args": {}
+    },
+    {
+     "name": "--filter-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-target",
+     "args": {}
+    },
+    {
+     "name": "--player-latency-policies",
+     "args": {}
+    },
+    {
+     "name": "--priority-configuration",
+     "args": {}
+    },
+    {
+     "name": "--timeout-in-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-matchmaking-configuration",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Updates settings for a FlexMatch matchmaking configuration.",
+   "options": [
+    {
+     "name": "--acceptance-required"
+    },
+    {
+     "name": "--acceptance-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--additional-player-count",
+     "args": {}
+    },
+    {
+     "name": "--backfill-mode",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--custom-event-data",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--flex-match-mode",
+     "args": {
+      "suggestions": [
+       "STANDALONE",
+       "WITH_QUEUE"
+      ]
+     }
+    },
+    {
+     "name": "--game-properties",
+     "args": {}
+    },
+    {
+     "name": "--game-session-data",
+     "args": {}
+    },
+    {
+     "name": "--game-session-queue-arns",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-acceptance-required"
+    },
+    {
+     "name": "--notification-target",
+     "args": {}
+    },
+    {
+     "name": "--request-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--rule-set-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-runtime-configuration",
+   "description": "This API works with the following fleet types: EC2 Updates the runtime configuration for the specified fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--runtime-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-script",
+   "description": "This API works with the following fleet types: EC2 Updates Realtime script metadata and content.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--script-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--script-version",
+     "args": {}
+    },
+    {
+     "name": "--storage-location",
+     "args": {}
+    },
+    {
+     "name": "--zip-file",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "upload-build",
+   "description": "Upload a new build to AWS GameLift.",
+   "options": [
+    {
+     "name": "--build-root",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--build-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operating-system",
+     "args": {}
+    },
+    {
+     "name": "--server-sdk-version",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "validate-matchmaking-rule-set",
+   "description": "This API works with the following fleet types: EC2, Anywhere, Container Validates the syntax of a matchmaking rule or rule set.",
+   "options": [
+    {
+     "name": "--rule-set-body",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,624 @@
+{
+ "name": "codeconnections",
+ "description": "AWS CodeConnections This Amazon Web Services CodeConnections API Reference provides descriptions and usage examples of the operations and data types for the Amazon Web Services CodeConnections API.",
+ "subcommands": [
+  {
+   "name": "create-connection",
+   "description": "Creates a connection that can then be given to other Amazon Web Services services like CodePipeline so that it can access third-party code repositories.",
+   "options": [
+    {
+     "name": "--connection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--host-arn",
+     "args": {}
+    },
+    {
+     "name": "--provider-type",
+     "args": {
+      "suggestions": [
+       "Bitbucket",
+       "GitHub",
+       "GitHubEnterpriseServer",
+       "GitLab",
+       "GitLabSelfManaged",
+       "AzureDevOps"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-host",
+   "description": "Creates a resource that represents the infrastructure where a third-party provider is installed.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider-endpoint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider-type",
+     "args": {
+      "suggestions": [
+       "Bitbucket",
+       "GitHub",
+       "GitHubEnterpriseServer",
+       "GitLab",
+       "GitLabSelfManaged",
+       "AzureDevOps"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-repository-link",
+   "description": "Creates a link to a specified external Git repository.",
+   "options": [
+    {
+     "name": "--connection-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--owner-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-sync-configuration",
+   "description": "Creates a sync configuration which allows Amazon Web Services to sync content from a Git repository to update a specified Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--branch",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--publish-deployment-status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--pull-request-comment",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--repository-link-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--trigger-resource-update-on",
+     "args": {
+      "suggestions": [
+       "ANY_CHANGE",
+       "FILE_CHANGE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-connection",
+   "description": "The connection to be deleted.",
+   "options": [
+    {
+     "name": "--connection-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-host",
+   "description": "The host to be deleted.",
+   "options": [
+    {
+     "name": "--host-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-repository-link",
+   "description": "Deletes the association between your connection and a specified external Git repository.",
+   "options": [
+    {
+     "name": "--repository-link-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-sync-configuration",
+   "description": "Deletes the sync configuration for a specified repository and connection.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connection",
+   "description": "Returns the connection ARN and details such as status, owner, and provider type.",
+   "options": [
+    {
+     "name": "--connection-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-host",
+   "description": "Returns the host ARN and details such as status, provider type, endpoint, and, if applicable, the VPC configuration.",
+   "options": [
+    {
+     "name": "--host-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-repository-link",
+   "description": "Returns details about a repository link.",
+   "options": [
+    {
+     "name": "--repository-link-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-repository-sync-status",
+   "description": "Returns details about the sync status for a repository.",
+   "options": [
+    {
+     "name": "--branch",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-link-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-sync-status",
+   "description": "Returns the status of the sync with the Git repository for a specific Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sync-blocker-summary",
+   "description": "Returns a list of the most recent sync blockers.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sync-configuration",
+   "description": "Returns details about a sync configuration, including the sync type and resource name.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-connections",
+   "description": "Lists the connections associated with your account.",
+   "options": [
+    {
+     "name": "--host-arn-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--provider-type-filter",
+     "args": {
+      "suggestions": [
+       "Bitbucket",
+       "GitHub",
+       "GitHubEnterpriseServer",
+       "GitLab",
+       "GitLabSelfManaged",
+       "AzureDevOps"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-hosts",
+   "description": "Lists the hosts associated with your account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-repository-links",
+   "description": "Lists the repository links created for connections in your account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-repository-sync-definitions",
+   "description": "Lists the repository sync definitions for repository links in your account.",
+   "options": [
+    {
+     "name": "--repository-link-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-sync-configurations",
+   "description": "Returns a list of sync configurations for a specified repository.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--repository-link-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets the set of key-value pairs (metadata) that are used to manage the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds to or modifies the tags of the given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from an Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-host",
+   "description": "Updates a specified host with the provided configurations.",
+   "options": [
+    {
+     "name": "--host-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-repository-link",
+   "description": "Updates the association between your connection and a specified external Git repository.",
+   "options": [
+    {
+     "name": "--connection-arn",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--repository-link-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-sync-blocker",
+   "description": "Allows you to update the status of a sync blocker, resolving the blocker and allowing syncing to continue.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resolved-reason",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-sync-configuration",
+   "description": "Updates the sync configuration for your connection and a specified external Git repository.",
+   "options": [
+    {
+     "name": "--branch",
+     "args": {}
+    },
+    {
+     "name": "--config-file",
+     "args": {}
+    },
+    {
+     "name": "--publish-deployment-status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--pull-request-comment",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--repository-link-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK_SYNC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--trigger-resource-update-on",
+     "args": {
+      "suggestions": [
+       "ANY_CHANGE",
+       "FILE_CHANGE"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

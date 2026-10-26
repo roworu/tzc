@@ -1,0 +1,1816 @@
+{
+ "name": "codeartifact",
+ "description": "CodeArtifact is a fully managed artifact repository compatible with language-native package managers and build tools such as npm, Apache Maven, pip, and dotnet.",
+ "subcommands": [
+  {
+   "name": "associate-external-connection",
+   "description": "Adds an existing external connection to a repository.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--external-connection",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-package-versions",
+   "description": "Copies package versions from one repository to another repository in the same domain.",
+   "options": [
+    {
+     "name": "--allow-overwrite"
+    },
+    {
+     "name": "--destination-repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--include-from-upstream"
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-overwrite"
+    },
+    {
+     "name": "--no-include-from-upstream"
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-revisions",
+     "args": {}
+    },
+    {
+     "name": "--versions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-domain",
+   "description": "Creates a domain.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-package-group",
+   "description": "Creates a package group.",
+   "options": [
+    {
+     "name": "--contact-info",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--package-group",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-repository",
+   "description": "Creates a repository.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--upstreams",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-domain",
+   "description": "Deletes a domain.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-domain-permissions-policy",
+   "description": "Deletes the resource policy set on a domain.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--policy-revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-package",
+   "description": "Deletes a package and all associated package versions.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-package-group",
+   "description": "Deletes a package group.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--package-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-package-versions",
+   "description": "Deletes one or more versions of a package.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--expected-status",
+     "args": {
+      "suggestions": [
+       "Published",
+       "Unfinished",
+       "Unlisted",
+       "Archived",
+       "Disposed",
+       "Deleted"
+      ]
+     }
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--versions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-repository",
+   "description": "Deletes a repository.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-repository-permissions-policy",
+   "description": "Deletes the resource policy that is set on a repository.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--policy-revision",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain",
+   "description": "Returns a DomainDescription object that contains information about the requested domain.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-package",
+   "description": "Returns a PackageDescription object that contains information about the requested package.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-package-group",
+   "description": "Returns a PackageGroupDescription object that contains information about the requested package group.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--package-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-package-version",
+   "description": "Returns a PackageVersionDescription object that contains information about the requested package version.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-repository",
+   "description": "Returns a RepositoryDescription object that contains detailed information about the requested repository.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-external-connection",
+   "description": "Removes an existing external connection from a repository.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--external-connection",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "dispose-package-versions",
+   "description": "Deletes the assets in package versions and sets the package versions' status to Disposed.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--expected-status",
+     "args": {
+      "suggestions": [
+       "Published",
+       "Unfinished",
+       "Unlisted",
+       "Archived",
+       "Disposed",
+       "Deleted"
+      ]
+     }
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-revisions",
+     "args": {}
+    },
+    {
+     "name": "--versions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-associated-package-group",
+   "description": "Returns the most closely associated package group to the specified package.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-authorization-token",
+   "description": "Generates a temporary authorization token for accessing repositories in the domain.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--duration-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-domain-permissions-policy",
+   "description": "Returns the resource policy attached to the specified domain.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-package-version-asset",
+   "description": "Returns an asset (or file) that is in a package.",
+   "options": [
+    {
+     "name": "--asset",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-version-revision",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-package-version-readme",
+   "description": "Gets the readme file or descriptive text for a package version.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-repository-endpoint",
+   "description": "Returns the endpoint of a repository for a specific package format.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {
+      "suggestions": [
+       "dualstack",
+       "ipv4"
+      ]
+     }
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-repository-permissions-policy",
+   "description": "Returns the resource policy that is set on a repository.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-allowed-repositories-for-group",
+   "description": "Lists the repositories in the added repositories list of the specified restriction type for a package group.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--origin-restriction-type",
+     "args": {
+      "suggestions": [
+       "EXTERNAL_UPSTREAM",
+       "INTERNAL_UPSTREAM",
+       "PUBLISH"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--package-group",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-associated-packages",
+   "description": "Returns a list of packages associated with the requested package group.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-preview"
+    },
+    {
+     "name": "--package-group",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--preview"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domains",
+   "description": "Returns a list of DomainSummary objects for all domains owned by the Amazon Web Services account that makes this call.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-package-groups",
+   "description": "Returns a list of package groups in the requested domain.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-package-version-assets",
+   "description": "Returns a list of AssetSummary objects for assets in a package version.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-package-version-dependencies",
+   "description": "Returns the direct dependencies for a package version.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-package-versions",
+   "description": "Returns a list of PackageVersionSummary objects for package versions in a repository that match the request parameters.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--origin-type",
+     "args": {
+      "suggestions": [
+       "INTERNAL",
+       "EXTERNAL",
+       "UNKNOWN"
+      ]
+     }
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "PUBLISHED_TIME"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Published",
+       "Unfinished",
+       "Unlisted",
+       "Archived",
+       "Disposed",
+       "Deleted"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-packages",
+   "description": "Returns a list of PackageSummary objects for packages in a repository that match the request parameters.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package-prefix",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--publish",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "BLOCK"
+      ]
+     }
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--upstream",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "BLOCK"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-repositories",
+   "description": "Returns a list of RepositorySummary objects.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--repository-prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-repositories-in-domain",
+   "description": "Returns a list of RepositorySummary objects.",
+   "options": [
+    {
+     "name": "--administrator-account",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--repository-prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sub-package-groups",
+   "description": "Returns a list of direct children of the specified package group.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--package-group",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets information about Amazon Web Services tags for a specified Amazon Resource Name (ARN) in CodeArtifact.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "login",
+   "description": "Sets up the idiomatic tool for your package format to use your CodeArtifact repository.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tool",
+     "args": {
+      "suggestions": [
+       "swift",
+       "nuget",
+       "dotnet",
+       "npm",
+       "pip",
+       "twine"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "publish-package-version",
+   "description": "Creates a new package version containing one or more assets (or files).",
+   "options": [
+    {
+     "name": "--asset-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-sha256",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--no-unfinished"
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unfinished"
+    }
+   ]
+  },
+  {
+   "name": "put-domain-permissions-policy",
+   "description": "Sets a resource policy on a domain that specifies permissions to access it.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-package-origin-configuration",
+   "description": "Sets the package origin configuration for a package.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--restrictions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-repository-permissions-policy",
+   "description": "Sets the resource policy on a repository that specifies permissions to access it.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-revision",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a resource in CodeArtifact.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource in CodeArtifact.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-package-group",
+   "description": "Updates a package group.",
+   "options": [
+    {
+     "name": "--contact-info",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--package-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-package-group-origin-configuration",
+   "description": "Updates the package origin configuration for a package group.",
+   "options": [
+    {
+     "name": "--add-allowed-repositories",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--package-group",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remove-allowed-repositories",
+     "args": {}
+    },
+    {
+     "name": "--restrictions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-package-versions-status",
+   "description": "Updates the status of one or more versions of a package.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--expected-status",
+     "args": {
+      "suggestions": [
+       "Published",
+       "Unfinished",
+       "Unlisted",
+       "Archived",
+       "Disposed",
+       "Deleted"
+      ]
+     }
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "npm",
+       "pypi",
+       "maven",
+       "nuget",
+       "generic",
+       "ruby",
+       "swift",
+       "cargo"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-status",
+     "args": {
+      "suggestions": [
+       "Published",
+       "Unfinished",
+       "Unlisted",
+       "Archived",
+       "Disposed",
+       "Deleted"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--version-revisions",
+     "args": {}
+    },
+    {
+     "name": "--versions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-repository",
+   "description": "Update the properties of a repository.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-owner",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--upstreams",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

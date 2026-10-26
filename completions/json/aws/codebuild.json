@@ -1,0 +1,1901 @@
+{
+ "name": "codebuild",
+ "description": "CodeBuild CodeBuild is a fully managed build service in the cloud.",
+ "subcommands": [
+  {
+   "name": "batch-delete-builds",
+   "description": "Deletes one or more builds.",
+   "options": [
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-build-batches",
+   "description": "Retrieves information about one or more batch builds.",
+   "options": [
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-builds",
+   "description": "Gets information about one or more builds.",
+   "options": [
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-command-executions",
+   "description": "Gets information about the command executions.",
+   "options": [
+    {
+     "name": "--command-execution-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sandbox-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-fleets",
+   "description": "Gets information about one or more compute fleets.",
+   "options": [
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-projects",
+   "description": "Gets information about one or more build projects.",
+   "options": [
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-report-groups",
+   "description": "Returns an array of report groups.",
+   "options": [
+    {
+     "name": "--report-group-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-reports",
+   "description": "Returns an array of reports.",
+   "options": [
+    {
+     "name": "--report-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-sandboxes",
+   "description": "Gets information about the sandbox status.",
+   "options": [
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-fleet",
+   "description": "Creates a compute fleet.",
+   "options": [
+    {
+     "name": "--base-capacity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-configuration",
+     "args": {}
+    },
+    {
+     "name": "--compute-type",
+     "args": {
+      "suggestions": [
+       "BUILD_GENERAL1_SMALL",
+       "BUILD_GENERAL1_MEDIUM",
+       "BUILD_GENERAL1_LARGE",
+       "BUILD_GENERAL1_XLARGE",
+       "BUILD_GENERAL1_2XLARGE",
+       "BUILD_LAMBDA_1GB",
+       "BUILD_LAMBDA_2GB",
+       "BUILD_LAMBDA_4GB",
+       "BUILD_LAMBDA_8GB",
+       "BUILD_LAMBDA_10GB",
+       "ATTRIBUTE_BASED_COMPUTE",
+       "CUSTOM_INSTANCE_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--environment-type",
+     "args": {
+      "suggestions": [
+       "WINDOWS_CONTAINER",
+       "LINUX_CONTAINER",
+       "LINUX_GPU_CONTAINER",
+       "ARM_CONTAINER",
+       "WINDOWS_SERVER_2019_CONTAINER",
+       "WINDOWS_SERVER_2022_CONTAINER",
+       "LINUX_LAMBDA_CONTAINER",
+       "ARM_LAMBDA_CONTAINER",
+       "LINUX_EC2",
+       "ARM_EC2",
+       "WINDOWS_EC2",
+       "MAC_ARM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--fleet-service-role",
+     "args": {}
+    },
+    {
+     "name": "--image-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--overflow-behavior",
+     "args": {
+      "suggestions": [
+       "QUEUE",
+       "ON_DEMAND"
+      ]
+     }
+    },
+    {
+     "name": "--proxy-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-project",
+   "description": "Creates a build project.",
+   "options": [
+    {
+     "name": "--artifacts",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-retry-limit",
+     "args": {}
+    },
+    {
+     "name": "--badge-enabled"
+    },
+    {
+     "name": "--build-batch-config",
+     "args": {}
+    },
+    {
+     "name": "--cache",
+     "args": {}
+    },
+    {
+     "name": "--concurrent-build-limit",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-system-locations",
+     "args": {}
+    },
+    {
+     "name": "--logs-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-badge-enabled"
+    },
+    {
+     "name": "--queued-timeout-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--secondary-artifacts",
+     "args": {}
+    },
+    {
+     "name": "--secondary-source-versions",
+     "args": {}
+    },
+    {
+     "name": "--secondary-sources",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-version",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-report-group",
+   "description": "Creates a report group.",
+   "options": [
+    {
+     "name": "--export-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "TEST",
+       "CODE_COVERAGE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-webhook",
+   "description": "For an existing CodeBuild build project that has its source code stored in a GitHub or Bitbucket repository, enables CodeBuild to start rebuilding the source code every time a code change is pushed to the repository.",
+   "options": [
+    {
+     "name": "--branch-filter",
+     "args": {}
+    },
+    {
+     "name": "--build-type",
+     "args": {
+      "suggestions": [
+       "BUILD",
+       "BUILD_BATCH",
+       "RUNNER_BUILDKITE_BUILD"
+      ]
+     }
+    },
+    {
+     "name": "--filter-groups",
+     "args": {}
+    },
+    {
+     "name": "--manual-creation"
+    },
+    {
+     "name": "--no-manual-creation"
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pull-request-build-policy",
+     "args": {}
+    },
+    {
+     "name": "--scope-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-build-batch",
+   "description": "Deletes a batch build.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-fleet",
+   "description": "Deletes a compute fleet.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project",
+   "description": "Deletes a build project.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-report",
+   "description": "Deletes a report.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-report-group",
+   "description": "Deletes a report group.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delete-reports"
+    },
+    {
+     "name": "--no-delete-reports"
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes a resource policy that is identified by its resource ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-source-credentials",
+   "description": "Deletes a set of GitHub, GitHub Enterprise, or Bitbucket source credentials.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-webhook",
+   "description": "For an existing CodeBuild build project that has its source code stored in a GitHub or Bitbucket repository, stops CodeBuild from rebuilding the source code every time a code change is pushed to the repository.",
+   "options": [
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-code-coverages",
+   "description": "Retrieves one or more code coverage reports.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--max-line-coverage-percentage",
+     "args": {}
+    },
+    {
+     "name": "--min-line-coverage-percentage",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--report-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "LINE_COVERAGE_PERCENTAGE",
+       "FILE_PATH"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-test-cases",
+   "description": "Returns a list of details about test cases for a report.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--report-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-report-group-trend",
+   "description": "Analyzes and accumulates test report values for the specified test reports.",
+   "options": [
+    {
+     "name": "--num-of-reports",
+     "args": {}
+    },
+    {
+     "name": "--report-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trend-field",
+     "args": {
+      "suggestions": [
+       "PASS_RATE",
+       "DURATION",
+       "TOTAL",
+       "LINE_COVERAGE",
+       "LINES_COVERED",
+       "LINES_MISSED",
+       "BRANCH_COVERAGE",
+       "BRANCHES_COVERED",
+       "BRANCHES_MISSED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Gets a resource policy that is identified by its resource ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-source-credentials",
+   "description": "Imports the source repository credentials for an CodeBuild project that has its source code stored in a GitHub, GitHub Enterprise, GitLab, GitLab Self Managed, or Bitbucket repository.",
+   "options": [
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "OAUTH",
+       "BASIC_AUTH",
+       "PERSONAL_ACCESS_TOKEN",
+       "CODECONNECTIONS",
+       "SECRETS_MANAGER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-should-overwrite"
+    },
+    {
+     "name": "--server-type",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "BITBUCKET",
+       "GITHUB_ENTERPRISE",
+       "GITLAB",
+       "GITLAB_SELF_MANAGED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--should-overwrite"
+    },
+    {
+     "name": "--token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "invalidate-project-cache",
+   "description": "Resets the cache for a project.",
+   "options": [
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-build-batches",
+   "description": "Retrieves the identifiers of your build batches in the current region.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-build-batches-for-project",
+   "description": "Retrieves the identifiers of the build batches for a specific project.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-builds",
+   "description": "Gets a list of build IDs, with each build ID representing a single build.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-builds-for-project",
+   "description": "Gets a list of build identifiers for the specified build project, with each build identifier representing a single build.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-command-executions-for-sandbox",
+   "description": "Gets a list of command executions for a sandbox.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sandbox-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-curated-environment-images",
+   "description": "Gets information about Docker images that are managed by CodeBuild."
+  },
+  {
+   "name": "list-fleets",
+   "description": "Gets a list of compute fleet names with each compute fleet name representing a single compute fleet.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "CREATED_TIME",
+       "LAST_MODIFIED_TIME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-projects",
+   "description": "Gets a list of build project names, with each build project name representing a single build project.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "CREATED_TIME",
+       "LAST_MODIFIED_TIME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-report-groups",
+   "description": "Gets a list ARNs for the report groups in the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "CREATED_TIME",
+       "LAST_MODIFIED_TIME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-reports",
+   "description": "Returns a list of ARNs for the reports in the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-reports-for-report-group",
+   "description": "Returns a list of ARNs for the reports that belong to a ReportGroup.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--report-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sandboxes",
+   "description": "Gets a list of sandboxes.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sandboxes-for-project",
+   "description": "Gets a list of sandboxes for a given project.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-shared-projects",
+   "description": "Gets a list of projects that are shared with other Amazon Web Services accounts or users.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "ARN",
+       "MODIFIED_TIME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-shared-report-groups",
+   "description": "Gets a list of report groups that are shared with other Amazon Web Services accounts or users.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "ARN",
+       "MODIFIED_TIME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-source-credentials",
+   "description": "Returns a list of SourceCredentialsInfo objects."
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Stores a resource policy for the ARN of a Project or ReportGroup object.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "retry-build",
+   "description": "Restarts a build.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "retry-build-batch",
+   "description": "Restarts a failed batch build.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--retry-type",
+     "args": {
+      "suggestions": [
+       "RETRY_ALL_BUILDS",
+       "RETRY_FAILED_BUILDS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "start-build",
+   "description": "Starts running a build with the settings defined in the project.",
+   "options": [
+    {
+     "name": "--artifacts-override",
+     "args": {}
+    },
+    {
+     "name": "--auto-retry-limit-override",
+     "args": {}
+    },
+    {
+     "name": "--build-status-config-override",
+     "args": {}
+    },
+    {
+     "name": "--buildspec-override",
+     "args": {}
+    },
+    {
+     "name": "--cache-override",
+     "args": {}
+    },
+    {
+     "name": "--certificate-override",
+     "args": {}
+    },
+    {
+     "name": "--compute-type-override",
+     "args": {
+      "suggestions": [
+       "BUILD_GENERAL1_SMALL",
+       "BUILD_GENERAL1_MEDIUM",
+       "BUILD_GENERAL1_LARGE",
+       "BUILD_GENERAL1_XLARGE",
+       "BUILD_GENERAL1_2XLARGE",
+       "BUILD_LAMBDA_1GB",
+       "BUILD_LAMBDA_2GB",
+       "BUILD_LAMBDA_4GB",
+       "BUILD_LAMBDA_8GB",
+       "BUILD_LAMBDA_10GB",
+       "ATTRIBUTE_BASED_COMPUTE",
+       "CUSTOM_INSTANCE_TYPE"
+      ]
+     }
+    },
+    {
+     "name": "--debug-session-enabled"
+    },
+    {
+     "name": "--encryption-key-override",
+     "args": {}
+    },
+    {
+     "name": "--environment-type-override",
+     "args": {
+      "suggestions": [
+       "WINDOWS_CONTAINER",
+       "LINUX_CONTAINER",
+       "LINUX_GPU_CONTAINER",
+       "ARM_CONTAINER",
+       "WINDOWS_SERVER_2019_CONTAINER",
+       "WINDOWS_SERVER_2022_CONTAINER",
+       "LINUX_LAMBDA_CONTAINER",
+       "ARM_LAMBDA_CONTAINER",
+       "LINUX_EC2",
+       "ARM_EC2",
+       "WINDOWS_EC2",
+       "MAC_ARM"
+      ]
+     }
+    },
+    {
+     "name": "--environment-variables-override",
+     "args": {}
+    },
+    {
+     "name": "--fleet-override",
+     "args": {}
+    },
+    {
+     "name": "--git-clone-depth-override",
+     "args": {}
+    },
+    {
+     "name": "--git-submodules-config-override",
+     "args": {}
+    },
+    {
+     "name": "--host-kernel-override",
+     "args": {
+      "suggestions": [
+       "LINUX_KERNEL_4",
+       "LINUX_KERNEL_6",
+       "LINUX_KERNEL_LATEST"
+      ]
+     }
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--image-override",
+     "args": {}
+    },
+    {
+     "name": "--image-pull-credentials-type-override",
+     "args": {
+      "suggestions": [
+       "CODEBUILD",
+       "SERVICE_ROLE"
+      ]
+     }
+    },
+    {
+     "name": "--insecure-ssl-override"
+    },
+    {
+     "name": "--logs-config-override",
+     "args": {}
+    },
+    {
+     "name": "--no-debug-session-enabled"
+    },
+    {
+     "name": "--no-insecure-ssl-override"
+    },
+    {
+     "name": "--no-privileged-mode-override"
+    },
+    {
+     "name": "--no-report-build-status-override"
+    },
+    {
+     "name": "--privileged-mode-override"
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queued-timeout-in-minutes-override",
+     "args": {}
+    },
+    {
+     "name": "--registry-credential-override",
+     "args": {}
+    },
+    {
+     "name": "--report-build-status-override"
+    },
+    {
+     "name": "--secondary-artifacts-override",
+     "args": {}
+    },
+    {
+     "name": "--secondary-sources-override",
+     "args": {}
+    },
+    {
+     "name": "--secondary-sources-version-override",
+     "args": {}
+    },
+    {
+     "name": "--service-role-override",
+     "args": {}
+    },
+    {
+     "name": "--source-auth-override",
+     "args": {}
+    },
+    {
+     "name": "--source-location-override",
+     "args": {}
+    },
+    {
+     "name": "--source-type-override",
+     "args": {
+      "suggestions": [
+       "CODECOMMIT",
+       "CODEPIPELINE",
+       "GITHUB",
+       "GITLAB",
+       "GITLAB_SELF_MANAGED",
+       "S3",
+       "BITBUCKET",
+       "GITHUB_ENTERPRISE",
+       "NO_SOURCE"
+      ]
+     }
+    },
+    {
+     "name": "--source-version",
+     "args": {}
+    },
+    {
+     "name": "--timeout-in-minutes-override",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-build-batch",
+   "description": "Starts a batch build for a project.",
+   "options": [
+    {
+     "name": "--artifacts-override",
+     "args": {}
+    },
+    {
+     "name": "--build-batch-config-override",
+     "args": {}
+    },
+    {
+     "name": "--build-timeout-in-minutes-override",
+     "args": {}
+    },
+    {
+     "name": "--buildspec-override",
+     "args": {}
+    },
+    {
+     "name": "--cache-override",
+     "args": {}
+    },
+    {
+     "name": "--certificate-override",
+     "args": {}
+    },
+    {
+     "name": "--compute-type-override",
+     "args": {
+      "suggestions": [
+       "BUILD_GENERAL1_SMALL",
+       "BUILD_GENERAL1_MEDIUM",
+       "BUILD_GENERAL1_LARGE",
+       "BUILD_GENERAL1_XLARGE",
+       "BUILD_GENERAL1_2XLARGE",
+       "BUILD_LAMBDA_1GB",
+       "BUILD_LAMBDA_2GB",
+       "BUILD_LAMBDA_4GB",
+       "BUILD_LAMBDA_8GB",
+       "BUILD_LAMBDA_10GB",
+       "ATTRIBUTE_BASED_COMPUTE",
+       "CUSTOM_INSTANCE_TYPE"
+      ]
+     }
+    },
+    {
+     "name": "--debug-session-enabled"
+    },
+    {
+     "name": "--encryption-key-override",
+     "args": {}
+    },
+    {
+     "name": "--environment-type-override",
+     "args": {
+      "suggestions": [
+       "WINDOWS_CONTAINER",
+       "LINUX_CONTAINER",
+       "LINUX_GPU_CONTAINER",
+       "ARM_CONTAINER",
+       "WINDOWS_SERVER_2019_CONTAINER",
+       "WINDOWS_SERVER_2022_CONTAINER",
+       "LINUX_LAMBDA_CONTAINER",
+       "ARM_LAMBDA_CONTAINER",
+       "LINUX_EC2",
+       "ARM_EC2",
+       "WINDOWS_EC2",
+       "MAC_ARM"
+      ]
+     }
+    },
+    {
+     "name": "--environment-variables-override",
+     "args": {}
+    },
+    {
+     "name": "--git-clone-depth-override",
+     "args": {}
+    },
+    {
+     "name": "--git-submodules-config-override",
+     "args": {}
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--image-override",
+     "args": {}
+    },
+    {
+     "name": "--image-pull-credentials-type-override",
+     "args": {
+      "suggestions": [
+       "CODEBUILD",
+       "SERVICE_ROLE"
+      ]
+     }
+    },
+    {
+     "name": "--insecure-ssl-override"
+    },
+    {
+     "name": "--logs-config-override",
+     "args": {}
+    },
+    {
+     "name": "--no-debug-session-enabled"
+    },
+    {
+     "name": "--no-insecure-ssl-override"
+    },
+    {
+     "name": "--no-privileged-mode-override"
+    },
+    {
+     "name": "--no-report-build-batch-status-override"
+    },
+    {
+     "name": "--privileged-mode-override"
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queued-timeout-in-minutes-override",
+     "args": {}
+    },
+    {
+     "name": "--registry-credential-override",
+     "args": {}
+    },
+    {
+     "name": "--report-build-batch-status-override"
+    },
+    {
+     "name": "--secondary-artifacts-override",
+     "args": {}
+    },
+    {
+     "name": "--secondary-sources-override",
+     "args": {}
+    },
+    {
+     "name": "--secondary-sources-version-override",
+     "args": {}
+    },
+    {
+     "name": "--service-role-override",
+     "args": {}
+    },
+    {
+     "name": "--source-auth-override",
+     "args": {}
+    },
+    {
+     "name": "--source-location-override",
+     "args": {}
+    },
+    {
+     "name": "--source-type-override",
+     "args": {
+      "suggestions": [
+       "CODECOMMIT",
+       "CODEPIPELINE",
+       "GITHUB",
+       "GITLAB",
+       "GITLAB_SELF_MANAGED",
+       "S3",
+       "BITBUCKET",
+       "GITHUB_ENTERPRISE",
+       "NO_SOURCE"
+      ]
+     }
+    },
+    {
+     "name": "--source-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-command-execution",
+   "description": "Starts a command execution.",
+   "options": [
+    {
+     "name": "--command",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sandbox-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SHELL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "start-sandbox",
+   "description": "Starts a sandbox.",
+   "options": [
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-sandbox-connection",
+   "description": "Starts a sandbox connection.",
+   "options": [
+    {
+     "name": "--sandbox-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-build",
+   "description": "Attempts to stop running a build.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-build-batch",
+   "description": "Stops a running batch build.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-sandbox",
+   "description": "Stops a sandbox.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-fleet",
+   "description": "Updates a compute fleet.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--base-capacity",
+     "args": {}
+    },
+    {
+     "name": "--compute-configuration",
+     "args": {}
+    },
+    {
+     "name": "--compute-type",
+     "args": {
+      "suggestions": [
+       "BUILD_GENERAL1_SMALL",
+       "BUILD_GENERAL1_MEDIUM",
+       "BUILD_GENERAL1_LARGE",
+       "BUILD_GENERAL1_XLARGE",
+       "BUILD_GENERAL1_2XLARGE",
+       "BUILD_LAMBDA_1GB",
+       "BUILD_LAMBDA_2GB",
+       "BUILD_LAMBDA_4GB",
+       "BUILD_LAMBDA_8GB",
+       "BUILD_LAMBDA_10GB",
+       "ATTRIBUTE_BASED_COMPUTE",
+       "CUSTOM_INSTANCE_TYPE"
+      ]
+     }
+    },
+    {
+     "name": "--environment-type",
+     "args": {
+      "suggestions": [
+       "WINDOWS_CONTAINER",
+       "LINUX_CONTAINER",
+       "LINUX_GPU_CONTAINER",
+       "ARM_CONTAINER",
+       "WINDOWS_SERVER_2019_CONTAINER",
+       "WINDOWS_SERVER_2022_CONTAINER",
+       "LINUX_LAMBDA_CONTAINER",
+       "ARM_LAMBDA_CONTAINER",
+       "LINUX_EC2",
+       "ARM_EC2",
+       "WINDOWS_EC2",
+       "MAC_ARM"
+      ]
+     }
+    },
+    {
+     "name": "--fleet-service-role",
+     "args": {}
+    },
+    {
+     "name": "--image-id",
+     "args": {}
+    },
+    {
+     "name": "--overflow-behavior",
+     "args": {
+      "suggestions": [
+       "QUEUE",
+       "ON_DEMAND"
+      ]
+     }
+    },
+    {
+     "name": "--proxy-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-project",
+   "description": "Changes the settings of a build project.",
+   "options": [
+    {
+     "name": "--artifacts",
+     "args": {}
+    },
+    {
+     "name": "--auto-retry-limit",
+     "args": {}
+    },
+    {
+     "name": "--badge-enabled"
+    },
+    {
+     "name": "--build-batch-config",
+     "args": {}
+    },
+    {
+     "name": "--cache",
+     "args": {}
+    },
+    {
+     "name": "--concurrent-build-limit",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--environment",
+     "args": {}
+    },
+    {
+     "name": "--file-system-locations",
+     "args": {}
+    },
+    {
+     "name": "--logs-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-badge-enabled"
+    },
+    {
+     "name": "--queued-timeout-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--secondary-artifacts",
+     "args": {}
+    },
+    {
+     "name": "--secondary-source-versions",
+     "args": {}
+    },
+    {
+     "name": "--secondary-sources",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--source-version",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-project-visibility",
+   "description": "Changes the public visibility for a project.",
+   "options": [
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-visibility",
+     "args": {
+      "suggestions": [
+       "PUBLIC_READ",
+       "PRIVATE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-access-role",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-report-group",
+   "description": "Updates a report group.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--export-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-webhook",
+   "description": "Updates the webhook associated with an CodeBuild build project.",
+   "options": [
+    {
+     "name": "--branch-filter",
+     "args": {}
+    },
+    {
+     "name": "--build-type",
+     "args": {
+      "suggestions": [
+       "BUILD",
+       "BUILD_BATCH",
+       "RUNNER_BUILDKITE_BUILD"
+      ]
+     }
+    },
+    {
+     "name": "--filter-groups",
+     "args": {}
+    },
+    {
+     "name": "--no-rotate-secret"
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pull-request-build-policy",
+     "args": {}
+    },
+    {
+     "name": "--rotate-secret"
+    }
+   ]
+  }
+ ]
+}

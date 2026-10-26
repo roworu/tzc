@@ -1,0 +1,630 @@
+{
+ "name": "iotthingsgraph",
+ "description": "AWS IoT Things Graph AWS IoT Things Graph provides an integrated set of tools that enable developers to connect devices and services that use different standards, such as units of measure and communication protocols.",
+ "subcommands": [
+  {
+   "name": "associate-entity-to-thing",
+   "description": "Associates a device with a concrete thing that is in the user's registry.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-version",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-flow-template",
+   "description": "Creates a workflow template.",
+   "options": [
+    {
+     "name": "--compatible-namespace-version",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-system-instance",
+   "description": "Creates a system instance.",
+   "options": [
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-actions-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--greengrass-group-name",
+     "args": {}
+    },
+    {
+     "name": "--metrics-configuration",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {
+      "suggestions": [
+       "GREENGRASS",
+       "CLOUD"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-system-template",
+   "description": "Creates a system.",
+   "options": [
+    {
+     "name": "--compatible-namespace-version",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-flow-template",
+   "description": "Deletes a workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-namespace",
+   "description": "Deletes the specified namespace."
+  },
+  {
+   "name": "delete-system-instance",
+   "description": "Deletes a system instance.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-system-template",
+   "description": "Deletes a system.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deploy-system-instance",
+   "description": "Greengrass and Cloud Deployments Deploys the system instance to the target specified in CreateSystemInstance.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "deprecate-flow-template",
+   "description": "Deprecates the specified workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deprecate-system-template",
+   "description": "Deprecates the specified system.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-namespace",
+   "description": "Gets the latest version of the user's namespace and the public version that it is tracking.",
+   "options": [
+    {
+     "name": "--namespace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "dissociate-entity-from-thing",
+   "description": "Dissociates a device entity from a concrete thing.",
+   "options": [
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "DEVICE",
+       "SERVICE",
+       "DEVICE_MODEL",
+       "CAPABILITY",
+       "STATE",
+       "ACTION",
+       "EVENT",
+       "PROPERTY",
+       "MAPPING",
+       "ENUM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-entities",
+   "description": "Gets definitions of the specified entities.",
+   "options": [
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-flow-template",
+   "description": "Gets the latest version of the DefinitionDocument and FlowTemplateSummary for the specified workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-flow-template-revisions",
+   "description": "Gets revisions of the specified workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-namespace-deletion-status",
+   "description": "Gets the status of a namespace deletion task."
+  },
+  {
+   "name": "get-system-instance",
+   "description": "Gets a system instance.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-system-template",
+   "description": "Gets a system.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-system-template-revisions",
+   "description": "Gets revisions made to the specified system template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-upload-status",
+   "description": "Gets the status of the specified upload.",
+   "options": [
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-flow-execution-messages",
+   "description": "Returns a list of objects that contain information about events in a flow execution.",
+   "options": [
+    {
+     "name": "--flow-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags on an AWS IoT Things Graph resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-entities",
+   "description": "Searches for entities of the specified type.",
+   "options": [
+    {
+     "name": "--entity-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-version",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-flow-executions",
+   "description": "Searches for AWS IoT Things Graph workflow execution instances.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--flow-execution-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--system-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-flow-templates",
+   "description": "Searches for summary information about workflows.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-system-instances",
+   "description": "Searches for system instances in the user's account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-system-templates",
+   "description": "Searches for summary information about systems in the user's account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-things",
+   "description": "Searches for things associated with the specified entity.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-version",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Creates a tag for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "undeploy-system-instance",
+   "description": "Removes a system instance from its target (Cloud or Greengrass).",
+   "options": [
+    {
+     "name": "--id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-flow-template",
+   "description": "Updates the specified workflow.",
+   "options": [
+    {
+     "name": "--compatible-namespace-version",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-system-template",
+   "description": "Updates the specified system.",
+   "options": [
+    {
+     "name": "--compatible-namespace-version",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "upload-entity-definitions",
+   "description": "Asynchronously uploads one or more entity definitions to the user's namespace.",
+   "options": [
+    {
+     "name": "--deprecate-existing-entities"
+    },
+    {
+     "name": "--document",
+     "args": {}
+    },
+    {
+     "name": "--no-deprecate-existing-entities"
+    },
+    {
+     "name": "--no-sync-with-public-namespace"
+    },
+    {
+     "name": "--sync-with-public-namespace"
+    }
+   ]
+  }
+ ]
+}

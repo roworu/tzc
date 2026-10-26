@@ -1,0 +1,1063 @@
+{
+ "name": "lex-models",
+ "description": "Amazon Lex Build-Time Actions Amazon Lex is an AWS service for building conversational voice and text interfaces.",
+ "subcommands": [
+  {
+   "name": "create-bot-version",
+   "description": "Creates a new version of the bot based on the $LATEST version.",
+   "options": [
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-intent-version",
+   "description": "Creates a new version of an intent based on the $LATEST version of the intent.",
+   "options": [
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-slot-type-version",
+   "description": "Creates a new version of a slot type based on the $LATEST version of the specified slot type.",
+   "options": [
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bot",
+   "description": "Deletes all versions of the bot, including the $LATEST version.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bot-alias",
+   "description": "Deletes an alias for the specified bot.",
+   "options": [
+    {
+     "name": "--bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bot-channel-association",
+   "description": "Deletes the association between an Amazon Lex bot and a messaging platform.",
+   "options": [
+    {
+     "name": "--bot-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bot-version",
+   "description": "Deletes a specific version of a bot.",
+   "options": [
+    {
+     "name": "--bot-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-intent",
+   "description": "Deletes all versions of the intent, including the $LATEST version.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-intent-version",
+   "description": "Deletes a specific version of an intent.",
+   "options": [
+    {
+     "name": "--intent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-slot-type",
+   "description": "Deletes all versions of the slot type, including the $LATEST version.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-slot-type-version",
+   "description": "Deletes a specific version of a slot type.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--slot-type-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-utterances",
+   "description": "Deletes stored utterances.",
+   "options": [
+    {
+     "name": "--bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bot",
+   "description": "Returns metadata information for a specific bot.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-or-alias",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bot-alias",
+   "description": "Returns information about an Amazon Lex bot alias.",
+   "options": [
+    {
+     "name": "--bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bot-aliases",
+   "description": "Returns a list of aliases for a specified Amazon Lex bot.",
+   "options": [
+    {
+     "name": "--bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bot-channel-association",
+   "description": "Returns information about the association between an Amazon Lex bot and a messaging platform.",
+   "options": [
+    {
+     "name": "--bot-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bot-channel-associations",
+   "description": "Returns a list of all of the channels associated with the specified bot.",
+   "options": [
+    {
+     "name": "--bot-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bot-versions",
+   "description": "Gets information about all of the versions of a bot.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bots",
+   "description": "Returns bot information as follows: If you provide the nameContains field, the response includes information for the $LATEST version of all bots whose name contains the specified string.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-builtin-intent",
+   "description": "Returns information about a built-in intent.",
+   "options": [
+    {
+     "name": "--signature",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-builtin-intents",
+   "description": "Gets a list of built-in intents that meet the specified criteria.",
+   "options": [
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "de-DE",
+       "en-AU",
+       "en-GB",
+       "en-IN",
+       "en-US",
+       "es-419",
+       "es-ES",
+       "es-US",
+       "fr-FR",
+       "fr-CA",
+       "it-IT",
+       "ja-JP",
+       "ko-KR"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--signature-contains",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-builtin-slot-types",
+   "description": "Gets a list of built-in slot types that meet the specified criteria.",
+   "options": [
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "de-DE",
+       "en-AU",
+       "en-GB",
+       "en-IN",
+       "en-US",
+       "es-419",
+       "es-ES",
+       "es-US",
+       "fr-FR",
+       "fr-CA",
+       "it-IT",
+       "ja-JP",
+       "ko-KR"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--signature-contains",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-export",
+   "description": "Exports the contents of a Amazon Lex resource in a specified format.",
+   "options": [
+    {
+     "name": "--export-type",
+     "args": {
+      "suggestions": [
+       "ALEXA_SKILLS_KIT",
+       "LEX"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "BOT",
+       "INTENT",
+       "SLOT_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-import",
+   "description": "Gets information about an import job started with the StartImport operation.",
+   "options": [
+    {
+     "name": "--import-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-intent",
+   "description": "Returns information about an intent.",
+   "options": [
+    {
+     "name": "--intent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-intent-versions",
+   "description": "Gets information about all of the versions of an intent.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-intents",
+   "description": "Returns intent information as follows: If you specify the nameContains field, returns the $LATEST version of all intents that contain the specified string.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-migration",
+   "description": "Provides details about an ongoing or complete migration from an Amazon Lex V1 bot to an Amazon Lex V2 bot.",
+   "options": [
+    {
+     "name": "--migration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-migrations",
+   "description": "Gets a list of migrations between Amazon Lex V1 and Amazon Lex V2.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--migration-status-equals",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "COMPLETED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by-attribute",
+     "args": {
+      "suggestions": [
+       "V1_BOT_NAME",
+       "MIGRATION_DATE_TIME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-by-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--v1-bot-name-contains",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-slot-type",
+   "description": "Returns information about a specific version of a slot type.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--slot-type-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-slot-type-versions",
+   "description": "Gets information about all versions of a slot type.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-slot-types",
+   "description": "Returns slot type information as follows: If you specify the nameContains field, returns the $LATEST version of all slot types that contain the specified string.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-utterances-view",
+   "description": "Use the GetUtterancesView operation to get information about the utterances that your users have made to your bot.",
+   "options": [
+    {
+     "name": "--bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-versions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status-type",
+     "args": {
+      "suggestions": [
+       "Detected",
+       "Missed"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets a list of tags associated with the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bot",
+   "description": "Creates an Amazon Lex conversational bot or replaces an existing bot.",
+   "options": [
+    {
+     "name": "--abort-statement",
+     "args": {}
+    },
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--child-directed",
+     "priority": 75
+    },
+    {
+     "name": "--clarification-prompt",
+     "args": {}
+    },
+    {
+     "name": "--create-version"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--detect-sentiment"
+    },
+    {
+     "name": "--enable-model-improvements"
+    },
+    {
+     "name": "--idle-session-ttl-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--intents",
+     "args": {}
+    },
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "de-DE",
+       "en-AU",
+       "en-GB",
+       "en-IN",
+       "en-US",
+       "es-419",
+       "es-ES",
+       "es-US",
+       "fr-FR",
+       "fr-CA",
+       "it-IT",
+       "ja-JP",
+       "ko-KR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nlu-intent-confidence-threshold",
+     "args": {}
+    },
+    {
+     "name": "--no-child-directed"
+    },
+    {
+     "name": "--no-create-version"
+    },
+    {
+     "name": "--no-detect-sentiment"
+    },
+    {
+     "name": "--no-enable-model-improvements"
+    },
+    {
+     "name": "--process-behavior",
+     "args": {
+      "suggestions": [
+       "SAVE",
+       "BUILD"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--voice-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bot-alias",
+   "description": "Creates an alias for the specified version of the bot or replaces an alias for the specified bot.",
+   "options": [
+    {
+     "name": "--bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--conversation-logs",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-intent",
+   "description": "Creates an intent or replaces an existing intent.",
+   "options": [
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--conclusion-statement",
+     "args": {}
+    },
+    {
+     "name": "--confirmation-prompt",
+     "args": {}
+    },
+    {
+     "name": "--create-version"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dialog-code-hook",
+     "args": {}
+    },
+    {
+     "name": "--follow-up-prompt",
+     "args": {}
+    },
+    {
+     "name": "--fulfillment-activity",
+     "args": {}
+    },
+    {
+     "name": "--input-contexts",
+     "args": {}
+    },
+    {
+     "name": "--kendra-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-create-version"
+    },
+    {
+     "name": "--output-contexts",
+     "args": {}
+    },
+    {
+     "name": "--parent-intent-signature",
+     "args": {}
+    },
+    {
+     "name": "--rejection-statement",
+     "args": {}
+    },
+    {
+     "name": "--sample-utterances",
+     "args": {}
+    },
+    {
+     "name": "--slots",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-slot-type",
+   "description": "Creates a custom slot type or replaces an existing custom slot type.",
+   "options": [
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--create-version"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--enumeration-values",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-create-version"
+    },
+    {
+     "name": "--parent-slot-type-signature",
+     "args": {}
+    },
+    {
+     "name": "--slot-type-configurations",
+     "args": {}
+    },
+    {
+     "name": "--value-selection-strategy",
+     "args": {
+      "suggestions": [
+       "ORIGINAL_VALUE",
+       "TOP_RESOLUTION"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "start-import",
+   "description": "Starts a job to import a resource to Amazon Lex.",
+   "options": [
+    {
+     "name": "--merge-strategy",
+     "args": {
+      "suggestions": [
+       "OVERWRITE_LATEST",
+       "FAIL_ON_CONFLICT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "BOT",
+       "INTENT",
+       "SLOT_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-migration",
+   "description": "Starts migrating a bot from Amazon Lex V1 to Amazon Lex V2.",
+   "options": [
+    {
+     "name": "--migration-strategy",
+     "args": {
+      "suggestions": [
+       "CREATE_NEW",
+       "UPDATE_EXISTING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--v1-bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--v1-bot-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--v2-bot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--v2-bot-role",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds the specified tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a bot, bot alias or bot channel.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

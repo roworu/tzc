@@ -1,0 +1,106 @@
+{
+ "name": "keyspacesstreams",
+ "description": "Amazon Keyspaces (for Apache Cassandra) change data capture (CDC) records change events for Amazon Keyspaces tables.",
+ "subcommands": [
+  {
+   "name": "get-records",
+   "description": "Retrieves data records from a specified shard in an Amazon Keyspaces data stream.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--shard-iterator",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-shard-iterator",
+   "description": "Returns a shard iterator that serves as a bookmark for reading data from a specific position in an Amazon Keyspaces data stream's shard.",
+   "options": [
+    {
+     "name": "--sequence-number",
+     "args": {}
+    },
+    {
+     "name": "--shard-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shard-iterator-type",
+     "args": {
+      "suggestions": [
+       "TRIM_HORIZON",
+       "LATEST",
+       "AT_SEQUENCE_NUMBER",
+       "AFTER_SEQUENCE_NUMBER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-stream",
+   "description": "Returns detailed information about a specific data capture stream for an Amazon Keyspaces table.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--shard-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-streams",
+   "description": "Returns a list of all data capture streams associated with your Amazon Keyspaces account or for a specific keyspace or table.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

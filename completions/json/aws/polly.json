@@ -1,0 +1,285 @@
+{
+ "name": "polly",
+ "description": "Amazon Polly is a web service that makes it easy to synthesize speech from text.",
+ "subcommands": [
+  {
+   "name": "delete-lexicon",
+   "description": "Deletes the specified pronunciation lexicon stored in an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-voices",
+   "description": "Returns the list of voices that are available for use when requesting speech synthesis.",
+   "options": [
+    {
+     "name": "--engine",
+     "args": {
+      "suggestions": [
+       "standard",
+       "neural",
+       "long-form",
+       "generative"
+      ]
+     }
+    },
+    {
+     "name": "--include-additional-language-codes"
+    },
+    {
+     "name": "--language-code",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-additional-language-codes"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-lexicon",
+   "description": "Returns the content of the specified pronunciation lexicon stored in an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-speech-synthesis-task",
+   "description": "Retrieves a specific SpeechSynthesisTask object based on its TaskID.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-lexicons",
+   "description": "Returns a list of pronunciation lexicons stored in an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-speech-synthesis-tasks",
+   "description": "Returns a list of SpeechSynthesisTask objects ordered by their creation date.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "scheduled",
+       "inProgress",
+       "completed",
+       "failed"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "put-lexicon",
+   "description": "Stores a pronunciation lexicon in an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-speech-synthesis-task",
+   "description": "Allows the creation of an asynchronous synthesis task, by starting a new SpeechSynthesisTask.",
+   "options": [
+    {
+     "name": "--engine",
+     "args": {
+      "suggestions": [
+       "standard",
+       "neural",
+       "long-form",
+       "generative"
+      ]
+     }
+    },
+    {
+     "name": "--language-code",
+     "args": {}
+    },
+    {
+     "name": "--lexicon-names",
+     "args": {}
+    },
+    {
+     "name": "--output-format",
+     "args": {
+      "suggestions": [
+       "json",
+       "mp3",
+       "ogg_opus",
+       "ogg_vorbis",
+       "pcm",
+       "mulaw",
+       "alaw"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--output-s3-bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-s3-key-prefix",
+     "args": {}
+    },
+    {
+     "name": "--sample-rate",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--speech-mark-types",
+     "args": {}
+    },
+    {
+     "name": "--text",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--text-type",
+     "args": {
+      "suggestions": [
+       "ssml",
+       "text"
+      ]
+     }
+    },
+    {
+     "name": "--voice-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "synthesize-speech",
+   "description": "Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes.",
+   "options": [
+    {
+     "name": "--engine",
+     "args": {
+      "suggestions": [
+       "standard",
+       "neural",
+       "long-form",
+       "generative"
+      ]
+     }
+    },
+    {
+     "name": "--language-code",
+     "args": {}
+    },
+    {
+     "name": "--lexicon-names",
+     "args": {}
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-format",
+     "args": {
+      "suggestions": [
+       "json",
+       "mp3",
+       "ogg_opus",
+       "ogg_vorbis",
+       "pcm",
+       "mulaw",
+       "alaw"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--sample-rate",
+     "args": {}
+    },
+    {
+     "name": "--speech-mark-types",
+     "args": {}
+    },
+    {
+     "name": "--text",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--text-type",
+     "args": {
+      "suggestions": [
+       "ssml",
+       "text"
+      ]
+     }
+    },
+    {
+     "name": "--voice-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

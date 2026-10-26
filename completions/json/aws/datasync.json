@@ -1,0 +1,1495 @@
+{
+ "name": "datasync",
+ "description": "DataSync In addition to the Amazon Web Services Management Console and Amazon Web Services Command Line Interface, you can use the DataSync API to configure and manage DataSync with the Amazon Web Services SDKs.",
+ "subcommands": [
+  {
+   "name": "cancel-task-execution",
+   "description": "Stops an DataSync task execution that's in progress.",
+   "options": [
+    {
+     "name": "--task-execution-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-agent",
+   "description": "Activates an DataSync agent that you deploy in your storage environment.",
+   "options": [
+    {
+     "name": "--activation-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-name",
+     "args": {}
+    },
+    {
+     "name": "--security-group-arns",
+     "args": {}
+    },
+    {
+     "name": "--subnet-arns",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-azure-blob",
+   "description": "Creates a transfer location for a Microsoft Azure Blob Storage container.",
+   "options": [
+    {
+     "name": "--access-tier",
+     "args": {
+      "suggestions": [
+       "HOT",
+       "COOL",
+       "ARCHIVE"
+      ]
+     }
+    },
+    {
+     "name": "--agent-arns",
+     "args": {}
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "SAS",
+       "NONE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--blob-type",
+     "args": {
+      "suggestions": [
+       "BLOCK"
+      ]
+     }
+    },
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--container-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--sas-configuration",
+     "args": {}
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-efs",
+   "description": "Creates a transfer location for an Amazon EFS file system.",
+   "options": [
+    {
+     "name": "--access-point-arn",
+     "args": {}
+    },
+    {
+     "name": "--ec2-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--efs-filesystem-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-system-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--in-transit-encryption",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "TLS1_2"
+      ]
+     }
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-fsx-lustre",
+   "description": "Creates a transfer location for an Amazon FSx for Lustre file system.",
+   "options": [
+    {
+     "name": "--fsx-filesystem-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-fsx-ontap",
+   "description": "Creates a transfer location for an Amazon FSx for NetApp ONTAP file system.",
+   "options": [
+    {
+     "name": "--protocol",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-virtual-machine-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-fsx-open-zfs",
+   "description": "Creates a transfer location for an Amazon FSx for OpenZFS file system.",
+   "options": [
+    {
+     "name": "--fsx-filesystem-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protocol",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-fsx-windows",
+   "description": "Creates a transfer location for an Amazon FSx for Windows File Server file system.",
+   "options": [
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--fsx-filesystem-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--security-group-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-location-hdfs",
+   "description": "Creates a transfer location for a Hadoop Distributed File System (HDFS).",
+   "options": [
+    {
+     "name": "--agent-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "SIMPLE",
+       "KERBEROS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--block-size",
+     "args": {}
+    },
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-keytab",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-krb5-conf",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-principal",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-provider-uri",
+     "args": {}
+    },
+    {
+     "name": "--name-nodes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--qop-configuration",
+     "args": {}
+    },
+    {
+     "name": "--replication-factor",
+     "args": {}
+    },
+    {
+     "name": "--simple-user",
+     "args": {}
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-nfs",
+   "description": "Creates a transfer location for a Network File System (NFS) file server.",
+   "options": [
+    {
+     "name": "--mount-options",
+     "args": {}
+    },
+    {
+     "name": "--on-prem-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-hostname",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-object-storage",
+   "description": "Creates a transfer location for an object storage system.",
+   "options": [
+    {
+     "name": "--access-key",
+     "args": {}
+    },
+    {
+     "name": "--agent-arns",
+     "args": {}
+    },
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--secret-key",
+     "args": {}
+    },
+    {
+     "name": "--server-certificate",
+     "args": {}
+    },
+    {
+     "name": "--server-hostname",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-port",
+     "args": {}
+    },
+    {
+     "name": "--server-protocol",
+     "args": {
+      "suggestions": [
+       "HTTPS",
+       "HTTP"
+      ]
+     }
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-s3",
+   "description": "Creates a transfer location for an Amazon S3 bucket.",
+   "options": [
+    {
+     "name": "--agent-arns",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "STANDARD_IA",
+       "ONEZONE_IA",
+       "INTELLIGENT_TIERING",
+       "GLACIER",
+       "DEEP_ARCHIVE",
+       "OUTPOSTS",
+       "GLACIER_INSTANT_RETRIEVAL"
+      ]
+     }
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-location-smb",
+   "description": "Creates a transfer location for a Server Message Block (SMB) file server.",
+   "options": [
+    {
+     "name": "--agent-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "NTLM",
+       "KERBEROS"
+      ]
+     }
+    },
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--dns-ip-addresses",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-keytab",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-krb5-conf",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-principal",
+     "args": {}
+    },
+    {
+     "name": "--mount-options",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--server-hostname",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-task",
+   "description": "Configures a task, which defines where and how DataSync transfers your data.",
+   "options": [
+    {
+     "name": "--cloud-watch-log-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--destination-location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--excludes",
+     "args": {}
+    },
+    {
+     "name": "--includes",
+     "args": {}
+    },
+    {
+     "name": "--manifest-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--options",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--source-location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-mode",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "ENHANCED"
+      ]
+     }
+    },
+    {
+     "name": "--task-report-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-agent",
+   "description": "Removes an DataSync agent resource from your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--agent-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-location",
+   "description": "Deletes a transfer location resource from DataSync.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-task",
+   "description": "Deletes a transfer task resource from DataSync.",
+   "options": [
+    {
+     "name": "--task-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-agent",
+   "description": "Returns information about an DataSync agent, such as its name, service endpoint type, and status.",
+   "options": [
+    {
+     "name": "--agent-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-azure-blob",
+   "description": "Provides details about how an DataSync transfer location for Microsoft Azure Blob Storage is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-efs",
+   "description": "Provides details about how an DataSync transfer location for an Amazon EFS file system is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-fsx-lustre",
+   "description": "Provides details about how an DataSync transfer location for an Amazon FSx for Lustre file system is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-fsx-ontap",
+   "description": "Provides details about how an DataSync transfer location for an Amazon FSx for NetApp ONTAP file system is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-fsx-open-zfs",
+   "description": "Provides details about how an DataSync transfer location for an Amazon FSx for OpenZFS file system is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-fsx-windows",
+   "description": "Provides details about how an DataSync transfer location for an Amazon FSx for Windows File Server file system is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-hdfs",
+   "description": "Provides details about how an DataSync transfer location for a Hadoop Distributed File System (HDFS) is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-nfs",
+   "description": "Provides details about how an DataSync transfer location for a Network File System (NFS) file server is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-object-storage",
+   "description": "Provides details about how an DataSync transfer location for an object storage system is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-s3",
+   "description": "Provides details about how an DataSync transfer location for an S3 bucket is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-location-smb",
+   "description": "Provides details about how an DataSync transfer location for a Server Message Block (SMB) file server is configured.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-task",
+   "description": "Provides information about a task, which defines where and how DataSync transfers your data.",
+   "options": [
+    {
+     "name": "--task-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-task-execution",
+   "description": "Provides information about an execution of your DataSync task.",
+   "options": [
+    {
+     "name": "--task-execution-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-agents",
+   "description": "Returns a list of DataSync agents that belong to an Amazon Web Services account in the Amazon Web Services Region specified in the request.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-locations",
+   "description": "Returns a list of source and destination locations.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns all the tags associated with an Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-task-executions",
+   "description": "Returns a list of executions for an DataSync transfer task.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tasks",
+   "description": "Returns a list of the DataSync tasks you created.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-task-execution",
+   "description": "Starts an DataSync transfer task.",
+   "options": [
+    {
+     "name": "--excludes",
+     "args": {}
+    },
+    {
+     "name": "--includes",
+     "args": {}
+    },
+    {
+     "name": "--manifest-config",
+     "args": {}
+    },
+    {
+     "name": "--override-options",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-report-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Applies a tag to an Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from an Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--keys",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-agent",
+   "description": "Updates the name of an DataSync agent.",
+   "options": [
+    {
+     "name": "--agent-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-azure-blob",
+   "description": "Modifies the following configurations of the Microsoft Azure Blob Storage transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--access-tier",
+     "args": {
+      "suggestions": [
+       "HOT",
+       "COOL",
+       "ARCHIVE"
+      ]
+     }
+    },
+    {
+     "name": "--agent-arns",
+     "args": {}
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "SAS",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--blob-type",
+     "args": {
+      "suggestions": [
+       "BLOCK"
+      ]
+     }
+    },
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sas-configuration",
+     "args": {}
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-efs",
+   "description": "Modifies the following configuration parameters of the Amazon EFS transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--access-point-arn",
+     "args": {}
+    },
+    {
+     "name": "--file-system-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--in-transit-encryption",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "TLS1_2"
+      ]
+     }
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-fsx-lustre",
+   "description": "Modifies the following configuration parameters of the Amazon FSx for Lustre transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-fsx-ontap",
+   "description": "Modifies the following configuration parameters of the Amazon FSx for NetApp ONTAP transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protocol",
+     "args": {}
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-fsx-open-zfs",
+   "description": "Modifies the following configuration parameters of the Amazon FSx for OpenZFS transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protocol",
+     "args": {}
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-fsx-windows",
+   "description": "Modifies the following configuration parameters of the Amazon FSx for Windows File Server transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--user",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-hdfs",
+   "description": "Modifies the following configuration parameters of the Hadoop Distributed File System (HDFS) transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--agent-arns",
+     "args": {}
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "SIMPLE",
+       "KERBEROS"
+      ]
+     }
+    },
+    {
+     "name": "--block-size",
+     "args": {}
+    },
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-keytab",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-krb5-conf",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-principal",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-provider-uri",
+     "args": {}
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name-nodes",
+     "args": {}
+    },
+    {
+     "name": "--qop-configuration",
+     "args": {}
+    },
+    {
+     "name": "--replication-factor",
+     "args": {}
+    },
+    {
+     "name": "--simple-user",
+     "args": {}
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-nfs",
+   "description": "Modifies the following configuration parameters of the Network File System (NFS) transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mount-options",
+     "args": {}
+    },
+    {
+     "name": "--on-prem-config",
+     "args": {}
+    },
+    {
+     "name": "--server-hostname",
+     "args": {}
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-object-storage",
+   "description": "Modifies the following configuration parameters of the object storage transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--access-key",
+     "args": {}
+    },
+    {
+     "name": "--agent-arns",
+     "args": {}
+    },
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-key",
+     "args": {}
+    },
+    {
+     "name": "--server-certificate",
+     "args": {}
+    },
+    {
+     "name": "--server-hostname",
+     "args": {}
+    },
+    {
+     "name": "--server-port",
+     "args": {}
+    },
+    {
+     "name": "--server-protocol",
+     "args": {
+      "suggestions": [
+       "HTTPS",
+       "HTTP"
+      ]
+     }
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-s3",
+   "description": "Modifies the following configuration parameters of the Amazon S3 transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-config",
+     "args": {}
+    },
+    {
+     "name": "--s3-storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "STANDARD_IA",
+       "ONEZONE_IA",
+       "INTELLIGENT_TIERING",
+       "GLACIER",
+       "DEEP_ARCHIVE",
+       "OUTPOSTS",
+       "GLACIER_INSTANT_RETRIEVAL"
+      ]
+     }
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-location-smb",
+   "description": "Modifies the following configuration parameters of the Server Message Block (SMB) transfer location that you're using with DataSync.",
+   "options": [
+    {
+     "name": "--agent-arns",
+     "args": {}
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "NTLM",
+       "KERBEROS"
+      ]
+     }
+    },
+    {
+     "name": "--cmk-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--custom-secret-config",
+     "args": {}
+    },
+    {
+     "name": "--dns-ip-addresses",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-keytab",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-krb5-conf",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-principal",
+     "args": {}
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mount-options",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--server-hostname",
+     "args": {}
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--user",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-task",
+   "description": "Updates the configuration of a task, which defines where and how DataSync transfers your data.",
+   "options": [
+    {
+     "name": "--cloud-watch-log-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--excludes",
+     "args": {}
+    },
+    {
+     "name": "--includes",
+     "args": {}
+    },
+    {
+     "name": "--manifest-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--options",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--task-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-report-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-task-execution",
+   "description": "Updates the configuration of a running DataSync task execution.",
+   "options": [
+    {
+     "name": "--options",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-execution-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,511 @@
+{
+ "name": "resource-explorer-2",
+ "description": "Amazon Web Services Resource Explorer is a resource search and discovery service.",
+ "subcommands": [
+  {
+   "name": "associate-default-view",
+   "description": "Sets the specified view as the default for the Amazon Web Services Region in which you call this operation.",
+   "options": [
+    {
+     "name": "--view-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-view",
+   "description": "Retrieves details about a list of views.",
+   "options": [
+    {
+     "name": "--view-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-index",
+   "description": "Turns on Amazon Web Services Resource Explorer in the Amazon Web Services Region in which you called this operation by creating an index.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-resource-explorer-setup",
+   "description": "Creates a Resource Explorer setup configuration across multiple Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--aggregator-regions",
+     "args": {}
+    },
+    {
+     "name": "--region-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--view-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-view",
+   "description": "Creates a view that users can query by using the Search operation.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--included-properties",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--view-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-index",
+   "description": "Deletes the specified index and turns off Amazon Web Services Resource Explorer in the specified Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-explorer-setup",
+   "description": "Deletes a Resource Explorer setup configuration.",
+   "options": [
+    {
+     "name": "--delete-in-all-regions"
+    },
+    {
+     "name": "--no-delete-in-all-regions"
+    },
+    {
+     "name": "--region-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-view",
+   "description": "Deletes the specified view.",
+   "options": [
+    {
+     "name": "--view-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-default-view",
+   "description": "After you call this operation, the affected Amazon Web Services Region no longer has a default view."
+  },
+  {
+   "name": "get-account-level-service-configuration",
+   "description": "Retrieves the status of your account's Amazon Web Services service access, and validates the service linked role required to access the multi-account search feature."
+  },
+  {
+   "name": "get-default-view",
+   "description": "Retrieves the Amazon Resource Name (ARN) of the view that is the default for the Amazon Web Services Region in which you call this operation."
+  },
+  {
+   "name": "get-index",
+   "description": "Retrieves details about the Amazon Web Services Resource Explorer index in the Amazon Web Services Region in which you invoked the operation."
+  },
+  {
+   "name": "get-managed-view",
+   "description": "Retrieves details of the specified Amazon Web Services-managed view.",
+   "options": [
+    {
+     "name": "--managed-view-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-explorer-setup",
+   "description": "Retrieves the status and details of a Resource Explorer setup operation.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-index",
+   "description": "Retrieves information about the Resource Explorer index in the current Amazon Web Services Region."
+  },
+  {
+   "name": "get-service-view",
+   "description": "Retrieves details about a specific Resource Explorer service view.",
+   "options": [
+    {
+     "name": "--service-view-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-view",
+   "description": "Retrieves details of the specified view.",
+   "options": [
+    {
+     "name": "--view-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-indexes",
+   "description": "Retrieves a list of all of the indexes in Amazon Web Services Regions that are currently collecting resource information for Amazon Web Services Resource Explorer.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "LOCAL",
+       "AGGREGATOR"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-indexes-for-members",
+   "description": "Retrieves a list of a member's indexes in all Amazon Web Services Regions that are currently collecting resource information for Amazon Web Services Resource Explorer.",
+   "options": [
+    {
+     "name": "--account-id-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-views",
+   "description": "Lists the Amazon resource names (ARNs) of the Amazon Web Services-managed views available in the Amazon Web Services Region in which you call this operation.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-principal",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resources",
+   "description": "Returns a list of resources and their details that match the specified criteria.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--view-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-indexes",
+   "description": "Lists all Resource Explorer indexes across the specified Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-views",
+   "description": "Lists all Resource Explorer service views available in the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-streaming-access-for-services",
+   "description": "Returns a list of Amazon Web Services services that have been granted streaming access to your Resource Explorer data.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-supported-resource-types",
+   "description": "Retrieves a list of all resource types currently supported by Amazon Web Services Resource Explorer.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags that are attached to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-views",
+   "description": "Lists the Amazon resource names (ARNs) of the views available in the Amazon Web Services Region in which you call this operation.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search",
+   "description": "Searches for resources and displays details about all resources that match the specified criteria.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--view-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tag key and value pairs to an Amazon Web Services Resource Explorer view or index.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tag key and value pairs from an Amazon Web Services Resource Explorer view or index.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-index-type",
+   "description": "Changes the type of the index from one of the following types to the other.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "LOCAL",
+       "AGGREGATOR"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-view",
+   "description": "Modifies some of the details of a view.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--included-properties",
+     "args": {}
+    },
+    {
+     "name": "--view-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

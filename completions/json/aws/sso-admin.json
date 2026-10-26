@@ -1,0 +1,1743 @@
+{
+ "name": "sso-admin",
+ "description": "IAM Identity Center is the Amazon Web Services solution for connecting your workforce users to Amazon Web Services managed applications and other Amazon Web Services resources.",
+ "subcommands": [
+  {
+   "name": "add-region",
+   "description": "Adds a Region to an IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-customer-managed-policy-reference-to-permission-set",
+   "description": "Attaches the specified customer managed policy to the specified PermissionSet.",
+   "options": [
+    {
+     "name": "--customer-managed-policy-reference",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-managed-policy-to-permission-set",
+   "description": "Attaches an Amazon Web Services managed policy ARN to a permission set.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-account-assignment",
+   "description": "Assigns access to a principal for a specified Amazon Web Services account using a specified permission set.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--target-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "AWS_ACCOUNT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates an OAuth 2.0 customer managed application in IAM Identity Center for the given application provider.",
+   "options": [
+    {
+     "name": "--application-provider-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--portal-options",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-application-assignment",
+   "description": "Grant application access to a user or group.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-instance",
+   "description": "Creates an instance of IAM Identity Center for a standalone Amazon Web Services account that is not managed by Organizations or a member Amazon Web Services account in an organization.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-instance-access-control-attribute-configuration",
+   "description": "Enables the attributes-based access control (ABAC) feature for the specified IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--instance-access-control-attribute-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-permission-set",
+   "description": "Creates a permission set within a specified IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relay-state",
+     "args": {}
+    },
+    {
+     "name": "--session-duration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-trusted-token-issuer",
+   "description": "Creates a connection to a trusted token issuer in an instance of IAM Identity Center.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--trusted-token-issuer-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trusted-token-issuer-type",
+     "args": {
+      "suggestions": [
+       "OIDC_JWT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-account-assignment",
+   "description": "Deletes a principal's access from a specified Amazon Web Services account using a specified permission set.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--target-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "AWS_ACCOUNT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes the association with the application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-access-scope",
+   "description": "Deletes an IAM Identity Center access scope from an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-assignment",
+   "description": "Revoke application access to an application by deleting application assignments for a user or group.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-authentication-method",
+   "description": "Deletes an authentication method from an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-method-type",
+     "args": {
+      "suggestions": [
+       "IAM"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-grant",
+   "description": "Deletes a grant from an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grant-type",
+     "args": {
+      "suggestions": [
+       "authorization_code",
+       "refresh_token",
+       "urn:ietf:params:oauth:grant-type:jwt-bearer",
+       "urn:ietf:params:oauth:grant-type:token-exchange"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-inline-policy-from-permission-set",
+   "description": "Deletes the inline policy from a specified permission set.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-instance",
+   "description": "Deletes the instance of IAM Identity Center.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-instance-access-control-attribute-configuration",
+   "description": "Disables the attributes-based access control (ABAC) feature for the specified IAM Identity Center instance and deletes all of the attribute mappings that have been configured.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-permission-set",
+   "description": "Deletes the specified permission set.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-permissions-boundary-from-permission-set",
+   "description": "Deletes the permissions boundary from a specified PermissionSet.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-trusted-token-issuer",
+   "description": "Deletes a trusted token issuer configuration from an instance of IAM Identity Center.",
+   "options": [
+    {
+     "name": "--trusted-token-issuer-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-account-assignment-creation-status",
+   "description": "Describes the status of the assignment creation request.",
+   "options": [
+    {
+     "name": "--account-assignment-creation-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-account-assignment-deletion-status",
+   "description": "Describes the status of the assignment deletion request.",
+   "options": [
+    {
+     "name": "--account-assignment-deletion-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-application",
+   "description": "Retrieves the details of an application associated with an instance of IAM Identity Center.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-application-assignment",
+   "description": "Retrieves a direct assignment of a user or group to an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-application-provider",
+   "description": "Retrieves details about a provider that can be used to connect an Amazon Web Services managed application or customer managed application to IAM Identity Center.",
+   "options": [
+    {
+     "name": "--application-provider-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-instance",
+   "description": "Returns the details of an instance of IAM Identity Center.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-instance-access-control-attribute-configuration",
+   "description": "Returns the list of IAM Identity Center identity store attributes that have been configured to work with attributes-based access control (ABAC) for the specified IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-permission-set",
+   "description": "Gets the details of the permission set.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-permission-set-provisioning-status",
+   "description": "Describes the status for the given permission set provisioning request.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provision-permission-set-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-region",
+   "description": "Retrieves details about a specific Region enabled in an IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-trusted-token-issuer",
+   "description": "Retrieves details about a trusted token issuer configuration stored in an instance of IAM Identity Center.",
+   "options": [
+    {
+     "name": "--trusted-token-issuer-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-customer-managed-policy-reference-from-permission-set",
+   "description": "Detaches the specified customer managed policy from the specified PermissionSet.",
+   "options": [
+    {
+     "name": "--customer-managed-policy-reference",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-managed-policy-from-permission-set",
+   "description": "Detaches the attached Amazon Web Services managed policy ARN from the specified permission set.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application-access-scope",
+   "description": "Retrieves the authorized targets for an IAM Identity Center access scope for an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application-assignment-configuration",
+   "description": "Retrieves the configuration of PutApplicationAssignmentConfiguration.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application-authentication-method",
+   "description": "Retrieves details about an authentication method used by an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-method-type",
+     "args": {
+      "suggestions": [
+       "IAM"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application-grant",
+   "description": "Retrieves details about an application grant.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grant-type",
+     "args": {
+      "suggestions": [
+       "authorization_code",
+       "refresh_token",
+       "urn:ietf:params:oauth:grant-type:jwt-bearer",
+       "urn:ietf:params:oauth:grant-type:token-exchange"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application-session-configuration",
+   "description": "Retrieves the session configuration for an application in IAM Identity Center.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-inline-policy-for-permission-set",
+   "description": "Obtains the inline policy assigned to the permission set.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-permissions-boundary-for-permission-set",
+   "description": "Obtains the permissions boundary for a specified PermissionSet.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-account-assignment-creation-status",
+   "description": "Lists the status of the Amazon Web Services account assignment creation requests for a specified IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-account-assignment-deletion-status",
+   "description": "Lists the status of the Amazon Web Services account assignment deletion requests for a specified IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-account-assignments",
+   "description": "Lists the assignee of the specified Amazon Web Services account with the specified permission set.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-account-assignments-for-principal",
+   "description": "Retrieves a list of the IAM Identity Center associated Amazon Web Services accounts that the principal has access to.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-accounts-for-provisioned-permission-set",
+   "description": "Lists all the Amazon Web Services accounts where the specified permission set is provisioned.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioning-status",
+     "args": {
+      "suggestions": [
+       "LATEST_PERMISSION_SET_PROVISIONED",
+       "LATEST_PERMISSION_SET_NOT_PROVISIONED"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-application-access-scopes",
+   "description": "Lists the access scopes and authorized targets associated with an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-application-assignments",
+   "description": "Lists Amazon Web Services account users that are assigned to an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-application-assignments-for-principal",
+   "description": "Lists the applications to which a specified principal is assigned.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-application-authentication-methods",
+   "description": "Lists all of the authentication methods supported by the specified application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-application-grants",
+   "description": "List the grants associated with an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-application-providers",
+   "description": "Lists the application providers configured in the IAM Identity Center identity store.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists all applications associated with the instance of IAM Identity Center.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-customer-managed-policy-references-in-permission-set",
+   "description": "Lists all customer managed policies attached to a specified PermissionSet.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-instances",
+   "description": "Lists the details of the organization and account instances of IAM Identity Center that were created in or visible to the account calling this API.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-policies-in-permission-set",
+   "description": "Lists the Amazon Web Services managed policy that is attached to a specified permission set.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-permission-set-provisioning-status",
+   "description": "Lists the status of the permission set provisioning requests for a specified IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-permission-sets",
+   "description": "Lists the PermissionSets in an IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-permission-sets-provisioned-to-account",
+   "description": "Lists all the permission sets that are provisioned to a specified Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--provisioning-status",
+     "args": {
+      "suggestions": [
+       "LATEST_PERMISSION_SET_PROVISIONED",
+       "LATEST_PERMISSION_SET_NOT_PROVISIONED"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-regions",
+   "description": "Lists all enabled Regions of an IAM Identity Center instance, including those that are being added or removed.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags that are attached to a specified resource.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-trusted-token-issuers",
+   "description": "Lists all the trusted token issuers configured in an instance of IAM Identity Center.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "provision-permission-set",
+   "description": "The process by which a specified permission set is provisioned to the specified target.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-id",
+     "args": {}
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "AWS_ACCOUNT",
+       "ALL_PROVISIONED_ACCOUNTS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-application-access-scope",
+   "description": "Adds or updates the list of authorized targets for an IAM Identity Center access scope for an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorized-targets",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-application-assignment-configuration",
+   "description": "Configure how users gain access to an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--assignment-required",
+     "priority": 75
+    },
+    {
+     "name": "--no-assignment-required"
+    }
+   ]
+  },
+  {
+   "name": "put-application-authentication-method",
+   "description": "Adds or updates an authentication method for an application.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-method",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-method-type",
+     "args": {
+      "suggestions": [
+       "IAM"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-application-grant",
+   "description": "Creates a configuration for an application to use grants.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grant",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grant-type",
+     "args": {
+      "suggestions": [
+       "authorization_code",
+       "refresh_token",
+       "urn:ietf:params:oauth:grant-type:jwt-bearer",
+       "urn:ietf:params:oauth:grant-type:token-exchange"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-application-session-configuration",
+   "description": "Updates the session configuration for an application in IAM Identity Center.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-background-session-application-status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "put-inline-policy-to-permission-set",
+   "description": "Attaches an inline policy to a permission set.",
+   "options": [
+    {
+     "name": "--inline-policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-permissions-boundary-to-permission-set",
+   "description": "Attaches an Amazon Web Services managed or customer managed policy to the specified PermissionSet as a permissions boundary.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permissions-boundary",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-region",
+   "description": "Removes an additional Region from an IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates a set of tags with a specified resource.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Disassociates a set of tags from a specified resource.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates application properties.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--portal-options",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-instance",
+   "description": "Update the details for the instance of IAM Identity Center that is owned by the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-instance-access-control-attribute-configuration",
+   "description": "Updates the IAM Identity Center identity store attributes that you can use with the IAM Identity Center instance for attributes-based access control (ABAC).",
+   "options": [
+    {
+     "name": "--instance-access-control-attribute-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-permission-set",
+   "description": "Updates an existing permission set.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-set-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relay-state",
+     "args": {}
+    },
+    {
+     "name": "--session-duration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-trusted-token-issuer",
+   "description": "Updates the name of the trusted token issuer, or the path of a source attribute or destination attribute for a trusted token issuer configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--trusted-token-issuer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trusted-token-issuer-configuration",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

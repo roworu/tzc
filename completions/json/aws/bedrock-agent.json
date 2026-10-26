@@ -1,0 +1,1972 @@
+{
+ "name": "bedrock-agent",
+ "description": "Describes the API operations for creating and managing Amazon Bedrock agents.",
+ "subcommands": [
+  {
+   "name": "associate-agent-collaborator",
+   "description": "Makes an agent a collaborator for another agent.",
+   "options": [
+    {
+     "name": "--agent-descriptor",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--collaboration-instruction",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--collaborator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relay-conversation-history",
+     "args": {
+      "suggestions": [
+       "TO_COLLABORATOR",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "associate-agent-knowledge-base",
+   "description": "Associates a knowledge base with an agent.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-agent",
+   "description": "Creates an agent that orchestrates interactions between foundation models, data sources, software applications, user conversations, and APIs to carry out tasks to help customers.",
+   "options": [
+    {
+     "name": "--agent-collaboration",
+     "args": {
+      "suggestions": [
+       "SUPERVISOR",
+       "SUPERVISOR_ROUTER",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--agent-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-resource-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--custom-orchestration",
+     "args": {}
+    },
+    {
+     "name": "--customer-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--foundation-model",
+     "args": {}
+    },
+    {
+     "name": "--guardrail-configuration",
+     "args": {}
+    },
+    {
+     "name": "--idle-session-ttl-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--instruction",
+     "args": {}
+    },
+    {
+     "name": "--memory-configuration",
+     "args": {}
+    },
+    {
+     "name": "--orchestration-type",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "CUSTOM_ORCHESTRATION"
+      ]
+     }
+    },
+    {
+     "name": "--prompt-override-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-agent-action-group",
+   "description": "Creates an action group for an agent.",
+   "options": [
+    {
+     "name": "--action-group-executor",
+     "args": {}
+    },
+    {
+     "name": "--action-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-group-state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--api-schema",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--function-schema",
+     "args": {}
+    },
+    {
+     "name": "--parent-action-group-signature",
+     "args": {
+      "suggestions": [
+       "AMAZON.UserInput",
+       "AMAZON.CodeInterpreter",
+       "ANTHROPIC.Computer",
+       "ANTHROPIC.Bash",
+       "ANTHROPIC.TextEditor"
+      ]
+     }
+    },
+    {
+     "name": "--parent-action-group-signature-params",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-agent-alias",
+   "description": "Creates an alias of an agent that can be used to deploy the agent.",
+   "options": [
+    {
+     "name": "--agent-alias-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--routing-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-source",
+   "description": "Connects a knowledge base to a data source.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-deletion-policy",
+     "args": {
+      "suggestions": [
+       "RETAIN",
+       "DELETE"
+      ]
+     }
+    },
+    {
+     "name": "--data-source-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-side-encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--vector-ingestion-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-flow",
+   "description": "Creates a prompt flow that you can use to send an input through various steps to yield an output.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--customer-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-flow-alias",
+   "description": "Creates an alias of a flow for deployment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--concurrency-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--routing-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-flow-version",
+   "description": "Creates a version of the flow that you can deploy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-knowledge-base",
+   "description": "Creates a knowledge base.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--knowledge-base-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-prompt",
+   "description": "Creates a prompt in your prompt library that you can add to a flow.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--customer-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--default-variant",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--variants",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-prompt-version",
+   "description": "Creates a static snapshot of your prompt that can be deployed to production.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--prompt-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-agent",
+   "description": "Deletes an agent.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-resource-in-use-check"
+    },
+    {
+     "name": "--skip-resource-in-use-check"
+    }
+   ]
+  },
+  {
+   "name": "delete-agent-action-group",
+   "description": "Deletes an action group in an agent.",
+   "options": [
+    {
+     "name": "--action-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-resource-in-use-check"
+    },
+    {
+     "name": "--skip-resource-in-use-check"
+    }
+   ]
+  },
+  {
+   "name": "delete-agent-alias",
+   "description": "Deletes an alias of an agent.",
+   "options": [
+    {
+     "name": "--agent-alias-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-agent-version",
+   "description": "Deletes a version of an agent.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-resource-in-use-check"
+    },
+    {
+     "name": "--skip-resource-in-use-check"
+    }
+   ]
+  },
+  {
+   "name": "delete-data-source",
+   "description": "Deletes a data source from a knowledge base.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-flow",
+   "description": "Deletes a flow.",
+   "options": [
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-resource-in-use-check"
+    },
+    {
+     "name": "--skip-resource-in-use-check"
+    }
+   ]
+  },
+  {
+   "name": "delete-flow-alias",
+   "description": "Deletes an alias of a flow.",
+   "options": [
+    {
+     "name": "--alias-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-flow-version",
+   "description": "Deletes a version of a flow.",
+   "options": [
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-resource-in-use-check"
+    },
+    {
+     "name": "--skip-resource-in-use-check"
+    }
+   ]
+  },
+  {
+   "name": "delete-knowledge-base",
+   "description": "Deletes a knowledge base.",
+   "options": [
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-knowledge-base-documents",
+   "description": "Deletes documents from a data source and syncs the changes to the knowledge base that is connected to it.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-prompt",
+   "description": "Deletes a prompt or a version of it, depending on whether you include the promptVersion field or not.",
+   "options": [
+    {
+     "name": "--prompt-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prompt-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Removes the resource policy associated with a knowledge base.",
+   "options": [
+    {
+     "name": "--expected-revision-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-agent-collaborator",
+   "description": "Disassociates an agent collaborator.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--collaborator-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-agent-knowledge-base",
+   "description": "Disassociates a knowledge base from an agent.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent",
+   "description": "Gets information about an agent.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent-action-group",
+   "description": "Gets information about an action group for an agent.",
+   "options": [
+    {
+     "name": "--action-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent-alias",
+   "description": "Gets information about an alias of an agent.",
+   "options": [
+    {
+     "name": "--agent-alias-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent-collaborator",
+   "description": "Retrieves information about an agent's collaborator.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--collaborator-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent-knowledge-base",
+   "description": "Gets information about a knowledge base associated with an agent.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent-version",
+   "description": "Gets details about a version of an agent.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-source",
+   "description": "Gets information about a data source.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-flow",
+   "description": "Retrieves information about a flow.",
+   "options": [
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--included-data",
+     "args": {
+      "suggestions": [
+       "ALL_DATA",
+       "METADATA_ONLY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-flow-alias",
+   "description": "Retrieves information about a flow.",
+   "options": [
+    {
+     "name": "--alias-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-flow-version",
+   "description": "Retrieves information about a version of a flow.",
+   "options": [
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--included-data",
+     "args": {
+      "suggestions": [
+       "ALL_DATA",
+       "METADATA_ONLY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-ingestion-job",
+   "description": "Gets information about a data ingestion job.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-knowledge-base",
+   "description": "Gets information about a knowledge base.",
+   "options": [
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-knowledge-base-documents",
+   "description": "Retrieves specific documents from a data source that is connected to a knowledge base.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-prompt",
+   "description": "Retrieves information about the working draft (DRAFT version) of a prompt or a version of it, depending on whether you include the promptVersion field or not.",
+   "options": [
+    {
+     "name": "--included-data",
+     "args": {
+      "suggestions": [
+       "ALL_DATA",
+       "METADATA_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--prompt-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prompt-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Retrieves the resource policy associated with a knowledge base.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "ingest-knowledge-base-documents",
+   "description": "Ingests documents directly into the knowledge base that is connected to the data source.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--documents",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-agent-action-groups",
+   "description": "Lists the action groups for an agent and information about each one.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-agent-aliases",
+   "description": "Lists the aliases of an agent and information about each one.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-agent-collaborators",
+   "description": "Retrieve a list of an agent's collaborators.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-agent-knowledge-bases",
+   "description": "Lists knowledge bases associated with an agent and information about each one.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-agent-versions",
+   "description": "Lists the versions of an agent and information about each version.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-agents",
+   "description": "Lists the agents belonging to an account and information about each agent.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-sources",
+   "description": "Lists the data sources in a knowledge base and information about each one.",
+   "options": [
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-flow-aliases",
+   "description": "Returns a list of aliases for a flow.",
+   "options": [
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-flow-versions",
+   "description": "Returns a list of information about each flow.",
+   "options": [
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-flows",
+   "description": "Returns a list of flows and information about each flow.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ingestion-jobs",
+   "description": "Lists the data ingestion jobs for a data source.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-knowledge-base-documents",
+   "description": "Retrieves all the documents contained in a data source that is connected to a knowledge base.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-knowledge-bases",
+   "description": "Lists the knowledge bases in an account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-prompts",
+   "description": "Returns either information about the working draft (DRAFT version) of each prompt in an account, or information about of all versions of a prompt, depending on whether you include the promptIdentifier field or not.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prompt-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List all the tags for the resource you specify.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "prepare-agent",
+   "description": "Creates a DRAFT version of the agent that can be used for internal testing.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "prepare-flow",
+   "description": "Prepares the DRAFT version of a flow so that it can be invoked.",
+   "options": [
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Associates a resource policy with a knowledge base.",
+   "options": [
+    {
+     "name": "--expected-revision-id",
+     "args": {}
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-ingestion-job",
+   "description": "Begins a data ingestion job.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-ingestion-job",
+   "description": "Stops a currently running data ingestion job.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associate tags with a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-agent",
+   "description": "Updates the configuration of an agent.",
+   "options": [
+    {
+     "name": "--agent-collaboration",
+     "args": {
+      "suggestions": [
+       "SUPERVISOR",
+       "SUPERVISOR_ROUTER",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-resource-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-orchestration",
+     "args": {}
+    },
+    {
+     "name": "--customer-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--foundation-model",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guardrail-configuration",
+     "args": {}
+    },
+    {
+     "name": "--idle-session-ttl-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--instruction",
+     "args": {}
+    },
+    {
+     "name": "--memory-configuration",
+     "args": {}
+    },
+    {
+     "name": "--orchestration-type",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "CUSTOM_ORCHESTRATION"
+      ]
+     }
+    },
+    {
+     "name": "--prompt-override-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-agent-action-group",
+   "description": "Updates the configuration for an action group for an agent.",
+   "options": [
+    {
+     "name": "--action-group-executor",
+     "args": {}
+    },
+    {
+     "name": "--action-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-group-state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--api-schema",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--function-schema",
+     "args": {}
+    },
+    {
+     "name": "--parent-action-group-signature",
+     "args": {
+      "suggestions": [
+       "AMAZON.UserInput",
+       "AMAZON.CodeInterpreter",
+       "ANTHROPIC.Computer",
+       "ANTHROPIC.Bash",
+       "ANTHROPIC.TextEditor"
+      ]
+     }
+    },
+    {
+     "name": "--parent-action-group-signature-params",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-agent-alias",
+   "description": "Updates configurations for an alias of an agent.",
+   "options": [
+    {
+     "name": "--agent-alias-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-alias-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--alias-invocation-state",
+     "args": {
+      "suggestions": [
+       "ACCEPT_INVOCATIONS",
+       "REJECT_INVOCATIONS"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--routing-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-agent-collaborator",
+   "description": "Updates an agent's collaborator.",
+   "options": [
+    {
+     "name": "--agent-descriptor",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--collaboration-instruction",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--collaborator-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--collaborator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relay-conversation-history",
+     "args": {
+      "suggestions": [
+       "TO_COLLABORATOR",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-agent-knowledge-base",
+   "description": "Updates the configuration for a knowledge base that has been associated with an agent.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-data-source",
+   "description": "Updates the configurations for a data source connector.",
+   "options": [
+    {
+     "name": "--data-deletion-policy",
+     "args": {
+      "suggestions": [
+       "RETAIN",
+       "DELETE"
+      ]
+     }
+    },
+    {
+     "name": "--data-source-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-side-encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--vector-ingestion-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-flow",
+   "description": "Modifies a flow.",
+   "options": [
+    {
+     "name": "--customer-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-flow-alias",
+   "description": "Modifies the alias of a flow.",
+   "options": [
+    {
+     "name": "--alias-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--concurrency-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--routing-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-knowledge-base",
+   "description": "Updates the configuration of a knowledge base with the fields that you specify.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--knowledge-base-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-prompt",
+   "description": "Modifies a prompt in your prompt library.",
+   "options": [
+    {
+     "name": "--customer-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--default-variant",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prompt-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--variants",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "validate-flow-definition",
+   "description": "Validates the definition of a flow.",
+   "options": [
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

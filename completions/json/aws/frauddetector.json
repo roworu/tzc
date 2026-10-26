@@ -1,0 +1,1694 @@
+{
+ "name": "frauddetector",
+ "description": "This is the Amazon Fraud Detector API Reference.",
+ "subcommands": [
+  {
+   "name": "batch-create-variable",
+   "description": "Creates a batch of variables.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--variable-entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-variable",
+   "description": "Gets a batch of variables.",
+   "options": [
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-batch-import-job",
+   "description": "Cancels an in-progress batch import job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-batch-prediction-job",
+   "description": "Cancels the specified batch prediction job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-batch-import-job",
+   "description": "Creates a batch import job.",
+   "options": [
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-batch-prediction-job",
+   "description": "Creates a batch prediction job.",
+   "options": [
+    {
+     "name": "--detector-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-version",
+     "args": {}
+    },
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-detector-version",
+   "description": "Creates a detector version.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--external-model-endpoints",
+     "args": {}
+    },
+    {
+     "name": "--model-versions",
+     "args": {}
+    },
+    {
+     "name": "--rule-execution-mode",
+     "args": {
+      "suggestions": [
+       "ALL_MATCHED",
+       "FIRST_MATCHED"
+      ]
+     }
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-list",
+   "description": "Creates a list.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--elements",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--variable-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-model",
+   "description": "Creates a model using the specified model type.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-model-version",
+   "description": "Creates a version of the model using the specified model type and model id.",
+   "options": [
+    {
+     "name": "--external-events-detail",
+     "args": {}
+    },
+    {
+     "name": "--ingested-events-detail",
+     "args": {}
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--training-data-schema",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--training-data-source",
+     "args": {
+      "suggestions": [
+       "EXTERNAL_EVENTS",
+       "INGESTED_EVENTS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-rule",
+   "description": "Creates a rule for use with the specified detector.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "DETECTORPL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--outcomes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-variable",
+   "description": "Creates a variable.",
+   "options": [
+    {
+     "name": "--data-source",
+     "args": {
+      "suggestions": [
+       "EVENT",
+       "MODEL_SCORE",
+       "EXTERNAL_MODEL_SCORE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--data-type",
+     "args": {
+      "suggestions": [
+       "STRING",
+       "INTEGER",
+       "FLOAT",
+       "BOOLEAN",
+       "DATETIME"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--default-value",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--variable-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-batch-import-job",
+   "description": "Deletes the specified batch import job ID record.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-batch-prediction-job",
+   "description": "Deletes a batch prediction job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-detector",
+   "description": "Deletes the detector.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-detector-version",
+   "description": "Deletes the detector version.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-entity-type",
+   "description": "Deletes an entity type.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event",
+   "description": "Deletes the specified event.",
+   "options": [
+    {
+     "name": "--delete-audit-history"
+    },
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-delete-audit-history"
+    }
+   ]
+  },
+  {
+   "name": "delete-event-type",
+   "description": "Deletes an event type.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-events-by-event-type",
+   "description": "Deletes all events of a particular event type.",
+   "options": [
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-external-model",
+   "description": "Removes a SageMaker model from Amazon Fraud Detector.",
+   "options": [
+    {
+     "name": "--model-endpoint",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-label",
+   "description": "Deletes a label.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-list",
+   "description": "Deletes the list, provided it is not used in a rule.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-model",
+   "description": "Deletes a model.",
+   "options": [
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-model-version",
+   "description": "Deletes a model version.",
+   "options": [
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--model-version-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-outcome",
+   "description": "Deletes an outcome.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-rule",
+   "description": "Deletes the rule.",
+   "options": [
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-variable",
+   "description": "Deletes a variable.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-detector",
+   "description": "Gets all versions for a specified detector.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-model-versions",
+   "description": "Gets all of the model versions for the specified model type or for the specified model type and model ID.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--model-id",
+     "args": {}
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     }
+    },
+    {
+     "name": "--model-version-number",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-batch-import-jobs",
+   "description": "Gets all batch import jobs or a specific job of the specified ID.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-batch-prediction-jobs",
+   "description": "Gets all batch prediction jobs or a specific job if you specify a job ID.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-delete-events-by-event-type-status",
+   "description": "Retrieves the status of a DeleteEventsByEventType action.",
+   "options": [
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-detector-version",
+   "description": "Gets a particular detector version.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-detectors",
+   "description": "Gets all detectors or a single detector if a detectorId is specified.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-entity-types",
+   "description": "Gets all entity types or a specific entity type if a name is specified.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-event",
+   "description": "Retrieves details of events stored with Amazon Fraud Detector.",
+   "options": [
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event-prediction",
+   "description": "Evaluates an event against a detector version.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-version-id",
+     "args": {}
+    },
+    {
+     "name": "--entities",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-timestamp",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-variables",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--external-model-endpoint-data-blobs",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-event-prediction-metadata",
+   "description": "Gets details of the past fraud predictions for the specified event ID, event type, detector ID, and detector version ID that was generated in the specified time period.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prediction-timestamp",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event-types",
+   "description": "Gets all event types or a specific event type if name is provided.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-external-models",
+   "description": "Gets the details for one or more Amazon SageMaker models that have been imported into the service.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--model-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-kms-encryption-key",
+   "description": "Gets the encryption key if a KMS key has been specified to be used to encrypt content in Amazon Fraud Detector."
+  },
+  {
+   "name": "get-labels",
+   "description": "Gets all labels or a specific label if name is provided.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-list-elements",
+   "description": "Gets all the elements in the specified list.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-lists-metadata",
+   "description": "Gets the metadata of either all the lists under the account or the specified list.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-model-version",
+   "description": "Gets the details of the specified model version.",
+   "options": [
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--model-version-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-models",
+   "description": "Gets one or more models.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--model-id",
+     "args": {}
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     }
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-outcomes",
+   "description": "Gets one or more outcomes.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-rules",
+   "description": "Get all rules for a detector (paginated) if ruleId and ruleVersion are not specified.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--rule-id",
+     "args": {}
+    },
+    {
+     "name": "--rule-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-variables",
+   "description": "Gets all of the variables or the specific variable.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-predictions",
+   "description": "Gets a list of past predictions.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {}
+    },
+    {
+     "name": "--detector-version-id",
+     "args": {}
+    },
+    {
+     "name": "--event-id",
+     "args": {}
+    },
+    {
+     "name": "--event-type",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--prediction-time-range",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags associated with the resource.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-detector",
+   "description": "Creates or updates a detector.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-entity-type",
+   "description": "Creates or updates an entity type.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-event-type",
+   "description": "Creates or updates an event type.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--entity-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-ingestion",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--event-orchestration",
+     "args": {}
+    },
+    {
+     "name": "--event-variables",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--labels",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-external-model",
+   "description": "Creates or updates an Amazon SageMaker model endpoint.",
+   "options": [
+    {
+     "name": "--input-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--invoke-model-endpoint-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-endpoint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-endpoint-status",
+     "args": {
+      "suggestions": [
+       "ASSOCIATED",
+       "DISSOCIATED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--model-source",
+     "args": {
+      "suggestions": [
+       "SAGEMAKER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--output-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-kms-encryption-key",
+   "description": "Specifies the KMS key to be used to encrypt content in Amazon Fraud Detector.",
+   "options": [
+    {
+     "name": "--kms-encryption-key-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-label",
+   "description": "Creates or updates label.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-outcome",
+   "description": "Creates or updates an outcome.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-event",
+   "description": "Stores events in Amazon Fraud Detector without generating fraud predictions for those events.",
+   "options": [
+    {
+     "name": "--assigned-label",
+     "args": {}
+    },
+    {
+     "name": "--entities",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-timestamp",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-variables",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--label-timestamp",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-detector-version",
+   "description": "Updates a detector version.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--external-model-endpoints",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-versions",
+     "args": {}
+    },
+    {
+     "name": "--rule-execution-mode",
+     "args": {
+      "suggestions": [
+       "ALL_MATCHED",
+       "FIRST_MATCHED"
+      ]
+     }
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-detector-version-metadata",
+   "description": "Updates the detector version's description.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-detector-version-status",
+   "description": "Updates the detector version\u2019s status.",
+   "options": [
+    {
+     "name": "--detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detector-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "DRAFT",
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-event-label",
+   "description": "Updates the specified event with a new label.",
+   "options": [
+    {
+     "name": "--assigned-label",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--label-timestamp",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-list",
+   "description": "Updates a list.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--elements",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-mode",
+     "args": {
+      "suggestions": [
+       "REPLACE",
+       "APPEND",
+       "REMOVE"
+      ]
+     }
+    },
+    {
+     "name": "--variable-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-model",
+   "description": "Updates model description.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-model-version",
+   "description": "Updates a model version.",
+   "options": [
+    {
+     "name": "--external-events-detail",
+     "args": {}
+    },
+    {
+     "name": "--ingested-events-detail",
+     "args": {}
+    },
+    {
+     "name": "--major-version-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-model-version-status",
+   "description": "Updates the status of a model version.",
+   "options": [
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-type",
+     "args": {
+      "suggestions": [
+       "ONLINE_FRAUD_INSIGHTS",
+       "TRANSACTION_FRAUD_INSIGHTS",
+       "ACCOUNT_TAKEOVER_INSIGHTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--model-version-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE",
+       "TRAINING_CANCELLED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-rule-metadata",
+   "description": "Updates a rule's metadata.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-rule-version",
+   "description": "Updates a rule version resulting in a new rule version.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "DETECTORPL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--outcomes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-variable",
+   "description": "Updates a variable.",
+   "options": [
+    {
+     "name": "--default-value",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--variable-type",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,665 @@
+{
+ "name": "fms",
+ "description": "This is the Firewall Manager API Reference.",
+ "subcommands": [
+  {
+   "name": "associate-admin-account",
+   "description": "Sets a Firewall Manager default administrator account.",
+   "options": [
+    {
+     "name": "--admin-account",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-third-party-firewall",
+   "description": "Sets the Firewall Manager policy administrator as a tenant administrator of a third-party firewall service.",
+   "options": [
+    {
+     "name": "--third-party-firewall",
+     "args": {
+      "suggestions": [
+       "PALO_ALTO_NETWORKS_CLOUD_NGFW",
+       "FORTIGATE_CLOUD_NATIVE_FIREWALL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-associate-resource",
+   "description": "Associate resources to a Firewall Manager resource set.",
+   "options": [
+    {
+     "name": "--items",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-set-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-disassociate-resource",
+   "description": "Disassociates resources from a Firewall Manager resource set.",
+   "options": [
+    {
+     "name": "--items",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-set-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-apps-list",
+   "description": "Permanently deletes an Firewall Manager applications list.",
+   "options": [
+    {
+     "name": "--list-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-notification-channel",
+   "description": "Deletes an Firewall Manager association with the IAM role and the Amazon Simple Notification Service (SNS) topic that is used to record Firewall Manager SNS logs."
+  },
+  {
+   "name": "delete-policy",
+   "description": "Permanently deletes an Firewall Manager policy.",
+   "options": [
+    {
+     "name": "--delete-all-policy-resources"
+    },
+    {
+     "name": "--no-delete-all-policy-resources"
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-protocols-list",
+   "description": "Permanently deletes an Firewall Manager protocols list.",
+   "options": [
+    {
+     "name": "--list-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-set",
+   "description": "Deletes the specified ResourceSet.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-admin-account",
+   "description": "Disassociates an Firewall Manager administrator account."
+  },
+  {
+   "name": "disassociate-third-party-firewall",
+   "description": "Disassociates a Firewall Manager policy administrator from a third-party firewall tenant.",
+   "options": [
+    {
+     "name": "--third-party-firewall",
+     "args": {
+      "suggestions": [
+       "PALO_ALTO_NETWORKS_CLOUD_NGFW",
+       "FORTIGATE_CLOUD_NATIVE_FIREWALL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-admin-account",
+   "description": "Returns the Organizations account that is associated with Firewall Manager as the Firewall Manager default administrator."
+  },
+  {
+   "name": "get-admin-scope",
+   "description": "Returns information about the specified account's administrative scope.",
+   "options": [
+    {
+     "name": "--admin-account",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-apps-list",
+   "description": "Returns information about the specified Firewall Manager applications list.",
+   "options": [
+    {
+     "name": "--default-list"
+    },
+    {
+     "name": "--list-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-default-list"
+    }
+   ]
+  },
+  {
+   "name": "get-compliance-detail",
+   "description": "Returns detailed compliance information about the specified member account.",
+   "options": [
+    {
+     "name": "--member-account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-notification-channel",
+   "description": "Information about the Amazon Simple Notification Service (SNS) topic that is used to record Firewall Manager SNS logs."
+  },
+  {
+   "name": "get-policy",
+   "description": "Returns information about the specified Firewall Manager policy.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-protection-status",
+   "description": "If you created a Shield Advanced policy, returns policy-level attack summary information in the event of a potential DDoS attack.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--member-account-id",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-protocols-list",
+   "description": "Returns information about the specified Firewall Manager protocols list.",
+   "options": [
+    {
+     "name": "--default-list"
+    },
+    {
+     "name": "--list-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-default-list"
+    }
+   ]
+  },
+  {
+   "name": "get-resource-set",
+   "description": "Gets information about a specific resource set.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-third-party-firewall-association-status",
+   "description": "The onboarding status of a Firewall Manager admin account to third-party firewall vendor tenant.",
+   "options": [
+    {
+     "name": "--third-party-firewall",
+     "args": {
+      "suggestions": [
+       "PALO_ALTO_NETWORKS_CLOUD_NGFW",
+       "FORTIGATE_CLOUD_NATIVE_FIREWALL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-violation-details",
+   "description": "Retrieves violations for a resource based on the specified Firewall Manager policy and Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--member-account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-admin-accounts-for-organization",
+   "description": "Returns a AdminAccounts object that lists the Firewall Manager administrators within the organization that are onboarded to Firewall Manager by AssociateAdminAccount.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-admins-managing-account",
+   "description": "Lists the accounts that are managing the specified Organizations member account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-apps-lists",
+   "description": "Returns an array of AppsListDataSummary objects.",
+   "options": [
+    {
+     "name": "--default-lists"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-default-lists"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-compliance-status",
+   "description": "Returns an array of PolicyComplianceStatus objects.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-discovered-resources",
+   "description": "Returns an array of resources in the organization's accounts that are available to be associated with a resource set.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--member-account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-member-accounts",
+   "description": "Returns a MemberAccounts object that lists the member accounts in the administrator's Amazon Web Services organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policies",
+   "description": "Returns an array of PolicySummary objects.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-protocols-lists",
+   "description": "Returns an array of ProtocolsListDataSummary objects.",
+   "options": [
+    {
+     "name": "--default-lists"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-default-lists"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-set-resources",
+   "description": "Returns an array of resources that are currently associated to a resource set.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-sets",
+   "description": "Returns an array of ResourceSetSummary objects.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves the list of tags for the specified Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-third-party-firewall-firewall-policies",
+   "description": "Retrieves a list of all of the third-party firewall policies that are associated with the third-party firewall administrator's account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--third-party-firewall",
+     "args": {
+      "suggestions": [
+       "PALO_ALTO_NETWORKS_CLOUD_NGFW",
+       "FORTIGATE_CLOUD_NATIVE_FIREWALL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-admin-account",
+   "description": "Creates or updates an Firewall Manager administrator account.",
+   "options": [
+    {
+     "name": "--admin-account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--admin-scope",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-apps-list",
+   "description": "Creates an Firewall Manager applications list.",
+   "options": [
+    {
+     "name": "--apps-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-notification-channel",
+   "description": "Designates the IAM role and Amazon Simple Notification Service (SNS) topic that Firewall Manager uses to record SNS logs.",
+   "options": [
+    {
+     "name": "--sns-role-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-policy",
+   "description": "Creates an Firewall Manager policy.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-protocols-list",
+   "description": "Creates an Firewall Manager protocols list.",
+   "options": [
+    {
+     "name": "--protocols-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-resource-set",
+   "description": "Creates the resource set.",
+   "options": [
+    {
+     "name": "--resource-set",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to an Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from an Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

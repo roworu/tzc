@@ -1,0 +1,1189 @@
+{
+ "name": "chime",
+ "description": "Most of these APIs are no longer supported and will not be updated.",
+ "subcommands": [
+  {
+   "name": "associate-phone-number-with-user",
+   "description": "Associates a phone number with the specified Amazon Chime user.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--e164-phone-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-signin-delegate-groups-with-account",
+   "description": "Associates the specified sign-in delegate groups with the specified Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signin-delegate-groups",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-create-room-membership",
+   "description": "Adds up to 50 members to a chat room in an Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--membership-item-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--room-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-phone-number",
+   "description": "Moves phone numbers into the Deletion queue.",
+   "options": [
+    {
+     "name": "--phone-number-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-suspend-user",
+   "description": "Suspends up to 50 users from a Team or EnterpriseLWA Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-unsuspend-user",
+   "description": "Removes the suspension from up to 50 previously suspended users for the specified Amazon Chime EnterpriseLWA account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-phone-number",
+   "description": "Updates phone number product types or calling names.",
+   "options": [
+    {
+     "name": "--update-phone-number-request-items",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-user",
+   "description": "Updates user details within the UpdateUserRequestItem object for up to 20 users for the specified Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-user-request-items",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-account",
+   "description": "Creates an Amazon Chime account under the administrator's AWS account.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-bot",
+   "description": "Creates a bot for an Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-meeting-dial-out",
+   "description": "Uses the join token and call metadata in a meeting request (From number, To number, and so forth) to initiate an outbound call to a public switched telephone network (PSTN) and join them into a Chime meeting.",
+   "options": [
+    {
+     "name": "--from-phone-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--join-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--to-phone-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-phone-number-order",
+   "description": "Creates an order for phone numbers to be provisioned.",
+   "options": [
+    {
+     "name": "--e164-phone-numbers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-type",
+     "args": {
+      "suggestions": [
+       "BusinessCalling",
+       "VoiceConnector",
+       "SipMediaApplicationDialIn"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-room",
+   "description": "Creates a chat room for the specified Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-room-membership",
+   "description": "Adds a member to a chat room in an Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "Administrator",
+       "Member"
+      ]
+     }
+    },
+    {
+     "name": "--room-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "Creates a user under the specified Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email",
+     "args": {}
+    },
+    {
+     "name": "--user-type",
+     "args": {
+      "suggestions": [
+       "PrivateUser",
+       "SharedDevice"
+      ]
+     }
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-account",
+   "description": "Deletes the specified Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-events-configuration",
+   "description": "Deletes the events configuration that allows a bot to receive outgoing events.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-phone-number",
+   "description": "Moves the specified phone number into the Deletion queue.",
+   "options": [
+    {
+     "name": "--phone-number-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-room",
+   "description": "Deletes a chat room in an Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--room-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-room-membership",
+   "description": "Removes a member from a chat room in an Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--room-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-phone-number-from-user",
+   "description": "Disassociates the primary provisioned phone number from the specified Amazon Chime user.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-signin-delegate-groups-from-account",
+   "description": "Disassociates the specified sign-in delegate groups from the specified Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account",
+   "description": "Retrieves details for the specified Amazon Chime account, such as account type and supported licenses.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-settings",
+   "description": "Retrieves account settings for the specified Amazon Chime account ID, such as remote control and dialout settings.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bot",
+   "description": "Retrieves details for the specified bot, such as bot email address, bot type, status, and display name.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-events-configuration",
+   "description": "Gets details for an events configuration that allows a bot to receive outgoing events, such as an HTTPS endpoint or Lambda function ARN.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-global-settings",
+   "description": "Retrieves global settings for the administrator's AWS account, such as Amazon Chime Business Calling and Amazon Chime Voice Connector settings."
+  },
+  {
+   "name": "get-phone-number",
+   "description": "Retrieves details for the specified phone number ID, such as associations, capabilities, and product type.",
+   "options": [
+    {
+     "name": "--phone-number-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-phone-number-order",
+   "description": "Retrieves details for the specified phone number order, such as the order creation timestamp, phone numbers in E.164 format, product type, and order status.",
+   "options": [
+    {
+     "name": "--phone-number-order-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-phone-number-settings",
+   "description": "Retrieves the phone number settings for the administrator's AWS account, such as the default outbound calling name."
+  },
+  {
+   "name": "get-retention-settings",
+   "description": "Gets the retention settings for the specified Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-room",
+   "description": "Retrieves room details, such as the room name, for a room in an Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--room-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user",
+   "description": "Retrieves details for the specified user ID, such as primary email address, license type,and personal meeting PIN.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user-settings",
+   "description": "Retrieves settings for the specified user ID, such as any associated phone number settings.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "invite-users",
+   "description": "Sends email to a maximum of 50 users, inviting them to the specified Amazon Chime Team account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-email-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-type",
+     "args": {
+      "suggestions": [
+       "PrivateUser",
+       "SharedDevice"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-accounts",
+   "description": "Lists the Amazon Chime accounts under the administrator's AWS account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-email",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bots",
+   "description": "Lists the bots associated with the administrator's Amazon Chime Enterprise account ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-phone-number-orders",
+   "description": "Lists the phone number orders for the administrator's Amazon Chime account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-phone-numbers",
+   "description": "Lists the phone numbers for the specified Amazon Chime account, Amazon Chime user, Amazon Chime Voice Connector, or Amazon Chime Voice Connector group.",
+   "options": [
+    {
+     "name": "--filter-name",
+     "args": {
+      "suggestions": [
+       "AccountId",
+       "UserId",
+       "VoiceConnectorId",
+       "VoiceConnectorGroupId",
+       "SipRuleId"
+      ]
+     }
+    },
+    {
+     "name": "--filter-value",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--product-type",
+     "args": {
+      "suggestions": [
+       "BusinessCalling",
+       "VoiceConnector",
+       "SipMediaApplicationDialIn"
+      ]
+     }
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "AcquireInProgress",
+       "AcquireFailed",
+       "Unassigned",
+       "Assigned",
+       "ReleaseInProgress",
+       "DeleteInProgress",
+       "ReleaseFailed",
+       "DeleteFailed"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-room-memberships",
+   "description": "Lists the membership details for the specified room in an Amazon Chime Enterprise account, such as the members' IDs, email addresses, and names.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--room-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-rooms",
+   "description": "Lists the room details for the specified Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--member-id",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-supported-phone-number-countries",
+   "description": "Lists supported phone number countries.",
+   "options": [
+    {
+     "name": "--product-type",
+     "args": {
+      "suggestions": [
+       "BusinessCalling",
+       "VoiceConnector",
+       "SipMediaApplicationDialIn"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-users",
+   "description": "Lists the users that belong to the specified Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-email",
+     "args": {}
+    },
+    {
+     "name": "--user-type",
+     "args": {
+      "suggestions": [
+       "PrivateUser",
+       "SharedDevice"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "logout-user",
+   "description": "Logs out the specified user from all of the devices they are currently logged into.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-events-configuration",
+   "description": "Creates an events configuration that allows a bot to receive outgoing events sent by Amazon Chime.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lambda-function-arn",
+     "args": {}
+    },
+    {
+     "name": "--outbound-events-https-endpoint",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-retention-settings",
+   "description": "Puts retention settings for the specified Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retention-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "redact-conversation-message",
+   "description": "Redacts the specified message from the specified Amazon Chime conversation.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conversation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "redact-room-message",
+   "description": "Redacts the specified message from the specified Amazon Chime channel.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--room-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "regenerate-security-token",
+   "description": "Regenerates the security token for a bot.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-personal-pin",
+   "description": "Resets the personal meeting PIN for the specified user on an Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-phone-number",
+   "description": "Moves a phone number from the Deletion queue back into the phone number Inventory.",
+   "options": [
+    {
+     "name": "--phone-number-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-available-phone-numbers",
+   "description": "Searches for phone numbers that can be ordered.",
+   "options": [
+    {
+     "name": "--area-code",
+     "args": {}
+    },
+    {
+     "name": "--city",
+     "args": {}
+    },
+    {
+     "name": "--country",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--phone-number-type",
+     "args": {
+      "suggestions": [
+       "Local",
+       "TollFree"
+      ]
+     }
+    },
+    {
+     "name": "--state",
+     "args": {}
+    },
+    {
+     "name": "--toll-free-prefix",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-account",
+   "description": "Updates account details for the specified Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-license",
+     "args": {
+      "suggestions": [
+       "Basic",
+       "Plus",
+       "Pro",
+       "ProTrial"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-account-settings",
+   "description": "Updates the settings for the specified Amazon Chime account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--account-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-bot",
+   "description": "Updates the status of the specified bot, such as starting or stopping the bot from running in your Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bot-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disabled"
+    },
+    {
+     "name": "--no-disabled"
+    }
+   ]
+  },
+  {
+   "name": "update-global-settings",
+   "description": "Updates global settings for the administrator's AWS account, such as Amazon Chime Business Calling and Amazon Chime Voice Connector settings.",
+   "options": [
+    {
+     "name": "--business-calling",
+     "args": {}
+    },
+    {
+     "name": "--voice-connector",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-phone-number",
+   "description": "Updates phone number details, such as product type or calling name, for the specified phone number ID.",
+   "options": [
+    {
+     "name": "--calling-name",
+     "args": {}
+    },
+    {
+     "name": "--phone-number-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-type",
+     "args": {
+      "suggestions": [
+       "BusinessCalling",
+       "VoiceConnector",
+       "SipMediaApplicationDialIn"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-phone-number-settings",
+   "description": "Updates the phone number settings for the administrator's AWS account, such as the default outbound calling name.",
+   "options": [
+    {
+     "name": "--calling-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-room",
+   "description": "Updates room details, such as the room name, for a room in an Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--room-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-room-membership",
+   "description": "Updates room membership details, such as the member role, for a room in an Amazon Chime Enterprise account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "Administrator",
+       "Member"
+      ]
+     }
+    },
+    {
+     "name": "--room-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-user",
+   "description": "Updates user details for a specified user ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--alexa-for-business-metadata",
+     "args": {}
+    },
+    {
+     "name": "--license-type",
+     "args": {
+      "suggestions": [
+       "Basic",
+       "Plus",
+       "Pro",
+       "ProTrial"
+      ]
+     }
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-type",
+     "args": {
+      "suggestions": [
+       "PrivateUser",
+       "SharedDevice"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-user-settings",
+   "description": "Updates the settings for the specified user, such as phone number settings.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

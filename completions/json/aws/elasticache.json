@@ -1,0 +1,2516 @@
+{
+ "name": "elasticache",
+ "description": "Amazon ElastiCache Amazon ElastiCache is a web service that makes it easier to set up, operate, and scale a distributed cache in the cloud.",
+ "subcommands": [
+  {
+   "name": "add-tags-to-resource",
+   "description": "A tag is a key-value pair where the key and value are case-sensitive.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "authorize-cache-security-group-ingress",
+   "description": "Allows network ingress to a cache security group.",
+   "options": [
+    {
+     "name": "--cache-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ec2-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ec2-security-group-owner-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-apply-update-action",
+   "description": "Apply the service update.",
+   "options": [
+    {
+     "name": "--cache-cluster-ids",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--service-update-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-stop-update-action",
+   "description": "Stop the service update.",
+   "options": [
+    {
+     "name": "--cache-cluster-ids",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--service-update-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "complete-migration",
+   "description": "Complete the migration of data.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-serverless-cache-snapshot",
+   "description": "Creates a copy of an existing serverless cache\u2019s snapshot.",
+   "options": [
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--source-serverless-cache-snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-serverless-cache-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-snapshot",
+   "description": "Makes a copy of an existing snapshot.",
+   "options": [
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--source-snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-bucket",
+     "args": {}
+    },
+    {
+     "name": "--target-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cache-cluster",
+   "description": "Creates a cluster.",
+   "options": [
+    {
+     "name": "--auth-token",
+     "args": {}
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--az-mode",
+     "args": {
+      "suggestions": [
+       "single-az",
+       "cross-az"
+      ]
+     }
+    },
+    {
+     "name": "--cache-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cache-node-type",
+     "args": {}
+    },
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--cache-security-group-names",
+     "args": {}
+    },
+    {
+     "name": "--cache-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--ip-discovery",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--log-delivery-configurations",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6",
+       "dual_stack"
+      ]
+     }
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-transit-encryption-enabled"
+    },
+    {
+     "name": "--notification-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--num-cache-nodes",
+     "args": {}
+    },
+    {
+     "name": "--outpost-mode",
+     "args": {
+      "suggestions": [
+       "single-outpost",
+       "cross-outpost"
+      ]
+     }
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--preferred-availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-outpost-arn",
+     "args": {}
+    },
+    {
+     "name": "--preferred-outpost-arns",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-arns",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-retention-limit",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-window",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--transit-encryption-enabled"
+    }
+   ]
+  },
+  {
+   "name": "create-cache-parameter-group",
+   "description": "Creates a new Amazon ElastiCache cache parameter group.",
+   "options": [
+    {
+     "name": "--cache-parameter-group-family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cache-security-group",
+   "description": "Creates a new cache security group.",
+   "options": [
+    {
+     "name": "--cache-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cache-subnet-group",
+   "description": "Creates a new cache subnet group.",
+   "options": [
+    {
+     "name": "--cache-subnet-group-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cache-subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-global-replication-group",
+   "description": "Global Datastore offers fully managed, fast, reliable and secure cross-region replication.",
+   "options": [
+    {
+     "name": "--global-replication-group-description",
+     "args": {}
+    },
+    {
+     "name": "--global-replication-group-id-suffix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-replication-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-replication-group",
+   "description": "Creates a Valkey or Redis OSS (cluster mode disabled) or a Valkey or Redis OSS (cluster mode enabled) replication group.",
+   "options": [
+    {
+     "name": "--at-rest-encryption-enabled"
+    },
+    {
+     "name": "--auth-token",
+     "args": {}
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--automatic-failover-enabled"
+    },
+    {
+     "name": "--cache-node-type",
+     "args": {}
+    },
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--cache-security-group-names",
+     "args": {}
+    },
+    {
+     "name": "--cache-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-mode",
+     "args": {
+      "suggestions": [
+       "enabled",
+       "disabled",
+       "compatible"
+      ]
+     }
+    },
+    {
+     "name": "--data-tiering-enabled"
+    },
+    {
+     "name": "--durability",
+     "args": {
+      "suggestions": [
+       "default",
+       "async",
+       "sync",
+       "disabled"
+      ]
+     }
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--global-replication-group-id",
+     "args": {}
+    },
+    {
+     "name": "--ip-discovery",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--log-delivery-configurations",
+     "args": {}
+    },
+    {
+     "name": "--multi-az-enabled"
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6",
+       "dual_stack"
+      ]
+     }
+    },
+    {
+     "name": "--no-at-rest-encryption-enabled"
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-automatic-failover-enabled"
+    },
+    {
+     "name": "--no-data-tiering-enabled"
+    },
+    {
+     "name": "--no-multi-az-enabled"
+    },
+    {
+     "name": "--no-transit-encryption-enabled"
+    },
+    {
+     "name": "--node-group-configuration",
+     "args": {}
+    },
+    {
+     "name": "--notification-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--num-cache-clusters",
+     "args": {}
+    },
+    {
+     "name": "--num-node-groups",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-cache-cluster-azs",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--primary-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--replicas-per-node-group",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--serverless-cache-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-arns",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-retention-limit",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-window",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--transit-encryption-enabled"
+    },
+    {
+     "name": "--transit-encryption-mode",
+     "args": {
+      "suggestions": [
+       "preferred",
+       "required"
+      ]
+     }
+    },
+    {
+     "name": "--user-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-serverless-cache",
+   "description": "Creates a serverless cache.",
+   "options": [
+    {
+     "name": "--cache-usage-limits",
+     "args": {}
+    },
+    {
+     "name": "--daily-snapshot-time",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--major-engine-version",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6",
+       "dual_stack"
+      ]
+     }
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--serverless-cache-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-arns-to-restore",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-retention-limit",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-group-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-serverless-cache-snapshot",
+   "description": "This API creates a copy of an entire ServerlessCache at a specific moment in time.",
+   "options": [
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--serverless-cache-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--serverless-cache-snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot",
+   "description": "Creates a copy of an entire cluster or replication group at a specific moment in time.",
+   "options": [
+    {
+     "name": "--cache-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "For Valkey engine version 7.2 onwards and Redis OSS 6.0 to 7.1: Creates a user.",
+   "options": [
+    {
+     "name": "--access-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-mode",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-no-password-required"
+    },
+    {
+     "name": "--no-password-required"
+    },
+    {
+     "name": "--passwords",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user-group",
+   "description": "For Valkey engine version 7.2 onwards and Redis OSS 6.0 to 7.1: Creates a user group.",
+   "options": [
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "decrease-node-groups-in-global-replication-group",
+   "description": "Decreases the number of node groups in a Global datastore",
+   "options": [
+    {
+     "name": "--apply-immediately",
+     "priority": 75
+    },
+    {
+     "name": "--global-node-groups-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--global-node-groups-to-retain",
+     "args": {}
+    },
+    {
+     "name": "--global-replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--node-group-count",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "decrease-replica-count",
+   "description": "Dynamically decreases the number of replicas in a Valkey or Redis OSS (cluster mode disabled) replication group or the number of replica nodes in one or more node groups (shards) of a Valkey or Redis OSS (cluster mode enabled) replication group.",
+   "options": [
+    {
+     "name": "--apply-immediately",
+     "priority": 75
+    },
+    {
+     "name": "--new-replica-count",
+     "args": {}
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--replica-configuration",
+     "args": {}
+    },
+    {
+     "name": "--replicas-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cache-cluster",
+   "description": "Deletes a previously provisioned cluster.",
+   "options": [
+    {
+     "name": "--cache-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--final-snapshot-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-cache-parameter-group",
+   "description": "Deletes the specified cache parameter group.",
+   "options": [
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cache-security-group",
+   "description": "Deletes a cache security group.",
+   "options": [
+    {
+     "name": "--cache-security-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cache-subnet-group",
+   "description": "Deletes a cache subnet group.",
+   "options": [
+    {
+     "name": "--cache-subnet-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-global-replication-group",
+   "description": "Deleting a Global datastore is a two-step process: First, you must DisassociateGlobalReplicationGroup to remove the secondary clusters in the Global datastore.",
+   "options": [
+    {
+     "name": "--global-replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-retain-primary-replication-group"
+    },
+    {
+     "name": "--retain-primary-replication-group",
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-group",
+   "description": "Deletes an existing replication group.",
+   "options": [
+    {
+     "name": "--final-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-retain-primary-cluster"
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retain-primary-cluster"
+    }
+   ]
+  },
+  {
+   "name": "delete-serverless-cache",
+   "description": "Deletes a specified existing serverless cache.",
+   "options": [
+    {
+     "name": "--final-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--serverless-cache-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-serverless-cache-snapshot",
+   "description": "Deletes an existing serverless cache snapshot.",
+   "options": [
+    {
+     "name": "--serverless-cache-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-snapshot",
+   "description": "Deletes an existing snapshot.",
+   "options": [
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user",
+   "description": "For Valkey engine version 7.2 onwards and Redis OSS 6.0 onwards: Deletes a user.",
+   "options": [
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user-group",
+   "description": "For Valkey engine version 7.2 onwards and Redis OSS 6.0 onwards: Deletes a user group.",
+   "options": [
+    {
+     "name": "--user-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cache-clusters",
+   "description": "Returns information about all provisioned clusters if no cluster identifier is specified, or about a specific cache cluster if a cluster identifier is supplied.",
+   "options": [
+    {
+     "name": "--cache-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-show-cache-clusters-not-in-replication-groups"
+    },
+    {
+     "name": "--no-show-cache-node-info"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--show-cache-clusters-not-in-replication-groups"
+    },
+    {
+     "name": "--show-cache-node-info"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cache-engine-versions",
+   "description": "Returns a list of the available cache engines and their versions.",
+   "options": [
+    {
+     "name": "--cache-parameter-group-family",
+     "args": {}
+    },
+    {
+     "name": "--default-only"
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-default-only"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cache-parameter-groups",
+   "description": "Returns a list of cache parameter group descriptions.",
+   "options": [
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cache-parameters",
+   "description": "Returns the detailed parameter list for a particular cache parameter group.",
+   "options": [
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cache-security-groups",
+   "description": "Returns a list of cache security group descriptions.",
+   "options": [
+    {
+     "name": "--cache-security-group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cache-subnet-groups",
+   "description": "Returns a list of cache subnet group descriptions.",
+   "options": [
+    {
+     "name": "--cache-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-engine-default-parameters",
+   "description": "Returns the default engine and system parameter information for the specified cache engine.",
+   "options": [
+    {
+     "name": "--cache-parameter-group-family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-events",
+   "description": "Returns events related to clusters, cache security groups, and cache parameter groups.",
+   "options": [
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "cache-cluster",
+       "cache-parameter-group",
+       "cache-security-group",
+       "cache-subnet-group",
+       "replication-group",
+       "serverless-cache",
+       "serverless-cache-snapshot",
+       "user",
+       "user-group"
+      ]
+     }
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-global-replication-groups",
+   "description": "Returns information about a particular global replication group.",
+   "options": [
+    {
+     "name": "--global-replication-group-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-show-member-info"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--show-member-info"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-groups",
+   "description": "Returns information about a particular replication group.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-cache-nodes",
+   "description": "Returns information about reserved cache nodes for this account, or about a specified reserved cache node.",
+   "options": [
+    {
+     "name": "--cache-node-type",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--offering-type",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--product-description",
+     "args": {}
+    },
+    {
+     "name": "--reserved-cache-node-id",
+     "args": {}
+    },
+    {
+     "name": "--reserved-cache-nodes-offering-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-cache-nodes-offerings",
+   "description": "Lists available reserved cache node offerings.",
+   "options": [
+    {
+     "name": "--cache-node-type",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--offering-type",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--product-description",
+     "args": {}
+    },
+    {
+     "name": "--reserved-cache-nodes-offering-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-serverless-cache-snapshots",
+   "description": "Returns information about serverless cache snapshots.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--serverless-cache-name",
+     "args": {}
+    },
+    {
+     "name": "--serverless-cache-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-serverless-caches",
+   "description": "Returns information about a specific serverless cache.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--serverless-cache-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-service-updates",
+   "description": "Returns details of the service updates",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-update-name",
+     "args": {}
+    },
+    {
+     "name": "--service-update-status",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-snapshots",
+   "description": "Returns information about cluster or replication group snapshots.",
+   "options": [
+    {
+     "name": "--cache-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-show-node-group-config"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {}
+    },
+    {
+     "name": "--show-node-group-config"
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-source",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-update-actions",
+   "description": "Returns details of the update actions",
+   "options": [
+    {
+     "name": "--cache-cluster-ids",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-show-node-level-update-status"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--service-update-name",
+     "args": {}
+    },
+    {
+     "name": "--service-update-status",
+     "args": {}
+    },
+    {
+     "name": "--service-update-time-range",
+     "args": {}
+    },
+    {
+     "name": "--show-node-level-update-status"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--update-action-status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-user-groups",
+   "description": "Returns a list of user groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-group-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-users",
+   "description": "Returns a list of users.",
+   "options": [
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-global-replication-group",
+   "description": "Remove a secondary cluster from the Global datastore using the Global datastore name.",
+   "options": [
+    {
+     "name": "--global-replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-group-region",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-serverless-cache-snapshot",
+   "description": "Provides the functionality to export the serverless cache snapshot data to Amazon S3.",
+   "options": [
+    {
+     "name": "--s3-bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--serverless-cache-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "failover-global-replication-group",
+   "description": "Used to failover the primary region to a secondary region.",
+   "options": [
+    {
+     "name": "--global-replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-replication-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "increase-node-groups-in-global-replication-group",
+   "description": "Increase the number of node groups in the Global datastore",
+   "options": [
+    {
+     "name": "--apply-immediately",
+     "priority": 75
+    },
+    {
+     "name": "--global-replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--node-group-count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--regional-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "increase-replica-count",
+   "description": "Dynamically increases the number of replicas in a Valkey or Redis OSS (cluster mode disabled) replication group or the number of replica nodes in one or more node groups (shards) of a Valkey or Redis OSS (cluster mode enabled) replication group.",
+   "options": [
+    {
+     "name": "--apply-immediately",
+     "priority": 75
+    },
+    {
+     "name": "--new-replica-count",
+     "args": {}
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--replica-configuration",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-allowed-node-type-modifications",
+   "description": "Lists all available node types that you can scale with your cluster's replication group's current node type.",
+   "options": [
+    {
+     "name": "--cache-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags currently on a named resource.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-cache-cluster",
+   "description": "Modifies the settings for a cluster.",
+   "options": [
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--auth-token",
+     "args": {}
+    },
+    {
+     "name": "--auth-token-update-strategy",
+     "args": {
+      "suggestions": [
+       "SET",
+       "ROTATE",
+       "DELETE"
+      ]
+     }
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--az-mode",
+     "args": {
+      "suggestions": [
+       "single-az",
+       "cross-az"
+      ]
+     }
+    },
+    {
+     "name": "--cache-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cache-node-ids-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--cache-node-type",
+     "args": {}
+    },
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--cache-security-group-names",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--ip-discovery",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--log-delivery-configurations",
+     "args": {}
+    },
+    {
+     "name": "--new-availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--notification-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--notification-topic-status",
+     "args": {}
+    },
+    {
+     "name": "--num-cache-nodes",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--scale-config",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-retention-limit",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-window",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-cache-parameter-group",
+   "description": "Modifies the parameters of a cache parameter group.",
+   "options": [
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameter-name-values",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-cache-subnet-group",
+   "description": "Modifies an existing cache subnet group.",
+   "options": [
+    {
+     "name": "--cache-subnet-group-description",
+     "args": {}
+    },
+    {
+     "name": "--cache-subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-global-replication-group",
+   "description": "Modifies the settings for a Global datastore.",
+   "options": [
+    {
+     "name": "--apply-immediately",
+     "priority": 75
+    },
+    {
+     "name": "--automatic-failover-enabled"
+    },
+    {
+     "name": "--cache-node-type",
+     "args": {}
+    },
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--global-replication-group-description",
+     "args": {}
+    },
+    {
+     "name": "--global-replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--no-automatic-failover-enabled"
+    }
+   ]
+  },
+  {
+   "name": "modify-replication-group",
+   "description": "Modifies the settings for a replication group.",
+   "options": [
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--auth-token",
+     "args": {}
+    },
+    {
+     "name": "--auth-token-update-strategy",
+     "args": {
+      "suggestions": [
+       "SET",
+       "ROTATE",
+       "DELETE"
+      ]
+     }
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--automatic-failover-enabled"
+    },
+    {
+     "name": "--cache-node-type",
+     "args": {}
+    },
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--cache-security-group-names",
+     "args": {}
+    },
+    {
+     "name": "--cluster-mode",
+     "args": {
+      "suggestions": [
+       "enabled",
+       "disabled",
+       "compatible"
+      ]
+     }
+    },
+    {
+     "name": "--durability",
+     "args": {
+      "suggestions": [
+       "default",
+       "async",
+       "sync",
+       "disabled"
+      ]
+     }
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--ip-discovery",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--log-delivery-configurations",
+     "args": {}
+    },
+    {
+     "name": "--multi-az-enabled"
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-automatic-failover-enabled"
+    },
+    {
+     "name": "--no-multi-az-enabled"
+    },
+    {
+     "name": "--no-remove-user-groups"
+    },
+    {
+     "name": "--no-transit-encryption-enabled"
+    },
+    {
+     "name": "--node-group-id",
+     "args": {}
+    },
+    {
+     "name": "--notification-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--notification-topic-status",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--primary-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--remove-user-groups"
+    },
+    {
+     "name": "--replication-group-description",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-retention-limit",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-window",
+     "args": {}
+    },
+    {
+     "name": "--snapshotting-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--transit-encryption-enabled"
+    },
+    {
+     "name": "--transit-encryption-mode",
+     "args": {
+      "suggestions": [
+       "preferred",
+       "required"
+      ]
+     }
+    },
+    {
+     "name": "--user-group-ids-to-add",
+     "args": {}
+    },
+    {
+     "name": "--user-group-ids-to-remove",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-replication-group-shard-configuration",
+   "description": "Modifies a replication group's shards (node groups) by allowing you to add shards, remove shards, or rebalance the keyspaces among existing shards.",
+   "options": [
+    {
+     "name": "--apply-immediately",
+     "priority": 75
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--node-group-count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-groups-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--node-groups-to-retain",
+     "args": {}
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resharding-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-serverless-cache",
+   "description": "This API modifies the attributes of a serverless cache.",
+   "options": [
+    {
+     "name": "--cache-usage-limits",
+     "args": {}
+    },
+    {
+     "name": "--daily-snapshot-time",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--major-engine-version",
+     "args": {}
+    },
+    {
+     "name": "--no-remove-user-group"
+    },
+    {
+     "name": "--remove-user-group"
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--serverless-cache-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-retention-limit",
+     "args": {}
+    },
+    {
+     "name": "--user-group-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-user",
+   "description": "Changes user password(s) and/or access string.",
+   "options": [
+    {
+     "name": "--access-string",
+     "args": {}
+    },
+    {
+     "name": "--append-access-string",
+     "args": {}
+    },
+    {
+     "name": "--authentication-mode",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--no-no-password-required"
+    },
+    {
+     "name": "--no-password-required"
+    },
+    {
+     "name": "--passwords",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-user-group",
+   "description": "Changes the list of users that belong to the user group.",
+   "options": [
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--user-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-ids-to-add",
+     "args": {}
+    },
+    {
+     "name": "--user-ids-to-remove",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "purchase-reserved-cache-nodes-offering",
+   "description": "Allows you to purchase a reserved cache node offering.",
+   "options": [
+    {
+     "name": "--cache-node-count",
+     "args": {}
+    },
+    {
+     "name": "--reserved-cache-node-id",
+     "args": {}
+    },
+    {
+     "name": "--reserved-cache-nodes-offering-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "rebalance-slots-in-global-replication-group",
+   "description": "Redistribute slots to ensure uniform distribution across existing shards in the cluster.",
+   "options": [
+    {
+     "name": "--apply-immediately",
+     "priority": 75
+    },
+    {
+     "name": "--global-replication-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-apply-immediately"
+    }
+   ]
+  },
+  {
+   "name": "reboot-cache-cluster",
+   "description": "Reboots some, or all, of the cache nodes within a provisioned cluster.",
+   "options": [
+    {
+     "name": "--cache-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cache-node-ids-to-reboot",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-resource",
+   "description": "Removes the tags identified by the TagKeys list from the named resource.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-cache-parameter-group",
+   "description": "Modifies the parameters of a cache parameter group to the engine or system default value.",
+   "options": [
+    {
+     "name": "--cache-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-reset-all-parameters"
+    },
+    {
+     "name": "--parameter-name-values",
+     "args": {}
+    },
+    {
+     "name": "--reset-all-parameters"
+    }
+   ]
+  },
+  {
+   "name": "revoke-cache-security-group-ingress",
+   "description": "Revokes ingress from a cache security group.",
+   "options": [
+    {
+     "name": "--cache-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ec2-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ec2-security-group-owner-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-migration",
+   "description": "Start the migration of data.",
+   "options": [
+    {
+     "name": "--customer-node-endpoint-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-failover",
+   "description": "Represents the input of a TestFailover operation which tests automatic failover on a specified node group (called shard in the console) in a replication group (called cluster in the console).",
+   "options": [
+    {
+     "name": "--node-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-migration",
+   "description": "Async API to test connection between source and target replication group.",
+   "options": [
+    {
+     "name": "--customer-node-endpoint-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "cache-cluster-available",
+     "description": "Wait until ElastiCache cluster is available.",
+     "options": [
+      {
+       "name": "--cache-cluster-id",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-show-cache-clusters-not-in-replication-groups"
+      },
+      {
+       "name": "--no-show-cache-node-info"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--show-cache-clusters-not-in-replication-groups"
+      },
+      {
+       "name": "--show-cache-node-info"
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "cache-cluster-deleted",
+     "description": "Wait until ElastiCache cluster is deleted.",
+     "options": [
+      {
+       "name": "--cache-cluster-id",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-show-cache-clusters-not-in-replication-groups"
+      },
+      {
+       "name": "--no-show-cache-node-info"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--show-cache-clusters-not-in-replication-groups"
+      },
+      {
+       "name": "--show-cache-node-info"
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "replication-group-available",
+     "description": "Wait until ElastiCache replication group is available.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--replication-group-id",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "replication-group-deleted",
+     "description": "Wait until ElastiCache replication group is deleted.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--replication-group-id",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,291 @@
+{
+ "name": "iot-data",
+ "description": "IoT data IoT data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators, embedded devices, or smart appliances) and the Amazon Web Services cloud.",
+ "subcommands": [
+  {
+   "name": "delete-connection",
+   "description": "Disconnects a connected MQTT client from Amazon Web Services IoT Core.",
+   "options": [
+    {
+     "name": "--clean-session"
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-clean-session"
+    },
+    {
+     "name": "--no-prevent-will-message"
+    },
+    {
+     "name": "--prevent-will-message"
+    }
+   ]
+  },
+  {
+   "name": "delete-thing-shadow",
+   "description": "Deletes the shadow for the specified thing.",
+   "options": [
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shadow-name",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connection",
+   "description": "Retrieves connection information for the specified MQTT client.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-socket-information"
+    },
+    {
+     "name": "--no-include-socket-information"
+    }
+   ]
+  },
+  {
+   "name": "get-retained-message",
+   "description": "Gets the details of a single retained message for the specified topic.",
+   "options": [
+    {
+     "name": "--topic",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-thing-shadow",
+   "description": "Gets the shadow for the specified thing.",
+   "options": [
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shadow-name",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-named-shadows-for-thing",
+   "description": "Lists the shadows for the specified thing.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-retained-messages",
+   "description": "Lists summary information about the retained messages stored for the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subscriptions",
+   "description": "Returns a list of all subscriptions for MQTT clients with active sessions, including offline clients with persistent sessions.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "publish",
+   "description": "Publishes an MQTT message.",
+   "options": [
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--correlation-data",
+     "args": {}
+    },
+    {
+     "name": "--message-expiry",
+     "args": {}
+    },
+    {
+     "name": "--no-retain"
+    },
+    {
+     "name": "--payload",
+     "args": {}
+    },
+    {
+     "name": "--payload-format-indicator",
+     "args": {
+      "suggestions": [
+       "UNSPECIFIED_BYTES",
+       "UTF8_DATA"
+      ]
+     }
+    },
+    {
+     "name": "--qos",
+     "args": {}
+    },
+    {
+     "name": "--response-topic",
+     "args": {}
+    },
+    {
+     "name": "--retain"
+    },
+    {
+     "name": "--topic",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-direct-message",
+   "description": "Sends an MQTT message directly to a specific client identified by its client ID.",
+   "options": [
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--confirmation"
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--correlation-data",
+     "args": {}
+    },
+    {
+     "name": "--no-confirmation"
+    },
+    {
+     "name": "--payload",
+     "args": {}
+    },
+    {
+     "name": "--payload-format-indicator",
+     "args": {
+      "suggestions": [
+       "UNSPECIFIED_BYTES",
+       "UTF8_DATA"
+      ]
+     }
+    },
+    {
+     "name": "--response-topic",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    },
+    {
+     "name": "--topic",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-thing-shadow",
+   "description": "Updates the shadow for the specified thing.",
+   "options": [
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shadow-name",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

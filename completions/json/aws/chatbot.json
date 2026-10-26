@@ -1,0 +1,738 @@
+{
+ "name": "chatbot",
+ "description": "The AWS Chatbot API Reference provides descriptions, API request parameters, and the XML response for each of the AWS Chatbot API actions.",
+ "subcommands": [
+  {
+   "name": "associate-to-configuration",
+   "description": "Links a resource (for example, a custom action) to a channel configuration.",
+   "options": [
+    {
+     "name": "--chat-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-chime-webhook-configuration",
+   "description": "Creates an AWS Chatbot configuration for Amazon Chime.",
+   "options": [
+    {
+     "name": "--configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-level",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--webhook-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--webhook-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-custom-action",
+   "description": "Creates a custom action that can be invoked as an alias or as a button on a notification.",
+   "options": [
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--alias-name",
+     "args": {}
+    },
+    {
+     "name": "--attachments",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-microsoft-teams-channel-configuration",
+   "description": "Creates an AWS Chatbot configuration for Microsoft Teams.",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {}
+    },
+    {
+     "name": "--configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guardrail-policy-arns",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-level",
+     "args": {}
+    },
+    {
+     "name": "--no-user-authorization-required"
+    },
+    {
+     "name": "--sns-topic-arns",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--team-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--team-name",
+     "args": {}
+    },
+    {
+     "name": "--tenant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-authorization-required"
+    }
+   ]
+  },
+  {
+   "name": "create-slack-channel-configuration",
+   "description": "Creates an AWS Chatbot confugration for Slack.",
+   "options": [
+    {
+     "name": "--configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guardrail-policy-arns",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-level",
+     "args": {}
+    },
+    {
+     "name": "--no-user-authorization-required"
+    },
+    {
+     "name": "--slack-channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--slack-channel-name",
+     "args": {}
+    },
+    {
+     "name": "--slack-team-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sns-topic-arns",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-authorization-required"
+    }
+   ]
+  },
+  {
+   "name": "delete-chime-webhook-configuration",
+   "description": "Deletes a Amazon Chime webhook configuration for AWS Chatbot.",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-action",
+   "description": "Deletes a custom action.",
+   "options": [
+    {
+     "name": "--custom-action-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-microsoft-teams-channel-configuration",
+   "description": "Deletes a Microsoft Teams channel configuration for AWS Chatbot",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-microsoft-teams-configured-team",
+   "description": "Deletes the Microsoft Teams team authorization allowing for channels to be configured in that Microsoft Teams team.",
+   "options": [
+    {
+     "name": "--team-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-microsoft-teams-user-identity",
+   "description": "Identifes a user level permission for a channel configuration.",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-slack-channel-configuration",
+   "description": "Deletes a Slack channel configuration for AWS Chatbot",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-slack-user-identity",
+   "description": "Deletes a user level permission for a Slack channel configuration.",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--slack-team-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--slack-user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-slack-workspace-authorization",
+   "description": "Deletes the Slack workspace authorization that allows channels to be configured in that workspace.",
+   "options": [
+    {
+     "name": "--slack-team-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-chime-webhook-configurations",
+   "description": "Lists Amazon Chime webhook configurations optionally filtered by ChatConfigurationArn",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-slack-channel-configurations",
+   "description": "Lists Slack channel configurations optionally filtered by ChatConfigurationArn",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-slack-user-identities",
+   "description": "Lists all Slack user identities with a mapped role.",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-slack-workspaces",
+   "description": "List all authorized Slack workspaces connected to the AWS Account onboarded with AWS Chatbot.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-from-configuration",
+   "description": "Unlink a resource, for example a custom action, from a channel configuration.",
+   "options": [
+    {
+     "name": "--chat-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-preferences",
+   "description": "Returns AWS Chatbot account preferences."
+  },
+  {
+   "name": "get-custom-action",
+   "description": "Returns a custom action.",
+   "options": [
+    {
+     "name": "--custom-action-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-microsoft-teams-channel-configuration",
+   "description": "Returns a Microsoft Teams channel configuration in an AWS account.",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-associations",
+   "description": "Lists resources associated with a channel configuration.",
+   "options": [
+    {
+     "name": "--chat-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-actions",
+   "description": "Lists custom actions defined in this account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-microsoft-teams-channel-configurations",
+   "description": "Lists all AWS Chatbot Microsoft Teams channel configurations in an AWS account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--team-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-microsoft-teams-configured-teams",
+   "description": "Lists all authorized Microsoft Teams for an AWS Account",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-microsoft-teams-user-identities",
+   "description": "A list all Microsoft Teams user identities with a mapped role.",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Attaches a key-value pair to a resource, as identified by its Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Detaches a key-value pair from a resource, as identified by its Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-account-preferences",
+   "description": "Updates AWS Chatbot account preferences.",
+   "options": [
+    {
+     "name": "--no-training-data-collection-enabled"
+    },
+    {
+     "name": "--no-user-authorization-required"
+    },
+    {
+     "name": "--training-data-collection-enabled"
+    },
+    {
+     "name": "--user-authorization-required"
+    }
+   ]
+  },
+  {
+   "name": "update-chime-webhook-configuration",
+   "description": "Updates a Amazon Chime webhook configuration.",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--logging-level",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arns",
+     "args": {}
+    },
+    {
+     "name": "--webhook-description",
+     "args": {}
+    },
+    {
+     "name": "--webhook-url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-custom-action",
+   "description": "Updates a custom action.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {}
+    },
+    {
+     "name": "--attachments",
+     "args": {}
+    },
+    {
+     "name": "--custom-action-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-microsoft-teams-channel-configuration",
+   "description": "Updates an Microsoft Teams channel configuration.",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {}
+    },
+    {
+     "name": "--chat-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guardrail-policy-arns",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--logging-level",
+     "args": {}
+    },
+    {
+     "name": "--no-user-authorization-required"
+    },
+    {
+     "name": "--sns-topic-arns",
+     "args": {}
+    },
+    {
+     "name": "--user-authorization-required"
+    }
+   ]
+  },
+  {
+   "name": "update-slack-channel-configuration",
+   "description": "Updates a Slack channel configuration.",
+   "options": [
+    {
+     "name": "--chat-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guardrail-policy-arns",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--logging-level",
+     "args": {}
+    },
+    {
+     "name": "--no-user-authorization-required"
+    },
+    {
+     "name": "--slack-channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--slack-channel-name",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arns",
+     "args": {}
+    },
+    {
+     "name": "--user-authorization-required"
+    }
+   ]
+  }
+ ]
+}

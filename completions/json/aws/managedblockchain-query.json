@@ -1,0 +1,256 @@
+{
+ "name": "managedblockchain-query",
+ "description": "Amazon Managed Blockchain (AMB) Query provides you with convenient access to multi-blockchain network data, which makes it easier for you to extract contextual data related to blockchain activity.",
+ "subcommands": [
+  {
+   "name": "batch-get-token-balance",
+   "description": "Gets the token balance for a batch of tokens by using the BatchGetTokenBalance action for every token in the request.",
+   "options": [
+    {
+     "name": "--get-token-balance-inputs",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-asset-contract",
+   "description": "Gets the information about a specific contract deployed on the blockchain.",
+   "options": [
+    {
+     "name": "--contract-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-token-balance",
+   "description": "Gets the balance of a specific token, including native tokens, for a given address (wallet or contract) on the blockchain.",
+   "options": [
+    {
+     "name": "--at-blockchain-instant",
+     "args": {}
+    },
+    {
+     "name": "--owner-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--token-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-transaction",
+   "description": "Gets the details of a transaction.",
+   "options": [
+    {
+     "name": "--network",
+     "args": {
+      "suggestions": [
+       "ETHEREUM_MAINNET",
+       "ETHEREUM_SEPOLIA_TESTNET",
+       "BITCOIN_MAINNET",
+       "BITCOIN_TESTNET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--transaction-hash",
+     "args": {}
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-contracts",
+   "description": "Lists all the contracts for a given contract type deployed by an address (either a contract address or a wallet address).",
+   "options": [
+    {
+     "name": "--contract-filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-filtered-transaction-events",
+   "description": "Lists all the transaction events for an address on the blockchain.",
+   "options": [
+    {
+     "name": "--address-identifier-filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--confirmation-status-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-filter",
+     "args": {}
+    },
+    {
+     "name": "--vout-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-token-balances",
+   "description": "This action returns the following for a given blockchain network: Lists all token balances owned by an address (either a contract address or a wallet address).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owner-filter",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--token-filter",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-transaction-events",
+   "description": "Lists all the transaction events for a transaction This action will return transaction details for all transactions that are confirmed on the blockchain, even if they have not reached finality.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network",
+     "args": {
+      "suggestions": [
+       "ETHEREUM_MAINNET",
+       "ETHEREUM_SEPOLIA_TESTNET",
+       "BITCOIN_MAINNET",
+       "BITCOIN_TESTNET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--transaction-hash",
+     "args": {}
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-transactions",
+   "description": "Lists all the transaction events for a transaction.",
+   "options": [
+    {
+     "name": "--address",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--confirmation-status-filter",
+     "args": {}
+    },
+    {
+     "name": "--from-blockchain-instant",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network",
+     "args": {
+      "suggestions": [
+       "ETHEREUM_MAINNET",
+       "ETHEREUM_SEPOLIA_TESTNET",
+       "BITCOIN_MAINNET",
+       "BITCOIN_TESTNET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--to-blockchain-instant",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

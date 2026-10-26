@@ -1,0 +1,604 @@
+{
+ "name": "connectcampaignsv2",
+ "description": "Provide APIs to create and manage Amazon Connect Campaigns.",
+ "subcommands": [
+  {
+   "name": "create-campaign",
+   "description": "Creates a campaign for the specified Amazon Connect account.",
+   "options": [
+    {
+     "name": "--channel-subtype-config",
+     "args": {}
+    },
+    {
+     "name": "--communication-limits-override",
+     "args": {}
+    },
+    {
+     "name": "--communication-time-config",
+     "args": {}
+    },
+    {
+     "name": "--connect-campaign-flow-arn",
+     "args": {}
+    },
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entry-limits-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "MANAGED",
+       "JOURNEY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-campaign",
+   "description": "Deletes a campaign from the specified Amazon Connect account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-campaign-channel-subtype-config",
+   "description": "Deletes the channel subtype config of a campaign.",
+   "options": [
+    {
+     "name": "--channel-subtype",
+     "args": {
+      "suggestions": [
+       "TELEPHONY",
+       "SMS",
+       "EMAIL",
+       "WHATSAPP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-campaign-communication-limits",
+   "description": "Deletes the communication limits config for a campaign.",
+   "options": [
+    {
+     "name": "--config",
+     "args": {
+      "suggestions": [
+       "ALL_CHANNEL_SUBTYPES"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-campaign-communication-time",
+   "description": "Deletes the communication time config for a campaign.",
+   "options": [
+    {
+     "name": "--config",
+     "args": {
+      "suggestions": [
+       "TELEPHONY",
+       "SMS",
+       "EMAIL",
+       "WHATSAPP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-campaign-entry-limits",
+   "description": "Deletes the entry limits config for a campaign.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connect-instance-config",
+   "description": "Deletes a connect instance config from the specified AWS account.",
+   "options": [
+    {
+     "name": "--campaign-deletion-policy",
+     "args": {
+      "suggestions": [
+       "RETAIN_ALL",
+       "DELETE_ALL"
+      ]
+     }
+    },
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connect-instance-integration",
+   "description": "Delete the integration for the specified Amazon Connect instance.",
+   "options": [
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-instance-onboarding-job",
+   "description": "Delete the Connect Campaigns onboarding job for the specified Amazon Connect instance.",
+   "options": [
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-campaign",
+   "description": "Describes the specific campaign.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-campaign-state",
+   "description": "Get state of a campaign for the specified Amazon Connect account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-campaign-state-batch",
+   "description": "Get state of campaigns for the specified Amazon Connect account.",
+   "options": [
+    {
+     "name": "--campaign-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connect-instance-config",
+   "description": "Get the specific Connect instance config.",
+   "options": [
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instance-communication-limits",
+   "description": "Get the instance communication limits.",
+   "options": [
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instance-onboarding-job-status",
+   "description": "Get the specific instance onboarding job status.",
+   "options": [
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-campaigns",
+   "description": "Provides summary information about the campaigns under the specified Amazon Connect account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connect-instance-integrations",
+   "description": "Provides summary information about the integration under the specified Connect instance.",
+   "options": [
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List tags for a resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "pause-campaign",
+   "description": "Pauses a campaign for the specified Amazon Connect account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-connect-instance-integration",
+   "description": "Put or update the integration for the specified Amazon Connect instance.",
+   "options": [
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-instance-communication-limits",
+   "description": "Put the instance communication limits.",
+   "options": [
+    {
+     "name": "--communication-limits-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-outbound-request-batch",
+   "description": "Creates outbound requests for the specified campaign Amazon Connect account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outbound-requests",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-profile-outbound-request-batch",
+   "description": "Takes in a list of profile outbound requests to be placed as part of an outbound campaign.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-outbound-requests",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resume-campaign",
+   "description": "Stops a campaign for the specified Amazon Connect account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-campaign",
+   "description": "Starts a campaign for the specified Amazon Connect account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-instance-onboarding-job",
+   "description": "Onboard the specific Amazon Connect instance to Connect Campaigns.",
+   "options": [
+    {
+     "name": "--connect-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-campaign",
+   "description": "Stops a campaign for the specified Amazon Connect account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tag a resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Untag a resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign-channel-subtype-config",
+   "description": "Updates the channel subtype config of a campaign.",
+   "options": [
+    {
+     "name": "--channel-subtype-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign-communication-limits",
+   "description": "Updates the communication limits config for a campaign.",
+   "options": [
+    {
+     "name": "--communication-limits-override",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign-communication-time",
+   "description": "Updates the communication time config for a campaign.",
+   "options": [
+    {
+     "name": "--communication-time-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign-entry-limits",
+   "description": "Updates the entry limits config for a campaign.",
+   "options": [
+    {
+     "name": "--entry-limits-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign-flow-association",
+   "description": "Updates the campaign flow associated with a campaign.",
+   "options": [
+    {
+     "name": "--connect-campaign-flow-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign-name",
+   "description": "Updates the name of a campaign.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign-schedule",
+   "description": "Updates the schedule for a campaign.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign-source",
+   "description": "Updates the campaign source with a campaign.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

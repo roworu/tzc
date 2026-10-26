@@ -1,0 +1,1878 @@
+{
+ "name": "resiliencehubv2",
+ "description": "The next generation of AWS Resilience Hub is the single location in AWS where you assess and improve the resilience of your critical applications.",
+ "subcommands": [
+  {
+   "name": "create-assertion",
+   "description": "Creates a resilience assertion for a service.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--text",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-input-source",
+   "description": "Creates an input source for a service.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-policy",
+   "description": "Creates a resilience policy that defines availability and disaster recovery requirements.",
+   "options": [
+    {
+     "name": "--availability-slo",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-recovery",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--multi-az",
+     "args": {}
+    },
+    {
+     "name": "--multi-region",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-report",
+   "description": "On-demand report creation.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--report-type",
+     "args": {
+      "suggestions": [
+       "FAILURE_MODE",
+       "TESTING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-service",
+   "description": "Creates a service.",
+   "options": [
+    {
+     "name": "--associated-systems",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dependency-discovery",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-model",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service-function",
+   "description": "Creates a service function within a service.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--criticality",
+     "args": {
+      "suggestions": [
+       "PRIMARY",
+       "SUPPLEMENTAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-service-function-resources",
+   "description": "Associates resources with a service function.",
+   "options": [
+    {
+     "name": "--resources",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-function-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-system",
+   "description": "Creates a system that represents a logical grouping of services.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-sharing-enabled"
+    },
+    {
+     "name": "--sharing-enabled"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-test",
+   "description": "Creates a test for a service by configuring a test template.",
+   "options": [
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--role-name",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stop-conditions",
+     "args": {}
+    },
+    {
+     "name": "--test-template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user-journey",
+   "description": "Creates a user journey within a system.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--system-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-assertion",
+   "description": "Deletes a resilience assertion from a service.",
+   "options": [
+    {
+     "name": "--assertion-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-input-source",
+   "description": "Deletes an input source.",
+   "options": [
+    {
+     "name": "--input-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy",
+   "description": "Deletes a resilience policy.",
+   "options": [
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service",
+   "description": "Deletes a service.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-function",
+   "description": "Deletes a service function.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-function-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-function-resources",
+   "description": "Removes resources from a service function.",
+   "options": [
+    {
+     "name": "--resources",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-function-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-system",
+   "description": "Deletes a system.",
+   "options": [
+    {
+     "name": "--system-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-test",
+   "description": "Deletes a test.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-test-sources",
+   "description": "Removes monitoring sources from a test.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-sources",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user-journey",
+   "description": "Deletes a user journey.",
+   "options": [
+    {
+     "name": "--system-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-journey-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-failure-mode-finding",
+   "description": "Retrieves a finding by findingId.",
+   "options": [
+    {
+     "name": "--finding-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy",
+   "description": "Retrieves a resilience policy by ARN.",
+   "options": [
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service",
+   "description": "Retrieves a service by ARN.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-system",
+   "description": "Retrieves a system by ARN.",
+   "options": [
+    {
+     "name": "--system-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-test",
+   "description": "Retrieves a test by ID.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-test-run",
+   "description": "Retrieves a test run by ID, including its status, results, and the configuration snapshotted when the run started.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-test-template",
+   "description": "Retrieves a resilience test template by ARN, including the parameters it accepts and the fault actions it runs.",
+   "options": [
+    {
+     "name": "--test-template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user-journey",
+   "description": "Retrieves a user journey.",
+   "options": [
+    {
+     "name": "--system-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-journey-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-app",
+   "description": "Imports a V1 app into the V2 resource model, creating a service with the same name.",
+   "options": [
+    {
+     "name": "--associated-systems",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-skip-manually-added-resources"
+    },
+    {
+     "name": "--policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--skip-manually-added-resources"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--v1-app-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-policy",
+   "description": "Imports a V1 policy into V2, mapping RTO/RPO values from V1 scenarios.",
+   "options": [
+    {
+     "name": "--availability-slo",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--multi-az-disaster-recovery-approach",
+     "args": {
+      "suggestions": [
+       "ACTIVE_ACTIVE",
+       "HOT_STANDBY",
+       "WARM_STANDBY",
+       "PILOT_LIGHT",
+       "BACKUP_AND_RESTORE"
+      ]
+     }
+    },
+    {
+     "name": "--multi-region-disaster-recovery-approach",
+     "args": {
+      "suggestions": [
+       "ACTIVE_ACTIVE",
+       "HOT_STANDBY",
+       "WARM_STANDBY",
+       "PILOT_LIGHT",
+       "BACKUP_AND_RESTORE"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--v1-policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-assertions",
+   "description": "Lists resilience assertions for a service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {
+      "suggestions": [
+       "AI_GENERATED",
+       "USER"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dependencies",
+   "description": "Lists dependencies discovered for services.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-range-end-time",
+     "args": {}
+    },
+    {
+     "name": "--query-range-granularity",
+     "args": {
+      "suggestions": [
+       "HOURLY",
+       "DAILY"
+      ]
+     }
+    },
+    {
+     "name": "--query-range-start-time",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-failure-mode-assessments",
+   "description": "Lists failure mode assessments.",
+   "options": [
+    {
+     "name": "--assessment-statuses",
+     "args": {}
+    },
+    {
+     "name": "--ended-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "STARTED_AT"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--started-after",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-failure-mode-findings",
+   "description": "List findings.",
+   "options": [
+    {
+     "name": "--failure-category",
+     "args": {
+      "suggestions": [
+       "SHARED_FATE",
+       "EXCESSIVE_LOAD",
+       "EXCESSIVE_LATENCY",
+       "MISCONFIGURATION_AND_BUGS",
+       "SINGLE_POINT_OF_FAILURE"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--severity",
+     "args": {
+      "suggestions": [
+       "LOW",
+       "MEDIUM",
+       "HIGH"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "OPEN",
+       "RESOLVED",
+       "IRRELEVANT"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-input-sources",
+   "description": "Lists input sources for a service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK",
+       "TAGS",
+       "EKS",
+       "TERRAFORM",
+       "DESIGN_FILE",
+       "MONITORING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-policies",
+   "description": "Lists resilience policies.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-reports",
+   "description": "List reports for a service, or all reports owned by the account if serviceArn is not provided.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--report-type",
+     "args": {
+      "suggestions": [
+       "FAILURE_MODE",
+       "TESTING"
+      ]
+     }
+    },
+    {
+     "name": "--service-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--test-run-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resolved-test-run-target-resources",
+   "description": "Lists the AWS resources that AWS Fault Injection Service (AWS FIS) resolved as targets for a test run.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--test-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-resources",
+   "description": "List resources.",
+   "options": [
+    {
+     "name": "--aws-region",
+     "args": {}
+    },
+    {
+     "name": "--billable"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-billable"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-function-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-events",
+   "description": "Lists events for a service.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--event-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-functions",
+   "description": "Lists service functions for a service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-topology-edges",
+   "description": "Lists topology edges for a service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "Lists services.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--assessment-status",
+     "args": {
+      "suggestions": [
+       "NOT_STARTED",
+       "PENDING",
+       "IN_PROGRESS",
+       "FAILED",
+       "SUCCESS"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ou-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--system-arn",
+     "args": {}
+    },
+    {
+     "name": "--user-journey-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-system-events",
+   "description": "Lists events for a system.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--event-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--system-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-systems",
+   "description": "Lists systems.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ou-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-test-run-events",
+   "description": "Lists the events in a test run's timeline.",
+   "options": [
+    {
+     "name": "--ended-at",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--started-at",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--test-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-test-run-sources",
+   "description": "Lists the monitoring source snapshots captured for a test run, optionally filtered by type.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--test-run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SUCCESS_CRITERIA",
+       "OBSERVABILITY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-test-runs",
+   "description": "Lists the runs of a test, or all test runs for a service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--test-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-test-sources",
+   "description": "Lists the monitoring sources attached to a test, optionally filtered by type.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--test-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SUCCESS_CRITERIA",
+       "OBSERVABILITY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-test-templates",
+   "description": "Lists the available resilience test templates."
+  },
+  {
+   "name": "list-tests",
+   "description": "Lists the tests configured for a service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-user-journeys",
+   "description": "Lists user journeys for a system.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--system-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-test-sources",
+   "description": "Adds or updates the monitoring sources on a test.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-sources",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-failure-mode-assessment",
+   "description": "Starts a failure mode assessment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-test-run",
+   "description": "Starts a run of a test.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-test-run",
+   "description": "Stops an in-progress test run.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-assertion",
+   "description": "Updates a resilience assertion.",
+   "options": [
+    {
+     "name": "--assertion-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--text",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-dependency",
+   "description": "Updates a dependency classification.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--criticality",
+     "args": {
+      "suggestions": [
+       "HARD",
+       "SOFT",
+       "UNKNOWN"
+      ]
+     }
+    },
+    {
+     "name": "--dependency-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-failure-mode-finding",
+   "description": "Updates an existing finding.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--finding-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "OPEN",
+       "RESOLVED",
+       "IRRELEVANT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-policy",
+   "description": "Updates an existing resilience policy.",
+   "options": [
+    {
+     "name": "--availability-slo",
+     "args": {}
+    },
+    {
+     "name": "--data-recovery",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--multi-az",
+     "args": {}
+    },
+    {
+     "name": "--multi-region",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service",
+   "description": "Updates an existing service.",
+   "options": [
+    {
+     "name": "--associated-systems",
+     "args": {}
+    },
+    {
+     "name": "--dependency-discovery",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--permission-model",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    },
+    {
+     "name": "--report-configuration",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-function",
+   "description": "Updates a service function.",
+   "options": [
+    {
+     "name": "--criticality",
+     "args": {
+      "suggestions": [
+       "PRIMARY",
+       "SUPPLEMENTAL"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-function-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-system",
+   "description": "Updates an existing system.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--no-sharing-enabled"
+    },
+    {
+     "name": "--sharing-enabled"
+    },
+    {
+     "name": "--system-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-test",
+   "description": "Updates the configuration of an existing test.",
+   "options": [
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--role-name",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stop-conditions",
+     "args": {}
+    },
+    {
+     "name": "--test-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-user-journey",
+   "description": "Updates an existing user journey.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--system-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-journey-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "failure-mode-assessment-success",
+     "description": "Wait until a failure mode assessment completes successfully It will poll every 30 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--assessment-statuses",
+       "args": {}
+      },
+      {
+       "name": "--ended-before",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--service-arn",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--sort-by",
+       "args": {
+        "suggestions": [
+         "STARTED_AT"
+        ]
+       }
+      },
+      {
+       "name": "--sort-order",
+       "args": {
+        "suggestions": [
+         "ASC",
+         "DESC"
+        ]
+       }
+      },
+      {
+       "name": "--started-after",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "report-succeeded",
+     "description": "Wait until report generation succeeds It will poll every 30 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--report-type",
+       "args": {
+        "suggestions": [
+         "FAILURE_MODE",
+         "TESTING"
+        ]
+       }
+      },
+      {
+       "name": "--service-arn",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--test-run-id",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "service-assessment-completed",
+     "description": "Wait until a service assessment completes successfully It will poll every 30 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--service-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "service-resource-discovery-completed",
+     "description": "Wait until service resource discovery completes It will poll every 30 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--service-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

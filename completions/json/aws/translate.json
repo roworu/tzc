@@ -1,0 +1,417 @@
+{
+ "name": "translate",
+ "description": "Provides translation of the input content from the source language to the target language.",
+ "subcommands": [
+  {
+   "name": "create-parallel-data",
+   "description": "Creates a parallel data resource in Amazon Translate by importing an input file from Amazon S3.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parallel-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-parallel-data",
+   "description": "Deletes a parallel data resource in Amazon Translate.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-terminology",
+   "description": "A synchronous action that deletes a custom terminology.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-text-translation-job",
+   "description": "Gets the properties associated with an asynchronous batch translation job including name, ID, status, source and target languages, input/output S3 buckets, and so on.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-parallel-data",
+   "description": "Provides information about a parallel data resource.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-terminology",
+   "description": "Retrieves a custom terminology.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--terminology-data-format",
+     "args": {
+      "suggestions": [
+       "CSV",
+       "TMX",
+       "TSV"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "import-terminology",
+   "description": "Creates or updates a custom terminology, depending on whether one already exists for the given terminology name.",
+   "options": [
+    {
+     "name": "--data-file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--merge-strategy",
+     "args": {
+      "suggestions": [
+       "OVERWRITE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--terminology-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-languages",
+   "description": "Provides a list of languages (RFC-5646 codes and names) that Amazon Translate supports.",
+   "options": [
+    {
+     "name": "--display-language-code",
+     "args": {
+      "suggestions": [
+       "de",
+       "en",
+       "es",
+       "fr",
+       "it",
+       "ja",
+       "ko",
+       "pt",
+       "zh",
+       "zh-TW"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-parallel-data",
+   "description": "Provides a list of your parallel data resources in Amazon Translate.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags associated with a given Amazon Translate resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-terminologies",
+   "description": "Provides a list of custom terminologies associated with your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-text-translation-jobs",
+   "description": "Gets a list of the batch translation jobs that you have submitted.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-text-translation-job",
+   "description": "Starts an asynchronous batch translation job.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parallel-data-names",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--source-language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-language-codes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--terminology-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-text-translation-job",
+   "description": "Stops an asynchronous batch translation job that is in progress.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates a specific tag with a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "translate-document",
+   "description": "Translates the input document from the source language to the target language.",
+   "options": [
+    {
+     "name": "--document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--source-language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--terminology-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "translate-text",
+   "description": "Translates input text from the source language to the target language.",
+   "options": [
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--source-language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-language-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--terminology-names",
+     "args": {}
+    },
+    {
+     "name": "--text",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a specific tag associated with an Amazon Translate resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-parallel-data",
+   "description": "Updates a previously created parallel data resource by importing a new input file from Amazon S3.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parallel-data-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

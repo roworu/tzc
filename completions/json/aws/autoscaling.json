@@ -1,0 +1,1668 @@
+{
+ "name": "autoscaling",
+ "description": "Amazon EC2 Auto Scaling The DescribeAutoScalingGroups API operation might be throttled when retrieving details for an Auto Scaling group that contains many instances.",
+ "subcommands": [
+  {
+   "name": "attach-instances",
+   "description": "Attaches one or more EC2 instances to the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "attach-load-balancer-target-groups",
+   "description": "This API operation is superseded by AttachTrafficSources, which can attach multiple traffic sources types.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-group-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-load-balancers",
+   "description": "This API operation is superseded by AttachTrafficSources, which can attach multiple traffic sources types.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-traffic-sources",
+   "description": "Attaches one or more traffic sources to the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-zonal-shift-validation"
+    },
+    {
+     "name": "--skip-zonal-shift-validation"
+    },
+    {
+     "name": "--traffic-sources",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-scheduled-action",
+   "description": "Deletes one or more scheduled actions for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduled-action-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-put-scheduled-update-group-action",
+   "description": "Creates or updates one or more scheduled scaling actions for an Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduled-update-group-actions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-instance-refresh",
+   "description": "Cancels an instance refresh or rollback that is in progress.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-wait-for-transitioning-instances"
+    },
+    {
+     "name": "--wait-for-transitioning-instances"
+    }
+   ]
+  },
+  {
+   "name": "complete-lifecycle-action",
+   "description": "Completes the lifecycle action for the specified token or instance with the specified result.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-action-result",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lifecycle-action-token",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-hook-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-auto-scaling-group",
+   "description": "We strongly recommend using a launch template when calling this operation to ensure full functionality for Amazon EC2 Auto Scaling and Amazon EC2.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--availability-zone-distribution",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-ids",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-impairment-policy",
+     "args": {}
+    },
+    {
+     "name": "--availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--capacity-rebalance"
+    },
+    {
+     "name": "--capacity-reservation-specification",
+     "args": {}
+    },
+    {
+     "name": "--context",
+     "args": {}
+    },
+    {
+     "name": "--default-cooldown",
+     "args": {}
+    },
+    {
+     "name": "--default-instance-warmup",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection",
+     "args": {
+      "suggestions": [
+       "none",
+       "prevent-force-deletion",
+       "prevent-all-deletion"
+      ]
+     }
+    },
+    {
+     "name": "--desired-capacity",
+     "args": {}
+    },
+    {
+     "name": "--desired-capacity-type",
+     "args": {}
+    },
+    {
+     "name": "--health-check-grace-period",
+     "args": {}
+    },
+    {
+     "name": "--health-check-type",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--instance-lifecycle-policy",
+     "args": {}
+    },
+    {
+     "name": "--instance-maintenance-policy",
+     "args": {}
+    },
+    {
+     "name": "--launch-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--launch-template",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-hook-specification-list",
+     "args": {}
+    },
+    {
+     "name": "--load-balancer-names",
+     "args": {}
+    },
+    {
+     "name": "--max-instance-lifetime",
+     "args": {}
+    },
+    {
+     "name": "--max-size",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--min-size",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mixed-instances-policy",
+     "args": {}
+    },
+    {
+     "name": "--new-instances-protected-from-scale-in"
+    },
+    {
+     "name": "--no-capacity-rebalance"
+    },
+    {
+     "name": "--no-new-instances-protected-from-scale-in"
+    },
+    {
+     "name": "--no-skip-zonal-shift-validation"
+    },
+    {
+     "name": "--placement-group",
+     "args": {}
+    },
+    {
+     "name": "--service-linked-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--skip-zonal-shift-validation"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-group-arns",
+     "args": {}
+    },
+    {
+     "name": "--termination-policies",
+     "args": {}
+    },
+    {
+     "name": "--traffic-sources",
+     "args": {}
+    },
+    {
+     "name": "--vpc-zone-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-launch-configuration",
+   "description": "Creates a launch configuration.",
+   "options": [
+    {
+     "name": "--associate-public-ip-address"
+    },
+    {
+     "name": "--block-device-mappings",
+     "args": {}
+    },
+    {
+     "name": "--classic-link-vpc-id",
+     "args": {}
+    },
+    {
+     "name": "--classic-link-vpc-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--ebs-optimized"
+    },
+    {
+     "name": "--iam-instance-profile",
+     "args": {}
+    },
+    {
+     "name": "--image-id",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--instance-monitoring",
+     "args": {}
+    },
+    {
+     "name": "--instance-type",
+     "args": {}
+    },
+    {
+     "name": "--kernel-id",
+     "args": {}
+    },
+    {
+     "name": "--key-name",
+     "args": {}
+    },
+    {
+     "name": "--launch-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata-options",
+     "args": {}
+    },
+    {
+     "name": "--no-associate-public-ip-address"
+    },
+    {
+     "name": "--no-ebs-optimized"
+    },
+    {
+     "name": "--placement-tenancy",
+     "args": {}
+    },
+    {
+     "name": "--ramdisk-id",
+     "args": {}
+    },
+    {
+     "name": "--security-groups",
+     "args": {}
+    },
+    {
+     "name": "--spot-price",
+     "args": {}
+    },
+    {
+     "name": "--user-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-or-update-tags",
+   "description": "Creates or updates tags for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-auto-scaling-group",
+   "description": "Deletes the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--no-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "delete-launch-configuration",
+   "description": "Deletes the specified launch configuration.",
+   "options": [
+    {
+     "name": "--launch-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-lifecycle-hook",
+   "description": "Deletes the specified lifecycle hook.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lifecycle-hook-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-notification-configuration",
+   "description": "Deletes the specified notification.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy",
+   "description": "Deletes the specified scaling policy.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {}
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scheduled-action",
+   "description": "Deletes the specified scheduled action.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tags",
+   "description": "Deletes the specified tags.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-warm-pool",
+   "description": "Deletes the warm pool for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--no-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "describe-account-limits",
+   "description": "Describes the current Amazon EC2 Auto Scaling resource quotas for your account."
+  },
+  {
+   "name": "describe-adjustment-types",
+   "description": "Describes the available adjustment types for step scaling and simple scaling policies."
+  },
+  {
+   "name": "describe-auto-scaling-groups",
+   "description": "Gets information about the Auto Scaling groups in the account and Region.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-names",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-instances"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-instances"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-auto-scaling-instances",
+   "description": "Gets information about the Auto Scaling instances in the account and Region.",
+   "options": [
+    {
+     "name": "--instance-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-auto-scaling-notification-types",
+   "description": "Describes the notification types that are supported by Amazon EC2 Auto Scaling."
+  },
+  {
+   "name": "describe-instance-refreshes",
+   "description": "Gets information about the instance refreshes for the specified Auto Scaling group from the previous six weeks.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-refresh-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-launch-configurations",
+   "description": "Gets information about the launch configurations in the account and Region.",
+   "options": [
+    {
+     "name": "--launch-configuration-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-lifecycle-hook-types",
+   "description": "Describes the available types of lifecycle hooks."
+  },
+  {
+   "name": "describe-lifecycle-hooks",
+   "description": "Gets information about the lifecycle hooks for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lifecycle-hook-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-load-balancer-target-groups",
+   "description": "This API operation is superseded by DescribeTrafficSources, which can describe multiple traffic sources types.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-load-balancers",
+   "description": "This API operation is superseded by DescribeTrafficSources, which can describe multiple traffic sources types.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-metric-collection-types",
+   "description": "Describes the available CloudWatch metrics for Amazon EC2 Auto Scaling."
+  },
+  {
+   "name": "describe-notification-configurations",
+   "description": "Gets information about the Amazon SNS notifications that are configured for one or more Auto Scaling groups.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-policies",
+   "description": "Gets information about the scaling policies in the account and Region.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-names",
+     "args": {}
+    },
+    {
+     "name": "--policy-types",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-scaling-activities",
+   "description": "Gets information about the scaling activities in the account and Region.",
+   "options": [
+    {
+     "name": "--activity-ids",
+     "args": {}
+    },
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-deleted-groups"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-deleted-groups"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-scaling-process-types",
+   "description": "Describes the scaling process types for use with the ResumeProcesses and SuspendProcesses APIs."
+  },
+  {
+   "name": "describe-scheduled-actions",
+   "description": "Gets information about the scheduled actions that haven't run or that have not reached their end time.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-names",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tags",
+   "description": "Describes the specified tags.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-termination-policy-types",
+   "description": "Describes the termination policies supported by Amazon EC2 Auto Scaling."
+  },
+  {
+   "name": "describe-traffic-sources",
+   "description": "Gets information about the traffic sources for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--traffic-source-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-warm-pool",
+   "description": "Gets information about a warm pool and its instances.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "detach-instances",
+   "description": "Removes one or more instances from the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-ids",
+     "args": {}
+    },
+    {
+     "name": "--no-should-decrement-desired-capacity"
+    },
+    {
+     "name": "--should-decrement-desired-capacity",
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-load-balancer-target-groups",
+   "description": "This API operation is superseded by DetachTrafficSources, which can detach multiple traffic sources types.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-group-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-load-balancers",
+   "description": "This API operation is superseded by DetachTrafficSources, which can detach multiple traffic sources types.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-traffic-sources",
+   "description": "Detaches one or more traffic sources from the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--traffic-sources",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-metrics-collection",
+   "description": "Disables group metrics collection for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metrics",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "enable-metrics-collection",
+   "description": "Enables group metrics collection for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--granularity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metrics",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "enter-standby",
+   "description": "Moves the specified instances into the standby state.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-ids",
+     "args": {}
+    },
+    {
+     "name": "--no-should-decrement-desired-capacity"
+    },
+    {
+     "name": "--should-decrement-desired-capacity",
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-policy",
+   "description": "Executes the specified policy.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {}
+    },
+    {
+     "name": "--breach-threshold",
+     "args": {}
+    },
+    {
+     "name": "--honor-cooldown"
+    },
+    {
+     "name": "--metric-value",
+     "args": {}
+    },
+    {
+     "name": "--no-honor-cooldown"
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "exit-standby",
+   "description": "Moves the specified instances out of the standby state.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-predictive-scaling-forecast",
+   "description": "Retrieves the forecast data for a predictive scaling policy.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "launch-instances",
+   "description": "Launches a specified number of instances in an Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--availability-zone-ids",
+     "args": {}
+    },
+    {
+     "name": "--availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--requested-capacity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retry-strategy",
+     "args": {
+      "suggestions": [
+       "retry-with-group-configuration",
+       "none"
+      ]
+     }
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-lifecycle-hook",
+   "description": "Creates or updates a lifecycle hook for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-result",
+     "args": {}
+    },
+    {
+     "name": "--heartbeat-timeout",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-hook-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lifecycle-transition",
+     "args": {}
+    },
+    {
+     "name": "--notification-metadata",
+     "args": {}
+    },
+    {
+     "name": "--notification-target-arn",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-notification-configuration",
+   "description": "Configures an Auto Scaling group to send notifications when specified events take place.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-scaling-policy",
+   "description": "Creates or updates a scaling policy for an Auto Scaling group.",
+   "options": [
+    {
+     "name": "--adjustment-type",
+     "args": {}
+    },
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cooldown",
+     "args": {}
+    },
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--estimated-instance-warmup",
+     "args": {}
+    },
+    {
+     "name": "--metric-aggregation-type",
+     "args": {}
+    },
+    {
+     "name": "--min-adjustment-magnitude",
+     "args": {}
+    },
+    {
+     "name": "--min-adjustment-step",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {}
+    },
+    {
+     "name": "--predictive-scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scaling-adjustment",
+     "args": {}
+    },
+    {
+     "name": "--step-adjustments",
+     "args": {}
+    },
+    {
+     "name": "--target-tracking-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-scheduled-update-group-action",
+   "description": "Creates or updates a scheduled scaling action for an Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--desired-capacity",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-size",
+     "args": {}
+    },
+    {
+     "name": "--min-size",
+     "args": {}
+    },
+    {
+     "name": "--recurrence",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--time",
+     "args": {}
+    },
+    {
+     "name": "--time-zone",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-warm-pool",
+   "description": "Creates or updates a warm pool for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-reuse-policy",
+     "args": {}
+    },
+    {
+     "name": "--max-group-prepared-capacity",
+     "args": {}
+    },
+    {
+     "name": "--min-size",
+     "args": {}
+    },
+    {
+     "name": "--pool-state",
+     "args": {
+      "suggestions": [
+       "Stopped",
+       "Running",
+       "Hibernated"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "record-lifecycle-action-heartbeat",
+   "description": "Records a heartbeat for the lifecycle action associated with the specified token or instance.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-action-token",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-hook-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resume-processes",
+   "description": "Resumes the specified suspended auto scaling processes, or all suspended process, for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scaling-processes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "rollback-instance-refresh",
+   "description": "Cancels an instance refresh that is in progress and rolls back any changes that it made.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-desired-capacity",
+   "description": "Sets the size of the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--desired-capacity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--honor-cooldown"
+    },
+    {
+     "name": "--no-honor-cooldown"
+    }
+   ]
+  },
+  {
+   "name": "set-instance-health",
+   "description": "Sets the health status of the specified instance.",
+   "options": [
+    {
+     "name": "--health-status",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-should-respect-grace-period"
+    },
+    {
+     "name": "--should-respect-grace-period"
+    }
+   ]
+  },
+  {
+   "name": "set-instance-protection",
+   "description": "Updates the instance protection settings of the specified instances.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-protected-from-scale-in"
+    },
+    {
+     "name": "--protected-from-scale-in",
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-instance-refresh",
+   "description": "Starts an instance refresh.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--desired-configuration",
+     "args": {}
+    },
+    {
+     "name": "--preferences",
+     "args": {}
+    },
+    {
+     "name": "--strategy",
+     "args": {
+      "suggestions": [
+       "Rolling",
+       "ReplaceRootVolume"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "suspend-processes",
+   "description": "Suspends the specified auto scaling processes, or all processes, for the specified Auto Scaling group.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scaling-processes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "terminate-instance-in-auto-scaling-group",
+   "description": "Terminates the specified instance and optionally adjusts the desired group size.",
+   "options": [
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-should-decrement-desired-capacity"
+    },
+    {
+     "name": "--should-decrement-desired-capacity",
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-auto-scaling-group",
+   "description": "We strongly recommend that all Auto Scaling groups use launch templates to ensure full functionality for Amazon EC2 Auto Scaling and Amazon EC2.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--availability-zone-distribution",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-ids",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-impairment-policy",
+     "args": {}
+    },
+    {
+     "name": "--availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--capacity-rebalance"
+    },
+    {
+     "name": "--capacity-reservation-specification",
+     "args": {}
+    },
+    {
+     "name": "--context",
+     "args": {}
+    },
+    {
+     "name": "--default-cooldown",
+     "args": {}
+    },
+    {
+     "name": "--default-instance-warmup",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection",
+     "args": {
+      "suggestions": [
+       "none",
+       "prevent-force-deletion",
+       "prevent-all-deletion"
+      ]
+     }
+    },
+    {
+     "name": "--desired-capacity",
+     "args": {}
+    },
+    {
+     "name": "--desired-capacity-type",
+     "args": {}
+    },
+    {
+     "name": "--health-check-grace-period",
+     "args": {}
+    },
+    {
+     "name": "--health-check-type",
+     "args": {}
+    },
+    {
+     "name": "--instance-lifecycle-policy",
+     "args": {}
+    },
+    {
+     "name": "--instance-maintenance-policy",
+     "args": {}
+    },
+    {
+     "name": "--launch-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--launch-template",
+     "args": {}
+    },
+    {
+     "name": "--max-instance-lifetime",
+     "args": {}
+    },
+    {
+     "name": "--max-size",
+     "args": {}
+    },
+    {
+     "name": "--min-size",
+     "args": {}
+    },
+    {
+     "name": "--mixed-instances-policy",
+     "args": {}
+    },
+    {
+     "name": "--new-instances-protected-from-scale-in"
+    },
+    {
+     "name": "--no-capacity-rebalance"
+    },
+    {
+     "name": "--no-new-instances-protected-from-scale-in"
+    },
+    {
+     "name": "--no-skip-zonal-shift-validation"
+    },
+    {
+     "name": "--placement-group",
+     "args": {}
+    },
+    {
+     "name": "--service-linked-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--skip-zonal-shift-validation"
+    },
+    {
+     "name": "--termination-policies",
+     "args": {}
+    },
+    {
+     "name": "--vpc-zone-identifier",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

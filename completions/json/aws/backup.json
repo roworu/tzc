@@ -1,0 +1,2472 @@
+{
+ "name": "backup",
+ "description": "Backup Backup is a unified backup service designed to protect Amazon Web Services services and their associated data.",
+ "subcommands": [
+  {
+   "name": "associate-backup-vault-mpa-approval-team",
+   "description": "Associates an MPA approval team with a backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mpa-approval-team-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requester-comment",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-legal-hold",
+   "description": "Removes the specified legal hold on a recovery point.",
+   "options": [
+    {
+     "name": "--cancel-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--legal-hold-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retain-record-in-days",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-backup-plan",
+   "description": "Creates a backup plan using a backup plan name and backup rules.",
+   "options": [
+    {
+     "name": "--backup-plan",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--backup-plan-tags",
+     "args": {}
+    },
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-backup-selection",
+   "description": "Creates a JSON document that specifies a set of resources to assign to a backup plan.",
+   "options": [
+    {
+     "name": "--backup-plan-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--backup-selection",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-backup-vault",
+   "description": "Creates a logical container where backups are stored.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--backup-vault-tags",
+     "args": {}
+    },
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-framework",
+   "description": "Creates a framework with one or more controls.",
+   "options": [
+    {
+     "name": "--framework-controls",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--framework-description",
+     "args": {}
+    },
+    {
+     "name": "--framework-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--framework-tags",
+     "args": {}
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-legal-hold",
+   "description": "Creates a legal hold on a recovery point (backup).",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--recovery-point-selection",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-logically-air-gapped-backup-vault",
+   "description": "Creates a logical container to where backups may be copied.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--backup-vault-tags",
+     "args": {}
+    },
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-retention-days",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--min-retention-days",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-report-plan",
+   "description": "Creates a report plan.",
+   "options": [
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--report-delivery-channel",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-plan-description",
+     "args": {}
+    },
+    {
+     "name": "--report-plan-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-plan-tags",
+     "args": {}
+    },
+    {
+     "name": "--report-setting",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-restore-access-backup-vault",
+   "description": "Creates a restore access backup vault that provides temporary access to recovery points in a logically air-gapped backup vault, subject to MPA approval.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {}
+    },
+    {
+     "name": "--backup-vault-tags",
+     "args": {}
+    },
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--requester-comment",
+     "args": {}
+    },
+    {
+     "name": "--source-backup-vault-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-restore-testing-plan",
+   "description": "Creates a restore testing plan.",
+   "options": [
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--restore-testing-plan",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-restore-testing-selection",
+   "description": "This request can be sent after CreateRestoreTestingPlan request returns successfully.",
+   "options": [
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--restore-testing-plan-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--restore-testing-selection",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-tiering-configuration",
+   "description": "Creates a tiering configuration.",
+   "options": [
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--tiering-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tiering-configuration-tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-backup-plan",
+   "description": "Deletes a backup plan.",
+   "options": [
+    {
+     "name": "--backup-plan-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-backup-selection",
+   "description": "Deletes the resource selection associated with a backup plan that is specified by the SelectionId.",
+   "options": [
+    {
+     "name": "--backup-plan-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--selection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-backup-vault",
+   "description": "Deletes the backup vault identified by its name.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-backup-vault-access-policy",
+   "description": "Deletes the policy document that manages permissions on a backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-backup-vault-lock-configuration",
+   "description": "Deletes Backup Vault Lock from a backup vault specified by a backup vault name.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-backup-vault-notifications",
+   "description": "Deletes event notifications for the specified backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-framework",
+   "description": "Deletes the framework specified by a framework name.",
+   "options": [
+    {
+     "name": "--framework-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-recovery-point",
+   "description": "Deletes the recovery point specified by a recovery point ID.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-report-plan",
+   "description": "Deletes the report plan specified by a report plan name.",
+   "options": [
+    {
+     "name": "--report-plan-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-restore-testing-plan",
+   "description": "This request deletes the specified restore testing plan.",
+   "options": [
+    {
+     "name": "--restore-testing-plan-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-restore-testing-selection",
+   "description": "Input the Restore Testing Plan name and Restore Testing Selection name.",
+   "options": [
+    {
+     "name": "--restore-testing-plan-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--restore-testing-selection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tiering-configuration",
+   "description": "Deletes the tiering configuration specified by a tiering configuration name.",
+   "options": [
+    {
+     "name": "--tiering-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-backup-job",
+   "description": "Returns backup job details for the specified BackupJobId.",
+   "options": [
+    {
+     "name": "--backup-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-backup-vault",
+   "description": "Returns metadata about a backup vault specified by its name.",
+   "options": [
+    {
+     "name": "--backup-vault-account-id",
+     "args": {}
+    },
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-copy-job",
+   "description": "Returns metadata associated with creating a copy of a resource.",
+   "options": [
+    {
+     "name": "--copy-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-framework",
+   "description": "Returns the framework details for the specified FrameworkName.",
+   "options": [
+    {
+     "name": "--framework-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-global-settings",
+   "description": "Describes whether the Amazon Web Services account has enabled different cross-account management options, including cross-account backup, multi-party approval, and delegated administrator."
+  },
+  {
+   "name": "describe-protected-resource",
+   "description": "Returns information about a saved resource, including the last time it was backed up, its Amazon Resource Name (ARN), and the Amazon Web Services service type of the saved resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-recovery-point",
+   "description": "Returns metadata associated with a recovery point, including ID, status, encryption, and lifecycle.",
+   "options": [
+    {
+     "name": "--backup-vault-account-id",
+     "args": {}
+    },
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-region-settings",
+   "description": "Returns the current service opt-in settings for the Region."
+  },
+  {
+   "name": "describe-report-job",
+   "description": "Returns the details associated with creating a report as specified by its ReportJobId.",
+   "options": [
+    {
+     "name": "--report-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-report-plan",
+   "description": "Returns a list of all report plans for an Amazon Web Services account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--report-plan-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-restore-job",
+   "description": "Returns metadata associated with a restore job that is specified by a job ID.",
+   "options": [
+    {
+     "name": "--restore-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-scan-job",
+   "description": "Returns scan job details for the specified ScanJobID.",
+   "options": [
+    {
+     "name": "--scan-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-backup-vault-mpa-approval-team",
+   "description": "Removes the association between an MPA approval team and a backup vault, disabling the MPA approval workflow for restore operations.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requester-comment",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-recovery-point",
+   "description": "Deletes the specified continuous backup recovery point from Backup and releases control of that continuous backup to the source service, such as Amazon RDS.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-recovery-point-from-parent",
+   "description": "This action to a specific child (nested) recovery point removes the relationship between the specified recovery point and its parent (composite) recovery point.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-backup-plan-template",
+   "description": "Returns the backup plan that is specified by the plan ID as a backup template.",
+   "options": [
+    {
+     "name": "--backup-plan-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-backup-plan",
+   "description": "Returns BackupPlan details for the specified BackupPlanId.",
+   "options": [
+    {
+     "name": "--backup-plan-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-scheduled-runs-preview",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-backup-plan-from-json",
+   "description": "Returns a valid JSON document specifying a backup plan or an error.",
+   "options": [
+    {
+     "name": "--backup-plan-template-json",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-backup-plan-from-template",
+   "description": "Returns the template specified by its templateId as a backup plan.",
+   "options": [
+    {
+     "name": "--backup-plan-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-backup-selection",
+   "description": "Returns selection metadata and a document in JSON format that specifies a list of resources that are associated with a backup plan.",
+   "options": [
+    {
+     "name": "--backup-plan-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--selection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-backup-vault-access-policy",
+   "description": "Returns the access policy document that is associated with the named backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-backup-vault-notifications",
+   "description": "Returns event notifications for the specified backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-legal-hold",
+   "description": "This action returns details for a specified legal hold.",
+   "options": [
+    {
+     "name": "--legal-hold-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pitr-malware-scan-results",
+   "description": "Returns the malware scan results for a specified point in time within a continuous (point-in-time recovery) backup.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--malware-scanner",
+     "args": {
+      "suggestions": [
+       "GUARDDUTY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-end-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-recovery-point-index-details",
+   "description": "This operation returns the metadata and details specific to the backup index associated with the specified recovery point.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-recovery-point-restore-metadata",
+   "description": "Returns a set of metadata key-value pairs that were used to create the backup.",
+   "options": [
+    {
+     "name": "--backup-vault-account-id",
+     "args": {}
+    },
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-restore-job-metadata",
+   "description": "This request returns the metadata for the specified restore job.",
+   "options": [
+    {
+     "name": "--restore-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-restore-testing-inferred-metadata",
+   "description": "This request returns the minimal required set of metadata needed to start a restore job with secure default settings.",
+   "options": [
+    {
+     "name": "--backup-vault-account-id",
+     "args": {}
+    },
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-restore-testing-plan",
+   "description": "Returns RestoreTestingPlan details for the specified RestoreTestingPlanName.",
+   "options": [
+    {
+     "name": "--restore-testing-plan-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-restore-testing-selection",
+   "description": "Returns RestoreTestingSelection, which displays resources and elements of the restore testing plan.",
+   "options": [
+    {
+     "name": "--restore-testing-plan-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--restore-testing-selection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-supported-resource-types",
+   "description": "Returns the Amazon Web Services resource types supported by Backup."
+  },
+  {
+   "name": "get-tiering-configuration",
+   "description": "Returns TieringConfiguration details for the specified TieringConfigurationName.",
+   "options": [
+    {
+     "name": "--tiering-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-backup-job-summaries",
+   "description": "This is a request for a summary of backup jobs created or running within the most recent 30 days.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--aggregation-period",
+     "args": {
+      "suggestions": [
+       "ONE_DAY",
+       "SEVEN_DAYS",
+       "FOURTEEN_DAYS"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--message-category",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "CREATED",
+       "PENDING",
+       "RUNNING",
+       "ABORTING",
+       "ABORTED",
+       "COMPLETED",
+       "FAILED",
+       "EXPIRED",
+       "PARTIAL",
+       "AGGREGATE_ALL",
+       "ANY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-backup-jobs",
+   "description": "Returns a list of existing backup jobs for an authenticated account for the last 30 days.",
+   "options": [
+    {
+     "name": "--by-account-id",
+     "args": {}
+    },
+    {
+     "name": "--by-backup-vault-name",
+     "args": {}
+    },
+    {
+     "name": "--by-complete-after",
+     "args": {}
+    },
+    {
+     "name": "--by-complete-before",
+     "args": {}
+    },
+    {
+     "name": "--by-created-after",
+     "args": {}
+    },
+    {
+     "name": "--by-created-before",
+     "args": {}
+    },
+    {
+     "name": "--by-message-category",
+     "args": {}
+    },
+    {
+     "name": "--by-parent-job-id",
+     "args": {}
+    },
+    {
+     "name": "--by-resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--by-resource-type",
+     "args": {}
+    },
+    {
+     "name": "--by-state",
+     "args": {
+      "suggestions": [
+       "CREATED",
+       "PENDING",
+       "RUNNING",
+       "ABORTING",
+       "ABORTED",
+       "COMPLETED",
+       "FAILED",
+       "EXPIRED",
+       "PARTIAL"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-backup-plan-templates",
+   "description": "Lists the backup plan templates.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-backup-plan-versions",
+   "description": "Returns version metadata of your backup plans, including Amazon Resource Names (ARNs), backup plan IDs, creation and deletion dates, plan names, and version IDs.",
+   "options": [
+    {
+     "name": "--backup-plan-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-backup-plans",
+   "description": "Lists the active backup plans for the account.",
+   "options": [
+    {
+     "name": "--include-deleted"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-deleted"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-backup-selections",
+   "description": "Returns an array containing metadata of the resources associated with the target backup plan.",
+   "options": [
+    {
+     "name": "--backup-plan-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-backup-vaults",
+   "description": "Returns a list of recovery point storage containers along with information about them.",
+   "options": [
+    {
+     "name": "--by-shared"
+    },
+    {
+     "name": "--by-vault-type",
+     "args": {
+      "suggestions": [
+       "BACKUP_VAULT",
+       "LOGICALLY_AIR_GAPPED_BACKUP_VAULT",
+       "RESTORE_ACCESS_BACKUP_VAULT"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-by-shared"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-copy-job-summaries",
+   "description": "This request obtains a list of copy jobs created or running within the the most recent 30 days.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--aggregation-period",
+     "args": {
+      "suggestions": [
+       "ONE_DAY",
+       "SEVEN_DAYS",
+       "FOURTEEN_DAYS"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--message-category",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "CREATED",
+       "RUNNING",
+       "ABORTING",
+       "ABORTED",
+       "COMPLETING",
+       "COMPLETED",
+       "FAILING",
+       "FAILED",
+       "PARTIAL",
+       "AGGREGATE_ALL",
+       "ANY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-copy-jobs",
+   "description": "Returns metadata about your copy jobs.",
+   "options": [
+    {
+     "name": "--by-account-id",
+     "args": {}
+    },
+    {
+     "name": "--by-complete-after",
+     "args": {}
+    },
+    {
+     "name": "--by-complete-before",
+     "args": {}
+    },
+    {
+     "name": "--by-created-after",
+     "args": {}
+    },
+    {
+     "name": "--by-created-before",
+     "args": {}
+    },
+    {
+     "name": "--by-destination-vault-arn",
+     "args": {}
+    },
+    {
+     "name": "--by-message-category",
+     "args": {}
+    },
+    {
+     "name": "--by-parent-job-id",
+     "args": {}
+    },
+    {
+     "name": "--by-resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--by-resource-type",
+     "args": {}
+    },
+    {
+     "name": "--by-source-recovery-point-arn",
+     "args": {}
+    },
+    {
+     "name": "--by-state",
+     "args": {
+      "suggestions": [
+       "CREATED",
+       "RUNNING",
+       "COMPLETED",
+       "FAILED",
+       "PARTIAL"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-frameworks",
+   "description": "Returns a list of all frameworks for an Amazon Web Services account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-indexed-recovery-points",
+   "description": "This operation returns a list of recovery points that have an associated index, belonging to the specified account.",
+   "options": [
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--index-status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "ACTIVE",
+       "FAILED",
+       "DELETING"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--source-resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-legal-holds",
+   "description": "This action returns metadata about active and previous legal holds.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-protected-resources",
+   "description": "Returns an array of resources successfully backed up by Backup, including the time the resource was saved, an Amazon Resource Name (ARN) of the resource, and a resource type.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-protected-resources-by-backup-vault",
+   "description": "This request lists the protected resources corresponding to each backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-account-id",
+     "args": {}
+    },
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recovery-points-by-backup-vault",
+   "description": "Returns detailed information about the recovery points stored in a backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-account-id",
+     "args": {}
+    },
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--by-backup-plan-id",
+     "args": {}
+    },
+    {
+     "name": "--by-created-after",
+     "args": {}
+    },
+    {
+     "name": "--by-created-before",
+     "args": {}
+    },
+    {
+     "name": "--by-parent-recovery-point-arn",
+     "args": {}
+    },
+    {
+     "name": "--by-resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--by-resource-type",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recovery-points-by-legal-hold",
+   "description": "This action returns recovery point ARNs (Amazon Resource Names) of the specified legal hold.",
+   "options": [
+    {
+     "name": "--legal-hold-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recovery-points-by-resource",
+   "description": "The information about the recovery points of the type specified by a resource Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--managed-by-aws-backup-only"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-managed-by-aws-backup-only"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-report-jobs",
+   "description": "Returns details about your report jobs.",
+   "options": [
+    {
+     "name": "--by-creation-after",
+     "args": {}
+    },
+    {
+     "name": "--by-creation-before",
+     "args": {}
+    },
+    {
+     "name": "--by-report-plan-name",
+     "args": {}
+    },
+    {
+     "name": "--by-status",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-report-plans",
+   "description": "Returns a list of your report plans.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-restore-access-backup-vaults",
+   "description": "Returns a list of restore access backup vaults associated with a specified backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-restore-job-summaries",
+   "description": "This request obtains a summary of restore jobs created or running within the the most recent 30 days.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--aggregation-period",
+     "args": {
+      "suggestions": [
+       "ONE_DAY",
+       "SEVEN_DAYS",
+       "FOURTEEN_DAYS"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "CREATED",
+       "PENDING",
+       "RUNNING",
+       "ABORTED",
+       "COMPLETED",
+       "FAILED",
+       "AGGREGATE_ALL",
+       "ANY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-restore-jobs",
+   "description": "Returns a list of jobs that Backup initiated to restore a saved resource, including details about the recovery process.",
+   "options": [
+    {
+     "name": "--by-account-id",
+     "args": {}
+    },
+    {
+     "name": "--by-complete-after",
+     "args": {}
+    },
+    {
+     "name": "--by-complete-before",
+     "args": {}
+    },
+    {
+     "name": "--by-created-after",
+     "args": {}
+    },
+    {
+     "name": "--by-created-before",
+     "args": {}
+    },
+    {
+     "name": "--by-parent-job-id",
+     "args": {}
+    },
+    {
+     "name": "--by-resource-type",
+     "args": {}
+    },
+    {
+     "name": "--by-restore-testing-plan-arn",
+     "args": {}
+    },
+    {
+     "name": "--by-status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "RUNNING",
+       "COMPLETED",
+       "ABORTED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-restore-jobs-by-protected-resource",
+   "description": "This returns restore jobs that contain the specified protected resource.",
+   "options": [
+    {
+     "name": "--by-recovery-point-creation-date-after",
+     "args": {}
+    },
+    {
+     "name": "--by-recovery-point-creation-date-before",
+     "args": {}
+    },
+    {
+     "name": "--by-status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "RUNNING",
+       "COMPLETED",
+       "ABORTED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-restore-testing-plans",
+   "description": "Returns a list of restore testing plans.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-restore-testing-selections",
+   "description": "Returns a list of restore testing selections.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--restore-testing-plan-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-scan-job-summaries",
+   "description": "This is a request for a summary of scan jobs created or running within the most recent 30 days.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--aggregation-period",
+     "args": {
+      "suggestions": [
+       "ONE_DAY",
+       "SEVEN_DAYS",
+       "FOURTEEN_DAYS"
+      ]
+     }
+    },
+    {
+     "name": "--malware-scanner",
+     "args": {
+      "suggestions": [
+       "GUARDDUTY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--scan-result-status",
+     "args": {
+      "suggestions": [
+       "NO_THREATS_FOUND",
+       "THREATS_FOUND",
+       "UNKNOWN"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "CREATED",
+       "COMPLETED",
+       "COMPLETED_WITH_ISSUES",
+       "RUNNING",
+       "FAILED",
+       "CANCELED",
+       "AGGREGATE_ALL",
+       "ANY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-scan-jobs",
+   "description": "Returns a list of existing scan jobs for an authenticated account for the last 30 days.",
+   "options": [
+    {
+     "name": "--by-account-id",
+     "args": {}
+    },
+    {
+     "name": "--by-backup-vault-name",
+     "args": {}
+    },
+    {
+     "name": "--by-complete-after",
+     "args": {}
+    },
+    {
+     "name": "--by-complete-before",
+     "args": {}
+    },
+    {
+     "name": "--by-malware-scanner",
+     "args": {
+      "suggestions": [
+       "GUARDDUTY"
+      ]
+     }
+    },
+    {
+     "name": "--by-recovery-point-arn",
+     "args": {}
+    },
+    {
+     "name": "--by-resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--by-resource-type",
+     "args": {
+      "suggestions": [
+       "EBS",
+       "EC2",
+       "S3"
+      ]
+     }
+    },
+    {
+     "name": "--by-scan-result-status",
+     "args": {
+      "suggestions": [
+       "NO_THREATS_FOUND",
+       "THREATS_FOUND",
+       "UNKNOWN"
+      ]
+     }
+    },
+    {
+     "name": "--by-state",
+     "args": {
+      "suggestions": [
+       "CANCELED",
+       "COMPLETED",
+       "COMPLETED_WITH_ISSUES",
+       "CREATED",
+       "FAILED",
+       "RUNNING"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags",
+   "description": "Returns the tags assigned to the resource, such as a target recovery point, backup plan, or backup vault.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tiering-configurations",
+   "description": "Returns a list of tiering configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-backup-vault-access-policy",
+   "description": "Sets a resource-based policy that is used to manage access permissions on the target backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-backup-vault-lock-configuration",
+   "description": "Applies Backup Vault Lock to a backup vault, preventing attempts to delete any recovery point stored in or created in a backup vault.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--changeable-for-days",
+     "args": {}
+    },
+    {
+     "name": "--max-retention-days",
+     "args": {}
+    },
+    {
+     "name": "--min-retention-days",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-backup-vault-notifications",
+   "description": "Turns on notifications on a backup vault for the specified topic and events.",
+   "options": [
+    {
+     "name": "--backup-vault-events",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-restore-validation-result",
+   "description": "This request allows you to send your independent self-run restore test validation results.",
+   "options": [
+    {
+     "name": "--restore-job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-status",
+     "args": {
+      "suggestions": [
+       "FAILED",
+       "SUCCESSFUL",
+       "TIMED_OUT",
+       "VALIDATING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--validation-status-message",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "revoke-restore-access-backup-vault",
+   "description": "Revokes access to a restore access backup vault, removing the ability to restore from its recovery points and permanently deleting the vault.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requester-comment",
+     "args": {}
+    },
+    {
+     "name": "--restore-access-backup-vault-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-backup-job",
+   "description": "Starts an on-demand backup job for the specified resource.",
+   "options": [
+    {
+     "name": "--backup-options",
+     "args": {}
+    },
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--complete-window-minutes",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--index",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--lifecycle",
+     "args": {}
+    },
+    {
+     "name": "--logically-air-gapped-backup-vault-arn",
+     "args": {}
+    },
+    {
+     "name": "--recovery-point-tags",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-window-minutes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-copy-job",
+   "description": "Starts a job to create a one-time copy of the specified resource.",
+   "options": [
+    {
+     "name": "--destination-backup-vault-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle",
+     "args": {}
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-backup-vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-report-job",
+   "description": "Starts an on-demand report job for the specified report plan.",
+   "options": [
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--report-plan-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-restore-job",
+   "description": "Recovers the saved resource identified by an Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--copy-source-tags-to-restored-resource"
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-copy-source-tags-to-restored-resource"
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-scan-job",
+   "description": "Starts scanning jobs for specific resources.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--continuous-scan-end-time",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--malware-scanner",
+     "args": {
+      "suggestions": [
+       "GUARDDUTY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-base-recovery-point-arn",
+     "args": {}
+    },
+    {
+     "name": "--scan-mode",
+     "args": {
+      "suggestions": [
+       "FULL_SCAN",
+       "INCREMENTAL_SCAN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scanner-role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-backup-job",
+   "description": "Attempts to cancel a job to create a one-time backup of a resource.",
+   "options": [
+    {
+     "name": "--backup-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns a set of key-value pairs to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a set of key-value pairs from a recovery point, backup plan, or backup vault identified by an Amazon Resource Name (ARN) This API is not supported for recovery points for resource types including Aurora, Amazon DocumentDB.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-key-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-backup-plan",
+   "description": "Updates the specified backup plan.",
+   "options": [
+    {
+     "name": "--backup-plan",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--backup-plan-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-framework",
+   "description": "Updates the specified framework.",
+   "options": [
+    {
+     "name": "--framework-controls",
+     "args": {}
+    },
+    {
+     "name": "--framework-description",
+     "args": {}
+    },
+    {
+     "name": "--framework-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-global-settings",
+   "description": "Updates whether the Amazon Web Services account has enabled different cross-account management options, including cross-account backup, multi-party approval, and delegated administrator.",
+   "options": [
+    {
+     "name": "--global-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-recovery-point-index-settings",
+   "description": "This operation updates the settings of a recovery point index.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--index",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-recovery-point-lifecycle",
+   "description": "Sets the transition lifecycle of a recovery point.",
+   "options": [
+    {
+     "name": "--backup-vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lifecycle",
+     "args": {}
+    },
+    {
+     "name": "--recovery-point-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-region-settings",
+   "description": "Updates the current service opt-in settings for the Region.",
+   "options": [
+    {
+     "name": "--resource-type-management-preference",
+     "args": {}
+    },
+    {
+     "name": "--resource-type-opt-in-preference",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-report-plan",
+   "description": "Updates the specified report plan.",
+   "options": [
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--report-delivery-channel",
+     "args": {}
+    },
+    {
+     "name": "--report-plan-description",
+     "args": {}
+    },
+    {
+     "name": "--report-plan-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-setting",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-restore-testing-plan",
+   "description": "This request will send changes to your specified restore testing plan.",
+   "options": [
+    {
+     "name": "--restore-testing-plan",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--restore-testing-plan-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-restore-testing-selection",
+   "description": "Updates the specified restore testing selection.",
+   "options": [
+    {
+     "name": "--restore-testing-plan-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--restore-testing-selection",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--restore-testing-selection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-tiering-configuration",
+   "description": "This request will send changes to your specified tiering configuration.",
+   "options": [
+    {
+     "name": "--tiering-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tiering-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

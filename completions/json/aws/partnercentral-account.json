@@ -1,0 +1,788 @@
+{
+ "name": "partnercentral-account",
+ "description": "AWS Partner Central Account service provides APIs for managing partner accounts, connections, and profiles within the AWS Partner Network.",
+ "subcommands": [
+  {
+   "name": "accept-connection-invitation",
+   "description": "Accepts a connection invitation from another partner, establishing a formal partnership connection between the two parties.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-aws-training-certification-email-domain",
+   "description": "Associates an email domain with AWS training and certification for the partner account, enabling automatic verification of employee certifications.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email-verification-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-connection",
+   "description": "Cancels an existing connection between partners, terminating the partnership relationship.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--connection-type",
+     "args": {
+      "suggestions": [
+       "OPPORTUNITY_COLLABORATION",
+       "SUBSIDIARY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-connection-invitation",
+   "description": "Cancels a pending connection invitation before it has been accepted or rejected.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-profile-update-task",
+   "description": "Cancels an in-progress profile update task, stopping any pending changes to the partner profile.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-connection-invitation",
+   "description": "Creates a new connection invitation to establish a partnership with another organization.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--connection-type",
+     "args": {
+      "suggestions": [
+       "OPPORTUNITY_COLLABORATION",
+       "SUBSIDIARY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--receiver-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-partner",
+   "description": "Creates a new partner account in the AWS Partner Network with the specified details and configuration.",
+   "options": [
+    {
+     "name": "--alliance-lead-contact",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--email-verification-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--legal-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-solution-type",
+     "args": {
+      "suggestions": [
+       "SOFTWARE_PRODUCTS",
+       "CONSULTING_SERVICES",
+       "PROFESSIONAL_SERVICES",
+       "MANAGED_SERVICES",
+       "HARDWARE_PRODUCTS",
+       "COMMUNICATION_SERVICES",
+       "VALUE_ADDED_RESALE_AWS_SERVICES",
+       "TRAINING_SERVICES"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-aws-training-certification-email-domain",
+   "description": "Removes the association between an email domain and AWS training and certification for the partner account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-alliance-lead-contact",
+   "description": "Retrieves the alliance lead contact information for a partner account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connection",
+   "description": "Retrieves detailed information about a specific connection between partners.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connection-invitation",
+   "description": "Retrieves detailed information about a specific connection invitation.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connection-preferences",
+   "description": "Retrieves the connection preferences for a partner account, including access settings and exclusions.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-partner",
+   "description": "Retrieves detailed information about a specific partner account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile-update-task",
+   "description": "Retrieves information about a specific profile update task.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile-visibility",
+   "description": "Retrieves the visibility settings for a partner profile, determining who can see the profile information.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-qualifications-association-details",
+   "description": "Returns your current qualifications association status, the primary partner, and the full list of partners associated under the primary partner.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-qualifications-association-task",
+   "description": "Retrieves the status and details of the most recent qualifications association task for your partner account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-qualifications-disassociation-task",
+   "description": "Retrieves the status and details of the most recent qualifications disassociation task for your partner account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-verification",
+   "description": "Retrieves the current status and details of a verification process for a partner account.",
+   "options": [
+    {
+     "name": "--verification-type",
+     "args": {
+      "suggestions": [
+       "BUSINESS_VERIFICATION",
+       "REGISTRANT_VERIFICATION"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-connection-invitations",
+   "description": "Lists connection invitations for the partner account, with optional filtering by status, type, and other criteria.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connection-type",
+     "args": {
+      "suggestions": [
+       "OPPORTUNITY_COLLABORATION",
+       "SUBSIDIARY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--other-participant-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--participant-type",
+     "args": {
+      "suggestions": [
+       "SENDER",
+       "RECEIVER"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "ACCEPTED",
+       "REJECTED",
+       "CANCELED",
+       "EXPIRED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-connections",
+   "description": "Lists active connections for the partner account, with optional filtering by connection type and participant.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connection-type",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--other-participant-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-partners",
+   "description": "Lists partner accounts in the catalog, providing a summary view of all partners.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags associated with a specific AWS Partner Central Account resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-alliance-lead-contact",
+   "description": "Creates or updates the alliance lead contact information for a partner account.",
+   "options": [
+    {
+     "name": "--alliance-lead-contact",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email-verification-code",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-profile-visibility",
+   "description": "Sets the visibility level for a partner profile, controlling who can view the profile information.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--visibility",
+     "args": {
+      "suggestions": [
+       "PRIVATE",
+       "PUBLIC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-connection-invitation",
+   "description": "Rejects a connection invitation from another partner, declining the partnership request.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-email-verification-code",
+   "description": "Sends an email verification code to the specified email address for account verification purposes.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-profile-update-task",
+   "description": "Initiates a profile update task to modify partner profile information asynchronously.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-details",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-qualifications-association-task",
+   "description": "Initiates an asynchronous task to associate your partner qualifications with a primary account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-partner",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-qualifications-disassociation-task",
+   "description": "Initiates an asynchronous task to disassociate your partner qualifications from a primary account.",
+   "options": [
+    {
+     "name": "--associated-partner",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-verification",
+   "description": "Initiates a new verification process for a partner account.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--verification-details",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a specified AWS Partner Central Account resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes specified tags from an AWS Partner Central Account resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-connection-preferences",
+   "description": "Updates the connection preferences for a partner account, modifying access settings and exclusions.",
+   "options": [
+    {
+     "name": "--access-type",
+     "args": {
+      "suggestions": [
+       "ALLOW_ALL",
+       "DENY_ALL",
+       "ALLOW_BY_DEFAULT_DENY_SOME"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--excluded-participant-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--revision",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

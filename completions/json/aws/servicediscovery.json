@@ -1,0 +1,614 @@
+{
+ "name": "servicediscovery",
+ "description": "Cloud Map With Cloud Map, you can configure public DNS, private DNS, or HTTP namespaces that your microservice applications run in.",
+ "subcommands": [
+  {
+   "name": "create-http-namespace",
+   "description": "Creates an HTTP namespace.",
+   "options": [
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-private-dns-namespace",
+   "description": "Creates a private namespace based on DNS, which is visible only inside a specified Amazon VPC.",
+   "options": [
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--properties",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-public-dns-namespace",
+   "description": "Creates a public namespace based on DNS, which is visible on the internet.",
+   "options": [
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--properties",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service",
+   "description": "Creates a service.",
+   "options": [
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dns-config",
+     "args": {}
+    },
+    {
+     "name": "--health-check-config",
+     "args": {}
+    },
+    {
+     "name": "--health-check-custom-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "HTTP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-namespace",
+   "description": "Deletes a namespace from the current account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service",
+   "description": "Deletes a specified service and all associated service attributes.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-attributes",
+   "description": "Deletes specific attributes associated with a service.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-instance",
+   "description": "Deletes the Amazon Route 53 DNS records and health check, if any, that Cloud Map created for the specified instance.",
+   "options": [
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "discover-instances",
+   "description": "Discovers registered instances for a specified namespace and service.",
+   "options": [
+    {
+     "name": "--health-status",
+     "args": {
+      "suggestions": [
+       "HEALTHY",
+       "UNHEALTHY",
+       "ALL",
+       "HEALTHY_OR_ELSE_ALL"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--optional-parameters",
+     "args": {}
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--query-parameters",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "discover-instances-revision",
+   "description": "Discovers the increasing revision associated with an instance.",
+   "options": [
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instance",
+   "description": "Gets information about a specified instance.",
+   "options": [
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instances-health-status",
+   "description": "Gets the current health status (Healthy, Unhealthy, or Unknown) of one or more instances that are associated with a specified service.",
+   "options": [
+    {
+     "name": "--instances",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-namespace",
+   "description": "Gets information about a namespace.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-operation",
+   "description": "Gets information about any operation that returns an operation ID in the response, such as a CreateHttpNamespace request.",
+   "options": [
+    {
+     "name": "--operation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-service",
+   "description": "Gets the settings for a specified service.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-attributes",
+   "description": "Returns the attributes associated with a specified service.",
+   "options": [
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-instances",
+   "description": "Lists summary information about the instances that you registered by using a specified service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-namespaces",
+   "description": "Lists summary information about the namespaces that were created by the current Amazon Web Services account and shared with the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-operations",
+   "description": "Lists operations that match the criteria that you specify.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "Lists summary information for all the services that are associated with one or more namespaces.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-instance",
+   "description": "Creates or updates one or more records and, optionally, creates a health check based on the settings in a specified service.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--creator-request-id",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-http-namespace",
+   "description": "Updates an HTTP namespace.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--updater-request-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-instance-custom-health-status",
+   "description": "Submits a request to change the health status of a custom health check to healthy or unhealthy.",
+   "options": [
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "HEALTHY",
+       "UNHEALTHY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-private-dns-namespace",
+   "description": "Updates a private DNS namespace.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--updater-request-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-public-dns-namespace",
+   "description": "Updates a public DNS namespace.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--updater-request-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-service",
+   "description": "Submits a request to perform the following operations: Update the TTL setting for existing DnsRecords configurations Add, update, or delete HealthCheckConfig for a specified service You can't add, update, or delete a HealthCheckCustomConfig configuration.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-attributes",
+   "description": "Submits a request to update a specified service to add service-level attributes.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

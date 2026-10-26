@@ -1,0 +1,1283 @@
+{
+ "name": "finspace",
+ "description": "The FinSpace management service provides the APIs for managing FinSpace environments.",
+ "subcommands": [
+  {
+   "name": "create-environment",
+   "description": "Create a new FinSpace environment.",
+   "options": [
+    {
+     "name": "--data-bundles",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--federation-mode",
+     "args": {
+      "suggestions": [
+       "FEDERATED",
+       "LOCAL"
+      ]
+     }
+    },
+    {
+     "name": "--federation-parameters",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--superuser-parameters",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-kx-changeset",
+   "description": "Creates a changeset for a kdb database.",
+   "options": [
+    {
+     "name": "--change-requests",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-kx-cluster",
+   "description": "Creates a new kdb cluster.",
+   "options": [
+    {
+     "name": "--auto-scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--az-mode",
+     "args": {
+      "suggestions": [
+       "SINGLE",
+       "MULTI"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--cache-storage-configurations",
+     "args": {}
+    },
+    {
+     "name": "--capacity-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-description",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-type",
+     "args": {
+      "suggestions": [
+       "HDB",
+       "RDB",
+       "GATEWAY",
+       "GP",
+       "TICKERPLANT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--code",
+     "args": {}
+    },
+    {
+     "name": "--command-line-arguments",
+     "args": {}
+    },
+    {
+     "name": "--databases",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-role",
+     "args": {}
+    },
+    {
+     "name": "--initialization-script",
+     "args": {}
+    },
+    {
+     "name": "--release-label",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--savedown-storage-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scaling-group-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tickerplant-log-configuration",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-kx-database",
+   "description": "Creates a new kdb database in the environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-kx-dataview",
+   "description": "Creates a snapshot of kdb database with tiered storage capabilities and a pre-warmed cache, ready for mounting on kdb clusters.",
+   "options": [
+    {
+     "name": "--auto-update"
+    },
+    {
+     "name": "--availability-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--az-mode",
+     "args": {
+      "suggestions": [
+       "SINGLE",
+       "MULTI"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--changeset-id",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataview-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-update"
+    },
+    {
+     "name": "--no-read-write"
+    },
+    {
+     "name": "--read-write"
+    },
+    {
+     "name": "--segment-configurations",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-kx-environment",
+   "description": "Creates a managed kdb environment for the account.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-kx-scaling-group",
+   "description": "Creates a new scaling group.",
+   "options": [
+    {
+     "name": "--availability-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--host-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scaling-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-kx-user",
+   "description": "Creates a user in FinSpace kdb environment with an associated IAM role.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-kx-volume",
+   "description": "Creates a new volume with a specific amount of throughput and storage capacity.",
+   "options": [
+    {
+     "name": "--availability-zone-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--az-mode",
+     "args": {
+      "suggestions": [
+       "SINGLE",
+       "MULTI"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nas1-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--volume-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--volume-type",
+     "args": {
+      "suggestions": [
+       "NAS_1"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment",
+   "description": "Delete an FinSpace environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-kx-cluster",
+   "description": "Deletes a kdb cluster.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-kx-cluster-node",
+   "description": "Deletes the specified nodes from a cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-kx-database",
+   "description": "Deletes the specified database and all of its associated data.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-kx-dataview",
+   "description": "Deletes the specified dataview.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataview-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-kx-environment",
+   "description": "Deletes the kdb environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-kx-scaling-group",
+   "description": "Deletes the specified scaling group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scaling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-kx-user",
+   "description": "Deletes a user in the specified kdb environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-kx-volume",
+   "description": "Deletes a volume.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--volume-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment",
+   "description": "Returns the FinSpace environment object.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-kx-changeset",
+   "description": "Returns information about a kdb changeset.",
+   "options": [
+    {
+     "name": "--changeset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-kx-cluster",
+   "description": "Retrieves information about a kdb cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-kx-connection-string",
+   "description": "Retrieves a connection string for a user to connect to a kdb cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-kx-database",
+   "description": "Returns database information for the specified environment ID.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-kx-dataview",
+   "description": "Retrieves details of the dataview.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataview-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-kx-environment",
+   "description": "Retrieves all the information for the specified kdb environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-kx-scaling-group",
+   "description": "Retrieves details of a scaling group.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scaling-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-kx-user",
+   "description": "Retrieves information about the specified kdb user.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-kx-volume",
+   "description": "Retrieves the information about the volume.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--volume-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-environments",
+   "description": "A list of all of your FinSpace environments.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kx-changesets",
+   "description": "Returns a list of all the changesets for a database.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kx-cluster-nodes",
+   "description": "Lists all the nodes in a kdb cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kx-clusters",
+   "description": "Returns a list of clusters.",
+   "options": [
+    {
+     "name": "--cluster-type",
+     "args": {
+      "suggestions": [
+       "HDB",
+       "RDB",
+       "GATEWAY",
+       "GP",
+       "TICKERPLANT"
+      ]
+     }
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kx-databases",
+   "description": "Returns a list of all the databases in the kdb environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kx-dataviews",
+   "description": "Returns a list of all the dataviews in the database.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kx-environments",
+   "description": "Returns a list of kdb environments created in an account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kx-scaling-groups",
+   "description": "Returns a list of scaling groups in a kdb environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kx-users",
+   "description": "Lists all the users in a kdb environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kx-volumes",
+   "description": "Lists all the volumes in a kdb environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--volume-type",
+     "args": {
+      "suggestions": [
+       "NAS_1"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "A list of all tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds metadata tags to a FinSpace resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes metadata tags from a FinSpace resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-environment",
+   "description": "Update your FinSpace environment.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--federation-mode",
+     "args": {
+      "suggestions": [
+       "FEDERATED",
+       "LOCAL"
+      ]
+     }
+    },
+    {
+     "name": "--federation-parameters",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-kx-cluster-code-configuration",
+   "description": "Allows you to update code configuration on a running cluster.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--command-line-arguments",
+     "args": {}
+    },
+    {
+     "name": "--deployment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--initialization-script",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-kx-cluster-databases",
+   "description": "Updates the databases mounted on a kdb cluster, which includes the changesetId and all the dbPaths to be cached.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--databases",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-kx-database",
+   "description": "Updates information for the given kdb database.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-kx-dataview",
+   "description": "Updates the specified dataview.",
+   "options": [
+    {
+     "name": "--changeset-id",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataview-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-kx-environment",
+   "description": "Updates information for the given kdb environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-kx-environment-network",
+   "description": "Updates environment network to connect to your internal network by using a transit gateway.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--custom-dns-configuration",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transit-gateway-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-kx-user",
+   "description": "Updates the user details.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-kx-volume",
+   "description": "Updates the throughput or capacity of a volume.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nas1-configuration",
+     "args": {}
+    },
+    {
+     "name": "--volume-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

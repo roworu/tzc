@@ -1,0 +1,208 @@
+{
+ "name": "pricing-plan-manager",
+ "description": "Manages flat-rate pricing subscriptions for supported AWS services.",
+ "subcommands": [
+  {
+   "name": "approve-paid-subscription",
+   "description": "Approves a subscription that is in PENDING_APPROVAL status, activating it and starting billing.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-resources-to-subscription",
+   "description": "Adds one or more resources to an existing subscription.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-subscription",
+   "description": "Cancels a flat-rate pricing subscription.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-subscription-change",
+   "description": "Cancels a pending scheduled change on a subscription, such as a pending downgrade or cancellation.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-subscription",
+   "description": "Creates a flat-rate pricing subscription for the specified resources.",
+   "options": [
+    {
+     "name": "--approval-mode",
+     "args": {
+      "suggestions": [
+       "MANUAL",
+       "IMMEDIATE"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--plan-family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plan-tier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--usage-level",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-resources-from-subscription",
+   "description": "Removes one or more resources from an existing subscription.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-subscription",
+   "description": "Returns the details of a flat-rate pricing subscription, including its current status, associated resources, and any pending scheduled changes.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-subscriptions",
+   "description": "Returns a summary of all flat-rate pricing subscriptions in the calling account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-subscription",
+   "description": "Changes the plan tier of an existing subscription.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plan-tier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--usage-level",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

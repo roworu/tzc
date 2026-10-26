@@ -1,0 +1,706 @@
+{
+ "name": "finspace-data",
+ "description": "The FinSpace APIs let you take actions inside the FinSpace.",
+ "subcommands": [
+  {
+   "name": "associate-user-to-permission-group",
+   "description": "Adds a user to a permission group to grant permissions for actions a user can perform in FinSpace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-changeset",
+   "description": "Creates a new Changeset in a FinSpace Dataset.",
+   "options": [
+    {
+     "name": "--change-type",
+     "args": {
+      "suggestions": [
+       "REPLACE",
+       "APPEND",
+       "MODIFY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format-params",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-params",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-view",
+   "description": "Creates a Dataview for a Dataset.",
+   "options": [
+    {
+     "name": "--as-of-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--auto-update"
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-type-params",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-update"
+    },
+    {
+     "name": "--partition-columns",
+     "args": {}
+    },
+    {
+     "name": "--sort-columns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset",
+   "description": "Creates a new FinSpace Dataset.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-description",
+     "args": {}
+    },
+    {
+     "name": "--dataset-title",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kind",
+     "args": {
+      "suggestions": [
+       "TABULAR",
+       "NON_TABULAR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--owner-info",
+     "args": {}
+    },
+    {
+     "name": "--permission-group-params",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-definition",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-permission-group",
+   "description": "Creates a group of permissions for various actions that a user can perform in FinSpace.",
+   "options": [
+    {
+     "name": "--application-permissions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "Creates a new user in FinSpace.",
+   "options": [
+    {
+     "name": "--api-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--api-access-principal-arn",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--email-address",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--first-name",
+     "args": {}
+    },
+    {
+     "name": "--last-name",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SUPER_USER",
+       "APP_USER"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset",
+   "description": "Deletes a FinSpace Dataset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-permission-group",
+   "description": "Deletes a permission group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-user",
+   "description": "Denies access to the FinSpace web application and API for the specified user.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-user-from-permission-group",
+   "description": "Removes a user from a permission group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-user",
+   "description": "Allows the specified user to access the FinSpace web application and API.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-changeset",
+   "description": "Get information about a Changeset.",
+   "options": [
+    {
+     "name": "--changeset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-view",
+   "description": "Gets information about a Dataview.",
+   "options": [
+    {
+     "name": "--data-view-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dataset",
+   "description": "Returns information about a Dataset.",
+   "options": [
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-external-data-view-access-details",
+   "description": "Returns the credentials to access the external Dataview from an S3 location.",
+   "options": [
+    {
+     "name": "--data-view-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-permission-group",
+   "description": "Retrieves the details of a specific permission group.",
+   "options": [
+    {
+     "name": "--permission-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-programmatic-access-credentials",
+   "description": "Request programmatic credentials to use with FinSpace SDK.",
+   "options": [
+    {
+     "name": "--duration-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user",
+   "description": "Retrieves details for a specific user.",
+   "options": [
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-working-location",
+   "description": "A temporary Amazon S3 location, where you can copy your files from a source location to stage or use as a scratch space in FinSpace notebook.",
+   "options": [
+    {
+     "name": "--location-type",
+     "args": {
+      "suggestions": [
+       "INGESTION",
+       "SAGEMAKER"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-changesets",
+   "description": "Lists the FinSpace Changesets for a Dataset.",
+   "options": [
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-views",
+   "description": "Lists all available Dataviews for a Dataset.",
+   "options": [
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-datasets",
+   "description": "Lists all of the active Datasets that a user has access to.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-permission-groups",
+   "description": "Lists all available permission groups in FinSpace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-permission-groups-by-user",
+   "description": "Lists all the permission groups that are associated with a specific user.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-users",
+   "description": "Lists all available users in FinSpace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-users-by-permission-group",
+   "description": "Lists details of all the users in a specific permission group.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-user-password",
+   "description": "Resets the password for a specified user ID and generates a temporary one.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-changeset",
+   "description": "Updates a FinSpace Changeset.",
+   "options": [
+    {
+     "name": "--changeset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format-params",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-params",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dataset",
+   "description": "Updates a FinSpace Dataset.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-description",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-title",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kind",
+     "args": {
+      "suggestions": [
+       "TABULAR",
+       "NON_TABULAR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--schema-definition",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-permission-group",
+   "description": "Modifies the details of a permission group.",
+   "options": [
+    {
+     "name": "--application-permissions",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--permission-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-user",
+   "description": "Modifies the details of the specified user.",
+   "options": [
+    {
+     "name": "--api-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--api-access-principal-arn",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--first-name",
+     "args": {}
+    },
+    {
+     "name": "--last-name",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SUPER_USER",
+       "APP_USER"
+      ]
+     }
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,573 @@
+{
+ "name": "networkflowmonitor",
+ "description": "Network Flow Monitor is a feature of Amazon CloudWatch Network Monitoring that provides visibility into the performance of network flows for your Amazon Web Services workloads, between instances in subnets, as well as to and from Amazon Web Services.",
+ "subcommands": [
+  {
+   "name": "create-monitor",
+   "description": "Create a monitor for specific network flows between local and remote resources, so that you can monitor network performance for one or several of your workloads.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--local-resources",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remote-resources",
+     "args": {}
+    },
+    {
+     "name": "--scope-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-scope",
+   "description": "In Network Flow Monitor, you specify a scope for the service to generate metrics for.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-monitor",
+   "description": "Deletes a monitor in Network Flow Monitor.",
+   "options": [
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scope",
+   "description": "Deletes a scope that has been defined.",
+   "options": [
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-monitor",
+   "description": "Gets information about a monitor in Network Flow Monitor based on a monitor name.",
+   "options": [
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-query-results-monitor-top-contributors",
+   "description": "Return the data for a query with the Network Flow Monitor query interface.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-query-results-workload-insights-top-contributors",
+   "description": "Return the data for a query with the Network Flow Monitor query interface.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-query-results-workload-insights-top-contributors-data",
+   "description": "Return the data for a query with the Network Flow Monitor query interface.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-query-status-monitor-top-contributors",
+   "description": "Returns the current status of a query for the Network Flow Monitor query interface, for a specified query ID and monitor.",
+   "options": [
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-query-status-workload-insights-top-contributors",
+   "description": "Return the data for a query with the Network Flow Monitor query interface.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-query-status-workload-insights-top-contributors-data",
+   "description": "Returns the current status of a query for the Network Flow Monitor query interface, for a specified query ID and monitor.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-scope",
+   "description": "Gets information about a scope, including the name, status, tags, and target details.",
+   "options": [
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-monitors",
+   "description": "List all monitors in an account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--monitor-status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "ACTIVE",
+       "INACTIVE",
+       "ERROR",
+       "DELETING"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-scopes",
+   "description": "List all the scopes for an account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns all the tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-query-monitor-top-contributors",
+   "description": "Create a query that you can use with the Network Flow Monitor query interface to return the top contributors for a monitor.",
+   "options": [
+    {
+     "name": "--destination-category",
+     "args": {
+      "suggestions": [
+       "INTRA_AZ",
+       "INTER_AZ",
+       "INTER_VPC",
+       "UNCLASSIFIED",
+       "AMAZON_S3",
+       "AMAZON_DYNAMODB",
+       "INTER_REGION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "ROUND_TRIP_TIME",
+       "TIMEOUTS",
+       "RETRANSMISSIONS",
+       "DATA_TRANSFERRED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-query-workload-insights-top-contributors",
+   "description": "Create a query with the Network Flow Monitor query interface that you can run to return workload insights top contributors.",
+   "options": [
+    {
+     "name": "--destination-category",
+     "args": {
+      "suggestions": [
+       "INTRA_AZ",
+       "INTER_AZ",
+       "INTER_VPC",
+       "UNCLASSIFIED",
+       "AMAZON_S3",
+       "AMAZON_DYNAMODB",
+       "INTER_REGION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "TIMEOUTS",
+       "RETRANSMISSIONS",
+       "DATA_TRANSFERRED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-query-workload-insights-top-contributors-data",
+   "description": "Create a query with the Network Flow Monitor query interface that you can run to return data for workload insights top contributors.",
+   "options": [
+    {
+     "name": "--destination-category",
+     "args": {
+      "suggestions": [
+       "INTRA_AZ",
+       "INTER_AZ",
+       "INTER_VPC",
+       "UNCLASSIFIED",
+       "AMAZON_S3",
+       "AMAZON_DYNAMODB",
+       "INTER_REGION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "TIMEOUTS",
+       "RETRANSMISSIONS",
+       "DATA_TRANSFERRED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-query-monitor-top-contributors",
+   "description": "Stop a top contributors query for a monitor.",
+   "options": [
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-query-workload-insights-top-contributors",
+   "description": "Stop a top contributors query for workload insights.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-query-workload-insights-top-contributors-data",
+   "description": "Stop a top contributors data query for workload insights.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds a tag to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-monitor",
+   "description": "Update a monitor to add or remove local or remote resources.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--local-resources-to-add",
+     "args": {}
+    },
+    {
+     "name": "--local-resources-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remote-resources-to-add",
+     "args": {}
+    },
+    {
+     "name": "--remote-resources-to-remove",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-scope",
+   "description": "Update a scope to add or remove resources that you want to be available for Network Flow Monitor to generate metrics for, when you have active agents on those resources sending metrics reports to the Network Flow Monitor backend.",
+   "options": [
+    {
+     "name": "--resources-to-add",
+     "args": {}
+    },
+    {
+     "name": "--resources-to-delete",
+     "args": {}
+    },
+    {
+     "name": "--scope-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

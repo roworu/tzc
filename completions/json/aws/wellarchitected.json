@@ -1,0 +1,1848 @@
+{
+ "name": "wellarchitected",
+ "description": "Well-Architected Tool This is the Well-Architected Tool API Reference.",
+ "subcommands": [
+  {
+   "name": "associate-lenses",
+   "description": "Associate a lens to a workload.",
+   "options": [
+    {
+     "name": "--lens-aliases",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-profiles",
+   "description": "Associate a profile with a workload.",
+   "options": [
+    {
+     "name": "--profile-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-lens-share",
+   "description": "Create a lens share.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shared-with",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-lens-version",
+   "description": "Create a new lens version.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--is-major-version"
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lens-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-is-major-version"
+    }
+   ]
+  },
+  {
+   "name": "create-milestone",
+   "description": "Create a milestone for an existing workload.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--milestone-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-profile",
+   "description": "Create a profile.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-questions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-profile-share",
+   "description": "Create a profile share.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shared-with",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-review-template",
+   "description": "Create a review template.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lenses",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notes",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-template-share",
+   "description": "Create a review template share.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--shared-with",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workload",
+   "description": "Create a new workload.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--applications",
+     "args": {}
+    },
+    {
+     "name": "--architectural-design",
+     "args": {}
+    },
+    {
+     "name": "--aws-regions",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--discovery-config",
+     "args": {}
+    },
+    {
+     "name": "--environment",
+     "args": {
+      "suggestions": [
+       "PRODUCTION",
+       "PREPRODUCTION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--industry",
+     "args": {}
+    },
+    {
+     "name": "--industry-type",
+     "args": {}
+    },
+    {
+     "name": "--jira-configuration",
+     "args": {}
+    },
+    {
+     "name": "--lenses",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--non-aws-regions",
+     "args": {}
+    },
+    {
+     "name": "--notes",
+     "args": {}
+    },
+    {
+     "name": "--pillar-priorities",
+     "args": {}
+    },
+    {
+     "name": "--profile-arns",
+     "args": {}
+    },
+    {
+     "name": "--review-owner",
+     "args": {}
+    },
+    {
+     "name": "--review-template-arns",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workload-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workload-share",
+   "description": "Create a workload share.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-type",
+     "args": {
+      "suggestions": [
+       "READONLY",
+       "CONTRIBUTOR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--shared-with",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-lens",
+   "description": "Delete an existing lens.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lens-status",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "DRAFT",
+       "PUBLISHED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-lens-share",
+   "description": "Delete a lens share.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--share-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-profile",
+   "description": "Delete a profile.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-profile-share",
+   "description": "Delete a profile share.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--share-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-review-template",
+   "description": "Delete a review template.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-template-share",
+   "description": "Delete a review template share.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--share-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workload",
+   "description": "Delete an existing workload.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workload-share",
+   "description": "Delete a workload share.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--share-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-lenses",
+   "description": "Disassociate a lens from a workload.",
+   "options": [
+    {
+     "name": "--lens-aliases",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-profiles",
+   "description": "Disassociate a profile from a workload.",
+   "options": [
+    {
+     "name": "--profile-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-lens",
+   "description": "Export an existing lens.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lens-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-answer",
+   "description": "Get the answer to a specific question in a workload review.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--milestone-number",
+     "args": {}
+    },
+    {
+     "name": "--question-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-consolidated-report",
+   "description": "Get a consolidated report of your workloads.",
+   "options": [
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "PDF",
+       "JSON"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--include-shared-resources"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-include-shared-resources"
+    }
+   ]
+  },
+  {
+   "name": "get-global-settings",
+   "description": "Global settings for all workloads."
+  },
+  {
+   "name": "get-lens",
+   "description": "Get an existing lens.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lens-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-lens-review",
+   "description": "Get lens review.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--milestone-number",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-lens-review-report",
+   "description": "Get lens review report.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--milestone-number",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-lens-version-difference",
+   "description": "Get lens version differences.",
+   "options": [
+    {
+     "name": "--base-lens-version",
+     "args": {}
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-lens-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-milestone",
+   "description": "Get a milestone for an existing workload.",
+   "options": [
+    {
+     "name": "--milestone-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile",
+   "description": "Get profile information.",
+   "options": [
+    {
+     "name": "--profile-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-profile-template",
+   "description": "Get profile template."
+  },
+  {
+   "name": "get-review-template",
+   "description": "Get review template.",
+   "options": [
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-review-template-answer",
+   "description": "Get review template answer.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--question-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-review-template-lens-review",
+   "description": "Get a lens review associated with a review template.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workload",
+   "description": "Get an existing workload.",
+   "options": [
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-lens",
+   "description": "Import a new custom lens or update an existing custom lens.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--json-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lens-alias",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-answers",
+   "description": "List of answers for a particular workload and lens.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--milestone-number",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--pillar-id",
+     "args": {}
+    },
+    {
+     "name": "--question-priority",
+     "args": {
+      "suggestions": [
+       "PRIORITIZED",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-check-details",
+   "description": "List of Trusted Advisor check details by account related to the workload.",
+   "options": [
+    {
+     "name": "--choice-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lens-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--pillar-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--question-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-check-summaries",
+   "description": "List of Trusted Advisor checks summarized for all accounts related to the workload.",
+   "options": [
+    {
+     "name": "--choice-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lens-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--pillar-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--question-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-lens-review-improvements",
+   "description": "List the improvements of a particular lens review.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--milestone-number",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--pillar-id",
+     "args": {}
+    },
+    {
+     "name": "--question-priority",
+     "args": {
+      "suggestions": [
+       "PRIORITIZED",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-lens-reviews",
+   "description": "List lens reviews for a particular workload.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--milestone-number",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-lens-shares",
+   "description": "List the lens shares associated with the lens.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--shared-with-prefix",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACCEPTED",
+       "REJECTED",
+       "PENDING",
+       "REVOKED",
+       "EXPIRED",
+       "ASSOCIATING",
+       "ASSOCIATED",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-lenses",
+   "description": "List the available lenses.",
+   "options": [
+    {
+     "name": "--lens-name",
+     "args": {}
+    },
+    {
+     "name": "--lens-status",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "DRAFT",
+       "PUBLISHED"
+      ]
+     }
+    },
+    {
+     "name": "--lens-type",
+     "args": {
+      "suggestions": [
+       "AWS_OFFICIAL",
+       "CUSTOM_SHARED",
+       "CUSTOM_SELF"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-milestones",
+   "description": "List all milestones for an existing workload.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-notifications",
+   "description": "List lens notifications.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-profile-notifications",
+   "description": "List profile notifications.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-profile-shares",
+   "description": "List profile shares.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shared-with-prefix",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACCEPTED",
+       "REJECTED",
+       "PENDING",
+       "REVOKED",
+       "EXPIRED",
+       "ASSOCIATING",
+       "ASSOCIATED",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-profiles",
+   "description": "List profiles.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--profile-owner-type",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "SHARED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-review-template-answers",
+   "description": "List the answers of a review template.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--pillar-id",
+     "args": {}
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-review-templates",
+   "description": "List review templates.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-share-invitations",
+   "description": "List the share invitations.",
+   "options": [
+    {
+     "name": "--lens-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--share-resource-type",
+     "args": {
+      "suggestions": [
+       "WORKLOAD",
+       "LENS",
+       "PROFILE",
+       "TEMPLATE"
+      ]
+     }
+    },
+    {
+     "name": "--template-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--workload-name-prefix",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List the tags for a resource.",
+   "options": [
+    {
+     "name": "--workload-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-template-shares",
+   "description": "List review template shares.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--shared-with-prefix",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACCEPTED",
+       "REJECTED",
+       "PENDING",
+       "REVOKED",
+       "EXPIRED",
+       "ASSOCIATING",
+       "ASSOCIATED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workload-shares",
+   "description": "List the workload shares associated with the workload.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--shared-with-prefix",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACCEPTED",
+       "REJECTED",
+       "PENDING",
+       "REVOKED",
+       "EXPIRED",
+       "ASSOCIATING",
+       "ASSOCIATED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workloads",
+   "description": "Paginated list of workloads.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workload-name-prefix",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to the specified resource.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes specified tags from a resource.",
+   "options": [
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-answer",
+   "description": "Update the answer to a specific question in a workload review.",
+   "options": [
+    {
+     "name": "--choice-updates",
+     "args": {}
+    },
+    {
+     "name": "--is-applicable"
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-is-applicable"
+    },
+    {
+     "name": "--notes",
+     "args": {}
+    },
+    {
+     "name": "--question-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {
+      "suggestions": [
+       "OUT_OF_SCOPE",
+       "BUSINESS_PRIORITIES",
+       "ARCHITECTURE_CONSTRAINTS",
+       "OTHER",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--selected-choices",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-global-settings",
+   "description": "Update whether the Amazon Web Services account is opted into organization sharing and discovery integration features.",
+   "options": [
+    {
+     "name": "--discovery-integration-status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--jira-configuration",
+     "args": {}
+    },
+    {
+     "name": "--organization-sharing-status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-integration",
+   "description": "Update integration features.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--integrating-service",
+     "args": {
+      "suggestions": [
+       "JIRA"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-lens-review",
+   "description": "Update lens review for a particular workload.",
+   "options": [
+    {
+     "name": "--jira-configuration",
+     "args": {}
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lens-notes",
+     "args": {}
+    },
+    {
+     "name": "--pillar-notes",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-profile",
+   "description": "Update a profile.",
+   "options": [
+    {
+     "name": "--profile-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-description",
+     "args": {}
+    },
+    {
+     "name": "--profile-questions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-review-template",
+   "description": "Update a review template.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--lenses-to-associate",
+     "args": {}
+    },
+    {
+     "name": "--lenses-to-disassociate",
+     "args": {}
+    },
+    {
+     "name": "--notes",
+     "args": {}
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-review-template-answer",
+   "description": "Update a review template answer.",
+   "options": [
+    {
+     "name": "--choice-updates",
+     "args": {}
+    },
+    {
+     "name": "--is-applicable"
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-is-applicable"
+    },
+    {
+     "name": "--notes",
+     "args": {}
+    },
+    {
+     "name": "--question-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {
+      "suggestions": [
+       "OUT_OF_SCOPE",
+       "BUSINESS_PRIORITIES",
+       "ARCHITECTURE_CONSTRAINTS",
+       "OTHER",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--selected-choices",
+     "args": {}
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-review-template-lens-review",
+   "description": "Update a lens review associated with a review template.",
+   "options": [
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lens-notes",
+     "args": {}
+    },
+    {
+     "name": "--pillar-notes",
+     "args": {}
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-share-invitation",
+   "description": "Update a workload or custom lens share invitation.",
+   "options": [
+    {
+     "name": "--share-invitation-action",
+     "args": {
+      "suggestions": [
+       "ACCEPT",
+       "REJECT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--share-invitation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workload",
+   "description": "Update an existing workload.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--applications",
+     "args": {}
+    },
+    {
+     "name": "--architectural-design",
+     "args": {}
+    },
+    {
+     "name": "--aws-regions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--discovery-config",
+     "args": {}
+    },
+    {
+     "name": "--environment",
+     "args": {
+      "suggestions": [
+       "PRODUCTION",
+       "PREPRODUCTION"
+      ]
+     }
+    },
+    {
+     "name": "--improvement-status",
+     "args": {
+      "suggestions": [
+       "NOT_APPLICABLE",
+       "NOT_STARTED",
+       "IN_PROGRESS",
+       "COMPLETE",
+       "RISK_ACKNOWLEDGED"
+      ]
+     }
+    },
+    {
+     "name": "--industry",
+     "args": {}
+    },
+    {
+     "name": "--industry-type",
+     "args": {}
+    },
+    {
+     "name": "--is-review-owner-update-acknowledged"
+    },
+    {
+     "name": "--jira-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-is-review-owner-update-acknowledged"
+    },
+    {
+     "name": "--non-aws-regions",
+     "args": {}
+    },
+    {
+     "name": "--notes",
+     "args": {}
+    },
+    {
+     "name": "--pillar-priorities",
+     "args": {}
+    },
+    {
+     "name": "--review-owner",
+     "args": {}
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-workload-share",
+   "description": "Update a workload share.",
+   "options": [
+    {
+     "name": "--permission-type",
+     "args": {
+      "suggestions": [
+       "READONLY",
+       "CONTRIBUTOR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--share-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "upgrade-lens-review",
+   "description": "Upgrade lens review for a particular workload.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--milestone-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "upgrade-profile-version",
+   "description": "Upgrade a profile.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--milestone-name",
+     "args": {}
+    },
+    {
+     "name": "--profile-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "upgrade-review-template-lens-review",
+   "description": "Upgrade the lens review of a review template.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--lens-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

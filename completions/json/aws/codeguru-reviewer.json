@@ -1,0 +1,315 @@
+{
+ "name": "codeguru-reviewer",
+ "description": "This section provides documentation for the Amazon CodeGuru Reviewer API operations.",
+ "subcommands": [
+  {
+   "name": "associate-repository",
+   "description": "Use to associate an Amazon Web Services CodeCommit repository or a repository managed by Amazon Web Services CodeStar Connections with Amazon CodeGuru Reviewer.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-details",
+     "args": {}
+    },
+    {
+     "name": "--repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-code-review",
+   "description": "Use to create a code review with a CodeReviewType of RepositoryAnalysis.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-association-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-code-review",
+   "description": "Returns the metadata associated with the code review along with its status.",
+   "options": [
+    {
+     "name": "--code-review-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-recommendation-feedback",
+   "description": "Describes the customer feedback for a CodeGuru Reviewer recommendation.",
+   "options": [
+    {
+     "name": "--code-review-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-repository-association",
+   "description": "Returns a RepositoryAssociation object that contains information about the requested repository association.",
+   "options": [
+    {
+     "name": "--association-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-repository",
+   "description": "Removes the association between Amazon CodeGuru Reviewer and a repository.",
+   "options": [
+    {
+     "name": "--association-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-code-reviews",
+   "description": "Lists all the code reviews that the customer has created in the past 90 days.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--provider-types",
+     "args": {}
+    },
+    {
+     "name": "--repository-names",
+     "args": {}
+    },
+    {
+     "name": "--states",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "PullRequest",
+       "RepositoryAnalysis"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-recommendation-feedback",
+   "description": "Returns a list of RecommendationFeedbackSummary objects that contain customer recommendation feedback for all CodeGuru Reviewer users.",
+   "options": [
+    {
+     "name": "--code-review-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-ids",
+     "args": {}
+    },
+    {
+     "name": "--user-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommendations",
+   "description": "Returns the list of all recommendations for a completed code review.",
+   "options": [
+    {
+     "name": "--code-review-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-repository-associations",
+   "description": "Returns a list of RepositoryAssociationSummary objects that contain summary information about a repository association.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--owners",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--provider-types",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--states",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns the list of tags associated with an associated repository resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-recommendation-feedback",
+   "description": "Stores customer feedback for a CodeGuru Reviewer recommendation.",
+   "options": [
+    {
+     "name": "--code-review-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reactions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to an associated repository.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from an associated repository.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "code-review-completed",
+     "description": "Wait until a code review is complete.",
+     "options": [
+      {
+       "name": "--code-review-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "repository-association-succeeded",
+     "description": "Wait until a repository association is complete.",
+     "options": [
+      {
+       "name": "--association-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,519 @@
+{
+ "name": "redshift-data",
+ "description": "You can use the Amazon Redshift Data API to run queries on Amazon Redshift tables.",
+ "subcommands": [
+  {
+   "name": "batch-execute-statement",
+   "description": "Runs one or more SQL statements, which can be data manipulation language (DML) or data definition language (DDL).",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--database",
+     "args": {}
+    },
+    {
+     "name": "--db-user",
+     "args": {}
+    },
+    {
+     "name": "--execution-mode",
+     "args": {
+      "suggestions": [
+       "TRANSACTION",
+       "AUTO_COMMIT"
+      ]
+     }
+    },
+    {
+     "name": "--no-with-event"
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--result-format",
+     "args": {
+      "suggestions": [
+       "JSON",
+       "CSV"
+      ]
+     }
+    },
+    {
+     "name": "--secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {}
+    },
+    {
+     "name": "--session-keep-alive-seconds",
+     "args": {}
+    },
+    {
+     "name": "--sqls",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement-name",
+     "args": {}
+    },
+    {
+     "name": "--wait-time-seconds",
+     "args": {}
+    },
+    {
+     "name": "--with-event"
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-statement",
+   "description": "Cancels a running query.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-statement",
+   "description": "Describes the details about a specific instance when a query was run by the Amazon Redshift Data API.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--wait-time-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-table",
+   "description": "Describes the detailed information about a table from metadata in the cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--connected-database",
+     "args": {}
+    },
+    {
+     "name": "--database",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-user",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    },
+    {
+     "name": "--secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "execute-statement",
+   "description": "Runs an SQL statement, which can be data manipulation language (DML) or data definition language (DDL).",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--database",
+     "args": {}
+    },
+    {
+     "name": "--db-user",
+     "args": {}
+    },
+    {
+     "name": "--no-with-event"
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--result-format",
+     "args": {
+      "suggestions": [
+       "JSON",
+       "CSV"
+      ]
+     }
+    },
+    {
+     "name": "--secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {}
+    },
+    {
+     "name": "--session-keep-alive-seconds",
+     "args": {}
+    },
+    {
+     "name": "--sql",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement-name",
+     "args": {}
+    },
+    {
+     "name": "--wait-time-seconds",
+     "args": {}
+    },
+    {
+     "name": "--with-event"
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-statement-result",
+   "description": "Fetches the temporarily cached result of an SQL statement in JSON format.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--wait-time-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-statement-result-v2",
+   "description": "Fetches the temporarily cached result of an SQL statement in CSV format.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--wait-time-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-databases",
+   "description": "List the databases in a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--database",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-user",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-schemas",
+   "description": "Lists the schemas in a database.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--connected-database",
+     "args": {}
+    },
+    {
+     "name": "--database",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-user",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--schema-pattern",
+     "args": {}
+    },
+    {
+     "name": "--secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sessions",
+   "description": "Lists the sessions that the caller created in the last 24 hours.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--database",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-role-level"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--role-level"
+    },
+    {
+     "name": "--session-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "AVAILABLE",
+       "BUSY",
+       "CLOSED"
+      ]
+     }
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-statements",
+   "description": "List of SQL statements.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--database",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-role-level"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--role-level"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--statement-name",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "PICKED",
+       "STARTED",
+       "FINISHED",
+       "ABORTED",
+       "FAILED",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tables",
+   "description": "List the tables in a database.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--connected-database",
+     "args": {}
+    },
+    {
+     "name": "--database",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-user",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--schema-pattern",
+     "args": {}
+    },
+    {
+     "name": "--secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-pattern",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

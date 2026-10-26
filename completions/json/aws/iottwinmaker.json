@@ -1,0 +1,994 @@
+{
+ "name": "iottwinmaker",
+ "description": "IoT TwinMaker is a service with which you can build operational digital twins of physical systems.",
+ "subcommands": [
+  {
+   "name": "batch-put-property-values",
+   "description": "Sets values for multiple time series properties.",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-metadata-transfer-job",
+   "description": "Cancels the metadata transfer job.",
+   "options": [
+    {
+     "name": "--metadata-transfer-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-component-type",
+   "description": "Creates a component type.",
+   "options": [
+    {
+     "name": "--component-type-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--component-type-name",
+     "args": {}
+    },
+    {
+     "name": "--composite-component-types",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--extends-from",
+     "args": {}
+    },
+    {
+     "name": "--functions",
+     "args": {}
+    },
+    {
+     "name": "--is-singleton"
+    },
+    {
+     "name": "--no-is-singleton"
+    },
+    {
+     "name": "--property-definitions",
+     "args": {}
+    },
+    {
+     "name": "--property-groups",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-entity",
+   "description": "Creates an entity.",
+   "options": [
+    {
+     "name": "--components",
+     "args": {}
+    },
+    {
+     "name": "--composite-components",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--entity-id",
+     "args": {}
+    },
+    {
+     "name": "--entity-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parent-entity-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-metadata-transfer-job",
+   "description": "Creates a new metadata transfer job.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata-transfer-job-id",
+     "args": {}
+    },
+    {
+     "name": "--sources",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-scene",
+   "description": "Creates a scene.",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--content-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--scene-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scene-metadata",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-sync-job",
+   "description": "This action creates a SyncJob.",
+   "options": [
+    {
+     "name": "--sync-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workspace",
+   "description": "Creates a workplace.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {}
+    },
+    {
+     "name": "--s3-location",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-component-type",
+   "description": "Deletes a component type.",
+   "options": [
+    {
+     "name": "--component-type-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-entity",
+   "description": "Deletes an entity.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--is-recursive"
+    },
+    {
+     "name": "--no-is-recursive"
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scene",
+   "description": "Deletes a scene.",
+   "options": [
+    {
+     "name": "--scene-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-sync-job",
+   "description": "Delete the SyncJob.",
+   "options": [
+    {
+     "name": "--sync-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workspace",
+   "description": "Deletes a workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-query",
+   "description": "Run queries to access information from your knowledge graph of entities within individual workspaces.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--query-statement",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-component-type",
+   "description": "Retrieves information about a component type.",
+   "options": [
+    {
+     "name": "--component-type-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-entity",
+   "description": "Retrieves information about an entity.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-metadata-transfer-job",
+   "description": "Gets a nmetadata transfer job.",
+   "options": [
+    {
+     "name": "--metadata-transfer-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pricing-plan",
+   "description": "Gets the pricing plan."
+  },
+  {
+   "name": "get-property-value",
+   "description": "Gets the property values for a component, component type, entity, or workspace.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {}
+    },
+    {
+     "name": "--component-path",
+     "args": {}
+    },
+    {
+     "name": "--component-type-id",
+     "args": {}
+    },
+    {
+     "name": "--entity-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--property-group-name",
+     "args": {}
+    },
+    {
+     "name": "--selected-properties",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tabular-conditions",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-property-value-history",
+   "description": "Retrieves information about the history of a time series property value for a component, component type, entity, or workspace.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {}
+    },
+    {
+     "name": "--component-path",
+     "args": {}
+    },
+    {
+     "name": "--component-type-id",
+     "args": {}
+    },
+    {
+     "name": "--end-date-time",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--entity-id",
+     "args": {}
+    },
+    {
+     "name": "--interpolation",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--order-by-time",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--property-filters",
+     "args": {}
+    },
+    {
+     "name": "--selected-properties",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-date-time",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-scene",
+   "description": "Retrieves information about a scene.",
+   "options": [
+    {
+     "name": "--scene-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sync-job",
+   "description": "Gets the SyncJob.",
+   "options": [
+    {
+     "name": "--sync-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-workspace",
+   "description": "Retrieves information about a workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-component-types",
+   "description": "Lists all component types in a workspace.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-components",
+   "description": "This API lists the components of an entity.",
+   "options": [
+    {
+     "name": "--component-path",
+     "args": {}
+    },
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-entities",
+   "description": "Lists all entities in a workspace.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-metadata-transfer-jobs",
+   "description": "Lists the metadata transfer jobs.",
+   "options": [
+    {
+     "name": "--destination-type",
+     "args": {
+      "suggestions": [
+       "s3",
+       "iotsitewise",
+       "iottwinmaker"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "s3",
+       "iotsitewise",
+       "iottwinmaker"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-properties",
+   "description": "This API lists the properties of a component.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {}
+    },
+    {
+     "name": "--component-path",
+     "args": {}
+    },
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-scenes",
+   "description": "Lists all scenes in a workspace.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-sync-jobs",
+   "description": "List all SyncJobs.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-sync-resources",
+   "description": "Lists the sync resources.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sync-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags associated with a resource.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workspaces",
+   "description": "Retrieves information about workspaces in the current account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-component-type",
+   "description": "Updates information in a component type.",
+   "options": [
+    {
+     "name": "--component-type-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--component-type-name",
+     "args": {}
+    },
+    {
+     "name": "--composite-component-types",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--extends-from",
+     "args": {}
+    },
+    {
+     "name": "--functions",
+     "args": {}
+    },
+    {
+     "name": "--is-singleton"
+    },
+    {
+     "name": "--no-is-singleton"
+    },
+    {
+     "name": "--property-definitions",
+     "args": {}
+    },
+    {
+     "name": "--property-groups",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-entity",
+   "description": "Updates an entity.",
+   "options": [
+    {
+     "name": "--component-updates",
+     "args": {}
+    },
+    {
+     "name": "--composite-component-updates",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-name",
+     "args": {}
+    },
+    {
+     "name": "--parent-entity-update",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pricing-plan",
+   "description": "Update the pricing plan.",
+   "options": [
+    {
+     "name": "--bundle-names",
+     "args": {}
+    },
+    {
+     "name": "--pricing-mode",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "STANDARD",
+       "TIERED_BUNDLE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-scene",
+   "description": "Updates a scene.",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--content-location",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--scene-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scene-metadata",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workspace",
+   "description": "Updates a workspace.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {}
+    },
+    {
+     "name": "--s3-location",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

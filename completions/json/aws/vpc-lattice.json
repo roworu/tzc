@@ -1,0 +1,1518 @@
+{
+ "name": "vpc-lattice",
+ "description": "Amazon VPC Lattice is a fully managed application networking service that you use to connect, secure, and monitor all of your services across multiple accounts and virtual private clouds (VPCs).",
+ "subcommands": [
+  {
+   "name": "batch-update-rule",
+   "description": "Updates the listener rules in a batch.",
+   "options": [
+    {
+     "name": "--listener-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-access-log-subscription",
+   "description": "Enables access logs to be sent to Amazon CloudWatch, Amazon S3, and Amazon Kinesis Data Firehose.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destination-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-network-log-type",
+     "args": {
+      "suggestions": [
+       "SERVICE",
+       "RESOURCE"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-listener",
+   "description": "Creates a listener for a service.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--default-action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "HTTP",
+       "HTTPS",
+       "TLS_PASSTHROUGH"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-resource-configuration",
+   "description": "Creates a resource configuration.",
+   "options": [
+    {
+     "name": "--allow-association-to-shareable-service-network"
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--domain-verification-identifier",
+     "args": {}
+    },
+    {
+     "name": "--group-domain",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-association-to-shareable-service-network"
+    },
+    {
+     "name": "--port-ranges",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "TCP"
+      ]
+     }
+    },
+    {
+     "name": "--resource-configuration-definition",
+     "args": {}
+    },
+    {
+     "name": "--resource-configuration-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--resource-gateway-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "GROUP",
+       "CHILD",
+       "SINGLE",
+       "ARN"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-resource-gateway",
+   "description": "A resource gateway is a point of ingress into the VPC where a resource resides.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6",
+       "DUALSTACK"
+      ]
+     }
+    },
+    {
+     "name": "--ipv4-addresses-per-eni",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-config-dns-resolution",
+     "args": {
+      "suggestions": [
+       "IN_VPC",
+       "PUBLIC"
+      ]
+     }
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-rule",
+   "description": "Creates a listener rule.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--listener-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--match",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--priority",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service",
+   "description": "Creates a service.",
+   "options": [
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AWS_IAM"
+      ]
+     }
+    },
+    {
+     "name": "--certificate-arn",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--idle-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service-network",
+   "description": "Creates a service network.",
+   "options": [
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AWS_IAM"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sharing-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service-network-resource-association",
+   "description": "Associates the specified service network with the specified resource configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--no-private-dns-enabled"
+    },
+    {
+     "name": "--private-dns-enabled"
+    },
+    {
+     "name": "--resource-configuration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-network-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service-network-service-association",
+   "description": "Associates the specified service with the specified service network.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-network-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service-network-vpc-association",
+   "description": "Associates a VPC with a service network.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dns-options",
+     "args": {}
+    },
+    {
+     "name": "--no-private-dns-enabled"
+    },
+    {
+     "name": "--private-dns-enabled"
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--service-network-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-target-group",
+   "description": "Creates a target group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "IP",
+       "LAMBDA",
+       "INSTANCE",
+       "ALB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-log-subscription",
+   "description": "Deletes the specified access log subscription.",
+   "options": [
+    {
+     "name": "--access-log-subscription-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-auth-policy",
+   "description": "Deletes the specified auth policy.",
+   "options": [
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain-verification",
+   "description": "Deletes the specified domain verification.",
+   "options": [
+    {
+     "name": "--domain-verification-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-listener",
+   "description": "Deletes the specified listener.",
+   "options": [
+    {
+     "name": "--listener-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-configuration",
+   "description": "Deletes the specified resource configuration.",
+   "options": [
+    {
+     "name": "--resource-configuration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-endpoint-association",
+   "description": "Disassociates the resource configuration from the resource VPC endpoint.",
+   "options": [
+    {
+     "name": "--resource-endpoint-association-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-gateway",
+   "description": "Deletes the specified resource gateway.",
+   "options": [
+    {
+     "name": "--resource-gateway-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes the specified resource policy.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-rule",
+   "description": "Deletes a listener rule.",
+   "options": [
+    {
+     "name": "--listener-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service",
+   "description": "Deletes a service.",
+   "options": [
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-network",
+   "description": "Deletes a service network.",
+   "options": [
+    {
+     "name": "--service-network-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-network-resource-association",
+   "description": "Deletes the association between a service network and a resource configuration.",
+   "options": [
+    {
+     "name": "--service-network-resource-association-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-network-service-association",
+   "description": "Deletes the association between a service and a service network.",
+   "options": [
+    {
+     "name": "--service-network-service-association-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-network-vpc-association",
+   "description": "Disassociates the VPC from the service network.",
+   "options": [
+    {
+     "name": "--service-network-vpc-association-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-target-group",
+   "description": "Deletes a target group.",
+   "options": [
+    {
+     "name": "--target-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-targets",
+   "description": "Deregisters the specified targets from the specified target group.",
+   "options": [
+    {
+     "name": "--target-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-log-subscription",
+   "description": "Retrieves information about the specified access log subscription.",
+   "options": [
+    {
+     "name": "--access-log-subscription-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-auth-policy",
+   "description": "Retrieves information about the auth policy for the specified service or service network.",
+   "options": [
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain-verification",
+   "description": "Retrieves information about a domain verification.\u00df",
+   "options": [
+    {
+     "name": "--domain-verification-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-listener",
+   "description": "Retrieves information about the specified listener for the specified service.",
+   "options": [
+    {
+     "name": "--listener-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-configuration",
+   "description": "Retrieves information about the specified resource configuration.",
+   "options": [
+    {
+     "name": "--resource-configuration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-gateway",
+   "description": "Retrieves information about the specified resource gateway.",
+   "options": [
+    {
+     "name": "--resource-gateway-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Retrieves information about the specified resource policy.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-rule",
+   "description": "Retrieves information about the specified listener rules.",
+   "options": [
+    {
+     "name": "--listener-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service",
+   "description": "Retrieves information about the specified service.",
+   "options": [
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-network",
+   "description": "Retrieves information about the specified service network.",
+   "options": [
+    {
+     "name": "--service-network-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-network-resource-association",
+   "description": "Retrieves information about the specified association between a service network and a resource configuration.",
+   "options": [
+    {
+     "name": "--service-network-resource-association-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-network-service-association",
+   "description": "Retrieves information about the specified association between a service network and a service.",
+   "options": [
+    {
+     "name": "--service-network-service-association-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-network-vpc-association",
+   "description": "Retrieves information about the specified association between a service network and a VPC.",
+   "options": [
+    {
+     "name": "--service-network-vpc-association-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-target-group",
+   "description": "Retrieves information about the specified target group.",
+   "options": [
+    {
+     "name": "--target-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-access-log-subscriptions",
+   "description": "Lists the access log subscriptions for the specified service network or service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domain-verifications",
+   "description": "Lists the domain verifications.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-listeners",
+   "description": "Lists the listeners for the specified service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-configurations",
+   "description": "Lists the resource configurations owned by or shared with this account.",
+   "options": [
+    {
+     "name": "--domain-verification-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-configuration-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--resource-gateway-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-endpoint-associations",
+   "description": "Lists the associations for the specified VPC endpoint.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-configuration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-endpoint-association-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-gateways",
+   "description": "Lists the resource gateways that you own or that were shared with you.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-rules",
+   "description": "Lists the rules for the specified listener.",
+   "options": [
+    {
+     "name": "--listener-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-network-resource-associations",
+   "description": "Lists the associations between a service network and a resource configuration.",
+   "options": [
+    {
+     "name": "--include-children"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-children"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-configuration-identifier",
+     "args": {}
+    },
+    {
+     "name": "--service-network-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-network-service-associations",
+   "description": "Lists the associations between a service network and a service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-identifier",
+     "args": {}
+    },
+    {
+     "name": "--service-network-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-network-vpc-associations",
+   "description": "Lists the associations between a service network and a VPC.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-network-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-network-vpc-endpoint-associations",
+   "description": "Lists the associations between a service network and a VPC endpoint.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-network-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-networks",
+   "description": "Lists the service networks owned by or shared with this account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "Lists the services owned by the caller account or shared with the caller account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-target-groups",
+   "description": "Lists your target groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-group-type",
+     "args": {
+      "suggestions": [
+       "IP",
+       "LAMBDA",
+       "INSTANCE",
+       "ALB"
+      ]
+     }
+    },
+    {
+     "name": "--vpc-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-targets",
+   "description": "Lists the targets for the target group.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-auth-policy",
+   "description": "Creates or updates the auth policy.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Attaches a resource-based permission policy to a service or service network.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-targets",
+   "description": "Registers the targets with the target group.",
+   "options": [
+    {
+     "name": "--target-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-domain-verification",
+   "description": "Starts the domain verification process for a custom domain name.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds the specified tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-access-log-subscription",
+   "description": "Updates the specified access log subscription.",
+   "options": [
+    {
+     "name": "--access-log-subscription-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-listener",
+   "description": "Updates the specified listener for the specified service.",
+   "options": [
+    {
+     "name": "--default-action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--listener-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-resource-configuration",
+   "description": "Updates the specified resource configuration.",
+   "options": [
+    {
+     "name": "--allow-association-to-shareable-service-network"
+    },
+    {
+     "name": "--no-allow-association-to-shareable-service-network"
+    },
+    {
+     "name": "--port-ranges",
+     "args": {}
+    },
+    {
+     "name": "--resource-configuration-definition",
+     "args": {}
+    },
+    {
+     "name": "--resource-configuration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-resource-gateway",
+   "description": "Updates the specified resource gateway.",
+   "options": [
+    {
+     "name": "--resource-gateway-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-rule",
+   "description": "Updates a specified rule for the listener.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {}
+    },
+    {
+     "name": "--listener-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--match",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service",
+   "description": "Updates the specified service.",
+   "options": [
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AWS_IAM"
+      ]
+     }
+    },
+    {
+     "name": "--certificate-arn",
+     "args": {}
+    },
+    {
+     "name": "--idle-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--service-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-network",
+   "description": "Updates the specified service network.",
+   "options": [
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AWS_IAM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-network-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-network-vpc-association",
+   "description": "Updates the service network and VPC association.",
+   "options": [
+    {
+     "name": "--security-group-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-network-vpc-association-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-target-group",
+   "description": "Updates the specified target group.",
+   "options": [
+    {
+     "name": "--health-check",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,971 @@
+{
+ "name": "appmesh",
+ "description": "App Mesh is a service mesh based on the Envoy proxy that makes it easy to monitor and control microservices.",
+ "subcommands": [
+  {
+   "name": "create-gateway-route",
+   "description": "Creates a gateway route.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--gateway-route-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--virtual-gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-mesh",
+   "description": "Creates a service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--spec",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-route",
+   "description": "Creates a route that is associated with a virtual router.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--route-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--virtual-router-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-virtual-gateway",
+   "description": "Creates a virtual gateway.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--virtual-gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-virtual-node",
+   "description": "Creates a virtual node within a service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--virtual-node-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-virtual-router",
+   "description": "Creates a virtual router within a service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--virtual-router-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-virtual-service",
+   "description": "Creates a virtual service within a service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--virtual-service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-gateway-route",
+   "description": "Deletes an existing gateway route.",
+   "options": [
+    {
+     "name": "--gateway-route-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-mesh",
+   "description": "Deletes an existing service mesh.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-route",
+   "description": "Deletes an existing route.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--route-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-router-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-virtual-gateway",
+   "description": "Deletes an existing virtual gateway.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-virtual-node",
+   "description": "Deletes an existing virtual node.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-node-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-virtual-router",
+   "description": "Deletes an existing virtual router.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-router-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-virtual-service",
+   "description": "Deletes an existing virtual service.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-gateway-route",
+   "description": "Describes an existing gateway route.",
+   "options": [
+    {
+     "name": "--gateway-route-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-mesh",
+   "description": "Describes an existing service mesh.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-route",
+   "description": "Describes an existing route.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--route-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-router-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-virtual-gateway",
+   "description": "Describes an existing virtual gateway.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-virtual-node",
+   "description": "Describes an existing virtual node.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-node-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-virtual-router",
+   "description": "Describes an existing virtual router.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-router-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-virtual-service",
+   "description": "Describes an existing virtual service.",
+   "options": [
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--virtual-service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-gateway-routes",
+   "description": "Returns a list of existing gateway routes that are associated to a virtual gateway.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--virtual-gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-meshes",
+   "description": "Returns a list of existing service meshes.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-routes",
+   "description": "Returns a list of existing routes in a service mesh.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--virtual-router-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List the tags for an App Mesh resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-virtual-gateways",
+   "description": "Returns a list of existing virtual gateways in a service mesh.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-virtual-nodes",
+   "description": "Returns a list of existing virtual nodes.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-virtual-routers",
+   "description": "Returns a list of existing virtual routers in a service mesh.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-virtual-services",
+   "description": "Returns a list of existing virtual services in a service mesh.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags to a resource with the specified resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes specified tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-gateway-route",
+   "description": "Updates an existing gateway route that is associated to a specified virtual gateway in a service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--gateway-route-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-mesh",
+   "description": "Updates an existing service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--spec",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-route",
+   "description": "Updates an existing route for a specified service mesh and virtual router.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--route-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-router-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-virtual-gateway",
+   "description": "Updates an existing virtual gateway in a specified service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-virtual-node",
+   "description": "Updates an existing virtual node in a specified service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-node-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-virtual-router",
+   "description": "Updates an existing virtual router in a specified service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-router-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-virtual-service",
+   "description": "Updates an existing virtual service in a specified service mesh.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--mesh-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mesh-owner",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

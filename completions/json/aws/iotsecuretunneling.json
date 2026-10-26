@@ -1,0 +1,143 @@
+{
+ "name": "iotsecuretunneling",
+ "description": "IoT Secure Tunneling IoT Secure Tunneling creates remote connections to devices deployed in the field.",
+ "subcommands": [
+  {
+   "name": "close-tunnel",
+   "description": "Closes a tunnel identified by the unique tunnel id.",
+   "options": [
+    {
+     "name": "--delete"
+    },
+    {
+     "name": "--no-delete"
+    },
+    {
+     "name": "--tunnel-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-tunnel",
+   "description": "Gets information about a tunnel identified by the unique tunnel id.",
+   "options": [
+    {
+     "name": "--tunnel-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tunnels",
+   "description": "List all tunnels for an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "open-tunnel",
+   "description": "Creates a new tunnel, and returns two client access tokens for clients to use to connect to the IoT Secure Tunneling proxy server.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--destination-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "rotate-tunnel-access-token",
+   "description": "Revokes the current client access token (CAT) and returns new CAT for clients to use when reconnecting to secure tunneling to access the same tunnel.",
+   "options": [
+    {
+     "name": "--client-mode",
+     "args": {
+      "suggestions": [
+       "SOURCE",
+       "DESTINATION",
+       "ALL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--destination-config",
+     "args": {}
+    },
+    {
+     "name": "--tunnel-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "A resource tag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

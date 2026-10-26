@@ -1,0 +1,4002 @@
+{
+ "name": "redshift",
+ "description": "Amazon Redshift Overview This is an interface reference for Amazon Redshift.",
+ "subcommands": [
+  {
+   "name": "accept-reserved-node-exchange",
+   "description": "Exchanges a DC1 Reserved Node for a DC2 Reserved Node with no changes to the configuration (term, payment type, or number of nodes) and no additional costs.",
+   "options": [
+    {
+     "name": "--reserved-node-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-reserved-node-offering-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-partner",
+   "description": "Adds a partner integration to a cluster.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partner-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-data-share-consumer",
+   "description": "From a datashare consumer account, associates a datashare with the account (AssociateEntireAccount) or the specified namespace (ConsumerArn).",
+   "options": [
+    {
+     "name": "--allow-writes"
+    },
+    {
+     "name": "--associate-entire-account"
+    },
+    {
+     "name": "--consumer-arn",
+     "args": {}
+    },
+    {
+     "name": "--consumer-region",
+     "args": {}
+    },
+    {
+     "name": "--data-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-writes"
+    },
+    {
+     "name": "--no-associate-entire-account"
+    }
+   ]
+  },
+  {
+   "name": "authorize-cluster-security-group-ingress",
+   "description": "Adds an inbound (ingress) rule to an Amazon Redshift security group.",
+   "options": [
+    {
+     "name": "--cidrip",
+     "args": {}
+    },
+    {
+     "name": "--cluster-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ec2-security-group-name",
+     "args": {}
+    },
+    {
+     "name": "--ec2-security-group-owner-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "authorize-data-share",
+   "description": "From a data producer account, authorizes the sharing of a datashare with one or more consumer accounts or managing entities.",
+   "options": [
+    {
+     "name": "--allow-writes"
+    },
+    {
+     "name": "--consumer-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-writes"
+    }
+   ]
+  },
+  {
+   "name": "authorize-endpoint-access",
+   "description": "Grants access to a cluster.",
+   "options": [
+    {
+     "name": "--account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--vpc-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "authorize-snapshot-access",
+   "description": "Authorizes the specified Amazon Web Services account to restore the specified snapshot.",
+   "options": [
+    {
+     "name": "--account-with-restore-access",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-arn",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-cluster-snapshots",
+   "description": "Deletes a set of cluster snapshots.",
+   "options": [
+    {
+     "name": "--identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-modify-cluster-snapshots",
+   "description": "Modifies the settings for a set of cluster snapshots.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--manual-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--snapshot-identifier-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-resize",
+   "description": "Cancels a resize operation for a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-cluster-snapshot",
+   "description": "Copies the specified automated cluster snapshot to a new manual cluster snapshot.",
+   "options": [
+    {
+     "name": "--manual-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--source-snapshot-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-authentication-profile",
+   "description": "Creates an authentication profile with the specified parameters.",
+   "options": [
+    {
+     "name": "--authentication-profile-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Creates a new cluster with the specified parameters.",
+   "options": [
+    {
+     "name": "--additional-info",
+     "args": {}
+    },
+    {
+     "name": "--allow-version-upgrade"
+    },
+    {
+     "name": "--aqua-configuration-status",
+     "args": {
+      "suggestions": [
+       "enabled",
+       "disabled",
+       "auto"
+      ]
+     }
+    },
+    {
+     "name": "--automated-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-relocation"
+    },
+    {
+     "name": "--catalog-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--cluster-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-type",
+     "args": {}
+    },
+    {
+     "name": "--cluster-version",
+     "args": {}
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--default-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--elastic-ip",
+     "args": {}
+    },
+    {
+     "name": "--encrypted"
+    },
+    {
+     "name": "--enhanced-vpc-routing"
+    },
+    {
+     "name": "--extra-compute-for-automatic-optimization"
+    },
+    {
+     "name": "--hsm-client-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--hsm-configuration-identifier",
+     "args": {}
+    },
+    {
+     "name": "--iam-roles",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--load-sample-data",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-track-name",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-password"
+    },
+    {
+     "name": "--manual-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--master-password-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-username",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--no-allow-version-upgrade"
+    },
+    {
+     "name": "--no-availability-zone-relocation"
+    },
+    {
+     "name": "--no-encrypted"
+    },
+    {
+     "name": "--no-enhanced-vpc-routing"
+    },
+    {
+     "name": "--no-extra-compute-for-automatic-optimization"
+    },
+    {
+     "name": "--no-manage-master-password"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--node-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--number-of-nodes",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--redshift-idc-application-arn",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-schedule-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster-parameter-group",
+   "description": "Creates an Amazon Redshift parameter group.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameter-group-family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster-security-group",
+   "description": "Creates a new Amazon Redshift security group.",
+   "options": [
+    {
+     "name": "--cluster-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster-snapshot",
+   "description": "Creates a manual snapshot of the specified cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--manual-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster-subnet-group",
+   "description": "Creates a new Amazon Redshift subnet group.",
+   "options": [
+    {
+     "name": "--cluster-subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-custom-domain-association",
+   "description": "Used to create a custom domain name for a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-domain-certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-endpoint-access",
+   "description": "Creates a Redshift-managed VPC endpoint.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-owner",
+     "args": {}
+    },
+    {
+     "name": "--subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-subscription",
+   "description": "Creates an Amazon Redshift event notification subscription.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--event-categories",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--severity",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-ids",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {}
+    },
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-hsm-client-certificate",
+   "description": "Creates an HSM client certificate that an Amazon Redshift cluster will use to connect to the client's HSM in order to store and retrieve the keys used to encrypt the cluster databases.",
+   "options": [
+    {
+     "name": "--hsm-client-certificate-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-hsm-configuration",
+   "description": "Creates an HSM configuration that contains the information required by an Amazon Redshift cluster to store and use database encryption keys in a Hardware Security Module (HSM).",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hsm-configuration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hsm-ip-address",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hsm-partition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hsm-partition-password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hsm-server-public-certificate",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-integration",
+   "description": "Creates a zero-ETL integration or S3 event integration with Amazon Redshift.",
+   "options": [
+    {
+     "name": "--additional-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--integration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--source-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-qev2-idc-application",
+   "description": "Creates an Amazon Redshift Query Editor (QEV2) IAM Identity Center application.",
+   "options": [
+    {
+     "name": "--idc-display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idc-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--qev2-idc-application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-redshift-idc-application",
+   "description": "Creates an Amazon Redshift application for use with IAM Identity Center.",
+   "options": [
+    {
+     "name": "--application-type",
+     "args": {
+      "suggestions": [
+       "None",
+       "Lakehouse"
+      ]
+     }
+    },
+    {
+     "name": "--authorized-token-issuer-list",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idc-display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idc-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-namespace",
+     "args": {}
+    },
+    {
+     "name": "--redshift-idc-application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-integrations",
+     "args": {}
+    },
+    {
+     "name": "--sso-tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-scheduled-action",
+   "description": "Creates a scheduled action.",
+   "options": [
+    {
+     "name": "--enable"
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--iam-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enable"
+    },
+    {
+     "name": "--schedule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduled-action-description",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--target-action",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot-copy-grant",
+   "description": "Creates a snapshot copy grant that permits Amazon Redshift to use an encrypted symmetric key from Key Management Service (KMS) to encrypt copied snapshots in a destination region.",
+   "options": [
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-copy-grant-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot-schedule",
+   "description": "Create a snapshot schedule that can be associated to a cluster and which overrides the default system backup schedule.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--next-invocations",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--schedule-definitions",
+     "args": {}
+    },
+    {
+     "name": "--schedule-description",
+     "args": {}
+    },
+    {
+     "name": "--schedule-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-tags",
+   "description": "Adds tags to a cluster.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-usage-limit",
+   "description": "Creates a usage limit for a specified Amazon Redshift feature on a cluster.",
+   "options": [
+    {
+     "name": "--amount",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--breach-action",
+     "args": {
+      "suggestions": [
+       "log",
+       "emit-metric",
+       "disable"
+      ]
+     }
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature-type",
+     "args": {
+      "suggestions": [
+       "spectrum",
+       "concurrency-scaling",
+       "cross-region-datasharing",
+       "extra-compute-for-automatic-optimization"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--limit-type",
+     "args": {
+      "suggestions": [
+       "time",
+       "data-scanned"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {
+      "suggestions": [
+       "daily",
+       "weekly",
+       "monthly"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "deauthorize-data-share",
+   "description": "From a datashare producer account, removes authorization from the specified datashare.",
+   "options": [
+    {
+     "name": "--consumer-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-authentication-profile",
+   "description": "Deletes an authentication profile.",
+   "options": [
+    {
+     "name": "--authentication-profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Deletes a previously provisioned cluster without its final snapshot being created.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--final-cluster-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--final-cluster-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--no-skip-final-cluster-snapshot"
+    },
+    {
+     "name": "--skip-final-cluster-snapshot"
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster-parameter-group",
+   "description": "Deletes a specified Amazon Redshift parameter group.",
+   "options": [
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster-security-group",
+   "description": "Deletes an Amazon Redshift security group.",
+   "options": [
+    {
+     "name": "--cluster-security-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster-snapshot",
+   "description": "Deletes the specified manual snapshot.",
+   "options": [
+    {
+     "name": "--snapshot-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster-subnet-group",
+   "description": "Deletes the specified cluster subnet group.",
+   "options": [
+    {
+     "name": "--cluster-subnet-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-domain-association",
+   "description": "Contains information about deleting a custom domain association for a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-endpoint-access",
+   "description": "Deletes a Redshift-managed VPC endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-subscription",
+   "description": "Deletes an Amazon Redshift event notification subscription.",
+   "options": [
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-hsm-client-certificate",
+   "description": "Deletes the specified HSM client certificate.",
+   "options": [
+    {
+     "name": "--hsm-client-certificate-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-hsm-configuration",
+   "description": "Deletes the specified Amazon Redshift HSM configuration.",
+   "options": [
+    {
+     "name": "--hsm-configuration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-integration",
+   "description": "Deletes a zero-ETL integration or S3 event integration with Amazon Redshift.",
+   "options": [
+    {
+     "name": "--integration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-partner",
+   "description": "Deletes a partner integration from a cluster.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partner-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-qev2-idc-application",
+   "description": "Deletes an Amazon Redshift Query Editor (QEV2) IAM Identity Center application.",
+   "options": [
+    {
+     "name": "--qev2-idc-application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-redshift-idc-application",
+   "description": "Deletes an Amazon Redshift IAM Identity Center application.",
+   "options": [
+    {
+     "name": "--redshift-idc-application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes the resource policy for a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scheduled-action",
+   "description": "Deletes a scheduled action.",
+   "options": [
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-snapshot-copy-grant",
+   "description": "Deletes the specified snapshot copy grant.",
+   "options": [
+    {
+     "name": "--snapshot-copy-grant-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-snapshot-schedule",
+   "description": "Deletes a snapshot schedule.",
+   "options": [
+    {
+     "name": "--schedule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tags",
+   "description": "Deletes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-usage-limit",
+   "description": "Deletes a usage limit from a cluster.",
+   "options": [
+    {
+     "name": "--usage-limit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-namespace",
+   "description": "Deregisters a cluster or serverless namespace from the Amazon Web Services Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--consumer-identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-account-attributes",
+   "description": "Returns a list of attributes attached to an account",
+   "options": [
+    {
+     "name": "--attribute-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-authentication-profiles",
+   "description": "Describes an authentication profile.",
+   "options": [
+    {
+     "name": "--authentication-profile-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-db-revisions",
+   "description": "Returns an array of ClusterDbRevision objects.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-parameter-groups",
+   "description": "Returns a list of Amazon Redshift parameter groups, including parameter groups you created and the default parameter group.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-parameters",
+   "description": "Returns a detailed list of parameters contained within the specified Amazon Redshift parameter group.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-security-groups",
+   "description": "Returns information about Amazon Redshift security groups.",
+   "options": [
+    {
+     "name": "--cluster-security-group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-snapshots",
+   "description": "Returns one or more snapshot objects, which contain metadata about your cluster snapshots.",
+   "options": [
+    {
+     "name": "--cluster-exists"
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-cluster-exists"
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-arn",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-type",
+     "args": {}
+    },
+    {
+     "name": "--sorting-entities",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-subnet-groups",
+   "description": "Returns one or more cluster subnet group objects, which contain metadata about your cluster subnet groups.",
+   "options": [
+    {
+     "name": "--cluster-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-tracks",
+   "description": "Returns a list of all the available maintenance tracks.",
+   "options": [
+    {
+     "name": "--maintenance-track-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-versions",
+   "description": "Returns descriptions of the available Amazon Redshift cluster versions.",
+   "options": [
+    {
+     "name": "--cluster-parameter-group-family",
+     "args": {}
+    },
+    {
+     "name": "--cluster-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-clusters",
+   "description": "Returns properties of provisioned clusters including general cluster properties, cluster database properties, maintenance and backup properties, and security and access properties.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-custom-domain-associations",
+   "description": "Contains information about custom domain associations for a cluster.",
+   "options": [
+    {
+     "name": "--custom-domain-certificate-arn",
+     "args": {}
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-data-shares",
+   "description": "Shows the status of any inbound or outbound datashares available in the specified account.",
+   "options": [
+    {
+     "name": "--data-share-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-data-shares-for-consumer",
+   "description": "Returns a list of datashares where the account identifier being called is a consumer account identifier.",
+   "options": [
+    {
+     "name": "--consumer-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "AVAILABLE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-data-shares-for-producer",
+   "description": "Returns a list of datashares when the account identifier being called is a producer account identifier.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--producer-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "AUTHORIZED",
+       "PENDING_AUTHORIZATION",
+       "DEAUTHORIZED",
+       "REJECTED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-default-cluster-parameters",
+   "description": "Returns a list of parameter settings for the specified parameter group family.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoint-access",
+   "description": "Describes a Redshift-managed VPC endpoint.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-owner",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoint-authorization",
+   "description": "Describes an endpoint authorization.",
+   "options": [
+    {
+     "name": "--account",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--grantee"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-grantee"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-event-categories",
+   "description": "Displays a list of event categories for all event source types, or for a specified source type.",
+   "options": [
+    {
+     "name": "--source-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-event-subscriptions",
+   "description": "Lists descriptions of all the Amazon Redshift event notification subscriptions for a customer account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subscription-name",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-events",
+   "description": "Returns events related to clusters, security groups, snapshots, and parameter groups for the past 14 days.",
+   "options": [
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "cluster",
+       "cluster-parameter-group",
+       "cluster-security-group",
+       "cluster-snapshot",
+       "scheduled-action"
+      ]
+     }
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-hsm-client-certificates",
+   "description": "Returns information about the specified HSM client certificate.",
+   "options": [
+    {
+     "name": "--hsm-client-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-hsm-configurations",
+   "description": "Returns information about the specified Amazon Redshift HSM configuration.",
+   "options": [
+    {
+     "name": "--hsm-configuration-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-inbound-integrations",
+   "description": "Returns a list of inbound integrations.",
+   "options": [
+    {
+     "name": "--integration-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-integrations",
+   "description": "Describes one or more zero-ETL or S3 event integrations with Amazon Redshift.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--integration-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-logging-status",
+   "description": "Describes whether information, such as queries and connection attempts, is being logged for the specified Amazon Redshift cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-node-configuration-options",
+   "description": "Returns properties of possible node configurations such as node type, number of nodes, and disk usage for the specified action type.",
+   "options": [
+    {
+     "name": "--action-type",
+     "args": {
+      "suggestions": [
+       "restore-cluster",
+       "recommend-node-config",
+       "resize-cluster"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-arn",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-orderable-cluster-options",
+   "description": "Returns a list of orderable cluster options.",
+   "options": [
+    {
+     "name": "--cluster-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--node-type",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-partners",
+   "description": "Returns information about the partner integrations defined for a cluster.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--partner-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-qev2-idc-applications",
+   "description": "Lists the Amazon Redshift Query Editor (QEV2) IAM Identity Center applications.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--qev2-idc-application-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-redshift-idc-applications",
+   "description": "Lists the Amazon Redshift IAM Identity Center applications.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--redshift-idc-application-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-node-exchange-status",
+   "description": "Returns exchange status details and associated metadata for a reserved-node exchange.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reserved-node-exchange-request-id",
+     "args": {}
+    },
+    {
+     "name": "--reserved-node-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-node-offerings",
+   "description": "Returns a list of the available reserved node offerings by Amazon Redshift with their descriptions including the node type, the fixed and recurring costs of reserving the node and duration the node will be reserved for you.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reserved-node-offering-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-nodes",
+   "description": "Returns the descriptions of the reserved nodes.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reserved-node-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-resize",
+   "description": "Returns information about the last resize operation for the specified cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-scheduled-actions",
+   "description": "Describes properties of scheduled actions.",
+   "options": [
+    {
+     "name": "--active"
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-active"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-name",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-action-type",
+     "args": {
+      "suggestions": [
+       "ResizeCluster",
+       "PauseCluster",
+       "ResumeCluster"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-snapshot-copy-grants",
+   "description": "Returns a list of snapshot copy grants owned by the Amazon Web Services account in the destination region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-copy-grant-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-snapshot-schedules",
+   "description": "Returns a list of snapshot schedules.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--schedule-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-storage",
+   "description": "Returns account level backups storage size and provisional storage."
+  },
+  {
+   "name": "describe-table-restore-status",
+   "description": "Lists the status of one or more table restore requests made using the RestoreTableFromClusterSnapshot API action.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-restore-request-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tags",
+   "description": "Returns a list of tags.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-usage-limits",
+   "description": "Shows usage limits on a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--feature-type",
+     "args": {
+      "suggestions": [
+       "spectrum",
+       "concurrency-scaling",
+       "cross-region-datasharing",
+       "extra-compute-for-automatic-optimization"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--tag-values",
+     "args": {}
+    },
+    {
+     "name": "--usage-limit-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disable-logging",
+   "description": "Stops logging information, such as queries and connection attempts, for the specified Amazon Redshift cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-snapshot-copy",
+   "description": "Disables the automatic copying of snapshots from one region to another region for a specified cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-data-share-consumer",
+   "description": "From a datashare consumer account, remove association for the specified datashare.",
+   "options": [
+    {
+     "name": "--consumer-arn",
+     "args": {}
+    },
+    {
+     "name": "--consumer-region",
+     "args": {}
+    },
+    {
+     "name": "--data-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disassociate-entire-account"
+    },
+    {
+     "name": "--no-disassociate-entire-account"
+    }
+   ]
+  },
+  {
+   "name": "enable-logging",
+   "description": "Starts logging information, such as queries and connection attempts, for the specified Amazon Redshift cluster.",
+   "options": [
+    {
+     "name": "--bucket-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-destination-type",
+     "args": {
+      "suggestions": [
+       "s3",
+       "cloudwatch"
+      ]
+     }
+    },
+    {
+     "name": "--log-exports",
+     "args": {}
+    },
+    {
+     "name": "--s3-key-prefix",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "enable-snapshot-copy",
+   "description": "Enables the automatic copy of snapshots from one region to another region for a specified cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--manual-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--retention-period",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-copy-grant-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "failover-primary-compute",
+   "description": "Fails over the primary compute unit of the specified Multi-AZ cluster to another Availability Zone.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cluster-credentials",
+   "description": "Returns a database user name and temporary password with temporary authorization to log on to an Amazon Redshift database.",
+   "options": [
+    {
+     "name": "--auto-create"
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--db-groups",
+     "args": {}
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--db-user",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-create"
+    }
+   ]
+  },
+  {
+   "name": "get-cluster-credentials-with-iam",
+   "description": "Returns a database user name and temporary password with temporary authorization to log in to an Amazon Redshift database.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--duration-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-identity-center-auth-token",
+   "description": "Generates an encrypted authentication token that propagates the caller's Amazon Web Services IAM Identity Center identity to Amazon Redshift clusters.",
+   "options": [
+    {
+     "name": "--cluster-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-reserved-node-exchange-configuration-options",
+   "description": "Gets the configuration options for the reserved-node exchange.",
+   "options": [
+    {
+     "name": "--action-type",
+     "args": {
+      "suggestions": [
+       "restore-cluster",
+       "resize-cluster"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-reserved-node-exchange-offerings",
+   "description": "Returns an array of DC2 ReservedNodeOfferings that matches the payment type, term, and usage price of the given DC1 reserved node.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reserved-node-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Get the resource policy for a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-recommendations",
+   "description": "List the Amazon Redshift Advisor recommendations for one or multiple Amazon Redshift clusters in an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-arn",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-aqua-configuration",
+   "description": "This operation is retired.",
+   "options": [
+    {
+     "name": "--aqua-configuration-status",
+     "args": {
+      "suggestions": [
+       "enabled",
+       "disabled",
+       "auto"
+      ]
+     }
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-authentication-profile",
+   "description": "Modifies an authentication profile.",
+   "options": [
+    {
+     "name": "--authentication-profile-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster",
+   "description": "Modifies the settings for a cluster.",
+   "options": [
+    {
+     "name": "--allow-version-upgrade"
+    },
+    {
+     "name": "--automated-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-relocation"
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--cluster-type",
+     "args": {}
+    },
+    {
+     "name": "--cluster-version",
+     "args": {}
+    },
+    {
+     "name": "--elastic-ip",
+     "args": {}
+    },
+    {
+     "name": "--encrypted"
+    },
+    {
+     "name": "--enhanced-vpc-routing"
+    },
+    {
+     "name": "--extra-compute-for-automatic-optimization"
+    },
+    {
+     "name": "--hsm-client-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--hsm-configuration-identifier",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-track-name",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-password"
+    },
+    {
+     "name": "--manual-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--master-password-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--new-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-version-upgrade"
+    },
+    {
+     "name": "--no-availability-zone-relocation"
+    },
+    {
+     "name": "--no-encrypted"
+    },
+    {
+     "name": "--no-enhanced-vpc-routing"
+    },
+    {
+     "name": "--no-extra-compute-for-automatic-optimization"
+    },
+    {
+     "name": "--no-manage-master-password"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--node-type",
+     "args": {}
+    },
+    {
+     "name": "--number-of-nodes",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster-db-revision",
+   "description": "Modifies the database revision of a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster-iam-roles",
+   "description": "Modifies the list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web Services services.",
+   "options": [
+    {
+     "name": "--add-iam-roles",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--remove-iam-roles",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster-maintenance",
+   "description": "Modifies the maintenance settings of a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--defer-maintenance"
+    },
+    {
+     "name": "--defer-maintenance-duration",
+     "args": {}
+    },
+    {
+     "name": "--defer-maintenance-end-time",
+     "args": {}
+    },
+    {
+     "name": "--defer-maintenance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--defer-maintenance-start-time",
+     "args": {}
+    },
+    {
+     "name": "--no-defer-maintenance"
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster-parameter-group",
+   "description": "Modifies the parameters of a parameter group.",
+   "options": [
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster-snapshot",
+   "description": "Modifies the settings for a snapshot.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--manual-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster-snapshot-schedule",
+   "description": "Modifies a snapshot schedule for a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disassociate-schedule"
+    },
+    {
+     "name": "--no-disassociate-schedule"
+    },
+    {
+     "name": "--schedule-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster-subnet-group",
+   "description": "Modifies a cluster subnet group to include the specified list of VPC subnets.",
+   "options": [
+    {
+     "name": "--cluster-subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-custom-domain-association",
+   "description": "Contains information for changing a custom domain association.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-domain-certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-endpoint-access",
+   "description": "Modifies a Redshift-managed VPC endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-event-subscription",
+   "description": "Modifies an existing Amazon Redshift event notification subscription.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--event-categories",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--severity",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--source-ids",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {}
+    },
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-integration",
+   "description": "Modifies a zero-ETL integration or S3 event integration with Amazon Redshift.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--integration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-lakehouse-configuration",
+   "description": "Modifies the lakehouse configuration for a cluster.",
+   "options": [
+    {
+     "name": "--catalog-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--lakehouse-idc-application-arn",
+     "args": {}
+    },
+    {
+     "name": "--lakehouse-idc-registration",
+     "args": {
+      "suggestions": [
+       "Associate",
+       "Disassociate"
+      ]
+     }
+    },
+    {
+     "name": "--lakehouse-registration",
+     "args": {
+      "suggestions": [
+       "Register",
+       "Deregister"
+      ]
+     }
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "modify-qev2-idc-application",
+   "description": "Modifies an Amazon Redshift Query Editor (QEV2) IAM Identity Center application.",
+   "options": [
+    {
+     "name": "--idc-display-name",
+     "args": {}
+    },
+    {
+     "name": "--qev2-idc-application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-redshift-idc-application",
+   "description": "Changes an existing Amazon Redshift IAM Identity Center application.",
+   "options": [
+    {
+     "name": "--authorized-token-issuer-list",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--idc-display-name",
+     "args": {}
+    },
+    {
+     "name": "--identity-namespace",
+     "args": {}
+    },
+    {
+     "name": "--redshift-idc-application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-integrations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-scheduled-action",
+   "description": "Modifies a scheduled action.",
+   "options": [
+    {
+     "name": "--enable"
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--iam-role",
+     "args": {}
+    },
+    {
+     "name": "--no-enable"
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-description",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--target-action",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-snapshot-copy-retention-period",
+   "description": "Modifies the number of days to retain snapshots in the destination Amazon Web Services Region after they are copied from the source Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--manual"
+    },
+    {
+     "name": "--no-manual"
+    },
+    {
+     "name": "--retention-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-snapshot-schedule",
+   "description": "Modifies a snapshot schedule.",
+   "options": [
+    {
+     "name": "--schedule-definitions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-usage-limit",
+   "description": "Modifies a usage limit in a cluster.",
+   "options": [
+    {
+     "name": "--amount",
+     "args": {}
+    },
+    {
+     "name": "--breach-action",
+     "args": {
+      "suggestions": [
+       "log",
+       "emit-metric",
+       "disable"
+      ]
+     }
+    },
+    {
+     "name": "--usage-limit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "pause-cluster",
+   "description": "Pauses a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "purchase-reserved-node-offering",
+   "description": "Allows you to purchase reserved nodes.",
+   "options": [
+    {
+     "name": "--node-count",
+     "args": {}
+    },
+    {
+     "name": "--reserved-node-offering-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Updates the resource policy for a specified resource.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reboot-cluster",
+   "description": "Reboots a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-namespace",
+   "description": "Registers a cluster or serverless namespace to the Amazon Web Services Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--consumer-identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-data-share",
+   "description": "From a datashare consumer account, rejects the specified datashare.",
+   "options": [
+    {
+     "name": "--data-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-cluster-parameter-group",
+   "description": "Sets one or more parameters of the specified parameter group to their default values and sets the source values of the parameters to \"engine-default\".",
+   "options": [
+    {
+     "name": "--no-reset-all-parameters"
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--reset-all-parameters"
+    }
+   ]
+  },
+  {
+   "name": "resize-cluster",
+   "description": "Changes the size of the cluster.",
+   "options": [
+    {
+     "name": "--classic"
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-type",
+     "args": {}
+    },
+    {
+     "name": "--no-classic"
+    },
+    {
+     "name": "--node-type",
+     "args": {}
+    },
+    {
+     "name": "--number-of-nodes",
+     "args": {}
+    },
+    {
+     "name": "--reserved-node-id",
+     "args": {}
+    },
+    {
+     "name": "--target-reserved-node-offering-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-from-cluster-snapshot",
+   "description": "Creates a new cluster from a snapshot.",
+   "options": [
+    {
+     "name": "--additional-info",
+     "args": {}
+    },
+    {
+     "name": "--allow-version-upgrade"
+    },
+    {
+     "name": "--aqua-configuration-status",
+     "args": {
+      "suggestions": [
+       "enabled",
+       "disabled",
+       "auto"
+      ]
+     }
+    },
+    {
+     "name": "--automated-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-relocation"
+    },
+    {
+     "name": "--catalog-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--cluster-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--default-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--elastic-ip",
+     "args": {}
+    },
+    {
+     "name": "--encrypted"
+    },
+    {
+     "name": "--enhanced-vpc-routing"
+    },
+    {
+     "name": "--hsm-client-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--hsm-configuration-identifier",
+     "args": {}
+    },
+    {
+     "name": "--iam-roles",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-track-name",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-password"
+    },
+    {
+     "name": "--manual-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--master-password-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--no-allow-version-upgrade"
+    },
+    {
+     "name": "--no-availability-zone-relocation"
+    },
+    {
+     "name": "--no-encrypted"
+    },
+    {
+     "name": "--no-enhanced-vpc-routing"
+    },
+    {
+     "name": "--no-manage-master-password"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--node-type",
+     "args": {}
+    },
+    {
+     "name": "--number-of-nodes",
+     "args": {}
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--redshift-idc-application-arn",
+     "args": {}
+    },
+    {
+     "name": "--reserved-node-id",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-arn",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-schedule-identifier",
+     "args": {}
+    },
+    {
+     "name": "--target-reserved-node-offering-id",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-table-from-cluster-snapshot",
+   "description": "Creates a new table from a table in an Amazon Redshift cluster snapshot.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-case-sensitive-identifier"
+    },
+    {
+     "name": "--new-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enable-case-sensitive-identifier"
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-schema-name",
+     "args": {}
+    },
+    {
+     "name": "--source-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-database-name",
+     "args": {}
+    },
+    {
+     "name": "--target-schema-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "resume-cluster",
+   "description": "Resumes a paused cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-cluster-security-group-ingress",
+   "description": "Revokes an ingress rule in an Amazon Redshift security group for a previously authorized IP range or Amazon EC2 security group.",
+   "options": [
+    {
+     "name": "--cidrip",
+     "args": {}
+    },
+    {
+     "name": "--cluster-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ec2-security-group-name",
+     "args": {}
+    },
+    {
+     "name": "--ec2-security-group-owner-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "revoke-endpoint-access",
+   "description": "Revokes access to a cluster.",
+   "options": [
+    {
+     "name": "--account",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--vpc-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "revoke-snapshot-access",
+   "description": "Removes the ability of the specified Amazon Web Services account to restore the specified snapshot.",
+   "options": [
+    {
+     "name": "--account-with-restore-access",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-arn",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "rotate-encryption-key",
+   "description": "Rotates the encryption keys for a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-partner-status",
+   "description": "Updates the status of a partner integration.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partner-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Inactive",
+       "RuntimeFailure",
+       "ConnectionFailure"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--status-message",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "cluster-available",
+     "description": "Wait until JMESPath query Clusters[].ClusterStatus returns available for all elements when polling with ``describe-clusters``.",
+     "options": [
+      {
+       "name": "--cluster-identifier",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--tag-keys",
+       "args": {}
+      },
+      {
+       "name": "--tag-values",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "cluster-deleted",
+     "description": "Wait until ClusterNotFound is thrown when polling with ``describe-clusters``.",
+     "options": [
+      {
+       "name": "--cluster-identifier",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--tag-keys",
+       "args": {}
+      },
+      {
+       "name": "--tag-values",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "cluster-restored",
+     "description": "Wait until JMESPath query Clusters[].RestoreStatus.Status returns completed for all elements when polling with ``describe-clusters``.",
+     "options": [
+      {
+       "name": "--cluster-identifier",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--tag-keys",
+       "args": {}
+      },
+      {
+       "name": "--tag-values",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "snapshot-available",
+     "description": "Wait until JMESPath query Snapshots[].Status returns available for all elements when polling with ``describe-cluster-snapshots``.",
+     "options": [
+      {
+       "name": "--cluster-exists"
+      },
+      {
+       "name": "--cluster-identifier",
+       "args": {}
+      },
+      {
+       "name": "--end-time",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-cluster-exists"
+      },
+      {
+       "name": "--owner-account",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--snapshot-arn",
+       "args": {}
+      },
+      {
+       "name": "--snapshot-identifier",
+       "args": {}
+      },
+      {
+       "name": "--snapshot-type",
+       "args": {}
+      },
+      {
+       "name": "--sorting-entities",
+       "args": {}
+      },
+      {
+       "name": "--start-time",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--tag-keys",
+       "args": {}
+      },
+      {
+       "name": "--tag-values",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

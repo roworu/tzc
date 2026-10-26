@@ -1,0 +1,2257 @@
+{
+ "name": "storagegateway",
+ "description": "Storage Gateway Service Amazon FSx File Gateway is no longer available to new customers.",
+ "subcommands": [
+  {
+   "name": "activate-gateway",
+   "description": "Activates the gateway you previously deployed on your host.",
+   "options": [
+    {
+     "name": "--activation-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-timezone",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-type",
+     "args": {}
+    },
+    {
+     "name": "--medium-changer-type",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tape-drive-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "add-cache",
+   "description": "Configures one or more gateway local disks as cache for a gateway.",
+   "options": [
+    {
+     "name": "--disk-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-tags-to-resource",
+   "description": "Adds one or more tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-upload-buffer",
+   "description": "Configures one or more gateway local disks as upload buffer for a specified gateway.",
+   "options": [
+    {
+     "name": "--disk-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-working-storage",
+   "description": "Configures one or more gateway local disks as working storage for a gateway.",
+   "options": [
+    {
+     "name": "--disk-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "assign-tape-pool",
+   "description": "Assigns a tape to a tape pool for archiving.",
+   "options": [
+    {
+     "name": "--bypass-governance-retention"
+    },
+    {
+     "name": "--no-bypass-governance-retention"
+    },
+    {
+     "name": "--pool-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tape-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-file-system",
+   "description": "Associate an Amazon FSx file system with the FSx File Gateway.",
+   "options": [
+    {
+     "name": "--audit-destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--cache-attributes",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-volume",
+   "description": "Connects a volume to an iSCSI connection and then attaches the volume to the specified gateway.",
+   "options": [
+    {
+     "name": "--disk-id",
+     "args": {}
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-interface-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-name",
+     "args": {}
+    },
+    {
+     "name": "--volume-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-archival",
+   "description": "Cancels archiving of a virtual tape to the virtual tape shelf (VTS) after the archiving process is initiated.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tape-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-cache-report",
+   "description": "Cancels generation of a specified cache report.",
+   "options": [
+    {
+     "name": "--cache-report-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-retrieval",
+   "description": "Cancels retrieval of a virtual tape from the virtual tape shelf (VTS) to a gateway after the retrieval process is initiated.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tape-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cached-iscsi-volume",
+   "description": "Creates a cached volume on a specified cached volume gateway.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-encrypted"
+    },
+    {
+     "name": "--kms-key",
+     "args": {}
+    },
+    {
+     "name": "--network-interface-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-kms-encrypted"
+    },
+    {
+     "name": "--snapshot-id",
+     "args": {}
+    },
+    {
+     "name": "--source-volume-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--volume-size-in-bytes",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-nfs-file-share",
+   "description": "Creates a Network File System (NFS) file share on an existing S3 File Gateway.",
+   "options": [
+    {
+     "name": "--audit-destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--bucket-region",
+     "args": {}
+    },
+    {
+     "name": "--cache-attributes",
+     "args": {}
+    },
+    {
+     "name": "--client-list",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-storage-class",
+     "args": {}
+    },
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "SseS3",
+       "SseKms",
+       "DsseKms"
+      ]
+     }
+    },
+    {
+     "name": "--file-share-name",
+     "args": {}
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guess-mime-type-enabled"
+    },
+    {
+     "name": "--kms-encrypted"
+    },
+    {
+     "name": "--kms-key",
+     "args": {}
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nfs-file-share-defaults",
+     "args": {}
+    },
+    {
+     "name": "--no-guess-mime-type-enabled"
+    },
+    {
+     "name": "--no-kms-encrypted"
+    },
+    {
+     "name": "--no-read-only"
+    },
+    {
+     "name": "--no-requester-pays"
+    },
+    {
+     "name": "--notification-policy",
+     "args": {}
+    },
+    {
+     "name": "--object-acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control",
+       "aws-exec-read"
+      ]
+     }
+    },
+    {
+     "name": "--read-only"
+    },
+    {
+     "name": "--requester-pays"
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--squash",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-dns-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-smb-file-share",
+   "description": "Creates a Server Message Block (SMB) file share on an existing S3 File Gateway.",
+   "options": [
+    {
+     "name": "--access-based-enumeration"
+    },
+    {
+     "name": "--admin-user-list",
+     "args": {}
+    },
+    {
+     "name": "--audit-destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--authentication",
+     "args": {}
+    },
+    {
+     "name": "--bucket-region",
+     "args": {}
+    },
+    {
+     "name": "--cache-attributes",
+     "args": {}
+    },
+    {
+     "name": "--case-sensitivity",
+     "args": {
+      "suggestions": [
+       "ClientSpecified",
+       "CaseSensitive"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-storage-class",
+     "args": {}
+    },
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "SseS3",
+       "SseKms",
+       "DsseKms"
+      ]
+     }
+    },
+    {
+     "name": "--file-share-name",
+     "args": {}
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guess-mime-type-enabled"
+    },
+    {
+     "name": "--invalid-user-list",
+     "args": {}
+    },
+    {
+     "name": "--kms-encrypted"
+    },
+    {
+     "name": "--kms-key",
+     "args": {}
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-access-based-enumeration"
+    },
+    {
+     "name": "--no-guess-mime-type-enabled"
+    },
+    {
+     "name": "--no-kms-encrypted"
+    },
+    {
+     "name": "--no-oplocks-enabled"
+    },
+    {
+     "name": "--no-read-only"
+    },
+    {
+     "name": "--no-requester-pays"
+    },
+    {
+     "name": "--no-smbacl-enabled"
+    },
+    {
+     "name": "--notification-policy",
+     "args": {}
+    },
+    {
+     "name": "--object-acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control",
+       "aws-exec-read"
+      ]
+     }
+    },
+    {
+     "name": "--oplocks-enabled"
+    },
+    {
+     "name": "--read-only"
+    },
+    {
+     "name": "--requester-pays"
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--smbacl-enabled"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--valid-user-list",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-dns-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot",
+   "description": "Initiates a snapshot of a volume.",
+   "options": [
+    {
+     "name": "--snapshot-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--volume-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot-from-volume-recovery-point",
+   "description": "Initiates a snapshot of a gateway from a volume recovery point.",
+   "options": [
+    {
+     "name": "--snapshot-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--volume-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-stored-iscsi-volume",
+   "description": "Creates a volume on a specified gateway.",
+   "options": [
+    {
+     "name": "--disk-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-encrypted"
+    },
+    {
+     "name": "--kms-key",
+     "args": {}
+    },
+    {
+     "name": "--network-interface-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-kms-encrypted"
+    },
+    {
+     "name": "--no-preserve-existing-data"
+    },
+    {
+     "name": "--preserve-existing-data",
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-tape-pool",
+   "description": "Creates a new custom tape pool.",
+   "options": [
+    {
+     "name": "--pool-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retention-lock-time-in-days",
+     "args": {}
+    },
+    {
+     "name": "--retention-lock-type",
+     "args": {
+      "suggestions": [
+       "COMPLIANCE",
+       "GOVERNANCE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--storage-class",
+     "args": {
+      "suggestions": [
+       "DEEP_ARCHIVE",
+       "GLACIER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-tape-with-barcode",
+   "description": "Creates a virtual tape by using your own barcode.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-encrypted"
+    },
+    {
+     "name": "--kms-key",
+     "args": {}
+    },
+    {
+     "name": "--no-kms-encrypted"
+    },
+    {
+     "name": "--no-worm"
+    },
+    {
+     "name": "--pool-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tape-barcode",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tape-size-in-bytes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--worm"
+    }
+   ]
+  },
+  {
+   "name": "create-tapes",
+   "description": "Creates one or more virtual tapes.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-encrypted"
+    },
+    {
+     "name": "--kms-key",
+     "args": {}
+    },
+    {
+     "name": "--no-kms-encrypted"
+    },
+    {
+     "name": "--no-worm"
+    },
+    {
+     "name": "--num-tapes-to-create",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pool-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tape-barcode-prefix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tape-size-in-bytes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--worm"
+    }
+   ]
+  },
+  {
+   "name": "delete-automatic-tape-creation-policy",
+   "description": "Deletes the automatic tape creation policy of a gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bandwidth-rate-limit",
+   "description": "Deletes the bandwidth rate limits of a gateway.",
+   "options": [
+    {
+     "name": "--bandwidth-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cache-report",
+   "description": "Deletes the specified cache report and any associated tags from the Storage Gateway database.",
+   "options": [
+    {
+     "name": "--cache-report-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-chap-credentials",
+   "description": "Deletes Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target and initiator pair.",
+   "options": [
+    {
+     "name": "--initiator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-file-share",
+   "description": "Deletes a file share from an S3 File Gateway.",
+   "options": [
+    {
+     "name": "--file-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--no-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "delete-gateway",
+   "description": "Deletes a gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-snapshot-schedule",
+   "description": "Deletes a snapshot of a volume.",
+   "options": [
+    {
+     "name": "--volume-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tape",
+   "description": "Deletes the specified virtual tape.",
+   "options": [
+    {
+     "name": "--bypass-governance-retention"
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-bypass-governance-retention"
+    },
+    {
+     "name": "--tape-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tape-archive",
+   "description": "Deletes the specified virtual tape from the virtual tape shelf (VTS).",
+   "options": [
+    {
+     "name": "--bypass-governance-retention"
+    },
+    {
+     "name": "--no-bypass-governance-retention"
+    },
+    {
+     "name": "--tape-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tape-pool",
+   "description": "Delete a custom tape pool.",
+   "options": [
+    {
+     "name": "--pool-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-volume",
+   "description": "Deletes the specified storage volume that you previously created using the CreateCachediSCSIVolume or CreateStorediSCSIVolume API.",
+   "options": [
+    {
+     "name": "--volume-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-availability-monitor-test",
+   "description": "Returns information about the most recent high availability monitoring test that was performed on the host in a cluster.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-bandwidth-rate-limit",
+   "description": "Returns the bandwidth rate limits of a gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-bandwidth-rate-limit-schedule",
+   "description": "Returns information about the bandwidth rate limit schedule of a gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cache",
+   "description": "Returns information about the cache of a gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cache-report",
+   "description": "Returns information about the specified cache report, including completion status and generation progress.",
+   "options": [
+    {
+     "name": "--cache-report-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cached-iscsi-volumes",
+   "description": "Returns a description of the gateway volumes specified in the request.",
+   "options": [
+    {
+     "name": "--volume-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-chap-credentials",
+   "description": "Returns an array of Challenge-Handshake Authentication Protocol (CHAP) credentials information for a specified iSCSI target, one for each target-initiator pair.",
+   "options": [
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-file-system-associations",
+   "description": "Gets the file system association information.",
+   "options": [
+    {
+     "name": "--file-system-association-arn-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-gateway-information",
+   "description": "Returns metadata about a gateway such as its name, network interfaces, time zone, status, and software version.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-maintenance-start-time",
+   "description": "Returns your gateway's maintenance window schedule information, with values for monthly or weekly cadence, specific day and time to begin maintenance, and which types of updates to apply.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-nfs-file-shares",
+   "description": "Gets a description for one or more Network File System (NFS) file shares from an S3 File Gateway.",
+   "options": [
+    {
+     "name": "--file-share-arn-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-smb-file-shares",
+   "description": "Gets a description for one or more Server Message Block (SMB) file shares from a S3 File Gateway.",
+   "options": [
+    {
+     "name": "--file-share-arn-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-smb-settings",
+   "description": "Gets a description of a Server Message Block (SMB) file share settings from a file gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-snapshot-schedule",
+   "description": "Describes the snapshot schedule for the specified gateway volume.",
+   "options": [
+    {
+     "name": "--volume-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-stored-iscsi-volumes",
+   "description": "Returns the description of the gateway volumes specified in the request.",
+   "options": [
+    {
+     "name": "--volume-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tape-archives",
+   "description": "Returns a description of specified virtual tapes in the virtual tape shelf (VTS).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tape-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tape-recovery-points",
+   "description": "Returns a list of virtual tape recovery points that are available for the specified tape gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tapes",
+   "description": "Returns a description of virtual tapes that correspond to the specified Amazon Resource Names (ARNs).",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tape-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-upload-buffer",
+   "description": "Returns information about the upload buffer of a gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-vtl-devices",
+   "description": "Returns a description of virtual tape library (VTL) devices for the specified tape gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vtl-device-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-working-storage",
+   "description": "Returns information about the working storage of a gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-volume",
+   "description": "Disconnects a volume from an iSCSI connection and then detaches the volume from the specified gateway.",
+   "options": [
+    {
+     "name": "--force-detach"
+    },
+    {
+     "name": "--no-force-detach"
+    },
+    {
+     "name": "--volume-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-gateway",
+   "description": "Disables a tape gateway when the gateway is no longer functioning.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-file-system",
+   "description": "Disassociates an Amazon FSx file system from the specified gateway.",
+   "options": [
+    {
+     "name": "--file-system-association-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--no-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "evict-files-failing-upload",
+   "description": "Starts a process that cleans the specified file share's cache of file entries that are failing upload to Amazon S3.",
+   "options": [
+    {
+     "name": "--file-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-remove"
+    },
+    {
+     "name": "--no-force-remove"
+    }
+   ]
+  },
+  {
+   "name": "join-domain",
+   "description": "Adds a file gateway to an Active Directory domain.",
+   "options": [
+    {
+     "name": "--domain-controllers",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organizational-unit",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--timeout-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-automatic-tape-creation-policies",
+   "description": "Lists the automatic tape creation policies for a gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cache-reports",
+   "description": "Returns a list of existing cache reports for all file shares associated with your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-file-shares",
+   "description": "Gets a list of the file shares for a specific S3 File Gateway, or the list of file shares that belong to the calling Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-file-system-associations",
+   "description": "Gets a list of FileSystemAssociationSummary objects.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-gateways",
+   "description": "Lists gateways owned by an Amazon Web Services account in an Amazon Web Services Region specified in the request.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-local-disks",
+   "description": "Returns a list of the gateway's local disks.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags that have been added to the specified resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tape-pools",
+   "description": "Lists custom tape pools.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pool-arns",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tapes",
+   "description": "Lists virtual tapes in your virtual tape library (VTL) and your virtual tape shelf (VTS).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tape-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-volume-initiators",
+   "description": "Lists iSCSI initiators that are connected to a volume.",
+   "options": [
+    {
+     "name": "--volume-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-volume-recovery-points",
+   "description": "Lists the recovery points for a specified gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-volumes",
+   "description": "Lists the iSCSI stored volumes of a gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "notify-when-uploaded",
+   "description": "Sends you notification through Amazon EventBridge when all files written to your file share have been uploaded to Amazon S3.",
+   "options": [
+    {
+     "name": "--file-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "refresh-cache",
+   "description": "Refreshes the cached inventory of objects for the specified file share.",
+   "options": [
+    {
+     "name": "--file-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--folder-list",
+     "args": {}
+    },
+    {
+     "name": "--no-recursive"
+    },
+    {
+     "name": "--recursive"
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-cache",
+   "description": "Resets all cache disks that have encountered an error and makes the disks available for reconfiguration as cache storage.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "retrieve-tape-archive",
+   "description": "Retrieves an archived virtual tape from the virtual tape shelf (VTS) to a tape gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tape-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "retrieve-tape-recovery-point",
+   "description": "Retrieves the recovery point for the specified virtual tape.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tape-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-local-console-password",
+   "description": "Sets the password for your VM local console.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--local-console-password",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-smb-guest-password",
+   "description": "Sets the password for the guest user smbguest.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "shutdown-gateway",
+   "description": "Shuts down a Tape Gateway or Volume Gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-availability-monitor-test",
+   "description": "Start a test that verifies that the specified gateway is configured for High Availability monitoring in your host environment.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-cache-report",
+   "description": "Starts generating a report of the file metadata currently cached by an S3 File Gateway for a specific file share.",
+   "options": [
+    {
+     "name": "--bucket-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exclusion-filters",
+     "args": {}
+    },
+    {
+     "name": "--file-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--inclusion-filters",
+     "args": {}
+    },
+    {
+     "name": "--location-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-dns-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-gateway",
+   "description": "Starts a gateway that you previously shut down (see ShutdownGateway).",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-automatic-tape-creation-policy",
+   "description": "Updates the automatic tape creation policy of a gateway.",
+   "options": [
+    {
+     "name": "--automatic-tape-creation-rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-bandwidth-rate-limit",
+   "description": "Updates the bandwidth rate limits of a gateway.",
+   "options": [
+    {
+     "name": "--average-download-rate-limit-in-bits-per-sec",
+     "args": {}
+    },
+    {
+     "name": "--average-upload-rate-limit-in-bits-per-sec",
+     "args": {}
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-bandwidth-rate-limit-schedule",
+   "description": "Updates the bandwidth rate limit schedule for a specified gateway.",
+   "options": [
+    {
+     "name": "--bandwidth-rate-limit-intervals",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-chap-credentials",
+   "description": "Updates the Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target.",
+   "options": [
+    {
+     "name": "--initiator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-to-authenticate-initiator",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-to-authenticate-target",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-file-system-association",
+   "description": "Updates a file system association.",
+   "options": [
+    {
+     "name": "--audit-destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--cache-attributes",
+     "args": {}
+    },
+    {
+     "name": "--file-system-association-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-gateway-information",
+   "description": "Updates a gateway's metadata, which includes the gateway's name, time zone, and metadata cache size.",
+   "options": [
+    {
+     "name": "--cloud-watch-log-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-capacity",
+     "args": {
+      "suggestions": [
+       "Small",
+       "Medium",
+       "Large"
+      ]
+     }
+    },
+    {
+     "name": "--gateway-name",
+     "args": {}
+    },
+    {
+     "name": "--gateway-timezone",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-gateway-software-now",
+   "description": "Updates the gateway virtual machine (VM) software.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-maintenance-start-time",
+   "description": "Updates a gateway's maintenance window schedule, with settings for monthly or weekly cadence, specific day and time to begin maintenance, and which types of updates to apply.",
+   "options": [
+    {
+     "name": "--day-of-month",
+     "args": {}
+    },
+    {
+     "name": "--day-of-week",
+     "args": {}
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hour-of-day",
+     "args": {}
+    },
+    {
+     "name": "--minute-of-hour",
+     "args": {}
+    },
+    {
+     "name": "--software-update-preferences",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-nfs-file-share",
+   "description": "Updates a Network File System (NFS) file share.",
+   "options": [
+    {
+     "name": "--audit-destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--cache-attributes",
+     "args": {}
+    },
+    {
+     "name": "--client-list",
+     "args": {}
+    },
+    {
+     "name": "--default-storage-class",
+     "args": {}
+    },
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "SseS3",
+       "SseKms",
+       "DsseKms"
+      ]
+     }
+    },
+    {
+     "name": "--file-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-share-name",
+     "args": {}
+    },
+    {
+     "name": "--guess-mime-type-enabled"
+    },
+    {
+     "name": "--kms-encrypted"
+    },
+    {
+     "name": "--kms-key",
+     "args": {}
+    },
+    {
+     "name": "--nfs-file-share-defaults",
+     "args": {}
+    },
+    {
+     "name": "--no-guess-mime-type-enabled"
+    },
+    {
+     "name": "--no-kms-encrypted"
+    },
+    {
+     "name": "--no-read-only"
+    },
+    {
+     "name": "--no-requester-pays"
+    },
+    {
+     "name": "--notification-policy",
+     "args": {}
+    },
+    {
+     "name": "--object-acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control",
+       "aws-exec-read"
+      ]
+     }
+    },
+    {
+     "name": "--read-only"
+    },
+    {
+     "name": "--requester-pays"
+    },
+    {
+     "name": "--squash",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-smb-file-share",
+   "description": "Updates a Server Message Block (SMB) file share.",
+   "options": [
+    {
+     "name": "--access-based-enumeration"
+    },
+    {
+     "name": "--admin-user-list",
+     "args": {}
+    },
+    {
+     "name": "--audit-destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--cache-attributes",
+     "args": {}
+    },
+    {
+     "name": "--case-sensitivity",
+     "args": {
+      "suggestions": [
+       "ClientSpecified",
+       "CaseSensitive"
+      ]
+     }
+    },
+    {
+     "name": "--default-storage-class",
+     "args": {}
+    },
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "SseS3",
+       "SseKms",
+       "DsseKms"
+      ]
+     }
+    },
+    {
+     "name": "--file-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-share-name",
+     "args": {}
+    },
+    {
+     "name": "--guess-mime-type-enabled"
+    },
+    {
+     "name": "--invalid-user-list",
+     "args": {}
+    },
+    {
+     "name": "--kms-encrypted"
+    },
+    {
+     "name": "--kms-key",
+     "args": {}
+    },
+    {
+     "name": "--no-access-based-enumeration"
+    },
+    {
+     "name": "--no-guess-mime-type-enabled"
+    },
+    {
+     "name": "--no-kms-encrypted"
+    },
+    {
+     "name": "--no-oplocks-enabled"
+    },
+    {
+     "name": "--no-read-only"
+    },
+    {
+     "name": "--no-requester-pays"
+    },
+    {
+     "name": "--no-smbacl-enabled"
+    },
+    {
+     "name": "--notification-policy",
+     "args": {}
+    },
+    {
+     "name": "--object-acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control",
+       "aws-exec-read"
+      ]
+     }
+    },
+    {
+     "name": "--oplocks-enabled"
+    },
+    {
+     "name": "--read-only"
+    },
+    {
+     "name": "--requester-pays"
+    },
+    {
+     "name": "--smbacl-enabled"
+    },
+    {
+     "name": "--valid-user-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-smb-file-share-visibility",
+   "description": "Controls whether the shares on an S3 File Gateway are visible in a net view or browse list.",
+   "options": [
+    {
+     "name": "--file-shares-visible",
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-file-shares-visible"
+    }
+   ]
+  },
+  {
+   "name": "update-smb-local-groups",
+   "description": "Updates the list of Active Directory users and groups that have special permissions for SMB file shares on the gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--smb-local-groups",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-smb-security-strategy",
+   "description": "Updates the SMB security strategy level for an Amazon S3 file gateway.",
+   "options": [
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--smb-security-strategy",
+     "args": {
+      "suggestions": [
+       "ClientSpecified",
+       "MandatorySigning",
+       "MandatoryEncryption",
+       "MandatoryEncryptionNoAes128"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-snapshot-schedule",
+   "description": "Updates a snapshot schedule configured for a gateway volume.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--recurrence-in-hours",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-at",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--volume-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-vtl-device-type",
+   "description": "Updates the type of medium changer in a tape gateway.",
+   "options": [
+    {
+     "name": "--device-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vtl-device-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

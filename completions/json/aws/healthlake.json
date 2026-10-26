@@ -1,0 +1,756 @@
+{
+ "name": "healthlake",
+ "description": "This is the AWS HealthLake API Reference.",
+ "subcommands": [
+  {
+   "name": "create-data-transformation-profile",
+   "description": "Creates a data transformation profile in DRAFT state.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--profile-description",
+     "args": {}
+    },
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-format",
+     "args": {
+      "suggestions": [
+       "CCDA",
+       "CSV"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-fhir-datastore",
+   "description": "Create a FHIR-enabled data store.",
+   "options": [
+    {
+     "name": "--analytics-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--datastore-name",
+     "args": {}
+    },
+    {
+     "name": "--datastore-type-version",
+     "args": {
+      "suggestions": [
+       "R4"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--identity-provider-configuration",
+     "args": {}
+    },
+    {
+     "name": "--nlp-configuration",
+     "args": {}
+    },
+    {
+     "name": "--preload-data-config",
+     "args": {}
+    },
+    {
+     "name": "--profile-configuration",
+     "args": {}
+    },
+    {
+     "name": "--sse-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-data-transformation-profile",
+   "description": "Deletes a data transformation profile and all its versions, including the DRAFT and all published versions.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-fhir-datastore",
+   "description": "Delete a FHIR-enabled data store.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-data-transformation-job",
+   "description": "Describes a data transformation job, including its current status, configuration, and progress information.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fhir-datastore",
+   "description": "Get properties for a FHIR-enabled data store.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fhir-export-job",
+   "description": "Get FHIR export job properties.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fhir-import-job",
+   "description": "Get the import job properties to learn more about the job or job progress.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-transformation-profile",
+   "description": "Retrieves a data transformation profile's metadata and profile content at a specific version.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-transformation-jobs",
+   "description": "Lists data transformation jobs for your AWS account.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--job-status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "QUEUED",
+       "IN_PROGRESS",
+       "COMPLETED",
+       "COMPLETED_WITH_ERRORS",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--submitted-after",
+     "args": {}
+    },
+    {
+     "name": "--submitted-before",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-transformation-profile-versions",
+   "description": "Lists all versions of a specific data transformation profile (DRAFT and published), in reverse chronological order (newest first).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-transformation-profiles",
+   "description": "Lists all data transformation profiles in your account, returning the latest version summary for each.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-format",
+     "args": {
+      "suggestions": [
+       "CCDA",
+       "CSV"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fhir-datastores",
+   "description": "List all FHIR-enabled data stores in a user\u2019s account, regardless of data store status.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fhir-export-jobs",
+   "description": "Lists all FHIR export jobs associated with an account and their statuses.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--job-status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "QUEUED",
+       "IN_PROGRESS",
+       "COMPLETED_WITH_ERRORS",
+       "COMPLETED",
+       "FAILED",
+       "CANCEL_SUBMITTED",
+       "CANCEL_IN_PROGRESS",
+       "CANCEL_COMPLETED",
+       "CANCEL_FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--submitted-after",
+     "args": {}
+    },
+    {
+     "name": "--submitted-before",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fhir-import-jobs",
+   "description": "List all FHIR import jobs associated with an account and their statuses.",
+   "options": [
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--job-status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "QUEUED",
+       "IN_PROGRESS",
+       "COMPLETED_WITH_ERRORS",
+       "COMPLETED",
+       "FAILED",
+       "CANCEL_SUBMITTED",
+       "CANCEL_IN_PROGRESS",
+       "CANCEL_COMPLETED",
+       "CANCEL_FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--submitted-after",
+     "args": {}
+    },
+    {
+     "name": "--submitted-before",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of all existing tags associated with a data store.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "publish-data-transformation-profile",
+   "description": "Promotes the current DRAFT version of a data transformation profile to a new immutable published version.",
+   "options": [
+    {
+     "name": "--change-description",
+     "args": {}
+    },
+    {
+     "name": "--from-existing-version",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-format",
+     "args": {
+      "suggestions": [
+       "CCDA",
+       "CSV"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-data-transformation-job",
+   "description": "Starts an asynchronous data transformation job that converts source files from Amazon Simple Storage Service (Amazon S3) and writes the output to Amazon S3 or AWS HealthLake.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--drift-detection-enabled"
+    },
+    {
+     "name": "--input-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--no-drift-detection-enabled"
+    },
+    {
+     "name": "--no-provenance-enabled"
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provenance-enabled"
+    }
+   ]
+  },
+  {
+   "name": "start-fhir-export-job",
+   "description": "Start a FHIR export job.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-fhir-import-job",
+   "description": "Start importing bulk FHIR data into an ACTIVE data store.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--drift-detection-enabled"
+    },
+    {
+     "name": "--input-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-format",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--job-output-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-drift-detection-enabled"
+    },
+    {
+     "name": "--profile-id",
+     "args": {}
+    },
+    {
+     "name": "--validation-level",
+     "args": {
+      "suggestions": [
+       "strict",
+       "structure-only",
+       "minimal"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add a user-specifed key and value tag to a data store.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove a user-specifed key and value tag from a data store.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-transformation-profile",
+   "description": "Updates the DRAFT version (version 0) of a data transformation profile with new profile content.",
+   "options": [
+    {
+     "name": "--change-description",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-mapping",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-fhir-datastore",
+   "description": "Update the properties of a FHIR-enabled data store.",
+   "options": [
+    {
+     "name": "--analytics-configuration",
+     "args": {}
+    },
+    {
+     "name": "--datastore-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--datastore-name",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-configuration",
+     "args": {}
+    },
+    {
+     "name": "--nlp-configuration",
+     "args": {}
+    },
+    {
+     "name": "--profile-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-profile-with-agent",
+   "description": "Updates a data transformation profile using chat-based interaction with an agent.",
+   "options": [
+    {
+     "name": "--conversation-id",
+     "args": {}
+    },
+    {
+     "name": "--input-message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-format",
+     "args": {
+      "suggestions": [
+       "CCDA",
+       "CSV"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "data-transformation-job-completed",
+     "description": "Wait until JMESPath query TransformationJobProperties.JobStatus returns COMPLETED when polling with ``describe-data-transformation-job``.",
+     "options": [
+      {
+       "name": "--job-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "fhir-datastore-active",
+     "description": "Wait until JMESPath query DatastoreProperties.DatastoreStatus returns ACTIVE when polling with ``describe-fhir-datastore``.",
+     "options": [
+      {
+       "name": "--datastore-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "fhir-datastore-deleted",
+     "description": "Wait until JMESPath query DatastoreProperties.DatastoreStatus returns DELETED when polling with ``describe-fhir-datastore``.",
+     "options": [
+      {
+       "name": "--datastore-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "fhir-export-job-completed",
+     "description": "Wait until JMESPath query ExportJobProperties.JobStatus returns COMPLETED when polling with ``describe-fhir-export-job``.",
+     "options": [
+      {
+       "name": "--datastore-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--job-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "fhir-import-job-completed",
+     "description": "Wait until JMESPath query ImportJobProperties.JobStatus returns COMPLETED when polling with ``describe-fhir-import-job``.",
+     "options": [
+      {
+       "name": "--datastore-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--job-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

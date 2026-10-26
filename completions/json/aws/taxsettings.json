@@ -1,0 +1,219 @@
+{
+ "name": "taxsettings",
+ "description": "You can use the tax setting API to programmatically set, modify, and delete the tax registration number (TRN), associated business legal name, and address (Collectively referred to as \"TRN information\").",
+ "subcommands": [
+  {
+   "name": "batch-delete-tax-registration",
+   "description": "Deletes tax registration for multiple accounts in batch.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-tax-exemptions",
+   "description": "Get the active tax exemptions for a given list of accounts.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-put-tax-registration",
+   "description": "Adds or updates tax registration for multiple accounts in batch.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tax-registration-entry",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-supplemental-tax-registration",
+   "description": "Deletes a supplemental tax registration for a single account.",
+   "options": [
+    {
+     "name": "--authority-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tax-registration",
+   "description": "Deletes tax registration for a single account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-tax-exemption-types",
+   "description": "Get supported tax exemption types."
+  },
+  {
+   "name": "get-tax-inheritance",
+   "description": "The get account tax inheritance status."
+  },
+  {
+   "name": "get-tax-registration",
+   "description": "Retrieves tax registration for a single account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-tax-registration-document",
+   "description": "Downloads your tax documents to the Amazon S3 bucket that you specify in your request.",
+   "options": [
+    {
+     "name": "--destination-s3-location",
+     "args": {}
+    },
+    {
+     "name": "--tax-document-metadata",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-supplemental-tax-registrations",
+   "description": "Retrieves supplemental tax registrations for a single account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tax-exemptions",
+   "description": "Retrieves the tax exemption of accounts listed in a consolidated billing family.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tax-registrations",
+   "description": "Retrieves the tax registration of accounts listed in a consolidated billing family.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-supplemental-tax-registration",
+   "description": "Stores supplemental tax registration for a single account.",
+   "options": [
+    {
+     "name": "--tax-registration-entry",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-tax-exemption",
+   "description": "Adds the tax exemption for a single account or all accounts listed in a consolidated billing family.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authority",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exemption-certificate",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exemption-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-tax-inheritance",
+   "description": "The updated tax inheritance status.",
+   "options": [
+    {
+     "name": "--heritage-status",
+     "args": {
+      "suggestions": [
+       "OptIn",
+       "OptOut"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "put-tax-registration",
+   "description": "Adds or updates tax registration for a single account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--tax-registration-entry",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

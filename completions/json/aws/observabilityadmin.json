@@ -1,0 +1,607 @@
+{
+ "name": "observabilityadmin",
+ "description": "You can use Amazon CloudWatch Observability Admin to discover and understand the state of telemetry configuration in CloudWatch for your Amazon Web Services Organization or account.",
+ "subcommands": [
+  {
+   "name": "create-centralization-rule-for-organization",
+   "description": "Creates a centralization rule that applies across an Amazon Web Services Organization.",
+   "options": [
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-s3-table-integration",
+   "description": "Creates an integration between CloudWatch and S3 Tables for analytics.",
+   "options": [
+    {
+     "name": "--encryption",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-telemetry-pipeline",
+   "description": "Creates a telemetry pipeline for processing and transforming telemetry data.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-telemetry-rule",
+   "description": "Creates a telemetry rule that defines how telemetry should be configured for Amazon Web Services resources in your account.",
+   "options": [
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-telemetry-rule-for-organization",
+   "description": "Creates a telemetry rule that applies across an Amazon Web Services Organization.",
+   "options": [
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-centralization-rule-for-organization",
+   "description": "Deletes an organization-wide centralization rule.",
+   "options": [
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-s3-table-integration",
+   "description": "Deletes an S3 Table integration and its associated data.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-telemetry-pipeline",
+   "description": "Deletes a telemetry pipeline and its associated resources.",
+   "options": [
+    {
+     "name": "--pipeline-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-telemetry-rule",
+   "description": "Deletes a telemetry rule from your account.",
+   "options": [
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-telemetry-rule-for-organization",
+   "description": "Deletes an organization-wide telemetry rule.",
+   "options": [
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-centralization-rule-for-organization",
+   "description": "Retrieves the details of a specific organization centralization rule.",
+   "options": [
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-s3-table-integration",
+   "description": "Retrieves information about a specific S3 Table integration, including its configuration, status, and metadata.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-telemetry-enrichment-status",
+   "description": "Returns the current status of the resource tags for telemetry feature, which enhances telemetry data with additional resource metadata from Resource Explorer."
+  },
+  {
+   "name": "get-telemetry-evaluation-status",
+   "description": "Returns the current onboarding status of the telemetry config feature, including the status of the feature and reason the feature failed to start or stop."
+  },
+  {
+   "name": "get-telemetry-evaluation-status-for-organization",
+   "description": "This returns the onboarding status of the telemetry configuration feature for the organization."
+  },
+  {
+   "name": "get-telemetry-pipeline",
+   "description": "Retrieves information about a specific telemetry pipeline, including its configuration, status, and metadata.",
+   "options": [
+    {
+     "name": "--pipeline-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-telemetry-rule",
+   "description": "Retrieves the details of a specific telemetry rule in your account.",
+   "options": [
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-telemetry-rule-for-organization",
+   "description": "Retrieves the details of a specific organization telemetry rule.",
+   "options": [
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-centralization-rules-for-organization",
+   "description": "Lists all centralization rules in your organization.",
+   "options": [
+    {
+     "name": "--all-regions"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-all-regions"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--rule-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-telemetry",
+   "description": "Returns a list of telemetry configurations for Amazon Web Services resources supported by telemetry config.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier-prefix",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--telemetry-configuration-state",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-telemetry-for-organization",
+   "description": "Returns a list of telemetry configurations for Amazon Web Services resources supported by telemetry config in the organization.",
+   "options": [
+    {
+     "name": "--account-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier-prefix",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--telemetry-configuration-state",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-s3-table-integrations",
+   "description": "Lists all S3 Table integrations in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags attached to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-telemetry-pipelines",
+   "description": "Returns a list of telemetry pipelines in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-telemetry-rules",
+   "description": "Lists all telemetry rules in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--rule-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-telemetry-rules-for-organization",
+   "description": "Lists all telemetry rules in your organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--rule-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--source-account-ids",
+     "args": {}
+    },
+    {
+     "name": "--source-organization-unit-ids",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-telemetry-enrichment",
+   "description": "Enables the resource tags for telemetry feature for your account, which enhances telemetry data with additional resource metadata from Resource Explorer to provide richer context for monitoring and observability."
+  },
+  {
+   "name": "start-telemetry-evaluation",
+   "description": "This action begins onboarding the caller Amazon Web Services account to the telemetry config feature.",
+   "options": [
+    {
+     "name": "--all-regions"
+    },
+    {
+     "name": "--no-all-regions"
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-telemetry-evaluation-for-organization",
+   "description": "This actions begins onboarding the organization and all member accounts to the telemetry config feature.",
+   "options": [
+    {
+     "name": "--all-regions"
+    },
+    {
+     "name": "--no-all-regions"
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-telemetry-enrichment",
+   "description": "Disables the resource tags for telemetry feature for your account, stopping the enhancement of telemetry data with additional resource metadata."
+  },
+  {
+   "name": "stop-telemetry-evaluation",
+   "description": "This action begins offboarding the caller Amazon Web Services account from the telemetry config feature."
+  },
+  {
+   "name": "stop-telemetry-evaluation-for-organization",
+   "description": "This action offboards the Organization of the caller Amazon Web Services account from the telemetry config feature."
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-telemetry-pipeline",
+   "description": "Tests a pipeline configuration with sample records to validate data processing before deployment.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--records",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signal-type",
+     "args": {
+      "suggestions": [
+       "LOG",
+       "METRIC"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-centralization-rule-for-organization",
+   "description": "Updates an existing centralization rule that applies across an Amazon Web Services Organization.",
+   "options": [
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-telemetry-pipeline",
+   "description": "Updates the configuration of an existing telemetry pipeline.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-telemetry-rule",
+   "description": "Updates an existing telemetry rule in your account.",
+   "options": [
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-telemetry-rule-for-organization",
+   "description": "Updates an existing telemetry rule that applies across an Amazon Web Services Organization.",
+   "options": [
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-telemetry-pipeline-configuration",
+   "description": "Validates a pipeline configuration without creating the pipeline.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,556 @@
+{
+ "name": "synthetics",
+ "description": "Amazon CloudWatch Synthetics You can use Amazon CloudWatch Synthetics to continually monitor your services.",
+ "subcommands": [
+  {
+   "name": "associate-resource",
+   "description": "Associates a canary with a group.",
+   "options": [
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-canary",
+   "description": "Creates a canary.",
+   "options": [
+    {
+     "name": "--add-replica-locations",
+     "args": {}
+    },
+    {
+     "name": "--artifact-config",
+     "args": {}
+    },
+    {
+     "name": "--artifact-s3-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--browser-configs",
+     "args": {}
+    },
+    {
+     "name": "--code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--failure-retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioned-resource-cleanup",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "OFF"
+      ]
+     }
+    },
+    {
+     "name": "--resources-to-replicate-tags",
+     "args": {}
+    },
+    {
+     "name": "--run-config",
+     "args": {}
+    },
+    {
+     "name": "--runtime-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--success-retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-group",
+   "description": "Creates a group which you can use to associate canaries with each other, including cross-Region canaries.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-canary",
+   "description": "Permanently deletes the specified canary.",
+   "options": [
+    {
+     "name": "--delete-lambda"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-delete-lambda"
+    }
+   ]
+  },
+  {
+   "name": "delete-group",
+   "description": "Deletes a group.",
+   "options": [
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-canaries",
+   "description": "This operation returns a list of the canaries in your account, along with full details about each canary.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-canaries-last-run",
+   "description": "Use this operation to see information from the most recent run of each canary that you have created.",
+   "options": [
+    {
+     "name": "--browser-type",
+     "args": {
+      "suggestions": [
+       "CHROME",
+       "FIREFOX"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-runtime-versions",
+   "description": "Returns a list of Synthetics canary runtime versions.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-resource",
+   "description": "Removes a canary from a group.",
+   "options": [
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-canary",
+   "description": "Retrieves complete information about one canary.",
+   "options": [
+    {
+     "name": "--dry-run-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-canary-runs",
+   "description": "Retrieves a list of runs for a specified canary.",
+   "options": [
+    {
+     "name": "--dry-run-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--run-type",
+     "args": {
+      "suggestions": [
+       "CANARY_RUN",
+       "DRY_RUN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-group",
+   "description": "Returns information about one group.",
+   "options": [
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-associated-groups",
+   "description": "Returns a list of the groups that the specified canary is associated with.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-group-resources",
+   "description": "This operation returns a list of the ARNs of the canaries that are associated with the specified group.",
+   "options": [
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-groups",
+   "description": "Returns a list of all groups in the account, displaying their names, unique IDs, and ARNs.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Displays the tags associated with a canary or group.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-canary",
+   "description": "Use this operation to run a canary that has already been created.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-canary-dry-run",
+   "description": "Use this operation to start a dry run for a canary that has already been created",
+   "options": [
+    {
+     "name": "--artifact-config",
+     "args": {}
+    },
+    {
+     "name": "--artifact-s3-location",
+     "args": {}
+    },
+    {
+     "name": "--browser-configs",
+     "args": {}
+    },
+    {
+     "name": "--code",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--failure-retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioned-resource-cleanup",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "OFF"
+      ]
+     }
+    },
+    {
+     "name": "--run-config",
+     "args": {}
+    },
+    {
+     "name": "--runtime-version",
+     "args": {}
+    },
+    {
+     "name": "--success-retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--visual-reference",
+     "args": {}
+    },
+    {
+     "name": "--visual-references",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-canary",
+   "description": "Stops the canary to prevent all future runs.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified canary or group.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-canary",
+   "description": "Updates the configuration of a canary that has already been created.",
+   "options": [
+    {
+     "name": "--add-replica-locations",
+     "args": {}
+    },
+    {
+     "name": "--artifact-config",
+     "args": {}
+    },
+    {
+     "name": "--artifact-s3-location",
+     "args": {}
+    },
+    {
+     "name": "--browser-configs",
+     "args": {}
+    },
+    {
+     "name": "--code",
+     "args": {}
+    },
+    {
+     "name": "--dry-run-id",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--failure-retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioned-resource-cleanup",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "OFF"
+      ]
+     }
+    },
+    {
+     "name": "--remove-replica-locations",
+     "args": {}
+    },
+    {
+     "name": "--run-config",
+     "args": {}
+    },
+    {
+     "name": "--runtime-version",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--success-retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--visual-reference",
+     "args": {}
+    },
+    {
+     "name": "--visual-references",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

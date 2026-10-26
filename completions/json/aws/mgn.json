@@ -1,0 +1,2639 @@
+{
+ "name": "mgn",
+ "description": "The Application Migration Service service.",
+ "subcommands": [
+  {
+   "name": "archive-application",
+   "description": "Archive application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "archive-wave",
+   "description": "Archive wave.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--wave-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-applications",
+   "description": "Associate applications to wave.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--application-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--wave-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-source-servers",
+   "description": "Associate source servers to application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-server-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "change-server-life-cycle-state",
+   "description": "Allows the user to set the SourceServer.LifeCycle.state property for specific Source Server IDs to one of the following: READY_FOR_TEST or READY_FOR_CUTOVER.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--life-cycle",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Create application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-connector",
+   "description": "Create Connector.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ssm-command-config",
+     "args": {}
+    },
+    {
+     "name": "--ssm-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-launch-configuration-template",
+   "description": "Creates a new Launch Configuration Template.",
+   "options": [
+    {
+     "name": "--associate-public-ip-address"
+    },
+    {
+     "name": "--boot-mode",
+     "args": {
+      "suggestions": [
+       "LEGACY_BIOS",
+       "UEFI",
+       "USE_SOURCE"
+      ]
+     }
+    },
+    {
+     "name": "--copy-private-ip"
+    },
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--enable-map-auto-tagging"
+    },
+    {
+     "name": "--enable-parameters-encryption"
+    },
+    {
+     "name": "--large-volume-conf",
+     "args": {}
+    },
+    {
+     "name": "--launch-disposition",
+     "args": {
+      "suggestions": [
+       "STOPPED",
+       "STARTED"
+      ]
+     }
+    },
+    {
+     "name": "--licensing",
+     "args": {}
+    },
+    {
+     "name": "--map-auto-tagging-mpe-id",
+     "args": {}
+    },
+    {
+     "name": "--no-associate-public-ip-address"
+    },
+    {
+     "name": "--no-copy-private-ip"
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--no-enable-map-auto-tagging"
+    },
+    {
+     "name": "--no-enable-parameters-encryption"
+    },
+    {
+     "name": "--parameters-encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--post-launch-actions",
+     "args": {}
+    },
+    {
+     "name": "--small-volume-conf",
+     "args": {}
+    },
+    {
+     "name": "--small-volume-max-size",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-instance-type-right-sizing-method",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "BASIC"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-network-migration-definition",
+   "description": "Creates a new network migration definition that specifies the source and target network configuration for a migration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-tags",
+     "args": {}
+    },
+    {
+     "name": "--source-configurations",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-deployment",
+     "args": {
+      "suggestions": [
+       "SINGLE_ACCOUNT",
+       "MULTI_ACCOUNT"
+      ]
+     }
+    },
+    {
+     "name": "--target-network",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-s3-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-replication-configuration-template",
+   "description": "Creates a new ReplicationConfigurationTemplate.",
+   "options": [
+    {
+     "name": "--associate-default-security-group",
+     "priority": 75
+    },
+    {
+     "name": "--bandwidth-throttling",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--create-public-ip",
+     "priority": 75
+    },
+    {
+     "name": "--data-plane-routing",
+     "args": {
+      "suggestions": [
+       "PRIVATE_IP",
+       "PUBLIC_IP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--default-large-staging-disk-type",
+     "args": {
+      "suggestions": [
+       "GP2",
+       "ST1",
+       "GP3"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--ebs-encryption",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "CUSTOM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--ebs-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--internet-protocol",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--no-associate-default-security-group"
+    },
+    {
+     "name": "--no-create-public-ip"
+    },
+    {
+     "name": "--no-store-snapshot-on-local-zone"
+    },
+    {
+     "name": "--no-use-dedicated-replication-server"
+    },
+    {
+     "name": "--no-use-fips-endpoint"
+    },
+    {
+     "name": "--replication-server-instance-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-servers-security-groups-ids",
+     "args": {}
+    },
+    {
+     "name": "--staging-area-subnet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--staging-area-tags",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-configuration",
+     "args": {}
+    },
+    {
+     "name": "--store-snapshot-on-local-zone"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--use-dedicated-replication-server",
+     "priority": 75
+    },
+    {
+     "name": "--use-fips-endpoint"
+    }
+   ]
+  },
+  {
+   "name": "create-wave",
+   "description": "Create wave.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Delete application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connector",
+   "description": "Delete Connector.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-job",
+   "description": "Deletes a single Job by ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-launch-configuration-template",
+   "description": "Deletes a single Launch Configuration Template by ID.",
+   "options": [
+    {
+     "name": "--launch-configuration-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-network-migration-definition",
+   "description": "Deletes a network migration definition.",
+   "options": [
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-configuration-template",
+   "description": "Deletes a single Replication Configuration Template by ID",
+   "options": [
+    {
+     "name": "--replication-configuration-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-source-server",
+   "description": "Deletes a single source server by ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vcenter-client",
+   "description": "Deletes a given vCenter client by ID.",
+   "options": [
+    {
+     "name": "--vcenter-client-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-wave",
+   "description": "Delete wave.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--wave-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job-log-items",
+   "description": "Retrieves detailed job log items with paging.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-jobs",
+   "description": "Returns a list of Jobs.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-launch-configuration-templates",
+   "description": "Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs",
+   "options": [
+    {
+     "name": "--launch-configuration-template-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-configuration-templates",
+   "description": "Lists all ReplicationConfigurationTemplates, filtered by Source Server IDs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--replication-configuration-template-ids",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-source-servers",
+   "description": "Retrieves all SourceServers or multiple SourceServers by ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-vcenter-clients",
+   "description": "Returns a list of the installed vCenter clients.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-applications",
+   "description": "Disassociate applications from wave.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--application-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--wave-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-source-servers",
+   "description": "Disassociate source servers from application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-server-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disconnect-from-service",
+   "description": "Disconnects specific Source Servers from Application Migration Service.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "finalize-cutover",
+   "description": "Finalizes the cutover immediately for specific Source Servers.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-launch-configuration",
+   "description": "Lists all LaunchConfigurations available, filtered by Source Server IDs.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-network-migration-definition",
+   "description": "Retrieves the details of a network migration definition including source and target configurations.",
+   "options": [
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-network-migration-mapper-segment-construct",
+   "description": "Retrieves detailed information about a specific construct within a mapper segment, including its properties and configuration data.",
+   "options": [
+    {
+     "name": "--construct-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-replication-configuration",
+   "description": "Lists all ReplicationConfigurations, filtered by Source Server ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "initialize-service",
+   "description": "Initialize Application Migration Service."
+  },
+  {
+   "name": "list-applications",
+   "description": "Retrieves all applications or multiple applications by ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connectors",
+   "description": "List Connectors.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-export-errors",
+   "description": "List export errors.",
+   "options": [
+    {
+     "name": "--export-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-exports",
+   "description": "List exports.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-import-errors",
+   "description": "List import errors.",
+   "options": [
+    {
+     "name": "--import-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-import-file-enrichments",
+   "description": "Lists import file enrichment jobs with optional filtering by job IDs.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-imports",
+   "description": "List imports.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-accounts",
+   "description": "List Managed Accounts.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-analyses",
+   "description": "Lists network migration analysis jobs for a specified execution.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-analysis-results",
+   "description": "Lists the results of network migration analyses, showing connectivity and compatibility findings for migrated resources.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-code-generation-segments",
+   "description": "Lists code generation segments, which represent individual infrastructure components generated as code templates.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-code-generations",
+   "description": "Lists network migration code generation jobs, which convert network mappings into infrastructure-as-code templates.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-definitions",
+   "description": "Lists all network migration definitions in the account, with optional filtering.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-deployed-stacks",
+   "description": "Lists CloudFormation stacks that have been deployed as part of the network migration.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-deployments",
+   "description": "Lists network migration deployment jobs and their current status.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-executions",
+   "description": "Lists network migration execution instances for a given definition, showing the status and progress of each execution.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-mapper-segment-constructs",
+   "description": "Lists constructs within a mapper segment, representing individual infrastructure components like VPCs, subnets, or security groups.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--segment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-mapper-segments",
+   "description": "Lists mapper segments, which represent logical groupings of network resources to be migrated together.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-mapping-updates",
+   "description": "Lists mapping update jobs, which apply customer modifications to the generated network mappings.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-migration-mappings",
+   "description": "Lists network migration mapping jobs, which analyze and create relationships between source and target network resources.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-source-server-actions",
+   "description": "List source server post migration custom actions.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List all tags for your Application Migration Service resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-template-actions",
+   "description": "List template post migration custom actions.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--launch-configuration-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-waves",
+   "description": "Retrieves all waves or multiple waves by ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "mark-as-archived",
+   "description": "Archives specific Source Servers by setting the SourceServer.isArchived property to true for specified SourceServers by ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "pause-replication",
+   "description": "Pause Replication.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-source-server-action",
+   "description": "Put source server post migration custom action.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--active"
+    },
+    {
+     "name": "--category",
+     "args": {
+      "suggestions": [
+       "DISASTER_RECOVERY",
+       "OPERATING_SYSTEM",
+       "LICENSE_AND_SUBSCRIPTION",
+       "VALIDATION",
+       "OBSERVABILITY",
+       "REFACTORING",
+       "SECURITY",
+       "NETWORKING",
+       "CONFIGURATION",
+       "BACKUP",
+       "OTHER"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--document-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--external-parameters",
+     "args": {}
+    },
+    {
+     "name": "--must-succeed-for-cutover"
+    },
+    {
+     "name": "--no-active"
+    },
+    {
+     "name": "--no-must-succeed-for-cutover"
+    },
+    {
+     "name": "--order",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--timeout-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-template-action",
+   "description": "Put template post migration custom action.",
+   "options": [
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--active"
+    },
+    {
+     "name": "--category",
+     "args": {
+      "suggestions": [
+       "DISASTER_RECOVERY",
+       "OPERATING_SYSTEM",
+       "LICENSE_AND_SUBSCRIPTION",
+       "VALIDATION",
+       "OBSERVABILITY",
+       "REFACTORING",
+       "SECURITY",
+       "NETWORKING",
+       "CONFIGURATION",
+       "BACKUP",
+       "OTHER"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--document-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--external-parameters",
+     "args": {}
+    },
+    {
+     "name": "--launch-configuration-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--must-succeed-for-cutover"
+    },
+    {
+     "name": "--no-active"
+    },
+    {
+     "name": "--no-must-succeed-for-cutover"
+    },
+    {
+     "name": "--operating-system",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--timeout-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-source-server-action",
+   "description": "Remove source server post migration custom action.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-template-action",
+   "description": "Remove template post migration custom action.",
+   "options": [
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--launch-configuration-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resume-replication",
+   "description": "Resume Replication.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "retry-data-replication",
+   "description": "Causes the data replication initiation sequence to begin immediately upon next Handshake for specified SourceServer IDs, regardless of when the previous initiation started.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-cutover",
+   "description": "Launches a Cutover Instance for specific Source Servers.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-export",
+   "description": "Start export.",
+   "options": [
+    {
+     "name": "--s3-bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--s3-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-import",
+   "description": "Start import.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-import-file-enrichment",
+   "description": "Starts an import file enrichment job to process and enrich network migration import files with additional metadata and IP assignment strategies.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--ip-assignment-strategy",
+     "args": {
+      "suggestions": [
+       "STATIC",
+       "DYNAMIC"
+      ]
+     }
+    },
+    {
+     "name": "--s3-bucket-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-bucket-target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-network-migration-analysis",
+   "description": "Starts a network migration analysis job to evaluate connectivity and compatibility of the migration mappings.",
+   "options": [
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-network-migration-code-generation",
+   "description": "Starts a code generation job to convert network migration mappings into infrastructure-as-code templates.",
+   "options": [
+    {
+     "name": "--code-generation-output-format-types",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-network-migration-deployment",
+   "description": "Starts a deployment job to create the target network infrastructure based on the generated code templates.",
+   "options": [
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-network-migration-mapping",
+   "description": "Starts the network migration mapping process for a given network migration execution.",
+   "options": [
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-mapping-strategy",
+     "args": {
+      "suggestions": [
+       "MAP",
+       "SKIP",
+       "MAP_DHCP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "start-network-migration-mapping-update",
+   "description": "Starts a job to apply customer modifications to network migration mappings, such as changing properties.",
+   "options": [
+    {
+     "name": "--constructs",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segments",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-replication",
+   "description": "Start replication for source server irrespective of its replication type.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-test",
+   "description": "Launches a Test Instance for specific Source Servers.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-replication",
+   "description": "Stop Replication.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or overwrites only the specified tags for the specified Application Migration Service resource or resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-target-instances",
+   "description": "Starts a job that terminates specific launched EC2 Test and Cutover instances.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--source-server-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "unarchive-application",
+   "description": "Unarchive application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "unarchive-wave",
+   "description": "Unarchive wave.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--wave-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes the specified set of tags from the specified set of Application Migration Service resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Update application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-connector",
+   "description": "Update Connector.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--ssm-command-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-launch-configuration",
+   "description": "Updates multiple LaunchConfigurations by Source Server ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--boot-mode",
+     "args": {
+      "suggestions": [
+       "LEGACY_BIOS",
+       "UEFI",
+       "USE_SOURCE"
+      ]
+     }
+    },
+    {
+     "name": "--copy-private-ip"
+    },
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--enable-map-auto-tagging"
+    },
+    {
+     "name": "--launch-disposition",
+     "args": {
+      "suggestions": [
+       "STOPPED",
+       "STARTED"
+      ]
+     }
+    },
+    {
+     "name": "--licensing",
+     "args": {}
+    },
+    {
+     "name": "--map-auto-tagging-mpe-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-private-ip"
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--no-enable-map-auto-tagging"
+    },
+    {
+     "name": "--post-launch-actions",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-instance-type-right-sizing-method",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "BASIC"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-launch-configuration-template",
+   "description": "Updates an existing Launch Configuration Template by ID.",
+   "options": [
+    {
+     "name": "--associate-public-ip-address"
+    },
+    {
+     "name": "--boot-mode",
+     "args": {
+      "suggestions": [
+       "LEGACY_BIOS",
+       "UEFI",
+       "USE_SOURCE"
+      ]
+     }
+    },
+    {
+     "name": "--copy-private-ip"
+    },
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--enable-map-auto-tagging"
+    },
+    {
+     "name": "--enable-parameters-encryption"
+    },
+    {
+     "name": "--large-volume-conf",
+     "args": {}
+    },
+    {
+     "name": "--launch-configuration-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--launch-disposition",
+     "args": {
+      "suggestions": [
+       "STOPPED",
+       "STARTED"
+      ]
+     }
+    },
+    {
+     "name": "--licensing",
+     "args": {}
+    },
+    {
+     "name": "--map-auto-tagging-mpe-id",
+     "args": {}
+    },
+    {
+     "name": "--no-associate-public-ip-address"
+    },
+    {
+     "name": "--no-copy-private-ip"
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--no-enable-map-auto-tagging"
+    },
+    {
+     "name": "--no-enable-parameters-encryption"
+    },
+    {
+     "name": "--parameters-encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--post-launch-actions",
+     "args": {}
+    },
+    {
+     "name": "--small-volume-conf",
+     "args": {}
+    },
+    {
+     "name": "--small-volume-max-size",
+     "args": {}
+    },
+    {
+     "name": "--target-instance-type-right-sizing-method",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "BASIC"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-network-migration-definition",
+   "description": "Updates an existing network migration definition with new source or target configurations.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-tags",
+     "args": {}
+    },
+    {
+     "name": "--source-configurations",
+     "args": {}
+    },
+    {
+     "name": "--target-deployment",
+     "args": {
+      "suggestions": [
+       "SINGLE_ACCOUNT",
+       "MULTI_ACCOUNT"
+      ]
+     }
+    },
+    {
+     "name": "--target-network",
+     "args": {}
+    },
+    {
+     "name": "--target-s3-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-network-migration-mapper-segment",
+   "description": "Updates a mapper segment's configuration, such as changing its scope tags.",
+   "options": [
+    {
+     "name": "--network-migration-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-migration-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-tags",
+     "args": {}
+    },
+    {
+     "name": "--segment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-replication-configuration",
+   "description": "Allows you to update multiple ReplicationConfigurations by Source Server ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--associate-default-security-group"
+    },
+    {
+     "name": "--bandwidth-throttling",
+     "args": {}
+    },
+    {
+     "name": "--create-public-ip"
+    },
+    {
+     "name": "--data-plane-routing",
+     "args": {
+      "suggestions": [
+       "PRIVATE_IP",
+       "PUBLIC_IP"
+      ]
+     }
+    },
+    {
+     "name": "--default-large-staging-disk-type",
+     "args": {
+      "suggestions": [
+       "GP2",
+       "ST1",
+       "GP3"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-encryption",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "CUSTOM"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--internet-protocol",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-associate-default-security-group"
+    },
+    {
+     "name": "--no-create-public-ip"
+    },
+    {
+     "name": "--no-store-snapshot-on-local-zone"
+    },
+    {
+     "name": "--no-use-dedicated-replication-server"
+    },
+    {
+     "name": "--no-use-fips-endpoint"
+    },
+    {
+     "name": "--replicated-disks",
+     "args": {}
+    },
+    {
+     "name": "--replication-server-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--replication-servers-security-groups-ids",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--staging-area-subnet-id",
+     "args": {}
+    },
+    {
+     "name": "--staging-area-tags",
+     "args": {}
+    },
+    {
+     "name": "--storage-configuration",
+     "args": {}
+    },
+    {
+     "name": "--store-snapshot-on-local-zone"
+    },
+    {
+     "name": "--use-dedicated-replication-server"
+    },
+    {
+     "name": "--use-fips-endpoint"
+    }
+   ]
+  },
+  {
+   "name": "update-replication-configuration-template",
+   "description": "Updates multiple ReplicationConfigurationTemplates by ID.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--associate-default-security-group"
+    },
+    {
+     "name": "--bandwidth-throttling",
+     "args": {}
+    },
+    {
+     "name": "--create-public-ip"
+    },
+    {
+     "name": "--data-plane-routing",
+     "args": {
+      "suggestions": [
+       "PRIVATE_IP",
+       "PUBLIC_IP"
+      ]
+     }
+    },
+    {
+     "name": "--default-large-staging-disk-type",
+     "args": {
+      "suggestions": [
+       "GP2",
+       "ST1",
+       "GP3"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-encryption",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "CUSTOM"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--internet-protocol",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--no-associate-default-security-group"
+    },
+    {
+     "name": "--no-create-public-ip"
+    },
+    {
+     "name": "--no-store-snapshot-on-local-zone"
+    },
+    {
+     "name": "--no-use-dedicated-replication-server"
+    },
+    {
+     "name": "--no-use-fips-endpoint"
+    },
+    {
+     "name": "--replication-configuration-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-server-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--replication-servers-security-groups-ids",
+     "args": {}
+    },
+    {
+     "name": "--staging-area-subnet-id",
+     "args": {}
+    },
+    {
+     "name": "--staging-area-tags",
+     "args": {}
+    },
+    {
+     "name": "--storage-configuration",
+     "args": {}
+    },
+    {
+     "name": "--store-snapshot-on-local-zone"
+    },
+    {
+     "name": "--use-dedicated-replication-server"
+    },
+    {
+     "name": "--use-fips-endpoint"
+    }
+   ]
+  },
+  {
+   "name": "update-source-server",
+   "description": "Update Source Server.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--connector-action",
+     "args": {}
+    },
+    {
+     "name": "--fqdn-for-action-framework",
+     "args": {}
+    },
+    {
+     "name": "--platform",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-provided-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-source-server-replication-type",
+   "description": "Allows you to change between the AGENT_BASED replication type and the SNAPSHOT_SHIPPING replication type.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--replication-type",
+     "args": {
+      "suggestions": [
+       "AGENT_BASED",
+       "SNAPSHOT_SHIPPING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-wave",
+   "description": "Update wave.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--wave-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,708 @@
+{
+ "name": "verifiedpermissions",
+ "description": "Amazon Verified Permissions is a permissions management service from Amazon Web Services.",
+ "subcommands": [
+  {
+   "name": "batch-get-policy",
+   "description": "Retrieves information about a group (batch) of policies.",
+   "options": [
+    {
+     "name": "--requests",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-is-authorized",
+   "description": "Makes a series of decisions about multiple authorization requests for one principal or resource.",
+   "options": [
+    {
+     "name": "--entities",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requests",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-is-authorized-with-token",
+   "description": "Makes a series of decisions about multiple authorization requests for one token.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {}
+    },
+    {
+     "name": "--entities",
+     "args": {}
+    },
+    {
+     "name": "--identity-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requests",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-identity-source",
+   "description": "Adds an identity source to a policy store\u2013an Amazon Cognito user pool or OpenID Connect (OIDC) identity provider (IdP).",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-entity-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-policy",
+   "description": "Creates a Cedar policy and saves it in the specified policy store.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-policy-store",
+   "description": "Creates a policy store.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-settings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--validation-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-policy-store-alias",
+   "description": "Creates a policy store alias for the specified policy store.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-policy-template",
+   "description": "Creates a policy template.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-identity-source",
+   "description": "Deletes an identity source that references an identity provider (IdP) such as Amazon Cognito.",
+   "options": [
+    {
+     "name": "--identity-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy",
+   "description": "Deletes the specified policy from the policy store.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy-store",
+   "description": "Deletes the specified policy store.",
+   "options": [
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy-store-alias",
+   "description": "Deletes the specified policy store alias.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deletion-mode",
+     "args": {
+      "suggestions": [
+       "SoftDelete",
+       "HardDelete"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-policy-template",
+   "description": "Deletes the specified policy template from the policy store.",
+   "options": [
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-identity-source",
+   "description": "Retrieves the details about the specified identity source.",
+   "options": [
+    {
+     "name": "--identity-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy",
+   "description": "Retrieves information about the specified policy.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy-store",
+   "description": "Retrieves details about a policy store.",
+   "options": [
+    {
+     "name": "--no-tags"
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags"
+    }
+   ]
+  },
+  {
+   "name": "get-policy-store-alias",
+   "description": "Retrieves details about the specified policy store alias.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy-template",
+   "description": "Retrieve the details for the specified policy template in the specified policy store.",
+   "options": [
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-schema",
+   "description": "Retrieve the details for the specified schema in the specified policy store.",
+   "options": [
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "is-authorized",
+   "description": "Makes an authorization decision about a service request described in the parameters.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {}
+    },
+    {
+     "name": "--context",
+     "args": {}
+    },
+    {
+     "name": "--entities",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {}
+    },
+    {
+     "name": "--resource",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "is-authorized-with-token",
+   "description": "Makes an authorization decision about a service request described in the parameters.",
+   "options": [
+    {
+     "name": "--access-token",
+     "args": {}
+    },
+    {
+     "name": "--action",
+     "args": {}
+    },
+    {
+     "name": "--context",
+     "args": {}
+    },
+    {
+     "name": "--entities",
+     "args": {}
+    },
+    {
+     "name": "--identity-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-identity-sources",
+   "description": "Returns a paginated list of all of the identity sources defined in the specified policy store.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policies",
+   "description": "Returns a paginated list of all policies stored in the specified policy store.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policy-store-aliases",
+   "description": "Returns a paginated list of all policy store aliases in the calling Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policy-stores",
+   "description": "Returns a paginated list of all policy stores in the calling Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policy-templates",
+   "description": "Returns a paginated list of all policy templates in the specified policy store.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns the tags associated with the specified Amazon Verified Permissions resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-schema",
+   "description": "Creates or updates the policy schema in the specified policy store.",
+   "options": [
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified Amazon Verified Permissions resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified Amazon Verified Permissions resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-identity-source",
+   "description": "Updates the specified identity source to use a new identity provider (IdP), or to change the mapping of identities from the IdP to a different principal entity type.",
+   "options": [
+    {
+     "name": "--identity-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-entity-type",
+     "args": {}
+    },
+    {
+     "name": "--update-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-policy",
+   "description": "Modifies a Cedar static policy in the specified policy store.",
+   "options": [
+    {
+     "name": "--definition",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-policy-store",
+   "description": "Modifies the validation setting for a policy store.",
+   "options": [
+    {
+     "name": "--deletion-protection",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-policy-template",
+   "description": "Updates the specified policy template.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--policy-store-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

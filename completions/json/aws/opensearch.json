@@ -1,0 +1,2030 @@
+{
+ "name": "opensearch",
+ "description": "Use the Amazon OpenSearch Service configuration API to create, configure, and manage OpenSearch Service domains.",
+ "subcommands": [
+  {
+   "name": "accept-inbound-connection",
+   "description": "Allows the destination Amazon OpenSearch Service domain owner to accept an inbound cross-cluster search connection request.",
+   "options": [
+    {
+     "name": "--connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-data-source",
+   "description": "Creates a new direct-query data source to the specified domain.",
+   "options": [
+    {
+     "name": "--data-source-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-direct-query-data-source",
+   "description": "Adds a new data source in Amazon OpenSearch Service so that you can perform direct queries on external data.",
+   "options": [
+    {
+     "name": "--data-source-access-policy",
+     "args": {}
+    },
+    {
+     "name": "--data-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--open-search-arns",
+     "args": {}
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "add-tags",
+   "description": "Attaches tags to an existing Amazon OpenSearch Service domain, data source, or application.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-package",
+   "description": "Associates a package with an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--association-configuration",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prerequisite-package-id-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "associate-packages",
+   "description": "Operation in the Amazon OpenSearch Service API for associating multiple packages with a domain simultaneously.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-data-source",
+   "description": "Attaches a data source to an OpenSearch application.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-source-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-configuration",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "authorize-vpc-endpoint-access",
+   "description": "Provides access to an Amazon OpenSearch Service domain through the use of an interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--account",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {
+      "suggestions": [
+       "application.opensearchservice.amazonaws.com"
+      ]
+     }
+    },
+    {
+     "name": "--service-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-domain-config-change",
+   "description": "Cancels a pending configuration change on an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "cancel-service-software-update",
+   "description": "Cancels a scheduled service software update for an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates an OpenSearch UI application.",
+   "options": [
+    {
+     "name": "--app-configs",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-sources",
+     "args": {}
+    },
+    {
+     "name": "--iam-identity-center-options",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-domain",
+   "description": "Creates an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--access-policies",
+     "args": {}
+    },
+    {
+     "name": "--advanced-options",
+     "args": {}
+    },
+    {
+     "name": "--advanced-security-options",
+     "args": {}
+    },
+    {
+     "name": "--aiml-options",
+     "args": {}
+    },
+    {
+     "name": "--auto-tune-options",
+     "args": {}
+    },
+    {
+     "name": "--automated-snapshot-pause-options",
+     "args": {}
+    },
+    {
+     "name": "--cluster-config",
+     "args": {}
+    },
+    {
+     "name": "--cognito-options",
+     "args": {}
+    },
+    {
+     "name": "--deployment-strategy-options",
+     "args": {}
+    },
+    {
+     "name": "--domain-endpoint-options",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ebs-options",
+     "args": {}
+    },
+    {
+     "name": "--encryption-at-rest-options",
+     "args": {}
+    },
+    {
+     "name": "--engine-mode",
+     "args": {
+      "suggestions": [
+       "GENERAL",
+       "OPTIMIZED"
+      ]
+     }
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--identity-center-options",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "dualstack"
+      ]
+     }
+    },
+    {
+     "name": "--log-publishing-options",
+     "args": {}
+    },
+    {
+     "name": "--node-to-node-encryption-options",
+     "args": {}
+    },
+    {
+     "name": "--off-peak-window-options",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-options",
+     "args": {}
+    },
+    {
+     "name": "--software-update-options",
+     "args": {}
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    },
+    {
+     "name": "--use-case",
+     "args": {
+      "suggestions": [
+       "SEARCH",
+       "VECTOR",
+       "OBSERVABILITY",
+       "MIXED"
+      ]
+     }
+    },
+    {
+     "name": "--vpc-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-index",
+   "description": "Creates an OpenSearch index with optional automatic semantic enrichment for specified text fields.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-schema",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-outbound-connection",
+   "description": "Creates a new cross-cluster search connection from a source Amazon OpenSearch Service domain to a destination domain.",
+   "options": [
+    {
+     "name": "--connection-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connection-mode",
+     "args": {
+      "suggestions": [
+       "DIRECT",
+       "VPC_ENDPOINT"
+      ]
+     }
+    },
+    {
+     "name": "--connection-properties",
+     "args": {}
+    },
+    {
+     "name": "--local-domain-info",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remote-domain-info",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-package",
+   "description": "Creates a package for use with Amazon OpenSearch Service domains.",
+   "options": [
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--package-configuration",
+     "args": {}
+    },
+    {
+     "name": "--package-description",
+     "args": {}
+    },
+    {
+     "name": "--package-encryption-options",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-type",
+     "args": {
+      "suggestions": [
+       "TXT-DICTIONARY",
+       "ZIP-PLUGIN",
+       "PACKAGE-LICENSE",
+       "PACKAGE-CONFIG"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--package-vending-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-endpoint",
+   "description": "Creates an Amazon OpenSearch Service-managed VPC endpoint.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-options",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes a specified OpenSearch application.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-source",
+   "description": "Deletes a direct-query data source.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-direct-query-data-source",
+   "description": "Deletes a previously configured direct query data source from Amazon OpenSearch Service.",
+   "options": [
+    {
+     "name": "--data-source-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain",
+   "description": "Deletes an Amazon OpenSearch Service domain and all of its data.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-inbound-connection",
+   "description": "Allows the destination Amazon OpenSearch Service domain owner to delete an existing inbound cross-cluster search connection.",
+   "options": [
+    {
+     "name": "--connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-index",
+   "description": "Deletes an OpenSearch index.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-outbound-connection",
+   "description": "Allows the source Amazon OpenSearch Service domain owner to delete an existing outbound cross-cluster search connection.",
+   "options": [
+    {
+     "name": "--connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-package",
+   "description": "Deletes an Amazon OpenSearch Service package.",
+   "options": [
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-endpoint",
+   "description": "Deletes an Amazon OpenSearch Service-managed interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-capability",
+   "description": "Deregisters a capability from an OpenSearch UI application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capability-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-data-source-attachment",
+   "description": "Returns the current status and details of a specific data source attachment for an OpenSearch application.",
+   "options": [
+    {
+     "name": "--data-source-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain",
+   "description": "Describes the domain configuration for the specified Amazon OpenSearch Service domain, including the domain ID, domain service endpoint, and domain ARN.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain-auto-tunes",
+   "description": "Returns the list of optimizations that Auto-Tune has made to an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-domain-change-progress",
+   "description": "Returns information about the current blue/green deployment happening on an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--change-id",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain-config",
+   "description": "Returns the configuration of an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain-health",
+   "description": "Returns information about domain and node health, the standby Availability Zone, number of nodes per Availability Zone, and shard count per node.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain-nodes",
+   "description": "Returns information about domain and nodes, including data nodes, master nodes, ultrawarm nodes, Availability Zone(s), standby nodes, node configurations, and node states.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domains",
+   "description": "Returns domain configuration information about the specified Amazon OpenSearch Service domains.",
+   "options": [
+    {
+     "name": "--domain-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dry-run-progress",
+   "description": "Describes the progress of a pre-update dry run analysis on an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run-id",
+     "args": {}
+    },
+    {
+     "name": "--load-dry-run-config"
+    },
+    {
+     "name": "--no-load-dry-run-config"
+    }
+   ]
+  },
+  {
+   "name": "describe-inbound-connections",
+   "description": "Lists all the inbound cross-cluster search connections for a destination (remote) Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-insight-details",
+   "description": "Describes the details of an existing insight for an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--entity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--insight-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-show-html-content"
+    },
+    {
+     "name": "--show-html-content"
+    }
+   ]
+  },
+  {
+   "name": "describe-instance-type-limits",
+   "description": "Describes the instance count, storage, and master node limits for a given OpenSearch or Elasticsearch version and instance type.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-outbound-connections",
+   "description": "Lists all the outbound cross-cluster connections for a local (source) Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-packages",
+   "description": "Describes all packages available to OpenSearch Service.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-instance-offerings",
+   "description": "Describes the available Amazon OpenSearch Service Reserved Instance offerings for a given Region.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--reserved-instance-offering-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-instances",
+   "description": "Describes the Amazon OpenSearch Service instances that you have reserved in a given Region.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--reserved-instance-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-vpc-endpoints",
+   "description": "Describes one or more Amazon OpenSearch Service-managed VPC endpoints.",
+   "options": [
+    {
+     "name": "--vpc-endpoint-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-data-source",
+   "description": "Removes a data source from an OpenSearch application.",
+   "options": [
+    {
+     "name": "--data-source-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "dissociate-package",
+   "description": "Removes a package from the specified Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "dissociate-packages",
+   "description": "Dissociates multiple packages from a domain simultaneously.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application",
+   "description": "Retrieves the configuration and status of an existing OpenSearch application.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-capability",
+   "description": "Retrieves information about a registered capability for an OpenSearch UI application, including its configuration and current status.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capability-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-compatible-versions",
+   "description": "Returns a map of OpenSearch or Elasticsearch versions and the versions you can upgrade them to.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-data-source",
+   "description": "Retrieves information about a direct query data source.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-default-application-setting",
+   "description": "Gets the ARN of the current default application."
+  },
+  {
+   "name": "get-direct-query-data-source",
+   "description": "Returns detailed configuration information for a specific direct query data source in Amazon OpenSearch Service.",
+   "options": [
+    {
+     "name": "--data-source-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain-maintenance-status",
+   "description": "The status of the maintenance action.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--maintenance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-index",
+   "description": "Retrieves information about an OpenSearch index including its schema and semantic enrichment configuration.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-migration",
+   "description": "Retrieves the current status and progress of a migration job, including the number of exported and imported objects and error details if the migration failed.",
+   "options": [
+    {
+     "name": "--migration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-package-version-history",
+   "description": "Returns a list of Amazon OpenSearch Service package versions, along with their creation time, commit message, and plugin properties (if the package is a zip plugin package).",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-upgrade-history",
+   "description": "Retrieves the complete history of the last 10 upgrades performed on an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-upgrade-status",
+   "description": "Returns the most recent status of the last upgrade or upgrade eligibility check performed on an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "insight-feedback",
+   "description": "Submits feedback for an existing insight in an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--entity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feedback-text",
+     "args": {}
+    },
+    {
+     "name": "--insight-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thumbs",
+     "args": {
+      "suggestions": [
+       "Up",
+       "Down"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists all OpenSearch applications under your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--statuses",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-source-attachments",
+   "description": "Returns a paginated list of all data source attachments for an OpenSearch application, including attachments in all states (PENDING, ATTACHED, and FAILED).",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-sources",
+   "description": "Lists direct-query data sources for a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-direct-query-data-sources",
+   "description": "Lists an inventory of all the direct query data sources that you have configured within Amazon OpenSearch Service.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domain-maintenances",
+   "description": "A list of maintenance actions for the domain.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "REBOOT_NODE",
+       "RESTART_SEARCH_PROCESS",
+       "RESTART_DASHBOARD"
+      ]
+     }
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "IN_PROGRESS",
+       "COMPLETED",
+       "FAILED",
+       "TIMED_OUT"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-domain-names",
+   "description": "Returns the names of all Amazon OpenSearch Service domains owned by the current user in the active Region.",
+   "options": [
+    {
+     "name": "--engine-type",
+     "args": {
+      "suggestions": [
+       "OpenSearch",
+       "Elasticsearch"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-domains-for-package",
+   "description": "Lists all Amazon OpenSearch Service domains associated with a given package.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-insights",
+   "description": "Lists insights for an Amazon OpenSearch Service domain or Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--entity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--time-range",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-instance-type-details",
+   "description": "Lists all instance types and available features for a given OpenSearch or Elasticsearch version.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-type",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-retrieve-azs"
+    },
+    {
+     "name": "--retrieve-azs"
+    }
+   ]
+  },
+  {
+   "name": "list-migrations",
+   "description": "Lists migration jobs for an Amazon OpenSearch Service application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-packages-for-domain",
+   "description": "Lists all packages associated with an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-scheduled-actions",
+   "description": "Retrieves a list of configuration changes that are scheduled for a domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags",
+   "description": "Returns all resource tags for an Amazon OpenSearch Service domain, data source, or application.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-versions",
+   "description": "Lists all versions of OpenSearch and Elasticsearch that Amazon OpenSearch Service supports.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-endpoint-access",
+   "description": "Retrieves information about each Amazon Web Services principal that is allowed to access a given Amazon OpenSearch Service domain through the use of an interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-endpoints",
+   "description": "Retrieves all Amazon OpenSearch Service-managed VPC endpoints in the current Amazon Web Services account and Region.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-endpoints-for-domain",
+   "description": "Retrieves all Amazon OpenSearch Service-managed VPC endpoints associated with a particular domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "purchase-reserved-instance-offering",
+   "description": "Allows you to purchase Amazon OpenSearch Service Reserved Instances.",
+   "options": [
+    {
+     "name": "--instance-count",
+     "args": {}
+    },
+    {
+     "name": "--reservation-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reserved-instance-offering-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-default-application-setting",
+   "description": "Sets the default application to the application with the specified ARN.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-set-as-default"
+    },
+    {
+     "name": "--set-as-default",
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-capability",
+   "description": "Registers a capability for an OpenSearch UI application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capability-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capability-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-inbound-connection",
+   "description": "Allows the remote Amazon OpenSearch Service domain owner to reject an inbound cross-cluster connection request.",
+   "options": [
+    {
+     "name": "--connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags",
+   "description": "Removes the specified set of tags from an Amazon OpenSearch Service domain, data source, or application.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-vpc-endpoint-access",
+   "description": "Revokes access to an Amazon OpenSearch Service domain that was provided through an interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--account",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {
+      "suggestions": [
+       "application.opensearchservice.amazonaws.com"
+      ]
+     }
+    },
+    {
+     "name": "--service-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "rollback-service-software-update",
+   "description": "Rolls back a service software update for a domain to the previous version.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-domain-maintenance",
+   "description": "Starts the node maintenance process on the data node.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "REBOOT_NODE",
+       "RESTART_SEARCH_PROCESS",
+       "RESTART_DASHBOARD"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-migration",
+   "description": "Initiates a migration job to migrate saved objects from a data source to an Amazon OpenSearch Service application workspace.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--migration-options",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-service-software-update",
+   "description": "Schedules a service software update for an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--desired-start-time",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-at",
+     "args": {
+      "suggestions": [
+       "NOW",
+       "TIMESTAMP",
+       "OFF_PEAK_WINDOW"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates the configuration and settings of an existing OpenSearch application.",
+   "options": [
+    {
+     "name": "--app-configs",
+     "args": {}
+    },
+    {
+     "name": "--data-sources",
+     "args": {}
+    },
+    {
+     "name": "--iam-identity-center-options",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-source",
+   "description": "Updates a direct-query data source.",
+   "options": [
+    {
+     "name": "--data-source-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-direct-query-data-source",
+   "description": "Updates the configuration or properties of an existing direct query data source in Amazon OpenSearch Service.",
+   "options": [
+    {
+     "name": "--data-source-access-policy",
+     "args": {}
+    },
+    {
+     "name": "--data-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--open-search-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-domain-config",
+   "description": "Modifies the cluster configuration of the specified Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--access-policies",
+     "args": {}
+    },
+    {
+     "name": "--advanced-options",
+     "args": {}
+    },
+    {
+     "name": "--advanced-security-options",
+     "args": {}
+    },
+    {
+     "name": "--aiml-options",
+     "args": {}
+    },
+    {
+     "name": "--auto-tune-options",
+     "args": {}
+    },
+    {
+     "name": "--automated-snapshot-pause-options",
+     "args": {}
+    },
+    {
+     "name": "--cluster-config",
+     "args": {}
+    },
+    {
+     "name": "--cognito-options",
+     "args": {}
+    },
+    {
+     "name": "--deployment-strategy-options",
+     "args": {}
+    },
+    {
+     "name": "--domain-endpoint-options",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--dry-run-mode",
+     "args": {
+      "suggestions": [
+       "Basic",
+       "Verbose"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-options",
+     "args": {}
+    },
+    {
+     "name": "--encryption-at-rest-options",
+     "args": {}
+    },
+    {
+     "name": "--engine-mode",
+     "args": {
+      "suggestions": [
+       "GENERAL",
+       "OPTIMIZED"
+      ]
+     }
+    },
+    {
+     "name": "--identity-center-options",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "dualstack"
+      ]
+     }
+    },
+    {
+     "name": "--log-publishing-options",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--node-to-node-encryption-options",
+     "args": {}
+    },
+    {
+     "name": "--off-peak-window-options",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-options",
+     "args": {}
+    },
+    {
+     "name": "--software-update-options",
+     "args": {}
+    },
+    {
+     "name": "--use-case",
+     "args": {
+      "suggestions": [
+       "SEARCH",
+       "VECTOR",
+       "OBSERVABILITY",
+       "MIXED"
+      ]
+     }
+    },
+    {
+     "name": "--vpc-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-index",
+   "description": "Updates an existing OpenSearch index schema and semantic enrichment configuration.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-schema",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-package",
+   "description": "Updates a package for use with Amazon OpenSearch Service domains.",
+   "options": [
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--package-configuration",
+     "args": {}
+    },
+    {
+     "name": "--package-description",
+     "args": {}
+    },
+    {
+     "name": "--package-encryption-options",
+     "args": {}
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-package-scope",
+   "description": "Updates the scope of a package.",
+   "options": [
+    {
+     "name": "--operation",
+     "args": {
+      "suggestions": [
+       "ADD",
+       "OVERRIDE",
+       "REMOVE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-user-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-scheduled-action",
+   "description": "Reschedules a planned domain configuration change for a later time.",
+   "options": [
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-type",
+     "args": {
+      "suggestions": [
+       "SERVICE_SOFTWARE_UPDATE",
+       "JVM_HEAP_SIZE_TUNING",
+       "JVM_YOUNG_GEN_TUNING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--desired-start-time",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-at",
+     "args": {
+      "suggestions": [
+       "NOW",
+       "TIMESTAMP",
+       "OFF_PEAK_WINDOW"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-vpc-endpoint",
+   "description": "Modifies an Amazon OpenSearch Service-managed interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-options",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "upgrade-domain",
+   "description": "Allows you to either upgrade your Amazon OpenSearch Service domain or perform an upgrade eligibility check to a compatible version of OpenSearch or Elasticsearch.",
+   "options": [
+    {
+     "name": "--advanced-options",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-perform-check-only"
+    },
+    {
+     "name": "--perform-check-only"
+    },
+    {
+     "name": "--target-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,723 @@
+{
+ "name": "ssm-incidents",
+ "description": "Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from incidents affecting their Amazon Web Services-hosted applications.",
+ "subcommands": [
+  {
+   "name": "batch-get-incident-findings",
+   "description": "Retrieves details about all specified findings for an incident, including descriptive details about each finding.",
+   "options": [
+    {
+     "name": "--finding-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incident-record-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-replication-set",
+   "description": "A replication set replicates and encrypts your data to the provided Regions with the provided KMS key.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-response-plan",
+   "description": "Creates a response plan that automates the initial response to incidents.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {}
+    },
+    {
+     "name": "--chat-channel",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--engagements",
+     "args": {}
+    },
+    {
+     "name": "--incident-template",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integrations",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-timeline-event",
+   "description": "Creates a custom timeline event on the incident details page of an incident record.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--event-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-references",
+     "args": {}
+    },
+    {
+     "name": "--event-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incident-record-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-incident-record",
+   "description": "Delete an incident record from Incident Manager.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-set",
+   "description": "Deletes all Regions in your replication set.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes the resource policy that Resource Access Manager uses to share your Incident Manager resource.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-response-plan",
+   "description": "Deletes the specified response plan.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-timeline-event",
+   "description": "Deletes a timeline event from an incident.",
+   "options": [
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incident-record-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-incident-record",
+   "description": "Returns the details for the specified incident record.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-replication-set",
+   "description": "Retrieve your Incident Manager replication set.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policies",
+   "description": "Retrieves the resource policies attached to the specified response plan.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-response-plan",
+   "description": "Retrieves the details of the specified response plan.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-timeline-event",
+   "description": "Retrieves a timeline event based on its ID and incident record.",
+   "options": [
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incident-record-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-incident-findings",
+   "description": "Retrieves a list of the IDs of findings, plus their last modified times, that have been identified for a specified incident.",
+   "options": [
+    {
+     "name": "--incident-record-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-incident-records",
+   "description": "Lists all incident records in your account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-related-items",
+   "description": "List all related items for an incident record.",
+   "options": [
+    {
+     "name": "--incident-record-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-replication-sets",
+   "description": "Lists details about the replication set configured in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-response-plans",
+   "description": "Lists all response plans in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags that are attached to the specified response plan or incident.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-timeline-events",
+   "description": "Lists timeline events for the specified incident record.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--incident-record-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "EVENT_TIME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Adds a resource policy to the specified response plan.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-incident",
+   "description": "Used to start an incident from CloudWatch alarms, EventBridge events, or manually.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--impact",
+     "args": {}
+    },
+    {
+     "name": "--related-items",
+     "args": {}
+    },
+    {
+     "name": "--response-plan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--title",
+     "args": {}
+    },
+    {
+     "name": "--trigger-details",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds a tag to a response plan.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-deletion-protection",
+   "description": "Update deletion protection to either allow or deny deletion of the final Region in a replication set.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protected",
+     "priority": 75
+    },
+    {
+     "name": "--no-deletion-protected"
+    }
+   ]
+  },
+  {
+   "name": "update-incident-record",
+   "description": "Update the details of an incident record.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--chat-channel",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--impact",
+     "args": {}
+    },
+    {
+     "name": "--notification-targets",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "OPEN",
+       "RESOLVED"
+      ]
+     }
+    },
+    {
+     "name": "--summary",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-related-items",
+   "description": "Add or remove related items from the related items tab of an incident record.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--incident-record-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--related-items-update",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-replication-set",
+   "description": "Add or delete Regions from your replication set.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-response-plan",
+   "description": "Updates the specified response plan.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {}
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--chat-channel",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--engagements",
+     "args": {}
+    },
+    {
+     "name": "--incident-template-dedupe-string",
+     "args": {}
+    },
+    {
+     "name": "--incident-template-impact",
+     "args": {}
+    },
+    {
+     "name": "--incident-template-notification-targets",
+     "args": {}
+    },
+    {
+     "name": "--incident-template-summary",
+     "args": {}
+    },
+    {
+     "name": "--incident-template-tags",
+     "args": {}
+    },
+    {
+     "name": "--incident-template-title",
+     "args": {}
+    },
+    {
+     "name": "--integrations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-timeline-event",
+   "description": "Updates a timeline event.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--event-data",
+     "args": {}
+    },
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-references",
+     "args": {}
+    },
+    {
+     "name": "--event-time",
+     "args": {}
+    },
+    {
+     "name": "--event-type",
+     "args": {}
+    },
+    {
+     "name": "--incident-record-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "wait-for-replication-set-active",
+     "description": "Wait for a replication set to become ACTIVE It will poll every 30 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "wait-for-replication-set-deleted",
+     "description": "Wait for a replication set to be deleted It will poll every 30 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

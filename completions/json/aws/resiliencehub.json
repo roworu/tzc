@@ -1,0 +1,1525 @@
+{
+ "name": "resiliencehub",
+ "description": "Resilience Hub helps you proactively prepare and protect your Amazon Web Services applications from disruptions.",
+ "subcommands": [
+  {
+   "name": "accept-resource-grouping-recommendations",
+   "description": "Accepts the resource grouping recommendations suggested by Resilience Hub for your application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-draft-app-version-resource-mappings",
+   "description": "Adds the source of resource-maps to the draft version of an application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-mappings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-recommendation-status",
+   "description": "Enables you to include or exclude one or more operational recommendations.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-app",
+   "description": "Creates an Resilience Hub application.",
+   "options": [
+    {
+     "name": "--assessment-schedule",
+     "args": {
+      "suggestions": [
+       "Disabled",
+       "Daily"
+      ]
+     }
+    },
+    {
+     "name": "--aws-application-arn",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-subscriptions",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-model",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-app-version-app-component",
+   "description": "Creates a new Application Component in the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--additional-info",
+     "args": {}
+    },
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-app-version-resource",
+   "description": "Adds a resource to the Resilience Hub application and assigns it to the specified Application Components.",
+   "options": [
+    {
+     "name": "--additional-info",
+     "args": {}
+    },
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-components",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--aws-region",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--logical-resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--physical-resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-recommendation-template",
+   "description": "Creates a new recommendation template for the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket-name",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "CfnYaml",
+       "CfnJson"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-ids",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-types",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-resiliency-policy",
+   "description": "Creates a resiliency policy for an application.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-location-constraint",
+     "args": {
+      "suggestions": [
+       "AnyLocation",
+       "SameContinent",
+       "SameCountry"
+      ]
+     }
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-description",
+     "args": {}
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tier",
+     "args": {
+      "suggestions": [
+       "MissionCritical",
+       "Critical",
+       "Important",
+       "CoreServices",
+       "NonCritical",
+       "NotApplicable"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-app",
+   "description": "Deletes an Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--no-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "delete-app-assessment",
+   "description": "Deletes an Resilience Hub application assessment.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-app-input-source",
+   "description": "Deletes the input source and all of its imported resources from the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--eks-source-cluster-namespace",
+     "args": {}
+    },
+    {
+     "name": "--source-arn",
+     "args": {}
+    },
+    {
+     "name": "--terraform-source",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-app-version-app-component",
+   "description": "Deletes an Application Component from the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-app-version-resource",
+   "description": "Deletes a resource from the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--aws-region",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--logical-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--physical-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-recommendation-template",
+   "description": "Deletes a recommendation template.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-template-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resiliency-policy",
+   "description": "Deletes a resiliency policy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app",
+   "description": "Describes an Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app-assessment",
+   "description": "Describes an assessment for an Resilience Hub application.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app-version",
+   "description": "Describes the Resilience Hub application version.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app-version-app-component",
+   "description": "Describes an Application Component in the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app-version-resource",
+   "description": "Describes a resource of the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--aws-region",
+     "args": {}
+    },
+    {
+     "name": "--logical-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--physical-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-app-version-resources-resolution-status",
+   "description": "Returns the resolution status for the specified resolution identifier for an application version.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resolution-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-app-version-template",
+   "description": "Describes details about an Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-draft-app-version-resources-import-status",
+   "description": "Describes the status of importing resources to an application version.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-metrics-export",
+   "description": "Describes the metrics of the application configuration being exported.",
+   "options": [
+    {
+     "name": "--metrics-export-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-resiliency-policy",
+   "description": "Describes a specified resiliency policy for an Resilience Hub application.",
+   "options": [
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-grouping-recommendation-task",
+   "description": "Describes the resource grouping recommendation tasks run by Resilience Hub for your application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grouping-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-resources-to-draft-app-version",
+   "description": "Imports resources to Resilience Hub application draft version from different input sources.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--eks-sources",
+     "args": {}
+    },
+    {
+     "name": "--import-strategy",
+     "args": {
+      "suggestions": [
+       "AddOnly",
+       "ReplaceAll"
+      ]
+     }
+    },
+    {
+     "name": "--source-arns",
+     "args": {}
+    },
+    {
+     "name": "--terraform-sources",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-alarm-recommendations",
+   "description": "Lists the alarm recommendations for an Resilience Hub application.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-assessment-compliance-drifts",
+   "description": "List of compliance drifts that were detected while running an assessment.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-assessment-resource-drifts",
+   "description": "List of resource drifts that were detected while running an assessment.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-assessments",
+   "description": "Lists the assessments for an Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {}
+    },
+    {
+     "name": "--assessment-name",
+     "args": {}
+    },
+    {
+     "name": "--assessment-status",
+     "args": {}
+    },
+    {
+     "name": "--compliance-status",
+     "args": {
+      "suggestions": [
+       "PolicyBreached",
+       "PolicyMet",
+       "NotApplicable",
+       "MissingPolicy"
+      ]
+     }
+    },
+    {
+     "name": "--invoker",
+     "args": {
+      "suggestions": [
+       "User",
+       "System"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--reverse-order"
+    }
+   ]
+  },
+  {
+   "name": "list-app-component-compliances",
+   "description": "Lists the compliances for an Resilience Hub Application Component.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-component-recommendations",
+   "description": "Lists the recommendations for an Resilience Hub Application Component.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-input-sources",
+   "description": "Lists all the input sources of the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-version-app-components",
+   "description": "Lists all the Application Components in the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-version-resource-mappings",
+   "description": "Lists how the resources in an application version are mapped/sourced from.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-version-resources",
+   "description": "Lists all the resources in an Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resolution-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-versions",
+   "description": "Lists the different versions for the Resilience Hub applications.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-apps",
+   "description": "Lists your Resilience Hub applications.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {}
+    },
+    {
+     "name": "--aws-application-arn",
+     "args": {}
+    },
+    {
+     "name": "--from-last-assessment-time",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--to-last-assessment-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-metrics",
+   "description": "Lists the metrics that can be exported.",
+   "options": [
+    {
+     "name": "--conditions",
+     "args": {}
+    },
+    {
+     "name": "--data-source",
+     "args": {}
+    },
+    {
+     "name": "--fields",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sorts",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommendation-templates",
+   "description": "Lists the recommendation templates for the Resilience Hub applications.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--recommendation-template-arn",
+     "args": {}
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resiliency-policies",
+   "description": "Lists the resiliency policies for the Resilience Hub applications.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-grouping-recommendations",
+   "description": "Lists the resource grouping recommendations suggested by Resilience Hub for your application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sop-recommendations",
+   "description": "Lists the standard operating procedure (SOP) recommendations for the Resilience Hub applications.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-suggested-resiliency-policies",
+   "description": "Lists the suggested resiliency policies for the Resilience Hub applications.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for your resources in your Resilience Hub applications.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-test-recommendations",
+   "description": "Lists the test recommendations for the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--assessment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-unsupported-app-version-resources",
+   "description": "Lists the resources that are not currently supported in Resilience Hub.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resolution-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "publish-app-version",
+   "description": "Publishes a new version of a specific Resilience Hub application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-draft-app-version-template",
+   "description": "Adds or updates the app template for an Resilience Hub application draft version.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-template-body",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-resource-grouping-recommendations",
+   "description": "Rejects resource grouping recommendations.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-draft-app-version-resource-mappings",
+   "description": "Removes resource mappings from a draft application version.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-registry-app-names",
+     "args": {}
+    },
+    {
+     "name": "--eks-source-names",
+     "args": {}
+    },
+    {
+     "name": "--logical-stack-names",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-names",
+     "args": {}
+    },
+    {
+     "name": "--resource-names",
+     "args": {}
+    },
+    {
+     "name": "--terraform-source-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "resolve-app-version-resources",
+   "description": "Resolves the resources for an application version.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-app-assessment",
+   "description": "Creates a new application assessment for an application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--assessment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-metrics-export",
+   "description": "Initiates the export task of metrics.",
+   "options": [
+    {
+     "name": "--bucket-name",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-resource-grouping-recommendation-task",
+   "description": "Starts grouping recommendation task.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Applies one or more tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-app",
+   "description": "Updates an application.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--assessment-schedule",
+     "args": {
+      "suggestions": [
+       "Disabled",
+       "Daily"
+      ]
+     }
+    },
+    {
+     "name": "--clear-resiliency-policy-arn"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-subscriptions",
+     "args": {}
+    },
+    {
+     "name": "--no-clear-resiliency-policy-arn"
+    },
+    {
+     "name": "--permission-model",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-app-version",
+   "description": "Updates the Resilience Hub application version.",
+   "options": [
+    {
+     "name": "--additional-info",
+     "args": {}
+    },
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-app-version-app-component",
+   "description": "Updates an existing Application Component in the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--additional-info",
+     "args": {}
+    },
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-app-version-resource",
+   "description": "Updates the resource details in the Resilience Hub application.",
+   "options": [
+    {
+     "name": "--additional-info",
+     "args": {}
+    },
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-components",
+     "args": {}
+    },
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--aws-region",
+     "args": {}
+    },
+    {
+     "name": "--excluded"
+    },
+    {
+     "name": "--logical-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--no-excluded"
+    },
+    {
+     "name": "--physical-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-resiliency-policy",
+   "description": "Updates a resiliency policy.",
+   "options": [
+    {
+     "name": "--data-location-constraint",
+     "args": {
+      "suggestions": [
+       "AnyLocation",
+       "SameContinent",
+       "SameCountry"
+      ]
+     }
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-description",
+     "args": {}
+    },
+    {
+     "name": "--policy-name",
+     "args": {}
+    },
+    {
+     "name": "--tier",
+     "args": {
+      "suggestions": [
+       "MissionCritical",
+       "Critical",
+       "Important",
+       "CoreServices",
+       "NonCritical",
+       "NotApplicable"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,801 @@
+{
+ "name": "billingconductor",
+ "description": "Billing Conductor is a fully managed service that you can use to customize a pro forma version of your billing data each month, to accurately show or chargeback your end customers.",
+ "subcommands": [
+  {
+   "name": "associate-accounts",
+   "description": "Connects an array of account IDs in a consolidated billing family to a predefined billing group.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-pricing-rules",
+   "description": "Connects an array of PricingRuleArns to a defined PricingPlan.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pricing-rule-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-associate-resources-to-custom-line-item",
+   "description": "Associates a batch of resources to a percentage custom line item.",
+   "options": [
+    {
+     "name": "--billing-period-range",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-disassociate-resources-from-custom-line-item",
+   "description": "Disassociates a batch of resources from a percentage custom line item.",
+   "options": [
+    {
+     "name": "--billing-period-range",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-billing-group",
+   "description": "Creates a billing group that resembles a consolidated billing family that Amazon Web Services charges, based off of the predefined pricing plan computation.",
+   "options": [
+    {
+     "name": "--account-grouping",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--computation-preference",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-account-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-custom-line-item",
+   "description": "Creates a custom line item that can be used to create a one-time fixed charge that can be applied to a single billing group for the current or previous billing period.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--billing-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-period-range",
+     "args": {}
+    },
+    {
+     "name": "--charge-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--computation-rule",
+     "args": {
+      "suggestions": [
+       "ITEMIZED",
+       "CONSOLIDATED"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--presentation-details",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-pricing-plan",
+   "description": "Creates a pricing plan that is used for computing Amazon Web Services charges for billing groups.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pricing-rule-arns",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-pricing-rule",
+   "description": "Creates a pricing rule can be associated to a pricing plan, or a set of pricing plans.",
+   "options": [
+    {
+     "name": "--billing-entity",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--modifier-percentage",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operation",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "GLOBAL",
+       "SERVICE",
+       "BILLING_ENTITY",
+       "SKU"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tiering",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "MARKUP",
+       "DISCOUNT",
+       "TIERING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--usage-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-billing-group",
+   "description": "Deletes a billing group.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-line-item",
+   "description": "Deletes the custom line item identified by the given ARN in the current, or previous billing period.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-period-range",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-pricing-plan",
+   "description": "Deletes a pricing plan.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-pricing-rule",
+   "description": "Deletes the pricing rule that's identified by the input Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-accounts",
+   "description": "Removes the specified list of account IDs from the given billing group.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-pricing-rules",
+   "description": "Disassociates a list of pricing rules from a pricing plan.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pricing-rule-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-billing-group-cost-report",
+   "description": "Retrieves the margin summary report, which includes the Amazon Web Services cost and charged amount (pro forma cost) by Amazon Web Services service for a specific billing group.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-period-range",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-account-associations",
+   "description": "This is a paginated call to list linked accounts that are linked to the payer account for the specified time period.",
+   "options": [
+    {
+     "name": "--billing-period",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-billing-group-cost-reports",
+   "description": "A paginated call to retrieve a summary report of actual Amazon Web Services charges and the calculated Amazon Web Services charges based on the associated pricing plan of a billing group.",
+   "options": [
+    {
+     "name": "--billing-period",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-billing-groups",
+   "description": "A paginated call to retrieve a list of billing groups for the given billing period.",
+   "options": [
+    {
+     "name": "--billing-period",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-line-item-versions",
+   "description": "A paginated call to get a list of all custom line item versions.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-line-items",
+   "description": "A paginated call to get a list of all custom line items (FFLIs) for the given billing period.",
+   "options": [
+    {
+     "name": "--billing-period",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pricing-plans",
+   "description": "A paginated call to get pricing plans for the given billing period.",
+   "options": [
+    {
+     "name": "--billing-period",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pricing-plans-associated-with-pricing-rule",
+   "description": "A list of the pricing plans that are associated with a pricing rule.",
+   "options": [
+    {
+     "name": "--billing-period",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pricing-rule-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pricing-rules",
+   "description": "Describes a pricing rule that can be associated to a pricing plan, or set of pricing plans.",
+   "options": [
+    {
+     "name": "--billing-period",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pricing-rules-associated-to-pricing-plan",
+   "description": "Lists the pricing rules that are associated with a pricing plan.",
+   "options": [
+    {
+     "name": "--billing-period",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pricing-plan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resources-associated-to-custom-line-item",
+   "description": "List the resources that are associated to a custom line item.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-period",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "A list the tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags to a resource with the specified resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes specified tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-billing-group",
+   "description": "This updates an existing billing group.",
+   "options": [
+    {
+     "name": "--account-grouping",
+     "args": {}
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--computation-preference",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "PRIMARY_ACCOUNT_MISSING",
+       "PENDING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-custom-line-item",
+   "description": "Update an existing custom line item in the current or previous billing period.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-period-range",
+     "args": {}
+    },
+    {
+     "name": "--charge-details",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-pricing-plan",
+   "description": "This updates an existing pricing plan.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-pricing-rule",
+   "description": "Updates an existing pricing rule.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--modifier-percentage",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tiering",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "MARKUP",
+       "DISCOUNT",
+       "TIERING"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,542 @@
+{
+ "name": "textract",
+ "description": "Amazon Textract detects and analyzes text in documents and converts it into machine-readable text.",
+ "subcommands": [
+  {
+   "name": "analyze-document",
+   "description": "Analyzes an input document for relationships between detected items.",
+   "options": [
+    {
+     "name": "--adapters-config",
+     "args": {}
+    },
+    {
+     "name": "--document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--human-loop-config",
+     "args": {}
+    },
+    {
+     "name": "--queries-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "analyze-expense",
+   "description": "AnalyzeExpense synchronously analyzes an input document for financially related relationships between text.",
+   "options": [
+    {
+     "name": "--document",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "analyze-id",
+   "description": "Analyzes identity documents for relevant information.",
+   "options": [
+    {
+     "name": "--document-pages",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-adapter",
+   "description": "Creates an adapter, which can be fine-tuned for enhanced performance on user provided documents.",
+   "options": [
+    {
+     "name": "--adapter-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-update",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--feature-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-adapter-version",
+   "description": "Creates a new version of an adapter.",
+   "options": [
+    {
+     "name": "--adapter-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--output-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-adapter",
+   "description": "Deletes an Amazon Textract adapter.",
+   "options": [
+    {
+     "name": "--adapter-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-adapter-version",
+   "description": "Deletes an Amazon Textract adapter version.",
+   "options": [
+    {
+     "name": "--adapter-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--adapter-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detect-document-text",
+   "description": "Detects text in the input document.",
+   "options": [
+    {
+     "name": "--document",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-adapter",
+   "description": "Gets configuration information for an adapter specified by an AdapterId, returning information on AdapterName, Description, CreationTime, AutoUpdate status, and FeatureTypes.",
+   "options": [
+    {
+     "name": "--adapter-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-adapter-version",
+   "description": "Gets configuration information for the specified adapter version, including: AdapterId, AdapterVersion, FeatureTypes, Status, StatusMessage, DatasetConfig, KMSKeyId, OutputConfig, Tags and EvaluationMetrics.",
+   "options": [
+    {
+     "name": "--adapter-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--adapter-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-document-analysis",
+   "description": "Gets the results for an Amazon Textract asynchronous operation that analyzes text in a document.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-document-text-detection",
+   "description": "Gets the results for an Amazon Textract asynchronous operation that detects text in a document.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-expense-analysis",
+   "description": "Gets the results for an Amazon Textract asynchronous operation that analyzes invoices and receipts.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-lending-analysis",
+   "description": "Gets the results for an Amazon Textract asynchronous operation that analyzes text in a lending document.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-lending-analysis-summary",
+   "description": "Gets summarized results for the StartLendingAnalysis operation, which analyzes text in a lending document.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-adapter-versions",
+   "description": "List all version of an adapter that meet the specified filtration criteria.",
+   "options": [
+    {
+     "name": "--adapter-id",
+     "args": {}
+    },
+    {
+     "name": "--after-creation-time",
+     "args": {}
+    },
+    {
+     "name": "--before-creation-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-adapters",
+   "description": "Lists all adapters that match the specified filtration criteria.",
+   "options": [
+    {
+     "name": "--after-creation-time",
+     "args": {}
+    },
+    {
+     "name": "--before-creation-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags for an Amazon Textract resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-document-analysis",
+   "description": "Starts the asynchronous analysis of an input document for relationships between detected items such as key-value pairs, tables, and selection elements.",
+   "options": [
+    {
+     "name": "--adapters-config",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--document-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--output-config",
+     "args": {}
+    },
+    {
+     "name": "--queries-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-document-text-detection",
+   "description": "Starts the asynchronous detection of text in a document.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--document-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--output-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-expense-analysis",
+   "description": "Starts the asynchronous analysis of invoices or receipts for data like contact information, items purchased, and vendor names.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--document-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--output-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-lending-analysis",
+   "description": "Starts the classification and analysis of an input document.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--document-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--output-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes any tags with the specified keys from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-adapter",
+   "description": "Update the configuration for an adapter.",
+   "options": [
+    {
+     "name": "--adapter-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--adapter-name",
+     "args": {}
+    },
+    {
+     "name": "--auto-update",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

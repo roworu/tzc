@@ -1,0 +1,469 @@
+{
+ "name": "s3vectors",
+ "description": "Amazon S3 vector buckets are a bucket type to store and search vectors with sub-second search times.",
+ "subcommands": [
+  {
+   "name": "create-index",
+   "description": "Creates a vector index within a vector bucket.",
+   "options": [
+    {
+     "name": "--data-type",
+     "args": {
+      "suggestions": [
+       "float32"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--dimension",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--distance-metric",
+     "args": {
+      "suggestions": [
+       "euclidean",
+       "cosine"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-vector-bucket",
+   "description": "Creates a vector bucket in the Amazon Web Services Region that you want your bucket to be in.",
+   "options": [
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-index",
+   "description": "Deletes a vector index.",
+   "options": [
+    {
+     "name": "--index-arn",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-vector-bucket",
+   "description": "Deletes a vector bucket.",
+   "options": [
+    {
+     "name": "--vector-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-vector-bucket-policy",
+   "description": "Deletes a vector bucket policy.",
+   "options": [
+    {
+     "name": "--vector-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-vectors",
+   "description": "Deletes one or more vectors in a vector index.",
+   "options": [
+    {
+     "name": "--index-arn",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--keys",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-index",
+   "description": "Returns vector index attributes.",
+   "options": [
+    {
+     "name": "--index-arn",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-vector-bucket",
+   "description": "Returns vector bucket attributes.",
+   "options": [
+    {
+     "name": "--vector-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-vector-bucket-policy",
+   "description": "Gets details about a vector bucket policy.",
+   "options": [
+    {
+     "name": "--vector-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-vectors",
+   "description": "Returns vector attributes.",
+   "options": [
+    {
+     "name": "--index-arn",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--keys",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-return-data"
+    },
+    {
+     "name": "--no-return-metadata"
+    },
+    {
+     "name": "--return-data"
+    },
+    {
+     "name": "--return-metadata"
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-indexes",
+   "description": "Returns a list of all the vector indexes within the specified vector bucket.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all of the tags applied to a specified Amazon S3 Vectors resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-vector-buckets",
+   "description": "Returns a list of all the vector buckets that are owned by the authenticated sender of the request.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vectors",
+   "description": "List vectors in the specified vector index.",
+   "options": [
+    {
+     "name": "--index-arn",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-return-data"
+    },
+    {
+     "name": "--no-return-metadata"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--return-data"
+    },
+    {
+     "name": "--return-metadata"
+    },
+    {
+     "name": "--segment-count",
+     "args": {}
+    },
+    {
+     "name": "--segment-index",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-vector-bucket-policy",
+   "description": "Creates a bucket policy for a vector bucket.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vector-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-vectors",
+   "description": "Adds one or more vectors to a vector index.",
+   "options": [
+    {
+     "name": "--index-arn",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    },
+    {
+     "name": "--vectors",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "query-vectors",
+   "description": "Performs an approximate nearest neighbor search query in a vector index using a query vector.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--index-arn",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-return-distance"
+    },
+    {
+     "name": "--no-return-metadata"
+    },
+    {
+     "name": "--query-vector",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--return-distance"
+    },
+    {
+     "name": "--return-metadata"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--top-k",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vector-bucket-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Applies one or more user-defined tags to an Amazon S3 Vectors resource or updates existing tags.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified user-defined tags from an Amazon S3 Vectors resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

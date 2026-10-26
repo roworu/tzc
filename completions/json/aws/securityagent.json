@@ -1,0 +1,2258 @@
+{
+ "name": "securityagent",
+ "description": "AWS Security Agent is a frontier agent that proactively secures your applications throughout the development lifecycle.",
+ "subcommands": [
+  {
+   "name": "add-artifact",
+   "description": "Uploads an artifact to an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--artifact-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--artifact-type",
+     "args": {
+      "suggestions": [
+       "TXT",
+       "PNG",
+       "JPEG",
+       "MD",
+       "PDF",
+       "DOCX",
+       "DOC",
+       "JSON",
+       "YAML"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--file-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-create-security-requirements",
+   "description": "Batch creates security requirements in a customer managed pack.",
+   "options": [
+    {
+     "name": "--pack-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-requirements",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-code-reviews",
+   "description": "Deletes one or more code reviews from an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-review-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-pentests",
+   "description": "Deletes one or more pentests from an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pentest-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-security-requirements",
+   "description": "Batch deletes security requirements from a customer managed pack.",
+   "options": [
+    {
+     "name": "--pack-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-requirement-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-threat-models",
+   "description": "Deletes one or more threat models from an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-model-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-agent-spaces",
+   "description": "Retrieves information about one or more agent spaces.",
+   "options": [
+    {
+     "name": "--agent-space-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-artifact-metadata",
+   "description": "Retrieves metadata for one or more artifacts in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--artifact-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-code-review-job-tasks",
+   "description": "Retrieves information about one or more tasks within a code review job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-review-job-task-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-code-review-jobs",
+   "description": "Retrieves information about one or more code review jobs in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-review-job-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-code-reviews",
+   "description": "Retrieves information about one or more code reviews in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-review-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-findings",
+   "description": "Retrieves information about one or more security findings in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-pentest-job-tasks",
+   "description": "Retrieves information about one or more tasks within a pentest job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-pentest-jobs",
+   "description": "Retrieves information about one or more pentest jobs in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pentest-job-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-pentests",
+   "description": "Retrieves information about one or more pentests in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pentest-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-security-requirements",
+   "description": "Batch retrieves security requirements from a pack.",
+   "options": [
+    {
+     "name": "--pack-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-requirement-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-target-domains",
+   "description": "Retrieves information about one or more target domains.",
+   "options": [
+    {
+     "name": "--target-domain-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-threat-model-job-tasks",
+   "description": "Retrieves information about one or more tasks within a threat model job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-model-job-task-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-threat-model-jobs",
+   "description": "Retrieves information about one or more threat model jobs in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-model-job-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-threat-models",
+   "description": "Retrieves information about one or more threat models in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-model-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-threats",
+   "description": "Retrieves information about one or more threats.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-security-requirements",
+   "description": "Batch updates security requirements within a customer managed pack.",
+   "options": [
+    {
+     "name": "--pack-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-requirements",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-agent-space",
+   "description": "Creates a new agent space.",
+   "options": [
+    {
+     "name": "--aws-resources",
+     "args": {}
+    },
+    {
+     "name": "--code-review-settings",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-domain-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates a new application.",
+   "options": [
+    {
+     "name": "--default-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--idc-instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-code-review",
+   "description": "Creates a new code review configuration in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--assets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-remediation-strategy",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-mode",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "SIMULATED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-integration",
+   "description": "Creates a new integration with a third-party provider, such as GitHub, for code review and remediation.",
+   "options": [
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--private-connection-name",
+     "args": {}
+    },
+    {
+     "name": "--provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITLAB",
+       "BITBUCKET",
+       "CONFLUENCE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-membership",
+   "description": "Creates a new membership, granting a user access to an agent space within an application.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config",
+     "args": {}
+    },
+    {
+     "name": "--member-type",
+     "args": {
+      "suggestions": [
+       "USER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--membership-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-pentest",
+   "description": "Creates a new pentest configuration in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--assets",
+     "args": {}
+    },
+    {
+     "name": "--code-remediation-strategy",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--disable-managed-skills",
+     "args": {}
+    },
+    {
+     "name": "--exclude-risk-types",
+     "args": {}
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--network-traffic-config",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-private-connection",
+   "description": "Creates a private connection for reaching a self-hosted provider instance over private networking using Amazon VPC Lattice.",
+   "options": [
+    {
+     "name": "--mode",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--private-connection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-security-requirement-pack",
+   "description": "Creates a customer managed security requirement pack.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-target-domain",
+   "description": "Creates a new target domain for penetration testing.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--verification-method",
+     "args": {
+      "suggestions": [
+       "DNS_TXT",
+       "HTTP_ROUTE",
+       "PRIVATE_VPC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-threat",
+   "description": "Creates a new threat under a threat model job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--anchor",
+     "args": {}
+    },
+    {
+     "name": "--comments",
+     "args": {}
+    },
+    {
+     "name": "--evidence",
+     "args": {}
+    },
+    {
+     "name": "--impacted-assets",
+     "args": {}
+    },
+    {
+     "name": "--impacted-goal",
+     "args": {}
+    },
+    {
+     "name": "--prerequisites",
+     "args": {}
+    },
+    {
+     "name": "--recommendation",
+     "args": {}
+    },
+    {
+     "name": "--severity",
+     "args": {
+      "suggestions": [
+       "CRITICAL",
+       "HIGH",
+       "MEDIUM",
+       "LOW",
+       "INFO"
+      ]
+     }
+    },
+    {
+     "name": "--statement",
+     "args": {}
+    },
+    {
+     "name": "--stride",
+     "args": {}
+    },
+    {
+     "name": "--threat-action",
+     "args": {}
+    },
+    {
+     "name": "--threat-impact",
+     "args": {}
+    },
+    {
+     "name": "--threat-job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-source",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-threat-model",
+   "description": "Creates a new threat model configuration in an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--assets",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--report-destination",
+     "args": {}
+    },
+    {
+     "name": "--scope-docs",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-agent-space",
+   "description": "Deletes an agent space and all of its associated resources, including pentests, findings, and artifacts.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes an application and its associated configuration, including IAM Identity Center settings.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-artifact",
+   "description": "Deletes an artifact from an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--artifact-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-integration",
+   "description": "Deletes an integration with a third-party provider.",
+   "options": [
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-membership",
+   "description": "Deletes a membership, revoking a user's access to an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-type",
+     "args": {
+      "suggestions": [
+       "USER"
+      ]
+     }
+    },
+    {
+     "name": "--membership-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-private-connection",
+   "description": "Deletes a private connection.",
+   "options": [
+    {
+     "name": "--private-connection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-security-requirement-pack",
+   "description": "Deletes a customer managed security requirement pack and all its associated security requirements.",
+   "options": [
+    {
+     "name": "--pack-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-target-domain",
+   "description": "Deletes a target domain registration.",
+   "options": [
+    {
+     "name": "--target-domain-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-private-connection",
+   "description": "Retrieves the details of a private connection.",
+   "options": [
+    {
+     "name": "--private-connection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application",
+   "description": "Retrieves information about an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-artifact",
+   "description": "Retrieves an artifact from an agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--artifact-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-integration",
+   "description": "Retrieves information about an integration.",
+   "options": [
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-security-requirement-pack",
+   "description": "Retrieves information about a security requirement pack.",
+   "options": [
+    {
+     "name": "--pack-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-security-requirements",
+   "description": "Imports security requirements from uploaded documents into a customer managed security requirement pack.",
+   "options": [
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pack-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "initiate-provider-registration",
+   "description": "Initiates the OAuth registration flow with a third-party provider.",
+   "options": [
+    {
+     "name": "--provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITLAB",
+       "BITBUCKET",
+       "CONFLUENCE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-agent-spaces",
+   "description": "Returns a paginated list of agent space summaries in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Returns a paginated list of application summaries in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-artifacts",
+   "description": "Returns a paginated list of artifact summaries for the specified agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-code-review-job-tasks",
+   "description": "Returns a paginated list of task summaries for the specified code review job, optionally filtered by step name or category.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--category-name",
+     "args": {}
+    },
+    {
+     "name": "--code-review-job-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--step-name",
+     "args": {
+      "suggestions": [
+       "PREFLIGHT",
+       "STATIC_ANALYSIS",
+       "PENTEST",
+       "FINALIZING",
+       "VALIDATION"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-code-review-jobs-for-code-review",
+   "description": "Returns a paginated list of code review job summaries for the specified code review configuration.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-review-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-code-reviews",
+   "description": "Returns a paginated list of code review summaries for the specified agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-discovered-endpoints",
+   "description": "Returns a paginated list of endpoints discovered during a pentest job execution.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pentest-job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-findings",
+   "description": "Lists the security findings for a pentest job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-review-job-id",
+     "args": {}
+    },
+    {
+     "name": "--confidence",
+     "args": {
+      "suggestions": [
+       "FALSE_POSITIVE",
+       "UNCONFIRMED",
+       "LOW",
+       "MEDIUM",
+       "HIGH"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pentest-job-id",
+     "args": {}
+    },
+    {
+     "name": "--risk-level",
+     "args": {
+      "suggestions": [
+       "UNKNOWN",
+       "INFORMATIONAL",
+       "LOW",
+       "MEDIUM",
+       "HIGH",
+       "CRITICAL"
+      ]
+     }
+    },
+    {
+     "name": "--risk-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "RESOLVED",
+       "ACCEPTED",
+       "FALSE_POSITIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-integrated-resources",
+   "description": "Lists the integrated resources for an agent space, optionally filtered by integration or resource type.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "CODE_REPOSITORY",
+       "DOCUMENT"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-integrations",
+   "description": "Lists the integrations in your account, optionally filtered by provider or provider type.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-memberships",
+   "description": "Returns a paginated list of membership summaries for the specified agent space within an application.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--member-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pentest-job-tasks",
+   "description": "Returns a paginated list of task summaries for the specified pentest job, optionally filtered by step name or category.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--category-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pentest-job-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--step-name",
+     "args": {
+      "suggestions": [
+       "PREFLIGHT",
+       "STATIC_ANALYSIS",
+       "PENTEST",
+       "FINALIZING",
+       "VALIDATION"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-pentest-jobs-for-pentest",
+   "description": "Returns a paginated list of pentest job summaries for the specified pentest configuration.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pentest-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pentests",
+   "description": "Returns a paginated list of pentest summaries for the specified agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-private-connections",
+   "description": "Lists the private connections in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-security-requirement-packs",
+   "description": "Lists all security requirement packs in the caller's account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-security-requirements",
+   "description": "Lists security requirements within a pack.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--pack-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns the tags associated with the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-target-domains",
+   "description": "Returns a paginated list of target domain summaries in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-threat-model-job-tasks",
+   "description": "Returns a paginated list of task summaries for the specified threat model job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--threat-model-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-threat-model-jobs",
+   "description": "Returns a paginated list of threat model job summaries for the specified threat model.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--threat-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-threat-models",
+   "description": "Returns a paginated list of threat model summaries for the specified agent space.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-threats",
+   "description": "Returns a paginated list of threats for a threat model job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--threat-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-code-remediation",
+   "description": "Initiates code remediation for one or more security findings.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-review-job-id",
+     "args": {}
+    },
+    {
+     "name": "--finding-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pentest-job-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-code-review-job",
+   "description": "Starts a new code review job for a code review configuration.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-review-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--diff-source",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-pentest-job",
+   "description": "Starts a new pentest job for a pentest configuration.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pentest-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-threat-model-job",
+   "description": "Starts a new threat model job for a threat model configuration.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-code-review-job",
+   "description": "Stops a running code review job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-review-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-pentest-job",
+   "description": "Stops a running pentest job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pentest-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-threat-model-job",
+   "description": "Stops a running threat model job.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-model-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-agent-space",
+   "description": "Updates the configuration of an existing agent space, including its name, description, AWS resources, target domains, and code review settings.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--aws-resources",
+     "args": {}
+    },
+    {
+     "name": "--code-review-settings",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--target-domain-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates the configuration of an existing application, including the IAM role and default KMS key.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-code-review",
+   "description": "Updates an existing code review configuration.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--assets",
+     "args": {}
+    },
+    {
+     "name": "--code-remediation-strategy",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--code-review-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {}
+    },
+    {
+     "name": "--validation-mode",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "SIMULATED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-finding",
+   "description": "Updates the status or risk level of a security finding.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attack-script",
+     "args": {}
+    },
+    {
+     "name": "--customer-note",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--finding-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--reasoning",
+     "args": {}
+    },
+    {
+     "name": "--risk-level",
+     "args": {
+      "suggestions": [
+       "UNKNOWN",
+       "INFORMATIONAL",
+       "LOW",
+       "MEDIUM",
+       "HIGH",
+       "CRITICAL"
+      ]
+     }
+    },
+    {
+     "name": "--risk-score",
+     "args": {}
+    },
+    {
+     "name": "--risk-type",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "RESOLVED",
+       "ACCEPTED",
+       "FALSE_POSITIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-integrated-resources",
+   "description": "Updates the integrated resources for an agent space, including their capabilities.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--items",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pentest",
+   "description": "Updates an existing pentest configuration.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--assets",
+     "args": {}
+    },
+    {
+     "name": "--code-remediation-strategy",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--disable-managed-skills",
+     "args": {}
+    },
+    {
+     "name": "--exclude-risk-types",
+     "args": {}
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--network-traffic-config",
+     "args": {}
+    },
+    {
+     "name": "--pentest-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-private-connection-certificate",
+   "description": "Updates the certificate associated with a private connection.",
+   "options": [
+    {
+     "name": "--certificate",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--private-connection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-security-requirement-pack",
+   "description": "Updates a security requirement pack.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--pack-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-target-domain",
+   "description": "Updates the verification method for a target domain.",
+   "options": [
+    {
+     "name": "--target-domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--verification-method",
+     "args": {
+      "suggestions": [
+       "DNS_TXT",
+       "HTTP_ROUTE",
+       "PRIVATE_VPC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-threat",
+   "description": "Updates a threat.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--anchor",
+     "args": {}
+    },
+    {
+     "name": "--comments",
+     "args": {}
+    },
+    {
+     "name": "--evidence",
+     "args": {}
+    },
+    {
+     "name": "--impacted-assets",
+     "args": {}
+    },
+    {
+     "name": "--impacted-goal",
+     "args": {}
+    },
+    {
+     "name": "--prerequisites",
+     "args": {}
+    },
+    {
+     "name": "--recommendation",
+     "args": {}
+    },
+    {
+     "name": "--severity",
+     "args": {
+      "suggestions": [
+       "CRITICAL",
+       "HIGH",
+       "MEDIUM",
+       "LOW",
+       "INFO"
+      ]
+     }
+    },
+    {
+     "name": "--statement",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "OPEN",
+       "RESOLVED",
+       "DISMISSED"
+      ]
+     }
+    },
+    {
+     "name": "--threat-action",
+     "args": {}
+    },
+    {
+     "name": "--threat-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--threat-impact",
+     "args": {}
+    },
+    {
+     "name": "--threat-source",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-threat-model",
+   "description": "Updates an existing threat model configuration.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--assets",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--scope-docs",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--threat-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--title",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "verify-target-domain",
+   "description": "Initiates verification of a target domain.",
+   "options": [
+    {
+     "name": "--target-domain-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

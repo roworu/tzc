@@ -1,0 +1,499 @@
+{
+ "name": "rum",
+ "description": "With Amazon CloudWatch RUM, you can perform real-user monitoring to collect client-side data about your web application performance from actual user sessions in real time.",
+ "subcommands": [
+  {
+   "name": "batch-create-rum-metric-definitions",
+   "description": "Specifies the extended metrics and custom metrics that you want a CloudWatch RUM app monitor to send to a destination.",
+   "options": [
+    {
+     "name": "--app-monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination",
+     "args": {
+      "suggestions": [
+       "CloudWatch",
+       "Evidently"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--metric-definitions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-rum-metric-definitions",
+   "description": "Removes the specified metrics from being sent to an extended metrics destination.",
+   "options": [
+    {
+     "name": "--app-monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination",
+     "args": {
+      "suggestions": [
+       "CloudWatch",
+       "Evidently"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--metric-definition-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-rum-metric-definitions",
+   "description": "Retrieves the list of metrics and dimensions that a RUM app monitor is sending to a single destination.",
+   "options": [
+    {
+     "name": "--app-monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination",
+     "args": {
+      "suggestions": [
+       "CloudWatch",
+       "Evidently"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-app-monitor",
+   "description": "Creates a Amazon CloudWatch RUM app monitor, which collects telemetry data from your application and sends that data to RUM.",
+   "options": [
+    {
+     "name": "--app-monitor-configuration",
+     "args": {}
+    },
+    {
+     "name": "--custom-events",
+     "args": {}
+    },
+    {
+     "name": "--cw-log-enabled"
+    },
+    {
+     "name": "--deobfuscation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-list",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-cw-log-enabled"
+    },
+    {
+     "name": "--platform",
+     "args": {
+      "suggestions": [
+       "Web",
+       "Android",
+       "iOS"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-app-monitor",
+   "description": "Deletes an existing app monitor.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Removes the association of a resource-based policy from an app monitor.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-revision-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-rum-metrics-destination",
+   "description": "Deletes a destination for CloudWatch RUM extended metrics, so that the specified app monitor stops sending extended metrics to that destination.",
+   "options": [
+    {
+     "name": "--app-monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination",
+     "args": {
+      "suggestions": [
+       "CloudWatch",
+       "Evidently"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--destination-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-app-monitor",
+   "description": "Retrieves the complete configuration information for one app monitor.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-app-monitor-data",
+   "description": "Retrieves the raw performance events that RUM has collected from your web application, so that you can do your own processing or analysis of this data.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-range",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Use this operation to retrieve information about a resource-based policy that is attached to an app monitor.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-app-monitors",
+   "description": "Returns a list of the Amazon CloudWatch RUM app monitors in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-rum-metrics-destinations",
+   "description": "Returns a list of destinations that you have created to receive RUM extended metrics, for the specified app monitor.",
+   "options": [
+    {
+     "name": "--app-monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Displays the tags associated with a CloudWatch RUM resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Use this operation to assign a resource-based policy to a CloudWatch RUM app monitor to control access to it.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-revision-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-rum-events",
+   "description": "Sends telemetry events about your application performance and user behavior to CloudWatch RUM.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--app-monitor-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--batch-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rum-events",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-details",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-rum-metrics-destination",
+   "description": "Creates or updates a destination to receive extended metrics from CloudWatch RUM.",
+   "options": [
+    {
+     "name": "--app-monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination",
+     "args": {
+      "suggestions": [
+       "CloudWatch",
+       "Evidently"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified CloudWatch RUM resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-app-monitor",
+   "description": "Updates the configuration of an existing app monitor.",
+   "options": [
+    {
+     "name": "--app-monitor-configuration",
+     "args": {}
+    },
+    {
+     "name": "--custom-events",
+     "args": {}
+    },
+    {
+     "name": "--cw-log-enabled"
+    },
+    {
+     "name": "--deobfuscation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-list",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-cw-log-enabled"
+    }
+   ]
+  },
+  {
+   "name": "update-rum-metric-definition",
+   "description": "Modifies one existing metric definition for CloudWatch RUM extended metrics.",
+   "options": [
+    {
+     "name": "--app-monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination",
+     "args": {
+      "suggestions": [
+       "CloudWatch",
+       "Evidently"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--metric-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

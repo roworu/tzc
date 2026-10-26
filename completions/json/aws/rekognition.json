@@ -1,0 +1,1816 @@
+{
+ "name": "rekognition",
+ "description": "This is the API Reference for Amazon Rekognition Image, Amazon Rekognition Custom Labels, Amazon Rekognition Stored Video, Amazon Rekognition Streaming Video.",
+ "subcommands": [
+  {
+   "name": "associate-faces",
+   "description": "Associates one or more faces with an existing UserID.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--face-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-match-threshold",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "compare-faces",
+   "description": "Compares a face in the source input image with each of the 100 largest faces detected in the target input image.",
+   "options": [
+    {
+     "name": "--quality-filter",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AUTO",
+       "LOW",
+       "MEDIUM",
+       "HIGH"
+      ]
+     }
+    },
+    {
+     "name": "--similarity-threshold",
+     "args": {}
+    },
+    {
+     "name": "--source-image",
+     "args": {}
+    },
+    {
+     "name": "--source-image-bytes",
+     "args": {}
+    },
+    {
+     "name": "--target-image",
+     "args": {}
+    },
+    {
+     "name": "--target-image-bytes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "copy-project-version",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--destination-project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--output-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-project-version-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--version-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-collection",
+   "description": "Creates a collection in an AWS Region.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--dataset-source",
+     "args": {}
+    },
+    {
+     "name": "--dataset-type",
+     "args": {
+      "suggestions": [
+       "TRAIN",
+       "TEST"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-face-liveness-session",
+   "description": "This API operation initiates a Face Liveness session.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-project",
+   "description": "Creates a new Amazon Rekognition project.",
+   "options": [
+    {
+     "name": "--auto-update",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--feature",
+     "args": {
+      "suggestions": [
+       "CONTENT_MODERATION",
+       "CUSTOM_LABELS"
+      ]
+     }
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-project-version",
+   "description": "Creates a new version of Amazon Rekognition project (like a Custom Labels model or a custom adapter) and begins training.",
+   "options": [
+    {
+     "name": "--feature-config",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--output-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--testing-data",
+     "args": {}
+    },
+    {
+     "name": "--training-data",
+     "args": {}
+    },
+    {
+     "name": "--version-description",
+     "args": {}
+    },
+    {
+     "name": "--version-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-stream-processor",
+   "description": "Creates an Amazon Rekognition stream processor that you can use to detect and recognize faces or to detect labels in a streaming video.",
+   "options": [
+    {
+     "name": "--data-sharing-preference",
+     "args": {}
+    },
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--regions-of-interest",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-processor-output",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "Creates a new User within a collection specified by CollectionId.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-collection",
+   "description": "Deletes the specified collection.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-faces",
+   "description": "Deletes faces from a collection.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--face-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project",
+   "description": "Deletes a Amazon Rekognition project.",
+   "options": [
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project-policy",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-revision-id",
+     "args": {}
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project-version",
+   "description": "Deletes a Rekognition project model or project version, like a Amazon Rekognition Custom Labels model or a custom adapter.",
+   "options": [
+    {
+     "name": "--project-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-stream-processor",
+   "description": "Deletes the stream processor identified by Name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user",
+   "description": "Deletes the specified UserID within the collection.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-collection",
+   "description": "Describes the specified collection.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-project-versions",
+   "description": "Lists and describes the versions of an Amazon Rekognition project.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--version-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-projects",
+   "description": "Gets information about your Rekognition projects.",
+   "options": [
+    {
+     "name": "--features",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-names",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-stream-processor",
+   "description": "Provides information about a stream processor created by CreateStreamProcessor.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detect-custom-labels",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--min-confidence",
+     "args": {}
+    },
+    {
+     "name": "--project-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detect-faces",
+   "description": "Detects faces within an image that is provided as input.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "detect-labels",
+   "description": "Detects instances of real-world entities within an image (JPEG or PNG) provided as input.",
+   "options": [
+    {
+     "name": "--features",
+     "args": {}
+    },
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    },
+    {
+     "name": "--max-labels",
+     "args": {}
+    },
+    {
+     "name": "--min-confidence",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "detect-moderation-labels",
+   "description": "Detects unsafe content in a specified JPEG or PNG format image.",
+   "options": [
+    {
+     "name": "--human-loop-config",
+     "args": {}
+    },
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    },
+    {
+     "name": "--min-confidence",
+     "args": {}
+    },
+    {
+     "name": "--project-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "detect-protective-equipment",
+   "description": "Detects Personal Protective Equipment (PPE) worn by people detected in an image.",
+   "options": [
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    },
+    {
+     "name": "--summarization-attributes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "detect-text",
+   "description": "Detects text in the input image and converts it into machine-readable text.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-faces",
+   "description": "Removes the association between a Face supplied in an array of FaceIds and the User.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--face-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "distribute-dataset-entries",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--datasets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-celebrity-info",
+   "description": "Gets the name and additional information about a celebrity based on their Amazon Rekognition ID.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-celebrity-recognition",
+   "description": "Gets the celebrity recognition results for a Amazon Rekognition Video analysis started by StartCelebrityRecognition.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "ID",
+       "TIMESTAMP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-content-moderation",
+   "description": "Gets the inappropriate, unwanted, or offensive content analysis results for a Amazon Rekognition Video analysis started by StartContentModeration.",
+   "options": [
+    {
+     "name": "--aggregate-by",
+     "args": {
+      "suggestions": [
+       "TIMESTAMPS",
+       "SEGMENTS"
+      ]
+     }
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "TIMESTAMP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-face-detection",
+   "description": "Gets face detection results for a Amazon Rekognition Video analysis started by StartFaceDetection.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-face-liveness-session-results",
+   "description": "Retrieves the results of a specific Face Liveness session.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-face-search",
+   "description": "Gets the face search results for Amazon Rekognition Video face search started by StartFaceSearch.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "INDEX",
+       "TIMESTAMP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-label-detection",
+   "description": "Gets the label detection results of a Amazon Rekognition Video analysis started by StartLabelDetection.",
+   "options": [
+    {
+     "name": "--aggregate-by",
+     "args": {
+      "suggestions": [
+       "TIMESTAMPS",
+       "SEGMENTS"
+      ]
+     }
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "TIMESTAMP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-media-analysis-job",
+   "description": "Retrieves the results for a given media analysis job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-person-tracking",
+   "description": "End of support notice: On October 31, 2025, AWS will discontinue support for Amazon Rekognition People Pathing.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "INDEX",
+       "TIMESTAMP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-segment-detection",
+   "description": "Gets the segment detection results of a Amazon Rekognition Video analysis started by StartSegmentDetection.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-text-detection",
+   "description": "Gets the text detection results of a Amazon Rekognition Video analysis started by StartTextDetection.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "index-faces",
+   "description": "Detects faces in the input image and adds them to the specified collection.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--detection-attributes",
+     "args": {}
+    },
+    {
+     "name": "--external-image-id",
+     "args": {}
+    },
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    },
+    {
+     "name": "--max-faces",
+     "args": {}
+    },
+    {
+     "name": "--quality-filter",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AUTO",
+       "LOW",
+       "MEDIUM",
+       "HIGH"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-collections",
+   "description": "Returns list of collection IDs in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-entries",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--contains-labels",
+     "args": {}
+    },
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--has-errors"
+    },
+    {
+     "name": "--labeled"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-has-errors"
+    },
+    {
+     "name": "--no-labeled"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-ref-contains",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-labels",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-faces",
+   "description": "Returns metadata for faces in the specified collection.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--face-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-media-analysis-jobs",
+   "description": "Returns a list of media analysis jobs.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-project-policies",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stream-processors",
+   "description": "Gets a list of stream processors that you have created with CreateStreamProcessor.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags in an Amazon Rekognition collection, stream processor, or Custom Labels model.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-users",
+   "description": "Returns metadata of the User such as UserID in the specified collection.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-project-policy",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-revision-id",
+     "args": {}
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "recognize-celebrities",
+   "description": "Returns an array of celebrities recognized in the input image.",
+   "options": [
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-faces",
+   "description": "For a given input face ID, searches for matching faces in the collection the face belongs to.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--face-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--face-match-threshold",
+     "args": {}
+    },
+    {
+     "name": "--max-faces",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-faces-by-image",
+   "description": "For a given input image, first detects the largest face in the image, and then searches the specified collection for matching faces.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--face-match-threshold",
+     "args": {}
+    },
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    },
+    {
+     "name": "--max-faces",
+     "args": {}
+    },
+    {
+     "name": "--quality-filter",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AUTO",
+       "LOW",
+       "MEDIUM",
+       "HIGH"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "search-users",
+   "description": "Searches for UserIDs within a collection based on a FaceId or UserId.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--face-id",
+     "args": {}
+    },
+    {
+     "name": "--max-users",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    },
+    {
+     "name": "--user-match-threshold",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-users-by-image",
+   "description": "Searches for UserIDs using a supplied image.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image",
+     "args": {}
+    },
+    {
+     "name": "--image-bytes",
+     "args": {}
+    },
+    {
+     "name": "--max-users",
+     "args": {}
+    },
+    {
+     "name": "--quality-filter",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AUTO",
+       "LOW",
+       "MEDIUM",
+       "HIGH"
+      ]
+     }
+    },
+    {
+     "name": "--user-match-threshold",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-celebrity-recognition",
+   "description": "Starts asynchronous recognition of celebrities in a stored video.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--video",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-content-moderation",
+   "description": "Starts asynchronous detection of inappropriate, unwanted, or offensive content in a stored video.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--min-confidence",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--video",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-face-detection",
+   "description": "Starts asynchronous detection of faces in a stored video.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--face-attributes",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--video",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-face-search",
+   "description": "Starts the asynchronous search for faces in a collection that match the faces of persons detected in a stored video.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--face-match-threshold",
+     "args": {}
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--video",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-label-detection",
+   "description": "Starts asynchronous detection of labels in a stored video.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--features",
+     "args": {}
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--min-confidence",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--video",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-media-analysis-job",
+   "description": "Initiates a new media analysis job.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--operations-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-person-tracking",
+   "description": "End of support notice: On October 31, 2025, AWS will discontinue support for Amazon Rekognition People Pathing.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--video",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-project-version",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--max-inference-units",
+     "args": {}
+    },
+    {
+     "name": "--min-inference-units",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-segment-detection",
+   "description": "Starts asynchronous detection of segment detection in a stored video.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--segment-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--video",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-stream-processor",
+   "description": "Starts processing a stream processor.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-selector",
+     "args": {}
+    },
+    {
+     "name": "--stop-selector",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-text-detection",
+   "description": "Starts asynchronous detection of text in a stored video.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--job-tag",
+     "args": {}
+    },
+    {
+     "name": "--notification-channel",
+     "args": {}
+    },
+    {
+     "name": "--video",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-project-version",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--project-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-stream-processor",
+   "description": "Stops a running stream processor that was created by CreateStreamProcessor.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more key-value tags to an Amazon Rekognition collection, stream processor, or Custom Labels model.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from an Amazon Rekognition collection, stream processor, or Custom Labels model.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dataset-entries",
+   "description": "This operation applies only to Amazon Rekognition Custom Labels.",
+   "options": [
+    {
+     "name": "--changes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-stream-processor",
+   "description": "Allows you to update a stream processor.",
+   "options": [
+    {
+     "name": "--data-sharing-preference-for-update",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters-to-delete",
+     "args": {}
+    },
+    {
+     "name": "--regions-of-interest-for-update",
+     "args": {}
+    },
+    {
+     "name": "--settings-for-update",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "project-version-running",
+     "description": "Wait until the ProjectVersion is running.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--project-arn",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--version-names",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "project-version-training-completed",
+     "description": "Wait until the ProjectVersion training completes.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--project-arn",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--version-names",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

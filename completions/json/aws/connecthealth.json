@@ -1,0 +1,286 @@
+{
+ "name": "connecthealth",
+ "description": "Amazon Connect Health is an AI-powered healthcare service built on Amazon Connect.",
+ "subcommands": [
+  {
+   "name": "activate-subscription",
+   "description": "Activates a Subscription to enable billing for a user.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-domain",
+   "description": "Creates a new Domain for managing HealthAgent resources.",
+   "options": [
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--web-app-setup-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-subscription",
+   "description": "Creates a new Subscription within a Domain for billing and user management.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deactivate-subscription",
+   "description": "Deactivates a Subscription to stop billing for a user.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain",
+   "description": "Deletes a Domain and all associated resources.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain",
+   "description": "Retrieves information about a Domain.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-medical-scribe-listening-session",
+   "description": "Retrieves details about an existing Medical Scribe listening session",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-patient-insights-job",
+   "description": "Get details of a started patient insights job.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-subscription",
+   "description": "Retrieves information about a Subscription.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-domains",
+   "description": "Lists Domains for a given account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DELETING",
+       "DELETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-subscriptions",
+   "description": "Lists all Subscriptions within a Domain.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags associated with the specified resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-patient-insights-job",
+   "description": "Starts a new patient insights job.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encounter-context",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--insights-context",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--patient-context",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-context",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags with the specified resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

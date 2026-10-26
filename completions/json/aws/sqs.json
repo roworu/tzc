@@ -1,0 +1,428 @@
+{
+ "name": "sqs",
+ "description": "Welcome to the Amazon SQS API Reference.",
+ "subcommands": [
+  {
+   "name": "add-permission",
+   "description": "Adds a permission to a queue for a specific principal.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--aws-account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--label",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-message-move-task",
+   "description": "Cancels a specified message movement task.",
+   "options": [
+    {
+     "name": "--task-handle",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "change-message-visibility",
+   "description": "Changes the visibility timeout of a specified message in a queue to a new value.",
+   "options": [
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--receipt-handle",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--visibility-timeout",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "change-message-visibility-batch",
+   "description": "Changes the visibility timeout of multiple messages.",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-queue",
+   "description": "Creates a new standard or FIFO queue.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--queue-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-message",
+   "description": "Deletes the specified message from the specified queue.",
+   "options": [
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--receipt-handle",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-message-batch",
+   "description": "Deletes up to ten messages from the specified queue.",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-queue",
+   "description": "Deletes the queue specified by the QueueUrl, regardless of the queue's contents.",
+   "options": [
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-queue-attributes",
+   "description": "Gets attributes for the specified queue.",
+   "options": [
+    {
+     "name": "--attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-queue-url",
+   "description": "The GetQueueUrl API returns the URL of an existing Amazon SQS queue.",
+   "options": [
+    {
+     "name": "--queue-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queue-owner-aws-account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dead-letter-source-queues",
+   "description": "Returns a list of your queues that have the RedrivePolicy queue attribute configured with a dead-letter queue.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-message-move-tasks",
+   "description": "Gets the most recent message movement tasks (up to 10) under a specific source queue.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--source-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-queue-tags",
+   "description": "List all cost allocation tags added to the specified Amazon SQS queue.",
+   "options": [
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-queues",
+   "description": "Returns a list of your queues in the current region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--queue-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "purge-queue",
+   "description": "Deletes available messages in a queue (including in-flight messages) specified by the QueueURL parameter.",
+   "options": [
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "receive-message",
+   "description": "Retrieves one or more messages (up to 10), from the specified queue.",
+   "options": [
+    {
+     "name": "--attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--max-number-of-messages",
+     "args": {}
+    },
+    {
+     "name": "--message-attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--message-system-attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--receive-request-attempt-id",
+     "args": {}
+    },
+    {
+     "name": "--visibility-timeout",
+     "args": {}
+    },
+    {
+     "name": "--wait-time-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-permission",
+   "description": "Revokes any permissions in the queue policy that matches the specified Label parameter.",
+   "options": [
+    {
+     "name": "--label",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-message",
+   "description": "Delivers a message to the specified queue.",
+   "options": [
+    {
+     "name": "--delay-seconds",
+     "args": {}
+    },
+    {
+     "name": "--message-attributes",
+     "args": {}
+    },
+    {
+     "name": "--message-body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-deduplication-id",
+     "args": {}
+    },
+    {
+     "name": "--message-group-id",
+     "args": {}
+    },
+    {
+     "name": "--message-system-attributes",
+     "args": {}
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-message-batch",
+   "description": "You can use SendMessageBatch to send up to 10 messages to the specified queue by assigning either identical or different values to each message (or by not assigning values at all).",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-queue-attributes",
+   "description": "Sets the value of one or more queue attributes, like a policy.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-message-move-task",
+   "description": "Starts an asynchronous task to move messages from a specified source queue to a specified destination queue.",
+   "options": [
+    {
+     "name": "--destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-number-of-messages-per-second",
+     "args": {}
+    },
+    {
+     "name": "--source-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-queue",
+   "description": "Add cost allocation tags to the specified Amazon SQS queue.",
+   "options": [
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-queue",
+   "description": "Remove cost allocation tags from the specified Amazon SQS queue.",
+   "options": [
+    {
+     "name": "--queue-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1529 @@
+{
+ "name": "devicefarm",
+ "description": "Welcome to the AWS Device Farm API documentation, which contains APIs for: Testing on desktop browsers Device Farm makes it possible for you to test your web applications on desktop browsers using Selenium.",
+ "subcommands": [
+  {
+   "name": "create-device-pool",
+   "description": "Creates a device pool.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--max-devices",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-instance-profile",
+   "description": "Creates a profile that can be applied to one or more private fleet device instances.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--exclude-app-packages-from-cleanup",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-package-cleanup"
+    },
+    {
+     "name": "--no-reboot-after-use"
+    },
+    {
+     "name": "--package-cleanup"
+    },
+    {
+     "name": "--reboot-after-use"
+    }
+   ]
+  },
+  {
+   "name": "create-network-profile",
+   "description": "Creates a network profile.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--downlink-bandwidth-bits",
+     "args": {}
+    },
+    {
+     "name": "--downlink-delay-ms",
+     "args": {}
+    },
+    {
+     "name": "--downlink-jitter-ms",
+     "args": {}
+    },
+    {
+     "name": "--downlink-loss-percent",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "CURATED",
+       "PRIVATE"
+      ]
+     }
+    },
+    {
+     "name": "--uplink-bandwidth-bits",
+     "args": {}
+    },
+    {
+     "name": "--uplink-delay-ms",
+     "args": {}
+    },
+    {
+     "name": "--uplink-jitter-ms",
+     "args": {}
+    },
+    {
+     "name": "--uplink-loss-percent",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-project",
+   "description": "Creates a project.",
+   "options": [
+    {
+     "name": "--default-job-timeout-minutes",
+     "args": {}
+    },
+    {
+     "name": "--environment-variables",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-remote-access-session",
+   "description": "Specifies and starts a remote access session.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--device-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--interaction-mode",
+     "args": {
+      "suggestions": [
+       "INTERACTIVE",
+       "NO_VIDEO",
+       "VIDEO_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-skip-app-resign"
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--skip-app-resign"
+    }
+   ]
+  },
+  {
+   "name": "create-test-grid-project",
+   "description": "Creates a Selenium testing project.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-test-grid-url",
+   "description": "Creates a signed, short-term URL that can be passed to a Selenium RemoteWebDriver constructor.",
+   "options": [
+    {
+     "name": "--expires-in-seconds",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-upload",
+   "description": "Uploads an app or test scripts.",
+   "options": [
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vpce-configuration",
+   "description": "Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC) endpoint.",
+   "options": [
+    {
+     "name": "--service-dns-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpce-configuration-description",
+     "args": {}
+    },
+    {
+     "name": "--vpce-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpce-service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-device-pool",
+   "description": "Deletes a device pool given the pool ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-instance-profile",
+   "description": "Deletes a profile that can be applied to one or more private device instances.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-network-profile",
+   "description": "Deletes a network profile.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project",
+   "description": "Deletes an AWS Device Farm project, given the project ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-remote-access-session",
+   "description": "Deletes a completed remote access session and its results.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-run",
+   "description": "Deletes the run, given the run ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-test-grid-project",
+   "description": "Deletes a Selenium testing project and all content generated under it.",
+   "options": [
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-upload",
+   "description": "Deletes an upload given the upload ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpce-configuration",
+   "description": "Deletes a configuration for your Amazon Virtual Private Cloud (VPC) endpoint.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-settings",
+   "description": "Returns the number of unmetered iOS or unmetered Android devices that have been purchased by the account."
+  },
+  {
+   "name": "get-device",
+   "description": "Gets information about a unique device type.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-device-instance",
+   "description": "Returns information about a device instance that belongs to a private device fleet.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-device-pool",
+   "description": "Gets information about a device pool.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-device-pool-compatibility",
+   "description": "Gets information about compatibility with a device pool.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--device-pool-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-arn",
+     "args": {}
+    },
+    {
+     "name": "--test",
+     "args": {}
+    },
+    {
+     "name": "--test-type",
+     "args": {
+      "suggestions": [
+       "BUILTIN_FUZZ",
+       "APPIUM_JAVA_JUNIT",
+       "APPIUM_JAVA_TESTNG",
+       "APPIUM_PYTHON",
+       "APPIUM_NODE",
+       "APPIUM_RUBY",
+       "APPIUM_WEB_JAVA_JUNIT",
+       "APPIUM_WEB_JAVA_TESTNG",
+       "APPIUM_WEB_PYTHON",
+       "APPIUM_WEB_NODE",
+       "APPIUM_WEB_RUBY",
+       "INSTRUMENTATION",
+       "XCTEST",
+       "XCTEST_UI"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-instance-profile",
+   "description": "Returns information about the specified instance profile.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job",
+   "description": "Gets information about a job.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-network-profile",
+   "description": "Returns information about a network profile.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-offering-status",
+   "description": "Gets the current status and future status of all offerings purchased by an AWS account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-project",
+   "description": "Gets information about a project.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-remote-access-session",
+   "description": "Returns a link to a currently running remote access session.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-run",
+   "description": "Gets information about a run.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-suite",
+   "description": "Gets information about a suite.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-test",
+   "description": "Gets information about a test.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-test-grid-project",
+   "description": "Retrieves information about a Selenium testing project.",
+   "options": [
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-test-grid-session",
+   "description": "A session is an instance of a browser created through a RemoteWebDriver with the URL from CreateTestGridUrlResult$url.",
+   "options": [
+    {
+     "name": "--project-arn",
+     "args": {}
+    },
+    {
+     "name": "--session-arn",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-upload",
+   "description": "Gets information about an upload.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vpce-configuration",
+   "description": "Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC) endpoint.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "install-to-remote-access-session",
+   "description": "Installs an application to the device in a remote access session.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remote-access-session-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-artifacts",
+   "description": "Gets information about artifacts.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SCREENSHOT",
+       "FILE",
+       "LOG"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-device-instances",
+   "description": "Returns information about the private device instances associated with one or more AWS accounts.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-device-pools",
+   "description": "Gets information about device pools.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "CURATED",
+       "PRIVATE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-devices",
+   "description": "Gets information about unique device types.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-instance-profiles",
+   "description": "Returns information about all the instance profiles in an AWS account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "Gets information about jobs for a given test run.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-network-profiles",
+   "description": "Returns the list of available network profiles.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "CURATED",
+       "PRIVATE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-offering-promotions",
+   "description": "Returns a list of offering promotions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-offering-transactions",
+   "description": "Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-offerings",
+   "description": "Returns a list of products or offerings that the user can manage through the API.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-projects",
+   "description": "Gets information about projects.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-remote-access-sessions",
+   "description": "Returns a list of all currently running remote access sessions.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-runs",
+   "description": "Gets information about runs, given an AWS Device Farm project ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-samples",
+   "description": "Gets information about samples, given an AWS Device Farm job ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-suites",
+   "description": "Gets information about test suites for a given job.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List the tags for an AWS Device Farm resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-test-grid-projects",
+   "description": "Gets a list of all Selenium testing projects in your account.",
+   "options": [
+    {
+     "name": "--max-result",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-test-grid-session-actions",
+   "description": "Returns a list of the actions taken in a TestGridSession.",
+   "options": [
+    {
+     "name": "--max-result",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--session-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-test-grid-session-artifacts",
+   "description": "Retrieves a list of artifacts created during the session.",
+   "options": [
+    {
+     "name": "--max-result",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--session-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "VIDEO",
+       "LOG"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-test-grid-sessions",
+   "description": "Retrieves a list of sessions for a TestGridProject.",
+   "options": [
+    {
+     "name": "--creation-time-after",
+     "args": {}
+    },
+    {
+     "name": "--creation-time-before",
+     "args": {}
+    },
+    {
+     "name": "--end-time-after",
+     "args": {}
+    },
+    {
+     "name": "--end-time-before",
+     "args": {}
+    },
+    {
+     "name": "--max-result",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "CLOSED",
+       "ERRORED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tests",
+   "description": "Gets information about tests in a given test suite.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-unique-problems",
+   "description": "Gets information about unique problems, such as exceptions or crashes.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-uploads",
+   "description": "Gets information about uploads, given an AWS Device Farm project ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpce-configurations",
+   "description": "Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "purchase-offering",
+   "description": "Immediately purchases offerings for an AWS account.",
+   "options": [
+    {
+     "name": "--offering-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--offering-promotion-id",
+     "args": {}
+    },
+    {
+     "name": "--quantity",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "renew-offering",
+   "description": "Explicitly sets the quantity of devices to renew for an offering, starting from the effectiveDate of the next period.",
+   "options": [
+    {
+     "name": "--offering-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--quantity",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "schedule-run",
+   "description": "Schedules a run.",
+   "options": [
+    {
+     "name": "--app-arn",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--device-pool-arn",
+     "args": {}
+    },
+    {
+     "name": "--device-selection-configuration",
+     "args": {}
+    },
+    {
+     "name": "--execution-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-job",
+   "description": "Initiates a stop request for the current job.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-remote-access-session",
+   "description": "Ends a specified remote access session.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-run",
+   "description": "Initiates a stop request for the current test run.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags to a resource with the specified resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes the specified tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-device-instance",
+   "description": "Updates information about a private device instance.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--labels",
+     "args": {}
+    },
+    {
+     "name": "--profile-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-device-pool",
+   "description": "Modifies the name, description, and rules in a device pool given the attributes and the pool ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--clear-max-devices"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--max-devices",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-clear-max-devices"
+    },
+    {
+     "name": "--rules",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-instance-profile",
+   "description": "Updates information about an existing private device instance profile.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--exclude-app-packages-from-cleanup",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-package-cleanup"
+    },
+    {
+     "name": "--no-reboot-after-use"
+    },
+    {
+     "name": "--package-cleanup"
+    },
+    {
+     "name": "--reboot-after-use"
+    }
+   ]
+  },
+  {
+   "name": "update-network-profile",
+   "description": "Updates the network profile.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--downlink-bandwidth-bits",
+     "args": {}
+    },
+    {
+     "name": "--downlink-delay-ms",
+     "args": {}
+    },
+    {
+     "name": "--downlink-jitter-ms",
+     "args": {}
+    },
+    {
+     "name": "--downlink-loss-percent",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "CURATED",
+       "PRIVATE"
+      ]
+     }
+    },
+    {
+     "name": "--uplink-bandwidth-bits",
+     "args": {}
+    },
+    {
+     "name": "--uplink-delay-ms",
+     "args": {}
+    },
+    {
+     "name": "--uplink-jitter-ms",
+     "args": {}
+    },
+    {
+     "name": "--uplink-loss-percent",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-project",
+   "description": "Modifies the specified project name, given the project ARN and a new name.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-job-timeout-minutes",
+     "args": {}
+    },
+    {
+     "name": "--environment-variables",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-test-grid-project",
+   "description": "Change details of a project.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-upload",
+   "description": "Updates an uploaded test spec.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--edit-content"
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-edit-content"
+    }
+   ]
+  },
+  {
+   "name": "update-vpce-configuration",
+   "description": "Updates information about an Amazon Virtual Private Cloud (VPC) endpoint configuration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-dns-name",
+     "args": {}
+    },
+    {
+     "name": "--vpce-configuration-description",
+     "args": {}
+    },
+    {
+     "name": "--vpce-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--vpce-service-name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

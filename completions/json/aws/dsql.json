@@ -1,0 +1,392 @@
+{
+ "name": "dsql",
+ "description": "This is an interface reference for Amazon Aurora DSQL.",
+ "subcommands": [
+  {
+   "name": "create-cluster",
+   "description": "The CreateCluster API allows you to create both single-Region clusters and multi-Region clusters.",
+   "options": [
+    {
+     "name": "--bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection-enabled"
+    },
+    {
+     "name": "--kms-encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-properties",
+     "args": {}
+    },
+    {
+     "name": "--no-bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--no-deletion-protection-enabled"
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-stream",
+   "description": "Creates a new change data capture (CDC) stream for a cluster.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "JSON"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--ordering",
+     "args": {
+      "suggestions": [
+       "UNORDERED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Deletes a cluster in Amazon Aurora DSQL.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster-policy",
+   "description": "Deletes the resource-based policy attached to a cluster.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--expected-policy-version",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-stream",
+   "description": "Deletes a stream from a cluster.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cluster",
+   "description": "Retrieves information about a cluster.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cluster-policy",
+   "description": "Retrieves the resource-based policy document attached to a cluster.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-stream",
+   "description": "Retrieves information about a stream.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vpc-endpoint-service-name",
+   "description": "Retrieves the VPC endpoint service name.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-clusters",
+   "description": "Retrieves information about a list of clusters.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-streams",
+   "description": "Retrieves information about a list of streams for a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all of the tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-cluster-policy",
+   "description": "Attaches a resource-based policy to a cluster.",
+   "options": [
+    {
+     "name": "--bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--expected-policy-version",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-bypass-policy-lockout-safety-check"
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tags a resource with a map of key and value pairs.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cluster",
+   "description": "The UpdateCluster API allows you to modify both single-Region and multi-Region cluster configurations.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection-enabled"
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-properties",
+     "args": {}
+    },
+    {
+     "name": "--no-deletion-protection-enabled"
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "cluster-active",
+     "description": "Wait until a Cluster is ACTIVE It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "cluster-not-exists",
+     "description": "Wait until a Cluster is gone It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "stream-active",
+     "description": "Wait until a Stream is ACTIVE It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--cluster-identifier",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--stream-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "stream-not-exists",
+     "description": "Wait until a Stream is gone It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--cluster-identifier",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--stream-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

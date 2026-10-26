@@ -1,0 +1,1386 @@
+{
+ "name": "personalize",
+ "description": "Amazon Personalize is a machine learning service that makes it easy to add individualized recommendations to customers.",
+ "subcommands": [
+  {
+   "name": "create-batch-inference-job",
+   "description": "Generates batch recommendations based on a list of items or users stored in Amazon S3 and exports the recommendations to an Amazon S3 bucket.",
+   "options": [
+    {
+     "name": "--batch-inference-job-config",
+     "args": {}
+    },
+    {
+     "name": "--batch-inference-job-mode",
+     "args": {
+      "suggestions": [
+       "BATCH_INFERENCE",
+       "THEME_GENERATION"
+      ]
+     }
+    },
+    {
+     "name": "--filter-arn",
+     "args": {}
+    },
+    {
+     "name": "--job-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-output",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--num-results",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--solution-version-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--theme-generation-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-batch-segment-job",
+   "description": "Creates a batch segment job.",
+   "options": [
+    {
+     "name": "--filter-arn",
+     "args": {}
+    },
+    {
+     "name": "--job-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-output",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--num-results",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--solution-version-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-campaign",
+   "description": "You incur campaign costs while it is active.",
+   "options": [
+    {
+     "name": "--campaign-config",
+     "args": {}
+    },
+    {
+     "name": "--min-provisioned-tps",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--solution-version-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-deletion-job",
+   "description": "Creates a batch job that deletes all references to specific users from an Amazon Personalize dataset group in batches.",
+   "options": [
+    {
+     "name": "--data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset",
+   "description": "Creates an empty dataset and adds it to the specified dataset group.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset-export-job",
+   "description": "Creates a job that exports data from your dataset to an Amazon S3 bucket.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-mode",
+     "args": {
+      "suggestions": [
+       "BULK",
+       "PUT",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-output",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset-group",
+   "description": "Creates an empty dataset group.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {
+      "suggestions": [
+       "ECOMMERCE",
+       "VIDEO_ON_DEMAND"
+      ]
+     }
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset-import-job",
+   "description": "Creates a job that imports training data from your data source (an Amazon S3 bucket) to an Amazon Personalize dataset.",
+   "options": [
+    {
+     "name": "--data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--import-mode",
+     "args": {
+      "suggestions": [
+       "FULL",
+       "INCREMENTAL"
+      ]
+     }
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-publish-attribution-metrics-to-s3"
+    },
+    {
+     "name": "--publish-attribution-metrics-to-s3"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-tracker",
+   "description": "Creates an event tracker that you use when adding event data to a specified dataset group using the PutEvents API.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-filter",
+   "description": "Creates a recommendation filter.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-metric-attribution",
+   "description": "Creates a metric attribution.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metrics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metrics-output-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-recommender",
+   "description": "Creates a recommender with the recipe (a Domain dataset group use case) you specify.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recipe-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-schema",
+   "description": "Creates an Amazon Personalize schema from the specified schema string.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {
+      "suggestions": [
+       "ECOMMERCE",
+       "VIDEO_ON_DEMAND"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-solution",
+   "description": "By default, all new solutions use automatic training.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-perform-auto-ml"
+    },
+    {
+     "name": "--no-perform-auto-training"
+    },
+    {
+     "name": "--no-perform-hpo"
+    },
+    {
+     "name": "--no-perform-incremental-update"
+    },
+    {
+     "name": "--perform-auto-ml"
+    },
+    {
+     "name": "--perform-auto-training"
+    },
+    {
+     "name": "--perform-hpo"
+    },
+    {
+     "name": "--perform-incremental-update"
+    },
+    {
+     "name": "--recipe-arn",
+     "args": {}
+    },
+    {
+     "name": "--solution-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-solution-version",
+   "description": "Trains or retrains an active solution in a Custom dataset group.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--solution-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--training-mode",
+     "args": {
+      "suggestions": [
+       "FULL",
+       "UPDATE",
+       "AUTOTRAIN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-campaign",
+   "description": "Removes a campaign by deleting the solution deployment.",
+   "options": [
+    {
+     "name": "--campaign-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset",
+   "description": "Deletes a dataset.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset-group",
+   "description": "Deletes a dataset group.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-tracker",
+   "description": "Deletes the event tracker.",
+   "options": [
+    {
+     "name": "--event-tracker-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-filter",
+   "description": "Deletes a filter.",
+   "options": [
+    {
+     "name": "--filter-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-metric-attribution",
+   "description": "Deletes a metric attribution.",
+   "options": [
+    {
+     "name": "--metric-attribution-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-recommender",
+   "description": "Deactivates and removes a recommender.",
+   "options": [
+    {
+     "name": "--recommender-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-schema",
+   "description": "Deletes a schema.",
+   "options": [
+    {
+     "name": "--schema-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-solution",
+   "description": "Deletes all versions of a solution and the Solution object itself.",
+   "options": [
+    {
+     "name": "--solution-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-algorithm",
+   "description": "Describes the given algorithm.",
+   "options": [
+    {
+     "name": "--algorithm-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-batch-inference-job",
+   "description": "Gets the properties of a batch inference job including name, Amazon Resource Name (ARN), status, input and output configurations, and the ARN of the solution version used to generate the recommendations.",
+   "options": [
+    {
+     "name": "--batch-inference-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-batch-segment-job",
+   "description": "Gets the properties of a batch segment job including name, Amazon Resource Name (ARN), status, input and output configurations, and the ARN of the solution version used to generate segments.",
+   "options": [
+    {
+     "name": "--batch-segment-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-campaign",
+   "description": "Describes the given campaign, including its status.",
+   "options": [
+    {
+     "name": "--campaign-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-data-deletion-job",
+   "description": "Describes the data deletion job created by CreateDataDeletionJob, including the job status.",
+   "options": [
+    {
+     "name": "--data-deletion-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset",
+   "description": "Describes the given dataset.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset-export-job",
+   "description": "Describes the dataset export job created by CreateDatasetExportJob, including the export job status.",
+   "options": [
+    {
+     "name": "--dataset-export-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset-group",
+   "description": "Describes the given dataset group.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset-import-job",
+   "description": "Describes the dataset import job created by CreateDatasetImportJob, including the import job status.",
+   "options": [
+    {
+     "name": "--dataset-import-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-event-tracker",
+   "description": "Describes an event tracker.",
+   "options": [
+    {
+     "name": "--event-tracker-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-feature-transformation",
+   "description": "Describes the given feature transformation.",
+   "options": [
+    {
+     "name": "--feature-transformation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-filter",
+   "description": "Describes a filter's properties.",
+   "options": [
+    {
+     "name": "--filter-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-metric-attribution",
+   "description": "Describes a metric attribution.",
+   "options": [
+    {
+     "name": "--metric-attribution-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-recipe",
+   "description": "Describes a recipe.",
+   "options": [
+    {
+     "name": "--recipe-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-recommender",
+   "description": "Describes the given recommender, including its status.",
+   "options": [
+    {
+     "name": "--recommender-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-schema",
+   "description": "Describes a schema.",
+   "options": [
+    {
+     "name": "--schema-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-solution",
+   "description": "Describes a solution.",
+   "options": [
+    {
+     "name": "--solution-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-solution-version",
+   "description": "Describes a specific version of a solution.",
+   "options": [
+    {
+     "name": "--solution-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-solution-metrics",
+   "description": "Gets the metrics for the specified solution version.",
+   "options": [
+    {
+     "name": "--solution-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-batch-inference-jobs",
+   "description": "Gets a list of the batch inference jobs that have been performed off of a solution version.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--solution-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-batch-segment-jobs",
+   "description": "Gets a list of the batch segment jobs that have been performed off of a solution version that you specify.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--solution-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-campaigns",
+   "description": "Returns a list of campaigns that use the given solution.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--solution-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-deletion-jobs",
+   "description": "Returns a list of data deletion jobs for a dataset group ordered by creation time, with the most recent first.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-export-jobs",
+   "description": "Returns a list of dataset export jobs that use the given dataset.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-groups",
+   "description": "Returns a list of dataset groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-import-jobs",
+   "description": "Returns a list of dataset import jobs that use the given dataset.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-datasets",
+   "description": "Returns the list of datasets contained in the given dataset group.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-trackers",
+   "description": "Returns the list of event trackers associated with the account.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-filters",
+   "description": "Lists all filters that belong to a given dataset group.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-metric-attribution-metrics",
+   "description": "Lists the metrics for the metric attribution.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-attribution-arn",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-metric-attributions",
+   "description": "Lists metric attributions.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recipes",
+   "description": "Returns a list of available recipes.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {
+      "suggestions": [
+       "ECOMMERCE",
+       "VIDEO_ON_DEMAND"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recipe-provider",
+     "args": {
+      "suggestions": [
+       "SERVICE"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommenders",
+   "description": "Returns a list of recommenders in a given Domain dataset group.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-schemas",
+   "description": "Returns the list of schemas associated with the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-solution-versions",
+   "description": "Returns a list of solution versions for the given solution.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--solution-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-solutions",
+   "description": "Returns a list of solutions in a given dataset group.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Get a list of tags attached to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-recommender",
+   "description": "Starts a recommender that is INACTIVE.",
+   "options": [
+    {
+     "name": "--recommender-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-recommender",
+   "description": "Stops a recommender that is ACTIVE.",
+   "options": [
+    {
+     "name": "--recommender-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-solution-version-creation",
+   "description": "Stops creating a solution version that is in a state of CREATE_PENDING or CREATE IN_PROGRESS.",
+   "options": [
+    {
+     "name": "--solution-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add a list of tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags that are attached to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign",
+   "description": "Updates a campaign to deploy a retrained solution version with an existing campaign, change your campaign's minProvisionedTPS, or modify your campaign's configuration.",
+   "options": [
+    {
+     "name": "--campaign-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--campaign-config",
+     "args": {}
+    },
+    {
+     "name": "--min-provisioned-tps",
+     "args": {}
+    },
+    {
+     "name": "--solution-version-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-dataset",
+   "description": "Update a dataset to replace its schema with a new or existing one.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-metric-attribution",
+   "description": "Updates a metric attribution.",
+   "options": [
+    {
+     "name": "--add-metrics",
+     "args": {}
+    },
+    {
+     "name": "--metric-attribution-arn",
+     "args": {}
+    },
+    {
+     "name": "--metrics-output-config",
+     "args": {}
+    },
+    {
+     "name": "--remove-metrics",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-recommender",
+   "description": "Updates the recommender to modify the recommender configuration.",
+   "options": [
+    {
+     "name": "--recommender-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-solution",
+   "description": "Updates an Amazon Personalize solution to use a different automatic training configuration.",
+   "options": [
+    {
+     "name": "--no-perform-auto-training"
+    },
+    {
+     "name": "--no-perform-incremental-update"
+    },
+    {
+     "name": "--perform-auto-training"
+    },
+    {
+     "name": "--perform-incremental-update"
+    },
+    {
+     "name": "--solution-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--solution-update-config",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

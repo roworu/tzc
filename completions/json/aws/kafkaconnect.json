@@ -1,0 +1,376 @@
+{
+ "name": "kafkaconnect",
+ "subcommands": [
+  {
+   "name": "create-connector",
+   "description": "Creates a connector using the specified properties.",
+   "options": [
+    {
+     "name": "--capacity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connector-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connector-description",
+     "args": {}
+    },
+    {
+     "name": "--connector-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kafka-cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kafka-cluster-client-authentication",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kafka-cluster-encryption-in-transit",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kafka-connect-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-delivery",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL"
+      ]
+     }
+    },
+    {
+     "name": "--plugins",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--worker-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-custom-plugin",
+   "description": "Creates a custom plugin using the specified properties.",
+   "options": [
+    {
+     "name": "--content-type",
+     "args": {
+      "suggestions": [
+       "JAR",
+       "ZIP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-worker-configuration",
+   "description": "Creates a worker configuration using the specified properties.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--properties-file-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-connector",
+   "description": "Deletes the specified connector.",
+   "options": [
+    {
+     "name": "--connector-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-plugin",
+   "description": "Deletes a custom plugin.",
+   "options": [
+    {
+     "name": "--custom-plugin-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-worker-configuration",
+   "description": "Deletes the specified worker configuration.",
+   "options": [
+    {
+     "name": "--worker-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-connector",
+   "description": "Returns summary information about the connector.",
+   "options": [
+    {
+     "name": "--connector-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-connector-operation",
+   "description": "Returns information about the specified connector's operations.",
+   "options": [
+    {
+     "name": "--connector-operation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-custom-plugin",
+   "description": "A summary description of the custom plugin.",
+   "options": [
+    {
+     "name": "--custom-plugin-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-worker-configuration",
+   "description": "Returns information about a worker configuration.",
+   "options": [
+    {
+     "name": "--worker-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-connector-operations",
+   "description": "Lists information about a connector's operation(s).",
+   "options": [
+    {
+     "name": "--connector-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connectors",
+   "description": "Returns a list of all the connectors in this account and Region.",
+   "options": [
+    {
+     "name": "--connector-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-plugins",
+   "description": "Returns a list of all of the custom plugins in this account and Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all the tags attached to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-worker-configurations",
+   "description": "Returns a list of all of the worker configurations in this account and Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Attaches tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-connector",
+   "description": "Updates the specified connector.",
+   "options": [
+    {
+     "name": "--capacity",
+     "args": {}
+    },
+    {
+     "name": "--connector-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connector-configuration",
+     "args": {}
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

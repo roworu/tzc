@@ -1,0 +1,946 @@
+{
+ "name": "amp",
+ "description": "Amazon Managed Service for Prometheus is a serverless, Prometheus-compatible monitoring service for container metrics that makes it easier to securely monitor container environments at scale.",
+ "subcommands": [
+  {
+   "name": "create-alert-manager-definition",
+   "description": "The CreateAlertManagerDefinition operation creates the alert manager definition in a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-anomaly-detector",
+   "description": "Creates an anomaly detector within a workspace using the Random Cut Forest algorithm for time-series analysis.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--evaluation-interval-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--labels",
+     "args": {}
+    },
+    {
+     "name": "--missing-data-action",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-logging-configuration",
+   "description": "The CreateLoggingConfiguration operation creates rules and alerting logging configuration for the workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--log-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-query-logging-configuration",
+   "description": "Creates a query logging configuration for the specified workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destinations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-rule-groups-namespace",
+   "description": "The CreateRuleGroupsNamespace operation creates a rule groups namespace within a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-scraper",
+   "description": "Creates a scraper to collect metrics from Prometheus-compatible sources.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exporters",
+     "args": {}
+    },
+    {
+     "name": "--role-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scrape-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-workspace",
+   "description": "Creates a Prometheus workspace.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-alert-manager-definition",
+   "description": "Deletes the alert manager definition from a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-anomaly-detector",
+   "description": "Removes an anomaly detector from a workspace.",
+   "options": [
+    {
+     "name": "--anomaly-detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-logging-configuration",
+   "description": "Deletes the rules and alerting logging configuration for a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-query-logging-configuration",
+   "description": "Deletes the query logging configuration for the specified workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes the resource-based policy attached to an Amazon Managed Service for Prometheus workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--revision-id",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-rule-groups-namespace",
+   "description": "Deletes one rule groups namespace and its associated rule groups definition.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scraper",
+   "description": "The DeleteScraper operation deletes one scraper, and stops any metrics collection that the scraper performs.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--scraper-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scraper-logging-configuration",
+   "description": "Deletes the logging configuration for a Amazon Managed Service for Prometheus scraper.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--scraper-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workspace",
+   "description": "Deletes an existing workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-alert-manager-definition",
+   "description": "Retrieves the full information about the alert manager definition for a workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-anomaly-detector",
+   "description": "Retrieves detailed information about a specific anomaly detector, including its status and configuration.",
+   "options": [
+    {
+     "name": "--anomaly-detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-logging-configuration",
+   "description": "Returns complete information about the current rules and alerting logging configuration of the workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-query-logging-configuration",
+   "description": "Retrieves the details of the query logging configuration for the specified workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-policy",
+   "description": "Returns information about the resource-based policy attached to an Amazon Managed Service for Prometheus workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-rule-groups-namespace",
+   "description": "Returns complete information about one rule groups namespace.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-scraper",
+   "description": "The DescribeScraper operation displays information about an existing scraper.",
+   "options": [
+    {
+     "name": "--scraper-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-scraper-logging-configuration",
+   "description": "Describes the logging configuration for a Amazon Managed Service for Prometheus scraper.",
+   "options": [
+    {
+     "name": "--scraper-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-workspace",
+   "description": "Returns information about an existing workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-workspace-configuration",
+   "description": "Use this operation to return information about the configuration of a workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-default-scraper-configuration",
+   "description": "The GetDefaultScraperConfiguration operation returns the default scraper configuration used when Amazon EKS creates a scraper for you."
+  },
+  {
+   "name": "list-anomaly-detectors",
+   "description": "Returns a paginated list of anomaly detectors for a workspace with optional filtering by alias.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-rule-groups-namespaces",
+   "description": "Returns a list of rule groups namespaces in a workspace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-scrapers",
+   "description": "The ListScrapers operation lists all of the scrapers in your account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "The ListTagsForResource operation returns the tags that are associated with an Amazon Managed Service for Prometheus resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workspaces",
+   "description": "Lists all of the Amazon Managed Service for Prometheus workspaces in your account.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-alert-manager-definition",
+   "description": "Updates an existing alert manager definition in a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-anomaly-detector",
+   "description": "When you call PutAnomalyDetector, the operation creates a new anomaly detector if one doesn't exist, or updates an existing one.",
+   "options": [
+    {
+     "name": "--anomaly-detector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--evaluation-interval-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--labels",
+     "args": {}
+    },
+    {
+     "name": "--missing-data-action",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Creates or updates a resource-based policy for an Amazon Managed Service for Prometheus workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-rule-groups-namespace",
+   "description": "Updates an existing rule groups namespace within a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "The TagResource operation associates tags with an Amazon Managed Service for Prometheus resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from an Amazon Managed Service for Prometheus resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-logging-configuration",
+   "description": "Updates the log group ARN or the workspace ID of the current rules and alerting logging configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--log-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-query-logging-configuration",
+   "description": "Updates the query logging configuration for the specified workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destinations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-scraper",
+   "description": "Updates an existing scraper.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destination",
+     "args": {}
+    },
+    {
+     "name": "--exporters",
+     "args": {}
+    },
+    {
+     "name": "--role-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scrape-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scraper-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-scraper-logging-configuration",
+   "description": "Updates the logging configuration for a Amazon Managed Service for Prometheus scraper.",
+   "options": [
+    {
+     "name": "--logging-destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scraper-components",
+     "args": {}
+    },
+    {
+     "name": "--scraper-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workspace-alias",
+   "description": "Updates the alias of an existing workspace.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workspace-configuration",
+   "description": "Use this operation to create or update the label sets, label set limits, and retention period of a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--limits-per-label-set",
+     "args": {}
+    },
+    {
+     "name": "--out-of-order-time-window-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--rule-query-offset-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "anomaly-detector-active",
+     "description": "Wait until the anomaly detector reaches ACTIVE status It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--anomaly-detector-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--workspace-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "anomaly-detector-deleted",
+     "description": "Wait until the anomaly detector reaches DELETED status It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--anomaly-detector-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--workspace-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "scraper-active",
+     "description": "Wait until a scraper reaches ACTIVE status It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--scraper-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "scraper-deleted",
+     "description": "Wait until a scraper reaches DELETED status It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--scraper-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "workspace-active",
+     "description": "Wait until a workspace reaches ACTIVE status It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--workspace-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "workspace-deleted",
+     "description": "Wait until a workspace reaches DELETED status It will poll every 2 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--workspace-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,950 @@
+{
+ "name": "neptune-graph",
+ "description": "Neptune Analytics is a new analytics database engine for Amazon Neptune that helps customers get to insights faster by quickly processing large amounts of graph data, invoking popular graph analytic algorithms in low-latency queries, and getting analytics results in seconds.",
+ "subcommands": [
+  {
+   "name": "cancel-export-task",
+   "description": "Cancel the specified export task.",
+   "options": [
+    {
+     "name": "--task-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-import-task",
+   "description": "Deletes the specified import task.",
+   "options": [
+    {
+     "name": "--task-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-query",
+   "description": "Cancels a specified query.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-graph",
+   "description": "Creates a new Neptune Analytics graph.",
+   "options": [
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--graph-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-public-connectivity"
+    },
+    {
+     "name": "--provisioned-memory",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--public-connectivity"
+    },
+    {
+     "name": "--replica-count",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vector-search-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-graph-snapshot",
+   "description": "Creates a snapshot of the specific graph.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-graph-using-import-task",
+   "description": "Creates a new Neptune Analytics graph and imports data into it, either from Amazon Simple Storage Service (S3) or from a Neptune database or a Neptune database snapshot.",
+   "options": [
+    {
+     "name": "--blank-node-handling",
+     "args": {
+      "suggestions": [
+       "convertToIri"
+      ]
+     }
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--fail-on-error"
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "CSV",
+       "OPEN_CYPHER",
+       "PARQUET",
+       "NTRIPLES"
+      ]
+     }
+    },
+    {
+     "name": "--graph-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--import-options",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-provisioned-memory",
+     "args": {}
+    },
+    {
+     "name": "--min-provisioned-memory",
+     "args": {}
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-fail-on-error"
+    },
+    {
+     "name": "--no-public-connectivity"
+    },
+    {
+     "name": "--parquet-type",
+     "args": {
+      "suggestions": [
+       "COLUMNAR"
+      ]
+     }
+    },
+    {
+     "name": "--public-connectivity"
+    },
+    {
+     "name": "--replica-count",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vector-search-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-private-graph-endpoint",
+   "description": "Create a private graph endpoint to allow private access to the graph from within a VPC.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-graph",
+   "description": "Deletes the specified graph.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-snapshot"
+    },
+    {
+     "name": "--skip-snapshot",
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-graph-snapshot",
+   "description": "Deletes the specified graph snapshot.",
+   "options": [
+    {
+     "name": "--snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-private-graph-endpoint",
+   "description": "Deletes a private graph endpoint.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-query",
+   "description": "Execute an openCypher query.",
+   "options": [
+    {
+     "name": "--explain-mode",
+     "args": {
+      "suggestions": [
+       "STATIC",
+       "DETAILS"
+      ]
+     }
+    },
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "OPEN_CYPHER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--plan-cache",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED",
+       "AUTO"
+      ]
+     }
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-timeout-milliseconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-export-task",
+   "description": "Retrieves a specified export task.",
+   "options": [
+    {
+     "name": "--task-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-graph",
+   "description": "Gets information about a specified graph.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-graph-snapshot",
+   "description": "Retrieves a specified graph snapshot.",
+   "options": [
+    {
+     "name": "--snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-graph-summary",
+   "description": "Gets a graph summary for a property graph.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "DETAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-import-task",
+   "description": "Retrieves a specified import task.",
+   "options": [
+    {
+     "name": "--task-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-private-graph-endpoint",
+   "description": "Retrieves information about a specified private endpoint.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-query",
+   "description": "Retrieves the status of a specified query.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-export-tasks",
+   "description": "Retrieves a list of export tasks.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-graph-snapshots",
+   "description": "Lists available snapshots of a specified Neptune Analytics graph.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-graphs",
+   "description": "Lists available Neptune Analytics graphs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-import-tasks",
+   "description": "Lists import tasks.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-private-graph-endpoints",
+   "description": "Lists private endpoints for a specified Neptune Analytics graph.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-queries",
+   "description": "Lists active openCypher queries.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "RUNNING",
+       "WAITING",
+       "CANCELLING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags associated with a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-graph",
+   "description": "Empties the data from a specified Neptune Analytics graph.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-snapshot"
+    },
+    {
+     "name": "--skip-snapshot",
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-graph-from-snapshot",
+   "description": "Restores a graph from a snapshot.",
+   "options": [
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--graph-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-public-connectivity"
+    },
+    {
+     "name": "--provisioned-memory",
+     "args": {}
+    },
+    {
+     "name": "--public-connectivity"
+    },
+    {
+     "name": "--replica-count",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-export-task",
+   "description": "Export data from an existing Neptune Analytics graph to Amazon S3.",
+   "options": [
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--export-filter",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "PARQUET",
+       "CSV"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parquet-type",
+     "args": {
+      "suggestions": [
+       "COLUMNAR"
+      ]
+     }
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-graph",
+   "description": "Starts the specific graph.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-import-task",
+   "description": "Import data into existing Neptune Analytics graph from Amazon Simple Storage Service (S3).",
+   "options": [
+    {
+     "name": "--blank-node-handling",
+     "args": {
+      "suggestions": [
+       "convertToIri"
+      ]
+     }
+    },
+    {
+     "name": "--fail-on-error"
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "CSV",
+       "OPEN_CYPHER",
+       "PARQUET",
+       "NTRIPLES"
+      ]
+     }
+    },
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--import-options",
+     "args": {}
+    },
+    {
+     "name": "--no-fail-on-error"
+    },
+    {
+     "name": "--parquet-type",
+     "args": {
+      "suggestions": [
+       "COLUMNAR"
+      ]
+     }
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-graph",
+   "description": "Stops the specific graph.",
+   "options": [
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-graph",
+   "description": "Updates the configuration of a specified Neptune Analytics graph",
+   "options": [
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--graph-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-public-connectivity"
+    },
+    {
+     "name": "--provisioned-memory",
+     "args": {}
+    },
+    {
+     "name": "--public-connectivity"
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "export-task-cancelled",
+     "description": "Wait until Export Task is Cancelled It will poll every 60 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--task-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "export-task-successful",
+     "description": "Wait until Export Task is Successful It will poll every 60 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--task-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "graph-available",
+     "description": "Wait until Graph is Available It will poll every 60 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--graph-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "graph-deleted",
+     "description": "Wait until Graph is Deleted It will poll every 60 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--graph-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "graph-snapshot-available",
+     "description": "Wait until GraphSnapshot is Available It will poll every 60 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--snapshot-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "graph-snapshot-deleted",
+     "description": "Wait until GraphSnapshot is Deleted It will poll every 60 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--snapshot-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "graph-stopped",
+     "description": "Wait until Graph is Stopped It will poll every 20 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--graph-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "import-task-cancelled",
+     "description": "Wait until Import Task is Cancelled It will poll every 60 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--task-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "import-task-successful",
+     "description": "Wait until Import Task is Successful It will poll every 60 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--task-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "private-graph-endpoint-available",
+     "description": "Wait until PrivateGraphEndpoint is Available It will poll every 10 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--graph-identifier",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--vpc-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "private-graph-endpoint-deleted",
+     "description": "Wait until PrivateGraphEndpoint is Deleted It will poll every 10 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--graph-identifier",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--vpc-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

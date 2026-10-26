@@ -1,0 +1,1280 @@
+{
+ "name": "ecr",
+ "description": "Amazon Elastic Container Registry Amazon Elastic Container Registry (Amazon ECR) is a managed container image registry service.",
+ "subcommands": [
+  {
+   "name": "batch-check-layer-availability",
+   "description": "Checks the availability of one or more image layers in a repository.",
+   "options": [
+    {
+     "name": "--layer-digests",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-image",
+   "description": "Deletes a list of specified images within a repository.",
+   "options": [
+    {
+     "name": "--image-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-image",
+   "description": "Gets detailed information for an image.",
+   "options": [
+    {
+     "name": "--accepted-media-types",
+     "args": {}
+    },
+    {
+     "name": "--image-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-repository-scanning-configuration",
+   "description": "Gets the scanning configuration for one or more repositories.",
+   "options": [
+    {
+     "name": "--repository-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "complete-layer-upload",
+   "description": "Informs Amazon ECR that the image layer upload has completed for a specified registry, repository name, and upload ID.",
+   "options": [
+    {
+     "name": "--layer-digests",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-pull-through-cache-rule",
+   "description": "Creates a pull through cache rule.",
+   "options": [
+    {
+     "name": "--credential-arn",
+     "args": {}
+    },
+    {
+     "name": "--custom-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--ecr-repository-prefix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--upstream-registry",
+     "args": {
+      "suggestions": [
+       "ecr",
+       "ecr-public",
+       "quay",
+       "k8s",
+       "docker-hub",
+       "github-container-registry",
+       "azure-container-registry",
+       "gitlab-container-registry",
+       "chainguard"
+      ]
+     }
+    },
+    {
+     "name": "--upstream-registry-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--upstream-repository-prefix",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-repository",
+   "description": "Creates a repository.",
+   "options": [
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--image-scanning-configuration",
+     "args": {}
+    },
+    {
+     "name": "--image-tag-mutability",
+     "args": {
+      "suggestions": [
+       "MUTABLE",
+       "IMMUTABLE",
+       "IMMUTABLE_WITH_EXCLUSION",
+       "MUTABLE_WITH_EXCLUSION"
+      ]
+     }
+    },
+    {
+     "name": "--image-tag-mutability-exclusion-filters",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-repository-creation-template",
+   "description": "Creates a repository creation template.",
+   "options": [
+    {
+     "name": "--applied-for",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--image-tag-mutability",
+     "args": {
+      "suggestions": [
+       "MUTABLE",
+       "IMMUTABLE",
+       "IMMUTABLE_WITH_EXCLUSION",
+       "MUTABLE_WITH_EXCLUSION"
+      ]
+     }
+    },
+    {
+     "name": "--image-tag-mutability-exclusion-filters",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-policy",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-policy",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-lifecycle-policy",
+   "description": "Deletes the lifecycle policy associated with the specified repository.",
+   "options": [
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-pull-through-cache-rule",
+   "description": "Deletes a pull through cache rule.",
+   "options": [
+    {
+     "name": "--ecr-repository-prefix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-registry-policy",
+   "description": "Deletes the registry permissions policy."
+  },
+  {
+   "name": "delete-repository",
+   "description": "Deletes a repository.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-repository-creation-template",
+   "description": "Deletes a repository creation template.",
+   "options": [
+    {
+     "name": "--prefix",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-repository-policy",
+   "description": "Deletes the repository policy associated with the specified repository.",
+   "options": [
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-signing-configuration",
+   "description": "Deletes the registry's signing configuration."
+  },
+  {
+   "name": "deregister-pull-time-update-exclusion",
+   "description": "Removes a principal from the pull time update exclusion list for a registry.",
+   "options": [
+    {
+     "name": "--principal-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-image-replication-status",
+   "description": "Returns the replication status for a specified image.",
+   "options": [
+    {
+     "name": "--image-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-image-scan-findings",
+   "description": "Returns the scan findings for the specified image.",
+   "options": [
+    {
+     "name": "--image-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-image-signing-status",
+   "description": "Returns the signing status for a specified image.",
+   "options": [
+    {
+     "name": "--image-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-images",
+   "description": "Returns metadata about the images in a repository.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--image-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-pull-through-cache-rules",
+   "description": "Returns the pull through cache rules for a registry.",
+   "options": [
+    {
+     "name": "--ecr-repository-prefixes",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-registry",
+   "description": "Describes the settings for a registry."
+  },
+  {
+   "name": "describe-repositories",
+   "description": "Describes image repositories in a registry.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-names",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-repository-creation-templates",
+   "description": "Returns details about the repository creation templates in a registry.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefixes",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-account-setting",
+   "description": "Retrieves the account setting value for the specified setting name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-authorization-token",
+   "description": "Retrieves an authorization token.",
+   "options": [
+    {
+     "name": "--registry-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-download-url-for-layer",
+   "description": "Retrieves the pre-signed Amazon S3 download URL corresponding to an image layer.",
+   "options": [
+    {
+     "name": "--layer-digest",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-lifecycle-policy",
+   "description": "Retrieves the lifecycle policy for the specified repository.",
+   "options": [
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-lifecycle-policy-preview",
+   "description": "Retrieves the results of the lifecycle policy preview request for the specified repository.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--image-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-login",
+   "options": [
+    {
+     "name": "--include-email"
+    },
+    {
+     "name": "--no-include-email"
+    },
+    {
+     "name": "--registry-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-login-password"
+  },
+  {
+   "name": "get-registry-policy",
+   "description": "Retrieves the permissions policy for a registry."
+  },
+  {
+   "name": "get-registry-scanning-configuration",
+   "description": "Retrieves the scanning configuration for a registry."
+  },
+  {
+   "name": "get-repository-policy",
+   "description": "Retrieves the repository policy for the specified repository.",
+   "options": [
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-signing-configuration",
+   "description": "Retrieves the registry's signing configuration, which defines rules for automatically signing images using Amazon Web Services Signer."
+  },
+  {
+   "name": "initiate-layer-upload",
+   "description": "Notifies Amazon ECR that you intend to upload an image layer.",
+   "options": [
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-image-referrers",
+   "description": "Lists the artifacts associated with a specified subject image.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subject-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-images",
+   "description": "Lists all the image IDs for the specified repository.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pull-time-update-exclusions",
+   "description": "Lists the IAM principals that are excluded from having their image pull times recorded.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List the tags for an Amazon ECR resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-account-setting",
+   "description": "Allows you to change the basic scan type version or registry policy scope.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--value",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-image",
+   "description": "Creates or updates the image manifest and tags associated with an image.",
+   "options": [
+    {
+     "name": "--image-digest",
+     "args": {}
+    },
+    {
+     "name": "--image-manifest",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-manifest-media-type",
+     "args": {}
+    },
+    {
+     "name": "--image-tag",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-image-scanning-configuration",
+   "description": "The PutImageScanningConfiguration API is being deprecated, in favor of specifying the image scanning configuration at the registry level.",
+   "options": [
+    {
+     "name": "--image-scanning-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-image-tag-mutability",
+   "description": "Updates the image tag mutability settings for the specified repository.",
+   "options": [
+    {
+     "name": "--image-tag-mutability",
+     "args": {
+      "suggestions": [
+       "MUTABLE",
+       "IMMUTABLE",
+       "IMMUTABLE_WITH_EXCLUSION",
+       "MUTABLE_WITH_EXCLUSION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--image-tag-mutability-exclusion-filters",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-lifecycle-policy",
+   "description": "Creates or updates the lifecycle policy for the specified repository.",
+   "options": [
+    {
+     "name": "--lifecycle-policy-text",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-registry-policy",
+   "description": "Creates or updates the permissions policy for your registry.",
+   "options": [
+    {
+     "name": "--policy-text",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-registry-scanning-configuration",
+   "description": "Creates or updates the scanning configuration for your private registry.",
+   "options": [
+    {
+     "name": "--rules",
+     "args": {}
+    },
+    {
+     "name": "--scan-type",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "ENHANCED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "put-replication-configuration",
+   "description": "Creates or updates the replication configuration for a registry.",
+   "options": [
+    {
+     "name": "--replication-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-signing-configuration",
+   "description": "Creates or updates the registry's signing configuration, which defines rules for automatically signing images with Amazon Web Services Signer.",
+   "options": [
+    {
+     "name": "--signing-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-pull-time-update-exclusion",
+   "description": "Adds an IAM principal to the pull time update exclusion list for a registry.",
+   "options": [
+    {
+     "name": "--principal-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-repository-policy",
+   "description": "Applies a repository policy to the specified repository to control access permissions.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--policy-text",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-image-scan",
+   "description": "Starts a basic image vulnerability scan.",
+   "options": [
+    {
+     "name": "--image-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-lifecycle-policy-preview",
+   "description": "Starts a preview of a lifecycle policy for the specified repository.",
+   "options": [
+    {
+     "name": "--lifecycle-policy-text",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds specified tags to a resource with the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes specified tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-image-storage-class",
+   "description": "Transitions an image between storage classes.",
+   "options": [
+    {
+     "name": "--image-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "ARCHIVE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pull-through-cache-rule",
+   "description": "Updates an existing pull through cache rule.",
+   "options": [
+    {
+     "name": "--credential-arn",
+     "args": {}
+    },
+    {
+     "name": "--custom-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--ecr-repository-prefix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-repository-creation-template",
+   "description": "Updates an existing repository creation template.",
+   "options": [
+    {
+     "name": "--applied-for",
+     "args": {}
+    },
+    {
+     "name": "--custom-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--image-tag-mutability",
+     "args": {
+      "suggestions": [
+       "MUTABLE",
+       "IMMUTABLE",
+       "IMMUTABLE_WITH_EXCLUSION",
+       "MUTABLE_WITH_EXCLUSION"
+      ]
+     }
+    },
+    {
+     "name": "--image-tag-mutability-exclusion-filters",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-policy",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-policy",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "upload-layer-part",
+   "description": "Uploads an image layer part to Amazon ECR.",
+   "options": [
+    {
+     "name": "--layer-part-blob",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--part-first-byte",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--part-last-byte",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-pull-through-cache-rule",
+   "description": "Validates an existing pull through cache rule for an upstream registry that requires authentication.",
+   "options": [
+    {
+     "name": "--ecr-repository-prefix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "image-scan-complete",
+     "description": "Wait until an image scan is complete and findings can be accessed It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--image-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--registry-id",
+       "args": {}
+      },
+      {
+       "name": "--repository-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "lifecycle-policy-preview-complete",
+     "description": "Wait until a lifecycle policy preview request is complete and results can be accessed It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--filter",
+       "args": {}
+      },
+      {
+       "name": "--image-ids",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--registry-id",
+       "args": {}
+      },
+      {
+       "name": "--repository-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

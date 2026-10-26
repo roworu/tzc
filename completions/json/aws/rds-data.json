@@ -1,0 +1,200 @@
+{
+ "name": "rds-data",
+ "description": "RDS Data API Amazon RDS provides an HTTP endpoint to run SQL statements on an Amazon Aurora DB cluster.",
+ "subcommands": [
+  {
+   "name": "batch-execute-statement",
+   "description": "Runs a batch SQL statement over an array of data.",
+   "options": [
+    {
+     "name": "--database",
+     "args": {}
+    },
+    {
+     "name": "--parameter-sets",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    },
+    {
+     "name": "--secret-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sql",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "begin-transaction",
+   "description": "Starts a SQL transaction.",
+   "options": [
+    {
+     "name": "--database",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    },
+    {
+     "name": "--secret-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "commit-transaction",
+   "description": "Ends a SQL transaction started with the BeginTransaction operation and commits the changes.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transaction-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-sql",
+   "description": "Runs one or more SQL statements.",
+   "options": [
+    {
+     "name": "--aws-secret-store-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-or-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    },
+    {
+     "name": "--sql-statements",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-statement",
+   "description": "Runs a SQL statement against a database.",
+   "options": [
+    {
+     "name": "--continue-after-timeout"
+    },
+    {
+     "name": "--database",
+     "args": {}
+    },
+    {
+     "name": "--format-records-as",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "JSON"
+      ]
+     }
+    },
+    {
+     "name": "--include-result-metadata"
+    },
+    {
+     "name": "--no-continue-after-timeout"
+    },
+    {
+     "name": "--no-include-result-metadata"
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--result-set-options",
+     "args": {}
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    },
+    {
+     "name": "--secret-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sql",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "rollback-transaction",
+   "description": "Performs a rollback of a transaction.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transaction-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

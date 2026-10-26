@@ -1,0 +1,690 @@
+{
+ "name": "sns",
+ "description": "Amazon Simple Notification Service Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled applications.",
+ "subcommands": [
+  {
+   "name": "add-permission",
+   "description": "Adds a statement to a topic's access control policy, granting access for the specified Amazon Web Services accounts to the specified actions.",
+   "options": [
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--aws-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--label",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "check-if-phone-number-is-opted-out",
+   "description": "Accepts a phone number and indicates whether the phone holder has opted out of receiving SMS messages from your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--phone-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "confirm-subscription",
+   "description": "Verifies an endpoint owner's intent to receive messages by validating the token sent to the endpoint by an earlier Subscribe action.",
+   "options": [
+    {
+     "name": "--authenticate-on-unsubscribe",
+     "args": {}
+    },
+    {
+     "name": "--token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-platform-application",
+   "description": "Creates a platform application object for one of the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging), to which devices and mobile apps may register.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--platform",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-platform-endpoint",
+   "description": "Creates an endpoint for a device and mobile app on one of the supported push notification services, such as GCM (Firebase Cloud Messaging) and APNS.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--custom-user-data",
+     "args": {}
+    },
+    {
+     "name": "--platform-application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-sms-sandbox-phone-number",
+   "description": "Adds a destination phone number to an Amazon Web Services account in the SMS sandbox and sends a one-time password (OTP) to that phone number.",
+   "options": [
+    {
+     "name": "--language-code",
+     "args": {
+      "suggestions": [
+       "en-US",
+       "en-GB",
+       "es-419",
+       "es-ES",
+       "de-DE",
+       "fr-CA",
+       "fr-FR",
+       "it-IT",
+       "ja-JP",
+       "pt-BR",
+       "kr-KR",
+       "zh-CN",
+       "zh-TW"
+      ]
+     }
+    },
+    {
+     "name": "--phone-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-topic",
+   "description": "Creates a topic to which notifications can be published.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--data-protection-policy",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-endpoint",
+   "description": "Deletes the endpoint for a device and mobile app from Amazon SNS.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-platform-application",
+   "description": "Deletes a platform application object for one of the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging).",
+   "options": [
+    {
+     "name": "--platform-application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-sms-sandbox-phone-number",
+   "description": "Deletes an Amazon Web Services account's verified or pending phone number from the SMS sandbox.",
+   "options": [
+    {
+     "name": "--phone-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-topic",
+   "description": "Deletes a topic and all its subscriptions.",
+   "options": [
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-protection-policy",
+   "description": "Retrieves the specified inline DataProtectionPolicy document that is stored in the specified Amazon SNS topic.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-endpoint-attributes",
+   "description": "Retrieves the endpoint attributes for a device on one of the supported push notification services, such as GCM (Firebase Cloud Messaging) and APNS.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-platform-application-attributes",
+   "description": "Retrieves the attributes of the platform application object for the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging).",
+   "options": [
+    {
+     "name": "--platform-application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sms-attributes",
+   "description": "Returns the settings for sending SMS messages from your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-sms-sandbox-account-status",
+   "description": "Retrieves the SMS sandbox status for the calling Amazon Web Services account in the target Amazon Web Services Region."
+  },
+  {
+   "name": "get-subscription-attributes",
+   "description": "Returns all of the properties of a subscription.",
+   "options": [
+    {
+     "name": "--subscription-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-topic-attributes",
+   "description": "Returns all of the properties of a topic.",
+   "options": [
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-endpoints-by-platform-application",
+   "description": "Lists the endpoints and endpoint attributes for devices in a supported push notification service, such as GCM (Firebase Cloud Messaging) and APNS.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--platform-application-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-origination-numbers",
+   "description": "Lists the calling Amazon Web Services account's dedicated origination numbers and their metadata.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-phone-numbers-opted-out",
+   "description": "Returns a list of phone numbers that are opted out, meaning you cannot send SMS messages to them.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-platform-applications",
+   "description": "Lists the platform application objects for the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sms-sandbox-phone-numbers",
+   "description": "Lists the calling Amazon Web Services account's current verified and pending destination phone numbers in the SMS sandbox.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subscriptions",
+   "description": "Returns a list of the requester's subscriptions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subscriptions-by-topic",
+   "description": "Returns a list of the subscriptions to a specific topic.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List all tags added to the specified Amazon SNS topic.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-topics",
+   "description": "Returns a list of the requester's topics.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "opt-in-phone-number",
+   "description": "Use this request to opt in a phone number that is opted out, which enables you to resume sending SMS messages to the number.",
+   "options": [
+    {
+     "name": "--phone-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "publish",
+   "description": "Sends a message to an Amazon SNS topic, a text message (SMS message) directly to a phone number, or a message to a mobile platform endpoint (when you specify the TargetArn).",
+   "options": [
+    {
+     "name": "--message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-attributes",
+     "args": {}
+    },
+    {
+     "name": "--message-deduplication-id",
+     "args": {}
+    },
+    {
+     "name": "--message-group-id",
+     "args": {}
+    },
+    {
+     "name": "--message-structure",
+     "args": {}
+    },
+    {
+     "name": "--phone-number",
+     "args": {}
+    },
+    {
+     "name": "--subject",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {}
+    },
+    {
+     "name": "--topic-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "publish-batch",
+   "description": "Publishes up to 10 messages to the specified topic in a single batch.",
+   "options": [
+    {
+     "name": "--publish-batch-request-entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-data-protection-policy",
+   "description": "Adds or updates an inline policy document that is stored in the specified Amazon SNS topic.",
+   "options": [
+    {
+     "name": "--data-protection-policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-permission",
+   "description": "Removes a statement from a topic's access control policy.",
+   "options": [
+    {
+     "name": "--label",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-endpoint-attributes",
+   "description": "Sets the attributes for an endpoint for a device on one of the supported push notification services, such as GCM (Firebase Cloud Messaging) and APNS.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-platform-application-attributes",
+   "description": "Sets the attributes of the platform application object for the supported push notification services, such as APNS and GCM (Firebase Cloud Messaging).",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--platform-application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-sms-attributes",
+   "description": "Use this request to set the default settings for sending SMS messages and receiving daily SMS usage reports.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-subscription-attributes",
+   "description": "Allows a subscription owner to set an attribute of the subscription to a new value.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attribute-value",
+     "args": {}
+    },
+    {
+     "name": "--subscription-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-topic-attributes",
+   "description": "Allows a topic owner to set an attribute of the topic to a new value.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attribute-value",
+     "args": {}
+    },
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "subscribe",
+   "description": "Subscribes an endpoint to an Amazon SNS topic.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--no-return-subscription-arn"
+    },
+    {
+     "name": "--notification-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--return-subscription-arn"
+    },
+    {
+     "name": "--topic-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add tags to the specified Amazon SNS topic.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "unsubscribe",
+   "description": "Deletes a subscription.",
+   "options": [
+    {
+     "name": "--subscription-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove tags from the specified Amazon SNS topic.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-sms-sandbox-phone-number",
+   "description": "Verifies a destination phone number with a one-time password (OTP) for the calling Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--one-time-password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--phone-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

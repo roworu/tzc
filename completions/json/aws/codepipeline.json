@@ -1,0 +1,947 @@
+{
+ "name": "codepipeline",
+ "description": "CodePipeline Overview This is the CodePipeline API Reference.",
+ "subcommands": [
+  {
+   "name": "acknowledge-job",
+   "description": "Returns information about a specified job and whether that job has been received by the job worker.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nonce",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "acknowledge-third-party-job",
+   "description": "Confirms a job worker has received the specified job.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nonce",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-custom-action-type",
+   "description": "Creates a new custom action that can be used in all pipelines associated with the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--action-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--category",
+     "args": {
+      "suggestions": [
+       "Source",
+       "Build",
+       "Deploy",
+       "Test",
+       "Invoke",
+       "Approval",
+       "Compute"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--configuration-properties",
+     "args": {}
+    },
+    {
+     "name": "--input-artifact-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-artifact-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-pipeline",
+   "description": "Creates a pipeline.",
+   "options": [
+    {
+     "name": "--pipeline",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-action-type",
+   "description": "Marks a custom action as deleted.",
+   "options": [
+    {
+     "name": "--action-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--category",
+     "args": {
+      "suggestions": [
+       "Source",
+       "Build",
+       "Deploy",
+       "Test",
+       "Invoke",
+       "Approval",
+       "Compute"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-pipeline",
+   "description": "Deletes the specified pipeline.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-webhook",
+   "description": "Deletes a previously created webhook by name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-webhook-with-third-party",
+   "description": "Removes the connection between the webhook that was created by CodePipeline and the external tool with events to be detected.",
+   "options": [
+    {
+     "name": "--webhook-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disable-stage-transition",
+   "description": "Prevents artifacts in a pipeline from transitioning to the next stage in the pipeline.",
+   "options": [
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transition-type",
+     "args": {
+      "suggestions": [
+       "Inbound",
+       "Outbound"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-stage-transition",
+   "description": "Enables artifacts in a pipeline to transition to a stage in a pipeline.",
+   "options": [
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transition-type",
+     "args": {
+      "suggestions": [
+       "Inbound",
+       "Outbound"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-action-type",
+   "description": "Returns information about an action type created for an external provider, where the action is to be used by customers of the external provider.",
+   "options": [
+    {
+     "name": "--action-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--category",
+     "args": {
+      "suggestions": [
+       "Source",
+       "Build",
+       "Deploy",
+       "Test",
+       "Invoke",
+       "Approval",
+       "Compute"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--owner",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job-details",
+   "description": "Returns information about a job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pipeline",
+   "description": "Returns the metadata, structure, stages, and actions of a pipeline.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-pipeline-execution",
+   "description": "Returns information about an execution of a pipeline, including details about artifacts, the pipeline execution ID, and the name, version, and status of the pipeline.",
+   "options": [
+    {
+     "name": "--pipeline-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pipeline-state",
+   "description": "Returns information about the state of a pipeline, including the stages and actions.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-third-party-job-details",
+   "description": "Requests the details of a job for a third party action.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-action-executions",
+   "description": "Lists the action executions that have occurred in a pipeline.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-action-types",
+   "description": "Gets a summary of all CodePipeline action types associated with your account.",
+   "options": [
+    {
+     "name": "--action-owner-filter",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "ThirdParty",
+       "Custom"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--region-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deploy-action-execution-targets",
+   "description": "Lists the targets for the deploy action.",
+   "options": [
+    {
+     "name": "--action-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pipeline-executions",
+   "description": "Gets a summary of the most recent executions for a pipeline.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pipelines",
+   "description": "Gets a summary of all of the pipelines associated with your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-rule-executions",
+   "description": "Lists the rule executions that have occurred in a pipeline configured for conditions with rules.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-rule-types",
+   "description": "Lists the rules for the condition.",
+   "options": [
+    {
+     "name": "--region-filter",
+     "args": {}
+    },
+    {
+     "name": "--rule-owner-filter",
+     "args": {
+      "suggestions": [
+       "AWS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets the set of key-value pairs (metadata) that are used to manage the resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-webhooks",
+   "description": "Gets a listing of all the webhooks in this Amazon Web Services Region for this account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "override-stage-condition",
+   "description": "Used to override a stage condition.",
+   "options": [
+    {
+     "name": "--condition-type",
+     "args": {
+      "suggestions": [
+       "BEFORE_ENTRY",
+       "ON_SUCCESS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "poll-for-jobs",
+   "description": "Returns information about any jobs for CodePipeline to act on.",
+   "options": [
+    {
+     "name": "--action-type-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-batch-size",
+     "args": {}
+    },
+    {
+     "name": "--query-param",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "poll-for-third-party-jobs",
+   "description": "Determines whether there are any third party jobs for a job worker to act on.",
+   "options": [
+    {
+     "name": "--action-type-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-batch-size",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-action-revision",
+   "description": "Provides information to CodePipeline about new revisions to a source.",
+   "options": [
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-revision",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-approval-result",
+   "description": "Provides the response to a manual approval request to CodePipeline.",
+   "options": [
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--result",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-job-failure-result",
+   "description": "Represents the failure of a job as returned to the pipeline by a job worker.",
+   "options": [
+    {
+     "name": "--failure-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-job-success-result",
+   "description": "Represents the success of a job as returned to the pipeline by a job worker.",
+   "options": [
+    {
+     "name": "--continuation-token",
+     "args": {}
+    },
+    {
+     "name": "--current-revision",
+     "args": {}
+    },
+    {
+     "name": "--execution-details",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-variables",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-third-party-job-failure-result",
+   "description": "Represents the failure of a third party job as returned to the pipeline by a job worker.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--failure-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-third-party-job-success-result",
+   "description": "Represents the success of a third party job as returned to the pipeline by a job worker.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--continuation-token",
+     "args": {}
+    },
+    {
+     "name": "--current-revision",
+     "args": {}
+    },
+    {
+     "name": "--execution-details",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-webhook",
+   "description": "Defines a webhook and returns a unique webhook URL generated by CodePipeline.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--webhook",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-webhook-with-third-party",
+   "description": "Configures a connection between the webhook that was created and the external tool with events to be detected.",
+   "options": [
+    {
+     "name": "--webhook-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "retry-stage-execution",
+   "description": "You can retry a stage that has failed without having to run a pipeline again from the beginning.",
+   "options": [
+    {
+     "name": "--pipeline-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retry-mode",
+     "args": {
+      "suggestions": [
+       "FAILED_ACTIONS",
+       "ALL_ACTIONS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "rollback-stage",
+   "description": "Rolls back a stage execution.",
+   "options": [
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-pipeline-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-pipeline-execution",
+   "description": "Starts the specified pipeline.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-revisions",
+     "args": {}
+    },
+    {
+     "name": "--variables",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-pipeline-execution",
+   "description": "Stops the specified pipeline execution.",
+   "options": [
+    {
+     "name": "--abandon"
+    },
+    {
+     "name": "--no-abandon"
+    },
+    {
+     "name": "--pipeline-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds to or modifies the tags of the given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from an Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-action-type",
+   "description": "Updates an action type that was created with any supported integration model, where the action type is to be used by customers of the action type provider.",
+   "options": [
+    {
+     "name": "--action-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pipeline",
+   "description": "Updates a specified pipeline with edits or changes to its structure.",
+   "options": [
+    {
+     "name": "--pipeline",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,6174 @@
+{
+ "name": "datazone",
+ "description": "Amazon DataZone is a data management service that enables you to catalog, discover, govern, share, and analyze your data.",
+ "subcommands": [
+  {
+   "name": "accept-predictions",
+   "description": "Accepts automatically generated business-friendly metadata for your Amazon DataZone assets.",
+   "options": [
+    {
+     "name": "--accept-choices",
+     "args": {}
+    },
+    {
+     "name": "--accept-rule",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "accept-subscription-request",
+   "description": "Accepts a subscription request to a specific asset.",
+   "options": [
+    {
+     "name": "--asset-permissions",
+     "args": {}
+    },
+    {
+     "name": "--asset-scopes",
+     "args": {}
+    },
+    {
+     "name": "--decision-comment",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-entity-owner",
+   "description": "Adds the owner of an entity (a domain unit).",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "DOMAIN_UNIT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--owner",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-policy-grant",
+   "description": "Adds a policy grant (an authorization policy) to a specified entity, including domain units, environment blueprint configurations, or environment profiles.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--detail",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "DOMAIN_UNIT",
+       "ENVIRONMENT_BLUEPRINT_CONFIGURATION",
+       "ENVIRONMENT_PROFILE",
+       "ASSET_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "CREATE_DOMAIN_UNIT",
+       "OVERRIDE_DOMAIN_UNIT_OWNERS",
+       "ADD_TO_PROJECT_MEMBER_POOL",
+       "OVERRIDE_PROJECT_OWNERS",
+       "CREATE_GLOSSARY",
+       "CREATE_FORM_TYPE",
+       "CREATE_ASSET_TYPE",
+       "CREATE_PROJECT",
+       "CREATE_ENVIRONMENT_PROFILE",
+       "DELEGATE_CREATE_ENVIRONMENT_PROFILE",
+       "CREATE_ENVIRONMENT",
+       "CREATE_ENVIRONMENT_FROM_BLUEPRINT",
+       "CREATE_PROJECT_FROM_PROJECT_PROFILE",
+       "USE_ASSET_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-environment-role",
+   "description": "Associates the environment role in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-governed-terms",
+   "description": "Associates governed terms with an asset.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "ASSET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--governed-glossary-terms",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-attributes-metadata",
+   "description": "Gets the attribute metadata.",
+   "options": [
+    {
+     "name": "--attribute-identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-revision",
+     "args": {}
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "LISTING"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-put-attributes-metadata",
+   "description": "Writes the attribute metadata.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "LISTING"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-metadata-generation-run",
+   "description": "Cancels the metadata generation run.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-subscription",
+   "description": "Cancels the subscription to the specified asset.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-account-pool",
+   "description": "Creates an account pool.",
+   "options": [
+    {
+     "name": "--account-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resolution-strategy",
+     "args": {
+      "suggestions": [
+       "MANUAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-asset",
+   "description": "Creates an asset in Amazon DataZone catalog.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--external-identifier",
+     "args": {}
+    },
+    {
+     "name": "--forms-input",
+     "args": {}
+    },
+    {
+     "name": "--glossary-terms",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prediction-configuration",
+     "args": {}
+    },
+    {
+     "name": "--type-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type-revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-asset-filter",
+   "description": "Creates a data asset filter.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-asset-revision",
+   "description": "Creates a revision of the asset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--forms-input",
+     "args": {}
+    },
+    {
+     "name": "--glossary-terms",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prediction-configuration",
+     "args": {}
+    },
+    {
+     "name": "--type-revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-asset-type",
+   "description": "Creates a custom asset type.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--forms-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-connection",
+   "description": "Creates a new connection.",
+   "options": [
+    {
+     "name": "--aws-location",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configurations",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-trusted-identity-propagation"
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enable-trusted-identity-propagation"
+    },
+    {
+     "name": "--props",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "DOMAIN",
+       "PROJECT"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-data-product",
+   "description": "Creates a data product.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--forms-input",
+     "args": {}
+    },
+    {
+     "name": "--glossary-terms",
+     "args": {}
+    },
+    {
+     "name": "--items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-product-revision",
+   "description": "Creates a data product revision.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--forms-input",
+     "args": {}
+    },
+    {
+     "name": "--glossary-terms",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-source",
+   "description": "Creates an Amazon DataZone data source.",
+   "options": [
+    {
+     "name": "--asset-forms-input",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--connection-identifier",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-setting",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-publish-on-import"
+    },
+    {
+     "name": "--project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--publish-on-import"
+    },
+    {
+     "name": "--recommendation",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-domain",
+   "description": "Creates an Amazon DataZone domain.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-execution-role",
+     "args": {}
+    },
+    {
+     "name": "--domain-version",
+     "args": {
+      "suggestions": [
+       "V1",
+       "V2"
+      ]
+     }
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--single-sign-on",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-domain-unit",
+   "description": "Creates a domain unit in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parent-domain-unit-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment",
+   "description": "Create an Amazon DataZone environment.",
+   "options": [
+    {
+     "name": "--deployment-order",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-account-identifier",
+     "args": {}
+    },
+    {
+     "name": "--environment-account-region",
+     "args": {}
+    },
+    {
+     "name": "--environment-blueprint-identifier",
+     "args": {}
+    },
+    {
+     "name": "--environment-configuration-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--environment-profile-identifier",
+     "args": {}
+    },
+    {
+     "name": "--glossary-terms",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-environment-action",
+   "description": "Creates an action for the environment, for example, creates a console link for an analytics tool that is available in this environment.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment-blueprint",
+   "description": "Creates a Amazon DataZone blueprint.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioning-properties",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-environment-profile",
+   "description": "Creates an Amazon DataZone environment profile.",
+   "options": [
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--aws-account-region",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-blueprint-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-form-type",
+   "description": "Creates a metadata form type.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-glossary",
+   "description": "Creates an Amazon DataZone business glossary.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--usage-restrictions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-glossary-term",
+   "description": "Creates a business glossary term.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--glossary-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--long-description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--short-description",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--term-relations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-group-profile",
+   "description": "Creates a group profile in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--role-principal-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-listing-change-set",
+   "description": "Publishes a listing (a record of an asset at a given time) or removes a listing from the catalog.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "PUBLISH",
+       "UNPUBLISH"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-revision",
+     "args": {}
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "DATA_PRODUCT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-notebook",
+   "description": "Creates a notebook in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-project",
+   "description": "Creates an Amazon DataZone project.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-unit-id",
+     "args": {}
+    },
+    {
+     "name": "--glossary-terms",
+     "args": {}
+    },
+    {
+     "name": "--membership-assignments",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-category",
+     "args": {}
+    },
+    {
+     "name": "--project-execution-role",
+     "args": {}
+    },
+    {
+     "name": "--project-profile-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--user-parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-project-membership",
+   "description": "Creates a project membership in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--designation",
+     "args": {
+      "suggestions": [
+       "PROJECT_OWNER",
+       "PROJECT_CONTRIBUTOR",
+       "PROJECT_CATALOG_VIEWER",
+       "PROJECT_CATALOG_CONSUMER",
+       "PROJECT_CATALOG_STEWARD"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-project-profile",
+   "description": "Creates a project profile.",
+   "options": [
+    {
+     "name": "--allow-custom-project-resource-tags"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-unit-identifier",
+     "args": {}
+    },
+    {
+     "name": "--environment-configurations",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-custom-project-resource-tags"
+    },
+    {
+     "name": "--project-resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--project-resource-tags-description",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-rule",
+   "description": "Creates a rule in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "CREATE_LISTING_CHANGE_SET",
+       "CREATE_SUBSCRIPTION_REQUEST"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--detail",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-subscription-grant",
+   "description": "Creates a subsscription grant in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--asset-target-names",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--granted-entity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-target-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-subscription-request",
+   "description": "Creates a subscription request in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--asset-permissions",
+     "args": {}
+    },
+    {
+     "name": "--asset-scopes",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata-forms",
+     "args": {}
+    },
+    {
+     "name": "--request-reason",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscribed-listings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscribed-principals",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-subscription-target",
+   "description": "Creates a subscription target in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--applicable-asset-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorized-principals",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--manage-access-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {}
+    },
+    {
+     "name": "--subscription-grant-creation-mode",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--subscription-target-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user-profile",
+   "description": "Creates a user profile in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-name",
+     "args": {}
+    },
+    {
+     "name": "--user-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-type",
+     "args": {
+      "suggestions": [
+       "IAM_USER",
+       "IAM_ROLE",
+       "SSO_USER",
+       "IAM_ROLE_SESSION"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-account-pool",
+   "description": "Deletes an account pool.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-asset",
+   "description": "Deletes an asset in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-asset-filter",
+   "description": "Deletes an asset filter.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-asset-type",
+   "description": "Deletes an asset type in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connection",
+   "description": "Deletes and connection.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-export-configuration",
+   "description": "Deletes data export configuration for a domain.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-product",
+   "description": "Deletes a data product in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-source",
+   "description": "Deletes a data source in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-retain-permissions-on-revoke-failure"
+    },
+    {
+     "name": "--retain-permissions-on-revoke-failure"
+    }
+   ]
+  },
+  {
+   "name": "delete-domain",
+   "description": "Deletes a Amazon DataZone domain.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-deletion-check"
+    },
+    {
+     "name": "--skip-deletion-check"
+    }
+   ]
+  },
+  {
+   "name": "delete-domain-unit",
+   "description": "Deletes a domain unit.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment",
+   "description": "Deletes an environment in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-action",
+   "description": "Deletes an action for the environment, for example, deletes a console link for an analytics tool that is available in this environment.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-blueprint",
+   "description": "Deletes a blueprint in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-blueprint-configuration",
+   "description": "Deletes the blueprint configuration in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-blueprint-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-profile",
+   "description": "Deletes an environment profile in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-form-type",
+   "description": "Deletes and metadata form type in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--form-type-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-glossary",
+   "description": "Deletes a business glossary in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-glossary-term",
+   "description": "Deletes a business glossary term in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-lineage-event",
+   "description": "Deletes the specified lineage event.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-listing",
+   "description": "Deletes a listing (a record of an asset at a given time).",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-notebook",
+   "description": "Deletes a notebook in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project",
+   "description": "Deletes a project in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-skip-deletion-check"
+    },
+    {
+     "name": "--skip-deletion-check"
+    }
+   ]
+  },
+  {
+   "name": "delete-project-membership",
+   "description": "Deletes project membership in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project-profile",
+   "description": "Deletes a project profile.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-rule",
+   "description": "Deletes a rule in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subscription-grant",
+   "description": "Deletes and subscription grant in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subscription-request",
+   "description": "Deletes a subscription request in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subscription-target",
+   "description": "Deletes a subscription target in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-time-series-data-points",
+   "description": "Deletes the specified time series form for the specified asset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "LISTING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--form-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-environment-role",
+   "description": "Disassociates the environment role in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-governed-terms",
+   "description": "Disassociates restricted terms from an asset.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "ASSET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--governed-glossary-terms",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-pool",
+   "description": "Gets the details of the account pool.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-asset",
+   "description": "Gets an Amazon DataZone asset.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-asset-filter",
+   "description": "Gets an asset filter.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-asset-type",
+   "description": "Gets an Amazon DataZone asset type.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-connection",
+   "description": "Gets a connection.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-with-secret"
+    },
+    {
+     "name": "--with-secret"
+    }
+   ]
+  },
+  {
+   "name": "get-data-export-configuration",
+   "description": "Gets data export configuration details.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-product",
+   "description": "Gets the data product.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-data-source",
+   "description": "Gets an Amazon DataZone data source.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-source-run",
+   "description": "Gets an Amazon DataZone data source run.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain",
+   "description": "Gets an Amazon DataZone domain.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain-unit",
+   "description": "Gets the details of the specified domain unit.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment",
+   "description": "Gets an Amazon DataZone environment.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment-action",
+   "description": "Gets the specified environment action.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment-blueprint",
+   "description": "Gets an Amazon DataZone blueprint.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment-blueprint-configuration",
+   "description": "Gets the blueprint configuration in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-blueprint-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment-credentials",
+   "description": "Gets the credentials of an environment in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment-profile",
+   "description": "Gets an evinronment profile in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-form-type",
+   "description": "Gets a metadata form type in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--form-type-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-glossary",
+   "description": "Gets a business glossary in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-glossary-term",
+   "description": "Gets a business glossary term in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-group-profile",
+   "description": "Gets a group profile in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-iam-portal-login-url",
+   "description": "Gets the data portal URL for the specified Amazon DataZone domain.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job-run",
+   "description": "The details of the job run.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-lineage-event",
+   "description": "Describes the lineage event.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-lineage-node",
+   "description": "Gets the data lineage node.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-listing",
+   "description": "Gets a listing (a record of an asset at a given time).",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--listing-revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-metadata-generation-run",
+   "description": "Gets a metadata generation run in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BUSINESS_DESCRIPTIONS",
+       "BUSINESS_NAMES",
+       "BUSINESS_GLOSSARY_ASSOCIATIONS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-notebook",
+   "description": "Gets the details of a notebook in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-notebook-export",
+   "description": "Gets the details of a notebook export in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-notebook-run",
+   "description": "Gets the details of a notebook run in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-project",
+   "description": "Gets a project in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-project-profile",
+   "description": "The details of the project profile.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-rule",
+   "description": "Gets the details of a rule in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-subscription",
+   "description": "Gets a subscription in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-subscription-grant",
+   "description": "Gets the subscription grant in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-subscription-request-details",
+   "description": "Gets the details of the specified subscription request.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-subscription-target",
+   "description": "Gets the subscription target in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-time-series-data-point",
+   "description": "Gets the existing data point for the asset.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "LISTING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--form-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user-profile",
+   "description": "Gets a user profile in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-name",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "IAM",
+       "SSO"
+      ]
+     }
+    },
+    {
+     "name": "--user-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-account-pools",
+   "description": "Lists existing account pools.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "NAME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-accounts-in-account-pool",
+   "description": "Lists the accounts in the specified account pool.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-filters",
+   "description": "Lists asset filters.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "VALID",
+       "INVALID"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-asset-revisions",
+   "description": "Lists the revisions for the asset.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connections",
+   "description": "Lists connections.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-identifier",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "DOMAIN",
+       "PROJECT"
+      ]
+     }
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "NAME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-product-revisions",
+   "description": "Lists data product revisions.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-source-run-activities",
+   "description": "Lists data source run activities.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "FAILED",
+       "PUBLISHING_FAILED",
+       "SUCCEEDED_CREATED",
+       "SUCCEEDED_UPDATED",
+       "SKIPPED_ALREADY_IMPORTED",
+       "SKIPPED_ARCHIVED",
+       "SKIPPED_NO_ACCESS",
+       "UNCHANGED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-data-source-runs",
+   "description": "Lists data source runs in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--data-source-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "REQUESTED",
+       "RUNNING",
+       "FAILED",
+       "PARTIALLY_SUCCEEDED",
+       "SUCCESS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-data-sources",
+   "description": "Lists data sources in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--connection-identifier",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "CREATING",
+       "FAILED_CREATION",
+       "READY",
+       "UPDATING",
+       "FAILED_UPDATE",
+       "RUNNING",
+       "DELETING",
+       "FAILED_DELETION"
+      ]
+     }
+    },
+    {
+     "name": "--type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domain-units-for-parent",
+   "description": "Lists child domain units for the specified parent domain unit.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parent-domain-unit-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domains",
+   "description": "Lists Amazon DataZone domains.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "CREATING",
+       "AVAILABLE",
+       "CREATION_FAILED",
+       "DELETING",
+       "DELETED",
+       "DELETION_FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-entity-owners",
+   "description": "Lists the entity (domain units) owners.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "DOMAIN_UNIT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-actions",
+   "description": "Lists existing environment actions.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-blueprint-configurations",
+   "description": "Lists blueprint configurations for a Amazon DataZone environment.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-blueprints",
+   "description": "Lists blueprints in an Amazon DataZone environment.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-managed"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-profiles",
+   "description": "Lists Amazon DataZone environment profiles.",
+   "options": [
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--aws-account-region",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-blueprint-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environments",
+   "description": "Lists Amazon DataZone environments.",
+   "options": [
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--aws-account-region",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-blueprint-identifier",
+     "args": {}
+    },
+    {
+     "name": "--environment-profile-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "CREATING",
+       "UPDATING",
+       "DELETING",
+       "CREATE_FAILED",
+       "UPDATE_FAILED",
+       "DELETE_FAILED",
+       "VALIDATION_FAILED",
+       "SUSPENDED",
+       "DISABLED",
+       "EXPIRED",
+       "DELETED",
+       "INACCESSIBLE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-job-runs",
+   "description": "Lists job runs.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "SCHEDULED",
+       "IN_PROGRESS",
+       "SUCCESS",
+       "PARTIALLY_SUCCEEDED",
+       "FAILED",
+       "ABORTED",
+       "TIMED_OUT",
+       "CANCELED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-lineage-events",
+   "description": "Lists lineage events.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--processing-status",
+     "args": {
+      "suggestions": [
+       "REQUESTED",
+       "PROCESSING",
+       "SUCCESS",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--timestamp-after",
+     "args": {}
+    },
+    {
+     "name": "--timestamp-before",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-lineage-node-history",
+   "description": "Lists the history of the specified data lineage node.",
+   "options": [
+    {
+     "name": "--direction",
+     "args": {
+      "suggestions": [
+       "UPSTREAM",
+       "DOWNSTREAM"
+      ]
+     }
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-timestamp-gte",
+     "args": {}
+    },
+    {
+     "name": "--event-timestamp-lte",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-metadata-generation-runs",
+   "description": "Lists all metadata generation runs.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "IN_PROGRESS",
+       "CANCELED",
+       "SUCCEEDED",
+       "FAILED",
+       "PARTIALLY_SUCCEEDED"
+      ]
+     }
+    },
+    {
+     "name": "--target-identifier",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BUSINESS_DESCRIPTIONS",
+       "BUSINESS_NAMES",
+       "BUSINESS_GLOSSARY_ASSOCIATIONS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-notebook-runs",
+   "description": "Lists notebook runs in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--notebook-identifier",
+     "args": {}
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--schedule-identifier",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "STARTING",
+       "RUNNING",
+       "STOPPING",
+       "STOPPED",
+       "SUCCEEDED",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-notebooks",
+   "description": "Lists notebooks in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CREATED_AT",
+       "UPDATED_AT"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "ARCHIVED",
+       "SYNC_IN_PROGRESS",
+       "SYNC_FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-notifications",
+   "description": "Lists all Amazon DataZone notifications.",
+   "options": [
+    {
+     "name": "--after-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--before-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subjects",
+     "args": {}
+    },
+    {
+     "name": "--task-status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "TASK",
+       "EVENT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-policy-grants",
+   "description": "Lists policy grants.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "DOMAIN_UNIT",
+       "ENVIRONMENT_BLUEPRINT_CONFIGURATION",
+       "ENVIRONMENT_PROFILE",
+       "ASSET_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "CREATE_DOMAIN_UNIT",
+       "OVERRIDE_DOMAIN_UNIT_OWNERS",
+       "ADD_TO_PROJECT_MEMBER_POOL",
+       "OVERRIDE_PROJECT_OWNERS",
+       "CREATE_GLOSSARY",
+       "CREATE_FORM_TYPE",
+       "CREATE_ASSET_TYPE",
+       "CREATE_PROJECT",
+       "CREATE_ENVIRONMENT_PROFILE",
+       "DELEGATE_CREATE_ENVIRONMENT_PROFILE",
+       "CREATE_ENVIRONMENT",
+       "CREATE_ENVIRONMENT_FROM_BLUEPRINT",
+       "CREATE_PROJECT_FROM_PROJECT_PROFILE",
+       "USE_ASSET_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-project-memberships",
+   "description": "Lists all members of the specified project.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "NAME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-project-profiles",
+   "description": "Lists project profiles.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "NAME"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-projects",
+   "description": "Lists Amazon DataZone projects.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-category",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-rules",
+   "description": "Lists existing rules.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "CREATE_LISTING_CHANGE_SET",
+       "CREATE_SUBSCRIPTION_REQUEST"
+      ]
+     }
+    },
+    {
+     "name": "--asset-types",
+     "args": {}
+    },
+    {
+     "name": "--data-product"
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-cascaded"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-data-product"
+    },
+    {
+     "name": "--no-include-cascaded"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-ids",
+     "args": {}
+    },
+    {
+     "name": "--rule-type",
+     "args": {
+      "suggestions": [
+       "METADATA_FORM_ENFORCEMENT",
+       "GLOSSARY_TERM_ENFORCEMENT"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "DOMAIN_UNIT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-subscription-grants",
+   "description": "Lists subscription grants.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owning-group-id",
+     "args": {}
+    },
+    {
+     "name": "--owning-iam-principal-arn",
+     "args": {}
+    },
+    {
+     "name": "--owning-project-id",
+     "args": {}
+    },
+    {
+     "name": "--owning-user-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CREATED_AT",
+       "UPDATED_AT"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subscribed-listing-id",
+     "args": {}
+    },
+    {
+     "name": "--subscription-id",
+     "args": {}
+    },
+    {
+     "name": "--subscription-target-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subscription-requests",
+   "description": "Lists Amazon DataZone subscription requests.",
+   "options": [
+    {
+     "name": "--approver-project-id",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owning-group-id",
+     "args": {}
+    },
+    {
+     "name": "--owning-iam-principal-arn",
+     "args": {}
+    },
+    {
+     "name": "--owning-project-id",
+     "args": {}
+    },
+    {
+     "name": "--owning-user-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CREATED_AT",
+       "UPDATED_AT"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "ACCEPTED",
+       "REJECTED"
+      ]
+     }
+    },
+    {
+     "name": "--subscribed-listing-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subscription-targets",
+   "description": "Lists subscription targets in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CREATED_AT",
+       "UPDATED_AT"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subscriptions",
+   "description": "Lists subscriptions in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--approver-project-id",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owning-group-id",
+     "args": {}
+    },
+    {
+     "name": "--owning-iam-principal-arn",
+     "args": {}
+    },
+    {
+     "name": "--owning-project-id",
+     "args": {}
+    },
+    {
+     "name": "--owning-user-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CREATED_AT",
+       "UPDATED_AT"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "APPROVED",
+       "REVOKED",
+       "CANCELLED"
+      ]
+     }
+    },
+    {
+     "name": "--subscribed-listing-id",
+     "args": {}
+    },
+    {
+     "name": "--subscription-request-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags for the specified resource in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-time-series-data-points",
+   "description": "Lists time series data points.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ended-at",
+     "args": {}
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "LISTING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--form-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--started-at",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "post-lineage-event",
+   "description": "Posts a data lineage event.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "post-time-series-data-points",
+   "description": "Posts time series data points to Amazon DataZone for the specified asset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "LISTING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--forms",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-data-export-configuration",
+   "description": "Creates data export configuration details.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-export",
+     "priority": 75
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-export"
+    }
+   ]
+  },
+  {
+   "name": "put-environment-blueprint-configuration",
+   "description": "Writes the configuration for the specified environment blueprint in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--allow-user-provided-configurations"
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enabled-regions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-blueprint-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-role-permission-boundary",
+     "args": {}
+    },
+    {
+     "name": "--global-parameters",
+     "args": {}
+    },
+    {
+     "name": "--manage-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-user-provided-configurations"
+    },
+    {
+     "name": "--provisioning-configurations",
+     "args": {}
+    },
+    {
+     "name": "--provisioning-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--regional-parameters",
+     "args": {}
+    },
+    {
+     "name": "--resource-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "query-graph",
+   "description": "Queries entities in the graph store.",
+   "options": [
+    {
+     "name": "--additional-attributes",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--match",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reject-predictions",
+   "description": "Rejects automatically generated business-friendly metadata for your Amazon DataZone assets.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reject-choices",
+     "args": {}
+    },
+    {
+     "name": "--reject-rule",
+     "args": {}
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reject-subscription-request",
+   "description": "Rejects the specified subscription request.",
+   "options": [
+    {
+     "name": "--decision-comment",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-entity-owner",
+   "description": "Removes an owner from an entity.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "DOMAIN_UNIT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--owner",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-policy-grant",
+   "description": "Removes a policy grant.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "DOMAIN_UNIT",
+       "ENVIRONMENT_BLUEPRINT_CONFIGURATION",
+       "ENVIRONMENT_PROFILE",
+       "ASSET_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--grant-identifier",
+     "args": {}
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "CREATE_DOMAIN_UNIT",
+       "OVERRIDE_DOMAIN_UNIT_OWNERS",
+       "ADD_TO_PROJECT_MEMBER_POOL",
+       "OVERRIDE_PROJECT_OWNERS",
+       "CREATE_GLOSSARY",
+       "CREATE_FORM_TYPE",
+       "CREATE_ASSET_TYPE",
+       "CREATE_PROJECT",
+       "CREATE_ENVIRONMENT_PROFILE",
+       "DELEGATE_CREATE_ENVIRONMENT_PROFILE",
+       "CREATE_ENVIRONMENT",
+       "CREATE_ENVIRONMENT_FROM_BLUEPRINT",
+       "CREATE_PROJECT_FROM_PROJECT_PROFILE",
+       "USE_ASSET_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-subscription",
+   "description": "Revokes a specified subscription in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-retain-permissions"
+    },
+    {
+     "name": "--retain-permissions"
+    }
+   ]
+  },
+  {
+   "name": "search",
+   "description": "Searches for assets in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--additional-attributes",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-in",
+     "args": {}
+    },
+    {
+     "name": "--search-scope",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "GLOSSARY",
+       "GLOSSARY_TERM",
+       "DATA_PRODUCT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--search-text",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-group-profiles",
+   "description": "Searches group profiles in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-type",
+     "args": {
+      "suggestions": [
+       "SSO_GROUP",
+       "DATAZONE_SSO_GROUP",
+       "IAM_ROLE_SESSION_GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-text",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-listings",
+   "description": "Searches listings in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--additional-attributes",
+     "args": {}
+    },
+    {
+     "name": "--aggregations",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-in",
+     "args": {}
+    },
+    {
+     "name": "--search-text",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-types",
+   "description": "Searches for types in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--managed",
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-managed"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-in",
+     "args": {}
+    },
+    {
+     "name": "--search-scope",
+     "args": {
+      "suggestions": [
+       "ASSET_TYPE",
+       "FORM_TYPE",
+       "LINEAGE_NODE_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--search-text",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-user-profiles",
+   "description": "Searches user profiles in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-text",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-type",
+     "args": {
+      "suggestions": [
+       "SSO_USER",
+       "DATAZONE_USER",
+       "DATAZONE_SSO_USER",
+       "DATAZONE_IAM_USER"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-data-source-run",
+   "description": "Start the run of the specified data source in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-source-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-metadata-generation-run",
+   "description": "Starts the metadata generation run.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BUSINESS_DESCRIPTIONS",
+       "BUSINESS_NAMES",
+       "BUSINESS_GLOSSARY_ASSOCIATIONS"
+      ]
+     }
+    },
+    {
+     "name": "--types",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-notebook-export",
+   "description": "Starts a notebook export in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "PDF",
+       "IPYNB"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--notebook-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-notebook-import",
+   "description": "Starts a notebook import in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-location",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-notebook-run",
+   "description": "Starts a notebook run in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--compute-configuration",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--notebook-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--schedule-identifier",
+     "args": {}
+    },
+    {
+     "name": "--timeout-configuration",
+     "args": {}
+    },
+    {
+     "name": "--trigger-source",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-notebook-sync",
+   "description": "Starts a notebook sync in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--git-metadata",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--notebook-id",
+     "args": {}
+    },
+    {
+     "name": "--owning-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-location",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-notebook-run",
+   "description": "Stops a running notebook run in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tags a resource in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Untags a resource in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-account-pool",
+   "description": "Updates the account pool.",
+   "options": [
+    {
+     "name": "--account-source",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--resolution-strategy",
+     "args": {
+      "suggestions": [
+       "MANUAL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-asset-filter",
+   "description": "Updates an asset filter.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-connection",
+   "description": "Updates a connection.",
+   "options": [
+    {
+     "name": "--aws-location",
+     "args": {}
+    },
+    {
+     "name": "--configurations",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--props",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-data-source",
+   "description": "Updates the specified data source in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--asset-forms-input",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-setting",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-publish-on-import"
+    },
+    {
+     "name": "--no-retain-permissions-on-revoke-failure"
+    },
+    {
+     "name": "--publish-on-import"
+    },
+    {
+     "name": "--recommendation",
+     "args": {}
+    },
+    {
+     "name": "--retain-permissions-on-revoke-failure"
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-domain",
+   "description": "Updates a Amazon DataZone domain.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-execution-role",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--single-sign-on",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-domain-unit",
+   "description": "Updates the domain unit.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-environment",
+   "description": "Updates the specified environment in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--blueprint-version",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--glossary-terms",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--user-parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-environment-action",
+   "description": "Updates an environment action.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-environment-blueprint",
+   "description": "Updates an environment blueprint in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioning-properties",
+     "args": {}
+    },
+    {
+     "name": "--user-parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-environment-profile",
+   "description": "Updates the specified environment profile in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--aws-account-region",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--user-parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-glossary",
+   "description": "Updates the business glossary in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "ENABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-glossary-term",
+   "description": "Updates a business glossary term in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--glossary-identifier",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--long-description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--short-description",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--term-relations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-group-profile",
+   "description": "Updates the specified group profile in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ASSIGNED",
+       "NOT_ASSIGNED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-notebook",
+   "description": "Updates a notebook in Amazon SageMaker Unified Studio.",
+   "options": [
+    {
+     "name": "--cell-order",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "ARCHIVED",
+       "SYNC_IN_PROGRESS",
+       "SYNC_FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-project",
+   "description": "Updates the specified project in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-unit-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-deployment-details",
+     "args": {}
+    },
+    {
+     "name": "--glossary-terms",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--project-profile-version",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--user-parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-project-profile",
+   "description": "Updates a project profile.",
+   "options": [
+    {
+     "name": "--allow-custom-project-resource-tags"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-unit-identifier",
+     "args": {}
+    },
+    {
+     "name": "--environment-configurations",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-custom-project-resource-tags"
+    },
+    {
+     "name": "--project-resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--project-resource-tags-description",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-root-domain-unit-owner",
+   "description": "Updates the owner of the root domain unit.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--current-owner",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-owner",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-rule",
+   "description": "Updates a rule.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--detail",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-child-domain-units"
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-include-child-domain-units"
+    },
+    {
+     "name": "--scope",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-subscription-grant-status",
+   "description": "Updates the status of the specified subscription grant status in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--failure-cause",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "GRANT_PENDING",
+       "REVOKE_PENDING",
+       "GRANT_IN_PROGRESS",
+       "REVOKE_IN_PROGRESS",
+       "GRANTED",
+       "REVOKED",
+       "GRANT_FAILED",
+       "REVOKE_FAILED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--target-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-subscription-request",
+   "description": "Updates a specified subscription request in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-subscription-target",
+   "description": "Updates the specified subscription target in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--applicable-asset-types",
+     "args": {}
+    },
+    {
+     "name": "--authorized-principals",
+     "args": {}
+    },
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--manage-access-role",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--provider",
+     "args": {}
+    },
+    {
+     "name": "--subscription-grant-creation-mode",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--subscription-target-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-user-profile",
+   "description": "Updates the specified user profile in Amazon DataZone.",
+   "options": [
+    {
+     "name": "--domain-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-name",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ASSIGNED",
+       "NOT_ASSIGNED",
+       "ACTIVATED",
+       "DEACTIVATED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "IAM",
+       "SSO"
+      ]
+     }
+    },
+    {
+     "name": "--user-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

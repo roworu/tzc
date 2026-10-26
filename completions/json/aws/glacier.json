@@ -1,0 +1,720 @@
+{
+ "name": "glacier",
+ "description": "Amazon Glacier (Glacier) is a storage solution for \"cold data.\" Glacier is an extremely low-cost storage service that provides secure, durable, and easy-to-use storage for data backup and archival.",
+ "subcommands": [
+  {
+   "name": "abort-multipart-upload",
+   "description": "This operation aborts a multipart upload identified by the upload ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "abort-vault-lock",
+   "description": "This operation aborts the vault locking process if the vault lock is not in the Locked state.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-tags-to-vault",
+   "description": "This operation adds the specified tags to a vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "complete-multipart-upload",
+   "description": "You call this operation to inform Amazon Glacier (Glacier) that all the archive parts have been uploaded and that Glacier can now assemble the archive from the uploaded parts.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--archive-size",
+     "args": {}
+    },
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "complete-vault-lock",
+   "description": "This operation completes the vault locking process by transitioning the vault lock from the InProgress state to the Locked state, which causes the vault lock policy to become unchangeable.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lock-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vault",
+   "description": "This operation creates a new vault with the specified name.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-archive",
+   "description": "This operation deletes an archive from a vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--archive-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vault",
+   "description": "This operation deletes a vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vault-access-policy",
+   "description": "This operation deletes the access policy associated with the specified vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vault-notifications",
+   "description": "This operation deletes the notification configuration set for a vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job",
+   "description": "This operation returns information about a job you previously initiated, including the job initiation date, the user who initiated the job, the job status code/message and the Amazon SNS topic to notify after Amazon Glacier (Glacier) completes the job.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-vault",
+   "description": "This operation returns information about a vault, including the vault's Amazon Resource Name (ARN), the date the vault was created, the number of archives it contains, and the total size of all the archives in the vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-retrieval-policy",
+   "description": "This operation returns the current data retrieval policy for the account and region specified in the GET request.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job-output",
+   "description": "This operation downloads the output of the job you initiated using InitiateJob.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--range",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vault-access-policy",
+   "description": "This operation retrieves the access-policy subresource set on the vault; for more information on setting this subresource, see Set Vault Access Policy (PUT access-policy).",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vault-lock",
+   "description": "This operation retrieves the following attributes from the lock-policy subresource set on the specified vault: The vault lock policy set on the vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vault-notifications",
+   "description": "This operation retrieves the notification-configuration subresource of the specified vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "initiate-job",
+   "description": "This operation initiates a job of the specified type, which can be a select, an archival retrieval, or a vault retrieval.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-parameters",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "initiate-multipart-upload",
+   "description": "This operation initiates a multipart upload.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--archive-description",
+     "args": {}
+    },
+    {
+     "name": "--part-size",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "initiate-vault-lock",
+   "description": "This operation initiates the vault locking process by doing the following: Installing a vault lock policy on the specified vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "This operation lists jobs for a vault, including jobs that are in-progress and jobs that have recently finished.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--completed",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--statuscode",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-multipart-uploads",
+   "description": "This operation lists in-progress multipart uploads for the specified vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-parts",
+   "description": "This operation lists the parts of an archive that have been uploaded in a specific multipart upload.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-provisioned-capacity",
+   "description": "This operation lists the provisioned capacity units for the specified AWS account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-vault",
+   "description": "This operation lists all the tags attached to a vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-vaults",
+   "description": "This operation lists all vaults owned by the calling user's account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "purchase-provisioned-capacity",
+   "description": "This operation purchases a provisioned capacity unit for an AWS account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-vault",
+   "description": "This operation removes one or more tags from the set of tags attached to a vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-data-retrieval-policy",
+   "description": "This operation sets and then enacts a data retrieval policy in the region specified in the PUT request.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "set-vault-access-policy",
+   "description": "This operation configures an access policy for a vault and will overwrite an existing policy.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-vault-notifications",
+   "description": "This operation configures notifications that will be sent when specific events happen to a vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-notification-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "upload-archive",
+   "description": "This operation adds an archive to a vault.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--archive-description",
+     "args": {}
+    },
+    {
+     "name": "--body",
+     "args": {}
+    },
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "upload-multipart-part",
+   "description": "This operation uploads a part of an archive.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--body",
+     "args": {}
+    },
+    {
+     "name": "--checksum",
+     "args": {}
+    },
+    {
+     "name": "--range",
+     "args": {}
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vault-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "vault-exists",
+     "description": "Wait until 200 response is received when polling with ``describe-vault``.",
+     "options": [
+      {
+       "name": "--account-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--vault-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "vault-not-exists",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-vault``.",
+     "options": [
+      {
+       "name": "--account-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--vault-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

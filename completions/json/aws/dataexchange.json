@@ -1,0 +1,739 @@
+{
+ "name": "dataexchange",
+ "description": "AWS Data Exchange is a service that makes it easy for AWS customers to exchange data in the cloud.",
+ "subcommands": [
+  {
+   "name": "accept-data-grant",
+   "description": "This operation accepts a data grant.",
+   "options": [
+    {
+     "name": "--data-grant-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-job",
+   "description": "This operation cancels a job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-grant",
+   "description": "This operation creates a data grant.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--ends-at",
+     "args": {}
+    },
+    {
+     "name": "--grant-distribution-scope",
+     "args": {
+      "suggestions": [
+       "AWS_ORGANIZATION",
+       "NONE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--receiver-principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-set",
+   "description": "This operation creates a data set.",
+   "options": [
+    {
+     "name": "--asset-type",
+     "args": {
+      "suggestions": [
+       "S3_SNAPSHOT",
+       "REDSHIFT_DATA_SHARE",
+       "API_GATEWAY_API",
+       "S3_DATA_ACCESS",
+       "LAKE_FORMATION_DATA_PERMISSION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-action",
+   "description": "This operation creates an event action.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-job",
+   "description": "This operation creates a job.",
+   "options": [
+    {
+     "name": "--asset-configuration",
+     "args": {}
+    },
+    {
+     "name": "--details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "IMPORT_ASSETS_FROM_S3",
+       "IMPORT_ASSET_FROM_SIGNED_URL",
+       "EXPORT_ASSETS_TO_S3",
+       "EXPORT_ASSET_TO_SIGNED_URL",
+       "EXPORT_REVISIONS_TO_S3",
+       "IMPORT_ASSETS_FROM_REDSHIFT_DATA_SHARES",
+       "IMPORT_ASSET_FROM_API_GATEWAY_API",
+       "CREATE_S3_DATA_ACCESS_FROM_S3_BUCKET",
+       "IMPORT_ASSETS_FROM_LAKE_FORMATION_TAG_POLICY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-revision",
+   "description": "This operation creates a revision for a data set.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-asset",
+   "description": "This operation deletes an asset.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-grant",
+   "description": "This operation deletes a data grant.",
+   "options": [
+    {
+     "name": "--data-grant-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-set",
+   "description": "This operation deletes a data set.",
+   "options": [
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-action",
+   "description": "This operation deletes the event action.",
+   "options": [
+    {
+     "name": "--event-action-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-revision",
+   "description": "This operation deletes a revision.",
+   "options": [
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-asset",
+   "description": "This operation returns information about an asset.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-grant",
+   "description": "This operation returns information about a data grant.",
+   "options": [
+    {
+     "name": "--data-grant-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-set",
+   "description": "This operation returns information about a data set.",
+   "options": [
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event-action",
+   "description": "This operation retrieves information about an event action.",
+   "options": [
+    {
+     "name": "--event-action-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job",
+   "description": "This operation returns information about a job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-received-data-grant",
+   "description": "This operation returns information about a received data grant.",
+   "options": [
+    {
+     "name": "--data-grant-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-revision",
+   "description": "This operation returns information about a revision.",
+   "options": [
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-data-grants",
+   "description": "This operation returns information about all data grants.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-set-revisions",
+   "description": "This operation lists a data set's revisions sorted by CreatedAt in descending order.",
+   "options": [
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-sets",
+   "description": "This operation lists your data sets.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--origin",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-actions",
+   "description": "This operation lists your event actions.",
+   "options": [
+    {
+     "name": "--event-source-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "This operation lists your jobs sorted by CreatedAt in descending order.",
+   "options": [
+    {
+     "name": "--data-set-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--revision-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-received-data-grants",
+   "description": "This operation returns information about all received data grants.",
+   "options": [
+    {
+     "name": "--acceptance-state",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-revision-assets",
+   "description": "This operation lists a revision's assets sorted alphabetically in descending order.",
+   "options": [
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "This operation lists the tags on the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-revision",
+   "description": "This operation revokes subscribers' access to a revision.",
+   "options": [
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revocation-comment",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-api-asset",
+   "description": "This operation invokes an API Gateway API asset.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--body",
+     "args": {}
+    },
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--method",
+     "args": {}
+    },
+    {
+     "name": "--path",
+     "args": {}
+    },
+    {
+     "name": "--query-string-parameters",
+     "args": {}
+    },
+    {
+     "name": "--request-headers",
+     "args": {}
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-data-set-notification",
+   "description": "The type of event associated with the data set.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--details",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "DATA_DELAY",
+       "DATA_UPDATE",
+       "DEPRECATION",
+       "SCHEMA_CHANGE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-job",
+   "description": "This operation starts a job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "This operation tags a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "This operation removes one or more tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-asset",
+   "description": "This operation updates an asset.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-set",
+   "description": "This operation updates a data set.",
+   "options": [
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-event-action",
+   "description": "This operation updates the event action.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {}
+    },
+    {
+     "name": "--event-action-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-revision",
+   "description": "This operation updates a revision.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--data-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finalized"
+    },
+    {
+     "name": "--no-finalized"
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

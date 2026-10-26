@@ -1,0 +1,2111 @@
+{
+ "name": "imagebuilder",
+ "description": "EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation, management, and deployment of customized, secure, and up-to-date \"golden\" server images that are pre-installed and pre-configured with software and settings to meet specific IT standards.",
+ "subcommands": [
+  {
+   "name": "cancel-image-creation",
+   "description": "CancelImageCreation cancels the creation of Image.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--image-build-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-lifecycle-execution",
+   "description": "Cancel a specific image lifecycle policy runtime instance.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-component",
+   "description": "Creates a new component that can be used to build, validate, test, and assess your image.",
+   "options": [
+    {
+     "name": "--change-description",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--platform",
+     "args": {
+      "suggestions": [
+       "Windows",
+       "Linux",
+       "macOS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--semantic-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--supported-os-versions",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--uri",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-container-recipe",
+   "description": "Creates a new container recipe.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--components",
+     "args": {}
+    },
+    {
+     "name": "--container-type",
+     "args": {
+      "suggestions": [
+       "DOCKER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dockerfile-template-data",
+     "args": {}
+    },
+    {
+     "name": "--dockerfile-template-uri",
+     "args": {}
+    },
+    {
+     "name": "--image-os-version-override",
+     "args": {}
+    },
+    {
+     "name": "--instance-configuration",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parent-image",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--platform-override",
+     "args": {
+      "suggestions": [
+       "Windows",
+       "Linux",
+       "macOS"
+      ]
+     }
+    },
+    {
+     "name": "--semantic-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-repository",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--working-directory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-distribution-configuration",
+   "description": "Creates a new distribution configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--distributions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-image",
+   "description": "Creates a new image.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--container-recipe-arn",
+     "args": {}
+    },
+    {
+     "name": "--distribution-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--enhanced-image-metadata-enabled"
+    },
+    {
+     "name": "--execution-role",
+     "args": {}
+    },
+    {
+     "name": "--image-recipe-arn",
+     "args": {}
+    },
+    {
+     "name": "--image-scanning-configuration",
+     "args": {}
+    },
+    {
+     "name": "--image-tests-configuration",
+     "args": {}
+    },
+    {
+     "name": "--infrastructure-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-enhanced-image-metadata-enabled"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workflows",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-image-pipeline",
+   "description": "Creates a new image pipeline.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--container-recipe-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--distribution-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--enhanced-image-metadata-enabled"
+    },
+    {
+     "name": "--execution-role",
+     "args": {}
+    },
+    {
+     "name": "--image-recipe-arn",
+     "args": {}
+    },
+    {
+     "name": "--image-scanning-configuration",
+     "args": {}
+    },
+    {
+     "name": "--image-tags",
+     "args": {}
+    },
+    {
+     "name": "--image-tests-configuration",
+     "args": {}
+    },
+    {
+     "name": "--infrastructure-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enhanced-image-metadata-enabled"
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workflows",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-image-recipe",
+   "description": "Creates a new image recipe.",
+   "options": [
+    {
+     "name": "--additional-instance-configuration",
+     "args": {}
+    },
+    {
+     "name": "--ami-tags",
+     "args": {}
+    },
+    {
+     "name": "--ami-watermarks",
+     "args": {}
+    },
+    {
+     "name": "--block-device-mappings",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--components",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parent-image",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--semantic-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--working-directory",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-infrastructure-configuration",
+   "description": "Creates a new infrastructure configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--instance-metadata-options",
+     "args": {}
+    },
+    {
+     "name": "--instance-profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-types",
+     "args": {}
+    },
+    {
+     "name": "--key-pair",
+     "args": {}
+    },
+    {
+     "name": "--logging",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-terminate-instance-on-failure"
+    },
+    {
+     "name": "--placement",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--subnet-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--terminate-instance-on-failure"
+    }
+   ]
+  },
+  {
+   "name": "create-lifecycle-policy",
+   "description": "Create a lifecycle policy resource.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-selection",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "AMI_IMAGE",
+       "CONTAINER_IMAGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-workflow",
+   "description": "Create a new workflow or a new version of an existing workflow.",
+   "options": [
+    {
+     "name": "--change-description",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--semantic-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BUILD",
+       "TEST",
+       "DISTRIBUTION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--uri",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-component",
+   "description": "Deletes a component build version.",
+   "options": [
+    {
+     "name": "--component-build-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-container-recipe",
+   "description": "Deletes a container recipe.",
+   "options": [
+    {
+     "name": "--container-recipe-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-distribution-configuration",
+   "description": "Deletes a distribution configuration.",
+   "options": [
+    {
+     "name": "--distribution-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-image",
+   "description": "Deletes an Image Builder image resource.",
+   "options": [
+    {
+     "name": "--image-build-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-image-pipeline",
+   "description": "Deletes an image pipeline.",
+   "options": [
+    {
+     "name": "--image-pipeline-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-image-recipe",
+   "description": "Deletes an image recipe.",
+   "options": [
+    {
+     "name": "--image-recipe-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-infrastructure-configuration",
+   "description": "Deletes an infrastructure configuration.",
+   "options": [
+    {
+     "name": "--infrastructure-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-lifecycle-policy",
+   "description": "Delete the specified lifecycle policy resource.",
+   "options": [
+    {
+     "name": "--lifecycle-policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow",
+   "description": "Deletes a specific workflow resource.",
+   "options": [
+    {
+     "name": "--workflow-build-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "distribute-image",
+   "description": "Distributes an existing AMI to target Regions and accounts without running the full image build process.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--distribution-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--source-image",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-component",
+   "description": "Gets a component object.",
+   "options": [
+    {
+     "name": "--component-build-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-component-policy",
+   "description": "Gets a component policy.",
+   "options": [
+    {
+     "name": "--component-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-container-recipe",
+   "description": "Retrieves a container recipe.",
+   "options": [
+    {
+     "name": "--container-recipe-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-container-recipe-policy",
+   "description": "Retrieves the policy for a container recipe.",
+   "options": [
+    {
+     "name": "--container-recipe-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-distribution-configuration",
+   "description": "Gets a distribution configuration.",
+   "options": [
+    {
+     "name": "--distribution-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-image",
+   "description": "Gets an image.",
+   "options": [
+    {
+     "name": "--image-build-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-image-pipeline",
+   "description": "Gets an image pipeline.",
+   "options": [
+    {
+     "name": "--image-pipeline-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-image-policy",
+   "description": "Gets an image policy.",
+   "options": [
+    {
+     "name": "--image-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-image-recipe",
+   "description": "Gets an image recipe.",
+   "options": [
+    {
+     "name": "--image-recipe-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-image-recipe-policy",
+   "description": "Gets an image recipe policy.",
+   "options": [
+    {
+     "name": "--image-recipe-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-infrastructure-configuration",
+   "description": "Gets an infrastructure configuration.",
+   "options": [
+    {
+     "name": "--infrastructure-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-lifecycle-execution",
+   "description": "Get the runtime information that was logged for a specific runtime instance of the lifecycle policy.",
+   "options": [
+    {
+     "name": "--lifecycle-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-lifecycle-policy",
+   "description": "Get details for the specified image lifecycle policy.",
+   "options": [
+    {
+     "name": "--lifecycle-policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-marketplace-resource",
+   "description": "Verify the subscription and perform resource dependency checks on the requested Amazon Web Services Marketplace resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-location",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "COMPONENT_DATA",
+       "COMPONENT_ARTIFACT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow",
+   "description": "Get a workflow resource object.",
+   "options": [
+    {
+     "name": "--workflow-build-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-execution",
+   "description": "Get the runtime information that was logged for a specific runtime instance of the workflow.",
+   "options": [
+    {
+     "name": "--workflow-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-step-execution",
+   "description": "Get the runtime information that was logged for a specific runtime instance of the workflow step.",
+   "options": [
+    {
+     "name": "--step-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-component",
+   "description": "Imports a component and transforms its data into a component document.",
+   "options": [
+    {
+     "name": "--change-description",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "SHELL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--platform",
+     "args": {
+      "suggestions": [
+       "Windows",
+       "Linux",
+       "macOS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--semantic-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BUILD",
+       "TEST"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--uri",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-disk-image",
+   "description": "Import a Windows operating system image from a verified Microsoft ISO disk file.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-role",
+     "args": {}
+    },
+    {
+     "name": "--infrastructure-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--os-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--platform",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--register-image-options",
+     "args": {}
+    },
+    {
+     "name": "--semantic-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--uri",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--windows-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-vm-image",
+   "description": "When you export your virtual machine (VM) from its virtualization environment, that process creates a set of one or more disk container files that act as snapshots of your VM\u2019s environment, settings, and data.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--os-version",
+     "args": {}
+    },
+    {
+     "name": "--platform",
+     "args": {
+      "suggestions": [
+       "Windows",
+       "Linux",
+       "macOS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--semantic-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vm-import-task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-component-build-versions",
+   "description": "Returns the list of component build versions for the specified component version Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--component-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-components",
+   "description": "Returns the list of components that can be filtered by name, or by using the listed filters to streamline results.",
+   "options": [
+    {
+     "name": "--by-name"
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-by-name"
+    },
+    {
+     "name": "--owner",
+     "args": {
+      "suggestions": [
+       "Self",
+       "Shared",
+       "Amazon",
+       "ThirdParty",
+       "AWSMarketplace"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-container-recipes",
+   "description": "Returns a list of container recipes.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owner",
+     "args": {
+      "suggestions": [
+       "Self",
+       "Shared",
+       "Amazon",
+       "ThirdParty",
+       "AWSMarketplace"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-distribution-configurations",
+   "description": "Returns a list of distribution configurations.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-image-build-versions",
+   "description": "Returns a list of image build versions.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--image-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-image-packages",
+   "description": "List the Packages that are associated with an Image Build Version, as determined by Amazon Web Services Systems Manager Inventory at build time.",
+   "options": [
+    {
+     "name": "--image-build-version-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-image-pipeline-images",
+   "description": "Returns a list of images created by the specified pipeline.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--image-pipeline-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-image-pipelines",
+   "description": "Returns a list of image pipelines.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-image-recipes",
+   "description": "Returns a list of image recipes.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owner",
+     "args": {
+      "suggestions": [
+       "Self",
+       "Shared",
+       "Amazon",
+       "ThirdParty",
+       "AWSMarketplace"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-image-scan-finding-aggregations",
+   "description": "Returns a list of image scan aggregations for your account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-image-scan-findings",
+   "description": "Returns a list of image scan findings for your account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-images",
+   "description": "Returns the list of images that you have access to.",
+   "options": [
+    {
+     "name": "--by-name"
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-deprecated"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-by-name"
+    },
+    {
+     "name": "--no-include-deprecated"
+    },
+    {
+     "name": "--owner",
+     "args": {
+      "suggestions": [
+       "Self",
+       "Shared",
+       "Amazon",
+       "ThirdParty",
+       "AWSMarketplace"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-infrastructure-configurations",
+   "description": "Returns a list of infrastructure configurations.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-lifecycle-execution-resources",
+   "description": "List resources that the runtime instance of the image lifecycle identified for lifecycle actions.",
+   "options": [
+    {
+     "name": "--lifecycle-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parent-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-lifecycle-executions",
+   "description": "Get the lifecycle runtime history for the specified resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-lifecycle-policies",
+   "description": "Get a list of lifecycle policies in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns the list of tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-waiting-workflow-steps",
+   "description": "Get a list of workflow steps that are waiting for action for workflows in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-build-versions",
+   "description": "Returns a list of build versions for a specific workflow resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-version-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-executions",
+   "description": "Returns a list of workflow runtime instance metadata objects for a specific image build version.",
+   "options": [
+    {
+     "name": "--image-build-version-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-step-executions",
+   "description": "Returns runtime data for each step in a runtime instance of the workflow that you specify in the request.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workflows",
+   "description": "Lists workflow build versions based on filtering parameters.",
+   "options": [
+    {
+     "name": "--by-name"
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-by-name"
+    },
+    {
+     "name": "--owner",
+     "args": {
+      "suggestions": [
+       "Self",
+       "Shared",
+       "Amazon",
+       "ThirdParty",
+       "AWSMarketplace"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-component-policy",
+   "description": "Applies a policy to a component.",
+   "options": [
+    {
+     "name": "--component-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-container-recipe-policy",
+   "description": "Applies a policy to a container image.",
+   "options": [
+    {
+     "name": "--container-recipe-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-image-policy",
+   "description": "Applies a policy to an image.",
+   "options": [
+    {
+     "name": "--image-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-image-recipe-policy",
+   "description": "Applies a policy to an image recipe.",
+   "options": [
+    {
+     "name": "--image-recipe-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "retry-image",
+   "description": "RetryImage retries an image distribution without rebuilding the image.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--image-build-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-workflow-step-action",
+   "description": "Pauses or resumes image creation when the associated workflow runs a WaitForAction step.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "RESUME",
+       "STOP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--image-build-version-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--step-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-image-pipeline-execution",
+   "description": "Manually triggers a pipeline to create an image.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--image-pipeline-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-resource-state-update",
+   "description": "Begin asynchronous resource state update for lifecycle changes to the specified image resources.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--exclusion-rules",
+     "args": {}
+    },
+    {
+     "name": "--execution-role",
+     "args": {}
+    },
+    {
+     "name": "--include-resources",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-at",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds a tag to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-distribution-configuration",
+   "description": "Updates a new distribution configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--distribution-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--distributions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-image-pipeline",
+   "description": "Updates an image pipeline.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--container-recipe-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--distribution-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--enhanced-image-metadata-enabled"
+    },
+    {
+     "name": "--execution-role",
+     "args": {}
+    },
+    {
+     "name": "--image-pipeline-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-recipe-arn",
+     "args": {}
+    },
+    {
+     "name": "--image-scanning-configuration",
+     "args": {}
+    },
+    {
+     "name": "--image-tags",
+     "args": {}
+    },
+    {
+     "name": "--image-tests-configuration",
+     "args": {}
+    },
+    {
+     "name": "--infrastructure-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-enhanced-image-metadata-enabled"
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--workflows",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-infrastructure-configuration",
+   "description": "Updates a new infrastructure configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--infrastructure-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-metadata-options",
+     "args": {}
+    },
+    {
+     "name": "--instance-profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-types",
+     "args": {}
+    },
+    {
+     "name": "--key-pair",
+     "args": {}
+    },
+    {
+     "name": "--logging",
+     "args": {}
+    },
+    {
+     "name": "--no-terminate-instance-on-failure"
+    },
+    {
+     "name": "--placement",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--subnet-id",
+     "args": {}
+    },
+    {
+     "name": "--terminate-instance-on-failure"
+    }
+   ]
+  },
+  {
+   "name": "update-lifecycle-policy",
+   "description": "Update the specified lifecycle policy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lifecycle-policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-selection",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "AMI_IMAGE",
+       "CONTAINER_IMAGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "ENABLED"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

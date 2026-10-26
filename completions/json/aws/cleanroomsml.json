@@ -1,0 +1,1360 @@
+{
+ "name": "cleanroomsml",
+ "description": "Welcome to the Amazon Web Services Clean Rooms ML API Reference.",
+ "subcommands": [
+  {
+   "name": "cancel-trained-model",
+   "description": "Submits a request to cancel the trained model job.",
+   "options": [
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-trained-model-inference-job",
+   "description": "Submits a request to cancel a trained model inference job.",
+   "options": [
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-inference-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-audience-model",
+   "description": "Defines the information necessary to create an audience model.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--training-data-end-time",
+     "args": {}
+    },
+    {
+     "name": "--training-data-start-time",
+     "args": {}
+    },
+    {
+     "name": "--training-dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-configured-audience-model",
+   "description": "Defines the information necessary to create a configured audience model.",
+   "options": [
+    {
+     "name": "--audience-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--audience-size-config",
+     "args": {}
+    },
+    {
+     "name": "--child-resource-tag-on-create-policy",
+     "args": {
+      "suggestions": [
+       "FROM_PARENT_RESOURCE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--min-matching-seed-size",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shared-audience-metrics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-configured-model-algorithm",
+   "description": "Creates a configured model algorithm using a container image stored in an ECR repository.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--inference-container-config",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--training-container-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-configured-model-algorithm-association",
+   "description": "Associates a configured model algorithm to a collaboration for use by any member of the collaboration.",
+   "options": [
+    {
+     "name": "--configured-model-algorithm-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--privacy-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-ml-input-channel",
+   "description": "Provides the information to create an ML input channel.",
+   "options": [
+    {
+     "name": "--configured-model-algorithm-associations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--input-channel",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payer-configuration",
+     "args": {}
+    },
+    {
+     "name": "--retention-in-days",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-trained-model",
+   "description": "Creates a trained model from an associated configured model algorithm using data from any member of the collaboration.",
+   "options": [
+    {
+     "name": "--configured-model-algorithm-association-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-channels",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment",
+     "args": {}
+    },
+    {
+     "name": "--hyperparameters",
+     "args": {}
+    },
+    {
+     "name": "--incremental-training-data-channels",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ml-model-training-payer-account-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stopping-condition",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--training-input-mode",
+     "args": {
+      "suggestions": [
+       "File",
+       "FastFile",
+       "Pipe"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-training-dataset",
+   "description": "Defines the information necessary to create a training dataset.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--training-data",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-audience-generation-job",
+   "description": "Deletes the specified audience generation job, and removes all data associated with the job.",
+   "options": [
+    {
+     "name": "--audience-generation-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-audience-model",
+   "description": "Specifies an audience model that you want to delete.",
+   "options": [
+    {
+     "name": "--audience-model-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-configured-audience-model",
+   "description": "Deletes the specified configured audience model.",
+   "options": [
+    {
+     "name": "--configured-audience-model-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-configured-audience-model-policy",
+   "description": "Deletes the specified configured audience model policy.",
+   "options": [
+    {
+     "name": "--configured-audience-model-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-configured-model-algorithm",
+   "description": "Deletes a configured model algorithm.",
+   "options": [
+    {
+     "name": "--configured-model-algorithm-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-configured-model-algorithm-association",
+   "description": "Deletes a configured model algorithm association.",
+   "options": [
+    {
+     "name": "--configured-model-algorithm-association-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ml-configuration",
+   "description": "Deletes a ML modeling configuration.",
+   "options": [
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ml-input-channel-data",
+   "description": "Provides the information necessary to delete an ML input channel.",
+   "options": [
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ml-input-channel-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-trained-model-output",
+   "description": "Deletes the model artifacts stored by the service.",
+   "options": [
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-training-dataset",
+   "description": "Specifies a training dataset that you want to delete.",
+   "options": [
+    {
+     "name": "--training-dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-audience-generation-job",
+   "description": "Returns information about an audience generation job.",
+   "options": [
+    {
+     "name": "--audience-generation-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-audience-model",
+   "description": "Returns information about an audience model",
+   "options": [
+    {
+     "name": "--audience-model-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-collaboration-configured-model-algorithm-association",
+   "description": "Returns information about the configured model algorithm association in a collaboration.",
+   "options": [
+    {
+     "name": "--collaboration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configured-model-algorithm-association-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-collaboration-ml-input-channel",
+   "description": "Returns information about a specific ML input channel in a collaboration.",
+   "options": [
+    {
+     "name": "--collaboration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ml-input-channel-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-collaboration-trained-model",
+   "description": "Returns information about a trained model in a collaboration.",
+   "options": [
+    {
+     "name": "--collaboration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-configured-audience-model",
+   "description": "Returns information about a specified configured audience model.",
+   "options": [
+    {
+     "name": "--configured-audience-model-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-configured-audience-model-policy",
+   "description": "Returns information about a configured audience model policy.",
+   "options": [
+    {
+     "name": "--configured-audience-model-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-configured-model-algorithm",
+   "description": "Returns information about a configured model algorithm.",
+   "options": [
+    {
+     "name": "--configured-model-algorithm-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-configured-model-algorithm-association",
+   "description": "Returns information about a configured model algorithm association.",
+   "options": [
+    {
+     "name": "--configured-model-algorithm-association-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ml-configuration",
+   "description": "Returns information about a specific ML configuration.",
+   "options": [
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ml-input-channel",
+   "description": "Returns information about an ML input channel.",
+   "options": [
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ml-input-channel-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-trained-model",
+   "description": "Returns information about a trained model.",
+   "options": [
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-trained-model-inference-job",
+   "description": "Returns information about a trained model inference job.",
+   "options": [
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-inference-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-training-dataset",
+   "description": "Returns information about a training dataset.",
+   "options": [
+    {
+     "name": "--training-dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-audience-export-jobs",
+   "description": "Returns a list of the audience export jobs.",
+   "options": [
+    {
+     "name": "--audience-generation-job-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-audience-generation-jobs",
+   "description": "Returns a list of audience generation jobs.",
+   "options": [
+    {
+     "name": "--collaboration-id",
+     "args": {}
+    },
+    {
+     "name": "--configured-audience-model-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-audience-models",
+   "description": "Returns a list of audience models.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-collaboration-configured-model-algorithm-associations",
+   "description": "Returns a list of the configured model algorithm associations in a collaboration.",
+   "options": [
+    {
+     "name": "--collaboration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-collaboration-ml-input-channels",
+   "description": "Returns a list of the ML input channels in a collaboration.",
+   "options": [
+    {
+     "name": "--collaboration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-collaboration-trained-model-export-jobs",
+   "description": "Returns a list of the export jobs for a trained model in a collaboration.",
+   "options": [
+    {
+     "name": "--collaboration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-version-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-collaboration-trained-model-inference-jobs",
+   "description": "Returns a list of trained model inference jobs in a specified collaboration.",
+   "options": [
+    {
+     "name": "--collaboration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {}
+    },
+    {
+     "name": "--trained-model-version-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-collaboration-trained-models",
+   "description": "Returns a list of the trained models in a collaboration.",
+   "options": [
+    {
+     "name": "--collaboration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-configured-audience-models",
+   "description": "Returns a list of the configured audience models.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-configured-model-algorithm-associations",
+   "description": "Returns a list of configured model algorithm associations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-configured-model-algorithms",
+   "description": "Returns a list of configured model algorithms.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ml-input-channels",
+   "description": "Returns a list of ML input channels.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags for a provided resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-trained-model-inference-jobs",
+   "description": "Returns a list of trained model inference jobs that match the request parameters.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {}
+    },
+    {
+     "name": "--trained-model-version-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-trained-model-versions",
+   "description": "Returns a list of trained model versions for a specified trained model.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "CREATE_PENDING",
+       "CREATE_IN_PROGRESS",
+       "CREATE_FAILED",
+       "ACTIVE",
+       "DELETE_PENDING",
+       "DELETE_IN_PROGRESS",
+       "DELETE_FAILED",
+       "INACTIVE",
+       "CANCEL_PENDING",
+       "CANCEL_IN_PROGRESS",
+       "CANCEL_FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-trained-models",
+   "description": "Returns a list of trained models.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-training-datasets",
+   "description": "Returns a list of training datasets.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-configured-audience-model-policy",
+   "description": "Create or update the resource policy for a configured audience model.",
+   "options": [
+    {
+     "name": "--configured-audience-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configured-audience-model-policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-existence-condition",
+     "args": {
+      "suggestions": [
+       "POLICY_MUST_EXIST",
+       "POLICY_MUST_NOT_EXIST"
+      ]
+     }
+    },
+    {
+     "name": "--previous-policy-hash",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-ml-configuration",
+   "description": "Assigns information about an ML configuration.",
+   "options": [
+    {
+     "name": "--default-output-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-audience-export-job",
+   "description": "Export an audience of a specified size after you have generated an audience.",
+   "options": [
+    {
+     "name": "--audience-generation-job-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--audience-size",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-audience-generation-job",
+   "description": "Information necessary to start the audience generation job.",
+   "options": [
+    {
+     "name": "--collaboration-id",
+     "args": {}
+    },
+    {
+     "name": "--configured-audience-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--include-seed-in-output"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-seed-in-output"
+    },
+    {
+     "name": "--seed-audience",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-trained-model-export-job",
+   "description": "Provides the information necessary to start a trained model export job.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-version-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-trained-model-inference-job",
+   "description": "Defines the information necessary to begin a trained model inference job.",
+   "options": [
+    {
+     "name": "--configured-model-algorithm-association-arn",
+     "args": {}
+    },
+    {
+     "name": "--container-execution-parameters",
+     "args": {}
+    },
+    {
+     "name": "--data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--membership-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ml-model-inference-payer-account-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--trained-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trained-model-version-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds metadata tags to a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes metadata tags from a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-configured-audience-model",
+   "description": "Provides the information necessary to update a configured audience model.",
+   "options": [
+    {
+     "name": "--audience-model-arn",
+     "args": {}
+    },
+    {
+     "name": "--audience-size-config",
+     "args": {}
+    },
+    {
+     "name": "--configured-audience-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--min-matching-seed-size",
+     "args": {}
+    },
+    {
+     "name": "--output-config",
+     "args": {}
+    },
+    {
+     "name": "--shared-audience-metrics",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

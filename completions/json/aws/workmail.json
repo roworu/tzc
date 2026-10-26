@@ -1,0 +1,2180 @@
+{
+ "name": "workmail",
+ "description": "WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile email clients.",
+ "subcommands": [
+  {
+   "name": "associate-delegate-to-resource",
+   "description": "Adds a member (user or group) to the resource's set of delegates.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-member-to-group",
+   "description": "Adds a member (user or group) to the group's set.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "assume-impersonation-role",
+   "description": "Assumes an impersonation role for the given WorkMail organization.",
+   "options": [
+    {
+     "name": "--impersonation-role-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-mailbox-export-job",
+   "description": "Cancels a mailbox export job.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-alias",
+   "description": "Adds an alias to the set of a given member (user or group) of WorkMail.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-availability-configuration",
+   "description": "Creates an AvailabilityConfiguration for the given WorkMail organization and domain.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ews-provider",
+     "args": {}
+    },
+    {
+     "name": "--lambda-provider",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-group",
+   "description": "Creates a group that can be used in WorkMail by calling the RegisterToWorkMail operation.",
+   "options": [
+    {
+     "name": "--hidden-from-global-address-list"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-hidden-from-global-address-list"
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-identity-center-application",
+   "description": "Creates the WorkMail application in IAM Identity Center that can be used later in the WorkMail - IdC integration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-impersonation-role",
+   "description": "Creates an impersonation role for the given WorkMail organization.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "FULL_ACCESS",
+       "READ_ONLY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-mobile-device-access-rule",
+   "description": "Creates a new mobile device access rule for the specified WorkMail organization.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--device-models",
+     "args": {}
+    },
+    {
+     "name": "--device-operating-systems",
+     "args": {}
+    },
+    {
+     "name": "--device-types",
+     "args": {}
+    },
+    {
+     "name": "--device-user-agents",
+     "args": {}
+    },
+    {
+     "name": "--effect",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "DENY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--not-device-models",
+     "args": {}
+    },
+    {
+     "name": "--not-device-operating-systems",
+     "args": {}
+    },
+    {
+     "name": "--not-device-types",
+     "args": {}
+    },
+    {
+     "name": "--not-device-user-agents",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-organization",
+   "description": "Creates a new WorkMail organization.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {}
+    },
+    {
+     "name": "--domains",
+     "args": {}
+    },
+    {
+     "name": "--enable-interoperability"
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-interoperability"
+    }
+   ]
+  },
+  {
+   "name": "create-resource",
+   "description": "Creates a new WorkMail resource.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--hidden-from-global-address-list"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-hidden-from-global-address-list"
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ROOM",
+       "EQUIPMENT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "Creates a user who can be used in WorkMail by calling the RegisterToWorkMail operation.",
+   "options": [
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--first-name",
+     "args": {}
+    },
+    {
+     "name": "--hidden-from-global-address-list"
+    },
+    {
+     "name": "--identity-provider-user-id",
+     "args": {}
+    },
+    {
+     "name": "--last-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-hidden-from-global-address-list"
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "USER",
+       "RESOURCE",
+       "SYSTEM_USER",
+       "REMOTE_USER"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-access-control-rule",
+   "description": "Deletes an access control rule for the specified WorkMail organization.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-alias",
+   "description": "Remove one or more specified aliases from a set of aliases for a given user.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-availability-configuration",
+   "description": "Deletes the AvailabilityConfiguration for the given WorkMail organization and domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-email-monitoring-configuration",
+   "description": "Deletes the email monitoring configuration for a specified organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-group",
+   "description": "Deletes a group from WorkMail.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-identity-center-application",
+   "description": "Deletes the IAM Identity Center application from WorkMail.",
+   "options": [
+    {
+     "name": "--application-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-identity-provider-configuration",
+   "description": "Disables the integration between IdC and WorkMail.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-impersonation-role",
+   "description": "Deletes an impersonation role for the given WorkMail organization.",
+   "options": [
+    {
+     "name": "--impersonation-role-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-mailbox-permissions",
+   "description": "Deletes permissions granted to a member (user or group).",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grantee-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-mobile-device-access-override",
+   "description": "Deletes the mobile device access override for the given WorkMail organization, user, and device.",
+   "options": [
+    {
+     "name": "--device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-mobile-device-access-rule",
+   "description": "Deletes a mobile device access rule for the specified WorkMail organization.",
+   "options": [
+    {
+     "name": "--mobile-device-access-rule-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-organization",
+   "description": "Deletes an WorkMail organization and all underlying AWS resources managed by WorkMail as part of the organization.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--delete-directory",
+     "priority": 75
+    },
+    {
+     "name": "--delete-identity-center-application"
+    },
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--no-delete-directory"
+    },
+    {
+     "name": "--no-delete-identity-center-application"
+    },
+    {
+     "name": "--no-force-delete"
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-personal-access-token",
+   "description": "Deletes the Personal Access Token from the provided WorkMail Organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--personal-access-token-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource",
+   "description": "Deletes the specified resource.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-retention-policy",
+   "description": "Deletes the specified retention policy from the specified organization.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user",
+   "description": "Deletes a user from WorkMail and all subsequent systems.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-from-work-mail",
+   "description": "Mark a user, group, or resource as no longer used in WorkMail.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-mail-domain",
+   "description": "Removes a domain from WorkMail, stops email routing to WorkMail, and removes the authorization allowing WorkMail use.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-email-monitoring-configuration",
+   "description": "Describes the current email monitoring configuration for a specified organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-entity",
+   "description": "Returns basic details about an entity in WorkMail.",
+   "options": [
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-group",
+   "description": "Returns the data available for the group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-identity-provider-configuration",
+   "description": "Returns detailed information on the current IdC setup for the WorkMail organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-inbound-dmarc-settings",
+   "description": "Lists the settings in a DMARC policy for a specified organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-mailbox-export-job",
+   "description": "Describes the current status of a mailbox export job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-organization",
+   "description": "Provides more information regarding a given organization based on its identifier.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-resource",
+   "description": "Returns the data available for the resource.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-user",
+   "description": "Provides information regarding the user.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-delegate-from-resource",
+   "description": "Removes a member from the resource's set of delegates.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-member-from-group",
+   "description": "Removes a member from a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-control-effect",
+   "description": "Gets the effects of an organization's access control rules as they apply to a specified IPv4 address, access protocol action, and user ID or impersonation role ID.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--impersonation-role-id",
+     "args": {}
+    },
+    {
+     "name": "--ip-address",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-default-retention-policy",
+   "description": "Gets the default retention policy details for the specified organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-impersonation-role",
+   "description": "Gets the impersonation role details for the given WorkMail organization.",
+   "options": [
+    {
+     "name": "--impersonation-role-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-impersonation-role-effect",
+   "description": "Tests whether the given impersonation role can impersonate a target user.",
+   "options": [
+    {
+     "name": "--impersonation-role-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-user",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-mail-domain",
+   "description": "Gets details for a mail domain, including domain records required to configure your domain with recommended security.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-mailbox-details",
+   "description": "Requests a user's mailbox details for a specified organization and user.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-mobile-device-access-effect",
+   "description": "Simulates the effect of the mobile device access rules for the given attributes of a sample access event.",
+   "options": [
+    {
+     "name": "--device-model",
+     "args": {}
+    },
+    {
+     "name": "--device-operating-system",
+     "args": {}
+    },
+    {
+     "name": "--device-type",
+     "args": {}
+    },
+    {
+     "name": "--device-user-agent",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-mobile-device-access-override",
+   "description": "Gets the mobile device access override for the given WorkMail organization, user, and device.",
+   "options": [
+    {
+     "name": "--device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-personal-access-token-metadata",
+   "description": "Requests details of a specific Personal Access Token within the WorkMail organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--personal-access-token-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-access-control-rules",
+   "description": "Lists the access control rules for the specified organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-aliases",
+   "description": "Creates a paginated call to list the aliases associated with a given entity.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-availability-configurations",
+   "description": "List all the AvailabilityConfiguration's for the given WorkMail organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-group-members",
+   "description": "Returns an overview of the members of a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-groups",
+   "description": "Returns summaries of the organization's groups.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-groups-for-entity",
+   "description": "Returns all the groups to which an entity belongs.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-impersonation-roles",
+   "description": "Lists all the impersonation roles for the given WorkMail organization.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-mail-domains",
+   "description": "Lists the mail domains in a given WorkMail organization.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-mailbox-export-jobs",
+   "description": "Lists the mailbox export jobs started for the specified organization within the last seven days.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-mailbox-permissions",
+   "description": "Lists the mailbox permissions associated with a user, group, or resource mailbox.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-mobile-device-access-overrides",
+   "description": "Lists all the mobile device access overrides for any given combination of WorkMail organization, user, or device.",
+   "options": [
+    {
+     "name": "--device-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-mobile-device-access-rules",
+   "description": "Lists the mobile device access rules for the specified WorkMail organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-organizations",
+   "description": "Returns summaries of the customer's organizations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-personal-access-tokens",
+   "description": "Returns a summary of your Personal Access Tokens.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-delegates",
+   "description": "Lists the delegates associated with a resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resources",
+   "description": "Returns summaries of the organization's resources.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags applied to an WorkMail organization resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-users",
+   "description": "Returns summaries of the organization's users.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-access-control-rule",
+   "description": "Adds a new access control rule for the specified organization.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--effect",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "DENY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--impersonation-role-ids",
+     "args": {}
+    },
+    {
+     "name": "--ip-ranges",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--not-actions",
+     "args": {}
+    },
+    {
+     "name": "--not-impersonation-role-ids",
+     "args": {}
+    },
+    {
+     "name": "--not-ip-ranges",
+     "args": {}
+    },
+    {
+     "name": "--not-user-ids",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-email-monitoring-configuration",
+   "description": "Creates or updates the email monitoring configuration for a specified organization.",
+   "options": [
+    {
+     "name": "--log-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-identity-provider-configuration",
+   "description": "Enables integration between IAM Identity Center (IdC) and WorkMail to proxy authentication requests for mailbox users.",
+   "options": [
+    {
+     "name": "--authentication-mode",
+     "args": {
+      "suggestions": [
+       "IDENTITY_PROVIDER_ONLY",
+       "IDENTITY_PROVIDER_AND_DIRECTORY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--identity-center-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--personal-access-token-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-inbound-dmarc-settings",
+   "description": "Enables or disables a DMARC policy for a given organization.",
+   "options": [
+    {
+     "name": "--enforced",
+     "priority": 75
+    },
+    {
+     "name": "--no-enforced"
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-mailbox-permissions",
+   "description": "Sets permissions for a user, group, or resource.",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grantee-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-values",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-mobile-device-access-override",
+   "description": "Creates or updates a mobile device access override for the given WorkMail organization, user, and device.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--effect",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "DENY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-retention-policy",
+   "description": "Puts a retention policy to the specified organization.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--folder-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-mail-domain",
+   "description": "Registers a new domain in WorkMail and SES, and configures it for use by WorkMail.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-to-work-mail",
+   "description": "Registers an existing and disabled user, group, or resource for WorkMail use by associating a mailbox and calendaring capabilities.",
+   "options": [
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-password",
+   "description": "Allows the administrator to reset the password for a user.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-mailbox-export-job",
+   "description": "Starts a mailbox export job to export MIME-format email messages and calendar items from the specified mailbox to the specified Amazon Simple Storage Service (Amazon S3) bucket.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-prefix",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Applies the specified tags to the specified WorkMailorganization resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-availability-configuration",
+   "description": "Performs a test on an availability provider to ensure that access is allowed.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    },
+    {
+     "name": "--ews-provider",
+     "args": {}
+    },
+    {
+     "name": "--lambda-provider",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Untags the specified tags from the specified WorkMail organization resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-availability-configuration",
+   "description": "Updates an existing AvailabilityConfiguration for the given WorkMail organization and domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ews-provider",
+     "args": {}
+    },
+    {
+     "name": "--lambda-provider",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-default-mail-domain",
+   "description": "Updates the default mail domain for an organization.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-group",
+   "description": "Updates attributes in a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hidden-from-global-address-list"
+    },
+    {
+     "name": "--no-hidden-from-global-address-list"
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-impersonation-role",
+   "description": "Updates an impersonation role for the given WorkMail organization.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--impersonation-role-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "FULL_ACCESS",
+       "READ_ONLY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-mailbox-quota",
+   "description": "Updates a user's current mailbox quota for a specified organization and user.",
+   "options": [
+    {
+     "name": "--mailbox-quota",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-mobile-device-access-rule",
+   "description": "Updates a mobile device access rule for the specified WorkMail organization.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--device-models",
+     "args": {}
+    },
+    {
+     "name": "--device-operating-systems",
+     "args": {}
+    },
+    {
+     "name": "--device-types",
+     "args": {}
+    },
+    {
+     "name": "--device-user-agents",
+     "args": {}
+    },
+    {
+     "name": "--effect",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "DENY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--mobile-device-access-rule-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--not-device-models",
+     "args": {}
+    },
+    {
+     "name": "--not-device-operating-systems",
+     "args": {}
+    },
+    {
+     "name": "--not-device-types",
+     "args": {}
+    },
+    {
+     "name": "--not-device-user-agents",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-primary-email-address",
+   "description": "Updates the primary email for a user, group, or resource.",
+   "options": [
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-resource",
+   "description": "Updates data for the resource.",
+   "options": [
+    {
+     "name": "--booking-options",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--hidden-from-global-address-list"
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-hidden-from-global-address-list"
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ROOM",
+       "EQUIPMENT"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-user",
+   "description": "Updates data for the user.",
+   "options": [
+    {
+     "name": "--city",
+     "args": {}
+    },
+    {
+     "name": "--company",
+     "args": {}
+    },
+    {
+     "name": "--country",
+     "args": {}
+    },
+    {
+     "name": "--department",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--first-name",
+     "args": {}
+    },
+    {
+     "name": "--hidden-from-global-address-list"
+    },
+    {
+     "name": "--identity-provider-user-id",
+     "args": {}
+    },
+    {
+     "name": "--initials",
+     "args": {}
+    },
+    {
+     "name": "--job-title",
+     "args": {}
+    },
+    {
+     "name": "--last-name",
+     "args": {}
+    },
+    {
+     "name": "--no-hidden-from-global-address-list"
+    },
+    {
+     "name": "--office",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "USER",
+       "RESOURCE",
+       "SYSTEM_USER",
+       "REMOTE_USER"
+      ]
+     }
+    },
+    {
+     "name": "--street",
+     "args": {}
+    },
+    {
+     "name": "--telephone",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--zip-code",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

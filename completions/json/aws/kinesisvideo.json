@@ -1,0 +1,627 @@
+{
+ "name": "kinesisvideo",
+ "subcommands": [
+  {
+   "name": "create-signaling-channel",
+   "description": "Creates a signaling channel.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-type",
+     "args": {
+      "suggestions": [
+       "SINGLE_MASTER",
+       "FULL_MESH"
+      ]
+     }
+    },
+    {
+     "name": "--single-master-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-stream",
+   "description": "Creates a new Kinesis video stream.",
+   "options": [
+    {
+     "name": "--data-retention-in-hours",
+     "args": {}
+    },
+    {
+     "name": "--device-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--media-type",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-storage-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-edge-configuration",
+   "description": "An asynchronous API that deletes a stream\u2019s existing edge configuration, as well as the corresponding media from the Edge Agent.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-signaling-channel",
+   "description": "Deletes a specified signaling channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-stream",
+   "description": "Deletes a Kinesis video stream and the data contained in the stream.",
+   "options": [
+    {
+     "name": "--current-version",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-edge-configuration",
+   "description": "Describes a stream\u2019s edge configuration that was set using the StartEdgeConfigurationUpdate API and the latest status of the edge agent's recorder and uploader jobs.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-image-generation-configuration",
+   "description": "Gets the ImageGenerationConfiguration for a given Kinesis video stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-mapped-resource-configuration",
+   "description": "Returns the most current information about the stream.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-media-storage-configuration",
+   "description": "Returns the most current information about the channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {}
+    },
+    {
+     "name": "--channel-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-notification-configuration",
+   "description": "Gets the NotificationConfiguration for a given Kinesis video stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-signaling-channel",
+   "description": "Returns the most current information about the signaling channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {}
+    },
+    {
+     "name": "--channel-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-stream",
+   "description": "Returns the most current information about the specified stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-stream-storage-configuration",
+   "description": "Retrieves the current storage configuration for the specified Kinesis video stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-data-endpoint",
+   "description": "Gets an endpoint for a specified stream for either reading or writing.",
+   "options": [
+    {
+     "name": "--api-name",
+     "args": {
+      "suggestions": [
+       "PUT_MEDIA",
+       "GET_MEDIA",
+       "LIST_FRAGMENTS",
+       "GET_MEDIA_FOR_FRAGMENT_LIST",
+       "GET_HLS_STREAMING_SESSION_URL",
+       "GET_DASH_STREAMING_SESSION_URL",
+       "GET_CLIP",
+       "GET_IMAGES"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-signaling-channel-endpoint",
+   "description": "Provides an endpoint for the specified signaling channel to send and receive messages.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--single-master-channel-endpoint-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-edge-agent-configurations",
+   "description": "Returns an array of edge configurations associated with the specified Edge Agent.",
+   "options": [
+    {
+     "name": "--hub-device-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-signaling-channels",
+   "description": "Returns an array of ChannelInfo objects.",
+   "options": [
+    {
+     "name": "--channel-name-condition",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-streams",
+   "description": "Returns an array of StreamInfo objects.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-name-condition",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags associated with the specified signaling channel.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-stream",
+   "description": "Returns a list of tags associated with the specified stream.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-edge-configuration-update",
+   "description": "An asynchronous API that updates a stream\u2019s existing edge configuration.",
+   "options": [
+    {
+     "name": "--edge-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to a signaling channel.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-stream",
+   "description": "Adds one or more tags to a stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from a signaling channel.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-key-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-stream",
+   "description": "Removes one or more tags from a stream.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    },
+    {
+     "name": "--tag-key-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-retention",
+   "description": "Increases or decreases the stream's data retention period by the value that you specify.",
+   "options": [
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-retention-change-in-hours",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operation",
+     "args": {
+      "suggestions": [
+       "INCREASE_DATA_RETENTION",
+       "DECREASE_DATA_RETENTION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-image-generation-configuration",
+   "description": "Updates the StreamInfo and ImageProcessingConfiguration fields.",
+   "options": [
+    {
+     "name": "--image-generation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-media-storage-configuration",
+   "description": "Associates a SignalingChannel to a stream to store the media.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-storage-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-notification-configuration",
+   "description": "Updates the notification information for a stream.",
+   "options": [
+    {
+     "name": "--notification-configuration",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-signaling-channel",
+   "description": "Updates the existing signaling channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--single-master-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-stream",
+   "description": "Updates stream metadata, such as the device name and media type.",
+   "options": [
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-name",
+     "args": {}
+    },
+    {
+     "name": "--media-type",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-stream-storage-configuration",
+   "description": "Updates the storage configuration for an existing Kinesis video stream.",
+   "options": [
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-name",
+     "args": {}
+    },
+    {
+     "name": "--stream-storage-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

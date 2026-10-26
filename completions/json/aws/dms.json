@@ -1,0 +1,3486 @@
+{
+ "name": "dms",
+ "description": "Database Migration Service Database Migration Service (DMS) can migrate your data to and from the most widely used commercial and open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL, and SAP Adaptive Server Enterprise (ASE).",
+ "subcommands": [
+  {
+   "name": "add-tags-to-resource",
+   "description": "Adds metadata tags to an DMS resource, including replication instance, endpoint, subnet group, and migration task.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "apply-pending-maintenance-action",
+   "description": "Applies a pending maintenance action to a resource (for example, to a replication instance).",
+   "options": [
+    {
+     "name": "--apply-action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--opt-in-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-start-recommendations",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-metadata-model-conversion",
+   "description": "Cancels a single metadata model conversion operation that was started with StartMetadataModelConversion.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-metadata-model-creation",
+   "description": "Cancels a single metadata model creation operation that was started with StartMetadataModelCreation.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-replication-task-assessment-run",
+   "description": "Cancels a single premigration assessment run.",
+   "options": [
+    {
+     "name": "--replication-task-assessment-run-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-migration",
+   "description": "Creates a data migration using the provided settings.",
+   "options": [
+    {
+     "name": "--data-migration-name",
+     "args": {}
+    },
+    {
+     "name": "--data-migration-type",
+     "args": {
+      "suggestions": [
+       "full-load",
+       "cdc",
+       "full-load-and-cdc"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--enable-cloudwatch-logs"
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enable-cloudwatch-logs"
+    },
+    {
+     "name": "--number-of-jobs",
+     "args": {}
+    },
+    {
+     "name": "--selection-rules",
+     "args": {}
+    },
+    {
+     "name": "--service-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-data-settings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-data-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-provider",
+   "description": "Creates a data provider using the provided settings.",
+   "options": [
+    {
+     "name": "--data-provider-name",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-virtual"
+    },
+    {
+     "name": "--settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--virtual"
+    }
+   ]
+  },
+  {
+   "name": "create-endpoint",
+   "description": "Creates an endpoint using the provided settings.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--dms-transfer-settings",
+     "args": {}
+    },
+    {
+     "name": "--doc-db-settings",
+     "args": {}
+    },
+    {
+     "name": "--dynamo-db-settings",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-settings",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {
+      "suggestions": [
+       "source",
+       "target"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--engine-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--external-table-definition",
+     "args": {}
+    },
+    {
+     "name": "--extra-connection-attributes",
+     "args": {}
+    },
+    {
+     "name": "--gcp-my-sql-settings",
+     "args": {}
+    },
+    {
+     "name": "--ibm-db2-settings",
+     "args": {}
+    },
+    {
+     "name": "--kafka-settings",
+     "args": {}
+    },
+    {
+     "name": "--kinesis-settings",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--microsoft-sql-server-settings",
+     "args": {}
+    },
+    {
+     "name": "--mongo-db-settings",
+     "args": {}
+    },
+    {
+     "name": "--my-sql-settings",
+     "args": {}
+    },
+    {
+     "name": "--neptune-settings",
+     "args": {}
+    },
+    {
+     "name": "--oracle-settings",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--postgre-sql-settings",
+     "args": {}
+    },
+    {
+     "name": "--redis-settings",
+     "args": {}
+    },
+    {
+     "name": "--redshift-settings",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--s3-settings",
+     "args": {}
+    },
+    {
+     "name": "--server-name",
+     "args": {}
+    },
+    {
+     "name": "--service-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--ssl-mode",
+     "args": {
+      "suggestions": [
+       "none",
+       "require",
+       "verify-ca",
+       "verify-full"
+      ]
+     }
+    },
+    {
+     "name": "--sybase-settings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timestream-settings",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-subscription",
+   "description": "Creates an DMS event notification subscription.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--event-categories",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-ids",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {}
+    },
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-fleet-advisor-collector",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--collector-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-access-role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-instance-profile",
+   "description": "Creates the instance profile using the specified parameters.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--instance-profile-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--subnet-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-groups",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-migration-project",
+   "description": "Creates the migration project using the specified parameters.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--instance-profile-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--migration-project-name",
+     "args": {}
+    },
+    {
+     "name": "--schema-conversion-application-attributes",
+     "args": {}
+    },
+    {
+     "name": "--source-data-provider-descriptors",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-data-provider-descriptors",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transformation-rules",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-replication-config",
+   "description": "Creates a configuration that you can later provide to configure and start an DMS Serverless replication.",
+   "options": [
+    {
+     "name": "--compute-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-config-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-settings",
+     "args": {}
+    },
+    {
+     "name": "--replication-type",
+     "args": {
+      "suggestions": [
+       "full-load",
+       "cdc",
+       "full-load-and-cdc"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--supplemental-settings",
+     "args": {}
+    },
+    {
+     "name": "--table-mappings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-replication-instance",
+   "description": "Creates the replication instance using the specified parameters.",
+   "options": [
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--dns-name-servers",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-authentication-settings",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--replication-instance-class",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-subnet-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-replication-subnet-group",
+   "description": "Creates a replication subnet group given a list of the subnet IDs in a VPC.",
+   "options": [
+    {
+     "name": "--replication-subnet-group-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-subnet-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-replication-task",
+   "description": "Creates a replication task using the specified parameters.",
+   "options": [
+    {
+     "name": "--cdc-start-position",
+     "args": {}
+    },
+    {
+     "name": "--cdc-start-time",
+     "args": {}
+    },
+    {
+     "name": "--cdc-stop-position",
+     "args": {}
+    },
+    {
+     "name": "--migration-type",
+     "args": {
+      "suggestions": [
+       "full-load",
+       "cdc",
+       "full-load-and-cdc"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-task-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-task-settings",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-mappings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-certificate",
+   "description": "Deletes the specified certificate.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connection",
+   "description": "Deletes the connection between a replication instance and an endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-migration",
+   "description": "Deletes the specified data migration.",
+   "options": [
+    {
+     "name": "--data-migration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-provider",
+   "description": "Deletes the specified data provider.",
+   "options": [
+    {
+     "name": "--data-provider-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-endpoint",
+   "description": "Deletes the specified endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-subscription",
+   "description": "Deletes an DMS event subscription.",
+   "options": [
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-fleet-advisor-collector",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--collector-referenced-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-fleet-advisor-databases",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--database-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-instance-profile",
+   "description": "Deletes the specified instance profile.",
+   "options": [
+    {
+     "name": "--instance-profile-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-migration-project",
+   "description": "Deletes the specified migration project.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-config",
+   "description": "Deletes an DMS Serverless replication configuration.",
+   "options": [
+    {
+     "name": "--replication-config-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-instance",
+   "description": "Deletes the specified replication instance.",
+   "options": [
+    {
+     "name": "--replication-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-subnet-group",
+   "description": "Deletes a subnet group.",
+   "options": [
+    {
+     "name": "--replication-subnet-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-task",
+   "description": "Deletes the specified replication task.",
+   "options": [
+    {
+     "name": "--replication-task-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-task-assessment-run",
+   "description": "Deletes the record of a single premigration assessment run.",
+   "options": [
+    {
+     "name": "--replication-task-assessment-run-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-account-attributes",
+   "description": "Lists all of the DMS attributes for a customer account."
+  },
+  {
+   "name": "describe-applicable-individual-assessments",
+   "description": "Provides a list of individual assessments that you can specify for a new premigration assessment run, given one or more parameters.",
+   "options": [
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--migration-type",
+     "args": {
+      "suggestions": [
+       "full-load",
+       "cdc",
+       "full-load-and-cdc"
+      ]
+     }
+    },
+    {
+     "name": "--replication-config-arn",
+     "args": {}
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--replication-task-arn",
+     "args": {}
+    },
+    {
+     "name": "--source-engine-name",
+     "args": {}
+    },
+    {
+     "name": "--target-engine-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-certificates",
+   "description": "Provides a description of the certificate.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-connections",
+   "description": "Describes the status of the connections that have been made between the replication instance and an endpoint.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-conversion-configuration",
+   "description": "Returns configuration parameters for a schema conversion project.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-data-migrations",
+   "description": "Returns information about data migrations.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-without-settings"
+    },
+    {
+     "name": "--no-without-statistics"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--without-settings"
+    },
+    {
+     "name": "--without-statistics"
+    }
+   ]
+  },
+  {
+   "name": "describe-data-providers",
+   "description": "Returns a paginated list of data providers for your account in the current region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoint-settings",
+   "description": "Returns information about the possible endpoint settings available when you create an endpoint for a specific database engine.",
+   "options": [
+    {
+     "name": "--engine-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoint-types",
+   "description": "Returns information about the type of endpoints available.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoints",
+   "description": "Returns information about the endpoints for your account in the current region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-engine-versions",
+   "description": "Returns information about the replication instance versions used in the project.",
+   "options": [
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-event-categories",
+   "description": "Lists categories for all event source types, or, if specified, for a specified source type.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-event-subscriptions",
+   "description": "Lists all the event subscriptions for a customer account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subscription-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-events",
+   "description": "Lists events for a given source identifier and source type.",
+   "options": [
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--event-categories",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "replication-instance"
+      ]
+     }
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-extension-pack-associations",
+   "description": "Returns a paginated list of extension pack installation requests for a migration project, initiated by StartExtensionPackAssociation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-advisor-collectors",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-advisor-databases",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-advisor-lsa-analysis",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-advisor-schema-object-summary",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-fleet-advisor-schemas",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-instance-profiles",
+   "description": "Returns a paginated list of instance profiles for your account in the current region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-metadata-model",
+   "description": "Gets detailed information about the specified metadata model, including its definition and corresponding converted objects in the target database if applicable.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin",
+     "args": {
+      "suggestions": [
+       "SOURCE",
+       "TARGET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-metadata-model-assessments",
+   "description": "Returns a paginated list of metadata model assessment requests for a migration project, initiated by StartMetadataModelAssessment.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-metadata-model-children",
+   "description": "Gets a list of child metadata models for the specified metadata model in the database hierarchy.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin",
+     "args": {
+      "suggestions": [
+       "SOURCE",
+       "TARGET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-metadata-model-conversions",
+   "description": "Returns a paginated list of metadata model conversion requests for a migration project, initiated by StartMetadataModelConversion.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-metadata-model-creations",
+   "description": "Returns a paginated list of metadata model creation requests for a migration project, initiated by StartMetadataModelCreation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-metadata-model-exports-as-script",
+   "description": "Returns a paginated list of metadata model export requests for a migration project, initiated by StartMetadataModelExportAsScript.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-metadata-model-exports-to-target",
+   "description": "Returns a paginated list of metadata model export requests for a migration project, initiated by StartMetadataModelExportToTarget.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-metadata-model-imports",
+   "description": "Returns a paginated list of metadata model import requests for a migration project, initiated by StartMetadataModelImport.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-migration-projects",
+   "description": "Returns a paginated list of migration projects for your account in the current region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-orderable-replication-instances",
+   "description": "Returns information about the replication instance types that can be created in the specified region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-pending-maintenance-actions",
+   "description": "Returns a list of upcoming maintenance events for replication instances in your account in the current Region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-recommendation-limitations",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-recommendations",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-refresh-schemas-status",
+   "description": "Returns the status of the RefreshSchemas operation.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-configs",
+   "description": "Returns one or more existing DMS Serverless replication configurations as a list of structures.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-instance-task-logs",
+   "description": "Returns information about the task logs for the specified task.",
+   "options": [
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-instances",
+   "description": "Returns information about replication instances for your account in the current region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-subnet-groups",
+   "description": "Returns information about the replication subnet groups.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-table-statistics",
+   "description": "Returns table and schema statistics for one or more provisioned replications that use a given DMS Serverless replication configuration.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--replication-config-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-task-assessment-results",
+   "description": "Returns the task assessment results from the Amazon S3 bucket that DMS creates in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--replication-task-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-task-assessment-runs",
+   "description": "Returns a paginated list of premigration assessment runs based on filter settings.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-task-individual-assessments",
+   "description": "Returns a paginated list of individual assessments based on filter settings.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-tasks",
+   "description": "Returns information about replication tasks for your account in the current region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-without-settings"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--without-settings"
+    }
+   ]
+  },
+  {
+   "name": "describe-replications",
+   "description": "Provides details on replication progress by returning status information for one or more provisioned DMS Serverless replications.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-schemas",
+   "description": "Returns information about the schema for the specified endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-table-statistics",
+   "description": "Returns table statistics on the database migration task, including table name, rows inserted, rows updated, and rows deleted.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--replication-task-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "export-metadata-model-assessment",
+   "description": "Saves a copy of a database migration assessment report to your Amazon S3 bucket.",
+   "options": [
+    {
+     "name": "--assessment-report-types",
+     "args": {}
+    },
+    {
+     "name": "--file-name",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-target-selection-rules",
+   "description": "Converts source selection rules into their target counterparts for schema conversion operations.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-certificate",
+   "description": "Uploads the specified certificate.",
+   "options": [
+    {
+     "name": "--certificate-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-pem",
+     "args": {}
+    },
+    {
+     "name": "--certificate-wallet",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, subnet group, and migration task.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-conversion-configuration",
+   "description": "Modifies the specified schema conversion configuration using the provided parameters.",
+   "options": [
+    {
+     "name": "--conversion-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-data-migration",
+   "description": "Modifies an existing DMS data migration.",
+   "options": [
+    {
+     "name": "--data-migration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-migration-name",
+     "args": {}
+    },
+    {
+     "name": "--data-migration-type",
+     "args": {
+      "suggestions": [
+       "full-load",
+       "cdc",
+       "full-load-and-cdc"
+      ]
+     }
+    },
+    {
+     "name": "--enable-cloudwatch-logs"
+    },
+    {
+     "name": "--no-enable-cloudwatch-logs"
+    },
+    {
+     "name": "--number-of-jobs",
+     "args": {}
+    },
+    {
+     "name": "--selection-rules",
+     "args": {}
+    },
+    {
+     "name": "--service-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--source-data-settings",
+     "args": {}
+    },
+    {
+     "name": "--target-data-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-data-provider",
+   "description": "Modifies the specified data provider using the provided settings.",
+   "options": [
+    {
+     "name": "--data-provider-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-provider-name",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--exact-settings"
+    },
+    {
+     "name": "--no-exact-settings"
+    },
+    {
+     "name": "--no-virtual"
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--virtual"
+    }
+   ]
+  },
+  {
+   "name": "modify-endpoint",
+   "description": "Modifies the specified endpoint.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--dms-transfer-settings",
+     "args": {}
+    },
+    {
+     "name": "--doc-db-settings",
+     "args": {}
+    },
+    {
+     "name": "--dynamo-db-settings",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-settings",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-identifier",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {
+      "suggestions": [
+       "source",
+       "target"
+      ]
+     }
+    },
+    {
+     "name": "--engine-name",
+     "args": {}
+    },
+    {
+     "name": "--exact-settings"
+    },
+    {
+     "name": "--external-table-definition",
+     "args": {}
+    },
+    {
+     "name": "--extra-connection-attributes",
+     "args": {}
+    },
+    {
+     "name": "--gcp-my-sql-settings",
+     "args": {}
+    },
+    {
+     "name": "--ibm-db2-settings",
+     "args": {}
+    },
+    {
+     "name": "--kafka-settings",
+     "args": {}
+    },
+    {
+     "name": "--kinesis-settings",
+     "args": {}
+    },
+    {
+     "name": "--microsoft-sql-server-settings",
+     "args": {}
+    },
+    {
+     "name": "--mongo-db-settings",
+     "args": {}
+    },
+    {
+     "name": "--my-sql-settings",
+     "args": {}
+    },
+    {
+     "name": "--neptune-settings",
+     "args": {}
+    },
+    {
+     "name": "--no-exact-settings"
+    },
+    {
+     "name": "--oracle-settings",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--postgre-sql-settings",
+     "args": {}
+    },
+    {
+     "name": "--redis-settings",
+     "args": {}
+    },
+    {
+     "name": "--redshift-settings",
+     "args": {}
+    },
+    {
+     "name": "--s3-settings",
+     "args": {}
+    },
+    {
+     "name": "--server-name",
+     "args": {}
+    },
+    {
+     "name": "--service-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--ssl-mode",
+     "args": {
+      "suggestions": [
+       "none",
+       "require",
+       "verify-ca",
+       "verify-full"
+      ]
+     }
+    },
+    {
+     "name": "--sybase-settings",
+     "args": {}
+    },
+    {
+     "name": "--timestream-settings",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-event-subscription",
+   "description": "Modifies an existing DMS event notification subscription.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--event-categories",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {}
+    },
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-instance-profile",
+   "description": "Modifies the specified instance profile using the provided parameters.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--instance-profile-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-profile-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--subnet-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-groups",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-migration-project",
+   "description": "Modifies the specified migration project using the provided parameters.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--instance-profile-identifier",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--migration-project-name",
+     "args": {}
+    },
+    {
+     "name": "--schema-conversion-application-attributes",
+     "args": {}
+    },
+    {
+     "name": "--source-data-provider-descriptors",
+     "args": {}
+    },
+    {
+     "name": "--target-data-provider-descriptors",
+     "args": {}
+    },
+    {
+     "name": "--transformation-rules",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-replication-config",
+   "description": "Modifies an existing DMS Serverless replication configuration that you can use to start a replication.",
+   "options": [
+    {
+     "name": "--compute-config",
+     "args": {}
+    },
+    {
+     "name": "--replication-config-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-config-identifier",
+     "args": {}
+    },
+    {
+     "name": "--replication-settings",
+     "args": {}
+    },
+    {
+     "name": "--replication-type",
+     "args": {
+      "suggestions": [
+       "full-load",
+       "cdc",
+       "full-load-and-cdc"
+      ]
+     }
+    },
+    {
+     "name": "--source-endpoint-arn",
+     "args": {}
+    },
+    {
+     "name": "--supplemental-settings",
+     "args": {}
+    },
+    {
+     "name": "--table-mappings",
+     "args": {}
+    },
+    {
+     "name": "--target-endpoint-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-replication-instance",
+   "description": "Modifies the replication instance to apply new settings.",
+   "options": [
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--allow-major-version-upgrade"
+    },
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-authentication-settings",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-major-version-upgrade"
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--replication-instance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-replication-subnet-group",
+   "description": "Modifies the settings for the specified replication subnet group.",
+   "options": [
+    {
+     "name": "--replication-subnet-group-description",
+     "args": {}
+    },
+    {
+     "name": "--replication-subnet-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-replication-task",
+   "description": "Modifies the specified replication task.",
+   "options": [
+    {
+     "name": "--cdc-start-position",
+     "args": {}
+    },
+    {
+     "name": "--cdc-start-time",
+     "args": {}
+    },
+    {
+     "name": "--cdc-stop-position",
+     "args": {}
+    },
+    {
+     "name": "--migration-type",
+     "args": {
+      "suggestions": [
+       "full-load",
+       "cdc",
+       "full-load-and-cdc"
+      ]
+     }
+    },
+    {
+     "name": "--replication-task-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-task-identifier",
+     "args": {}
+    },
+    {
+     "name": "--replication-task-settings",
+     "args": {}
+    },
+    {
+     "name": "--table-mappings",
+     "args": {}
+    },
+    {
+     "name": "--task-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "move-replication-task",
+   "description": "Moves a replication task from its current replication instance to a different target replication instance using the specified parameters.",
+   "options": [
+    {
+     "name": "--replication-task-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-replication-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reboot-replication-instance",
+   "description": "Reboots a replication instance.",
+   "options": [
+    {
+     "name": "--force-failover"
+    },
+    {
+     "name": "--force-planned-failover"
+    },
+    {
+     "name": "--no-force-failover"
+    },
+    {
+     "name": "--no-force-planned-failover"
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "refresh-schemas",
+   "description": "Populates the schema for the specified endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reload-replication-tables",
+   "description": "Reloads the target database table with the source data for a given DMS Serverless replication configuration.",
+   "options": [
+    {
+     "name": "--reload-option",
+     "args": {
+      "suggestions": [
+       "data-reload",
+       "validate-only"
+      ]
+     }
+    },
+    {
+     "name": "--replication-config-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tables-to-reload",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reload-tables",
+   "description": "Reloads the target database table with the source data.",
+   "options": [
+    {
+     "name": "--reload-option",
+     "args": {
+      "suggestions": [
+       "data-reload",
+       "validate-only"
+      ]
+     }
+    },
+    {
+     "name": "--replication-task-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tables-to-reload",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-resource",
+   "description": "Removes metadata tags from an DMS resource, including replication instance, endpoint, subnet group, and migration task.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "run-fleet-advisor-lsa-analysis",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;."
+  },
+  {
+   "name": "start-data-migration",
+   "description": "Starts the specified data migration.",
+   "options": [
+    {
+     "name": "--data-migration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-type",
+     "args": {
+      "suggestions": [
+       "reload-target",
+       "resume-processing",
+       "start-replication"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-extension-pack-association",
+   "description": "Queues the installation of the extension pack on your target database.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-metadata-model-assessment",
+   "description": "Queues an assessment of the selected source metadata models (database objects such as tables, views, and procedures) to evaluate conversion complexity to the target database format.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-metadata-model-conversion",
+   "description": "Queues a conversion of the selected source metadata models (database objects such as tables, views, and procedures) to the target database format.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-metadata-model-creation",
+   "description": "Queues the creation of a metadata model in the source metadata tree.",
+   "options": [
+    {
+     "name": "--metadata-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--properties",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-metadata-model-export-as-script",
+   "description": "Queues an export of metadata models (database objects such as tables, views, and procedures) as a data definition language (DDL) script.",
+   "options": [
+    {
+     "name": "--file-name",
+     "args": {}
+    },
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin",
+     "args": {
+      "suggestions": [
+       "SOURCE",
+       "TARGET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-metadata-model-export-to-target",
+   "description": "Queues an export of the selected converted metadata models (database objects such as tables, views, and procedures) to your target database.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-overwrite-extension-pack"
+    },
+    {
+     "name": "--overwrite-extension-pack"
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-metadata-model-import",
+   "description": "Queues an import of metadata models (database objects such as tables, views, and procedures) from your data provider into the metadata tree.",
+   "options": [
+    {
+     "name": "--migration-project-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-refresh"
+    },
+    {
+     "name": "--origin",
+     "args": {
+      "suggestions": [
+       "SOURCE",
+       "TARGET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--refresh"
+    },
+    {
+     "name": "--selection-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-recommendations",
+   "description": "End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;.",
+   "options": [
+    {
+     "name": "--database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-replication",
+   "description": "For a given DMS Serverless replication configuration, DMS connects to the source endpoint and collects the metadata to analyze the replication workload.",
+   "options": [
+    {
+     "name": "--cdc-start-position",
+     "args": {}
+    },
+    {
+     "name": "--cdc-start-time",
+     "args": {}
+    },
+    {
+     "name": "--cdc-stop-position",
+     "args": {}
+    },
+    {
+     "name": "--premigration-assessment-settings",
+     "args": {}
+    },
+    {
+     "name": "--replication-config-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-replication-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-replication-task",
+   "description": "Starts the replication task.",
+   "options": [
+    {
+     "name": "--cdc-start-position",
+     "args": {}
+    },
+    {
+     "name": "--cdc-start-time",
+     "args": {}
+    },
+    {
+     "name": "--cdc-stop-position",
+     "args": {}
+    },
+    {
+     "name": "--replication-task-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-replication-task-type",
+     "args": {
+      "suggestions": [
+       "start-replication",
+       "resume-processing",
+       "reload-target"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-replication-task-assessment",
+   "description": "Starts the replication task assessment for unsupported data types in the source database.",
+   "options": [
+    {
+     "name": "--replication-task-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-replication-task-assessment-run",
+   "description": "Starts a new premigration assessment run for one or more individual assessments of a migration task.",
+   "options": [
+    {
+     "name": "--assessment-run-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exclude",
+     "args": {}
+    },
+    {
+     "name": "--include-only",
+     "args": {}
+    },
+    {
+     "name": "--replication-task-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--result-encryption-mode",
+     "args": {}
+    },
+    {
+     "name": "--result-kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--result-location-bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--result-location-folder",
+     "args": {}
+    },
+    {
+     "name": "--service-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-data-migration",
+   "description": "Stops the specified data migration.",
+   "options": [
+    {
+     "name": "--data-migration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-replication",
+   "description": "For a given DMS Serverless replication configuration, DMS stops any and all ongoing DMS Serverless replications.",
+   "options": [
+    {
+     "name": "--replication-config-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-replication-task",
+   "description": "Stops the replication task.",
+   "options": [
+    {
+     "name": "--replication-task-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-connection",
+   "description": "Tests the connection between the replication instance and the endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-subscriptions-to-event-bridge",
+   "description": "Migrates 10 active and enabled Amazon SNS subscriptions at a time and converts them to corresponding Amazon EventBridge rules.",
+   "options": [
+    {
+     "name": "--force-move"
+    },
+    {
+     "name": "--no-force-move"
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "endpoint-deleted",
+     "description": "Wait until testing endpoint is deleted.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "extension-pack-associated",
+     "description": "Wait until DMS extension pack is associated.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--marker",
+       "args": {}
+      },
+      {
+       "name": "--max-records",
+       "args": {}
+      },
+      {
+       "name": "--migration-project-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "metadata-model-assessed",
+     "description": "Wait until DMS metadata model is assessed.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--marker",
+       "args": {}
+      },
+      {
+       "name": "--max-records",
+       "args": {}
+      },
+      {
+       "name": "--migration-project-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "metadata-model-conversion-cancelled",
+     "description": "Wait until DMS metadata model conversion is cancelled.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--marker",
+       "args": {}
+      },
+      {
+       "name": "--max-records",
+       "args": {}
+      },
+      {
+       "name": "--migration-project-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "metadata-model-converted",
+     "description": "Wait until DMS metadata model is converted.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--marker",
+       "args": {}
+      },
+      {
+       "name": "--max-records",
+       "args": {}
+      },
+      {
+       "name": "--migration-project-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "metadata-model-created",
+     "description": "Wait until DMS metadata model is created.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--migration-project-identifier",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "metadata-model-creation-cancelled",
+     "description": "Wait until DMS metadata model creation is cancelled.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--migration-project-identifier",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "metadata-model-exported-as-script",
+     "description": "Wait until DMS metadata model is exported as script.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--marker",
+       "args": {}
+      },
+      {
+       "name": "--max-records",
+       "args": {}
+      },
+      {
+       "name": "--migration-project-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "metadata-model-exported-to-target",
+     "description": "Wait until DMS metadata model is exported to target.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--marker",
+       "args": {}
+      },
+      {
+       "name": "--max-records",
+       "args": {}
+      },
+      {
+       "name": "--migration-project-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "metadata-model-imported",
+     "description": "Wait until DMS metadata model is imported.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--marker",
+       "args": {}
+      },
+      {
+       "name": "--max-records",
+       "args": {}
+      },
+      {
+       "name": "--migration-project-identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "replication-instance-available",
+     "description": "Wait until DMS replication instance is available.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "replication-instance-deleted",
+     "description": "Wait until DMS replication instance is deleted.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "replication-task-deleted",
+     "description": "Wait until DMS replication task is deleted.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-without-settings"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--without-settings"
+      }
+     ]
+    },
+    {
+     "name": "replication-task-ready",
+     "description": "Wait until DMS replication task is ready.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-without-settings"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--without-settings"
+      }
+     ]
+    },
+    {
+     "name": "replication-task-running",
+     "description": "Wait until DMS replication task is running.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-without-settings"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--without-settings"
+      }
+     ]
+    },
+    {
+     "name": "replication-task-stopped",
+     "description": "Wait until DMS replication task is stopped.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-without-settings"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--without-settings"
+      }
+     ]
+    },
+    {
+     "name": "test-connection-succeeds",
+     "description": "Wait until testing connection succeeds.",
+     "options": [
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

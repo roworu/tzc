@@ -1,0 +1,1274 @@
+{
+ "name": "forecast",
+ "description": "Provides APIs for creating and managing Amazon Forecast resources.",
+ "subcommands": [
+  {
+   "name": "create-auto-predictor",
+   "description": "Creates an Amazon Forecast predictor.",
+   "options": [
+    {
+     "name": "--data-config",
+     "args": {}
+    },
+    {
+     "name": "--encryption-config",
+     "args": {}
+    },
+    {
+     "name": "--explain-predictor"
+    },
+    {
+     "name": "--forecast-dimensions",
+     "args": {}
+    },
+    {
+     "name": "--forecast-frequency",
+     "args": {}
+    },
+    {
+     "name": "--forecast-horizon",
+     "args": {}
+    },
+    {
+     "name": "--forecast-types",
+     "args": {}
+    },
+    {
+     "name": "--monitor-config",
+     "args": {}
+    },
+    {
+     "name": "--no-explain-predictor"
+    },
+    {
+     "name": "--optimization-metric",
+     "args": {
+      "suggestions": [
+       "WAPE",
+       "RMSE",
+       "AverageWeightedQuantileLoss",
+       "MASE",
+       "MAPE"
+      ]
+     }
+    },
+    {
+     "name": "--predictor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reference-predictor-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--time-alignment-boundary",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset",
+   "description": "Creates an Amazon Forecast dataset.",
+   "options": [
+    {
+     "name": "--data-frequency",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-type",
+     "args": {
+      "suggestions": [
+       "TARGET_TIME_SERIES",
+       "RELATED_TIME_SERIES",
+       "ITEM_METADATA"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {
+      "suggestions": [
+       "RETAIL",
+       "CUSTOM",
+       "INVENTORY_PLANNING",
+       "EC2_CAPACITY",
+       "WORK_FORCE",
+       "WEB_TRAFFIC",
+       "METRICS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--encryption-config",
+     "args": {}
+    },
+    {
+     "name": "--schema",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset-group",
+   "description": "Creates a dataset group, which holds a collection of related datasets.",
+   "options": [
+    {
+     "name": "--dataset-arns",
+     "args": {}
+    },
+    {
+     "name": "--dataset-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {
+      "suggestions": [
+       "RETAIL",
+       "CUSTOM",
+       "INVENTORY_PLANNING",
+       "EC2_CAPACITY",
+       "WORK_FORCE",
+       "WEB_TRAFFIC",
+       "METRICS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset-import-job",
+   "description": "Imports your training data to an Amazon Forecast dataset.",
+   "options": [
+    {
+     "name": "--data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-import-job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {}
+    },
+    {
+     "name": "--geolocation-format",
+     "args": {}
+    },
+    {
+     "name": "--import-mode",
+     "args": {
+      "suggestions": [
+       "FULL",
+       "INCREMENTAL"
+      ]
+     }
+    },
+    {
+     "name": "--no-use-geolocation-for-time-zone"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--time-zone",
+     "args": {}
+    },
+    {
+     "name": "--timestamp-format",
+     "args": {}
+    },
+    {
+     "name": "--use-geolocation-for-time-zone"
+    }
+   ]
+  },
+  {
+   "name": "create-explainability",
+   "description": "Explainability is only available for Forecasts and Predictors generated from an AutoPredictor (CreateAutoPredictor) Creates an Amazon Forecast Explainability.",
+   "options": [
+    {
+     "name": "--data-source",
+     "args": {}
+    },
+    {
+     "name": "--enable-visualization"
+    },
+    {
+     "name": "--end-date-time",
+     "args": {}
+    },
+    {
+     "name": "--explainability-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--explainability-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enable-visualization"
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    },
+    {
+     "name": "--start-date-time",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-explainability-export",
+   "description": "Exports an Explainability resource created by the CreateExplainability operation.",
+   "options": [
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--explainability-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--explainability-export-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-forecast",
+   "description": "Creates a forecast for each item in the TARGET_TIME_SERIES dataset that was used to train the predictor.",
+   "options": [
+    {
+     "name": "--forecast-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--forecast-types",
+     "args": {}
+    },
+    {
+     "name": "--predictor-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--time-series-selector",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-forecast-export-job",
+   "description": "Exports a forecast created by the CreateForecast operation to your Amazon Simple Storage Service (Amazon S3) bucket.",
+   "options": [
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--forecast-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--forecast-export-job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-monitor",
+   "description": "Creates a predictor monitor resource for an existing auto predictor.",
+   "options": [
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-predictor",
+   "description": "This operation creates a legacy predictor that does not include all the predictor functionalities provided by Amazon Forecast.",
+   "options": [
+    {
+     "name": "--algorithm-arn",
+     "args": {}
+    },
+    {
+     "name": "--auto-ml-override-strategy",
+     "args": {
+      "suggestions": [
+       "LatencyOptimized",
+       "AccuracyOptimized"
+      ]
+     }
+    },
+    {
+     "name": "--encryption-config",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-parameters",
+     "args": {}
+    },
+    {
+     "name": "--featurization-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--forecast-horizon",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--forecast-types",
+     "args": {}
+    },
+    {
+     "name": "--hpo-config",
+     "args": {}
+    },
+    {
+     "name": "--input-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-perform-auto-ml"
+    },
+    {
+     "name": "--no-perform-hpo"
+    },
+    {
+     "name": "--optimization-metric",
+     "args": {
+      "suggestions": [
+       "WAPE",
+       "RMSE",
+       "AverageWeightedQuantileLoss",
+       "MASE",
+       "MAPE"
+      ]
+     }
+    },
+    {
+     "name": "--perform-auto-ml"
+    },
+    {
+     "name": "--perform-hpo"
+    },
+    {
+     "name": "--predictor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--training-parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-predictor-backtest-export-job",
+   "description": "Exports backtest forecasts and accuracy metrics generated by the CreateAutoPredictor or CreatePredictor operations.",
+   "options": [
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {}
+    },
+    {
+     "name": "--predictor-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--predictor-backtest-export-job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-what-if-analysis",
+   "description": "What-if analysis is a scenario modeling technique where you make a hypothetical change to a time series and compare the forecasts generated by these changes against the baseline, unchanged time series.",
+   "options": [
+    {
+     "name": "--forecast-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--time-series-selector",
+     "args": {}
+    },
+    {
+     "name": "--what-if-analysis-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-what-if-forecast",
+   "description": "A what-if forecast is a forecast that is created from a modified version of the baseline forecast.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--time-series-replacements-data-source",
+     "args": {}
+    },
+    {
+     "name": "--time-series-transformations",
+     "args": {}
+    },
+    {
+     "name": "--what-if-analysis-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--what-if-forecast-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-what-if-forecast-export",
+   "description": "Exports a forecast created by the CreateWhatIfForecast operation to your Amazon Simple Storage Service (Amazon S3) bucket.",
+   "options": [
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--what-if-forecast-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--what-if-forecast-export-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset",
+   "description": "Deletes an Amazon Forecast dataset that was created using the CreateDataset operation.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset-group",
+   "description": "Deletes a dataset group created using the CreateDatasetGroup operation.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset-import-job",
+   "description": "Deletes a dataset import job created using the CreateDatasetImportJob operation.",
+   "options": [
+    {
+     "name": "--dataset-import-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-explainability",
+   "description": "Deletes an Explainability resource.",
+   "options": [
+    {
+     "name": "--explainability-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-explainability-export",
+   "description": "Deletes an Explainability export.",
+   "options": [
+    {
+     "name": "--explainability-export-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-forecast",
+   "description": "Deletes a forecast created using the CreateForecast operation.",
+   "options": [
+    {
+     "name": "--forecast-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-forecast-export-job",
+   "description": "Deletes a forecast export job created using the CreateForecastExportJob operation.",
+   "options": [
+    {
+     "name": "--forecast-export-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-monitor",
+   "description": "Deletes a monitor resource.",
+   "options": [
+    {
+     "name": "--monitor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-predictor",
+   "description": "Deletes a predictor created using the DescribePredictor or CreatePredictor operations.",
+   "options": [
+    {
+     "name": "--predictor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-predictor-backtest-export-job",
+   "description": "Deletes a predictor backtest export job.",
+   "options": [
+    {
+     "name": "--predictor-backtest-export-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-tree",
+   "description": "Deletes an entire resource tree.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-what-if-analysis",
+   "description": "Deletes a what-if analysis created using the CreateWhatIfAnalysis operation.",
+   "options": [
+    {
+     "name": "--what-if-analysis-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-what-if-forecast",
+   "description": "Deletes a what-if forecast created using the CreateWhatIfForecast operation.",
+   "options": [
+    {
+     "name": "--what-if-forecast-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-what-if-forecast-export",
+   "description": "Deletes a what-if forecast export created using the CreateWhatIfForecastExport operation.",
+   "options": [
+    {
+     "name": "--what-if-forecast-export-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-auto-predictor",
+   "description": "Describes a predictor created using the CreateAutoPredictor operation.",
+   "options": [
+    {
+     "name": "--predictor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset",
+   "description": "Describes an Amazon Forecast dataset created using the CreateDataset operation.",
+   "options": [
+    {
+     "name": "--dataset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset-group",
+   "description": "Describes a dataset group created using the CreateDatasetGroup operation.",
+   "options": [
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset-import-job",
+   "description": "Describes a dataset import job created using the CreateDatasetImportJob operation.",
+   "options": [
+    {
+     "name": "--dataset-import-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-explainability",
+   "description": "Describes an Explainability resource created using the CreateExplainability operation.",
+   "options": [
+    {
+     "name": "--explainability-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-explainability-export",
+   "description": "Describes an Explainability export created using the CreateExplainabilityExport operation.",
+   "options": [
+    {
+     "name": "--explainability-export-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-forecast",
+   "description": "Describes a forecast created using the CreateForecast operation.",
+   "options": [
+    {
+     "name": "--forecast-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-forecast-export-job",
+   "description": "Describes a forecast export job created using the CreateForecastExportJob operation.",
+   "options": [
+    {
+     "name": "--forecast-export-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-monitor",
+   "description": "Describes a monitor resource.",
+   "options": [
+    {
+     "name": "--monitor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-predictor",
+   "description": "This operation is only valid for legacy predictors created with CreatePredictor.",
+   "options": [
+    {
+     "name": "--predictor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-predictor-backtest-export-job",
+   "description": "Describes a predictor backtest export job created using the CreatePredictorBacktestExportJob operation.",
+   "options": [
+    {
+     "name": "--predictor-backtest-export-job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-what-if-analysis",
+   "description": "Describes the what-if analysis created using the CreateWhatIfAnalysis operation.",
+   "options": [
+    {
+     "name": "--what-if-analysis-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-what-if-forecast",
+   "description": "Describes the what-if forecast created using the CreateWhatIfForecast operation.",
+   "options": [
+    {
+     "name": "--what-if-forecast-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-what-if-forecast-export",
+   "description": "Describes the what-if forecast export created using the CreateWhatIfForecastExport operation.",
+   "options": [
+    {
+     "name": "--what-if-forecast-export-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-accuracy-metrics",
+   "description": "Provides metrics on the accuracy of the models that were trained by the CreatePredictor operation.",
+   "options": [
+    {
+     "name": "--predictor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-groups",
+   "description": "Returns a list of dataset groups created using the CreateDatasetGroup operation.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-import-jobs",
+   "description": "Returns a list of dataset import jobs created using the CreateDatasetImportJob operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-datasets",
+   "description": "Returns a list of datasets created using the CreateDataset operation.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-explainabilities",
+   "description": "Returns a list of Explainability resources created using the CreateExplainability operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-explainability-exports",
+   "description": "Returns a list of Explainability exports created using the CreateExplainabilityExport operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-forecast-export-jobs",
+   "description": "Returns a list of forecast export jobs created using the CreateForecastExportJob operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-forecasts",
+   "description": "Returns a list of forecasts created using the CreateForecast operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-monitor-evaluations",
+   "description": "Returns a list of the monitoring evaluation results and predictor events collected by the monitor resource during different windows of time.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--monitor-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-monitors",
+   "description": "Returns a list of monitors created with the CreateMonitor operation and CreateAutoPredictor operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-predictor-backtest-export-jobs",
+   "description": "Returns a list of predictor backtest export jobs created using the CreatePredictorBacktestExportJob operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-predictors",
+   "description": "Returns a list of predictors created using the CreateAutoPredictor or CreatePredictor operations.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for an Amazon Forecast resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-what-if-analyses",
+   "description": "Returns a list of what-if analyses created using the CreateWhatIfAnalysis operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-what-if-forecast-exports",
+   "description": "Returns a list of what-if forecast exports created using the CreateWhatIfForecastExport operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-what-if-forecasts",
+   "description": "Returns a list of what-if forecasts created using the CreateWhatIfForecast operation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "resume-resource",
+   "description": "Resumes a stopped monitor resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-resource",
+   "description": "Stops a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags to a resource with the specified resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes the specified tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dataset-group",
+   "description": "Replaces the datasets in a dataset group with the specified datasets.",
+   "options": [
+    {
+     "name": "--dataset-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

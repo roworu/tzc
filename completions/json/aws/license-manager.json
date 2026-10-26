@@ -1,0 +1,1494 @@
+{
+ "name": "license-manager",
+ "description": "License Manager makes it easier to manage licenses from software vendors across multiple Amazon Web Services accounts and on-premises servers.",
+ "subcommands": [
+  {
+   "name": "accept-grant",
+   "description": "Accepts the specified grant.",
+   "options": [
+    {
+     "name": "--grant-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "check-in-license",
+   "description": "Checks in the specified license.",
+   "options": [
+    {
+     "name": "--beneficiary",
+     "args": {}
+    },
+    {
+     "name": "--license-consumption-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "checkout-borrow-license",
+   "description": "Checks out the specified license for offline use.",
+   "options": [
+    {
+     "name": "--checkout-metadata",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--digital-signature-method",
+     "args": {
+      "suggestions": [
+       "JWT_PS384"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--entitlements",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "checkout-license",
+   "description": "Checks out the specified license.",
+   "options": [
+    {
+     "name": "--beneficiary",
+     "args": {}
+    },
+    {
+     "name": "--checkout-type",
+     "args": {
+      "suggestions": [
+       "PROVISIONAL",
+       "PERPETUAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entitlements",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-fingerprint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-id",
+     "args": {}
+    },
+    {
+     "name": "--product-sku",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-grant",
+   "description": "Creates a grant for the specified license.",
+   "options": [
+    {
+     "name": "--allowed-operations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grant-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--home-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principals",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-grant-version",
+   "description": "Creates a new version of the specified grant.",
+   "options": [
+    {
+     "name": "--allowed-operations",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grant-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grant-name",
+     "args": {}
+    },
+    {
+     "name": "--options",
+     "args": {}
+    },
+    {
+     "name": "--source-version",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING_WORKFLOW",
+       "PENDING_ACCEPT",
+       "REJECTED",
+       "ACTIVE",
+       "FAILED_WORKFLOW",
+       "DELETED",
+       "PENDING_DELETE",
+       "DISABLED",
+       "WORKFLOW_COMPLETED"
+      ]
+     }
+    },
+    {
+     "name": "--status-reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-license",
+   "description": "Creates a license.",
+   "options": [
+    {
+     "name": "--beneficiary",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--consumption-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entitlements",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--home-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--issuer",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-metadata",
+     "args": {}
+    },
+    {
+     "name": "--license-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-sku",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--validity",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-license-asset-group",
+   "description": "Creates a license asset group.",
+   "options": [
+    {
+     "name": "--associated-license-asset-ruleset-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--license-asset-group-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--properties",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-license-asset-ruleset",
+   "description": "Creates a license asset ruleset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-license-configuration",
+   "description": "Creates a license configuration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--disassociate-when-not-found"
+    },
+    {
+     "name": "--license-count",
+     "args": {}
+    },
+    {
+     "name": "--license-count-hard-limit"
+    },
+    {
+     "name": "--license-counting-type",
+     "args": {
+      "suggestions": [
+       "vCPU",
+       "Instance",
+       "Core",
+       "Socket"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--license-expiry",
+     "args": {}
+    },
+    {
+     "name": "--license-rules",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-disassociate-when-not-found"
+    },
+    {
+     "name": "--no-license-count-hard-limit"
+    },
+    {
+     "name": "--product-information-list",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-license-conversion-task-for-resource",
+   "description": "Creates a new license conversion task.",
+   "options": [
+    {
+     "name": "--destination-license-context",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-license-context",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-license-manager-report-generator",
+   "description": "Creates a report generator.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--report-context",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-frequency",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-generator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-license-version",
+   "description": "Creates a new version of the specified license.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--consumption-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entitlements",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--home-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--issuer",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-metadata",
+     "args": {}
+    },
+    {
+     "name": "--license-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-reset-usage"
+    },
+    {
+     "name": "--product-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reset-usage"
+    },
+    {
+     "name": "--source-version",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "AVAILABLE",
+       "PENDING_AVAILABLE",
+       "DEACTIVATED",
+       "SUSPENDED",
+       "EXPIRED",
+       "PENDING_DELETE",
+       "DELETED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--validity",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-token",
+   "description": "Creates a long-lived token.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expiration-in-days",
+     "args": {}
+    },
+    {
+     "name": "--license-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arns",
+     "args": {}
+    },
+    {
+     "name": "--token-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-grant",
+   "description": "Deletes the specified grant.",
+   "options": [
+    {
+     "name": "--grant-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grant-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status-reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-license",
+   "description": "Deletes the specified license.",
+   "options": [
+    {
+     "name": "--license-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-license-asset-group",
+   "description": "Deletes a license asset group.",
+   "options": [
+    {
+     "name": "--license-asset-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-license-asset-ruleset",
+   "description": "Deletes a license asset ruleset.",
+   "options": [
+    {
+     "name": "--license-asset-ruleset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-license-configuration",
+   "description": "Deletes the specified license configuration.",
+   "options": [
+    {
+     "name": "--license-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-license-manager-report-generator",
+   "description": "Deletes the specified report generator.",
+   "options": [
+    {
+     "name": "--license-manager-report-generator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-token",
+   "description": "Deletes the specified token.",
+   "options": [
+    {
+     "name": "--token-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "extend-license-consumption",
+   "description": "Extends the expiration date for license consumption.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--license-consumption-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "get-access-token",
+   "description": "Gets a temporary access token to use with AssumeRoleWithWebIdentity.",
+   "options": [
+    {
+     "name": "--token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--token-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-grant",
+   "description": "Gets detailed information about the specified grant.",
+   "options": [
+    {
+     "name": "--grant-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grant-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-license",
+   "description": "Gets detailed information about the specified license.",
+   "options": [
+    {
+     "name": "--license-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-license-asset-group",
+   "description": "Gets a license asset group.",
+   "options": [
+    {
+     "name": "--license-asset-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-license-asset-ruleset",
+   "description": "Gets a license asset ruleset.",
+   "options": [
+    {
+     "name": "--license-asset-ruleset-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-license-configuration",
+   "description": "Gets detailed information about the specified license configuration.",
+   "options": [
+    {
+     "name": "--license-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-license-conversion-task",
+   "description": "Gets information about the specified license type conversion task.",
+   "options": [
+    {
+     "name": "--license-conversion-task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-license-manager-report-generator",
+   "description": "Gets information about the specified report generator.",
+   "options": [
+    {
+     "name": "--license-manager-report-generator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-license-usage",
+   "description": "Gets detailed information about the usage of the specified license.",
+   "options": [
+    {
+     "name": "--license-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-settings",
+   "description": "Gets the License Manager settings for the current Region."
+  },
+  {
+   "name": "list-assets-for-license-asset-group",
+   "description": "Lists assets for a license asset group.",
+   "options": [
+    {
+     "name": "--asset-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-asset-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-associations-for-license-configuration",
+   "description": "Lists the resource associations for the specified license configuration.",
+   "options": [
+    {
+     "name": "--license-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-distributed-grants",
+   "description": "Lists the grants distributed for the specified license.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--grant-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-failures-for-license-configuration-operations",
+   "description": "Lists the license configuration operations that failed.",
+   "options": [
+    {
+     "name": "--license-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-license-asset-groups",
+   "description": "Lists license asset groups.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-license-asset-rulesets",
+   "description": "Lists license asset rulesets.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-show-aws-managed-license-asset-rulesets"
+    },
+    {
+     "name": "--show-aws-managed-license-asset-rulesets"
+    }
+   ]
+  },
+  {
+   "name": "list-license-configurations",
+   "description": "Lists the license configurations for your account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--license-configuration-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-license-configurations-for-organization",
+   "description": "Lists license configurations for an organization.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--license-configuration-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-license-conversion-tasks",
+   "description": "Lists the license type conversion tasks for your account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-license-manager-report-generators",
+   "description": "Lists the report generators for your account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-license-specifications-for-resource",
+   "description": "Describes the license configurations for the specified resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-license-versions",
+   "description": "Lists all versions of the specified license.",
+   "options": [
+    {
+     "name": "--license-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-licenses",
+   "description": "Lists the licenses for your account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--license-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-received-grants",
+   "description": "Lists grants that are received.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--grant-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-received-grants-for-organization",
+   "description": "Lists the grants received for all accounts in the organization.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--license-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-received-licenses",
+   "description": "Lists received licenses.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--license-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-received-licenses-for-organization",
+   "description": "Lists the licenses received for all accounts in the organization.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-inventory",
+   "description": "Lists resources managed using Systems Manager inventory.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tokens",
+   "description": "Lists your tokens.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--token-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-usage-for-license-configuration",
+   "description": "Lists all license usage records for a license configuration, displaying license consumption details by resource at a selected point in time.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--license-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reject-grant",
+   "description": "Rejects the specified grant.",
+   "options": [
+    {
+     "name": "--grant-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds the specified tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-license-asset-group",
+   "description": "Updates a license asset group.",
+   "options": [
+    {
+     "name": "--associated-license-asset-ruleset-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--license-asset-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-asset-group-configurations",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--properties",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DISABLED",
+       "DELETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-license-asset-ruleset",
+   "description": "Updates a license asset ruleset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--license-asset-ruleset-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-license-configuration",
+   "description": "Modifies the attributes of an existing license configuration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--disassociate-when-not-found"
+    },
+    {
+     "name": "--license-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-configuration-status",
+     "args": {
+      "suggestions": [
+       "AVAILABLE",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--license-count",
+     "args": {}
+    },
+    {
+     "name": "--license-count-hard-limit"
+    },
+    {
+     "name": "--license-expiry",
+     "args": {}
+    },
+    {
+     "name": "--license-rules",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-disassociate-when-not-found"
+    },
+    {
+     "name": "--no-license-count-hard-limit"
+    },
+    {
+     "name": "--product-information-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-license-manager-report-generator",
+   "description": "Updates a report generator.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--license-manager-report-generator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-context",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-frequency",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-generator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-license-specifications-for-resource",
+   "description": "Adds or removes the specified license configurations for the specified Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--add-license-specifications",
+     "args": {}
+    },
+    {
+     "name": "--remove-license-specifications",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-settings",
+   "description": "Updates License Manager settings for the current Region.",
+   "options": [
+    {
+     "name": "--enable-cross-accounts-discovery"
+    },
+    {
+     "name": "--enabled-discovery-source-regions",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-cross-accounts-discovery"
+    },
+    {
+     "name": "--organization-configuration",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

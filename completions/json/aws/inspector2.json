@@ -1,0 +1,1726 @@
+{
+ "name": "inspector2",
+ "description": "Amazon Inspector is a vulnerability discovery service that automates continuous scanning for security vulnerabilities within your Amazon EC2, Amazon ECR, and Amazon Web Services Lambda environments.",
+ "subcommands": [
+  {
+   "name": "associate-member",
+   "description": "Associates an Amazon Web Services account with an Amazon Inspector delegated administrator.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-associate-code-security-scan-configuration",
+   "description": "Associates multiple code repositories with an Amazon Inspector code security scan configuration.",
+   "options": [
+    {
+     "name": "--associate-configuration-requests",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-disassociate-code-security-scan-configuration",
+   "description": "Disassociates multiple code repositories from an Amazon Inspector code security scan configuration.",
+   "options": [
+    {
+     "name": "--disassociate-configuration-requests",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-account-status",
+   "description": "Retrieves the Amazon Inspector status of multiple Amazon Web Services accounts within your environment.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-get-code-snippet",
+   "description": "Retrieves code snippets from findings that Amazon Inspector detected code vulnerabilities in.",
+   "options": [
+    {
+     "name": "--finding-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-finding-details",
+   "description": "Gets vulnerability details for findings.",
+   "options": [
+    {
+     "name": "--finding-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-free-trial-info",
+   "description": "Gets free trial status for multiple Amazon Web Services accounts.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-member-ec2-deep-inspection-status",
+   "description": "Retrieves Amazon Inspector deep inspection activation status of multiple member accounts within your organization.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-update-member-ec2-deep-inspection-status",
+   "description": "Activates or deactivates Amazon Inspector deep inspection for the provided member accounts in your organization.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-findings-report",
+   "description": "Cancels the given findings report.",
+   "options": [
+    {
+     "name": "--report-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-sbom-export",
+   "description": "Cancels a software bill of materials (SBOM) report.",
+   "options": [
+    {
+     "name": "--report-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cis-scan-configuration",
+   "description": "Creates a CIS scan configuration.",
+   "options": [
+    {
+     "name": "--scan-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-level",
+     "args": {
+      "suggestions": [
+       "LEVEL_1",
+       "LEVEL_2"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-code-security-integration",
+   "description": "Creates a code security integration with a source code repository provider.",
+   "options": [
+    {
+     "name": "--details",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "GITLAB_SELF_MANAGED",
+       "GITHUB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-code-security-scan-configuration",
+   "description": "Creates a scan configuration for code security scanning.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--level",
+     "args": {
+      "suggestions": [
+       "ORGANIZATION",
+       "ACCOUNT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-settings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-connector",
+   "description": "Creates a connector that links an external cloud provider to Amazon Inspector for vulnerability scanning.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {
+      "suggestions": [
+       "AZURE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--provider-detail",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-filter",
+   "description": "Creates a filter resource using specified filter criteria.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "SUPPRESS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--filter-criteria",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-findings-report",
+   "description": "Creates a finding report.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--report-format",
+     "args": {
+      "suggestions": [
+       "CSV",
+       "JSON"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--s3-destination",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-sbom-export",
+   "description": "Creates a software bill of materials (SBOM) report.",
+   "options": [
+    {
+     "name": "--report-format",
+     "args": {
+      "suggestions": [
+       "CYCLONEDX_1_4",
+       "SPDX_2_3"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--s3-destination",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cis-scan-configuration",
+   "description": "Deletes a CIS scan configuration.",
+   "options": [
+    {
+     "name": "--scan-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-code-security-integration",
+   "description": "Deletes a code security integration.",
+   "options": [
+    {
+     "name": "--integration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-code-security-scan-configuration",
+   "description": "Deletes a code security scan configuration.",
+   "options": [
+    {
+     "name": "--scan-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connector",
+   "description": "Deletes a connector from your account.",
+   "options": [
+    {
+     "name": "--connector-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-filter",
+   "description": "Deletes a filter resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-configuration",
+   "description": "Describe Amazon Inspector configuration settings for an Amazon Web Services organization."
+  },
+  {
+   "name": "disable",
+   "description": "Disables Amazon Inspector scans for one or more Amazon Web Services accounts.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disable-delegated-admin-account",
+   "description": "Disables the Amazon Inspector delegated administrator for your organization.",
+   "options": [
+    {
+     "name": "--delegated-admin-account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-member",
+   "description": "Disassociates a member account from an Amazon Inspector delegated administrator.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable",
+   "description": "Enables Amazon Inspector scans for one or more Amazon Web Services accounts.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-delegated-admin-account",
+   "description": "Enables the Amazon Inspector delegated administrator for your Organizations organization.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--delegated-admin-account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cis-scan-report",
+   "description": "Retrieves a CIS scan report.",
+   "options": [
+    {
+     "name": "--report-format",
+     "args": {
+      "suggestions": [
+       "PDF",
+       "CSV"
+      ]
+     }
+    },
+    {
+     "name": "--scan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-accounts",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-cis-scan-result-details",
+   "description": "Retrieves CIS scan result details.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CHECK_ID",
+       "STATUS"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-clusters-for-image",
+   "description": "Returns a list of clusters and metadata associated with an image.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-code-security-integration",
+   "description": "Retrieves information about a code security integration.",
+   "options": [
+    {
+     "name": "--integration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-code-security-scan",
+   "description": "Retrieves information about a specific code security scan.",
+   "options": [
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-code-security-scan-configuration",
+   "description": "Retrieves information about a code security scan configuration.",
+   "options": [
+    {
+     "name": "--scan-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-configuration",
+   "description": "Retrieves setting configurations for Amazon Inspector scans.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-delegated-admin-account",
+   "description": "Retrieves information about the Amazon Inspector delegated administrator for your organization."
+  },
+  {
+   "name": "get-ec2-deep-inspection-configuration",
+   "description": "Retrieves the activation status of Amazon Inspector deep inspection and custom paths associated with your account."
+  },
+  {
+   "name": "get-encryption-key",
+   "description": "Gets an encryption key.",
+   "options": [
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "AWS_EC2_INSTANCE",
+       "AWS_ECR_CONTAINER_IMAGE",
+       "AWS_ECR_REPOSITORY",
+       "AWS_LAMBDA_FUNCTION",
+       "CODE_REPOSITORY",
+       "Microsoft.Compute/virtualMachines",
+       "Microsoft.ContainerRegistry/registry/containerImage",
+       "Microsoft.Web/sites"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scan-type",
+     "args": {
+      "suggestions": [
+       "NETWORK",
+       "PACKAGE",
+       "CODE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-findings-report-status",
+   "description": "Gets the status of a findings report.",
+   "options": [
+    {
+     "name": "--report-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-member",
+   "description": "Gets member information for your organization.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sbom-export",
+   "description": "Gets details of a software bill of materials (SBOM) report.",
+   "options": [
+    {
+     "name": "--report-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-account-permissions",
+   "description": "Lists the permissions an account has to configure Amazon Inspector.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {
+      "suggestions": [
+       "EC2",
+       "ECR",
+       "LAMBDA"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cis-scan-configurations",
+   "description": "Lists CIS scan configurations.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "SCAN_NAME",
+       "SCAN_CONFIGURATION_ARN"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cis-scan-results-aggregated-by-checks",
+   "description": "Lists scan results aggregated by checks.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CHECK_ID",
+       "TITLE",
+       "PLATFORM",
+       "FAILED_COUNTS",
+       "SECURITY_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cis-scan-results-aggregated-by-target-resource",
+   "description": "Lists scan results aggregated by a target resource.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scan-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "RESOURCE_ID",
+       "FAILED_COUNTS",
+       "ACCOUNT_ID",
+       "PLATFORM",
+       "TARGET_STATUS",
+       "TARGET_STATUS_REASON"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cis-scans",
+   "description": "Returns a CIS scan list.",
+   "options": [
+    {
+     "name": "--detail-level",
+     "args": {
+      "suggestions": [
+       "ORGANIZATION",
+       "MEMBER"
+      ]
+     }
+    },
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "STATUS",
+       "SCHEDULED_BY",
+       "SCAN_START_DATE",
+       "FAILED_CHECKS"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-code-security-integrations",
+   "description": "Lists all code security integrations in your account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-code-security-scan-configuration-associations",
+   "description": "Lists the associations between code repositories and Amazon Inspector code security scan configurations.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--scan-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-code-security-scan-configurations",
+   "description": "Lists all code security scan configurations in your account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connector-scan-configurations",
+   "description": "Lists scan configurations for Amazon Web Services Config connectors.",
+   "options": [
+    {
+     "name": "--aws-config-connector-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connectors",
+   "description": "Lists connectors in your account.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-coverage",
+   "description": "Lists coverage details for your environment.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-coverage-statistics",
+   "description": "Lists Amazon Inspector coverage statistics for your environment.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {
+      "suggestions": [
+       "SCAN_STATUS_CODE",
+       "SCAN_STATUS_REASON",
+       "ACCOUNT_ID",
+       "RESOURCE_TYPE",
+       "ECR_REPOSITORY_NAME",
+       "PROVIDER",
+       "PROVIDER_ACCOUNT_ID",
+       "PROVIDER_REGION",
+       "PROVIDER_ORG_ID"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-delegated-admin-accounts",
+   "description": "Lists information about the Amazon Inspector delegated administrator of your organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-filters",
+   "description": "Lists the filters associated with your account.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "SUPPRESS"
+      ]
+     }
+    },
+    {
+     "name": "--arns",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-finding-aggregations",
+   "description": "Lists aggregated finding data for your environment based on specific criteria.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--aggregation-request",
+     "args": {}
+    },
+    {
+     "name": "--aggregation-type",
+     "args": {
+      "suggestions": [
+       "FINDING_TYPE",
+       "PACKAGE",
+       "TITLE",
+       "REPOSITORY",
+       "AMI",
+       "AWS_EC2_INSTANCE",
+       "AWS_ECR_CONTAINER",
+       "IMAGE_LAYER",
+       "ACCOUNT",
+       "AWS_LAMBDA_FUNCTION",
+       "LAMBDA_LAYER",
+       "CODE_REPOSITORY",
+       "VM_INSTANCE",
+       "CONTAINER_IMAGE",
+       "SERVERLESS_FUNCTION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-findings",
+   "description": "Lists findings for your environment.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-criteria",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-members",
+   "description": "List members associated with the Amazon Inspector delegated administrator for your organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-only-associated"
+    },
+    {
+     "name": "--only-associated"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags attached to a given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-usage-totals",
+   "description": "Lists the Amazon Inspector usage totals over the last 30 days.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reset-encryption-key",
+   "description": "Resets an encryption key.",
+   "options": [
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "AWS_EC2_INSTANCE",
+       "AWS_ECR_CONTAINER_IMAGE",
+       "AWS_ECR_REPOSITORY",
+       "AWS_LAMBDA_FUNCTION",
+       "CODE_REPOSITORY",
+       "Microsoft.Compute/virtualMachines",
+       "Microsoft.ContainerRegistry/registry/containerImage",
+       "Microsoft.Web/sites"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scan-type",
+     "args": {
+      "suggestions": [
+       "NETWORK",
+       "PACKAGE",
+       "CODE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-vulnerabilities",
+   "description": "Lists Amazon Inspector coverage details for a specific vulnerability.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-cis-session-health",
+   "description": "Sends a CIS session health.",
+   "options": [
+    {
+     "name": "--scan-job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-cis-session-telemetry",
+   "description": "Sends a CIS session telemetry.",
+   "options": [
+    {
+     "name": "--messages",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-cis-session",
+   "description": "Starts a CIS session.",
+   "options": [
+    {
+     "name": "--message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-code-security-scan",
+   "description": "Initiates a code security scan on a specified repository.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-cis-session",
+   "description": "Stops a CIS session.",
+   "options": [
+    {
+     "name": "--message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cis-scan-configuration",
+   "description": "Updates a CIS scan configuration.",
+   "options": [
+    {
+     "name": "--scan-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-name",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--security-level",
+     "args": {
+      "suggestions": [
+       "LEVEL_1",
+       "LEVEL_2"
+      ]
+     }
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-code-security-integration",
+   "description": "Updates an existing code security integration.",
+   "options": [
+    {
+     "name": "--details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-code-security-scan-configuration",
+   "description": "Updates an existing code security scan configuration.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-configuration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-configuration",
+   "description": "Updates the scan configuration for your Amazon Inspector account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--ec2-configuration",
+     "args": {}
+    },
+    {
+     "name": "--ecr-configuration",
+     "args": {}
+    },
+    {
+     "name": "--update-configuration-inheritance",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-connector",
+   "description": "Updates the description or provider-specific configuration details of an existing connector.",
+   "options": [
+    {
+     "name": "--connector-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--provider-detail",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-connector-scan-configuration",
+   "description": "Updates scan configuration settings for resources associated with an Amazon Web Services Config connector.",
+   "options": [
+    {
+     "name": "--aws-config-connector-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-ec2-deep-inspection-configuration",
+   "description": "Activates, deactivates Amazon Inspector deep inspection, or updates custom paths for your account.",
+   "options": [
+    {
+     "name": "--activate-deep-inspection"
+    },
+    {
+     "name": "--no-activate-deep-inspection"
+    },
+    {
+     "name": "--package-paths",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-encryption-key",
+   "description": "Updates an encryption key.",
+   "options": [
+    {
+     "name": "--kms-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "AWS_EC2_INSTANCE",
+       "AWS_ECR_CONTAINER_IMAGE",
+       "AWS_ECR_REPOSITORY",
+       "AWS_LAMBDA_FUNCTION",
+       "CODE_REPOSITORY",
+       "Microsoft.Compute/virtualMachines",
+       "Microsoft.ContainerRegistry/registry/containerImage",
+       "Microsoft.Web/sites"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scan-type",
+     "args": {
+      "suggestions": [
+       "NETWORK",
+       "PACKAGE",
+       "CODE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-filter",
+   "description": "Specifies the action that is to be applied to the findings that match the filter.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "SUPPRESS"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--filter-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-org-ec2-deep-inspection-configuration",
+   "description": "Updates the Amazon Inspector deep inspection custom paths for your organization.",
+   "options": [
+    {
+     "name": "--org-package-paths",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-organization-configuration",
+   "description": "Updates the configurations for your Amazon Inspector organization.",
+   "options": [
+    {
+     "name": "--auto-enable",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "connector-connected",
+     "description": "Wait until a connector reaches the CONNECTED health status, typically after CreateConnector or UpdateConnector + ConnectorEnabled.",
+     "options": [
+      {
+       "name": "--filter-criteria",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "connector-deleted",
+     "description": "Wait until a connector is no longer returned by ListConnectors.",
+     "options": [
+      {
+       "name": "--filter-criteria",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "connector-enabled",
+     "description": "Wait until a connector reaches the ENABLED state, whether after CreateConnector or UpdateConnector.",
+     "options": [
+      {
+       "name": "--filter-criteria",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

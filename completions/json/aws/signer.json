@@ -1,0 +1,467 @@
+{
+ "name": "signer",
+ "description": "AWS Signer is a fully managed code-signing service to help you ensure the trust and integrity of your code.",
+ "subcommands": [
+  {
+   "name": "add-profile-permission",
+   "description": "Adds cross-account permissions to a signing profile.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-version",
+     "args": {}
+    },
+    {
+     "name": "--revision-id",
+     "args": {}
+    },
+    {
+     "name": "--statement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-signing-profile",
+   "description": "Changes the state of an ACTIVE signing profile to CANCELED.",
+   "options": [
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-signing-job",
+   "description": "Returns information about a specific code signing job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-revocation-status",
+   "description": "Retrieves the revocation status of one or more of the signing profile, signing job, and signing certificate.",
+   "options": [
+    {
+     "name": "--certificate-hashes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--platform-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-version-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signature-timestamp",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-signing-platform",
+   "description": "Returns information on a specific signing platform.",
+   "options": [
+    {
+     "name": "--platform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-signing-profile",
+   "description": "Returns information on a specific signing profile.",
+   "options": [
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-profile-permissions",
+   "description": "Lists the cross-account permissions associated with a signing profile.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-signing-jobs",
+   "description": "Lists all your signing jobs.",
+   "options": [
+    {
+     "name": "--is-revoked"
+    },
+    {
+     "name": "--job-invoker",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-is-revoked"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--platform-id",
+     "args": {}
+    },
+    {
+     "name": "--requested-by",
+     "args": {}
+    },
+    {
+     "name": "--signature-expires-after",
+     "args": {}
+    },
+    {
+     "name": "--signature-expires-before",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "InProgress",
+       "Failed",
+       "Succeeded"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-signing-platforms",
+   "description": "Lists all signing platforms available in AWS Signer that match the request parameters.",
+   "options": [
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--partner",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-signing-profiles",
+   "description": "Lists all available signing profiles in your AWS account.",
+   "options": [
+    {
+     "name": "--include-canceled"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-canceled"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--platform-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--statuses",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of the tags associated with a signing profile resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-signing-profile",
+   "description": "Creates a signing profile.",
+   "options": [
+    {
+     "name": "--overrides",
+     "args": {}
+    },
+    {
+     "name": "--platform-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signature-validity-period",
+     "args": {}
+    },
+    {
+     "name": "--signing-material",
+     "args": {}
+    },
+    {
+     "name": "--signing-parameters",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-profile-permission",
+   "description": "Removes cross-account permissions from a signing profile.",
+   "options": [
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-signature",
+   "description": "Changes the state of a signing job to REVOKED.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-owner",
+     "args": {}
+    },
+    {
+     "name": "--reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-signing-profile",
+   "description": "Changes the state of a signing profile to REVOKED.",
+   "options": [
+    {
+     "name": "--effective-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "sign-payload",
+   "description": "Signs a binary payload and returns a signature envelope.",
+   "options": [
+    {
+     "name": "--payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payload-format",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-signing-job",
+   "description": "Initiates a signing job to be performed on the code provided.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-owner",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to a signing profile.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from a signing profile.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "successful-signing-job",
+     "description": "Wait until JMESPath query status returns Succeeded when polling with ``describe-signing-job``.",
+     "options": [
+      {
+       "name": "--job-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

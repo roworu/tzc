@@ -1,0 +1,1979 @@
+{
+ "name": "odb",
+ "description": "Oracle Database@Amazon Web Services is an offering that enables you to access Oracle Exadata infrastructure managed by Oracle Cloud Infrastructure (OCI) inside Amazon Web Services data centers.",
+ "subcommands": [
+  {
+   "name": "accept-marketplace-registration",
+   "description": "Registers the Amazon Web Services Marketplace token for your Amazon Web Services account to activate your Oracle Database@Amazon Web Services subscription.",
+   "options": [
+    {
+     "name": "--marketplace-registration-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-iam-role-to-resource",
+   "description": "Associates an Amazon Web Services Identity and Access Management (IAM) service role with a specified resource to enable Amazon Web Services service integration.",
+   "options": [
+    {
+     "name": "--aws-integration",
+     "args": {
+      "suggestions": [
+       "KmsTde"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-autonomous-database",
+   "description": "Creates a new Autonomous Database.",
+   "options": [
+    {
+     "name": "--admin-password",
+     "args": {}
+    },
+    {
+     "name": "--admin-password-source",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_MANAGED_AWS_SECRET",
+       "API_REQUEST_PARAMETER"
+      ]
+     }
+    },
+    {
+     "name": "--admin-password-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--allowlisted-ips",
+     "args": {}
+    },
+    {
+     "name": "--autonomous-maintenance-schedule-type",
+     "args": {
+      "suggestions": [
+       "EARLY",
+       "REGULAR"
+      ]
+     }
+    },
+    {
+     "name": "--backup-retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--byol-compute-count-limit",
+     "args": {}
+    },
+    {
+     "name": "--character-set",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--compute-count",
+     "args": {}
+    },
+    {
+     "name": "--cpu-core-count",
+     "args": {}
+    },
+    {
+     "name": "--customer-contacts-to-send-to-oci",
+     "args": {}
+    },
+    {
+     "name": "--data-storage-size-in-gbs",
+     "args": {}
+    },
+    {
+     "name": "--data-storage-size-in-tbs",
+     "args": {}
+    },
+    {
+     "name": "--database-edition",
+     "args": {
+      "suggestions": [
+       "STANDARD_EDITION",
+       "ENTERPRISE_EDITION"
+      ]
+     }
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--db-tools-details",
+     "args": {}
+    },
+    {
+     "name": "--db-version",
+     "args": {}
+    },
+    {
+     "name": "--db-workload",
+     "args": {
+      "suggestions": [
+       "OLTP",
+       "AJD",
+       "APEX",
+       "LH"
+      ]
+     }
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-configuration",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-provider",
+     "args": {
+      "suggestions": [
+       "ORACLE_MANAGED",
+       "AWS_KMS"
+      ]
+     }
+    },
+    {
+     "name": "--is-auto-scaling-enabled"
+    },
+    {
+     "name": "--is-auto-scaling-for-storage-enabled"
+    },
+    {
+     "name": "--is-backup-retention-locked"
+    },
+    {
+     "name": "--is-local-data-guard-enabled"
+    },
+    {
+     "name": "--is-mtls-connection-required"
+    },
+    {
+     "name": "--license-model",
+     "args": {
+      "suggestions": [
+       "BRING_YOUR_OWN_LICENSE",
+       "LICENSE_INCLUDED"
+      ]
+     }
+    },
+    {
+     "name": "--ncharacter-set",
+     "args": {}
+    },
+    {
+     "name": "--no-is-auto-scaling-enabled"
+    },
+    {
+     "name": "--no-is-auto-scaling-for-storage-enabled"
+    },
+    {
+     "name": "--no-is-backup-retention-locked"
+    },
+    {
+     "name": "--no-is-local-data-guard-enabled"
+    },
+    {
+     "name": "--no-is-mtls-connection-required"
+    },
+    {
+     "name": "--odb-network-id",
+     "args": {}
+    },
+    {
+     "name": "--private-endpoint-ip",
+     "args": {}
+    },
+    {
+     "name": "--private-endpoint-label",
+     "args": {}
+    },
+    {
+     "name": "--resource-pool-leader-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-pool-summary",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-operations",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "DATABASE",
+       "BACKUP_FROM_ID",
+       "BACKUP_FROM_TIMESTAMP",
+       "CROSS_REGION_DATAGUARD",
+       "CROSS_REGION_DISASTER_RECOVERY",
+       "CLONE_TO_REFRESHABLE"
+      ]
+     }
+    },
+    {
+     "name": "--source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--standby-allowlisted-ips",
+     "args": {}
+    },
+    {
+     "name": "--standby-allowlisted-ips-source",
+     "args": {
+      "suggestions": [
+       "PRIMARY",
+       "SEPARATE",
+       "NOT_APPLICABLE"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--transportable-tablespace",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-autonomous-database-backup",
+   "description": "Creates a new backup of the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-autonomous-database-wallet",
+   "description": "Creates a new wallet for the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--password-source",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_MANAGED_AWS_SECRET",
+       "API_REQUEST_PARAMETER"
+      ]
+     }
+    },
+    {
+     "name": "--password-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--wallet-type",
+     "args": {
+      "suggestions": [
+       "REGIONAL",
+       "INSTANCE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-cloud-autonomous-vm-cluster",
+   "description": "Creates a new Autonomous VM cluster in the specified Exadata infrastructure.",
+   "options": [
+    {
+     "name": "--autonomous-data-storage-size-in-tbs",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cpu-core-count-per-node",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-servers",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--is-mtls-enabled-vm-cluster"
+    },
+    {
+     "name": "--license-model",
+     "args": {
+      "suggestions": [
+       "BRING_YOUR_OWN_LICENSE",
+       "LICENSE_INCLUDED"
+      ]
+     }
+    },
+    {
+     "name": "--maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--memory-per-oracle-compute-unit-in-gbs",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-is-mtls-enabled-vm-cluster"
+    },
+    {
+     "name": "--odb-network-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-listener-port-non-tls",
+     "args": {}
+    },
+    {
+     "name": "--scan-listener-port-tls",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--time-zone",
+     "args": {}
+    },
+    {
+     "name": "--total-container-databases",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cloud-exadata-infrastructure",
+   "description": "Creates an Exadata infrastructure.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--compute-count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--customer-contacts-to-send-to-oci",
+     "args": {}
+    },
+    {
+     "name": "--database-server-type",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--shape",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-server-type",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cloud-vm-cluster",
+   "description": "Creates a VM cluster on the specified Exadata infrastructure.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-name",
+     "args": {}
+    },
+    {
+     "name": "--cpu-core-count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-collection-options",
+     "args": {}
+    },
+    {
+     "name": "--data-storage-size-in-tbs",
+     "args": {}
+    },
+    {
+     "name": "--db-node-storage-size-in-gbs",
+     "args": {}
+    },
+    {
+     "name": "--db-servers",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gi-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hostname",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--is-local-backup-enabled"
+    },
+    {
+     "name": "--is-sparse-diskgroup-enabled"
+    },
+    {
+     "name": "--license-model",
+     "args": {
+      "suggestions": [
+       "BRING_YOUR_OWN_LICENSE",
+       "LICENSE_INCLUDED"
+      ]
+     }
+    },
+    {
+     "name": "--memory-size-in-gbs",
+     "args": {}
+    },
+    {
+     "name": "--no-is-local-backup-enabled"
+    },
+    {
+     "name": "--no-is-sparse-diskgroup-enabled"
+    },
+    {
+     "name": "--odb-network-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scan-listener-port-tcp",
+     "args": {}
+    },
+    {
+     "name": "--ssh-public-keys",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--system-version",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--time-zone",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-odb-network",
+   "description": "Creates an ODB network.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--backup-subnet-cidr",
+     "args": {}
+    },
+    {
+     "name": "--client-subnet-cidr",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cross-region-s3-restore-sources-to-enable",
+     "args": {}
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--default-dns-prefix",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--kms-policy-document",
+     "args": {}
+    },
+    {
+     "name": "--s3-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--s3-policy-document",
+     "args": {}
+    },
+    {
+     "name": "--sts-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--sts-policy-document",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--zero-etl-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-odb-peering-connection",
+   "description": "Creates a peering connection between an ODB network and a VPC.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--odb-network-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peer-network-cidrs-to-be-added",
+     "args": {}
+    },
+    {
+     "name": "--peer-network-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peer-network-route-table-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-autonomous-database",
+   "description": "Deletes the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-autonomous-database-backup",
+   "description": "Deletes the specified Autonomous Database backup.",
+   "options": [
+    {
+     "name": "--autonomous-database-backup-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cloud-autonomous-vm-cluster",
+   "description": "Deletes an Autonomous VM cluster.",
+   "options": [
+    {
+     "name": "--cloud-autonomous-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cloud-exadata-infrastructure",
+   "description": "Deletes the specified Exadata infrastructure.",
+   "options": [
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cloud-vm-cluster",
+   "description": "Deletes the specified VM cluster.",
+   "options": [
+    {
+     "name": "--cloud-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-odb-network",
+   "description": "Deletes the specified ODB network.",
+   "options": [
+    {
+     "name": "--delete-associated-resources",
+     "priority": 75
+    },
+    {
+     "name": "--no-delete-associated-resources"
+    },
+    {
+     "name": "--odb-network-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-odb-peering-connection",
+   "description": "Deletes an ODB peering connection.",
+   "options": [
+    {
+     "name": "--odb-peering-connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-iam-role-from-resource",
+   "description": "Disassociates an Amazon Web Services Identity and Access Management (IAM) service role from a specified resource to disable Amazon Web Services service integration.",
+   "options": [
+    {
+     "name": "--aws-integration",
+     "args": {
+      "suggestions": [
+       "KmsTde"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "failover-autonomous-database",
+   "description": "Initiates a failover of the specified Autonomous Database to a standby peer database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peer-db-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-autonomous-database",
+   "description": "Gets information about a specific Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-autonomous-database-backup",
+   "description": "Gets information about a specific Autonomous Database backup.",
+   "options": [
+    {
+     "name": "--autonomous-database-backup-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-autonomous-database-wallet-details",
+   "description": "Gets the wallet details for the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cloud-autonomous-vm-cluster",
+   "description": "Gets information about a specific Autonomous VM cluster.",
+   "options": [
+    {
+     "name": "--cloud-autonomous-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cloud-exadata-infrastructure",
+   "description": "Returns information about the specified Exadata infrastructure.",
+   "options": [
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cloud-exadata-infrastructure-unallocated-resources",
+   "description": "Retrieves information about unallocated resources in a specified Cloud Exadata Infrastructure.",
+   "options": [
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-servers",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-cloud-vm-cluster",
+   "description": "Returns information about the specified VM cluster.",
+   "options": [
+    {
+     "name": "--cloud-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-db-node",
+   "description": "Returns information about the specified DB node.",
+   "options": [
+    {
+     "name": "--cloud-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-node-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-db-server",
+   "description": "Returns information about the specified database server.",
+   "options": [
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-oci-onboarding-status",
+   "description": "Returns the tenancy activation link and onboarding status for your Amazon Web Services account."
+  },
+  {
+   "name": "get-odb-network",
+   "description": "Returns information about the specified ODB network.",
+   "options": [
+    {
+     "name": "--odb-network-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-odb-peering-connection",
+   "description": "Retrieves information about an ODB peering connection.",
+   "options": [
+    {
+     "name": "--odb-peering-connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "initialize-service",
+   "description": "Initializes the ODB service for the first time in an account.",
+   "options": [
+    {
+     "name": "--autonomous-database-oci-aws-secrets-manager-integration",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--no-oci-identity-domain"
+    },
+    {
+     "name": "--oci-identity-domain"
+    }
+   ]
+  },
+  {
+   "name": "list-autonomous-database-backups",
+   "description": "Lists the backups of the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "CREATING",
+       "UPDATING",
+       "DELETING",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "INCREMENTAL",
+       "FULL",
+       "LONGTERM",
+       "VIRTUAL_FULL",
+       "CUMULATIVE_INCREMENTAL",
+       "ROLL_FORWARD_IMAGE_COPY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-autonomous-database-character-sets",
+   "description": "Lists the available character sets for Autonomous Databases.",
+   "options": [
+    {
+     "name": "--character-set-type",
+     "args": {
+      "suggestions": [
+       "DATABASE",
+       "NATIONAL"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-autonomous-database-clones",
+   "description": "Lists the clones of the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-autonomous-database-peers",
+   "description": "Lists the peer databases of the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-autonomous-database-versions",
+   "description": "Lists the available Oracle Database software versions for Autonomous Databases.",
+   "options": [
+    {
+     "name": "--db-workload",
+     "args": {
+      "suggestions": [
+       "OLTP",
+       "AJD",
+       "APEX",
+       "LH"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-autonomous-databases",
+   "description": "Returns information about the Autonomous Databases owned by your Amazon Web Services account in the current Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-autonomous-virtual-machines",
+   "description": "Lists all Autonomous VMs in an Autonomous VM cluster.",
+   "options": [
+    {
+     "name": "--cloud-autonomous-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cloud-autonomous-vm-clusters",
+   "description": "Lists all Autonomous VM clusters in a specified Cloud Exadata infrastructure.",
+   "options": [
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cloud-exadata-infrastructures",
+   "description": "Returns information about the Exadata infrastructures owned by your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cloud-vm-clusters",
+   "description": "Returns information about the VM clusters owned by your Amazon Web Services account or only the ones on the specified Exadata infrastructure.",
+   "options": [
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-db-nodes",
+   "description": "Returns information about the DB nodes for the specified VM cluster.",
+   "options": [
+    {
+     "name": "--cloud-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-db-servers",
+   "description": "Returns information about the database servers that belong to the specified Exadata infrastructure.",
+   "options": [
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-db-system-shapes",
+   "description": "Returns information about the shapes that are available for an Exadata infrastructure.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-gi-versions",
+   "description": "Returns information about Oracle Grid Infrastructure (GI) software versions that are available for a VM cluster for the specified shape.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--shape",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-odb-networks",
+   "description": "Returns information about the ODB networks owned by your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-odb-peering-connections",
+   "description": "Lists all ODB peering connections or those associated with a specific ODB network.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--odb-network-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-system-versions",
+   "description": "Returns information about the system versions that are available for a VM cluster for the specified giVersion and shape.",
+   "options": [
+    {
+     "name": "--gi-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--shape",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns information about the tags applied to this resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reboot-autonomous-database",
+   "description": "Reboots the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--is-online-reboot"
+    },
+    {
+     "name": "--no-is-online-reboot"
+    }
+   ]
+  },
+  {
+   "name": "reboot-db-node",
+   "description": "Reboots the specified DB node in a VM cluster.",
+   "options": [
+    {
+     "name": "--cloud-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-node-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-autonomous-database",
+   "description": "Restores the specified Autonomous Database to a point in time.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--timestamp",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "shrink-autonomous-database",
+   "description": "Shrinks the storage of the specified Autonomous Database to reclaim unused space.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-autonomous-database",
+   "description": "Starts the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-db-node",
+   "description": "Starts the specified DB node in a VM cluster.",
+   "options": [
+    {
+     "name": "--cloud-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-node-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-autonomous-database",
+   "description": "Stops the specified Autonomous Database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-db-node",
+   "description": "Stops the specified DB node in a VM cluster.",
+   "options": [
+    {
+     "name": "--cloud-vm-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-node-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "switchover-autonomous-database",
+   "description": "Performs a switchover of the specified Autonomous Database to a standby peer database.",
+   "options": [
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peer-db-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Applies tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-autonomous-database",
+   "description": "Updates the properties of an Autonomous Database.",
+   "options": [
+    {
+     "name": "--admin-password",
+     "args": {}
+    },
+    {
+     "name": "--admin-password-source",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_MANAGED_AWS_SECRET",
+       "API_REQUEST_PARAMETER"
+      ]
+     }
+    },
+    {
+     "name": "--admin-password-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--allowlisted-ips",
+     "args": {}
+    },
+    {
+     "name": "--auto-refresh-frequency-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--auto-refresh-point-lag-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--autonomous-database-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--autonomous-maintenance-schedule-type",
+     "args": {
+      "suggestions": [
+       "EARLY",
+       "REGULAR"
+      ]
+     }
+    },
+    {
+     "name": "--backup-retention-period-in-days",
+     "args": {}
+    },
+    {
+     "name": "--byol-compute-count-limit",
+     "args": {}
+    },
+    {
+     "name": "--compute-count",
+     "args": {}
+    },
+    {
+     "name": "--cpu-core-count",
+     "args": {}
+    },
+    {
+     "name": "--customer-contacts-to-send-to-oci",
+     "args": {}
+    },
+    {
+     "name": "--data-storage-size-in-gbs",
+     "args": {}
+    },
+    {
+     "name": "--data-storage-size-in-tbs",
+     "args": {}
+    },
+    {
+     "name": "--database-edition",
+     "args": {
+      "suggestions": [
+       "STANDARD_EDITION",
+       "ENTERPRISE_EDITION"
+      ]
+     }
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--db-tools-details",
+     "args": {}
+    },
+    {
+     "name": "--db-version",
+     "args": {}
+    },
+    {
+     "name": "--db-workload",
+     "args": {
+      "suggestions": [
+       "OLTP",
+       "AJD",
+       "APEX",
+       "LH"
+      ]
+     }
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-configuration",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-provider",
+     "args": {
+      "suggestions": [
+       "ORACLE_MANAGED",
+       "AWS_KMS"
+      ]
+     }
+    },
+    {
+     "name": "--is-auto-scaling-enabled"
+    },
+    {
+     "name": "--is-auto-scaling-for-storage-enabled"
+    },
+    {
+     "name": "--is-backup-retention-locked"
+    },
+    {
+     "name": "--is-disconnect-peer"
+    },
+    {
+     "name": "--is-local-data-guard-enabled"
+    },
+    {
+     "name": "--is-mtls-connection-required"
+    },
+    {
+     "name": "--is-refreshable-clone"
+    },
+    {
+     "name": "--license-model",
+     "args": {
+      "suggestions": [
+       "BRING_YOUR_OWN_LICENSE",
+       "LICENSE_INCLUDED"
+      ]
+     }
+    },
+    {
+     "name": "--local-adg-auto-failover-max-data-loss-limit",
+     "args": {}
+    },
+    {
+     "name": "--long-term-backup-schedule",
+     "args": {}
+    },
+    {
+     "name": "--no-is-auto-scaling-enabled"
+    },
+    {
+     "name": "--no-is-auto-scaling-for-storage-enabled"
+    },
+    {
+     "name": "--no-is-backup-retention-locked"
+    },
+    {
+     "name": "--no-is-disconnect-peer"
+    },
+    {
+     "name": "--no-is-local-data-guard-enabled"
+    },
+    {
+     "name": "--no-is-mtls-connection-required"
+    },
+    {
+     "name": "--no-is-refreshable-clone"
+    },
+    {
+     "name": "--open-mode",
+     "args": {
+      "suggestions": [
+       "READ_ONLY",
+       "READ_WRITE"
+      ]
+     }
+    },
+    {
+     "name": "--peer-db-id",
+     "args": {}
+    },
+    {
+     "name": "--permission-level",
+     "args": {
+      "suggestions": [
+       "RESTRICTED",
+       "UNRESTRICTED"
+      ]
+     }
+    },
+    {
+     "name": "--private-endpoint-ip",
+     "args": {}
+    },
+    {
+     "name": "--private-endpoint-label",
+     "args": {}
+    },
+    {
+     "name": "--refreshable-mode",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--resource-pool-leader-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-pool-summary",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-operations",
+     "args": {}
+    },
+    {
+     "name": "--standby-allowlisted-ips",
+     "args": {}
+    },
+    {
+     "name": "--standby-allowlisted-ips-source",
+     "args": {
+      "suggestions": [
+       "PRIMARY",
+       "SEPARATE",
+       "NOT_APPLICABLE"
+      ]
+     }
+    },
+    {
+     "name": "--time-of-auto-refresh-start",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-autonomous-database-backup",
+   "description": "Updates the properties of an Autonomous Database backup.",
+   "options": [
+    {
+     "name": "--autonomous-database-backup-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retention-period-in-days",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-cloud-exadata-infrastructure",
+   "description": "Updates the properties of an Exadata infrastructure resource.",
+   "options": [
+    {
+     "name": "--cloud-exadata-infrastructure-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--maintenance-window",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-odb-network",
+   "description": "Updates properties of a specified ODB network.",
+   "options": [
+    {
+     "name": "--cross-region-s3-restore-sources-to-disable",
+     "args": {}
+    },
+    {
+     "name": "--cross-region-s3-restore-sources-to-enable",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--kms-policy-document",
+     "args": {}
+    },
+    {
+     "name": "--odb-network-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peered-cidrs-to-be-added",
+     "args": {}
+    },
+    {
+     "name": "--peered-cidrs-to-be-removed",
+     "args": {}
+    },
+    {
+     "name": "--s3-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--s3-policy-document",
+     "args": {}
+    },
+    {
+     "name": "--sts-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--sts-policy-document",
+     "args": {}
+    },
+    {
+     "name": "--zero-etl-access",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-odb-peering-connection",
+   "description": "Modifies the settings of an Oracle Database@Amazon Web Services peering connection.",
+   "options": [
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--odb-peering-connection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--peer-network-cidrs-to-be-added",
+     "args": {}
+    },
+    {
+     "name": "--peer-network-cidrs-to-be-removed",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

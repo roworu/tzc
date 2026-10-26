@@ -1,0 +1,564 @@
+{
+ "name": "chime-sdk-identity",
+ "description": "The Amazon Chime SDK Identity APIs in this section allow software developers to create and manage unique instances of their messaging applications.",
+ "subcommands": [
+  {
+   "name": "create-app-instance",
+   "description": "Creates an Amazon Chime SDK messaging AppInstance under an AWS account.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-app-instance-admin",
+   "description": "Promotes an AppInstanceUser or AppInstanceBot to an AppInstanceAdmin.",
+   "options": [
+    {
+     "name": "--app-instance-admin-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-app-instance-bot",
+   "description": "Creates a bot under an Amazon Chime AppInstance.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-app-instance-user",
+   "description": "Creates a user under an Amazon Chime AppInstance.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-instance-user-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--expiration-settings",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-app-instance",
+   "description": "Deletes an AppInstance and all associated data asynchronously.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-app-instance-admin",
+   "description": "Demotes an AppInstanceAdmin to an AppInstanceUser or AppInstanceBot.",
+   "options": [
+    {
+     "name": "--app-instance-admin-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-app-instance-bot",
+   "description": "Deletes an AppInstanceBot.",
+   "options": [
+    {
+     "name": "--app-instance-bot-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-app-instance-user",
+   "description": "Deletes an AppInstanceUser.",
+   "options": [
+    {
+     "name": "--app-instance-user-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-app-instance-user-endpoint",
+   "description": "Deregisters an AppInstanceUserEndpoint.",
+   "options": [
+    {
+     "name": "--app-instance-user-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app-instance",
+   "description": "Returns the full details of an AppInstance.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app-instance-admin",
+   "description": "Returns the full details of an AppInstanceAdmin.",
+   "options": [
+    {
+     "name": "--app-instance-admin-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app-instance-bot",
+   "description": "The AppInstanceBot's information.",
+   "options": [
+    {
+     "name": "--app-instance-bot-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app-instance-user",
+   "description": "Returns the full details of an AppInstanceUser.",
+   "options": [
+    {
+     "name": "--app-instance-user-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-app-instance-user-endpoint",
+   "description": "Returns the full details of an AppInstanceUserEndpoint.",
+   "options": [
+    {
+     "name": "--app-instance-user-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-app-instance-retention-settings",
+   "description": "Gets the retention settings for an AppInstance.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-app-instance-admins",
+   "description": "Returns a list of the administrators in the AppInstance.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-instance-bots",
+   "description": "Lists all AppInstanceBots created under a single AppInstance.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-instance-user-endpoints",
+   "description": "Lists all the AppInstanceUserEndpoints created under a single AppInstanceUser.",
+   "options": [
+    {
+     "name": "--app-instance-user-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-instance-users",
+   "description": "List all AppInstanceUsers created under a single AppInstance.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-app-instances",
+   "description": "Lists all Amazon Chime AppInstances created under a single AWS account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags applied to an Amazon Chime SDK identity resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-app-instance-retention-settings",
+   "description": "Sets the amount of time in days that a given AppInstance retains data.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--app-instance-retention-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-app-instance-user-expiration-settings",
+   "description": "Sets the number of days before the AppInstanceUser is automatically deleted.",
+   "options": [
+    {
+     "name": "--app-instance-user-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expiration-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-app-instance-user-endpoint",
+   "description": "Registers an endpoint under an Amazon Chime AppInstanceUser.",
+   "options": [
+    {
+     "name": "--allow-messages",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--app-instance-user-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "APNS",
+       "APNS_SANDBOX",
+       "GCM"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Applies the specified tags to the specified Amazon Chime SDK identity resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified Amazon Chime SDK identity resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-app-instance",
+   "description": "Updates AppInstance metadata.",
+   "options": [
+    {
+     "name": "--app-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-app-instance-bot",
+   "description": "Updates the name and metadata of an AppInstanceBot.",
+   "options": [
+    {
+     "name": "--app-instance-bot-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-app-instance-user",
+   "description": "Updates the details of an AppInstanceUser.",
+   "options": [
+    {
+     "name": "--app-instance-user-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-app-instance-user-endpoint",
+   "description": "Updates the details of an AppInstanceUserEndpoint.",
+   "options": [
+    {
+     "name": "--allow-messages",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--app-instance-user-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

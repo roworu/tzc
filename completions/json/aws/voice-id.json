@@ -1,0 +1,611 @@
+{
+ "name": "voice-id",
+ "description": "Amazon Connect Voice ID provides real-time caller authentication and fraud risk detection, which make voice interactions in contact centers more secure and efficient.",
+ "subcommands": [
+  {
+   "name": "associate-fraudster",
+   "description": "Associates the fraudsters with the watchlist specified in the same domain.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fraudster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--watchlist-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-domain",
+   "description": "Creates a domain that contains all Amazon Connect Voice ID data, such as speakers, fraudsters, customer audio, and voiceprints.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-side-encryption-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-watchlist",
+   "description": "Creates a watchlist that fraudsters can be a part of.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain",
+   "description": "Deletes the specified domain from Voice ID.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-fraudster",
+   "description": "Deletes the specified fraudster from Voice ID.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fraudster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-speaker",
+   "description": "Deletes the specified speaker from Voice ID.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--speaker-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-watchlist",
+   "description": "Deletes the specified watchlist from Voice ID.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--watchlist-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain",
+   "description": "Describes the specified domain.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fraudster",
+   "description": "Describes the specified fraudster.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fraudster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fraudster-registration-job",
+   "description": "Describes the specified fraudster registration job.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-speaker",
+   "description": "Describes the specified speaker.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--speaker-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-speaker-enrollment-job",
+   "description": "Describes the specified speaker enrollment job.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-watchlist",
+   "description": "Describes the specified watchlist.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--watchlist-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-fraudster",
+   "description": "Disassociates the fraudsters from the watchlist specified.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fraudster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--watchlist-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "evaluate-session",
+   "description": "Evaluates a specified session based on audio data accumulated during a streaming Amazon Connect Voice ID call.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-name-or-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-domains",
+   "description": "Lists all the domains in the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fraudster-registration-jobs",
+   "description": "Lists all the fraudster registration jobs in the domain with the given JobStatus.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "IN_PROGRESS",
+       "COMPLETED",
+       "COMPLETED_WITH_ERRORS",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fraudsters",
+   "description": "Lists all fraudsters in a specified watchlist or domain.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--watchlist-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-speaker-enrollment-jobs",
+   "description": "Lists all the speaker enrollment jobs in the domain with the specified JobStatus.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "IN_PROGRESS",
+       "COMPLETED",
+       "COMPLETED_WITH_ERRORS",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-speakers",
+   "description": "Lists all speakers in a specified domain.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags associated with a specified Voice ID resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-watchlists",
+   "description": "Lists all watchlists in a specified domain.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "opt-out-speaker",
+   "description": "Opts out a speaker from Voice ID.",
+   "options": [
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--speaker-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-fraudster-registration-job",
+   "description": "Starts a new batch fraudster registration job using provided details.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registration-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-speaker-enrollment-job",
+   "description": "Starts a new batch speaker enrollment job using specified details.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enrollment-config",
+     "args": {}
+    },
+    {
+     "name": "--input-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tags a Voice ID resource with the provided list of tags.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes specified tags from a specified Amazon Connect Voice ID resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-domain",
+   "description": "Updates the specified domain.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-side-encryption-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-watchlist",
+   "description": "Updates the specified watchlist.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--watchlist-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

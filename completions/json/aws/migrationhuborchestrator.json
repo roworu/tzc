@@ -1,0 +1,743 @@
+{
+ "name": "migrationhuborchestrator",
+ "description": "This API reference provides descriptions, syntax, and other details about each of the actions and data types for AWS Migration Hub Orchestrator.",
+ "subcommands": [
+  {
+   "name": "create-template",
+   "description": "Creates a migration workflow template.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-description",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workflow",
+   "description": "Create a workflow to orchestrate your migrations.",
+   "options": [
+    {
+     "name": "--application-configuration-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--input-parameters",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-targets",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workflow-step",
+   "description": "Create a step in the migration workflow.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next",
+     "args": {}
+    },
+    {
+     "name": "--outputs",
+     "args": {}
+    },
+    {
+     "name": "--previous",
+     "args": {}
+    },
+    {
+     "name": "--step-action-type",
+     "args": {
+      "suggestions": [
+       "MANUAL",
+       "AUTOMATED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--step-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-target",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-step-automation-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-workflow-step-group",
+   "description": "Create a step group in a migration workflow.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next",
+     "args": {}
+    },
+    {
+     "name": "--previous",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-template",
+   "description": "Deletes a migration workflow template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow",
+   "description": "Delete a migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow-step",
+   "description": "Delete a step in a migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow-step-group",
+   "description": "Delete a step group in a migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-template",
+   "description": "Get the template you want to use for creating a migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-template-step",
+   "description": "Get a specific step in a template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-template-step-group",
+   "description": "Get a step group in a template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow",
+   "description": "Get migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-step",
+   "description": "Get a step in the migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-step-group",
+   "description": "Get the step group of a migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-plugins",
+   "description": "List AWS Migration Hub Orchestrator plugins.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List the tags added to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-template-step-groups",
+   "description": "List the step groups in a template.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-template-steps",
+   "description": "List the steps in a template.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--step-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-templates",
+   "description": "List the templates available in Migration Hub Orchestrator to create a migration workflow.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-step-groups",
+   "description": "List the step groups in a migration workflow.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-steps",
+   "description": "List the steps in a workflow.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--step-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workflows",
+   "description": "List the migration workflows.",
+   "options": [
+    {
+     "name": "--ads-application-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "CREATING",
+       "NOT_STARTED",
+       "CREATION_FAILED",
+       "STARTING",
+       "IN_PROGRESS",
+       "WORKFLOW_FAILED",
+       "PAUSED",
+       "PAUSING",
+       "PAUSING_FAILED",
+       "USER_ATTENTION_REQUIRED",
+       "DELETING",
+       "DELETION_FAILED",
+       "DELETED",
+       "COMPLETED"
+      ]
+     }
+    },
+    {
+     "name": "--template-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "retry-workflow-step",
+   "description": "Retry a failed step in a migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-workflow",
+   "description": "Start a migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-workflow",
+   "description": "Stop an ongoing migration workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tag a resource by specifying its Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes the tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-template",
+   "description": "Updates a migration workflow template.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-description",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-workflow",
+   "description": "Update a migration workflow.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-parameters",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--step-targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-workflow-step",
+   "description": "Update a step in a migration workflow.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next",
+     "args": {}
+    },
+    {
+     "name": "--outputs",
+     "args": {}
+    },
+    {
+     "name": "--previous",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "AWAITING_DEPENDENCIES",
+       "SKIPPED",
+       "READY",
+       "IN_PROGRESS",
+       "COMPLETED",
+       "FAILED",
+       "PAUSED",
+       "USER_ATTENTION_REQUIRED"
+      ]
+     }
+    },
+    {
+     "name": "--step-action-type",
+     "args": {
+      "suggestions": [
+       "MANUAL",
+       "AUTOMATED"
+      ]
+     }
+    },
+    {
+     "name": "--step-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-target",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-step-automation-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-workflow-step-group",
+   "description": "Update the step group in a migration workflow.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next",
+     "args": {}
+    },
+    {
+     "name": "--previous",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

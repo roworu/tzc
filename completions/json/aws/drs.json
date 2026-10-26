@@ -1,0 +1,1300 @@
+{
+ "name": "drs",
+ "description": "AWS Elastic Disaster Recovery Service.",
+ "subcommands": [
+  {
+   "name": "associate-source-network-stack",
+   "description": "Associate a Source Network to an existing CloudFormation Stack and modify launch templates to use this network.",
+   "options": [
+    {
+     "name": "--cfn-stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-network-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-extended-source-server",
+   "description": "Create an extended source server in the target Account based on the source server in staging account.",
+   "options": [
+    {
+     "name": "--source-server-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-launch-configuration-template",
+   "description": "Creates a new Launch Configuration Template.",
+   "options": [
+    {
+     "name": "--copy-private-ip"
+    },
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--export-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--launch-disposition",
+     "args": {
+      "suggestions": [
+       "STOPPED",
+       "STARTED"
+      ]
+     }
+    },
+    {
+     "name": "--launch-into-source-instance"
+    },
+    {
+     "name": "--licensing",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-private-ip"
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--no-launch-into-source-instance"
+    },
+    {
+     "name": "--no-post-launch-enabled"
+    },
+    {
+     "name": "--post-launch-enabled"
+    },
+    {
+     "name": "--recovery-mode",
+     "args": {
+      "suggestions": [
+       "FAST",
+       "OPTIMAL"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-instance-type-right-sizing-method",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "BASIC",
+       "IN_AWS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-replication-configuration-template",
+   "description": "Creates a new ReplicationConfigurationTemplate.",
+   "options": [
+    {
+     "name": "--associate-default-security-group"
+    },
+    {
+     "name": "--auto-replicate-new-disks"
+    },
+    {
+     "name": "--bandwidth-throttling",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--create-public-ip"
+    },
+    {
+     "name": "--data-plane-routing",
+     "args": {
+      "suggestions": [
+       "PRIVATE_IP",
+       "PUBLIC_IP"
+      ]
+     }
+    },
+    {
+     "name": "--default-large-staging-disk-type",
+     "args": {
+      "suggestions": [
+       "GP2",
+       "GP3",
+       "ST1",
+       "AUTO"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-encryption",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "CUSTOM",
+       "NONE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--ebs-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--internet-protocol",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--no-associate-default-security-group"
+    },
+    {
+     "name": "--no-auto-replicate-new-disks"
+    },
+    {
+     "name": "--no-create-public-ip"
+    },
+    {
+     "name": "--no-use-dedicated-replication-server"
+    },
+    {
+     "name": "--pit-policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-server-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--replication-servers-security-groups-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--staging-area-subnet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--staging-area-tags",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--use-dedicated-replication-server"
+    }
+   ]
+  },
+  {
+   "name": "create-source-network",
+   "description": "Create a new Source Network resource for a provided VPC ID.",
+   "options": [
+    {
+     "name": "--origin-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-job",
+   "description": "Deletes a single Job by ID.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-launch-action",
+   "description": "Deletes a resource launch action.",
+   "options": [
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-launch-configuration-template",
+   "description": "Deletes a single Launch Configuration Template by ID.",
+   "options": [
+    {
+     "name": "--launch-configuration-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-recovery-instance",
+   "description": "Deletes a single Recovery Instance by ID.",
+   "options": [
+    {
+     "name": "--recovery-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replication-configuration-template",
+   "description": "Deletes a single Replication Configuration Template by ID",
+   "options": [
+    {
+     "name": "--replication-configuration-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-source-network",
+   "description": "Delete Source Network resource.",
+   "options": [
+    {
+     "name": "--source-network-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-source-server",
+   "description": "Deletes a single Source Server by ID.",
+   "options": [
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job-log-items",
+   "description": "Retrieves a detailed Job log with pagination.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-jobs",
+   "description": "Returns a list of Jobs.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-launch-configuration-templates",
+   "description": "Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs",
+   "options": [
+    {
+     "name": "--launch-configuration-template-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-recovery-instances",
+   "description": "Lists all Recovery Instances or multiple Recovery Instances by ID.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-recovery-snapshots",
+   "description": "Lists all Recovery Snapshots for a single Source Server.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-replication-configuration-templates",
+   "description": "Lists all ReplicationConfigurationTemplates, filtered by Source Server IDs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--replication-configuration-template-ids",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-source-networks",
+   "description": "Lists all Source Networks or multiple Source Networks filtered by ID.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-source-servers",
+   "description": "Lists all Source Servers or multiple Source Servers filtered by ID.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disconnect-recovery-instance",
+   "description": "Disconnect a Recovery Instance from Elastic Disaster Recovery.",
+   "options": [
+    {
+     "name": "--recovery-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disconnect-source-server",
+   "description": "Disconnects a specific Source Server from Elastic Disaster Recovery.",
+   "options": [
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-source-network-cfn-template",
+   "description": "Export the Source Network CloudFormation template to an S3 bucket.",
+   "options": [
+    {
+     "name": "--source-network-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-failback-replication-configuration",
+   "description": "Lists all Failback ReplicationConfigurations, filtered by Recovery Instance ID.",
+   "options": [
+    {
+     "name": "--recovery-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-launch-configuration",
+   "description": "Gets a LaunchConfiguration, filtered by Source Server IDs.",
+   "options": [
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-replication-configuration",
+   "description": "Gets a ReplicationConfiguration, filtered by Source Server ID.",
+   "options": [
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "initialize-service",
+   "description": "Initialize Elastic Disaster Recovery."
+  },
+  {
+   "name": "list-extensible-source-servers",
+   "description": "Returns a list of source servers on a staging account that are extensible, which means that: a.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--staging-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-launch-actions",
+   "description": "Lists resource launch actions.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-staging-accounts",
+   "description": "Returns an array of staging accounts for existing extended source servers.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List all tags for your Elastic Disaster Recovery resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-launch-action",
+   "description": "Puts a resource launch action.",
+   "options": [
+    {
+     "name": "--action-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--active",
+     "priority": 75
+    },
+    {
+     "name": "--category",
+     "args": {
+      "suggestions": [
+       "MONITORING",
+       "VALIDATION",
+       "CONFIGURATION",
+       "SECURITY",
+       "OTHER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-active"
+    },
+    {
+     "name": "--no-optional"
+    },
+    {
+     "name": "--optional",
+     "priority": 75
+    },
+    {
+     "name": "--order",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "retry-data-replication",
+   "description": "WARNING: RetryDataReplication is deprecated.",
+   "options": [
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reverse-replication",
+   "description": "Start replication to origin / target region - applies only to protected instances that originated in EC2.",
+   "options": [
+    {
+     "name": "--recovery-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-failback-launch",
+   "description": "Initiates a Job for launching the machine that is being failed back to from the specified Recovery Instance.",
+   "options": [
+    {
+     "name": "--recovery-instance-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-recovery",
+   "description": "Launches Recovery Instances for the specified Source Servers.",
+   "options": [
+    {
+     "name": "--is-drill"
+    },
+    {
+     "name": "--no-is-drill"
+    },
+    {
+     "name": "--source-servers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-replication",
+   "description": "Starts replication for a stopped Source Server.",
+   "options": [
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-source-network-recovery",
+   "description": "Deploy VPC for the specified Source Network and modify launch templates to use this network.",
+   "options": [
+    {
+     "name": "--deploy-as-new"
+    },
+    {
+     "name": "--no-deploy-as-new"
+    },
+    {
+     "name": "--source-networks",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-source-network-replication",
+   "description": "Starts replication for a Source Network.",
+   "options": [
+    {
+     "name": "--source-network-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-failback",
+   "description": "Stops the failback process for a specified Recovery Instance.",
+   "options": [
+    {
+     "name": "--recovery-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-replication",
+   "description": "Stops replication for a Source Server.",
+   "options": [
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-source-network-replication",
+   "description": "Stops replication for a Source Network.",
+   "options": [
+    {
+     "name": "--source-network-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or overwrites only the specified tags for the specified Elastic Disaster Recovery resource or resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-recovery-instances",
+   "description": "Initiates a Job for terminating the EC2 resources associated with the specified Recovery Instances, and then will delete the Recovery Instances from the Elastic Disaster Recovery service.",
+   "options": [
+    {
+     "name": "--recovery-instance-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes the specified set of tags from the specified set of Elastic Disaster Recovery resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-failback-replication-configuration",
+   "description": "Allows you to update the failback replication configuration of a Recovery Instance by ID.",
+   "options": [
+    {
+     "name": "--bandwidth-throttling",
+     "args": {}
+    },
+    {
+     "name": "--internet-protocol",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-use-private-ip"
+    },
+    {
+     "name": "--recovery-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--use-private-ip"
+    }
+   ]
+  },
+  {
+   "name": "update-launch-configuration",
+   "description": "Updates a LaunchConfiguration by Source Server ID.",
+   "options": [
+    {
+     "name": "--copy-private-ip"
+    },
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--launch-disposition",
+     "args": {
+      "suggestions": [
+       "STOPPED",
+       "STARTED"
+      ]
+     }
+    },
+    {
+     "name": "--launch-into-instance-properties",
+     "args": {}
+    },
+    {
+     "name": "--licensing",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-private-ip"
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--no-post-launch-enabled"
+    },
+    {
+     "name": "--post-launch-enabled"
+    },
+    {
+     "name": "--recovery-mode",
+     "args": {
+      "suggestions": [
+       "FAST",
+       "OPTIMAL"
+      ]
+     }
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-instance-type-right-sizing-method",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "BASIC",
+       "IN_AWS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-launch-configuration-template",
+   "description": "Updates an existing Launch Configuration Template by ID.",
+   "options": [
+    {
+     "name": "--copy-private-ip"
+    },
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--export-bucket-arn",
+     "args": {}
+    },
+    {
+     "name": "--launch-configuration-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--launch-disposition",
+     "args": {
+      "suggestions": [
+       "STOPPED",
+       "STARTED"
+      ]
+     }
+    },
+    {
+     "name": "--launch-into-source-instance"
+    },
+    {
+     "name": "--licensing",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-private-ip"
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--no-launch-into-source-instance"
+    },
+    {
+     "name": "--no-post-launch-enabled"
+    },
+    {
+     "name": "--post-launch-enabled"
+    },
+    {
+     "name": "--recovery-mode",
+     "args": {
+      "suggestions": [
+       "FAST",
+       "OPTIMAL"
+      ]
+     }
+    },
+    {
+     "name": "--target-instance-type-right-sizing-method",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "BASIC",
+       "IN_AWS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-replication-configuration",
+   "description": "Allows you to update a ReplicationConfiguration by Source Server ID.",
+   "options": [
+    {
+     "name": "--associate-default-security-group"
+    },
+    {
+     "name": "--auto-replicate-new-disks"
+    },
+    {
+     "name": "--bandwidth-throttling",
+     "args": {}
+    },
+    {
+     "name": "--create-public-ip"
+    },
+    {
+     "name": "--data-plane-routing",
+     "args": {
+      "suggestions": [
+       "PRIVATE_IP",
+       "PUBLIC_IP"
+      ]
+     }
+    },
+    {
+     "name": "--default-large-staging-disk-type",
+     "args": {
+      "suggestions": [
+       "GP2",
+       "GP3",
+       "ST1",
+       "AUTO"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-encryption",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "CUSTOM",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--internet-protocol",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-associate-default-security-group"
+    },
+    {
+     "name": "--no-auto-replicate-new-disks"
+    },
+    {
+     "name": "--no-create-public-ip"
+    },
+    {
+     "name": "--no-use-dedicated-replication-server"
+    },
+    {
+     "name": "--pit-policy",
+     "args": {}
+    },
+    {
+     "name": "--replicated-disks",
+     "args": {}
+    },
+    {
+     "name": "--replication-server-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--replication-servers-security-groups-ids",
+     "args": {}
+    },
+    {
+     "name": "--source-server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--staging-area-subnet-id",
+     "args": {}
+    },
+    {
+     "name": "--staging-area-tags",
+     "args": {}
+    },
+    {
+     "name": "--use-dedicated-replication-server"
+    }
+   ]
+  },
+  {
+   "name": "update-replication-configuration-template",
+   "description": "Updates a ReplicationConfigurationTemplate by ID.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--associate-default-security-group"
+    },
+    {
+     "name": "--auto-replicate-new-disks"
+    },
+    {
+     "name": "--bandwidth-throttling",
+     "args": {}
+    },
+    {
+     "name": "--create-public-ip"
+    },
+    {
+     "name": "--data-plane-routing",
+     "args": {
+      "suggestions": [
+       "PRIVATE_IP",
+       "PUBLIC_IP"
+      ]
+     }
+    },
+    {
+     "name": "--default-large-staging-disk-type",
+     "args": {
+      "suggestions": [
+       "GP2",
+       "GP3",
+       "ST1",
+       "AUTO"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-encryption",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "CUSTOM",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--ebs-encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--internet-protocol",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--no-associate-default-security-group"
+    },
+    {
+     "name": "--no-auto-replicate-new-disks"
+    },
+    {
+     "name": "--no-create-public-ip"
+    },
+    {
+     "name": "--no-use-dedicated-replication-server"
+    },
+    {
+     "name": "--pit-policy",
+     "args": {}
+    },
+    {
+     "name": "--replication-configuration-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-server-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--replication-servers-security-groups-ids",
+     "args": {}
+    },
+    {
+     "name": "--staging-area-subnet-id",
+     "args": {}
+    },
+    {
+     "name": "--staging-area-tags",
+     "args": {}
+    },
+    {
+     "name": "--use-dedicated-replication-server"
+    }
+   ]
+  }
+ ]
+}

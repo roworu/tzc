@@ -1,0 +1,6781 @@
+{
+ "name": "glue",
+ "description": "Glue Defines the public endpoint for the Glue service.",
+ "subcommands": [
+  {
+   "name": "associate-glossary-terms",
+   "description": "Associates one or more glossary terms with an asset in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--glossary-term-identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-create-partition",
+   "description": "Creates one or more partitions in a batch operation.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-input-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-connection",
+   "description": "Deletes a list of connection definitions from the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-name-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-partition",
+   "description": "Deletes one or more partitions in a batch operation.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partitions-to-delete",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-table",
+   "description": "Deletes multiple tables at once.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tables-to-delete",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-table-version",
+   "description": "Deletes a specified batch of versions of a table.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-blueprints",
+   "description": "Retrieves information about a list of blueprints.",
+   "options": [
+    {
+     "name": "--include-blueprint"
+    },
+    {
+     "name": "--include-parameter-spec"
+    },
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-blueprint"
+    },
+    {
+     "name": "--no-include-parameter-spec"
+    }
+   ]
+  },
+  {
+   "name": "batch-get-crawlers",
+   "description": "Returns a list of resource metadata for a given list of crawler names.",
+   "options": [
+    {
+     "name": "--crawler-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-custom-entity-types",
+   "description": "Retrieves the details for the custom patterns specified by a list of names.",
+   "options": [
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-data-quality-result",
+   "description": "Retrieves a list of data quality results for the specified result IDs.",
+   "options": [
+    {
+     "name": "--result-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-data-quality-ruleset-evaluation-run",
+   "description": "Retrieves the details of multiple evaluation runs in a single request.",
+   "options": [
+    {
+     "name": "--run-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-dev-endpoints",
+   "description": "Returns a list of resource metadata for a given list of development endpoint names.",
+   "options": [
+    {
+     "name": "--dev-endpoint-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-iterable-forms",
+   "description": "Retrieves multiple items from an iterable form on an asset in Glue Data Catalog in a single request.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--item-identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iterable-form-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-jobs",
+   "description": "Returns a list of resource metadata for a given list of job names.",
+   "options": [
+    {
+     "name": "--job-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-partition",
+   "description": "Retrieves partitions in a batch request.",
+   "options": [
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partitions-to-get",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-session-context",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-table-optimizer",
+   "description": "Returns the configuration for the specified table optimizers.",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-triggers",
+   "description": "Returns a list of resource metadata for a given list of trigger names.",
+   "options": [
+    {
+     "name": "--trigger-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-workflows",
+   "description": "Returns a list of resource metadata for a given list of workflow names.",
+   "options": [
+    {
+     "name": "--include-graph"
+    },
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-graph"
+    }
+   ]
+  },
+  {
+   "name": "batch-put-data-quality-statistic-annotation",
+   "description": "Annotate datapoints over time for a specific data quality statistic.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--inclusion-annotations",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-stop-job-run",
+   "description": "Stops one or more job runs for a specified job definition.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-run-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-partition",
+   "description": "Updates one or more partitions in a batch operation.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-data-quality-rule-recommendation-run",
+   "description": "Cancels the specified recommendation run that was being used to generate rules.",
+   "options": [
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-data-quality-ruleset-evaluation-run",
+   "description": "Cancels a run where a ruleset is being evaluated against a data source.",
+   "options": [
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-ml-task-run",
+   "description": "Cancels (stops) a task run.",
+   "options": [
+    {
+     "name": "--task-run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-statement",
+   "description": "Cancels the statement.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-origin",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "check-schema-version-validity",
+   "description": "Validates the supplied schema.",
+   "options": [
+    {
+     "name": "--data-format",
+     "args": {
+      "suggestions": [
+       "AVRO",
+       "JSON",
+       "PROTOBUF"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--schema-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-blueprint",
+   "description": "Registers a blueprint with Glue.",
+   "options": [
+    {
+     "name": "--blueprint-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-catalog",
+   "description": "Creates a new catalog in the Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-classifier",
+   "description": "Creates a classifier in the user's account.",
+   "options": [
+    {
+     "name": "--csv-classifier",
+     "args": {}
+    },
+    {
+     "name": "--grok-classifier",
+     "args": {}
+    },
+    {
+     "name": "--json-classifier",
+     "args": {}
+    },
+    {
+     "name": "--xml-classifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-column-statistics-task-settings",
+   "description": "Creates settings for a column statistics task.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--column-name-list",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sample-size",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-connection",
+   "description": "Creates a connection definition in the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-crawler",
+   "description": "Creates a new crawler with specified targets, role, configuration, and optional schedule.",
+   "options": [
+    {
+     "name": "--classifiers",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--crawler-security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--lake-formation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--lineage-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recrawl-policy",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--schema-change-policy",
+     "args": {}
+    },
+    {
+     "name": "--table-prefix",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-custom-entity-type",
+   "description": "Creates a custom pattern that is used to detect sensitive data across the columns and rows of your structured data.",
+   "options": [
+    {
+     "name": "--context-words",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--regex-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-quality-ruleset",
+   "description": "Creates a data quality ruleset with DQDL rules applied to a specified Glue table.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-quality-security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ruleset",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-table",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-database",
+   "description": "Creates a new database in a Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dev-endpoint",
+   "description": "Creates a new development endpoint.",
+   "options": [
+    {
+     "name": "--arguments",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--extra-jars-s3-path",
+     "args": {}
+    },
+    {
+     "name": "--extra-python-libs-s3-path",
+     "args": {}
+    },
+    {
+     "name": "--glue-version",
+     "args": {}
+    },
+    {
+     "name": "--number-of-nodes",
+     "args": {}
+    },
+    {
+     "name": "--number-of-workers",
+     "args": {}
+    },
+    {
+     "name": "--public-key",
+     "args": {}
+    },
+    {
+     "name": "--public-keys",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--subnet-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--worker-type",
+     "args": {
+      "suggestions": [
+       "Standard",
+       "G.1X",
+       "G.2X",
+       "G.025X",
+       "G.4X",
+       "G.8X",
+       "Z.2X"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-glossary",
+   "description": "Creates a business glossary in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-glossary-term",
+   "description": "Creates a glossary term within a business glossary in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--glossary-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--long-description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--short-description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-glue-identity-center-configuration",
+   "description": "Creates a new Glue Identity Center configuration to enable integration between Glue and Amazon Web Services IAM Identity Center for authentication and authorization.",
+   "options": [
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-user-background-sessions-enabled"
+    },
+    {
+     "name": "--scopes",
+     "args": {}
+    },
+    {
+     "name": "--user-background-sessions-enabled"
+    }
+   ]
+  },
+  {
+   "name": "create-integration",
+   "description": "Creates a Zero-ETL integration in the caller's account between two resources with Amazon Resource Names (ARNs): the SourceArn and TargetArn.",
+   "options": [
+    {
+     "name": "--additional-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--data-filter",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--integration-config",
+     "args": {}
+    },
+    {
+     "name": "--integration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--source-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-integration-resource-property",
+   "description": "This API can be used for setting up the ResourceProperty of the Glue connection (for the source) or Glue database ARN (for the target).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-processing-properties",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-processing-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-integration-table-properties",
+   "description": "This API is used to provide optional override properties for the the tables that need to be replicated.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-table-config",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-table-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-job",
+   "description": "Creates a new job definition.",
+   "options": [
+    {
+     "name": "--allocated-capacity",
+     "args": {}
+    },
+    {
+     "name": "--code-gen-configuration-nodes",
+     "args": {}
+    },
+    {
+     "name": "--command",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connections",
+     "args": {}
+    },
+    {
+     "name": "--default-arguments",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-class",
+     "args": {
+      "suggestions": [
+       "FLEX",
+       "STANDARD"
+      ]
+     }
+    },
+    {
+     "name": "--execution-property",
+     "args": {}
+    },
+    {
+     "name": "--glue-version",
+     "args": {}
+    },
+    {
+     "name": "--job-mode",
+     "args": {
+      "suggestions": [
+       "SCRIPT",
+       "VISUAL",
+       "NOTEBOOK"
+      ]
+     }
+    },
+    {
+     "name": "--job-run-queuing-enabled"
+    },
+    {
+     "name": "--log-uri",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--max-retries",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-job-run-queuing-enabled"
+    },
+    {
+     "name": "--non-overridable-arguments",
+     "args": {}
+    },
+    {
+     "name": "--notification-property",
+     "args": {}
+    },
+    {
+     "name": "--number-of-workers",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--source-control-details",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    },
+    {
+     "name": "--worker-type",
+     "args": {
+      "suggestions": [
+       "Standard",
+       "G.1X",
+       "G.2X",
+       "G.025X",
+       "G.4X",
+       "G.8X",
+       "Z.2X"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-ml-transform",
+   "description": "Creates an Glue machine learning transform.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--glue-version",
+     "args": {}
+    },
+    {
+     "name": "--input-record-tables",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--max-retries",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--number-of-workers",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    },
+    {
+     "name": "--transform-encryption",
+     "args": {}
+    },
+    {
+     "name": "--worker-type",
+     "args": {
+      "suggestions": [
+       "Standard",
+       "G.1X",
+       "G.2X",
+       "G.025X",
+       "G.4X",
+       "G.8X",
+       "Z.2X"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-partition",
+   "description": "Creates a new partition.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-partition-index",
+   "description": "Creates a specified partition index in an existing table.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-index",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-registry",
+   "description": "Creates a new registry which may be used to hold a collection of schemas.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--registry-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-schema",
+   "description": "Creates a new schema set and registers the schema definition.",
+   "options": [
+    {
+     "name": "--compatibility",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "DISABLED",
+       "BACKWARD",
+       "BACKWARD_ALL",
+       "FORWARD",
+       "FORWARD_ALL",
+       "FULL",
+       "FULL_ALL"
+      ]
+     }
+    },
+    {
+     "name": "--data-format",
+     "args": {
+      "suggestions": [
+       "AVRO",
+       "JSON",
+       "PROTOBUF"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--schema-definition",
+     "args": {}
+    },
+    {
+     "name": "--schema-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-script",
+   "description": "Transforms a directed acyclic graph (DAG) into code.",
+   "options": [
+    {
+     "name": "--dag-edges",
+     "args": {}
+    },
+    {
+     "name": "--dag-nodes",
+     "args": {}
+    },
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "PYTHON",
+       "SCALA"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-security-configuration",
+   "description": "Creates a new security configuration.",
+   "options": [
+    {
+     "name": "--encryption-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-session",
+   "description": "Creates a new session.",
+   "options": [
+    {
+     "name": "--command",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connections",
+     "args": {}
+    },
+    {
+     "name": "--default-arguments",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--glue-version",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idle-timeout",
+     "args": {}
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--number-of-workers",
+     "args": {}
+    },
+    {
+     "name": "--request-origin",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--session-type",
+     "args": {
+      "suggestions": [
+       "LIVY",
+       "SPARK_CONNECT"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    },
+    {
+     "name": "--worker-type",
+     "args": {
+      "suggestions": [
+       "Standard",
+       "G.1X",
+       "G.2X",
+       "G.025X",
+       "G.4X",
+       "G.8X",
+       "Z.2X"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-table",
+   "description": "Creates a new table definition in the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--open-table-format-input",
+     "args": {}
+    },
+    {
+     "name": "--partition-indexes",
+     "args": {}
+    },
+    {
+     "name": "--table-input",
+     "args": {}
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-table-optimizer",
+   "description": "Creates a new table optimizer for a specific function.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-optimizer-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "compaction",
+       "retention",
+       "orphan_file_deletion"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-trigger",
+   "description": "Creates a new trigger.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-batching-condition",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-start-on-creation"
+    },
+    {
+     "name": "--predicate",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--start-on-creation"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SCHEDULED",
+       "CONDITIONAL",
+       "ON_DEMAND",
+       "EVENT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--workflow-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-usage-profile",
+   "description": "Creates an Glue usage profile.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-user-defined-function",
+   "description": "Creates a new function definition in the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-input",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workflow",
+   "description": "Creates a new workflow.",
+   "options": [
+    {
+     "name": "--default-run-properties",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--max-concurrent-runs",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-asset",
+   "description": "Deletes an asset from Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-asset-type",
+   "description": "Deletes an asset type from Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-attachment",
+   "description": "Deletes a form attachment from an asset in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attachment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--item-identifier",
+     "args": {}
+    },
+    {
+     "name": "--iterable-form-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-blueprint",
+   "description": "Deletes an existing blueprint.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-catalog",
+   "description": "Removes the specified catalog from the Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-classifier",
+   "description": "Removes a classifier from the Data Catalog.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-column-statistics-for-partition",
+   "description": "Delete the partition column statistics of a column.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--column-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-values",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-column-statistics-for-table",
+   "description": "Retrieves table statistics of columns.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--column-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-column-statistics-task-settings",
+   "description": "Deletes settings for a column statistics task.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connection",
+   "description": "Deletes a connection from the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connection-type",
+   "description": "Deletes a custom connection type in Glue.",
+   "options": [
+    {
+     "name": "--connection-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-crawler",
+   "description": "Removes a specified crawler from the Glue Data Catalog, unless the crawler state is RUNNING.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-entity-type",
+   "description": "Deletes a custom pattern by specifying its name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-quality-ruleset",
+   "description": "Deletes a data quality ruleset.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-database",
+   "description": "Removes a specified database from a Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dev-endpoint",
+   "description": "Deletes a specified development endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-form-type",
+   "description": "Deletes a form type from Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-glossary",
+   "description": "Deletes a business glossary from Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-glossary-term",
+   "description": "Deletes a glossary term from Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-glue-identity-center-configuration",
+   "description": "Deletes the existing Glue Identity Center configuration, removing the integration between Glue and Amazon Web Services IAM Identity Center."
+  },
+  {
+   "name": "delete-integration",
+   "description": "Deletes the specified Zero-ETL integration.",
+   "options": [
+    {
+     "name": "--integration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-integration-resource-property",
+   "description": "This API is used for deleting the ResourceProperty of the Glue connection (for the source) or Glue database ARN (for the target).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-integration-table-properties",
+   "description": "Deletes the table properties that have been created for the tables that need to be replicated.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-job",
+   "description": "Deletes a specified job definition.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ml-transform",
+   "description": "Deletes an Glue machine learning transform.",
+   "options": [
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-partition",
+   "description": "Deletes a specified partition.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-values",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-partition-index",
+   "description": "Deletes a specified partition index from an existing table.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-registry",
+   "description": "Delete the entire registry including schema and all of its versions.",
+   "options": [
+    {
+     "name": "--registry-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes a specified policy.",
+   "options": [
+    {
+     "name": "--policy-hash-condition",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-schema",
+   "description": "Deletes the entire schema set, including the schema set and all of its versions.",
+   "options": [
+    {
+     "name": "--schema-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-schema-versions",
+   "description": "Remove versions from the specified schema.",
+   "options": [
+    {
+     "name": "--schema-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--versions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-security-configuration",
+   "description": "Deletes a specified security configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-session",
+   "description": "Deletes the session.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-origin",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-table",
+   "description": "Removes a table definition from the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-table-optimizer",
+   "description": "Deletes an optimizer and all associated metadata for a table.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "compaction",
+       "retention",
+       "orphan_file_deletion"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-table-version",
+   "description": "Deletes a specified version of a table.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-trigger",
+   "description": "Deletes a specified trigger.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-usage-profile",
+   "description": "Deletes the Glue specified usage profile.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user-defined-function",
+   "description": "Deletes an existing function definition from the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow",
+   "description": "Deletes a workflow.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-connection-type",
+   "description": "The DescribeConnectionType API provides full details of the supported options for a given connection type in Glue.",
+   "options": [
+    {
+     "name": "--connection-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-entity",
+   "description": "Provides details regarding the entity used with the connection type, with a description of the data model for each field in the selected entity.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-store-api-version",
+     "args": {}
+    },
+    {
+     "name": "--entity-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-inbound-integrations",
+   "description": "Returns a list of inbound integrations for the specified integration.",
+   "options": [
+    {
+     "name": "--integration-arn",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-integrations",
+   "description": "The API is used to retrieve a list of integrations.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--integration-identifier",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-glossary-terms",
+   "description": "Removes the association of one or more glossary terms from an asset in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--glossary-term-identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-asset",
+   "description": "Retrieves the metadata for an asset in Glue Data Catalog, including its forms, additional attachments, and associated glossary terms.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-asset-type",
+   "description": "Retrieves an asset type in Glue Data Catalog by its identifier.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-blueprint",
+   "description": "Retrieves the details of a blueprint.",
+   "options": [
+    {
+     "name": "--include-blueprint"
+    },
+    {
+     "name": "--include-parameter-spec"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-blueprint"
+    },
+    {
+     "name": "--no-include-parameter-spec"
+    }
+   ]
+  },
+  {
+   "name": "get-blueprint-run",
+   "description": "Retrieves the details of a blueprint run.",
+   "options": [
+    {
+     "name": "--blueprint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-blueprint-runs",
+   "description": "Retrieves the details of blueprint runs for a specified blueprint.",
+   "options": [
+    {
+     "name": "--blueprint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-catalog",
+   "description": "The name of the Catalog to retrieve.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-catalog-import-status",
+   "description": "Retrieves the status of a migration operation.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-catalogs",
+   "description": "Retrieves all catalogs defined in a catalog in the Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--has-databases"
+    },
+    {
+     "name": "--include-root"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-has-databases"
+    },
+    {
+     "name": "--no-include-root"
+    },
+    {
+     "name": "--no-recursive"
+    },
+    {
+     "name": "--parent-catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--recursive"
+    }
+   ]
+  },
+  {
+   "name": "get-classifier",
+   "description": "Retrieve a classifier by name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-classifiers",
+   "description": "Lists all classifier objects in the Data Catalog.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-column-statistics-for-partition",
+   "description": "Retrieves partition statistics of columns.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--column-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-values",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-column-statistics-for-table",
+   "description": "Retrieves table statistics of columns.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--column-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-column-statistics-task-run",
+   "description": "Get the associated metadata/information for a task run, given a task run ID.",
+   "options": [
+    {
+     "name": "--column-statistics-task-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-column-statistics-task-runs",
+   "description": "Retrieves information about all runs associated with the specified table.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-column-statistics-task-settings",
+   "description": "Gets settings for a column statistics task.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connection",
+   "description": "Retrieves a connection definition from the Data Catalog.",
+   "options": [
+    {
+     "name": "--apply-override-for-compute-environment",
+     "args": {
+      "suggestions": [
+       "SPARK",
+       "ATHENA",
+       "PYTHON"
+      ]
+     }
+    },
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--hide-password"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-hide-password"
+    }
+   ]
+  },
+  {
+   "name": "get-connections",
+   "description": "Retrieves a list of connection definitions from the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--hide-password"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-hide-password"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-crawler",
+   "description": "Retrieves metadata for a specified crawler.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-crawler-metrics",
+   "description": "Retrieves metrics about specified crawlers.",
+   "options": [
+    {
+     "name": "--crawler-name-list",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-crawlers",
+   "description": "Retrieves metadata for all crawlers defined in the customer account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-custom-entity-type",
+   "description": "Retrieves the details of a custom pattern by specifying its name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dashboard-url",
+   "description": "Retrieves the URL for the Spark monitoring dashboard for a Glue resource.",
+   "options": [
+    {
+     "name": "--request-origin",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "JOB",
+       "SESSION"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-catalog-encryption-settings",
+   "description": "Retrieves the security configuration for a specified catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-data-quality-model",
+   "description": "Retrieve the training status of the model along with more information (CompletedOn, StartedOn, FailureReason).",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistic-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-data-quality-model-result",
+   "description": "Retrieve a statistic's predictions for a given Profile ID.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistic-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-quality-result",
+   "description": "Retrieves the result of a data quality rule evaluation.",
+   "options": [
+    {
+     "name": "--result-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-quality-rule-recommendation-run",
+   "description": "Gets the specified recommendation run that was used to generate rules.",
+   "options": [
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-quality-ruleset",
+   "description": "Returns an existing ruleset by identifier or name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-quality-ruleset-evaluation-run",
+   "description": "Retrieves a specific run where a ruleset is evaluated against a data source.",
+   "options": [
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-database",
+   "description": "Retrieves the definition of a specified database.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-databases",
+   "description": "Retrieves all databases defined in a given Data Catalog.",
+   "options": [
+    {
+     "name": "--attributes-to-get",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-type",
+     "args": {
+      "suggestions": [
+       "FOREIGN",
+       "ALL",
+       "FEDERATED"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-dataflow-graph",
+   "description": "Transforms a Python script into a directed acyclic graph (DAG).",
+   "options": [
+    {
+     "name": "--python-script",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-dev-endpoint",
+   "description": "Retrieves information about a specified development endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dev-endpoints",
+   "description": "Retrieves all the development endpoints in this Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-entity-records",
+   "description": "This API is used to query preview data from a given connection type or from a native Amazon S3 based Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-name",
+     "args": {}
+    },
+    {
+     "name": "--connection-options",
+     "args": {}
+    },
+    {
+     "name": "--data-store-api-version",
+     "args": {}
+    },
+    {
+     "name": "--entity-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-predicate",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--order-by",
+     "args": {}
+    },
+    {
+     "name": "--selected-fields",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-form-type",
+   "description": "Retrieves a form type in Glue Data Catalog by its identifier.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-glossary",
+   "description": "Retrieves a business glossary in Glue Data Catalog by its identifier.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-glossary-term",
+   "description": "Retrieves a glossary term in Glue Data Catalog by its identifier.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-glue-identity-center-configuration",
+   "description": "Retrieves the current Glue Identity Center configuration details, including the associated Identity Center instance and application information."
+  },
+  {
+   "name": "get-integration-resource-property",
+   "description": "This API is used for fetching the ResourceProperty of the Glue connection (for the source) or Glue database ARN (for the target)",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-integration-table-properties",
+   "description": "This API is used to retrieve optional override properties for the tables that need to be replicated.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job",
+   "description": "Retrieves an existing job definition.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job-bookmark",
+   "description": "Returns information on a job bookmark entry.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-job-run",
+   "description": "Retrieves the metadata for a given job run.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-predecessors-included"
+    },
+    {
+     "name": "--predecessors-included"
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job-runs",
+   "description": "Retrieves metadata for all runs of a given job definition.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-jobs",
+   "description": "Retrieves all current job definitions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-mapping",
+   "description": "Creates mappings.",
+   "options": [
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--sinks",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-materialized-view-refresh-task-run",
+   "description": "Get the associated metadata/information for a task run, given a task run ID.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--materialized-view-refresh-task-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ml-task-run",
+   "description": "Gets details for a specific task run on a machine learning transform.",
+   "options": [
+    {
+     "name": "--task-run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ml-task-runs",
+   "description": "Gets a list of runs for a machine learning transform.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ml-transform",
+   "description": "Gets an Glue machine learning transform artifact and all its corresponding metadata.",
+   "options": [
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ml-transforms",
+   "description": "Gets a sortable, filterable list of existing Glue machine learning transforms.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-partition",
+   "description": "Retrieves information about a specified partition.",
+   "options": [
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-values",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-partition-indexes",
+   "description": "Retrieves the partition indexes associated with a table.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-partitions",
+   "description": "Retrieves information about the partitions in a table.",
+   "options": [
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exclude-column-schema"
+    },
+    {
+     "name": "--expression",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-exclude-column-schema"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-as-of-time",
+     "args": {}
+    },
+    {
+     "name": "--segment",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-plan",
+   "description": "Gets code to perform a specified mapping.",
+   "options": [
+    {
+     "name": "--additional-plan-options-map",
+     "args": {}
+    },
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "PYTHON",
+       "SCALA"
+      ]
+     }
+    },
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--mapping",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sinks",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-registry",
+   "description": "Describes the specified registry in detail.",
+   "options": [
+    {
+     "name": "--registry-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policies",
+   "description": "Retrieves the resource policies set on individual resources by Resource Access Manager during cross-account permission grants.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Retrieves a specified resource policy.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-schema",
+   "description": "Describes the specified schema in detail.",
+   "options": [
+    {
+     "name": "--schema-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-schema-by-definition",
+   "description": "Retrieves a schema by the SchemaDefinition.",
+   "options": [
+    {
+     "name": "--schema-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-schema-version",
+   "description": "Get the specified schema by its unique ID assigned when a version of the schema is created or registered.",
+   "options": [
+    {
+     "name": "--schema-id",
+     "args": {}
+    },
+    {
+     "name": "--schema-version-id",
+     "args": {}
+    },
+    {
+     "name": "--schema-version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-schema-versions-diff",
+   "description": "Fetches the schema version difference in the specified difference type between two stored schema versions in the Schema Registry.",
+   "options": [
+    {
+     "name": "--first-schema-version-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-diff-type",
+     "args": {
+      "suggestions": [
+       "SYNTAX_DIFF"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--schema-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--second-schema-version-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-security-configuration",
+   "description": "Retrieves a specified security configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-security-configurations",
+   "description": "Retrieves a list of all security configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-session",
+   "description": "Retrieves the session.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-origin",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-session-endpoint",
+   "description": "Returns the Spark Connect endpoint URL and authentication token for an interactive session.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-statement",
+   "description": "Retrieves the statement.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-origin",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-table",
+   "description": "Retrieves the Table definition in a Data Catalog for a specified table.",
+   "options": [
+    {
+     "name": "--attributes-to-get",
+     "args": {}
+    },
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-status-details"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-status-details"
+    },
+    {
+     "name": "--query-as-of-time",
+     "args": {}
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-table-optimizer",
+   "description": "Returns the configuration of all optimizers associated with a specified table.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "compaction",
+       "retention",
+       "orphan_file_deletion"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-table-version",
+   "description": "Retrieves a specified version of a table.",
+   "options": [
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-table-versions",
+   "description": "Retrieves a list of strings that identify available versions of a specified table.",
+   "options": [
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-tables",
+   "description": "Retrieves the definitions of some or all of the tables in a given Database.",
+   "options": [
+    {
+     "name": "--attributes-to-get",
+     "args": {}
+    },
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expression",
+     "args": {}
+    },
+    {
+     "name": "--include-status-details"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-status-details"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-as-of-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-tags",
+   "description": "Retrieves a list of tags associated with a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-trigger",
+   "description": "Retrieves the definition of a trigger.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-triggers",
+   "description": "Gets all the triggers associated with a job.",
+   "options": [
+    {
+     "name": "--dependent-job-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-unfiltered-partition-metadata",
+   "description": "Retrieves partition metadata from the Data Catalog that contains unfiltered metadata.",
+   "options": [
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-values",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-session-context",
+     "args": {}
+    },
+    {
+     "name": "--resource-region",
+     "args": {}
+    },
+    {
+     "name": "--supported-permission-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-unfiltered-partitions-metadata",
+   "description": "Retrieves partition metadata from the Data Catalog that contains unfiltered metadata.",
+   "options": [
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expression",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--query-session-context",
+     "args": {}
+    },
+    {
+     "name": "--resource-region",
+     "args": {}
+    },
+    {
+     "name": "--segment",
+     "args": {}
+    },
+    {
+     "name": "--supported-permission-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-unfiltered-table-metadata",
+   "description": "Allows a third-party analytical engine to retrieve unfiltered table metadata from the Data Catalog.",
+   "options": [
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parent-resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--permissions",
+     "args": {}
+    },
+    {
+     "name": "--query-session-context",
+     "args": {}
+    },
+    {
+     "name": "--resource-region",
+     "args": {}
+    },
+    {
+     "name": "--root-resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--supported-dialect",
+     "args": {}
+    },
+    {
+     "name": "--supported-permission-types",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-usage-profile",
+   "description": "Retrieves information about the specified Glue usage profile.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user-defined-function",
+   "description": "Retrieves a specified function definition from the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user-defined-functions",
+   "description": "Retrieves multiple function definitions from the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--function-type",
+     "args": {
+      "suggestions": [
+       "REGULAR_FUNCTION",
+       "AGGREGATE_FUNCTION",
+       "STORED_PROCEDURE"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pattern",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-workflow",
+   "description": "Retrieves resource metadata for a workflow.",
+   "options": [
+    {
+     "name": "--include-graph"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-graph"
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-run",
+   "description": "Retrieves the metadata for a given workflow run.",
+   "options": [
+    {
+     "name": "--include-graph"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-graph"
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-run-properties",
+   "description": "Retrieves the workflow run properties which were set during the run.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-runs",
+   "description": "Retrieves metadata for all runs of a given workflow.",
+   "options": [
+    {
+     "name": "--include-graph"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-graph"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-catalog-to-glue",
+   "description": "Imports an existing Amazon Athena Data Catalog to Glue.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-types",
+   "description": "Lists the asset types defined in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-blueprints",
+   "description": "Lists all the blueprint names in an account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-column-statistics-task-runs",
+   "description": "List all task runs for a particular account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connection-types",
+   "description": "The ListConnectionTypes API provides a discovery mechanism to learn available connection types in Glue.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-crawlers",
+   "description": "Retrieves the names of all crawler resources in this Amazon Web Services account, or the resources with the specified tag.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-crawls",
+   "description": "Returns all the crawls of a specified crawler.",
+   "options": [
+    {
+     "name": "--crawler-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-entity-types",
+   "description": "Lists all the custom patterns that have been created.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-quality-results",
+   "description": "Returns all data quality execution results for your account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-quality-rule-recommendation-runs",
+   "description": "Lists the recommendation runs meeting the filter criteria.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-quality-ruleset-evaluation-runs",
+   "description": "Lists all the runs meeting the filter criteria, where a ruleset is evaluated against a data source.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-quality-rulesets",
+   "description": "Returns a paginated list of rulesets for the specified list of Glue tables.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-quality-statistic-annotations",
+   "description": "Retrieve annotations for a data quality statistic.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {}
+    },
+    {
+     "name": "--statistic-id",
+     "args": {}
+    },
+    {
+     "name": "--timestamp-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-quality-statistics",
+   "description": "Retrieves a list of data quality statistics.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {}
+    },
+    {
+     "name": "--statistic-id",
+     "args": {}
+    },
+    {
+     "name": "--timestamp-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dev-endpoints",
+   "description": "Retrieves the names of all DevEndpoint resources in this Amazon Web Services account, or the resources with the specified tag.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-entities",
+   "description": "Returns the available entities supported by the connection type.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-name",
+     "args": {}
+    },
+    {
+     "name": "--data-store-api-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--parent-entity-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-form-types",
+   "description": "Lists the form types defined in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-glossaries",
+   "description": "Lists business glossaries in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-glossary-terms",
+   "description": "Lists glossary terms within a business glossary in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--glossary-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-integration-resource-properties",
+   "description": "List integration resource properties for a single customer.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-iterable-forms",
+   "description": "Lists the items in an iterable form on an asset in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iterable-form-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "Retrieves the names of all job resources in this Amazon Web Services account, or the resources with the specified tag.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-materialized-view-refresh-task-runs",
+   "description": "List all task runs for a particular account.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ml-transforms",
+   "description": "Retrieves a sortable, filterable list of existing Glue machine learning transforms in this Amazon Web Services account, or the resources with the specified tag.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-registries",
+   "description": "Returns a list of registries that you have created, with minimal registry information.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-schema-versions",
+   "description": "Returns a list of schema versions that you have created, with minimal information.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--schema-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-schemas",
+   "description": "Returns a list of schemas with minimal details.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registry-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sessions",
+   "description": "Retrieve a list of sessions.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--request-origin",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-statements",
+   "description": "Lists statements for the session.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--request-origin",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-table-optimizer-runs",
+   "description": "Lists the history of previous optimizer runs for a specific table.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "compaction",
+       "retention",
+       "orphan_file_deletion"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-triggers",
+   "description": "Retrieves the names of all trigger resources in this Amazon Web Services account, or the resources with the specified tag.",
+   "options": [
+    {
+     "name": "--dependent-job-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-usage-profiles",
+   "description": "List all the Glue usage profiles.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflows",
+   "description": "Lists names of workflows created in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-integration",
+   "description": "Modifies a Zero-ETL integration in the caller's account.",
+   "options": [
+    {
+     "name": "--data-filter",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--integration-config",
+     "args": {}
+    },
+    {
+     "name": "--integration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-asset",
+   "description": "Creates or updates an asset in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--asset-type-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--forms",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-asset-type",
+   "description": "Creates or updates an asset type in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--forms",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-attachment",
+   "description": "Attaches a form to an asset or an iterable form item in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--asset-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attachment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--form-type-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--item-identifier",
+     "args": {}
+    },
+    {
+     "name": "--iterable-form-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-data-catalog-encryption-settings",
+   "description": "Sets the security configuration for a specified catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--data-catalog-encryption-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-data-quality-profile-annotation",
+   "description": "Annotate all datapoints for a Profile.",
+   "options": [
+    {
+     "name": "--inclusion-annotation",
+     "args": {
+      "suggestions": [
+       "INCLUDE",
+       "EXCLUDE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-form-type",
+   "description": "Creates or updates a form type in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Sets the Data Catalog resource policy for access control.",
+   "options": [
+    {
+     "name": "--enable-hybrid",
+     "args": {
+      "suggestions": [
+       "TRUE",
+       "FALSE"
+      ]
+     }
+    },
+    {
+     "name": "--policy-exists-condition",
+     "args": {
+      "suggestions": [
+       "MUST_EXIST",
+       "NOT_EXIST",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--policy-hash-condition",
+     "args": {}
+    },
+    {
+     "name": "--policy-in-json",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-schema-version-metadata",
+   "description": "Puts the metadata key value pair for a specified schema version ID.",
+   "options": [
+    {
+     "name": "--metadata-key-value",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-id",
+     "args": {}
+    },
+    {
+     "name": "--schema-version-id",
+     "args": {}
+    },
+    {
+     "name": "--schema-version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-workflow-run-properties",
+   "description": "Puts the specified workflow run properties for the given workflow run.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-properties",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "query-schema-version-metadata",
+   "description": "Queries for the schema version metadata information.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--metadata-list",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--schema-id",
+     "args": {}
+    },
+    {
+     "name": "--schema-version-id",
+     "args": {}
+    },
+    {
+     "name": "--schema-version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-connection-type",
+   "description": "Registers a custom connection type in Glue based on the configuration provided.",
+   "options": [
+    {
+     "name": "--connection-properties",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connection-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connector-authentication-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--integration-type",
+     "args": {
+      "suggestions": [
+       "REST"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--rest-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-schema-version",
+   "description": "Adds a new version to the existing schema.",
+   "options": [
+    {
+     "name": "--schema-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-schema-version-metadata",
+   "description": "Removes a key value pair from the schema version metadata for the specified schema version ID.",
+   "options": [
+    {
+     "name": "--metadata-key-value",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-id",
+     "args": {}
+    },
+    {
+     "name": "--schema-version-id",
+     "args": {}
+    },
+    {
+     "name": "--schema-version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reset-job-bookmark",
+   "description": "Resets a bookmark entry.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "resume-workflow-run",
+   "description": "Restarts selected nodes of a previous partially completed workflow run and resumes the workflow run.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "run-statement",
+   "description": "Executes the statement.",
+   "options": [
+    {
+     "name": "--code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-origin",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-assets",
+   "description": "Searches for assets in Glue Data Catalog using full-text search, filters, sorting, and aggregations.",
+   "options": [
+    {
+     "name": "--filter-clause",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-text",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-tables",
+   "description": "Searches a set of tables based on properties in the table metadata as well as on the parent database.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-status-details"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-include-status-details"
+    },
+    {
+     "name": "--resource-share-type",
+     "args": {
+      "suggestions": [
+       "FOREIGN",
+       "ALL",
+       "FEDERATED"
+      ]
+     }
+    },
+    {
+     "name": "--search-text",
+     "args": {}
+    },
+    {
+     "name": "--sort-criteria",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-blueprint-run",
+   "description": "Starts a new run of the specified blueprint.",
+   "options": [
+    {
+     "name": "--blueprint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-column-statistics-task-run",
+   "description": "Starts a column statistics task run, for a specified table and columns.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--column-name-list",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sample-size",
+     "args": {}
+    },
+    {
+     "name": "--security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-column-statistics-task-run-schedule",
+   "description": "Starts a column statistics task run schedule.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-crawler",
+   "description": "Starts a crawl using the specified crawler, regardless of what is scheduled.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-crawler-schedule",
+   "description": "Changes the schedule state of the specified crawler to SCHEDULED, unless the crawler is already running or the schedule state is already SCHEDULED.",
+   "options": [
+    {
+     "name": "--crawler-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-data-quality-rule-recommendation-run",
+   "description": "Starts a recommendation run that is used to generate rules when you don't know what rules to write.",
+   "options": [
+    {
+     "name": "--additional-run-options",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--created-ruleset-name",
+     "args": {}
+    },
+    {
+     "name": "--data-quality-security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--number-of-workers",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-data-quality-ruleset-evaluation-run",
+   "description": "Once you have a ruleset definition (either recommended or your own), you call this operation to evaluate the ruleset against a data source (Glue table).",
+   "options": [
+    {
+     "name": "--additional-data-sources",
+     "args": {}
+    },
+    {
+     "name": "--additional-run-options",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--number-of-workers",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ruleset-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-export-labels-task-run",
+   "description": "Begins an asynchronous task to export all labeled data for a particular transform.",
+   "options": [
+    {
+     "name": "--output-s3-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-import-labels-task-run",
+   "description": "Enables you to provide additional labels (examples of truth) to be used to teach the machine learning transform and improve its quality.",
+   "options": [
+    {
+     "name": "--input-s3-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-replace-all-labels"
+    },
+    {
+     "name": "--replace-all-labels"
+    },
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-job-run",
+   "description": "Starts a job run using a job definition.",
+   "options": [
+    {
+     "name": "--allocated-capacity",
+     "args": {}
+    },
+    {
+     "name": "--arguments",
+     "args": {}
+    },
+    {
+     "name": "--execution-class",
+     "args": {
+      "suggestions": [
+       "FLEX",
+       "STANDARD"
+      ]
+     }
+    },
+    {
+     "name": "--execution-role-session-policy",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-run-id",
+     "args": {}
+    },
+    {
+     "name": "--job-run-queuing-enabled"
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--no-job-run-queuing-enabled"
+    },
+    {
+     "name": "--notification-property",
+     "args": {}
+    },
+    {
+     "name": "--number-of-workers",
+     "args": {}
+    },
+    {
+     "name": "--security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    },
+    {
+     "name": "--worker-type",
+     "args": {
+      "suggestions": [
+       "Standard",
+       "G.1X",
+       "G.2X",
+       "G.025X",
+       "G.4X",
+       "G.8X",
+       "Z.2X"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "start-materialized-view-refresh-task-run",
+   "description": "Starts a materialized view refresh task run, for a specified table and columns.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--full-refresh"
+    },
+    {
+     "name": "--no-full-refresh"
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-ml-evaluation-task-run",
+   "description": "Starts a task to estimate the quality of the transform.",
+   "options": [
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-ml-labeling-set-generation-task-run",
+   "description": "Starts the active learning workflow for your machine learning transform to improve the transform's quality by generating label sets and adding labels.",
+   "options": [
+    {
+     "name": "--output-s3-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-trigger",
+   "description": "Starts an existing trigger.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-workflow-run",
+   "description": "Starts a new run of the specified workflow.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-column-statistics-task-run",
+   "description": "Stops a task run for the specified table.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-column-statistics-task-run-schedule",
+   "description": "Stops a column statistics task run schedule.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-crawler",
+   "description": "If the specified crawler is running, stops the crawl.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-crawler-schedule",
+   "description": "Sets the schedule state of the specified crawler to NOT_SCHEDULED, but does not stop the crawler if it is already running.",
+   "options": [
+    {
+     "name": "--crawler-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-materialized-view-refresh-task-run",
+   "description": "Stops a materialized view refresh task run, for a specified table and columns.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-session",
+   "description": "Stops the session.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-origin",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-trigger",
+   "description": "Stops a specified trigger.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-workflow-run",
+   "description": "Stops the execution of the specified workflow run.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags-to-add",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-connection",
+   "description": "Tests a connection to a service to validate the service credentials that you provide.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-name",
+     "args": {}
+    },
+    {
+     "name": "--test-connection-input",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags-to-remove",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-asset",
+   "description": "Updates the name and description of an existing asset in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-blueprint",
+   "description": "Updates a registered blueprint.",
+   "options": [
+    {
+     "name": "--blueprint-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-catalog",
+   "description": "Updates an existing catalog's properties in the Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog-input",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-classifier",
+   "description": "Modifies an existing classifier (a GrokClassifier, an XMLClassifier, a JsonClassifier, or a CsvClassifier, depending on which field is present).",
+   "options": [
+    {
+     "name": "--csv-classifier",
+     "args": {}
+    },
+    {
+     "name": "--grok-classifier",
+     "args": {}
+    },
+    {
+     "name": "--json-classifier",
+     "args": {}
+    },
+    {
+     "name": "--xml-classifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-column-statistics-for-partition",
+   "description": "Creates or updates partition statistics of columns.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--column-statistics-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-values",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-column-statistics-for-table",
+   "description": "Creates or updates table statistics of columns.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--column-statistics-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-column-statistics-task-settings",
+   "description": "Updates settings for a column statistics task.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--column-name-list",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {}
+    },
+    {
+     "name": "--sample-size",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-connection",
+   "description": "Updates a connection definition in the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-crawler",
+   "description": "Updates a crawler.",
+   "options": [
+    {
+     "name": "--classifiers",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--crawler-security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--lake-formation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--lineage-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recrawl-policy",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--schema-change-policy",
+     "args": {}
+    },
+    {
+     "name": "--table-prefix",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-crawler-schedule",
+   "description": "Updates the schedule of a crawler using a cron expression.",
+   "options": [
+    {
+     "name": "--crawler-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-data-quality-ruleset",
+   "description": "Updates the specified data quality ruleset.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ruleset",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-database",
+   "description": "Updates an existing database definition in a Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dev-endpoint",
+   "description": "Updates a specified development endpoint.",
+   "options": [
+    {
+     "name": "--add-arguments",
+     "args": {}
+    },
+    {
+     "name": "--add-public-keys",
+     "args": {}
+    },
+    {
+     "name": "--custom-libraries",
+     "args": {}
+    },
+    {
+     "name": "--delete-arguments",
+     "args": {}
+    },
+    {
+     "name": "--delete-public-keys",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-update-etl-libraries"
+    },
+    {
+     "name": "--public-key",
+     "args": {}
+    },
+    {
+     "name": "--update-etl-libraries"
+    }
+   ]
+  },
+  {
+   "name": "update-glossary",
+   "description": "Updates a business glossary in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-glossary-term",
+   "description": "Updates a glossary term in Glue Data Catalog.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--long-description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--short-description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-glue-identity-center-configuration",
+   "description": "Updates the existing Glue Identity Center configuration, allowing modification of scopes and permissions for the integration.",
+   "options": [
+    {
+     "name": "--no-user-background-sessions-enabled"
+    },
+    {
+     "name": "--scopes",
+     "args": {}
+    },
+    {
+     "name": "--user-background-sessions-enabled"
+    }
+   ]
+  },
+  {
+   "name": "update-integration-resource-property",
+   "description": "This API can be used for updating the ResourceProperty of the Glue connection (for the source) or Glue database ARN (for the target).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-processing-properties",
+     "args": {}
+    },
+    {
+     "name": "--target-processing-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-integration-table-properties",
+   "description": "This API is used to provide optional override properties for the tables that need to be replicated.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-table-config",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-table-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-job",
+   "description": "Updates an existing job definition.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-update",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-job-from-source-control",
+   "description": "Synchronizes a job from the source control repository.",
+   "options": [
+    {
+     "name": "--auth-strategy",
+     "args": {
+      "suggestions": [
+       "PERSONAL_ACCESS_TOKEN",
+       "AWS_SECRETS_MANAGER"
+      ]
+     }
+    },
+    {
+     "name": "--auth-token",
+     "args": {}
+    },
+    {
+     "name": "--branch-name",
+     "args": {}
+    },
+    {
+     "name": "--commit-id",
+     "args": {}
+    },
+    {
+     "name": "--folder",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITLAB",
+       "BITBUCKET",
+       "AWS_CODE_COMMIT"
+      ]
+     }
+    },
+    {
+     "name": "--repository-name",
+     "args": {}
+    },
+    {
+     "name": "--repository-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-ml-transform",
+   "description": "Updates an existing machine learning transform.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--glue-version",
+     "args": {}
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--max-retries",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--number-of-workers",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    },
+    {
+     "name": "--transform-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--worker-type",
+     "args": {
+      "suggestions": [
+       "Standard",
+       "G.1X",
+       "G.2X",
+       "G.025X",
+       "G.4X",
+       "G.8X",
+       "Z.2X"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-partition",
+   "description": "Updates a partition.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partition-value-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-registry",
+   "description": "Updates an existing registry which is used to hold a collection of schemas.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registry-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-schema",
+   "description": "Updates the description, compatibility setting, or version checkpoint for a schema set.",
+   "options": [
+    {
+     "name": "--compatibility",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "DISABLED",
+       "BACKWARD",
+       "BACKWARD_ALL",
+       "FORWARD",
+       "FORWARD_ALL",
+       "FULL",
+       "FULL_ALL"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--schema-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-source-control-from-job",
+   "description": "Synchronizes a job to the source control repository.",
+   "options": [
+    {
+     "name": "--auth-strategy",
+     "args": {
+      "suggestions": [
+       "PERSONAL_ACCESS_TOKEN",
+       "AWS_SECRETS_MANAGER"
+      ]
+     }
+    },
+    {
+     "name": "--auth-token",
+     "args": {}
+    },
+    {
+     "name": "--branch-name",
+     "args": {}
+    },
+    {
+     "name": "--commit-id",
+     "args": {}
+    },
+    {
+     "name": "--folder",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITLAB",
+       "BITBUCKET",
+       "AWS_CODE_COMMIT"
+      ]
+     }
+    },
+    {
+     "name": "--repository-name",
+     "args": {}
+    },
+    {
+     "name": "--repository-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-table",
+   "description": "Updates a metadata table in the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--no-skip-archive"
+    },
+    {
+     "name": "--skip-archive"
+    },
+    {
+     "name": "--table-input",
+     "args": {}
+    },
+    {
+     "name": "--transaction-id",
+     "args": {}
+    },
+    {
+     "name": "--update-open-table-format-input",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    },
+    {
+     "name": "--view-update-action",
+     "args": {
+      "suggestions": [
+       "ADD",
+       "REPLACE",
+       "ADD_OR_REPLACE",
+       "DROP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-table-optimizer",
+   "description": "Updates the configuration for an existing table optimizer.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-optimizer-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "compaction",
+       "retention",
+       "orphan_file_deletion"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-trigger",
+   "description": "Updates a trigger definition.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trigger-update",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-usage-profile",
+   "description": "Update an Glue usage profile.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-user-defined-function",
+   "description": "Updates an existing function definition in the Data Catalog.",
+   "options": [
+    {
+     "name": "--catalog-id",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workflow",
+   "description": "Updates an existing workflow.",
+   "options": [
+    {
+     "name": "--default-run-properties",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--max-concurrent-runs",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

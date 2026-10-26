@@ -1,0 +1,1202 @@
+{
+ "name": "events",
+ "description": "Amazon EventBridge helps you to respond to state changes in your Amazon Web Services resources.",
+ "subcommands": [
+  {
+   "name": "activate-event-source",
+   "description": "Activates a partner event source that has been deactivated.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-replay",
+   "description": "Cancels the specified replay.",
+   "options": [
+    {
+     "name": "--replay-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-api-destination",
+   "description": "Creates an API destination, which is an HTTP invocation endpoint configured as a target for events.",
+   "options": [
+    {
+     "name": "--connection-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--http-method",
+     "args": {
+      "suggestions": [
+       "POST",
+       "GET",
+       "HEAD",
+       "OPTIONS",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--invocation-endpoint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--invocation-rate-limit-per-second",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-archive",
+   "description": "Creates an archive of events with the specified settings.",
+   "options": [
+    {
+     "name": "--archive-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-pattern",
+     "args": {}
+    },
+    {
+     "name": "--event-source-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--retention-days",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-connection",
+   "description": "Creates a connection.",
+   "options": [
+    {
+     "name": "--auth-parameters",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorization-type",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "OAUTH_CLIENT_CREDENTIALS",
+       "API_KEY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--invocation-connectivity-parameters",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-endpoint",
+   "description": "Creates a global endpoint.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-buses",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-config",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--routing-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-event-bus",
+   "description": "Creates a new event bus within your account.",
+   "options": [
+    {
+     "name": "--dead-letter-config",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-source-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-partner-event-source",
+   "description": "Called by an SaaS partner to create a partner event source.",
+   "options": [
+    {
+     "name": "--account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deactivate-event-source",
+   "description": "You can use this operation to temporarily stop receiving events from the specified partner event source.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deauthorize-connection",
+   "description": "Removes all authorization parameters from the connection.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-api-destination",
+   "description": "Deletes the specified API destination.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-archive",
+   "description": "Deletes the specified archive.",
+   "options": [
+    {
+     "name": "--archive-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connection",
+   "description": "Deletes a connection.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-endpoint",
+   "description": "Delete an existing global endpoint.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-bus",
+   "description": "Deletes the specified custom event bus or partner event bus.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-partner-event-source",
+   "description": "This operation is used by SaaS partners to delete a partner event source.",
+   "options": [
+    {
+     "name": "--account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-rule",
+   "description": "Deletes the specified rule.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "describe-api-destination",
+   "description": "Retrieves details about an API destination.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-archive",
+   "description": "Retrieves details about an archive.",
+   "options": [
+    {
+     "name": "--archive-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-connection",
+   "description": "Retrieves details about a connection.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoint",
+   "description": "Get the information about an existing global endpoint.",
+   "options": [
+    {
+     "name": "--home-region",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-event-bus",
+   "description": "Displays details about an event bus in your account.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-event-source",
+   "description": "This operation lists details about a partner event source that is shared with your account.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-partner-event-source",
+   "description": "An SaaS partner can use this operation to list details about a partner event source that they have created.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-replay",
+   "description": "Retrieves details about a replay.",
+   "options": [
+    {
+     "name": "--replay-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-rule",
+   "description": "Describes the specified rule.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-rule",
+   "description": "Disables the specified rule.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-rule",
+   "description": "Enables the specified rule.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-api-destinations",
+   "description": "Retrieves a list of API destination in the account in the current Region.",
+   "options": [
+    {
+     "name": "--connection-arn",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-archives",
+   "description": "Lists your archives.",
+   "options": [
+    {
+     "name": "--event-source-arn",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED",
+       "CREATING",
+       "UPDATING",
+       "CREATE_FAILED",
+       "UPDATE_FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-connections",
+   "description": "Retrieves a list of connections from the account.",
+   "options": [
+    {
+     "name": "--connection-state",
+     "args": {
+      "suggestions": [
+       "CREATING",
+       "UPDATING",
+       "DELETING",
+       "AUTHORIZED",
+       "DEAUTHORIZED",
+       "AUTHORIZING",
+       "DEAUTHORIZING",
+       "ACTIVE",
+       "FAILED_CONNECTIVITY"
+      ]
+     }
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-endpoints",
+   "description": "List the global endpoints associated with this account.",
+   "options": [
+    {
+     "name": "--home-region",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-buses",
+   "description": "Lists all the event buses in your account, including the default event bus, custom event buses, and partner event buses.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-sources",
+   "description": "You can use this to see all the partner event sources that have been shared with your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-partner-event-source-accounts",
+   "description": "An SaaS partner can use this operation to display the Amazon Web Services account ID that a particular partner event source name is associated with.",
+   "options": [
+    {
+     "name": "--event-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-partner-event-sources",
+   "description": "An SaaS partner can use this operation to list all the partner event source names that they have created.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-replays",
+   "description": "Lists your replays.",
+   "options": [
+    {
+     "name": "--event-source-arn",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "STARTING",
+       "RUNNING",
+       "CANCELLING",
+       "COMPLETED",
+       "CANCELLED",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-rule-names-by-target",
+   "description": "Lists the rules for the specified target.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-rules",
+   "description": "Lists your Amazon EventBridge rules.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Displays the tags associated with an EventBridge resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-targets-by-rule",
+   "description": "Lists the targets assigned to the specified rule.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-events",
+   "description": "Sends custom events to Amazon EventBridge so that they can be matched to rules.",
+   "options": [
+    {
+     "name": "--endpoint-id",
+     "args": {}
+    },
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-partner-events",
+   "description": "This is used by SaaS partners to write events to a customer's partner event bus.",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-permission",
+   "description": "Running PutPermission permits the specified Amazon Web Services account or Amazon Web Services organization to put events to the specified event bus.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {}
+    },
+    {
+     "name": "--condition",
+     "args": {}
+    },
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {}
+    },
+    {
+     "name": "--statement-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-rule",
+   "description": "Creates or updates the specified rule.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--event-pattern",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--schedule-expression",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED",
+       "ENABLED_WITH_ALL_CLOUDTRAIL_MANAGEMENT_EVENTS"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-targets",
+   "description": "Adds the specified targets to the specified rule, or updates the targets if they are already associated with the rule.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-permission",
+   "description": "Revokes the permission of another Amazon Web Services account to be able to put events to the specified event bus.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--no-remove-all-permissions"
+    },
+    {
+     "name": "--remove-all-permissions"
+    },
+    {
+     "name": "--statement-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-targets",
+   "description": "Removes the specified targets from the specified rule.",
+   "options": [
+    {
+     "name": "--event-bus-name",
+     "args": {}
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-replay",
+   "description": "Starts the specified replay.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-source-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replay-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified EventBridge resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-event-pattern",
+   "description": "Tests whether the specified event pattern matches the provided event.",
+   "options": [
+    {
+     "name": "--event",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-pattern",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified EventBridge resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-api-destination",
+   "description": "Updates an API destination.",
+   "options": [
+    {
+     "name": "--connection-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--http-method",
+     "args": {
+      "suggestions": [
+       "POST",
+       "GET",
+       "HEAD",
+       "OPTIONS",
+       "PUT",
+       "PATCH",
+       "DELETE"
+      ]
+     }
+    },
+    {
+     "name": "--invocation-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--invocation-rate-limit-per-second",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-archive",
+   "description": "Updates the specified archive.",
+   "options": [
+    {
+     "name": "--archive-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-pattern",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--retention-days",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-connection",
+   "description": "Updates settings for a connection.",
+   "options": [
+    {
+     "name": "--auth-parameters",
+     "args": {}
+    },
+    {
+     "name": "--authorization-type",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "OAUTH_CLIENT_CREDENTIALS",
+       "API_KEY"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--invocation-connectivity-parameters",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-endpoint",
+   "description": "Update an existing endpoint.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-buses",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-config",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--routing-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-event-bus",
+   "description": "Updates the specified event bus.",
+   "options": [
+    {
+     "name": "--dead-letter-config",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

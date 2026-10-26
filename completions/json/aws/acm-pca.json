@@ -1,0 +1,548 @@
+{
+ "name": "acm-pca",
+ "description": "This is the Amazon Web Services Private Certificate Authority API Reference.",
+ "subcommands": [
+  {
+   "name": "create-certificate-authority",
+   "description": "Creates a root or subordinate private certificate authority (CA).",
+   "options": [
+    {
+     "name": "--certificate-authority-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-authority-type",
+     "args": {
+      "suggestions": [
+       "ROOT",
+       "SUBORDINATE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--key-storage-security-standard",
+     "args": {
+      "suggestions": [
+       "FIPS_140_2_LEVEL_2_OR_HIGHER",
+       "FIPS_140_2_LEVEL_3_OR_HIGHER",
+       "CCPC_LEVEL_1_OR_HIGHER"
+      ]
+     }
+    },
+    {
+     "name": "--revocation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--usage-mode",
+     "args": {
+      "suggestions": [
+       "GENERAL_PURPOSE",
+       "SHORT_LIVED_CERTIFICATE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-certificate-authority-audit-report",
+   "description": "Creates an audit report that lists every time that your CA private key is used to issue a certificate.",
+   "options": [
+    {
+     "name": "--audit-report-response-format",
+     "args": {
+      "suggestions": [
+       "JSON",
+       "CSV"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-bucket-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-permission",
+   "description": "Grants one or more permissions on a private CA to the Certificate Manager (ACM) service principal (acm.amazonaws.com).",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-account",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-certificate-authority",
+   "description": "Deletes a private certificate authority (CA).",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permanent-deletion-time-in-days",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-permission",
+   "description": "Revokes permissions on a private CA granted to the Certificate Manager (ACM) service principal (acm.amazonaws.com).",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-account",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-policy",
+   "description": "Deletes the resource-based policy attached to a private CA.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-certificate-authority",
+   "description": "Lists information about your private certificate authority (CA) or one that has been shared with you.",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-certificate-authority-audit-report",
+   "description": "Lists information about a specific audit report created by calling the CreateCertificateAuthorityAuditReport action.",
+   "options": [
+    {
+     "name": "--audit-report-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-certificate",
+   "description": "Retrieves a certificate from your private CA or one that has been shared with you.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-certificate-authority-certificate",
+   "description": "Retrieves the certificate and certificate chain for your private certificate authority (CA) or one that has been shared with you.",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-certificate-authority-csr",
+   "description": "Retrieves the certificate signing request (CSR) for your private certificate authority (CA).",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy",
+   "description": "Retrieves the resource-based policy attached to a private CA.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-certificate-authority-certificate",
+   "description": "Imports a signed private CA certificate into Amazon Web Services Private CA.",
+   "options": [
+    {
+     "name": "--certificate",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-chain",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "issue-certificate",
+   "description": "Uses your private certificate authority (CA), or one that has been shared with you, to issue a client certificate.",
+   "options": [
+    {
+     "name": "--api-passthrough",
+     "args": {}
+    },
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--csr",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--signing-algorithm",
+     "args": {
+      "suggestions": [
+       "SHA256WITHECDSA",
+       "SHA384WITHECDSA",
+       "SHA512WITHECDSA",
+       "SHA256WITHRSA",
+       "SHA384WITHRSA",
+       "SHA512WITHRSA",
+       "SM3WITHSM2",
+       "ML_DSA_44",
+       "ML_DSA_65",
+       "ML_DSA_87"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--template-arn",
+     "args": {}
+    },
+    {
+     "name": "--validity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validity-not-before",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-certificate-authorities",
+   "description": "Lists the private certificate authorities that you created by using the CreateCertificateAuthority action.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-owner",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "OTHER_ACCOUNTS"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-permissions",
+   "description": "List all permissions on a private CA, if any, granted to the Certificate Manager (ACM) service principal (acm.amazonaws.com).",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags",
+   "description": "Lists the tags, if any, that are associated with your private CA or one that has been shared with you.",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-policy",
+   "description": "Attaches a resource-based policy to a private CA.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-certificate-authority",
+   "description": "Restores a certificate authority (CA) that is in the DELETED state.",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-certificate",
+   "description": "Revokes a certificate that was issued inside Amazon Web Services Private CA.",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-serial",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revocation-reason",
+     "args": {
+      "suggestions": [
+       "UNSPECIFIED",
+       "KEY_COMPROMISE",
+       "CERTIFICATE_AUTHORITY_COMPROMISE",
+       "AFFILIATION_CHANGED",
+       "SUPERSEDED",
+       "CESSATION_OF_OPERATION",
+       "PRIVILEGE_WITHDRAWN",
+       "A_A_COMPROMISE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-certificate-authority",
+   "description": "Adds one or more tags to your private CA.",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-certificate-authority",
+   "description": "Remove one or more tags from your private CA.",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-certificate-authority",
+   "description": "Updates the status or configuration of a private certificate authority (CA).",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revocation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "CREATING",
+       "PENDING_CERTIFICATE",
+       "ACTIVE",
+       "DELETED",
+       "DISABLED",
+       "EXPIRED",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "audit-report-created",
+     "description": "Wait until a Audit Report is created It will poll every 3 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--audit-report-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--certificate-authority-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "certificate-authority-csr-created",
+     "description": "Wait until a Certificate Authority CSR is created It will poll every 3 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--certificate-authority-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "certificate-issued",
+     "description": "Wait until a certificate is issued It will poll every 1 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--certificate-arn",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--certificate-authority-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

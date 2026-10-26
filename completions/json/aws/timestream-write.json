@@ -1,0 +1,345 @@
+{
+ "name": "timestream-write",
+ "description": "Amazon Timestream Write Amazon Timestream is a fast, scalable, fully managed time-series database service that makes it easy to store and analyze trillions of time-series data points per day.",
+ "subcommands": [
+  {
+   "name": "create-batch-load-task",
+   "description": "Creates a new Timestream batch load task.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-model-configuration",
+     "args": {}
+    },
+    {
+     "name": "--data-source-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--record-version",
+     "args": {}
+    },
+    {
+     "name": "--report-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-database",
+   "description": "Creates a new Timestream database.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-table",
+   "description": "Adds a new table to an existing database in your account.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--magnetic-store-write-properties",
+     "args": {}
+    },
+    {
+     "name": "--retention-properties",
+     "args": {}
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-database",
+   "description": "Deletes a given Timestream database.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-table",
+   "description": "Deletes a given Timestream table.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-batch-load-task",
+   "description": "Returns information about the batch load task, including configurations, mappings, progress, and other details.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-database",
+   "description": "Returns information about the database, including the database name, time that the database was created, and the total number of tables found within the database.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoints",
+   "description": "Returns a list of available endpoints to make Timestream API calls against."
+  },
+  {
+   "name": "describe-table",
+   "description": "Returns information about the table, including the table name, database name, retention duration of the memory store and the magnetic store.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-batch-load-tasks",
+   "description": "Provides a list of batch load tasks, along with the name, status, when the task is resumable until, and other details.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--task-status",
+     "args": {
+      "suggestions": [
+       "CREATED",
+       "IN_PROGRESS",
+       "FAILED",
+       "SUCCEEDED",
+       "PROGRESS_STOPPED",
+       "PENDING_RESUME"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-databases",
+   "description": "Returns a list of your Timestream databases.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tables",
+   "description": "Provides a list of tables, along with the name, status, and retention properties of each table.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags on a Timestream resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resume-batch-load-task",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates a set of tags with a Timestream resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the association of tags from a Timestream resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-database",
+   "description": "Modifies the KMS key for an existing database.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-table",
+   "description": "Modifies the retention duration of the memory store and magnetic store for your Timestream table.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--magnetic-store-write-properties",
+     "args": {}
+    },
+    {
+     "name": "--retention-properties",
+     "args": {}
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "write-records",
+   "description": "Enables you to write your time-series data into Timestream.",
+   "options": [
+    {
+     "name": "--common-attributes",
+     "args": {}
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--records",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

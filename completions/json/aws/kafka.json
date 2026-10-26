@@ -1,0 +1,1348 @@
+{
+ "name": "kafka",
+ "description": "The operations for managing an Amazon MSK cluster.",
+ "subcommands": [
+  {
+   "name": "batch-associate-scram-secret",
+   "description": "Associates one or more Scram Secrets with an Amazon MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-arn-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-disassociate-scram-secret",
+   "description": "Disassociates one or more Scram Secrets from an Amazon MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-arn-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-channel",
+   "description": "Creates a Channel that streams records from an Amazon MSK Express cluster topic to Amazon S3 or Apache Iceberg.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--iceberg-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--logging-info",
+     "args": {}
+    },
+    {
+     "name": "--s3-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--topic-configuration-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Creates a new MSK cluster.",
+   "options": [
+    {
+     "name": "--broker-node-group-info",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-authentication",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-info",
+     "args": {}
+    },
+    {
+     "name": "--encryption-info",
+     "args": {}
+    },
+    {
+     "name": "--enhanced-monitoring",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "PER_BROKER",
+       "PER_TOPIC_PER_BROKER",
+       "PER_TOPIC_PER_PARTITION"
+      ]
+     }
+    },
+    {
+     "name": "--kafka-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-info",
+     "args": {}
+    },
+    {
+     "name": "--number-of-broker-nodes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--open-monitoring",
+     "args": {}
+    },
+    {
+     "name": "--rebalancing",
+     "args": {}
+    },
+    {
+     "name": "--storage-mode",
+     "args": {
+      "suggestions": [
+       "LOCAL",
+       "TIERED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster-v2",
+   "description": "Creates a new MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioned",
+     "args": {}
+    },
+    {
+     "name": "--serverless",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-configuration",
+   "description": "Creates a new MSK configuration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kafka-versions",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-properties",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-replicator",
+   "description": "Creates the replicator.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kafka-clusters",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-delivery",
+     "args": {}
+    },
+    {
+     "name": "--replication-info-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replicator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-topic",
+   "description": "Creates a topic in the specified MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configs",
+     "args": {}
+    },
+    {
+     "name": "--partition-count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-factor",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-connection",
+   "description": "Creates a new MSK VPC connection.",
+   "options": [
+    {
+     "name": "--authentication",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-subnets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-groups",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-channel",
+   "description": "Deletes the channel specified by channelArn from the cluster specified by clusterArn.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Deletes the MSK cluster specified by the Amazon Resource Name (ARN) in the request.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster-policy",
+   "description": "Deletes the MSK cluster policy specified by the Amazon Resource Name (ARN) in the request.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-configuration",
+   "description": "Deletes an MSK Configuration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-replicator",
+   "description": "Deletes a replicator.",
+   "options": [
+    {
+     "name": "--current-version",
+     "args": {}
+    },
+    {
+     "name": "--replicator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-topic",
+   "description": "Deletes a topic in the specified MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-connection",
+   "description": "Deletes a MSK VPC connection.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-channel",
+   "description": "Returns the current configuration and state of a channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster",
+   "description": "Returns a description of the MSK cluster whose Amazon Resource Name (ARN) is specified in the request.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-operation",
+   "description": "Returns a description of the cluster operation specified by the ARN.",
+   "options": [
+    {
+     "name": "--cluster-operation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-operation-v2",
+   "description": "Returns a description of the cluster operation specified by the ARN.",
+   "options": [
+    {
+     "name": "--cluster-operation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-v2",
+   "description": "Returns a description of the MSK cluster whose Amazon Resource Name (ARN) is specified in the request.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-configuration",
+   "description": "Returns a description of this MSK configuration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-configuration-revision",
+   "description": "Returns a description of this revision of the configuration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-replicator",
+   "description": "Describes a replicator.",
+   "options": [
+    {
+     "name": "--replicator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-topic",
+   "description": "Returns topic details of this topic on a MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-topic-partitions",
+   "description": "Returns partition details of this topic on a MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--topic-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-vpc-connection",
+   "description": "Returns a description of this MSK VPC connection.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bootstrap-brokers",
+   "description": "A list of brokers that a client application can use to bootstrap.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cluster-policy",
+   "description": "Get the MSK cluster policy specified by the Amazon Resource Name (ARN) in the request.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-compatible-kafka-versions",
+   "description": "Gets the Apache Kafka versions to which you can update the MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-channels",
+   "description": "Returns the list of channels in a cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--topic-name-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-client-vpc-connections",
+   "description": "Returns a list of all the VPC connections in this Region.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cluster-operations",
+   "description": "Returns a list of all the operations that have been performed on the specified MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cluster-operations-v2",
+   "description": "Returns a list of all the operations that have been performed on the specified MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-clusters",
+   "description": "Returns a list of all the MSK clusters in the current Region.",
+   "options": [
+    {
+     "name": "--cluster-name-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-clusters-v2",
+   "description": "Returns a list of all the MSK clusters in the current Region.",
+   "options": [
+    {
+     "name": "--cluster-name-filter",
+     "args": {}
+    },
+    {
+     "name": "--cluster-type-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-configuration-revisions",
+   "description": "Returns a list of all the MSK configurations in this Region.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-configurations",
+   "description": "Returns a list of all the MSK configurations in this Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-kafka-versions",
+   "description": "Returns a list of Apache Kafka versions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-nodes",
+   "description": "Returns a list of the broker nodes in the cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-replicators",
+   "description": "Lists the replicators.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--replicator-name-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-scram-secrets",
+   "description": "Returns a list of the Scram Secrets associated with an Amazon MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of the tags associated with the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-topics",
+   "description": "List topics in a MSK cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--topic-name-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-connections",
+   "description": "Returns a list of all the VPC connections in this Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-cluster-policy",
+   "description": "Creates or updates the MSK cluster policy specified by the cluster Amazon Resource Name (ARN) in the request.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {}
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reboot-broker",
+   "description": "Reboots brokers.",
+   "options": [
+    {
+     "name": "--broker-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-client-vpc-connection",
+   "description": "Returns empty response.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-connection-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to the specified MSK resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the tags associated with the keys that are provided in the query.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-broker-count",
+   "description": "Updates the number of broker nodes in the cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-number-of-broker-nodes",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-broker-storage",
+   "description": "Updates the EBS storage associated with MSK brokers.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-broker-ebs-volume-info",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-broker-type",
+   "description": "Updates EC2 instance type.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-instance-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-channel",
+   "description": "Updates the destination configuration of an existing channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iceberg-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--s3-destination-update",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-cluster-configuration",
+   "description": "Updates the cluster with the configuration that is specified in the request body.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-info",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cluster-kafka-version",
+   "description": "Updates the Apache Kafka version for the cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-info",
+     "args": {}
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-kafka-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-configuration",
+   "description": "Updates an MSK configuration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--server-properties",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-connectivity",
+   "description": "Updates the cluster's connectivity configuration.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connectivity-info",
+     "args": {}
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--zookeeper-access",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-monitoring",
+   "description": "Updates the monitoring settings for the cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enhanced-monitoring",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "PER_BROKER",
+       "PER_TOPIC_PER_BROKER",
+       "PER_TOPIC_PER_PARTITION"
+      ]
+     }
+    },
+    {
+     "name": "--logging-info",
+     "args": {}
+    },
+    {
+     "name": "--open-monitoring",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-rebalancing",
+   "description": "Use this resource to update the intelligent rebalancing status of an Amazon MSK Provisioned cluster with Express brokers.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rebalancing",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-replication-info",
+   "description": "Updates replication info of a replicator.",
+   "options": [
+    {
+     "name": "--consumer-group-replication",
+     "args": {}
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-delivery",
+     "args": {}
+    },
+    {
+     "name": "--replicator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-kafka-cluster-arn",
+     "args": {}
+    },
+    {
+     "name": "--source-kafka-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--target-kafka-cluster-arn",
+     "args": {}
+    },
+    {
+     "name": "--target-kafka-cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--topic-replication",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-security",
+   "description": "Updates the security settings for the cluster.",
+   "options": [
+    {
+     "name": "--client-authentication",
+     "args": {}
+    },
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-info",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-storage",
+   "description": "Updates cluster broker volume size (or) sets cluster storage mode to TIERED.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioned-throughput",
+     "args": {}
+    },
+    {
+     "name": "--storage-mode",
+     "args": {
+      "suggestions": [
+       "LOCAL",
+       "TIERED"
+      ]
+     }
+    },
+    {
+     "name": "--volume-size-gb",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-topic",
+   "description": "Updates the configuration of the specified topic.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configs",
+     "args": {}
+    },
+    {
+     "name": "--partition-count",
+     "args": {}
+    },
+    {
+     "name": "--topic-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

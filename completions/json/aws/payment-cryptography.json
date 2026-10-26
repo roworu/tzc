@@ -1,0 +1,641 @@
+{
+ "name": "payment-cryptography",
+ "description": "Amazon Web Services Payment Cryptography Control Plane APIs manage encryption keys for use during payment-related cryptographic operations.",
+ "subcommands": [
+  {
+   "name": "add-key-replication-regions",
+   "description": "Adds replication Amazon Web Services Regions to an existing Amazon Web Services Payment Cryptography key, enabling the key to be used for cryptographic operations in additional Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-regions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-mpa-team",
+   "description": "Associates a Multi-Party Approval (MPA) team with a protected operation.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "IMPORT_ROOT_PUBLIC_KEY_CERTIFICATE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--mpa-team-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requester-comment",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-alias",
+   "description": "Creates an alias, or a friendly name, for an Amazon Web Services Payment Cryptography key.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-key",
+   "description": "Creates an Amazon Web Services Payment Cryptography key, a logical representation of a cryptographic key, that is unique in your account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--derive-key-usage",
+     "args": {
+      "suggestions": [
+       "TR31_B0_BASE_DERIVATION_KEY",
+       "TR31_C0_CARD_VERIFICATION_KEY",
+       "TR31_D0_SYMMETRIC_DATA_ENCRYPTION_KEY",
+       "TR31_E0_EMV_MKEY_APP_CRYPTOGRAMS",
+       "TR31_E1_EMV_MKEY_CONFIDENTIALITY",
+       "TR31_E2_EMV_MKEY_INTEGRITY",
+       "TR31_E4_EMV_MKEY_DYNAMIC_NUMBERS",
+       "TR31_E5_EMV_MKEY_CARD_PERSONALIZATION",
+       "TR31_E6_EMV_MKEY_OTHER",
+       "TR31_K0_KEY_ENCRYPTION_KEY",
+       "TR31_K1_KEY_BLOCK_PROTECTION_KEY",
+       "TR31_M3_ISO_9797_3_MAC_KEY",
+       "TR31_M1_ISO_9797_1_MAC_KEY",
+       "TR31_M6_ISO_9797_5_CMAC_KEY",
+       "TR31_M7_HMAC_KEY",
+       "TR31_P0_PIN_ENCRYPTION_KEY",
+       "TR31_P1_PIN_GENERATION_KEY",
+       "TR31_V1_IBM3624_PIN_VERIFICATION_KEY",
+       "TR31_V2_VISA_PIN_VERIFICATION_KEY"
+      ]
+     }
+    },
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--exportable",
+     "priority": 75
+    },
+    {
+     "name": "--key-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-check-value-algorithm",
+     "args": {
+      "suggestions": [
+       "CMAC",
+       "ANSI_X9_24",
+       "HMAC",
+       "SHA_1"
+      ]
+     }
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--no-exportable"
+    },
+    {
+     "name": "--replication-regions",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-alias",
+   "description": "Deletes the alias, but doesn't affect the underlying key.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-key",
+   "description": "Deletes the key material and metadata associated with Amazon Web Services Payment Cryptography key.",
+   "options": [
+    {
+     "name": "--delete-key-in-days",
+     "args": {}
+    },
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Removes the resource-based policy attached to an Amazon Web Services Payment Cryptography key.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-default-key-replication-regions",
+   "description": "Disables Multi-Region key replication settings for the specified Amazon Web Services Regions in your Amazon Web Services account, preventing new keys from being automatically replicated to those regions.",
+   "options": [
+    {
+     "name": "--replication-regions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-mpa-team",
+   "description": "Removes the association between a Multi-Party Approval (MPA) team and a protected operation.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "IMPORT_ROOT_PUBLIC_KEY_CERTIFICATE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--requester-comment",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "enable-default-key-replication-regions",
+   "description": "Enables Multi-Region key replication settings for your Amazon Web Services account, causing new keys to be automatically replicated to the specified Amazon Web Services Regions when created.",
+   "options": [
+    {
+     "name": "--replication-regions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-key",
+   "description": "Exports a key from Amazon Web Services Payment Cryptography.",
+   "options": [
+    {
+     "name": "--export-attributes",
+     "args": {}
+    },
+    {
+     "name": "--export-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-material",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-alias",
+   "description": "Gets the Amazon Web Services Payment Cryptography key associated with the alias.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-certificate-signing-request",
+   "description": "Creates a certificate signing request (CSR) from a key pair.",
+   "options": [
+    {
+     "name": "--certificate-subject",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signing-algorithm",
+     "args": {
+      "suggestions": [
+       "SHA224",
+       "SHA256",
+       "SHA384",
+       "SHA512"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-default-key-replication-regions",
+   "description": "Retrieves the list of Amazon Web Services Regions where Multi-Region key replication is currently enabled for your Amazon Web Services account."
+  },
+  {
+   "name": "get-key",
+   "description": "Gets the key metadata for an Amazon Web Services Payment Cryptography key, including the immutable and mutable attributes specified when the key was created.",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-mpa-team-association",
+   "description": "Returns the Multi-Party Approval (MPA) team association for a protected operation.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "IMPORT_ROOT_PUBLIC_KEY_CERTIFICATE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-parameters-for-export",
+   "description": "Gets the export token and the signing key certificate to initiate a TR-34 key export from Amazon Web Services Payment Cryptography.",
+   "options": [
+    {
+     "name": "--key-material-type",
+     "args": {
+      "suggestions": [
+       "TR34_KEY_BLOCK",
+       "TR31_KEY_BLOCK",
+       "ROOT_PUBLIC_KEY_CERTIFICATE",
+       "TRUSTED_PUBLIC_KEY_CERTIFICATE",
+       "KEY_CRYPTOGRAM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-reuse-last-generated-token"
+    },
+    {
+     "name": "--reuse-last-generated-token"
+    },
+    {
+     "name": "--signing-key-algorithm",
+     "args": {
+      "suggestions": [
+       "TDES_2KEY",
+       "TDES_3KEY",
+       "AES_128",
+       "AES_192",
+       "AES_256",
+       "HMAC_SHA256",
+       "HMAC_SHA384",
+       "HMAC_SHA512",
+       "HMAC_SHA224",
+       "RSA_2048",
+       "RSA_3072",
+       "RSA_4096",
+       "ECC_NIST_P256",
+       "ECC_NIST_P384",
+       "ECC_NIST_P521"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-parameters-for-import",
+   "description": "Gets the import token and the wrapping key certificate in PEM format (base64 encoded) to initiate a TR-34 WrappedKeyBlock or a RSA WrappedKeyCryptogram import into Amazon Web Services Payment Cryptography.",
+   "options": [
+    {
+     "name": "--key-material-type",
+     "args": {
+      "suggestions": [
+       "TR34_KEY_BLOCK",
+       "TR31_KEY_BLOCK",
+       "ROOT_PUBLIC_KEY_CERTIFICATE",
+       "TRUSTED_PUBLIC_KEY_CERTIFICATE",
+       "KEY_CRYPTOGRAM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-reuse-last-generated-token"
+    },
+    {
+     "name": "--reuse-last-generated-token"
+    },
+    {
+     "name": "--wrapping-key-algorithm",
+     "args": {
+      "suggestions": [
+       "TDES_2KEY",
+       "TDES_3KEY",
+       "AES_128",
+       "AES_192",
+       "AES_256",
+       "HMAC_SHA256",
+       "HMAC_SHA384",
+       "HMAC_SHA512",
+       "HMAC_SHA224",
+       "RSA_2048",
+       "RSA_3072",
+       "RSA_4096",
+       "ECC_NIST_P256",
+       "ECC_NIST_P384",
+       "ECC_NIST_P521"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-public-key-certificate",
+   "description": "Gets the public key certificate of the asymmetric key pair that exists within Amazon Web Services Payment Cryptography.",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Returns the resource-based policy attached to an Amazon Web Services Payment Cryptography key.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-key",
+   "description": "Imports symmetric keys and public key certificates in PEM format (base64 encoded) into Amazon Web Services Payment Cryptography.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--key-check-value-algorithm",
+     "args": {
+      "suggestions": [
+       "CMAC",
+       "ANSI_X9_24",
+       "HMAC",
+       "SHA_1"
+      ]
+     }
+    },
+    {
+     "name": "--key-material",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--replication-regions",
+     "args": {}
+    },
+    {
+     "name": "--requester-comment",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-aliases",
+   "description": "Lists the aliases for all keys in the caller's Amazon Web Services account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--key-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-keys",
+   "description": "Lists the keys in the caller's Amazon Web Services account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--key-state",
+     "args": {
+      "suggestions": [
+       "CREATE_IN_PROGRESS",
+       "CREATE_COMPLETE",
+       "DELETE_PENDING",
+       "DELETE_COMPLETE"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for an Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Attaches or replaces a resource-based policy on an Amazon Web Services Payment Cryptography key.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-key-replication-regions",
+   "description": "Removes Replication Regions from an existing Amazon Web Services Payment Cryptography key, disabling the key's availability for cryptographic operations in the specified Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-regions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-key",
+   "description": "Cancels a scheduled key deletion during the waiting period.",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-key-usage",
+   "description": "Enables an Amazon Web Services Payment Cryptography key, which makes it active for cryptographic operations within Amazon Web Services Payment Cryptography Cross-account use: This operation supports cross-account use when the key has a resource-based policy that grants access.",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-key-usage",
+   "description": "Disables an Amazon Web Services Payment Cryptography key, which makes it inactive within Amazon Web Services Payment Cryptography.",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or edits tags on an Amazon Web Services Payment Cryptography key.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes a tag from an Amazon Web Services Payment Cryptography key.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-alias",
+   "description": "Associates an existing Amazon Web Services Payment Cryptography alias with a different key.",
+   "options": [
+    {
+     "name": "--alias-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-arn",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

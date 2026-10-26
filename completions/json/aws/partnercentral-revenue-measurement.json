@@ -1,0 +1,704 @@
+{
+ "name": "partnercentral-revenue-measurement",
+ "description": "AWS Partner Central Revenue Measurement API for creating, managing, and tracking revenue attributions and their allocations with deal entities such as offers and opportunities.",
+ "subcommands": [
+  {
+   "name": "create-marketplace-revenue-share",
+   "description": "Creates a new marketplace revenue share resource in the specified catalog.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-marketplace-revenue-share-allocation",
+   "description": "Creates a new marketplace revenue share allocation for the specified product.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--effective-from",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--effective-until",
+     "args": {}
+    },
+    {
+     "name": "--product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revenue-share-percent",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-revenue-attribution",
+   "description": "Creates a new revenue attribution record in the specified catalog.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tenancy-model",
+     "args": {
+      "suggestions": [
+       "MULTI_TENANT",
+       "SINGLE_TENANT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-marketplace-revenue-share",
+   "description": "Retrieves the details of a specific marketplace revenue share.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-marketplace-revenue-share-allocation",
+   "description": "Retrieves the details of a specific marketplace revenue share allocation.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--marketplace-revenue-share-allocation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--marketplace-revenue-share-revision",
+     "args": {}
+    },
+    {
+     "name": "--product-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-revenue-attribution",
+   "description": "Retrieves the details of a specific revenue attribution.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-revenue-attribution-allocation",
+   "description": "Retrieves a single allocation by its RevenueAttributionAllocationId.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--revenue-attribution-allocation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revenue-attribution-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revenue-attribution-revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-revenue-attribution-allocations-task",
+   "description": "Retrieves the current status of a previously submitted allocations task.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--revenue-attribution-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-marketplace-revenue-share-allocations",
+   "description": "Returns a paginated list of allocations under a marketplace revenue share, with optional filtering by status and effective date range.",
+   "options": [
+    {
+     "name": "--after-effective-from",
+     "args": {}
+    },
+    {
+     "name": "--before-effective-from",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--marketplace-revenue-share-revision",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "EffectiveFrom"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-marketplace-revenue-shares",
+   "description": "Returns a paginated list of marketplace revenue shares with optional filters.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--product-codes",
+     "args": {}
+    },
+    {
+     "name": "--product-ids",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "LastModifiedDate"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-revenue-attribution-allocations",
+   "description": "Returns a paginated list of committed allocations with support for filtering by entity, customer, status, or date range.",
+   "options": [
+    {
+     "name": "--after-effective-from",
+     "args": {}
+    },
+    {
+     "name": "--after-effective-until",
+     "args": {}
+    },
+    {
+     "name": "--before-effective-from",
+     "args": {}
+    },
+    {
+     "name": "--before-effective-until",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--customer-aws-account-id-filters",
+     "args": {}
+    },
+    {
+     "name": "--entity-identifier-filters",
+     "args": {}
+    },
+    {
+     "name": "--entity-type-filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--revenue-attribution-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revenue-attribution-revision",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "EffectiveFrom"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-revenue-attributions",
+   "description": "Returns a paginated list of revenue attributions with optional filters.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--identifiers",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "LastModifiedDate"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns the tags associated with the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-revenue-attribution-allocations-task",
+   "description": "Submits a batch of up to 250 allocation changes (CREATE and/or UPDATE) for asynchronous processing.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--revenue-attribution-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revenue-attribution-revision",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revenue-share-allocations",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or overwrites one or more tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-marketplace-revenue-share-allocation",
+   "description": "Updates an existing marketplace revenue share allocation.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--effective-from",
+     "args": {}
+    },
+    {
+     "name": "--effective-until",
+     "args": {}
+    },
+    {
+     "name": "--marketplace-revenue-share-allocation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--marketplace-revenue-share-revision",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revenue-share-percent",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-revenue-attribution",
+   "description": "Updates an existing revenue attribution record.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Sandbox"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

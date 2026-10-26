@@ -1,0 +1,2647 @@
+{
+ "name": "apigatewayv2",
+ "description": "Amazon API Gateway V2",
+ "subcommands": [
+  {
+   "name": "create-api",
+   "description": "Creates an Api resource.",
+   "options": [
+    {
+     "name": "--api-key-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--api-version",
+     "args": {}
+    },
+    {
+     "name": "--cors-configuration",
+     "args": {}
+    },
+    {
+     "name": "--credentials-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--disable-execute-api-endpoint"
+    },
+    {
+     "name": "--disable-schema-validation"
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "dualstack"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-disable-execute-api-endpoint"
+    },
+    {
+     "name": "--no-disable-schema-validation"
+    },
+    {
+     "name": "--protocol-type",
+     "args": {
+      "suggestions": [
+       "WEBSOCKET",
+       "HTTP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--route-key",
+     "args": {}
+    },
+    {
+     "name": "--route-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-api-mapping",
+   "description": "Creates an API mapping.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--api-mapping-key",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-authorizer",
+   "description": "Creates an Authorizer for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorizer-credentials-arn",
+     "args": {}
+    },
+    {
+     "name": "--authorizer-payload-format-version",
+     "args": {}
+    },
+    {
+     "name": "--authorizer-result-ttl-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--authorizer-type",
+     "args": {
+      "suggestions": [
+       "REQUEST",
+       "JWT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--authorizer-uri",
+     "args": {}
+    },
+    {
+     "name": "--enable-simple-responses"
+    },
+    {
+     "name": "--identity-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-validation-expression",
+     "args": {}
+    },
+    {
+     "name": "--jwt-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enable-simple-responses"
+    }
+   ]
+  },
+  {
+   "name": "create-deployment",
+   "description": "Creates a Deployment for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--stage-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-domain-name",
+   "description": "Creates a domain name.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name-configurations",
+     "args": {}
+    },
+    {
+     "name": "--mutual-tls-authentication",
+     "args": {}
+    },
+    {
+     "name": "--routing-mode",
+     "args": {
+      "suggestions": [
+       "API_MAPPING_ONLY",
+       "ROUTING_RULE_ONLY",
+       "ROUTING_RULE_THEN_API_MAPPING"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-integration",
+   "description": "Creates an Integration.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connection-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-type",
+     "args": {
+      "suggestions": [
+       "INTERNET",
+       "VPC_LINK"
+      ]
+     }
+    },
+    {
+     "name": "--content-handling-strategy",
+     "args": {
+      "suggestions": [
+       "CONVERT_TO_BINARY",
+       "CONVERT_TO_TEXT"
+      ]
+     }
+    },
+    {
+     "name": "--credentials-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--integration-method",
+     "args": {}
+    },
+    {
+     "name": "--integration-subtype",
+     "args": {}
+    },
+    {
+     "name": "--integration-type",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "HTTP",
+       "MOCK",
+       "HTTP_PROXY",
+       "AWS_PROXY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--integration-uri",
+     "args": {}
+    },
+    {
+     "name": "--passthrough-behavior",
+     "args": {
+      "suggestions": [
+       "WHEN_NO_MATCH",
+       "NEVER",
+       "WHEN_NO_TEMPLATES"
+      ]
+     }
+    },
+    {
+     "name": "--payload-format-version",
+     "args": {}
+    },
+    {
+     "name": "--request-parameters",
+     "args": {}
+    },
+    {
+     "name": "--request-templates",
+     "args": {}
+    },
+    {
+     "name": "--response-parameters",
+     "args": {}
+    },
+    {
+     "name": "--template-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--timeout-in-millis",
+     "args": {}
+    },
+    {
+     "name": "--tls-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-integration-response",
+   "description": "Creates an IntegrationResponses.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content-handling-strategy",
+     "args": {
+      "suggestions": [
+       "CONVERT_TO_BINARY",
+       "CONVERT_TO_TEXT"
+      ]
+     }
+    },
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-response-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--response-parameters",
+     "args": {}
+    },
+    {
+     "name": "--response-templates",
+     "args": {}
+    },
+    {
+     "name": "--template-selection-expression",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-model",
+   "description": "Creates a Model for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-portal",
+   "description": "Creates a portal.",
+   "options": [
+    {
+     "name": "--authorization",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--included-portal-product-arns",
+     "args": {}
+    },
+    {
+     "name": "--logo-uri",
+     "args": {}
+    },
+    {
+     "name": "--portal-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rum-app-monitor-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-portal-product",
+   "description": "Creates a new portal product.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-product-page",
+   "description": "Creates a new product page for a portal product.",
+   "options": [
+    {
+     "name": "--display-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-product-rest-endpoint-page",
+   "description": "Creates a product REST endpoint page for a portal product.",
+   "options": [
+    {
+     "name": "--display-content",
+     "args": {}
+    },
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rest-endpoint-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--try-it-state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-route",
+   "description": "Creates a Route for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--api-key-required"
+    },
+    {
+     "name": "--authorization-scopes",
+     "args": {}
+    },
+    {
+     "name": "--authorization-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AWS_IAM",
+       "CUSTOM",
+       "JWT"
+      ]
+     }
+    },
+    {
+     "name": "--authorizer-id",
+     "args": {}
+    },
+    {
+     "name": "--model-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--no-api-key-required"
+    },
+    {
+     "name": "--operation-name",
+     "args": {}
+    },
+    {
+     "name": "--request-models",
+     "args": {}
+    },
+    {
+     "name": "--request-parameters",
+     "args": {}
+    },
+    {
+     "name": "--route-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-response-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-route-response",
+   "description": "Creates a RouteResponse for a Route.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--response-models",
+     "args": {}
+    },
+    {
+     "name": "--response-parameters",
+     "args": {}
+    },
+    {
+     "name": "--route-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-response-key",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-routing-rule",
+   "description": "Creates a RoutingRule.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name-id",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-stage",
+   "description": "Creates a Stage for an API.",
+   "options": [
+    {
+     "name": "--access-log-settings",
+     "args": {}
+    },
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-deploy"
+    },
+    {
+     "name": "--client-certificate-id",
+     "args": {}
+    },
+    {
+     "name": "--default-route-settings",
+     "args": {}
+    },
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-deploy"
+    },
+    {
+     "name": "--route-settings",
+     "args": {}
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-variables",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-link",
+   "description": "Creates a VPC link.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-access-log-settings",
+   "description": "Deletes the AccessLogSettings for a Stage.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-api",
+   "description": "Deletes an Api resource.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-api-mapping",
+   "description": "Deletes an API mapping.",
+   "options": [
+    {
+     "name": "--api-mapping-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-authorizer",
+   "description": "Deletes an Authorizer.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorizer-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cors-configuration",
+   "description": "Deletes a CORS configuration.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-deployment",
+   "description": "Deletes a Deployment.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain-name",
+   "description": "Deletes a domain name.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-integration",
+   "description": "Deletes an Integration.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-integration-response",
+   "description": "Deletes an IntegrationResponses.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-response-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-model",
+   "description": "Deletes a Model.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-portal",
+   "description": "Deletes a portal.",
+   "options": [
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-portal-product",
+   "description": "Deletes a portal product.",
+   "options": [
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-portal-product-sharing-policy",
+   "description": "Deletes the sharing policy for a portal product.",
+   "options": [
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-product-page",
+   "description": "Deletes a product page of a portal product.",
+   "options": [
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-page-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-product-rest-endpoint-page",
+   "description": "Deletes a product REST endpoint page.",
+   "options": [
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-rest-endpoint-page-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-route",
+   "description": "Deletes a Route.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-route-request-parameter",
+   "description": "Deletes a route request parameter.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-parameter-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-route-response",
+   "description": "Deletes a RouteResponse.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-response-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-route-settings",
+   "description": "Deletes the RouteSettings for a stage.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-routing-rule",
+   "description": "Deletes a routing rule.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name-id",
+     "args": {}
+    },
+    {
+     "name": "--routing-rule-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-stage",
+   "description": "Deletes a Stage.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-link",
+   "description": "Deletes a VPC link.",
+   "options": [
+    {
+     "name": "--vpc-link-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-portal",
+   "description": "Deletes the publication of a portal portal.",
+   "options": [
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-api",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--export-version",
+     "args": {}
+    },
+    {
+     "name": "--include-extensions"
+    },
+    {
+     "name": "--no-include-extensions"
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-type",
+     "args": {
+      "suggestions": [
+       "YAML",
+       "JSON"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--specification",
+     "args": {
+      "suggestions": [
+       "OAS30"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-api",
+   "description": "Gets an Api resource.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-api-mapping",
+   "description": "Gets an API mapping.",
+   "options": [
+    {
+     "name": "--api-mapping-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-api-mappings",
+   "description": "Gets API mappings.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-apis",
+   "description": "Gets a collection of Api resources.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-authorizer",
+   "description": "Gets an Authorizer.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorizer-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-authorizers",
+   "description": "Gets the Authorizers for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-deployment",
+   "description": "Gets a Deployment.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployments",
+   "description": "Gets the Deployments for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-domain-name",
+   "description": "Gets a domain name.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain-names",
+   "description": "Gets the domain names for an AWS account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-integration",
+   "description": "Gets an Integration.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-integration-response",
+   "description": "Gets an IntegrationResponses.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-response-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-integration-responses",
+   "description": "Gets the IntegrationResponses for an Integration.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-integrations",
+   "description": "Gets the Integrations for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-model",
+   "description": "Gets a Model.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-model-template",
+   "description": "Gets a model template.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-models",
+   "description": "Gets the Models for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-portal",
+   "description": "Gets a portal.",
+   "options": [
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-portal-product",
+   "description": "Gets a portal product.",
+   "options": [
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-owner-account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-portal-product-sharing-policy",
+   "description": "Gets the sharing policy for a portal product.",
+   "options": [
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-product-page",
+   "description": "Gets a product page of a portal product.",
+   "options": [
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-page-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-owner-account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-product-rest-endpoint-page",
+   "description": "Gets a product REST endpoint page.",
+   "options": [
+    {
+     "name": "--include-raw-display-content",
+     "args": {}
+    },
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-rest-endpoint-page-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-owner-account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-route",
+   "description": "Gets a Route.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-route-response",
+   "description": "Gets a RouteResponse.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-response-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-route-responses",
+   "description": "Gets the RouteResponses for a Route.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--route-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-routes",
+   "description": "Gets the Routes for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-routing-rule",
+   "description": "Gets a routing rule.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name-id",
+     "args": {}
+    },
+    {
+     "name": "--routing-rule-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-stage",
+   "description": "Gets a Stage.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-stages",
+   "description": "Gets the Stages for an API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-tags",
+   "description": "Gets a collection of Tag resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vpc-link",
+   "description": "Gets a VPC link.",
+   "options": [
+    {
+     "name": "--vpc-link-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vpc-links",
+   "description": "Gets a collection of VPC links.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-api",
+   "description": "Imports an API.",
+   "options": [
+    {
+     "name": "--basepath",
+     "args": {}
+    },
+    {
+     "name": "--body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fail-on-warnings"
+    },
+    {
+     "name": "--no-fail-on-warnings"
+    }
+   ]
+  },
+  {
+   "name": "list-portal-products",
+   "description": "Lists portal products.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-owner",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-portals",
+   "description": "Lists portals.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-product-pages",
+   "description": "Lists the product pages for a portal product.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-owner-account-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-product-rest-endpoint-pages",
+   "description": "Lists the product REST endpoint pages of a portal product.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-owner-account-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-routing-rules",
+   "description": "Lists routing rules.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "preview-portal",
+   "description": "Creates a portal preview.",
+   "options": [
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "publish-portal",
+   "description": "Publishes a portal.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-portal-product-sharing-policy",
+   "description": "Updates the sharing policy for a portal product.",
+   "options": [
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-routing-rule",
+   "description": "Updates a routing rule.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name-id",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--routing-rule-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reimport-api",
+   "description": "Puts an Api resource.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--basepath",
+     "args": {}
+    },
+    {
+     "name": "--body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fail-on-warnings"
+    },
+    {
+     "name": "--no-fail-on-warnings"
+    }
+   ]
+  },
+  {
+   "name": "reset-authorizers-cache",
+   "description": "Resets all authorizer cache entries on a stage.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Creates a new Tag resource to represent a tag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes a Tag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-api",
+   "description": "Updates an Api resource.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--api-key-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--api-version",
+     "args": {}
+    },
+    {
+     "name": "--cors-configuration",
+     "args": {}
+    },
+    {
+     "name": "--credentials-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--disable-execute-api-endpoint"
+    },
+    {
+     "name": "--disable-schema-validation"
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "dualstack"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-disable-execute-api-endpoint"
+    },
+    {
+     "name": "--no-disable-schema-validation"
+    },
+    {
+     "name": "--route-key",
+     "args": {}
+    },
+    {
+     "name": "--route-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-api-mapping",
+   "description": "The API mapping.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--api-mapping-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--api-mapping-key",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-authorizer",
+   "description": "Updates an Authorizer.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorizer-credentials-arn",
+     "args": {}
+    },
+    {
+     "name": "--authorizer-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorizer-payload-format-version",
+     "args": {}
+    },
+    {
+     "name": "--authorizer-result-ttl-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--authorizer-type",
+     "args": {
+      "suggestions": [
+       "REQUEST",
+       "JWT"
+      ]
+     }
+    },
+    {
+     "name": "--authorizer-uri",
+     "args": {}
+    },
+    {
+     "name": "--enable-simple-responses"
+    },
+    {
+     "name": "--identity-source",
+     "args": {}
+    },
+    {
+     "name": "--identity-validation-expression",
+     "args": {}
+    },
+    {
+     "name": "--jwt-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-simple-responses"
+    }
+   ]
+  },
+  {
+   "name": "update-deployment",
+   "description": "Updates a Deployment.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-domain-name",
+   "description": "Updates a domain name.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name-configurations",
+     "args": {}
+    },
+    {
+     "name": "--mutual-tls-authentication",
+     "args": {}
+    },
+    {
+     "name": "--routing-mode",
+     "args": {
+      "suggestions": [
+       "API_MAPPING_ONLY",
+       "ROUTING_RULE_ONLY",
+       "ROUTING_RULE_THEN_API_MAPPING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-integration",
+   "description": "Updates an Integration.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connection-id",
+     "args": {}
+    },
+    {
+     "name": "--connection-type",
+     "args": {
+      "suggestions": [
+       "INTERNET",
+       "VPC_LINK"
+      ]
+     }
+    },
+    {
+     "name": "--content-handling-strategy",
+     "args": {
+      "suggestions": [
+       "CONVERT_TO_BINARY",
+       "CONVERT_TO_TEXT"
+      ]
+     }
+    },
+    {
+     "name": "--credentials-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-method",
+     "args": {}
+    },
+    {
+     "name": "--integration-subtype",
+     "args": {}
+    },
+    {
+     "name": "--integration-type",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "HTTP",
+       "MOCK",
+       "HTTP_PROXY",
+       "AWS_PROXY"
+      ]
+     }
+    },
+    {
+     "name": "--integration-uri",
+     "args": {}
+    },
+    {
+     "name": "--passthrough-behavior",
+     "args": {
+      "suggestions": [
+       "WHEN_NO_MATCH",
+       "NEVER",
+       "WHEN_NO_TEMPLATES"
+      ]
+     }
+    },
+    {
+     "name": "--payload-format-version",
+     "args": {}
+    },
+    {
+     "name": "--request-parameters",
+     "args": {}
+    },
+    {
+     "name": "--request-templates",
+     "args": {}
+    },
+    {
+     "name": "--response-parameters",
+     "args": {}
+    },
+    {
+     "name": "--template-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--timeout-in-millis",
+     "args": {}
+    },
+    {
+     "name": "--tls-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-integration-response",
+   "description": "Updates an IntegrationResponses.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content-handling-strategy",
+     "args": {
+      "suggestions": [
+       "CONVERT_TO_BINARY",
+       "CONVERT_TO_TEXT"
+      ]
+     }
+    },
+    {
+     "name": "--integration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-response-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-response-key",
+     "args": {}
+    },
+    {
+     "name": "--response-parameters",
+     "args": {}
+    },
+    {
+     "name": "--response-templates",
+     "args": {}
+    },
+    {
+     "name": "--template-selection-expression",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-model",
+   "description": "Updates a Model.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--schema",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-portal",
+   "description": "Updates a portal.",
+   "options": [
+    {
+     "name": "--authorization",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-configuration",
+     "args": {}
+    },
+    {
+     "name": "--included-portal-product-arns",
+     "args": {}
+    },
+    {
+     "name": "--logo-uri",
+     "args": {}
+    },
+    {
+     "name": "--portal-content",
+     "args": {}
+    },
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rum-app-monitor-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-portal-product",
+   "description": "Updates the portal product.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--display-order",
+     "args": {}
+    },
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-product-page",
+   "description": "Updates a product page of a portal product.",
+   "options": [
+    {
+     "name": "--display-content",
+     "args": {}
+    },
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-page-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-product-rest-endpoint-page",
+   "description": "Updates a product REST endpoint page.",
+   "options": [
+    {
+     "name": "--display-content",
+     "args": {}
+    },
+    {
+     "name": "--portal-product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product-rest-endpoint-page-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--try-it-state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-route",
+   "description": "Updates a Route.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--api-key-required"
+    },
+    {
+     "name": "--authorization-scopes",
+     "args": {}
+    },
+    {
+     "name": "--authorization-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "AWS_IAM",
+       "CUSTOM",
+       "JWT"
+      ]
+     }
+    },
+    {
+     "name": "--authorizer-id",
+     "args": {}
+    },
+    {
+     "name": "--model-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--no-api-key-required"
+    },
+    {
+     "name": "--operation-name",
+     "args": {}
+    },
+    {
+     "name": "--request-models",
+     "args": {}
+    },
+    {
+     "name": "--request-parameters",
+     "args": {}
+    },
+    {
+     "name": "--route-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-key",
+     "args": {}
+    },
+    {
+     "name": "--route-response-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-route-response",
+   "description": "Updates a RouteResponse.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-selection-expression",
+     "args": {}
+    },
+    {
+     "name": "--response-models",
+     "args": {}
+    },
+    {
+     "name": "--response-parameters",
+     "args": {}
+    },
+    {
+     "name": "--route-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-response-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-response-key",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-stage",
+   "description": "Updates a Stage.",
+   "options": [
+    {
+     "name": "--access-log-settings",
+     "args": {}
+    },
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-deploy"
+    },
+    {
+     "name": "--client-certificate-id",
+     "args": {}
+    },
+    {
+     "name": "--default-route-settings",
+     "args": {}
+    },
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-deploy"
+    },
+    {
+     "name": "--route-settings",
+     "args": {}
+    },
+    {
+     "name": "--stage-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-variables",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-vpc-link",
+   "description": "Updates a VPC link.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--vpc-link-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

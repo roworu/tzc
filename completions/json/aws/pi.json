@@ -1,0 +1,509 @@
+{
+ "name": "pi",
+ "description": "Amazon RDS Performance Insights Amazon RDS Performance Insights enables you to monitor and explore different dimensions of database load based on data captured from a running DB instance.",
+ "subcommands": [
+  {
+   "name": "create-performance-analysis-report",
+   "description": "Creates a new performance analysis report for a specific time period for the DB instance.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-performance-analysis-report",
+   "description": "Deletes a performance analysis report.",
+   "options": [
+    {
+     "name": "--analysis-report-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dimension-keys",
+   "description": "For a specific time period, retrieve the top N dimension keys for a metric.",
+   "options": [
+    {
+     "name": "--additional-metrics",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--metric",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--partition-by",
+     "args": {}
+    },
+    {
+     "name": "--period-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dimension-key-details",
+   "description": "Get the attributes of the specified dimension group for a DB instance or data source.",
+   "options": [
+    {
+     "name": "--group",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requested-dimensions",
+     "args": {}
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-performance-analysis-report",
+   "description": "Retrieves the report including the report ID, status, time details, and the insights with recommendations.",
+   "options": [
+    {
+     "name": "--accept-language",
+     "args": {
+      "suggestions": [
+       "EN_US"
+      ]
+     }
+    },
+    {
+     "name": "--analysis-report-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--text-format",
+     "args": {
+      "suggestions": [
+       "PLAIN_TEXT",
+       "MARKDOWN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-resource-metadata",
+   "description": "Retrieve the metadata for different features.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-metrics",
+   "description": "Retrieve Performance Insights metrics for a set of data sources over a time period.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--metric-queries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--period-alignment",
+     "args": {
+      "suggestions": [
+       "END_TIME",
+       "START_TIME"
+      ]
+     }
+    },
+    {
+     "name": "--period-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-available-resource-dimensions",
+   "description": "Retrieve the dimensions that can be queried for each specified metric type on a specified DB instance.",
+   "options": [
+    {
+     "name": "--authorized-actions",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--metrics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-available-resource-metrics",
+   "description": "Retrieve metrics of the specified types that can be queried for a specified DB instance.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--metric-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-performance-analysis-report-recommendations",
+   "description": "Retrieves recommendations for a performance analysis report.",
+   "options": [
+    {
+     "name": "--analysis-report-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-ids",
+     "args": {}
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-performance-analysis-reports",
+   "description": "Lists all the analysis reports created for the DB instance.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--list-tags"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-list-tags"
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves all the metadata tags associated with Amazon RDS Performance Insights resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds metadata tags to the Amazon RDS Performance Insights resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes the metadata tags from the Amazon RDS Performance Insights resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "RDS",
+       "DOCDB"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

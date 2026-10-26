@@ -1,0 +1,3259 @@
+{
+ "name": "lightsail",
+ "description": "Amazon Lightsail is the easiest way to get started with Amazon Web Services (Amazon Web Services) for developers who need to build websites or web applications.",
+ "subcommands": [
+  {
+   "name": "allocate-static-ip",
+   "description": "Allocates a static IP address.",
+   "options": [
+    {
+     "name": "--static-ip-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-certificate-to-distribution",
+   "description": "Attaches an SSL/TLS certificate to your Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--certificate-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--distribution-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-disk",
+   "description": "Attaches a block storage disk to a running or stopped Lightsail instance and exposes it to the instance with the specified disk name.",
+   "options": [
+    {
+     "name": "--auto-mounting"
+    },
+    {
+     "name": "--disk-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disk-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-mounting"
+    }
+   ]
+  },
+  {
+   "name": "attach-instances-to-load-balancer",
+   "description": "Attaches one or more Lightsail instances to a load balancer.",
+   "options": [
+    {
+     "name": "--instance-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-load-balancer-tls-certificate",
+   "description": "Attaches a Transport Layer Security (TLS) certificate to your load balancer.",
+   "options": [
+    {
+     "name": "--certificate-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-static-ip",
+   "description": "Attaches a static IP address to a specific Amazon Lightsail instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--static-ip-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "close-instance-public-ports",
+   "description": "Closes ports for a specific Amazon Lightsail instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--port-info",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-snapshot",
+   "description": "Copies a manual snapshot of an instance or disk as another manual snapshot, or copies an automatic snapshot of an instance or disk as a manual snapshot.",
+   "options": [
+    {
+     "name": "--no-use-latest-restorable-auto-snapshot"
+    },
+    {
+     "name": "--restore-date",
+     "args": {}
+    },
+    {
+     "name": "--source-region",
+     "args": {
+      "suggestions": [
+       "us-east-1",
+       "us-east-2",
+       "us-west-1",
+       "us-west-2",
+       "eu-west-1",
+       "eu-west-2",
+       "eu-west-3",
+       "eu-central-1",
+       "eu-north-1",
+       "eu-south-2",
+       "ca-central-1",
+       "ap-east-1",
+       "ap-south-1",
+       "ap-southeast-1",
+       "ap-southeast-2",
+       "ap-northeast-1",
+       "ap-northeast-2",
+       "ap-southeast-3",
+       "ap-southeast-5",
+       "sa-east-1"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--source-resource-name",
+     "args": {}
+    },
+    {
+     "name": "--source-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--target-snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--use-latest-restorable-auto-snapshot"
+    }
+   ]
+  },
+  {
+   "name": "create-bucket",
+   "description": "Creates an Amazon Lightsail bucket.",
+   "options": [
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bundle-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-object-versioning"
+    },
+    {
+     "name": "--no-enable-object-versioning"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-bucket-access-key",
+   "description": "Creates a new access key for the specified Amazon Lightsail bucket.",
+   "options": [
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-certificate",
+   "description": "Creates an SSL/TLS certificate for an Amazon Lightsail content delivery network (CDN) distribution and a container service.",
+   "options": [
+    {
+     "name": "--certificate-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subject-alternative-names",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cloud-formation-stack",
+   "description": "Creates an AWS CloudFormation stack, which creates a new Amazon EC2 instance from an exported Amazon Lightsail snapshot.",
+   "options": [
+    {
+     "name": "--instances",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-contact-method",
+   "description": "Creates an email or SMS text message contact method.",
+   "options": [
+    {
+     "name": "--contact-endpoint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "Email",
+       "SMS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-container-service",
+   "description": "Creates an Amazon Lightsail container service.",
+   "options": [
+    {
+     "name": "--deployment",
+     "args": {}
+    },
+    {
+     "name": "--power",
+     "args": {
+      "suggestions": [
+       "nano",
+       "micro",
+       "small",
+       "medium",
+       "large",
+       "xlarge"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--private-registry-access",
+     "args": {}
+    },
+    {
+     "name": "--public-domain-names",
+     "args": {}
+    },
+    {
+     "name": "--scale",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-container-service-deployment",
+   "description": "Creates a deployment for your Amazon Lightsail container service.",
+   "options": [
+    {
+     "name": "--containers",
+     "args": {}
+    },
+    {
+     "name": "--public-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-container-service-registry-login",
+   "description": "Creates a temporary set of log in credentials that you can use to log in to the Docker process on your local machine."
+  },
+  {
+   "name": "create-disk",
+   "description": "Creates a block storage disk that can be attached to an Amazon Lightsail instance in the same Availability Zone (us-east-2a).",
+   "options": [
+    {
+     "name": "--add-ons",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disk-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--size-in-gb",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-disk-from-snapshot",
+   "description": "Creates a block storage disk from a manual or automatic snapshot of a disk.",
+   "options": [
+    {
+     "name": "--add-ons",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disk-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disk-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--no-use-latest-restorable-auto-snapshot"
+    },
+    {
+     "name": "--restore-date",
+     "args": {}
+    },
+    {
+     "name": "--size-in-gb",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-disk-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--use-latest-restorable-auto-snapshot"
+    }
+   ]
+  },
+  {
+   "name": "create-disk-snapshot",
+   "description": "Creates a snapshot of a block storage disk.",
+   "options": [
+    {
+     "name": "--disk-name",
+     "args": {}
+    },
+    {
+     "name": "--disk-snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-distribution",
+   "description": "Creates an Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--bundle-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cache-behavior-settings",
+     "args": {}
+    },
+    {
+     "name": "--cache-behaviors",
+     "args": {}
+    },
+    {
+     "name": "--certificate-name",
+     "args": {}
+    },
+    {
+     "name": "--default-cache-behavior",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--distribution-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "dualstack",
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--origin",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--viewer-minimum-tls-protocol-version",
+     "args": {
+      "suggestions": [
+       "TLSv1.1_2016",
+       "TLSv1.2_2018",
+       "TLSv1.2_2019",
+       "TLSv1.2_2021"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-domain",
+   "description": "Creates a domain resource for the specified domain (example.com).",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-domain-entry",
+   "description": "Creates one of the following domain name system (DNS) records in a domain DNS zone: Address (A), canonical name (CNAME), mail exchanger (MX), name server (NS), start of authority (SOA), service locator (SRV), or text (TXT).",
+   "options": [
+    {
+     "name": "--domain-entry",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-gui-session-access-details",
+   "description": "Creates two URLs that are used to access a virtual computer\u2019s graphical user interface (GUI) session.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-instance-snapshot",
+   "description": "Creates a snapshot of a specific virtual private server, or instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-instances",
+   "description": "Creates one or more Amazon Lightsail instances.",
+   "options": [
+    {
+     "name": "--add-ons",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--blueprint-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bundle-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-image-name",
+     "args": {}
+    },
+    {
+     "name": "--instance-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "dualstack",
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--key-pair-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-instances-from-snapshot",
+   "description": "Creates one or more new instances from a manual or automatic snapshot of an instance.",
+   "options": [
+    {
+     "name": "--add-ons",
+     "args": {}
+    },
+    {
+     "name": "--attached-disk-mapping",
+     "args": {}
+    },
+    {
+     "name": "--availability-zone",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bundle-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "dualstack",
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--key-pair-name",
+     "args": {}
+    },
+    {
+     "name": "--no-use-latest-restorable-auto-snapshot"
+    },
+    {
+     "name": "--restore-date",
+     "args": {}
+    },
+    {
+     "name": "--source-instance-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--use-latest-restorable-auto-snapshot"
+    },
+    {
+     "name": "--user-data",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-key-pair",
+   "description": "Creates a custom SSH key pair that you can use with an Amazon Lightsail instance.",
+   "options": [
+    {
+     "name": "--key-pair-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-load-balancer",
+   "description": "Creates a Lightsail load balancer.",
+   "options": [
+    {
+     "name": "--certificate-alternative-names",
+     "args": {}
+    },
+    {
+     "name": "--certificate-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--certificate-name",
+     "args": {}
+    },
+    {
+     "name": "--health-check-path",
+     "args": {}
+    },
+    {
+     "name": "--instance-port",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "dualstack",
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tls-policy-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-load-balancer-tls-certificate",
+   "description": "Creates an SSL/TLS certificate for an Amazon Lightsail load balancer.",
+   "options": [
+    {
+     "name": "--certificate-alternative-names",
+     "args": {}
+    },
+    {
+     "name": "--certificate-domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-relational-database",
+   "description": "Creates a new database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--master-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-username",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--relational-database-blueprint-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relational-database-bundle-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-relational-database-from-snapshot",
+   "description": "Creates a new database from an existing database snapshot in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-use-latest-restorable-time"
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--relational-database-bundle-id",
+     "args": {}
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relational-database-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--restore-time",
+     "args": {}
+    },
+    {
+     "name": "--source-relational-database-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--use-latest-restorable-time"
+    }
+   ]
+  },
+  {
+   "name": "create-relational-database-snapshot",
+   "description": "Creates a snapshot of your database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relational-database-snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-alarm",
+   "description": "Deletes an alarm.",
+   "options": [
+    {
+     "name": "--alarm-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-auto-snapshot",
+   "description": "Deletes an automatic snapshot of an instance or disk.",
+   "options": [
+    {
+     "name": "--date",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket",
+   "description": "Deletes a Amazon Lightsail bucket.",
+   "options": [
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--no-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-access-key",
+   "description": "Deletes an access key for the specified Amazon Lightsail bucket.",
+   "options": [
+    {
+     "name": "--access-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-certificate",
+   "description": "Deletes an SSL/TLS certificate for your Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--certificate-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-contact-method",
+   "description": "Deletes a contact method.",
+   "options": [
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "Email",
+       "SMS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-container-image",
+   "description": "Deletes a container image that is registered to your Amazon Lightsail container service.",
+   "options": [
+    {
+     "name": "--image",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-container-service",
+   "description": "Deletes your Amazon Lightsail container service.",
+   "options": [
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-disk",
+   "description": "Deletes the specified block storage disk.",
+   "options": [
+    {
+     "name": "--disk-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-delete-add-ons"
+    },
+    {
+     "name": "--no-force-delete-add-ons"
+    }
+   ]
+  },
+  {
+   "name": "delete-disk-snapshot",
+   "description": "Deletes the specified disk snapshot.",
+   "options": [
+    {
+     "name": "--disk-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-distribution",
+   "description": "Deletes your Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--distribution-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-domain",
+   "description": "Deletes the specified domain recordset and all of its domain records.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain-entry",
+   "description": "Deletes a specific domain entry.",
+   "options": [
+    {
+     "name": "--domain-entry",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-instance",
+   "description": "Deletes an Amazon Lightsail instance.",
+   "options": [
+    {
+     "name": "--force-delete-add-ons"
+    },
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force-delete-add-ons"
+    }
+   ]
+  },
+  {
+   "name": "delete-instance-snapshot",
+   "description": "Deletes a specific snapshot of a virtual private server (or instance).",
+   "options": [
+    {
+     "name": "--instance-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-key-pair",
+   "description": "Deletes the specified key pair by removing the public key from Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--expected-fingerprint",
+     "args": {}
+    },
+    {
+     "name": "--key-pair-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-known-host-keys",
+   "description": "Deletes the known host key or certificate used by the Amazon Lightsail browser-based SSH or RDP clients to authenticate an instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-load-balancer",
+   "description": "Deletes a Lightsail load balancer and all its associated SSL/TLS certificates.",
+   "options": [
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-load-balancer-tls-certificate",
+   "description": "Deletes an SSL/TLS certificate associated with a Lightsail load balancer.",
+   "options": [
+    {
+     "name": "--certificate-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "delete-relational-database",
+   "description": "Deletes a database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--final-relational-database-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--no-skip-final-snapshot"
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--skip-final-snapshot"
+    }
+   ]
+  },
+  {
+   "name": "delete-relational-database-snapshot",
+   "description": "Deletes a database snapshot in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--relational-database-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-certificate-from-distribution",
+   "description": "Detaches an SSL/TLS certificate from your Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--distribution-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-disk",
+   "description": "Detaches a stopped block storage disk from a Lightsail instance.",
+   "options": [
+    {
+     "name": "--disk-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-instances-from-load-balancer",
+   "description": "Detaches the specified instances from a Lightsail load balancer.",
+   "options": [
+    {
+     "name": "--instance-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-static-ip",
+   "description": "Detaches a static IP from the Amazon Lightsail instance to which it is attached.",
+   "options": [
+    {
+     "name": "--static-ip-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-add-on",
+   "description": "Disables an add-on for an Amazon Lightsail resource.",
+   "options": [
+    {
+     "name": "--add-on-type",
+     "args": {
+      "suggestions": [
+       "AutoSnapshot",
+       "StopInstanceOnIdle"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "download-default-key-pair",
+   "description": "Downloads the regional Amazon Lightsail default key pair."
+  },
+  {
+   "name": "enable-add-on",
+   "description": "Enables or modifies an add-on for an Amazon Lightsail resource.",
+   "options": [
+    {
+     "name": "--add-on-request",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-snapshot",
+   "description": "Exports an Amazon Lightsail instance or block storage disk snapshot to Amazon Elastic Compute Cloud (Amazon EC2).",
+   "options": [
+    {
+     "name": "--source-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-active-names",
+   "description": "Returns the names of all active (not deleted) resources.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-alarms",
+   "description": "Returns information about the configured alarms.",
+   "options": [
+    {
+     "name": "--alarm-name",
+     "args": {}
+    },
+    {
+     "name": "--monitored-resource-name",
+     "args": {}
+    },
+    {
+     "name": "--page-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-auto-snapshots",
+   "description": "Returns the available automatic snapshots for an instance or disk.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-blueprints",
+   "description": "Returns the list of available instance images, or blueprints.",
+   "options": [
+    {
+     "name": "--app-category",
+     "args": {
+      "suggestions": [
+       "LfR"
+      ]
+     }
+    },
+    {
+     "name": "--include-inactive"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-inactive"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-access-keys",
+   "description": "Returns the existing access key IDs for the specified Amazon Lightsail bucket.",
+   "options": [
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-bundles",
+   "description": "Returns the bundles that you can apply to a Amazon Lightsail bucket.",
+   "options": [
+    {
+     "name": "--include-inactive"
+    },
+    {
+     "name": "--no-include-inactive"
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-metric-data",
+   "description": "Returns the data points of a specific metric for an Amazon Lightsail bucket.",
+   "options": [
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "BucketSizeBytes",
+       "NumberOfObjects"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unit",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-buckets",
+   "description": "Returns information about one or more Amazon Lightsail buckets.",
+   "options": [
+    {
+     "name": "--bucket-name",
+     "args": {}
+    },
+    {
+     "name": "--include-connected-resources"
+    },
+    {
+     "name": "--include-cors"
+    },
+    {
+     "name": "--no-include-connected-resources"
+    },
+    {
+     "name": "--no-include-cors"
+    },
+    {
+     "name": "--page-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bundles",
+   "description": "Returns the bundles that you can apply to an Amazon Lightsail instance when you create it.",
+   "options": [
+    {
+     "name": "--app-category",
+     "args": {
+      "suggestions": [
+       "LfR"
+      ]
+     }
+    },
+    {
+     "name": "--include-inactive"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-inactive"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-certificates",
+   "description": "Returns information about one or more Amazon Lightsail SSL/TLS certificates.",
+   "options": [
+    {
+     "name": "--certificate-name",
+     "args": {}
+    },
+    {
+     "name": "--certificate-statuses",
+     "args": {}
+    },
+    {
+     "name": "--include-certificate-details"
+    },
+    {
+     "name": "--no-include-certificate-details"
+    },
+    {
+     "name": "--page-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-cloud-formation-stack-records",
+   "description": "Returns the CloudFormation stack record created as a result of the create cloud formation stack operation.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-contact-methods",
+   "description": "Returns information about the configured contact methods.",
+   "options": [
+    {
+     "name": "--protocols",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-container-api-metadata",
+   "description": "Returns information about Amazon Lightsail containers, such as the current version of the Lightsail Control (lightsailctl) plugin."
+  },
+  {
+   "name": "get-container-images",
+   "description": "Returns the container images that are registered to your Amazon Lightsail container service.",
+   "options": [
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-container-log",
+   "description": "Returns the log events of a container of your Amazon Lightsail container service.",
+   "options": [
+    {
+     "name": "--container-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--filter-pattern",
+     "args": {}
+    },
+    {
+     "name": "--page-token",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-container-service-deployments",
+   "description": "Returns the deployments for your Amazon Lightsail container service A deployment specifies the settings, such as the ports and launch command, of containers that are deployed to your container service.",
+   "options": [
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-container-service-metric-data",
+   "description": "Returns the data points of a specific metric of your Amazon Lightsail container service.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "CPUUtilization",
+       "MemoryUtilization"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistics",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-container-service-powers",
+   "description": "Returns the list of powers that can be specified for your Amazon Lightsail container services."
+  },
+  {
+   "name": "get-container-services",
+   "description": "Returns information about one or more of your Amazon Lightsail container services.",
+   "options": [
+    {
+     "name": "--service-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-cost-estimate",
+   "description": "Retrieves information about the cost estimate for a specified resource.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-disk",
+   "description": "Returns information about a specific block storage disk.",
+   "options": [
+    {
+     "name": "--disk-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-disk-snapshot",
+   "description": "Returns information about a specific block storage disk snapshot.",
+   "options": [
+    {
+     "name": "--disk-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-disk-snapshots",
+   "description": "Returns information about all block storage disk snapshots in your AWS account and region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-disks",
+   "description": "Returns information about all block storage disks in your AWS account and region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-distribution-bundles",
+   "description": "Returns the bundles that can be applied to your Amazon Lightsail content delivery network (CDN) distributions."
+  },
+  {
+   "name": "get-distribution-latest-cache-reset",
+   "description": "Returns the timestamp and status of the last cache reset of a specific Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--distribution-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-distribution-metric-data",
+   "description": "Returns the data points of a specific metric for an Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--distribution-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "Requests",
+       "BytesDownloaded",
+       "BytesUploaded",
+       "TotalErrorRate",
+       "Http4xxErrorRate",
+       "Http5xxErrorRate"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unit",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-distributions",
+   "description": "Returns information about one or more of your Amazon Lightsail content delivery network (CDN) distributions.",
+   "options": [
+    {
+     "name": "--distribution-name",
+     "args": {}
+    },
+    {
+     "name": "--page-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-domain",
+   "description": "Returns information about a specific domain recordset.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domains",
+   "description": "Returns a list of all domains in the user's account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-export-snapshot-records",
+   "description": "Returns all export snapshot records created as a result of the export snapshot operation.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-instance",
+   "description": "Returns information about a specific Amazon Lightsail instance, which is a virtual private server.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instance-access-details",
+   "description": "Returns temporary SSH keys you can use to connect to a specific virtual private server, or instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "ssh",
+       "rdp"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-instance-metric-data",
+   "description": "Returns the data points for the specified Amazon Lightsail instance metric, given an instance name.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "CPUUtilization",
+       "NetworkIn",
+       "NetworkOut",
+       "StatusCheckFailed",
+       "StatusCheckFailed_Instance",
+       "StatusCheckFailed_System",
+       "BurstCapacityTime",
+       "BurstCapacityPercentage",
+       "MetadataNoToken"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unit",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instance-port-states",
+   "description": "Returns the firewall port states for a specific Amazon Lightsail instance, the IP addresses allowed to connect to the instance through the ports, and the protocol.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instance-snapshot",
+   "description": "Returns information about a specific instance snapshot.",
+   "options": [
+    {
+     "name": "--instance-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instance-snapshots",
+   "description": "Returns all instance snapshots for the user's account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-instance-state",
+   "description": "Returns the state of a specific instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instances",
+   "description": "Returns information about all Amazon Lightsail virtual private servers, or instances.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-key-pair",
+   "description": "Returns information about a specific key pair.",
+   "options": [
+    {
+     "name": "--key-pair-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-key-pairs",
+   "description": "Returns information about all key pairs in the user's account.",
+   "options": [
+    {
+     "name": "--include-default-key-pair"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-default-key-pair"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-load-balancer",
+   "description": "Returns information about the specified Lightsail load balancer.",
+   "options": [
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-load-balancer-metric-data",
+   "description": "Returns information about health metrics for your Lightsail load balancer.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "ClientTLSNegotiationErrorCount",
+       "HealthyHostCount",
+       "UnhealthyHostCount",
+       "HTTPCode_LB_4XX_Count",
+       "HTTPCode_LB_5XX_Count",
+       "HTTPCode_Instance_2XX_Count",
+       "HTTPCode_Instance_3XX_Count",
+       "HTTPCode_Instance_4XX_Count",
+       "HTTPCode_Instance_5XX_Count",
+       "InstanceResponseTime",
+       "RejectedConnectionCount",
+       "RequestCount"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unit",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-load-balancer-tls-certificates",
+   "description": "Returns information about the TLS certificates that are associated with the specified Lightsail load balancer.",
+   "options": [
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-load-balancer-tls-policies",
+   "description": "Returns a list of TLS security policies that you can apply to Lightsail load balancers.",
+   "options": [
+    {
+     "name": "--page-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-load-balancers",
+   "description": "Returns information about all load balancers in an account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-operation",
+   "description": "Returns information about a specific operation.",
+   "options": [
+    {
+     "name": "--operation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-operations",
+   "description": "Returns information about all operations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-operations-for-resource",
+   "description": "Gets operations for a specific resource (an instance or a static IP).",
+   "options": [
+    {
+     "name": "--page-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-regions",
+   "description": "Returns a list of all valid regions for Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--include-availability-zones"
+    },
+    {
+     "name": "--include-relational-database-availability-zones"
+    },
+    {
+     "name": "--no-include-availability-zones"
+    },
+    {
+     "name": "--no-include-relational-database-availability-zones"
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database",
+   "description": "Returns information about a specific database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-blueprints",
+   "description": "Returns a list of available database blueprints in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-bundles",
+   "description": "Returns the list of bundles that are available in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--include-inactive"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-inactive"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-events",
+   "description": "Returns a list of events for a specific database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--duration-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-log-events",
+   "description": "Returns a list of log events for a database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--log-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-start-from-head"
+    },
+    {
+     "name": "--page-token",
+     "args": {}
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-from-head"
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-log-streams",
+   "description": "Returns a list of available log streams for a specific database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-master-user-password",
+   "description": "Returns the current, previous, or pending versions of the master user password for a Lightsail database.",
+   "options": [
+    {
+     "name": "--password-version",
+     "args": {
+      "suggestions": [
+       "CURRENT",
+       "PREVIOUS",
+       "PENDING"
+      ]
+     }
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-metric-data",
+   "description": "Returns the data points of the specified metric for a database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {
+      "suggestions": [
+       "CPUUtilization",
+       "DatabaseConnections",
+       "DiskQueueDepth",
+       "FreeStorageSpace",
+       "NetworkReceiveThroughput",
+       "NetworkTransmitThroughput"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statistics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unit",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-parameters",
+   "description": "Returns all of the runtime parameters offered by the underlying database software, or engine, for a specific database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-snapshot",
+   "description": "Returns information about a specific database snapshot in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--relational-database-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-relational-database-snapshots",
+   "description": "Returns information about all of your database snapshots in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-relational-databases",
+   "description": "Returns information about all of your databases in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-setup-history",
+   "description": "Returns detailed information for five of the most recent SetupInstanceHttps requests that were ran on the target instance.",
+   "options": [
+    {
+     "name": "--page-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-static-ip",
+   "description": "Returns information about an Amazon Lightsail static IP.",
+   "options": [
+    {
+     "name": "--static-ip-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-static-ips",
+   "description": "Returns information about all static IPs in the user's account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-key-pair",
+   "description": "Imports a public SSH key from a specific key pair.",
+   "options": [
+    {
+     "name": "--key-pair-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--public-key-base64",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "is-vpc-peered",
+   "description": "Returns a Boolean value indicating whether your Lightsail VPC is peered."
+  },
+  {
+   "name": "open-instance-public-ports",
+   "description": "Opens ports for a specific Amazon Lightsail instance, and specifies the IP addresses allowed to connect to the instance through the ports, and the protocol.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--port-info",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "peer-vpc",
+   "description": "Peers the Lightsail VPC with the user's default VPC."
+  },
+  {
+   "name": "put-alarm",
+   "description": "Creates or updates an alarm, and associates it with the specified metric.",
+   "options": [
+    {
+     "name": "--alarm-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--comparison-operator",
+     "args": {
+      "suggestions": [
+       "GreaterThanOrEqualToThreshold",
+       "GreaterThanThreshold",
+       "LessThanThreshold",
+       "LessThanOrEqualToThreshold"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--contact-protocols",
+     "args": {}
+    },
+    {
+     "name": "--datapoints-to-alarm",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-periods",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--monitored-resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-notification-enabled"
+    },
+    {
+     "name": "--notification-enabled"
+    },
+    {
+     "name": "--notification-triggers",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--threshold",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--treat-missing-data",
+     "args": {
+      "suggestions": [
+       "breaching",
+       "notBreaching",
+       "ignore",
+       "missing"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "put-instance-public-ports",
+   "description": "Opens ports for a specific Amazon Lightsail instance, and specifies the IP addresses allowed to connect to the instance through the ports, and the protocol.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--port-infos",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reboot-instance",
+   "description": "Restarts a specific instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reboot-relational-database",
+   "description": "Restarts a specific database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-container-image",
+   "description": "Registers a container image to your Amazon Lightsail container service.",
+   "options": [
+    {
+     "name": "--digest",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--label",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "release-static-ip",
+   "description": "Deletes a specific static IP from your account.",
+   "options": [
+    {
+     "name": "--static-ip-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-distribution-cache",
+   "description": "Deletes currently cached content from your Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--distribution-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-contact-method-verification",
+   "description": "Sends a verification request to an email contact method to ensure it's owned by the requester.",
+   "options": [
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "Email"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-ip-address-type",
+   "description": "Sets the IP address type for an Amazon Lightsail resource.",
+   "options": [
+    {
+     "name": "--accept-bundle-update"
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "dualstack",
+       "ipv4",
+       "ipv6"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-accept-bundle-update"
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "ContainerService",
+       "Instance",
+       "StaticIp",
+       "KeyPair",
+       "InstanceSnapshot",
+       "Domain",
+       "PeeredVpc",
+       "LoadBalancer",
+       "LoadBalancerTlsCertificate",
+       "Disk",
+       "DiskSnapshot",
+       "RelationalDatabase",
+       "RelationalDatabaseSnapshot",
+       "ExportSnapshotRecord",
+       "CloudFormationStackRecord",
+       "Alarm",
+       "ContactMethod",
+       "Distribution",
+       "Certificate",
+       "Bucket"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-resource-access-for-bucket",
+   "description": "Sets the Amazon Lightsail resources that can access the specified Lightsail bucket.",
+   "options": [
+    {
+     "name": "--access",
+     "args": {
+      "suggestions": [
+       "allow",
+       "deny"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "setup-instance-https",
+   "description": "Creates an SSL/TLS certificate that secures traffic for your website.",
+   "options": [
+    {
+     "name": "--certificate-provider",
+     "args": {
+      "suggestions": [
+       "LetsEncrypt"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--domain-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email-address",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-gui-session",
+   "description": "Initiates a graphical user interface (GUI) session that\u2019s used to access a virtual computer\u2019s operating system and application.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-instance",
+   "description": "Starts a specific Amazon Lightsail instance from a stopped state.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-relational-database",
+   "description": "Starts a specific database from a stopped state in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-gui-session",
+   "description": "Terminates a web-based Amazon DCV session that\u2019s used to access a virtual computer\u2019s operating system or application.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-instance",
+   "description": "Stops a specific Amazon Lightsail instance that is currently running.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "stop-relational-database",
+   "description": "Stops a specific database that is currently running in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relational-database-snapshot-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to the specified Amazon Lightsail resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-alarm",
+   "description": "Tests an alarm by displaying a banner on the Amazon Lightsail console.",
+   "options": [
+    {
+     "name": "--alarm-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "OK",
+       "ALARM",
+       "INSUFFICIENT_DATA"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "unpeer-vpc",
+   "description": "Unpeers the Lightsail VPC from the user's default VPC."
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes the specified set of tag keys and their values from the specified Amazon Lightsail resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-bucket",
+   "description": "Updates an existing Amazon Lightsail bucket.",
+   "options": [
+    {
+     "name": "--access-log-config",
+     "args": {}
+    },
+    {
+     "name": "--access-rules",
+     "args": {}
+    },
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cors",
+     "args": {}
+    },
+    {
+     "name": "--readonly-access-accounts",
+     "args": {}
+    },
+    {
+     "name": "--versioning",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-bucket-bundle",
+   "description": "Updates the bundle, or storage plan, of an existing Amazon Lightsail bucket.",
+   "options": [
+    {
+     "name": "--bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bundle-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-container-service",
+   "description": "Updates the configuration of your Amazon Lightsail container service, such as its power, scale, and public domain names.",
+   "options": [
+    {
+     "name": "--is-disabled"
+    },
+    {
+     "name": "--no-is-disabled"
+    },
+    {
+     "name": "--power",
+     "args": {
+      "suggestions": [
+       "nano",
+       "micro",
+       "small",
+       "medium",
+       "large",
+       "xlarge"
+      ]
+     }
+    },
+    {
+     "name": "--private-registry-access",
+     "args": {}
+    },
+    {
+     "name": "--public-domain-names",
+     "args": {}
+    },
+    {
+     "name": "--scale",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-distribution",
+   "description": "Updates an existing Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--cache-behavior-settings",
+     "args": {}
+    },
+    {
+     "name": "--cache-behaviors",
+     "args": {}
+    },
+    {
+     "name": "--certificate-name",
+     "args": {}
+    },
+    {
+     "name": "--default-cache-behavior",
+     "args": {}
+    },
+    {
+     "name": "--distribution-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--is-enabled"
+    },
+    {
+     "name": "--no-is-enabled"
+    },
+    {
+     "name": "--no-use-default-certificate"
+    },
+    {
+     "name": "--origin",
+     "args": {}
+    },
+    {
+     "name": "--use-default-certificate"
+    },
+    {
+     "name": "--viewer-minimum-tls-protocol-version",
+     "args": {
+      "suggestions": [
+       "TLSv1.1_2016",
+       "TLSv1.2_2018",
+       "TLSv1.2_2019",
+       "TLSv1.2_2021"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-distribution-bundle",
+   "description": "Updates the bundle of your Amazon Lightsail content delivery network (CDN) distribution.",
+   "options": [
+    {
+     "name": "--bundle-id",
+     "args": {}
+    },
+    {
+     "name": "--distribution-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-domain-entry",
+   "description": "Updates a domain recordset after it is created.",
+   "options": [
+    {
+     "name": "--domain-entry",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-instance-metadata-options",
+   "description": "Modifies the Amazon Lightsail instance metadata parameters on a running or stopped instance.",
+   "options": [
+    {
+     "name": "--http-endpoint",
+     "args": {
+      "suggestions": [
+       "disabled",
+       "enabled"
+      ]
+     }
+    },
+    {
+     "name": "--http-protocol-ipv6",
+     "args": {
+      "suggestions": [
+       "disabled",
+       "enabled"
+      ]
+     }
+    },
+    {
+     "name": "--http-put-response-hop-limit",
+     "args": {}
+    },
+    {
+     "name": "--http-tokens",
+     "args": {
+      "suggestions": [
+       "optional",
+       "required"
+      ]
+     }
+    },
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-load-balancer-attribute",
+   "description": "Updates the specified attribute for a load balancer.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {
+      "suggestions": [
+       "HealthCheckPath",
+       "SessionStickinessEnabled",
+       "SessionStickiness_LB_CookieDurationSeconds",
+       "HttpsRedirectionEnabled",
+       "TlsPolicyName"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--attribute-value",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-relational-database",
+   "description": "Allows the update of one or more attributes of a database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--ca-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--disable-backup-retention"
+    },
+    {
+     "name": "--enable-backup-retention"
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--no-disable-backup-retention"
+    },
+    {
+     "name": "--no-enable-backup-retention"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-rotate-master-user-password"
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--relational-database-blueprint-id",
+     "args": {}
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rotate-master-user-password"
+    }
+   ]
+  },
+  {
+   "name": "update-relational-database-parameters",
+   "description": "Allows the update of one or more parameters of a database in Amazon Lightsail.",
+   "options": [
+    {
+     "name": "--parameters",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--relational-database-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

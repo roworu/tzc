@@ -1,0 +1,637 @@
+{
+ "name": "emr-containers",
+ "description": "Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on Amazon Elastic Kubernetes Service (Amazon EKS).",
+ "subcommands": [
+  {
+   "name": "cancel-job-run",
+   "description": "Cancels a job run.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-job-template",
+   "description": "Creates a job template.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--job-template-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-managed-endpoint",
+   "description": "Creates a managed endpoint.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration-overrides",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--release-label",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-idle-timeout-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-security-configuration",
+   "description": "Creates a security configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--container-provider",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-configuration-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-virtual-cluster",
+   "description": "Creates a virtual cluster.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--container-provider",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-session-enabled"
+    },
+    {
+     "name": "--scheduler-configuration",
+     "args": {}
+    },
+    {
+     "name": "--security-configuration-id",
+     "args": {}
+    },
+    {
+     "name": "--session-enabled"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-job-template",
+   "description": "Deletes a job template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-managed-endpoint",
+   "description": "Deletes a managed endpoint.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-security-configuration",
+   "description": "Deletes a security configuration.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-virtual-cluster",
+   "description": "Deletes a virtual cluster.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job-run",
+   "description": "Displays detailed information about a job run.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job-template",
+   "description": "Displays detailed information about a specified job template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-managed-endpoint",
+   "description": "Displays detailed information about a managed endpoint.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--virtual-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-security-configuration",
+   "description": "Displays detailed information about a specified security configuration.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-virtual-cluster",
+   "description": "Displays detailed information about a specified virtual cluster.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-endpoint-session-credentials",
+   "description": "Generate a session token to connect to a managed endpoint.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--credential-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--duration-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-context",
+     "args": {}
+    },
+    {
+     "name": "--virtual-cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-job-runs",
+   "description": "Lists job runs based on a set of parameters.",
+   "options": [
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--states",
+     "args": {}
+    },
+    {
+     "name": "--virtual-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-job-templates",
+   "description": "Lists job templates based on a set of parameters.",
+   "options": [
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-endpoints",
+   "description": "Lists managed endpoints based on a set of parameters.",
+   "options": [
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--states",
+     "args": {}
+    },
+    {
+     "name": "--types",
+     "args": {}
+    },
+    {
+     "name": "--virtual-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-security-configurations",
+   "description": "Lists security configurations based on a set of parameters.",
+   "options": [
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags assigned to the resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-virtual-clusters",
+   "description": "Lists information about the specified virtual cluster.",
+   "options": [
+    {
+     "name": "--container-provider-id",
+     "args": {}
+    },
+    {
+     "name": "--container-provider-type",
+     "args": {
+      "suggestions": [
+       "EKS"
+      ]
+     }
+    },
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--eks-access-entry-integrated"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-eks-access-entry-integrated"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--states",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-job-run",
+   "description": "Starts a job run.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration-overrides",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--job-driver",
+     "args": {}
+    },
+    {
+     "name": "--job-template-id",
+     "args": {}
+    },
+    {
+     "name": "--job-template-parameters",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--release-label",
+     "args": {}
+    },
+    {
+     "name": "--retry-policy-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--virtual-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns tags to resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-role-trust-policy",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--iam-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-virtual-cluster",
+   "description": "Updates a virtual cluster.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduler-configuration",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

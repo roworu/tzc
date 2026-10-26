@@ -1,0 +1,1056 @@
+{
+ "name": "opensearchserverless",
+ "description": "Use the Amazon OpenSearch Serverless API to create, configure, and manage OpenSearch Serverless collections and security policies.",
+ "subcommands": [
+  {
+   "name": "batch-get-collection",
+   "description": "Returns attributes for one or more collections, including the collection endpoint, the OpenSearch Dashboards endpoint, and FIPS-compliant endpoints.",
+   "options": [
+    {
+     "name": "--ids",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-get-collection-group",
+   "description": "Returns attributes for one or more collection groups, including capacity limits and the number of collections in each group.",
+   "options": [
+    {
+     "name": "--ids",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-get-effective-lifecycle-policy",
+   "description": "Returns a list of successful and failed retrievals for the OpenSearch Serverless indexes.",
+   "options": [
+    {
+     "name": "--resource-identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-lifecycle-policy",
+   "description": "Returns one or more configured OpenSearch Serverless lifecycle policies.",
+   "options": [
+    {
+     "name": "--identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-vpc-endpoint",
+   "description": "Returns attributes for one or more VPC endpoints associated with the current account.",
+   "options": [
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-access-policy",
+   "description": "Creates a data access policy for OpenSearch Serverless.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "data"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-collection",
+   "description": "Creates a new OpenSearch Serverless collection.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--collection-group-name",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--standby-replicas",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SEARCH",
+       "TIMESERIES",
+       "VECTORSEARCH"
+      ]
+     }
+    },
+    {
+     "name": "--vector-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-collection-group",
+   "description": "Creates a collection group within OpenSearch Serverless.",
+   "options": [
+    {
+     "name": "--capacity-limits",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--generation",
+     "args": {
+      "suggestions": [
+       "CLASSIC",
+       "NEXTGEN"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--standby-replicas",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-index",
+   "description": "Creates an index within an OpenSearch Serverless collection.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-schema",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-lifecycle-policy",
+   "description": "Creates a lifecyle policy to be applied to OpenSearch Serverless indexes.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "retention"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-security-config",
+   "description": "Specifies a security configuration for OpenSearch Serverless.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--iam-federation-options",
+     "args": {}
+    },
+    {
+     "name": "--iam-identity-center-options",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--saml-options",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "saml",
+       "iamidentitycenter",
+       "iamfederation"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-security-policy",
+   "description": "Creates a security policy to be used by one or more OpenSearch Serverless collections.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "encryption",
+       "network"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-endpoint",
+   "description": "Creates an OpenSearch Serverless-managed interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-policy",
+   "description": "Deletes an OpenSearch Serverless access policy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "data"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-collection",
+   "description": "Deletes an OpenSearch Serverless collection.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-collection-group",
+   "description": "Deletes a collection group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-index",
+   "description": "Deletes an index from an OpenSearch Serverless collection.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-lifecycle-policy",
+   "description": "Deletes an OpenSearch Serverless lifecycle policy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "retention"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-security-config",
+   "description": "Deletes a security configuration for OpenSearch Serverless.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-security-policy",
+   "description": "Deletes an OpenSearch Serverless security policy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "encryption",
+       "network"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-endpoint",
+   "description": "Deletes an OpenSearch Serverless-managed interface endpoint.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-policy",
+   "description": "Returns an OpenSearch Serverless access policy.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "data"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-settings",
+   "description": "Returns account-level settings related to OpenSearch Serverless."
+  },
+  {
+   "name": "get-index",
+   "description": "Retrieves information about an index in an OpenSearch Serverless collection, including its schema definition.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policies-stats",
+   "description": "Returns statistical information about your OpenSearch Serverless access policies, security configurations, and security policies."
+  },
+  {
+   "name": "get-security-config",
+   "description": "Returns information about an OpenSearch Serverless security configuration.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-security-policy",
+   "description": "Returns information about a configured OpenSearch Serverless security policy.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "encryption",
+       "network"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-access-policies",
+   "description": "Returns information about a list of OpenSearch Serverless access policies.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "data"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-collection-groups",
+   "description": "Returns a list of collection groups.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-collections",
+   "description": "Lists all OpenSearch Serverless collections.",
+   "options": [
+    {
+     "name": "--collection-filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-lifecycle-policies",
+   "description": "Returns a list of OpenSearch Serverless lifecycle policies.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "retention"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-security-configs",
+   "description": "Returns information about configured OpenSearch Serverless security configurations.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "saml",
+       "iamidentitycenter",
+       "iamfederation"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-security-policies",
+   "description": "Returns information about configured OpenSearch Serverless security policies.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "encryption",
+       "network"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns the tags for an OpenSearch Serverless resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-endpoints",
+   "description": "Returns the OpenSearch Serverless-managed interface VPC endpoints associated with the current account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-filters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates tags with an OpenSearch Serverless resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag or set of tags from an OpenSearch Serverless resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-access-policy",
+   "description": "Updates an OpenSearch Serverless access policy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--policy-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "data"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-account-settings",
+   "description": "Update the OpenSearch Serverless settings for the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--capacity-limits",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-collection",
+   "description": "Updates an OpenSearch Serverless collection.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vector-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-collection-group",
+   "description": "Updates the description and capacity limits of a collection group.",
+   "options": [
+    {
+     "name": "--capacity-limits",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-index",
+   "description": "Updates an existing index in an OpenSearch Serverless collection.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-schema",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-lifecycle-policy",
+   "description": "Updates an OpenSearch Serverless access policy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--policy-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "retention"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-security-config",
+   "description": "Updates a security configuration for OpenSearch Serverless.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--config-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--iam-federation-options",
+     "args": {}
+    },
+    {
+     "name": "--iam-identity-center-options-updates",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--saml-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-security-policy",
+   "description": "Updates an OpenSearch Serverless security policy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--policy-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "encryption",
+       "network"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-vpc-endpoint",
+   "description": "Updates an OpenSearch Serverless-managed interface endpoint.",
+   "options": [
+    {
+     "name": "--add-security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--add-subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remove-security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--remove-subnet-ids",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

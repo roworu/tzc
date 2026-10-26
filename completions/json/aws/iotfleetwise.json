@@ -1,0 +1,1257 @@
+{
+ "name": "iotfleetwise",
+ "description": "Amazon Web Services IoT FleetWise is a fully managed service that you can use to collect, model, and transfer vehicle data to the Amazon Web Services cloud at scale.",
+ "subcommands": [
+  {
+   "name": "associate-vehicle-fleet",
+   "description": "Adds, or associates, a vehicle with a fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vehicle-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-create-vehicle",
+   "description": "Creates a group, or batch, of vehicles.",
+   "options": [
+    {
+     "name": "--vehicles",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-vehicle",
+   "description": "Updates a group, or batch, of vehicles.",
+   "options": [
+    {
+     "name": "--vehicles",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-campaign",
+   "description": "Creates an orchestration of data collection rules.",
+   "options": [
+    {
+     "name": "--collection-scheme",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compression",
+     "args": {
+      "suggestions": [
+       "OFF",
+       "SNAPPY"
+      ]
+     }
+    },
+    {
+     "name": "--data-destination-configs",
+     "args": {}
+    },
+    {
+     "name": "--data-extra-dimensions",
+     "args": {}
+    },
+    {
+     "name": "--data-partitions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--diagnostics-mode",
+     "args": {
+      "suggestions": [
+       "OFF",
+       "SEND_ACTIVE_DTCS"
+      ]
+     }
+    },
+    {
+     "name": "--expiry-time",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--post-trigger-collection-duration",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--signal-catalog-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signals-to-collect",
+     "args": {}
+    },
+    {
+     "name": "--signals-to-fetch",
+     "args": {}
+    },
+    {
+     "name": "--spooling-mode",
+     "args": {
+      "suggestions": [
+       "OFF",
+       "TO_DISK"
+      ]
+     }
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-decoder-manifest",
+   "description": "Creates the decoder manifest associated with a model manifest.",
+   "options": [
+    {
+     "name": "--default-for-unmapped-signals",
+     "args": {
+      "suggestions": [
+       "CUSTOM_DECODING"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--model-manifest-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-interfaces",
+     "args": {}
+    },
+    {
+     "name": "--signal-decoders",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-fleet",
+   "description": "Creates a fleet that represents a group of vehicles.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signal-catalog-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-model-manifest",
+   "description": "Creates a vehicle model (model manifest) that specifies signals (attributes, branches, sensors, and actuators).",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nodes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signal-catalog-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-signal-catalog",
+   "description": "Creates a collection of standardized signals that can be reused to create vehicle models.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nodes",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-state-template",
+   "description": "Creates a state template.",
+   "options": [
+    {
+     "name": "--data-extra-dimensions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--metadata-extra-dimensions",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signal-catalog-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state-template-properties",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-vehicle",
+   "description": "Creates a vehicle, which is an instance of a vehicle model (model manifest).",
+   "options": [
+    {
+     "name": "--association-behavior",
+     "args": {
+      "suggestions": [
+       "CreateIotThing",
+       "ValidateIotThingExists"
+      ]
+     }
+    },
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--decoder-manifest-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-manifest-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state-templates",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vehicle-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-campaign",
+   "description": "Deletes a data collection campaign.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-decoder-manifest",
+   "description": "Deletes a decoder manifest.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-fleet",
+   "description": "Deletes a fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-model-manifest",
+   "description": "Deletes a vehicle model (model manifest).",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-signal-catalog",
+   "description": "Deletes a signal catalog.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-state-template",
+   "description": "Deletes a state template.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vehicle",
+   "description": "Deletes a vehicle and removes it from any campaigns.",
+   "options": [
+    {
+     "name": "--vehicle-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-vehicle-fleet",
+   "description": "Removes, or disassociates, a vehicle from a fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vehicle-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-campaign",
+   "description": "Retrieves information about a campaign.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-decoder-manifest",
+   "description": "Retrieves information about a created decoder manifest.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-encryption-configuration",
+   "description": "Retrieves the encryption configuration for resources and data in Amazon Web Services IoT FleetWise."
+  },
+  {
+   "name": "get-fleet",
+   "description": "Retrieves information about a fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-logging-options",
+   "description": "Retrieves the logging options."
+  },
+  {
+   "name": "get-model-manifest",
+   "description": "Retrieves information about a vehicle model (model manifest).",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-register-account-status",
+   "description": "Retrieves information about the status of registering your Amazon Web Services account, IAM, and Amazon Timestream resources so that Amazon Web Services IoT FleetWise can transfer your vehicle data to the Amazon Web Services Cloud."
+  },
+  {
+   "name": "get-signal-catalog",
+   "description": "Retrieves information about a signal catalog.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-state-template",
+   "description": "Retrieves information about a state template.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vehicle",
+   "description": "Retrieves information about a vehicle.",
+   "options": [
+    {
+     "name": "--vehicle-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vehicle-status",
+   "description": "Retrieves information about the status of campaigns, decoder manifests, or state templates associated with a vehicle.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vehicle-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-decoder-manifest",
+   "description": "Creates a decoder manifest using your existing CAN DBC file from your local device.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-file-definitions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-signal-catalog",
+   "description": "Creates a signal catalog using your existing VSS formatted content from your local device.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vss",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-campaigns",
+   "description": "Lists information about created campaigns.",
+   "options": [
+    {
+     "name": "--list-response-scope",
+     "args": {
+      "suggestions": [
+       "METADATA_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-decoder-manifest-network-interfaces",
+   "description": "Lists the network interfaces specified in a decoder manifest.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-decoder-manifest-signals",
+   "description": "A list of information about signal decoders specified in a decoder manifest.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-decoder-manifests",
+   "description": "Lists decoder manifests.",
+   "options": [
+    {
+     "name": "--list-response-scope",
+     "args": {
+      "suggestions": [
+       "METADATA_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--model-manifest-arn",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fleets",
+   "description": "Retrieves information for each created fleet in an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--list-response-scope",
+     "args": {
+      "suggestions": [
+       "METADATA_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fleets-for-vehicle",
+   "description": "Retrieves a list of IDs for all fleets that the vehicle is associated with.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vehicle-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-model-manifest-nodes",
+   "description": "Lists information about nodes specified in a vehicle model (model manifest).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-model-manifests",
+   "description": "Retrieves a list of vehicle models (model manifests).",
+   "options": [
+    {
+     "name": "--list-response-scope",
+     "args": {
+      "suggestions": [
+       "METADATA_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--signal-catalog-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-signal-catalog-nodes",
+   "description": "Lists of information about the signals (nodes) specified in a signal catalog.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--signal-node-type",
+     "args": {
+      "suggestions": [
+       "SENSOR",
+       "ACTUATOR",
+       "ATTRIBUTE",
+       "BRANCH",
+       "CUSTOM_STRUCT",
+       "CUSTOM_PROPERTY"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-signal-catalogs",
+   "description": "Lists all the created signal catalogs in an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-state-templates",
+   "description": "Lists information about created state templates.",
+   "options": [
+    {
+     "name": "--list-response-scope",
+     "args": {
+      "suggestions": [
+       "METADATA_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags (metadata) you have assigned to the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-vehicles",
+   "description": "Retrieves a list of summaries of created vehicles.",
+   "options": [
+    {
+     "name": "--attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--attribute-values",
+     "args": {}
+    },
+    {
+     "name": "--list-response-scope",
+     "args": {
+      "suggestions": [
+       "METADATA_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--model-manifest-arn",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vehicles-in-fleet",
+   "description": "Retrieves a list of summaries of all vehicles associated with a fleet.",
+   "options": [
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-encryption-configuration",
+   "description": "Creates or updates the encryption configuration.",
+   "options": [
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "KMS_BASED_ENCRYPTION",
+       "FLEETWISE_DEFAULT_ENCRYPTION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-logging-options",
+   "description": "Creates or updates the logging option.",
+   "options": [
+    {
+     "name": "--cloud-watch-log-delivery",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-account",
+   "description": "This API operation contains deprecated parameters.",
+   "options": [
+    {
+     "name": "--iam-resources",
+     "args": {}
+    },
+    {
+     "name": "--timestream-resources",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds to or modifies the tags of the given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the given tags (metadata) from the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-campaign",
+   "description": "Updates a campaign.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "APPROVE",
+       "SUSPEND",
+       "RESUME",
+       "UPDATE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--data-extra-dimensions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-decoder-manifest",
+   "description": "Updates a decoder manifest.",
+   "options": [
+    {
+     "name": "--default-for-unmapped-signals",
+     "args": {
+      "suggestions": [
+       "CUSTOM_DECODING"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-interfaces-to-add",
+     "args": {}
+    },
+    {
+     "name": "--network-interfaces-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--network-interfaces-to-update",
+     "args": {}
+    },
+    {
+     "name": "--signal-decoders-to-add",
+     "args": {}
+    },
+    {
+     "name": "--signal-decoders-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--signal-decoders-to-update",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DRAFT",
+       "INVALID",
+       "VALIDATING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-fleet",
+   "description": "Updates the description of an existing fleet.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--fleet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-model-manifest",
+   "description": "Updates a vehicle model (model manifest).",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nodes-to-add",
+     "args": {}
+    },
+    {
+     "name": "--nodes-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DRAFT",
+       "INVALID",
+       "VALIDATING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-signal-catalog",
+   "description": "Updates a signal catalog.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nodes-to-add",
+     "args": {}
+    },
+    {
+     "name": "--nodes-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--nodes-to-update",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-state-template",
+   "description": "Updates a state template.",
+   "options": [
+    {
+     "name": "--data-extra-dimensions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata-extra-dimensions",
+     "args": {}
+    },
+    {
+     "name": "--state-template-properties-to-add",
+     "args": {}
+    },
+    {
+     "name": "--state-template-properties-to-remove",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-vehicle",
+   "description": "Updates a vehicle.",
+   "options": [
+    {
+     "name": "--attribute-update-mode",
+     "args": {
+      "suggestions": [
+       "Overwrite",
+       "Merge"
+      ]
+     }
+    },
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--decoder-manifest-arn",
+     "args": {}
+    },
+    {
+     "name": "--model-manifest-arn",
+     "args": {}
+    },
+    {
+     "name": "--state-templates-to-add",
+     "args": {}
+    },
+    {
+     "name": "--state-templates-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--state-templates-to-update",
+     "args": {}
+    },
+    {
+     "name": "--vehicle-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

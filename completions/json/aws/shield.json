@@ -1,0 +1,504 @@
+{
+ "name": "shield",
+ "description": "Shield Advanced This is the Shield Advanced API Reference.",
+ "subcommands": [
+  {
+   "name": "associate-drt-log-bucket",
+   "description": "Authorizes the Shield Response Team (SRT) to access the specified Amazon S3 bucket containing log data such as Application Load Balancer access logs, CloudFront logs, or logs from third party sources.",
+   "options": [
+    {
+     "name": "--log-bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-drt-role",
+   "description": "Authorizes the Shield Response Team (SRT) using the specified role, to access your Amazon Web Services account to assist with DDoS attack mitigation during potential attacks.",
+   "options": [
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-health-check",
+   "description": "Adds health-based detection to the Shield Advanced protection for a resource.",
+   "options": [
+    {
+     "name": "--health-check-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-proactive-engagement-details",
+   "description": "Initializes proactive engagement and sets the list of contacts for the Shield Response Team (SRT) to use.",
+   "options": [
+    {
+     "name": "--emergency-contact-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-protection",
+   "description": "Enables Shield Advanced for a specific Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-protection-group",
+   "description": "Creates a grouping of protected resources so they can be handled as a collective.",
+   "options": [
+    {
+     "name": "--aggregation",
+     "args": {
+      "suggestions": [
+       "SUM",
+       "MEAN",
+       "MAX"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--members",
+     "args": {}
+    },
+    {
+     "name": "--pattern",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "ARBITRARY",
+       "BY_RESOURCE_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--protection-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT_DISTRIBUTION",
+       "ROUTE_53_HOSTED_ZONE",
+       "ELASTIC_IP_ALLOCATION",
+       "CLASSIC_LOAD_BALANCER",
+       "APPLICATION_LOAD_BALANCER",
+       "GLOBAL_ACCELERATOR"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-subscription",
+   "description": "Activates Shield Advanced for an account."
+  },
+  {
+   "name": "delete-protection",
+   "description": "Deletes an Shield Advanced Protection.",
+   "options": [
+    {
+     "name": "--protection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-protection-group",
+   "description": "Removes the specified protection group.",
+   "options": [
+    {
+     "name": "--protection-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subscription",
+   "description": "Removes Shield Advanced from an account."
+  },
+  {
+   "name": "describe-attack",
+   "description": "Describes the details of a DDoS attack.",
+   "options": [
+    {
+     "name": "--attack-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-attack-statistics",
+   "description": "Provides information about the number and type of attacks Shield has detected in the last year for all resources that belong to your account, regardless of whether you've defined Shield protections for them."
+  },
+  {
+   "name": "describe-drt-access",
+   "description": "Returns the current role and list of Amazon S3 log buckets used by the Shield Response Team (SRT) to access your Amazon Web Services account while assisting with attack mitigation."
+  },
+  {
+   "name": "describe-emergency-contact-settings",
+   "description": "A list of email addresses and phone numbers that the Shield Response Team (SRT) can use to contact you if you have proactive engagement enabled, for escalations to the SRT and to initiate proactive customer support."
+  },
+  {
+   "name": "describe-protection",
+   "description": "Lists the details of a Protection object.",
+   "options": [
+    {
+     "name": "--protection-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-protection-group",
+   "description": "Returns the specification for the specified protection group.",
+   "options": [
+    {
+     "name": "--protection-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-subscription",
+   "description": "Provides details about the Shield Advanced subscription for an account."
+  },
+  {
+   "name": "disable-application-layer-automatic-response",
+   "description": "Disable the Shield Advanced automatic application layer DDoS mitigation feature for the protected resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-proactive-engagement",
+   "description": "Removes authorization from the Shield Response Team (SRT) to notify contacts about escalations to the SRT and to initiate proactive customer support."
+  },
+  {
+   "name": "disassociate-drt-log-bucket",
+   "description": "Removes the Shield Response Team's (SRT) access to the specified Amazon S3 bucket containing the logs that you shared previously.",
+   "options": [
+    {
+     "name": "--log-bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-drt-role",
+   "description": "Removes the Shield Response Team's (SRT) access to your Amazon Web Services account."
+  },
+  {
+   "name": "disassociate-health-check",
+   "description": "Removes health-based detection from the Shield Advanced protection for a resource.",
+   "options": [
+    {
+     "name": "--health-check-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-application-layer-automatic-response",
+   "description": "Enable the Shield Advanced automatic application layer DDoS mitigation for the protected resource.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-proactive-engagement",
+   "description": "Authorizes the Shield Response Team (SRT) to use email and phone to notify contacts about escalations to the SRT and to initiate proactive customer support."
+  },
+  {
+   "name": "get-subscription-state",
+   "description": "Returns the SubscriptionState, either Active or Inactive."
+  },
+  {
+   "name": "list-attacks",
+   "description": "Returns all ongoing DDoS attacks or all DDoS attacks during a specified time period.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-protection-groups",
+   "description": "Retrieves ProtectionGroup objects for the account.",
+   "options": [
+    {
+     "name": "--inclusion-filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-protections",
+   "description": "Retrieves Protection objects for the account.",
+   "options": [
+    {
+     "name": "--inclusion-filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resources-in-protection-group",
+   "description": "Retrieves the resources that are included in the protection group.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--protection-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets information about Amazon Web Services tags for a specified Amazon Resource Name (ARN) in Shield.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a resource in Shield.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource in Shield.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application-layer-automatic-response",
+   "description": "Updates an existing Shield Advanced automatic application layer DDoS mitigation configuration for the specified resource.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-emergency-contact-settings",
+   "description": "Updates the details of the list of email addresses and phone numbers that the Shield Response Team (SRT) can use to contact you if you have proactive engagement enabled, for escalations to the SRT and to initiate proactive customer support.",
+   "options": [
+    {
+     "name": "--emergency-contact-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-protection-group",
+   "description": "Updates an existing protection group.",
+   "options": [
+    {
+     "name": "--aggregation",
+     "args": {
+      "suggestions": [
+       "SUM",
+       "MEAN",
+       "MAX"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--members",
+     "args": {}
+    },
+    {
+     "name": "--pattern",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "ARBITRARY",
+       "BY_RESOURCE_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--protection-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT_DISTRIBUTION",
+       "ROUTE_53_HOSTED_ZONE",
+       "ELASTIC_IP_ALLOCATION",
+       "CLASSIC_LOAD_BALANCER",
+       "APPLICATION_LOAD_BALANCER",
+       "GLOBAL_ACCELERATOR"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-subscription",
+   "description": "Updates the details of an existing subscription.",
+   "options": [
+    {
+     "name": "--auto-renew",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

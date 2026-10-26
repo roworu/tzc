@@ -1,0 +1,457 @@
+{
+ "name": "sagemaker-geospatial",
+ "description": "Provides APIs for creating and managing SageMaker geospatial resources.",
+ "subcommands": [
+  {
+   "name": "delete-earth-observation-job",
+   "description": "Use this operation to delete an Earth Observation job.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vector-enrichment-job",
+   "description": "Use this operation to delete a Vector Enrichment job.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-earth-observation-job",
+   "description": "Use this operation to export results of an Earth Observation job and optionally source images used as input to the EOJ to an Amazon S3 location.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--export-source-images"
+    },
+    {
+     "name": "--no-export-source-images"
+    },
+    {
+     "name": "--output-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-vector-enrichment-job",
+   "description": "Use this operation to copy results of a Vector Enrichment job to an Amazon S3 location.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-earth-observation-job",
+   "description": "Get the details for a previously initiated Earth Observation job.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-raster-data-collection",
+   "description": "Use this operation to get details of a specific raster data collection.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-tile",
+   "description": "Gets a web mercator tile for the given Earth Observation job.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--image-assets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-mask"
+    },
+    {
+     "name": "--no-image-mask"
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-data-type",
+     "args": {
+      "suggestions": [
+       "INT32",
+       "FLOAT32",
+       "INT16",
+       "FLOAT64",
+       "UINT16"
+      ]
+     }
+    },
+    {
+     "name": "--output-format",
+     "args": {}
+    },
+    {
+     "name": "--property-filters",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {
+      "suggestions": [
+       "INPUT",
+       "OUTPUT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--time-range-filter",
+     "args": {}
+    },
+    {
+     "name": "--x",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--y",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--z",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-vector-enrichment-job",
+   "description": "Retrieves details of a Vector Enrichment Job for a given job Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-earth-observation-jobs",
+   "description": "Use this operation to get a list of the Earth Observation jobs associated with the calling Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "INITIALIZING",
+       "IN_PROGRESS",
+       "STOPPING",
+       "COMPLETED",
+       "STOPPED",
+       "FAILED",
+       "DELETING",
+       "DELETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-raster-data-collections",
+   "description": "Use this operation to get raster data collections.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags attached to the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-vector-enrichment-jobs",
+   "description": "Retrieves a list of vector enrichment jobs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-raster-data-collection",
+   "description": "Allows you run image query on a specific raster data collection to get a list of the satellite imagery matching the selected filters.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--raster-data-collection-query",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-earth-observation-job",
+   "description": "Use this operation to create an Earth observation job.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-vector-enrichment-job",
+   "description": "Creates a Vector Enrichment job for the supplied job type.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-earth-observation-job",
+   "description": "Use this operation to stop an existing earth observation job.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-vector-enrichment-job",
+   "description": "Stops the Vector Enrichment job for a given job ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "The resource you want to tag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "The resource you want to untag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

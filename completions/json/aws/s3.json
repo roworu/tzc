@@ -1,0 +1,745 @@
+{
+ "name": "s3",
+ "subcommands": [
+  {
+   "name": "cp",
+   "description": "Copies a local file or S3 object to another location locally or in S3.",
+   "options": [
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "aws-exec-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control",
+       "log-delivery-write"
+      ]
+     }
+    },
+    {
+     "name": "--cache-control",
+     "args": {}
+    },
+    {
+     "name": "--case-conflict",
+     "args": {
+      "suggestions": [
+       "ignore",
+       "skip",
+       "warn",
+       "error"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC64NVME",
+       "CRC32",
+       "SHA256",
+       "SHA1",
+       "CRC32C",
+       "SHA512",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--content-disposition",
+     "args": {}
+    },
+    {
+     "name": "--content-encoding",
+     "args": {}
+    },
+    {
+     "name": "--content-language",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--dryrun"
+    },
+    {
+     "name": "--exclude",
+     "args": {}
+    },
+    {
+     "name": "--expected-size",
+     "args": {}
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--follow-symlinks"
+    },
+    {
+     "name": "--force-glacier-transfer"
+    },
+    {
+     "name": "--grants",
+     "args": {}
+    },
+    {
+     "name": "--ignore-glacier-warnings"
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--metadata-directive",
+     "args": {
+      "suggestions": [
+       "COPY",
+       "REPLACE"
+      ]
+     }
+    },
+    {
+     "name": "--no-follow-symlinks"
+    },
+    {
+     "name": "--no-guess-mime-type"
+    },
+    {
+     "name": "--no-progress"
+    },
+    {
+     "name": "--only-show-errors"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--quiet"
+    },
+    {
+     "name": "--recursive"
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--source-region",
+     "args": {}
+    },
+    {
+     "name": "--sse",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "aws:kms"
+      ]
+     }
+    },
+    {
+     "name": "--sse-c",
+     "args": {
+      "suggestions": [
+       "AES256"
+      ]
+     }
+    },
+    {
+     "name": "--sse-c-copy-source",
+     "args": {
+      "suggestions": [
+       "AES256"
+      ]
+     }
+    },
+    {
+     "name": "--sse-c-copy-source-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-c-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "REDUCED_REDUNDANCY",
+       "STANDARD_IA",
+       "ONEZONE_IA",
+       "INTELLIGENT_TIERING",
+       "GLACIER",
+       "DEEP_ARCHIVE",
+       "GLACIER_IR"
+      ]
+     }
+    },
+    {
+     "name": "--website-redirect",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "ls",
+   "description": "List S3 objects and common prefixes under a prefix or all S3 buckets.",
+   "options": [
+    {
+     "name": "--bucket-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--bucket-region",
+     "args": {}
+    },
+    {
+     "name": "--human-readable"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recursive"
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--summarize"
+    }
+   ]
+  },
+  {
+   "name": "mb",
+   "description": "Creates an S3 bucket.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "mv",
+   "options": [
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "aws-exec-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control",
+       "log-delivery-write"
+      ]
+     }
+    },
+    {
+     "name": "--cache-control",
+     "args": {}
+    },
+    {
+     "name": "--case-conflict",
+     "args": {
+      "suggestions": [
+       "ignore",
+       "skip",
+       "warn",
+       "error"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC64NVME",
+       "CRC32",
+       "SHA256",
+       "SHA1",
+       "CRC32C",
+       "SHA512",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--content-disposition",
+     "args": {}
+    },
+    {
+     "name": "--content-encoding",
+     "args": {}
+    },
+    {
+     "name": "--content-language",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--dryrun"
+    },
+    {
+     "name": "--exclude",
+     "args": {}
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--follow-symlinks"
+    },
+    {
+     "name": "--force-glacier-transfer"
+    },
+    {
+     "name": "--grants",
+     "args": {}
+    },
+    {
+     "name": "--ignore-glacier-warnings"
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--metadata-directive",
+     "args": {
+      "suggestions": [
+       "COPY",
+       "REPLACE"
+      ]
+     }
+    },
+    {
+     "name": "--no-follow-symlinks"
+    },
+    {
+     "name": "--no-guess-mime-type"
+    },
+    {
+     "name": "--no-progress"
+    },
+    {
+     "name": "--only-show-errors"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--quiet"
+    },
+    {
+     "name": "--recursive"
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--source-region",
+     "args": {}
+    },
+    {
+     "name": "--sse",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "aws:kms"
+      ]
+     }
+    },
+    {
+     "name": "--sse-c",
+     "args": {
+      "suggestions": [
+       "AES256"
+      ]
+     }
+    },
+    {
+     "name": "--sse-c-copy-source",
+     "args": {
+      "suggestions": [
+       "AES256"
+      ]
+     }
+    },
+    {
+     "name": "--sse-c-copy-source-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-c-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "REDUCED_REDUNDANCY",
+       "STANDARD_IA",
+       "ONEZONE_IA",
+       "INTELLIGENT_TIERING",
+       "GLACIER",
+       "DEEP_ARCHIVE",
+       "GLACIER_IR"
+      ]
+     }
+    },
+    {
+     "name": "--validate-same-s3-paths"
+    },
+    {
+     "name": "--website-redirect",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "presign",
+   "description": "Generate a pre-signed URL for an Amazon S3 object.",
+   "options": [
+    {
+     "name": "--expires-in",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "rb",
+   "description": "Deletes an empty S3 bucket.",
+   "options": [
+    {
+     "name": "--force"
+    }
+   ]
+  },
+  {
+   "name": "rm",
+   "description": "Deletes an S3 object.",
+   "options": [
+    {
+     "name": "--dryrun"
+    },
+    {
+     "name": "--exclude",
+     "args": {}
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--only-show-errors"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--quiet"
+    },
+    {
+     "name": "--recursive"
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "sync",
+   "description": "Syncs directories and S3 prefixes.",
+   "options": [
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "aws-exec-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control",
+       "log-delivery-write"
+      ]
+     }
+    },
+    {
+     "name": "--cache-control",
+     "args": {}
+    },
+    {
+     "name": "--case-conflict",
+     "args": {
+      "suggestions": [
+       "ignore",
+       "skip",
+       "warn",
+       "error"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC64NVME",
+       "CRC32",
+       "SHA256",
+       "SHA1",
+       "CRC32C",
+       "SHA512",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--content-disposition",
+     "args": {}
+    },
+    {
+     "name": "--content-encoding",
+     "args": {}
+    },
+    {
+     "name": "--content-language",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--dryrun"
+    },
+    {
+     "name": "--exclude",
+     "args": {}
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--follow-symlinks"
+    },
+    {
+     "name": "--force-glacier-transfer"
+    },
+    {
+     "name": "--grants",
+     "args": {}
+    },
+    {
+     "name": "--ignore-glacier-warnings"
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--metadata-directive",
+     "args": {
+      "suggestions": [
+       "COPY",
+       "REPLACE"
+      ]
+     }
+    },
+    {
+     "name": "--no-follow-symlinks"
+    },
+    {
+     "name": "--no-guess-mime-type"
+    },
+    {
+     "name": "--no-progress"
+    },
+    {
+     "name": "--only-show-errors"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--quiet"
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--source-region",
+     "args": {}
+    },
+    {
+     "name": "--sse",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "aws:kms"
+      ]
+     }
+    },
+    {
+     "name": "--sse-c",
+     "args": {
+      "suggestions": [
+       "AES256"
+      ]
+     }
+    },
+    {
+     "name": "--sse-c-copy-source",
+     "args": {
+      "suggestions": [
+       "AES256"
+      ]
+     }
+    },
+    {
+     "name": "--sse-c-copy-source-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-c-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "REDUCED_REDUNDANCY",
+       "STANDARD_IA",
+       "ONEZONE_IA",
+       "INTELLIGENT_TIERING",
+       "GLACIER",
+       "DEEP_ARCHIVE",
+       "GLACIER_IR"
+      ]
+     }
+    },
+    {
+     "name": "--website-redirect",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "website",
+   "description": "Set the website configuration for a bucket.",
+   "options": [
+    {
+     "name": "--error-document",
+     "args": {}
+    },
+    {
+     "name": "--index-document",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

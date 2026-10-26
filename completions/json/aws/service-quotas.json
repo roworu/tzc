@@ -1,0 +1,507 @@
+{
+ "name": "service-quotas",
+ "description": "With Service Quotas, you can view and manage your quotas easily as your Amazon Web Services workloads grow.",
+ "subcommands": [
+  {
+   "name": "associate-service-quota-template",
+   "description": "Associates your quota request template with your organization."
+  },
+  {
+   "name": "create-support-case",
+   "description": "Creates a Support case for an existing quota increase request.",
+   "options": [
+    {
+     "name": "--request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-quota-increase-request-from-template",
+   "description": "Deletes the quota increase request for the specified quota from your quota request template.",
+   "options": [
+    {
+     "name": "--aws-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--quota-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-code",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-service-quota-template",
+   "description": "Disables your quota request template."
+  },
+  {
+   "name": "get-association-for-service-quota-template",
+   "description": "Retrieves the status of the association for the quota request template."
+  },
+  {
+   "name": "get-auto-management-configuration",
+   "description": "Retrieves information about your Service Quotas Automatic Management configuration."
+  },
+  {
+   "name": "get-aws-default-service-quota",
+   "description": "Retrieves the default value for the specified quota.",
+   "options": [
+    {
+     "name": "--quota-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-code",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-quota-utilization-report",
+   "description": "Retrieves the quota utilization report for your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--report-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-requested-service-quota-change",
+   "description": "Retrieves information about the specified quota increase request.",
+   "options": [
+    {
+     "name": "--request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-quota",
+   "description": "Retrieves the applied quota value for the specified account-level or resource-level quota.",
+   "options": [
+    {
+     "name": "--context-id",
+     "args": {}
+    },
+    {
+     "name": "--quota-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-code",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-quota-increase-request-from-template",
+   "description": "Retrieves information about the specified quota increase request in your quota request template.",
+   "options": [
+    {
+     "name": "--aws-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--quota-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-code",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-aws-default-service-quotas",
+   "description": "Lists the default values for the quotas for the specified Amazon Web Services service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-requested-service-quota-change-history",
+   "description": "Retrieves the quota increase requests for the specified Amazon Web Services service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--quota-requested-at-level",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "RESOURCE",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--service-code",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "CASE_OPENED",
+       "APPROVED",
+       "DENIED",
+       "CASE_CLOSED",
+       "NOT_APPROVED",
+       "INVALID_REQUEST"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-requested-service-quota-change-history-by-quota",
+   "description": "Retrieves the quota increase requests for the specified quota.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--quota-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--quota-requested-at-level",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "RESOURCE",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--service-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "CASE_OPENED",
+       "APPROVED",
+       "DENIED",
+       "CASE_CLOSED",
+       "NOT_APPROVED",
+       "INVALID_REQUEST"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-service-quota-increase-requests-in-template",
+   "description": "Lists the quota increase requests in the specified quota request template.",
+   "options": [
+    {
+     "name": "--aws-region",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-code",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-quotas",
+   "description": "Lists the applied quota values for the specified Amazon Web Services service.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--quota-applied-at-level",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "RESOURCE",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--quota-code",
+     "args": {}
+    },
+    {
+     "name": "--service-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "Lists the names and codes for the Amazon Web Services services integrated with Service Quotas.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of the tags assigned to the specified applied quota.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-service-quota-increase-request-into-template",
+   "description": "Adds a quota increase request to your quota request template.",
+   "options": [
+    {
+     "name": "--aws-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--desired-value",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--quota-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-code",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "request-service-quota-increase",
+   "description": "Submits a quota increase request for the specified quota at the account or resource level.",
+   "options": [
+    {
+     "name": "--context-id",
+     "args": {}
+    },
+    {
+     "name": "--desired-value",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-support-case-allowed"
+    },
+    {
+     "name": "--quota-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--support-case-allowed"
+    }
+   ]
+  },
+  {
+   "name": "start-auto-management",
+   "description": "Starts Service Quotas Automatic Management for an Amazon Web Services account, including notification preferences and excluded quotas configurations.",
+   "options": [
+    {
+     "name": "--exclusion-list",
+     "args": {}
+    },
+    {
+     "name": "--notification-arn",
+     "args": {}
+    },
+    {
+     "name": "--opt-in-level",
+     "args": {
+      "suggestions": [
+       "ACCOUNT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--opt-in-type",
+     "args": {
+      "suggestions": [
+       "NotifyOnly",
+       "NotifyAndAdjust"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-quota-utilization-report",
+   "description": "Initiates the generation of a quota utilization report for your Amazon Web Services account."
+  },
+  {
+   "name": "stop-auto-management",
+   "description": "Stops Service Quotas Automatic Management for an Amazon Web Services account and removes all associated configurations."
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to the specified applied quota.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the specified applied quota.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-auto-management",
+   "description": "Updates your Service Quotas Automatic Management configuration, including notification preferences and excluded quotas.",
+   "options": [
+    {
+     "name": "--exclusion-list",
+     "args": {}
+    },
+    {
+     "name": "--notification-arn",
+     "args": {}
+    },
+    {
+     "name": "--opt-in-type",
+     "args": {
+      "suggestions": [
+       "NotifyOnly",
+       "NotifyAndAdjust"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

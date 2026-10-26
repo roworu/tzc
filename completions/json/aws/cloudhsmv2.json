@@ -1,0 +1,351 @@
+{
+ "name": "cloudhsmv2",
+ "description": "For more information about CloudHSM, see CloudHSM and the CloudHSM User Guide.",
+ "subcommands": [
+  {
+   "name": "copy-backup-to-region",
+   "description": "Copy an CloudHSM cluster backup to a different region.",
+   "options": [
+    {
+     "name": "--backup-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Creates a new CloudHSM cluster.",
+   "options": [
+    {
+     "name": "--backup-retention-policy",
+     "args": {}
+    },
+    {
+     "name": "--hsm-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "FIPS",
+       "NON_FIPS"
+      ]
+     }
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUALSTACK"
+      ]
+     }
+    },
+    {
+     "name": "--source-backup-id",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-hsm",
+   "description": "Creates a new hardware security module (HSM) in the specified CloudHSM cluster.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-address",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-backup",
+   "description": "Deletes a specified CloudHSM backup.",
+   "options": [
+    {
+     "name": "--backup-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Deletes the specified CloudHSM cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-hsm",
+   "description": "Deletes the specified HSM.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--eni-id",
+     "args": {}
+    },
+    {
+     "name": "--eni-ip",
+     "args": {}
+    },
+    {
+     "name": "--hsm-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes an CloudHSM resource policy.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-backups",
+   "description": "Gets information about backups of CloudHSM clusters.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-shared"
+    },
+    {
+     "name": "--no-sort-ascending"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--shared"
+    },
+    {
+     "name": "--sort-ascending"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-clusters",
+   "description": "Gets information about CloudHSM clusters.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Retrieves the resource policy document attached to a given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "initialize-cluster",
+   "description": "Claims an CloudHSM cluster by submitting the cluster certificate issued by your issuing certificate authority (CA) and the CA's root certificate.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signed-cert",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trust-anchor",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags",
+   "description": "Gets a list of tags for the specified CloudHSM cluster.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-backup-attributes",
+   "description": "Modifies attributes for CloudHSM backup.",
+   "options": [
+    {
+     "name": "--backup-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--never-expires",
+     "priority": 75
+    },
+    {
+     "name": "--no-never-expires"
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster",
+   "description": "Modifies CloudHSM cluster.",
+   "options": [
+    {
+     "name": "--backup-retention-policy",
+     "args": {}
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hsm-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Creates or updates an CloudHSM resource policy.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-backup",
+   "description": "Restores a specified CloudHSM backup that is in the PENDING_DELETION state.",
+   "options": [
+    {
+     "name": "--backup-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or overwrites one or more tags for the specified CloudHSM cluster.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tag or tags from the specified CloudHSM cluster.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-key-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

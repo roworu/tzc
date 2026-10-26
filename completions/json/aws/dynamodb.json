@@ -1,0 +1,1793 @@
+{
+ "name": "dynamodb",
+ "description": "Amazon DynamoDB Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.",
+ "subcommands": [
+  {
+   "name": "batch-execute-statement",
+   "description": "This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL.",
+   "options": [
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--statements",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-item",
+   "description": "The BatchGetItem operation returns the attributes of one or more items from one or more tables.",
+   "options": [
+    {
+     "name": "--request-items",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "batch-write-item",
+   "description": "The BatchWriteItem operation puts or deletes multiple items in one or more tables.",
+   "options": [
+    {
+     "name": "--request-items",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--return-item-collection-metrics",
+     "args": {
+      "suggestions": [
+       "SIZE",
+       "NONE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-backup",
+   "description": "Creates a backup for an existing table.",
+   "options": [
+    {
+     "name": "--backup-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-global-table",
+   "description": "Creates a global table from an existing table.",
+   "options": [
+    {
+     "name": "--global-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-table",
+   "description": "The CreateTable operation adds a new table to your account.",
+   "options": [
+    {
+     "name": "--attribute-definitions",
+     "args": {}
+    },
+    {
+     "name": "--billing-mode",
+     "args": {
+      "suggestions": [
+       "PROVISIONED",
+       "PAY_PER_REQUEST"
+      ]
+     }
+    },
+    {
+     "name": "--deletion-protection-enabled"
+    },
+    {
+     "name": "--global-secondary-indexes",
+     "args": {}
+    },
+    {
+     "name": "--global-table-settings-replication-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED",
+       "ENABLED_WITH_OVERRIDES"
+      ]
+     }
+    },
+    {
+     "name": "--global-table-source-arn",
+     "args": {}
+    },
+    {
+     "name": "--key-schema",
+     "args": {}
+    },
+    {
+     "name": "--local-secondary-indexes",
+     "args": {}
+    },
+    {
+     "name": "--no-deletion-protection-enabled"
+    },
+    {
+     "name": "--on-demand-throughput",
+     "args": {}
+    },
+    {
+     "name": "--provisioned-throughput",
+     "args": {}
+    },
+    {
+     "name": "--resource-policy",
+     "args": {}
+    },
+    {
+     "name": "--sse-specification",
+     "args": {}
+    },
+    {
+     "name": "--stream-specification",
+     "args": {}
+    },
+    {
+     "name": "--table-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "STANDARD_INFREQUENT_ACCESS"
+      ]
+     }
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--warm-throughput",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-backup",
+   "description": "Deletes an existing backup of a table.",
+   "options": [
+    {
+     "name": "--backup-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-item",
+   "description": "Deletes a single item in a table by primary key.",
+   "options": [
+    {
+     "name": "--condition-expression",
+     "args": {}
+    },
+    {
+     "name": "--conditional-operator",
+     "args": {
+      "suggestions": [
+       "AND",
+       "OR"
+      ]
+     }
+    },
+    {
+     "name": "--expected",
+     "args": {}
+    },
+    {
+     "name": "--expression-attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--expression-attribute-values",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--return-item-collection-metrics",
+     "args": {
+      "suggestions": [
+       "SIZE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--return-values",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ALL_OLD",
+       "UPDATED_OLD",
+       "ALL_NEW",
+       "UPDATED_NEW"
+      ]
+     }
+    },
+    {
+     "name": "--return-values-on-condition-check-failure",
+     "args": {
+      "suggestions": [
+       "ALL_OLD",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes the resource-based policy attached to the resource, which can be a table or stream.",
+   "options": [
+    {
+     "name": "--expected-revision-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-table",
+   "description": "The DeleteTable operation deletes a table and all of its items.",
+   "options": [
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-backup",
+   "description": "Describes an existing backup of a table.",
+   "options": [
+    {
+     "name": "--backup-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-continuous-backups",
+   "description": "Checks the status of continuous backups and point in time recovery on the specified table.",
+   "options": [
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-contributor-insights",
+   "description": "Returns information about contributor insights for a given table or global secondary index.",
+   "options": [
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoints",
+   "description": "Returns the regional endpoint information."
+  },
+  {
+   "name": "describe-export",
+   "description": "Describes an existing table export.",
+   "options": [
+    {
+     "name": "--export-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-global-table",
+   "description": "Returns information about the specified global table.",
+   "options": [
+    {
+     "name": "--global-table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-global-table-settings",
+   "description": "Describes Region-specific settings for a global table.",
+   "options": [
+    {
+     "name": "--global-table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-import",
+   "description": "Represents the properties of the import.",
+   "options": [
+    {
+     "name": "--import-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-kinesis-streaming-destination",
+   "description": "Returns information about the status of Kinesis streaming.",
+   "options": [
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-limits",
+   "description": "Returns the current provisioned-capacity quotas for your Amazon Web Services account in a Region, both for the Region as a whole and for any one DynamoDB table that you create there."
+  },
+  {
+   "name": "describe-table",
+   "description": "Returns information about the table, including the current status of the table, when it was created, the primary key schema, and any indexes on the table.",
+   "options": [
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-table-replica-auto-scaling",
+   "description": "Describes auto scaling settings across replicas of the global table at once.",
+   "options": [
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-time-to-live",
+   "description": "Gives a description of the Time to Live (TTL) status on the specified table.",
+   "options": [
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-kinesis-streaming-destination",
+   "description": "Stops replication from the DynamoDB table to the Kinesis data stream.",
+   "options": [
+    {
+     "name": "--enable-kinesis-streaming-configuration",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-kinesis-streaming-destination",
+   "description": "Starts table data replication to the specified Kinesis data stream at a timestamp chosen during the enable workflow.",
+   "options": [
+    {
+     "name": "--enable-kinesis-streaming-configuration",
+     "args": {}
+    },
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-statement",
+   "description": "This operation allows you to perform reads and singleton writes on data stored in DynamoDB, using PartiQL.",
+   "options": [
+    {
+     "name": "--consistent-read"
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-consistent-read"
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--return-values-on-condition-check-failure",
+     "args": {
+      "suggestions": [
+       "ALL_OLD",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--statement",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-transaction",
+   "description": "This operation allows you to perform transactional reads or writes on data stored in DynamoDB, using PartiQL.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--transact-statements",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-table-to-point-in-time",
+   "description": "Exports table data to an S3 bucket.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--export-format",
+     "args": {
+      "suggestions": [
+       "DYNAMODB_JSON",
+       "ION"
+      ]
+     }
+    },
+    {
+     "name": "--export-time",
+     "args": {}
+    },
+    {
+     "name": "--export-type",
+     "args": {
+      "suggestions": [
+       "FULL_EXPORT",
+       "INCREMENTAL_EXPORT"
+      ]
+     }
+    },
+    {
+     "name": "--incremental-export-specification",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--s3-prefix",
+     "args": {}
+    },
+    {
+     "name": "--s3-sse-algorithm",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "KMS"
+      ]
+     }
+    },
+    {
+     "name": "--s3-sse-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--table-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-item",
+   "description": "The GetItem operation returns a set of attributes for the item with the given primary key.",
+   "options": [
+    {
+     "name": "--attributes-to-get",
+     "args": {}
+    },
+    {
+     "name": "--consistent-read"
+    },
+    {
+     "name": "--expression-attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-consistent-read"
+    },
+    {
+     "name": "--projection-expression",
+     "args": {}
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Returns the resource-based policy document attached to the resource, which can be a table or stream, in JSON format.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-table",
+   "description": "Imports table data from an S3 bucket.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--input-compression-type",
+     "args": {
+      "suggestions": [
+       "GZIP",
+       "ZSTD",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--input-format",
+     "args": {
+      "suggestions": [
+       "DYNAMODB_JSON",
+       "ION",
+       "CSV"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--input-format-options",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-creation-parameters",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-backups",
+   "description": "List DynamoDB backups that are associated with an Amazon Web Services account and weren't made with Amazon Web Services Backup.",
+   "options": [
+    {
+     "name": "--backup-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "SYSTEM",
+       "AWS_BACKUP",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {}
+    },
+    {
+     "name": "--time-range-lower-bound",
+     "args": {}
+    },
+    {
+     "name": "--time-range-upper-bound",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-contributor-insights",
+   "description": "Returns a list of ContributorInsightsSummary for a table and all its global secondary indexes.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-exports",
+   "description": "Lists completed exports within the past 90 days, in reverse alphanumeric order of ExportArn.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--table-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-global-tables",
+   "description": "Lists all global tables that have a replica in the specified Region.",
+   "options": [
+    {
+     "name": "--exclusive-start-global-table-name",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--region-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-imports",
+   "description": "Lists completed imports within the past 90 days.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--table-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tables",
+   "description": "Returns an array of table names associated with the current account and endpoint.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-of-resource",
+   "description": "List all tags on an Amazon DynamoDB resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-item",
+   "description": "Creates a new item, or replaces an old item with a new item.",
+   "options": [
+    {
+     "name": "--condition-expression",
+     "args": {}
+    },
+    {
+     "name": "--conditional-operator",
+     "args": {
+      "suggestions": [
+       "AND",
+       "OR"
+      ]
+     }
+    },
+    {
+     "name": "--expected",
+     "args": {}
+    },
+    {
+     "name": "--expression-attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--expression-attribute-values",
+     "args": {}
+    },
+    {
+     "name": "--item",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--return-item-collection-metrics",
+     "args": {
+      "suggestions": [
+       "SIZE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--return-values",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ALL_OLD",
+       "UPDATED_OLD",
+       "ALL_NEW",
+       "UPDATED_NEW"
+      ]
+     }
+    },
+    {
+     "name": "--return-values-on-condition-check-failure",
+     "args": {
+      "suggestions": [
+       "ALL_OLD",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Attaches a resource-based policy document to the resource, which can be a table or stream.",
+   "options": [
+    {
+     "name": "--confirm-remove-self-resource-access"
+    },
+    {
+     "name": "--expected-revision-id",
+     "args": {}
+    },
+    {
+     "name": "--no-confirm-remove-self-resource-access"
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "query",
+   "description": "You must provide the name of the partition key attribute and a single value for that attribute.",
+   "options": [
+    {
+     "name": "--attributes-to-get",
+     "args": {}
+    },
+    {
+     "name": "--conditional-operator",
+     "args": {
+      "suggestions": [
+       "AND",
+       "OR"
+      ]
+     }
+    },
+    {
+     "name": "--consistent-read"
+    },
+    {
+     "name": "--expression-attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--expression-attribute-values",
+     "args": {}
+    },
+    {
+     "name": "--filter-expression",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--key-condition-expression",
+     "args": {}
+    },
+    {
+     "name": "--key-conditions",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-consistent-read"
+    },
+    {
+     "name": "--no-scan-index-forward"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--projection-expression",
+     "args": {}
+    },
+    {
+     "name": "--query-filter",
+     "args": {}
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--scan-index-forward"
+    },
+    {
+     "name": "--select",
+     "args": {
+      "suggestions": [
+       "ALL_ATTRIBUTES",
+       "ALL_PROJECTED_ATTRIBUTES",
+       "SPECIFIC_ATTRIBUTES",
+       "COUNT"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-table-from-backup",
+   "description": "Creates a new table from an existing backup.",
+   "options": [
+    {
+     "name": "--backup-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-mode-override",
+     "args": {
+      "suggestions": [
+       "PROVISIONED",
+       "PAY_PER_REQUEST"
+      ]
+     }
+    },
+    {
+     "name": "--global-secondary-index-override",
+     "args": {}
+    },
+    {
+     "name": "--local-secondary-index-override",
+     "args": {}
+    },
+    {
+     "name": "--on-demand-throughput-override",
+     "args": {}
+    },
+    {
+     "name": "--provisioned-throughput-override",
+     "args": {}
+    },
+    {
+     "name": "--sse-specification-override",
+     "args": {}
+    },
+    {
+     "name": "--target-table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-table-to-point-in-time",
+   "description": "Restores the specified table to the specified point in time within EarliestRestorableDateTime and LatestRestorableDateTime.",
+   "options": [
+    {
+     "name": "--billing-mode-override",
+     "args": {
+      "suggestions": [
+       "PROVISIONED",
+       "PAY_PER_REQUEST"
+      ]
+     }
+    },
+    {
+     "name": "--global-secondary-index-override",
+     "args": {}
+    },
+    {
+     "name": "--local-secondary-index-override",
+     "args": {}
+    },
+    {
+     "name": "--no-use-latest-restorable-time"
+    },
+    {
+     "name": "--on-demand-throughput-override",
+     "args": {}
+    },
+    {
+     "name": "--provisioned-throughput-override",
+     "args": {}
+    },
+    {
+     "name": "--restore-date-time",
+     "args": {}
+    },
+    {
+     "name": "--source-table-arn",
+     "args": {}
+    },
+    {
+     "name": "--source-table-name",
+     "args": {}
+    },
+    {
+     "name": "--sse-specification-override",
+     "args": {}
+    },
+    {
+     "name": "--target-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--use-latest-restorable-time"
+    }
+   ]
+  },
+  {
+   "name": "scan",
+   "description": "The Scan operation returns one or more items and item attributes by accessing every item in a table or a secondary index.",
+   "options": [
+    {
+     "name": "--attributes-to-get",
+     "args": {}
+    },
+    {
+     "name": "--conditional-operator",
+     "args": {
+      "suggestions": [
+       "AND",
+       "OR"
+      ]
+     }
+    },
+    {
+     "name": "--consistent-read"
+    },
+    {
+     "name": "--expression-attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--expression-attribute-values",
+     "args": {}
+    },
+    {
+     "name": "--filter-expression",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-consistent-read"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--projection-expression",
+     "args": {}
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--scan-filter",
+     "args": {}
+    },
+    {
+     "name": "--segment",
+     "args": {}
+    },
+    {
+     "name": "--select",
+     "args": {
+      "suggestions": [
+       "ALL_ATTRIBUTES",
+       "ALL_PROJECTED_ATTRIBUTES",
+       "SPECIFIC_ATTRIBUTES",
+       "COUNT"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--total-segments",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associate a set of tags with an Amazon DynamoDB resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "transact-get-items",
+   "description": "TransactGetItems is a synchronous operation that atomically retrieves multiple items from one or more tables (but not from indexes) in a single account and Region.",
+   "options": [
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--transact-items",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "transact-write-items",
+   "description": "TransactWriteItems is a synchronous write operation that groups up to 100 action requests.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--return-item-collection-metrics",
+     "args": {
+      "suggestions": [
+       "SIZE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--transact-items",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the association of tags from an Amazon DynamoDB resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-continuous-backups",
+   "description": "UpdateContinuousBackups enables or disables point in time recovery for the specified table.",
+   "options": [
+    {
+     "name": "--point-in-time-recovery-specification",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-contributor-insights",
+   "description": "Updates the status for contributor insights for a specific table or index.",
+   "options": [
+    {
+     "name": "--contributor-insights-action",
+     "args": {
+      "suggestions": [
+       "ENABLE",
+       "DISABLE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--contributor-insights-mode",
+     "args": {
+      "suggestions": [
+       "ACCESSED_AND_THROTTLED_KEYS",
+       "THROTTLED_KEYS"
+      ]
+     }
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-global-table",
+   "description": "Adds or removes replicas in the specified global table.",
+   "options": [
+    {
+     "name": "--global-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replica-updates",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-global-table-settings",
+   "description": "Updates settings for a global table.",
+   "options": [
+    {
+     "name": "--global-table-billing-mode",
+     "args": {
+      "suggestions": [
+       "PROVISIONED",
+       "PAY_PER_REQUEST"
+      ]
+     }
+    },
+    {
+     "name": "--global-table-global-secondary-index-settings-update",
+     "args": {}
+    },
+    {
+     "name": "--global-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--global-table-provisioned-write-capacity-auto-scaling-settings-update",
+     "args": {}
+    },
+    {
+     "name": "--global-table-provisioned-write-capacity-units",
+     "args": {}
+    },
+    {
+     "name": "--replica-settings-update",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-item",
+   "description": "Edits an existing item's attributes, or adds a new item to the table if it does not already exist.",
+   "options": [
+    {
+     "name": "--attribute-updates",
+     "args": {}
+    },
+    {
+     "name": "--condition-expression",
+     "args": {}
+    },
+    {
+     "name": "--conditional-operator",
+     "args": {
+      "suggestions": [
+       "AND",
+       "OR"
+      ]
+     }
+    },
+    {
+     "name": "--expected",
+     "args": {}
+    },
+    {
+     "name": "--expression-attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--expression-attribute-values",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--return-consumed-capacity",
+     "args": {
+      "suggestions": [
+       "INDEXES",
+       "TOTAL",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--return-item-collection-metrics",
+     "args": {
+      "suggestions": [
+       "SIZE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--return-values",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "ALL_OLD",
+       "UPDATED_OLD",
+       "ALL_NEW",
+       "UPDATED_NEW"
+      ]
+     }
+    },
+    {
+     "name": "--return-values-on-condition-check-failure",
+     "args": {
+      "suggestions": [
+       "ALL_OLD",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-expression",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-kinesis-streaming-destination",
+   "description": "The command to update the Kinesis stream destination.",
+   "options": [
+    {
+     "name": "--stream-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-kinesis-streaming-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-table",
+   "description": "Modifies the provisioned throughput settings, global secondary indexes, or DynamoDB Streams settings for a given table.",
+   "options": [
+    {
+     "name": "--attribute-definitions",
+     "args": {}
+    },
+    {
+     "name": "--billing-mode",
+     "args": {
+      "suggestions": [
+       "PROVISIONED",
+       "PAY_PER_REQUEST"
+      ]
+     }
+    },
+    {
+     "name": "--deletion-protection-enabled"
+    },
+    {
+     "name": "--global-secondary-index-updates",
+     "args": {}
+    },
+    {
+     "name": "--global-table-settings-replication-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED",
+       "ENABLED_WITH_OVERRIDES"
+      ]
+     }
+    },
+    {
+     "name": "--global-table-witness-updates",
+     "args": {}
+    },
+    {
+     "name": "--multi-region-consistency",
+     "args": {
+      "suggestions": [
+       "EVENTUAL",
+       "STRONG"
+      ]
+     }
+    },
+    {
+     "name": "--no-deletion-protection-enabled"
+    },
+    {
+     "name": "--on-demand-throughput",
+     "args": {}
+    },
+    {
+     "name": "--provisioned-throughput",
+     "args": {}
+    },
+    {
+     "name": "--replica-updates",
+     "args": {}
+    },
+    {
+     "name": "--sse-specification",
+     "args": {}
+    },
+    {
+     "name": "--stream-specification",
+     "args": {}
+    },
+    {
+     "name": "--table-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "STANDARD_INFREQUENT_ACCESS"
+      ]
+     }
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--warm-throughput",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-table-replica-auto-scaling",
+   "description": "Updates auto scaling settings on your global tables at once.",
+   "options": [
+    {
+     "name": "--global-secondary-index-updates",
+     "args": {}
+    },
+    {
+     "name": "--provisioned-write-capacity-auto-scaling-update",
+     "args": {}
+    },
+    {
+     "name": "--replica-updates",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-time-to-live",
+   "description": "The UpdateTimeToLive method enables or disables Time to Live (TTL) for the specified table.",
+   "options": [
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--time-to-live-specification",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "contributor-insights-enabled",
+     "description": "Wait until JMESPath query ContributorInsightsStatus returns ENABLED when polling with ``describe-contributor-insights``.",
+     "options": [
+      {
+       "name": "--index-name",
+       "args": {}
+      },
+      {
+       "name": "--table-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "export-completed",
+     "description": "Wait until JMESPath query ExportDescription.ExportStatus returns COMPLETED when polling with ``describe-export``.",
+     "options": [
+      {
+       "name": "--export-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "import-completed",
+     "description": "Wait until JMESPath query ImportTableDescription.ImportStatus returns COMPLETED when polling with ``describe-import``.",
+     "options": [
+      {
+       "name": "--import-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "kinesis-streaming-destination-active",
+     "description": "Wait until JMESPath query KinesisDataStreamDestinations[].DestinationStatus returns ACTIVE for any element when polling with ``describe-kinesis-streaming-destination``.",
+     "options": [
+      {
+       "name": "--table-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "table-exists",
+     "description": "Wait until JMESPath query Table.TableStatus returns ACTIVE when polling with ``describe-table``.",
+     "options": [
+      {
+       "name": "--table-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "table-not-exists",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-table``.",
+     "options": [
+      {
+       "name": "--table-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

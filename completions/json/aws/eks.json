@@ -1,0 +1,1956 @@
+{
+ "name": "eks",
+ "description": "Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on Amazon Web Services without needing to setup or maintain your own Kubernetes control plane.",
+ "subcommands": [
+  {
+   "name": "associate-access-policy",
+   "description": "Associates an access policy and its scope to an access entry.",
+   "options": [
+    {
+     "name": "--access-scope",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-encryption-config",
+   "description": "Associates an encryption configuration to an existing cluster.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-identity-provider-config",
+   "description": "Associates an identity provider configuration to a cluster.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--oidc",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-update",
+   "description": "Cancels an in-progress update to an Amazon EKS cluster on a best-effort basis.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-access-entry",
+   "description": "Creates an access entry.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kubernetes-groups",
+     "args": {}
+    },
+    {
+     "name": "--principal-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-addon",
+   "description": "Creates an Amazon EKS add-on.",
+   "options": [
+    {
+     "name": "--addon-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--addon-version",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-values",
+     "args": {}
+    },
+    {
+     "name": "--namespace-config",
+     "args": {}
+    },
+    {
+     "name": "--pod-identity-associations",
+     "args": {}
+    },
+    {
+     "name": "--resolve-conflicts",
+     "args": {
+      "suggestions": [
+       "OVERWRITE",
+       "NONE",
+       "PRESERVE"
+      ]
+     }
+    },
+    {
+     "name": "--service-account-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-capability",
+   "description": "Creates a managed capability resource for an Amazon EKS cluster.",
+   "options": [
+    {
+     "name": "--capability-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--delete-propagation-policy",
+     "args": {
+      "suggestions": [
+       "RETAIN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ACK",
+       "KRO",
+       "ARGOCD"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Creates an Amazon EKS control plane.",
+   "options": [
+    {
+     "name": "--access-config",
+     "args": {}
+    },
+    {
+     "name": "--bootstrap-self-managed-addons"
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--compute-config",
+     "args": {}
+    },
+    {
+     "name": "--control-plane-scaling-config",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--encryption-config",
+     "args": {}
+    },
+    {
+     "name": "--kubernetes-network-config",
+     "args": {}
+    },
+    {
+     "name": "--kubernetes-version",
+     "args": {}
+    },
+    {
+     "name": "--logging",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-bootstrap-self-managed-addons"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--outpost-config",
+     "args": {}
+    },
+    {
+     "name": "--remote-network-config",
+     "args": {}
+    },
+    {
+     "name": "--resources-vpc-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--upgrade-policy",
+     "args": {}
+    },
+    {
+     "name": "--zonal-shift-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-eks-anywhere-subscription",
+   "description": "Creates an EKS Anywhere subscription.",
+   "options": [
+    {
+     "name": "--auto-renew"
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--license-quantity",
+     "args": {}
+    },
+    {
+     "name": "--license-type",
+     "args": {
+      "suggestions": [
+       "Cluster"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-renew"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--term",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-fargate-profile",
+   "description": "Creates an Fargate profile for your Amazon EKS cluster.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fargate-profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pod-execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--selectors",
+     "args": {}
+    },
+    {
+     "name": "--subnets",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-nodegroup",
+   "description": "Creates a managed node group for an Amazon EKS cluster.",
+   "options": [
+    {
+     "name": "--ami-type",
+     "args": {}
+    },
+    {
+     "name": "--capacity-type",
+     "args": {
+      "suggestions": [
+       "ON_DEMAND",
+       "SPOT",
+       "CAPACITY_BLOCK"
+      ]
+     }
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disk-size",
+     "args": {}
+    },
+    {
+     "name": "--instance-types",
+     "args": {}
+    },
+    {
+     "name": "--kubernetes-version",
+     "args": {}
+    },
+    {
+     "name": "--labels",
+     "args": {}
+    },
+    {
+     "name": "--launch-template",
+     "args": {}
+    },
+    {
+     "name": "--node-repair-config",
+     "args": {}
+    },
+    {
+     "name": "--node-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nodegroup-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--release-version",
+     "args": {}
+    },
+    {
+     "name": "--remote-access",
+     "args": {}
+    },
+    {
+     "name": "--scaling-config",
+     "args": {}
+    },
+    {
+     "name": "--subnets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--taints",
+     "args": {}
+    },
+    {
+     "name": "--update-config",
+     "args": {}
+    },
+    {
+     "name": "--warm-pool-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-pod-identity-association",
+   "description": "Creates an EKS Pod Identity association between a service account in an Amazon EKS cluster and an IAM role with EKS Pod Identity.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disable-session-tags"
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-disable-session-tags"
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-access-entry",
+   "description": "Deletes an access entry.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-addon",
+   "description": "Deletes an Amazon EKS add-on.",
+   "options": [
+    {
+     "name": "--addon-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-preserve"
+    },
+    {
+     "name": "--preserve"
+    }
+   ]
+  },
+  {
+   "name": "delete-capability",
+   "description": "Deletes a managed capability from your Amazon EKS cluster.",
+   "options": [
+    {
+     "name": "--capability-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Deletes an Amazon EKS cluster control plane.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-eks-anywhere-subscription",
+   "description": "Deletes an expired or inactive subscription.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-fargate-profile",
+   "description": "Deletes an Fargate profile.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fargate-profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-nodegroup",
+   "description": "Deletes a managed node group.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nodegroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-pod-identity-association",
+   "description": "Deletes a EKS Pod Identity association.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-cluster",
+   "description": "Deregisters a connected cluster to remove it from the Amazon EKS control plane.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-access-entry",
+   "description": "Describes an access entry.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-addon",
+   "description": "Describes an Amazon EKS add-on.",
+   "options": [
+    {
+     "name": "--addon-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-addon-configuration",
+   "description": "Returns configuration options.",
+   "options": [
+    {
+     "name": "--addon-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--addon-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-addon-versions",
+   "description": "Describes the versions for an add-on.",
+   "options": [
+    {
+     "name": "--addon-name",
+     "args": {}
+    },
+    {
+     "name": "--kubernetes-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owners",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--publishers",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--types",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-capability",
+   "description": "Returns detailed information about a specific managed capability in your Amazon EKS cluster, including its current status, configuration, health information, and any issues that may be affecting its operation.",
+   "options": [
+    {
+     "name": "--capability-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster",
+   "description": "Describes an Amazon EKS cluster.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster-versions",
+   "description": "Lists available Kubernetes versions for Amazon EKS clusters.",
+   "options": [
+    {
+     "name": "--cluster-type",
+     "args": {}
+    },
+    {
+     "name": "--cluster-versions",
+     "args": {}
+    },
+    {
+     "name": "--default-only"
+    },
+    {
+     "name": "--include-all"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-default-only"
+    },
+    {
+     "name": "--no-include-all"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "unsupported",
+       "standard-support",
+       "extended-support"
+      ]
+     }
+    },
+    {
+     "name": "--version-status",
+     "args": {
+      "suggestions": [
+       "UNSUPPORTED",
+       "STANDARD_SUPPORT",
+       "EXTENDED_SUPPORT"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-eks-anywhere-subscription",
+   "description": "Returns descriptive information about a subscription.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-fargate-profile",
+   "description": "Describes an Fargate profile.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fargate-profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-identity-provider-config",
+   "description": "Describes an identity provider configuration.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-provider-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-insight",
+   "description": "Returns details about an insight that you specify using its ID.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-insights-refresh",
+   "description": "Returns the status of the latest on-demand cluster insights refresh operation.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-nodegroup",
+   "description": "Describes a managed node group.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nodegroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-pod-identity-association",
+   "description": "Returns descriptive information about an EKS Pod Identity association.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-update",
+   "description": "Describes an update to an Amazon EKS resource.",
+   "options": [
+    {
+     "name": "--addon-name",
+     "args": {}
+    },
+    {
+     "name": "--capability-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nodegroup-name",
+     "args": {}
+    },
+    {
+     "name": "--update-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-access-policy",
+   "description": "Disassociates an access policy from an access entry.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-identity-provider-config",
+   "description": "Disassociates an identity provider configuration from a cluster.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-provider-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-token",
+   "description": "Get a token for authentication with an Amazon EKS cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-access-entries",
+   "description": "Lists the access entries for your cluster.",
+   "options": [
+    {
+     "name": "--associated-policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-access-policies",
+   "description": "Lists the available access policies.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-addons",
+   "description": "Lists the installed add-ons.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-associated-access-policies",
+   "description": "Lists the access policies associated with an access entry.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-capabilities",
+   "description": "Lists all managed capabilities in your Amazon EKS cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-clusters",
+   "description": "Lists the Amazon EKS clusters in your Amazon Web Services account in the specified Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-eks-anywhere-subscriptions",
+   "description": "Displays the full description of the subscription.",
+   "options": [
+    {
+     "name": "--include-status",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fargate-profiles",
+   "description": "Lists the Fargate profiles associated with the specified cluster in your Amazon Web Services account in the specified Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-identity-provider-configs",
+   "description": "Lists the identity provider configurations for your cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-insights",
+   "description": "Returns a list of all insights checked for against the specified cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-nodegroups",
+   "description": "Lists the managed node groups associated with the specified cluster in your Amazon Web Services account in the specified Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pod-identity-associations",
+   "description": "List the EKS Pod Identity associations in a cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-account",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List the tags for an Amazon EKS resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-updates",
+   "description": "Lists the updates associated with an Amazon EKS resource in your Amazon Web Services account, in the specified Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--addon-name",
+     "args": {}
+    },
+    {
+     "name": "--capability-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nodegroup-name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-cluster",
+   "description": "Connects a Kubernetes cluster to the Amazon EKS control plane.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--connector-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-insights-refresh",
+   "description": "Initiates an on-demand refresh operation for cluster insights, getting the latest analysis outside of the standard refresh schedule.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags to an Amazon EKS resource with the specified resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes specified tags from an Amazon EKS resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-access-entry",
+   "description": "Updates an access entry.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kubernetes-groups",
+     "args": {}
+    },
+    {
+     "name": "--principal-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-addon",
+   "description": "Updates an Amazon EKS add-on.",
+   "options": [
+    {
+     "name": "--addon-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--addon-version",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-values",
+     "args": {}
+    },
+    {
+     "name": "--pod-identity-associations",
+     "args": {}
+    },
+    {
+     "name": "--resolve-conflicts",
+     "args": {
+      "suggestions": [
+       "OVERWRITE",
+       "NONE",
+       "PRESERVE"
+      ]
+     }
+    },
+    {
+     "name": "--service-account-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-capability",
+   "description": "Updates the configuration of a managed capability in your Amazon EKS cluster.",
+   "options": [
+    {
+     "name": "--capability-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--delete-propagation-policy",
+     "args": {
+      "suggestions": [
+       "RETAIN"
+      ]
+     }
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-cluster-config",
+   "description": "Updates an Amazon EKS cluster configuration.",
+   "options": [
+    {
+     "name": "--access-config",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--compute-config",
+     "args": {}
+    },
+    {
+     "name": "--control-plane-scaling-config",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--kubernetes-network-config",
+     "args": {}
+    },
+    {
+     "name": "--logging",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--remote-network-config",
+     "args": {}
+    },
+    {
+     "name": "--resources-vpc-config",
+     "args": {}
+    },
+    {
+     "name": "--storage-config",
+     "args": {}
+    },
+    {
+     "name": "--upgrade-policy",
+     "args": {}
+    },
+    {
+     "name": "--zonal-shift-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-cluster-version",
+   "description": "Updates an Amazon EKS cluster to the specified Kubernetes version.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--kubernetes-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--rollback-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-eks-anywhere-subscription",
+   "description": "Update an EKS Anywhere Subscription.",
+   "options": [
+    {
+     "name": "--auto-renew",
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-renew"
+    }
+   ]
+  },
+  {
+   "name": "update-kubeconfig",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--assume-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--kubeconfig",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--proxy-url",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--user-alias",
+     "args": {}
+    },
+    {
+     "name": "--verbose"
+    }
+   ]
+  },
+  {
+   "name": "update-nodegroup-config",
+   "description": "Updates an Amazon EKS managed node group configuration.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--labels",
+     "args": {}
+    },
+    {
+     "name": "--node-repair-config",
+     "args": {}
+    },
+    {
+     "name": "--nodegroup-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scaling-config",
+     "args": {}
+    },
+    {
+     "name": "--taints",
+     "args": {}
+    },
+    {
+     "name": "--update-config",
+     "args": {}
+    },
+    {
+     "name": "--warm-pool-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-nodegroup-version",
+   "description": "Updates the Kubernetes version or AMI version of an Amazon EKS managed node group.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--kubernetes-version",
+     "args": {}
+    },
+    {
+     "name": "--launch-template",
+     "args": {}
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--nodegroup-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--release-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-pod-identity-association",
+   "description": "Updates a EKS Pod Identity association.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disable-session-tags"
+    },
+    {
+     "name": "--no-disable-session-tags"
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--target-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "addon-active",
+     "description": "Wait until JMESPath query addon.status returns ACTIVE when polling with ``describe-addon``.",
+     "options": [
+      {
+       "name": "--addon-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--cluster-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "addon-deleted",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-addon``.",
+     "options": [
+      {
+       "name": "--addon-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--cluster-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "cluster-active",
+     "description": "Wait until JMESPath query cluster.status returns ACTIVE when polling with ``describe-cluster``.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "cluster-deleted",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-cluster``.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "fargate-profile-active",
+     "description": "Wait until JMESPath query fargateProfile.status returns ACTIVE when polling with ``describe-fargate-profile``.",
+     "options": [
+      {
+       "name": "--cluster-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--fargate-profile-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "fargate-profile-deleted",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-fargate-profile``.",
+     "options": [
+      {
+       "name": "--cluster-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--fargate-profile-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "nodegroup-active",
+     "description": "Wait until JMESPath query nodegroup.status returns ACTIVE when polling with ``describe-nodegroup``.",
+     "options": [
+      {
+       "name": "--cluster-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--nodegroup-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "nodegroup-deleted",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-nodegroup``.",
+     "options": [
+      {
+       "name": "--cluster-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--nodegroup-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

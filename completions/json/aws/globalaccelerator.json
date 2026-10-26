@@ -1,0 +1,1140 @@
+{
+ "name": "globalaccelerator",
+ "description": "Global Accelerator This is the Global Accelerator API Reference.",
+ "subcommands": [
+  {
+   "name": "add-custom-routing-endpoints",
+   "description": "Associate a virtual private cloud (VPC) subnet endpoint with your custom routing accelerator.",
+   "options": [
+    {
+     "name": "--endpoint-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-endpoints",
+   "description": "Add endpoints to an endpoint group.",
+   "options": [
+    {
+     "name": "--endpoint-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "advertise-byoip-cidr",
+   "description": "Advertises an IPv4 address range that is provisioned for use with your Amazon Web Services resources through bring your own IP addresses (BYOIP).",
+   "options": [
+    {
+     "name": "--cidr",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "allow-custom-routing-traffic",
+   "description": "Specify the Amazon EC2 instance (destination) IP addresses and ports for a VPC subnet endpoint that can receive traffic for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--allow-all-traffic-to-endpoint"
+    },
+    {
+     "name": "--destination-addresses",
+     "args": {}
+    },
+    {
+     "name": "--destination-ports",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-all-traffic-to-endpoint"
+    }
+   ]
+  },
+  {
+   "name": "create-accelerator",
+   "description": "Create an accelerator.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL_STACK"
+      ]
+     }
+    },
+    {
+     "name": "--ip-addresses",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cross-account-attachment",
+   "description": "Create a cross-account attachment in Global Accelerator.",
+   "options": [
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principals",
+     "args": {}
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-custom-routing-accelerator",
+   "description": "Create a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL_STACK"
+      ]
+     }
+    },
+    {
+     "name": "--ip-addresses",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-custom-routing-endpoint-group",
+   "description": "Create an endpoint group for the specified listener for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--destination-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-group-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-custom-routing-listener",
+   "description": "Create a listener to process inbound connections from clients to a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--port-ranges",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-endpoint-group",
+   "description": "Create an endpoint group for the specified listener.",
+   "options": [
+    {
+     "name": "--endpoint-configurations",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-group-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--health-check-interval-seconds",
+     "args": {}
+    },
+    {
+     "name": "--health-check-path",
+     "args": {}
+    },
+    {
+     "name": "--health-check-port",
+     "args": {}
+    },
+    {
+     "name": "--health-check-protocol",
+     "args": {
+      "suggestions": [
+       "TCP",
+       "HTTP",
+       "HTTPS"
+      ]
+     }
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--port-overrides",
+     "args": {}
+    },
+    {
+     "name": "--threshold-count",
+     "args": {}
+    },
+    {
+     "name": "--traffic-dial-percentage",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-listener",
+   "description": "Create a listener to process inbound connections from clients to an accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-affinity",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "SOURCE_IP"
+      ]
+     }
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--port-ranges",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "TCP",
+       "UDP"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-accelerator",
+   "description": "Delete an accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cross-account-attachment",
+   "description": "Delete a cross-account attachment.",
+   "options": [
+    {
+     "name": "--attachment-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-routing-accelerator",
+   "description": "Delete a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-routing-endpoint-group",
+   "description": "Delete an endpoint group from a listener for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-routing-listener",
+   "description": "Delete a listener for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-endpoint-group",
+   "description": "Delete an endpoint group from a listener.",
+   "options": [
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-listener",
+   "description": "Delete a listener from an accelerator.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deny-custom-routing-traffic",
+   "description": "Specify the Amazon EC2 instance (destination) IP addresses and ports for a VPC subnet endpoint that cannot receive traffic for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--deny-all-traffic-to-endpoint"
+    },
+    {
+     "name": "--destination-addresses",
+     "args": {}
+    },
+    {
+     "name": "--destination-ports",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-deny-all-traffic-to-endpoint"
+    }
+   ]
+  },
+  {
+   "name": "deprovision-byoip-cidr",
+   "description": "Releases the specified address range that you provisioned to use with your Amazon Web Services resources through bring your own IP addresses (BYOIP) and deletes the corresponding address pool.",
+   "options": [
+    {
+     "name": "--cidr",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-accelerator",
+   "description": "Describe an accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-accelerator-attributes",
+   "description": "Describe the attributes of an accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cross-account-attachment",
+   "description": "Gets configuration information about a cross-account attachment.",
+   "options": [
+    {
+     "name": "--attachment-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-custom-routing-accelerator",
+   "description": "Describe a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-custom-routing-accelerator-attributes",
+   "description": "Describe the attributes of a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-custom-routing-endpoint-group",
+   "description": "Describe an endpoint group for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-custom-routing-listener",
+   "description": "The description of a listener for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoint-group",
+   "description": "Describe an endpoint group.",
+   "options": [
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-listener",
+   "description": "Describe a listener.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-accelerators",
+   "description": "List the accelerators for an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-byoip-cidrs",
+   "description": "Lists the IP address ranges that were specified in calls to ProvisionByoipCidr, including the current state and a history of state changes.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cross-account-attachments",
+   "description": "List the cross-account attachments that have been created in Global Accelerator.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cross-account-resource-accounts",
+   "description": "List the accounts that have cross-account resources."
+  },
+  {
+   "name": "list-cross-account-resources",
+   "description": "List the cross-account resources available to work with.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-owner-aws-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-routing-accelerators",
+   "description": "List the custom routing accelerators for an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-routing-endpoint-groups",
+   "description": "List the endpoint groups that are associated with a listener for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-routing-listeners",
+   "description": "List the listeners for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-routing-port-mappings",
+   "description": "Provides a complete mapping from the public accelerator IP address and port to destination EC2 instance IP addresses and ports in the virtual public cloud (VPC) subnet endpoint for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-routing-port-mappings-by-destination",
+   "description": "List the port mappings for a specific EC2 instance (destination) in a VPC subnet endpoint.",
+   "options": [
+    {
+     "name": "--destination-address",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-endpoint-groups",
+   "description": "List the endpoint groups that are associated with a listener.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-listeners",
+   "description": "List the listeners for an accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List all tags for an accelerator.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "provision-byoip-cidr",
+   "description": "Provisions an IP address range to use with your Amazon Web Services resources through bring your own IP addresses (BYOIP) and creates a corresponding address pool.",
+   "options": [
+    {
+     "name": "--cidr",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cidr-authorization-context",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-custom-routing-endpoints",
+   "description": "Remove endpoints from a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-endpoints",
+   "description": "Remove endpoints from an endpoint group.",
+   "options": [
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add tags to an accelerator resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove tags from a Global Accelerator resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-accelerator",
+   "description": "Update an accelerator to make changes, such as the following: Change the name of the accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL_STACK"
+      ]
+     }
+    },
+    {
+     "name": "--ip-addresses",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    }
+   ]
+  },
+  {
+   "name": "update-accelerator-attributes",
+   "description": "Update the attributes for an accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-logs-enabled"
+    },
+    {
+     "name": "--flow-logs-s3-bucket",
+     "args": {}
+    },
+    {
+     "name": "--flow-logs-s3-prefix",
+     "args": {}
+    },
+    {
+     "name": "--no-flow-logs-enabled"
+    }
+   ]
+  },
+  {
+   "name": "update-cross-account-attachment",
+   "description": "Update a cross-account attachment to add or remove principals or resources.",
+   "options": [
+    {
+     "name": "--add-principals",
+     "args": {}
+    },
+    {
+     "name": "--add-resources",
+     "args": {}
+    },
+    {
+     "name": "--attachment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--remove-principals",
+     "args": {}
+    },
+    {
+     "name": "--remove-resources",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-custom-routing-accelerator",
+   "description": "Update a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL_STACK"
+      ]
+     }
+    },
+    {
+     "name": "--ip-addresses",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    }
+   ]
+  },
+  {
+   "name": "update-custom-routing-accelerator-attributes",
+   "description": "Update the attributes for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--accelerator-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-logs-enabled"
+    },
+    {
+     "name": "--flow-logs-s3-bucket",
+     "args": {}
+    },
+    {
+     "name": "--flow-logs-s3-prefix",
+     "args": {}
+    },
+    {
+     "name": "--no-flow-logs-enabled"
+    }
+   ]
+  },
+  {
+   "name": "update-custom-routing-listener",
+   "description": "Update a listener for a custom routing accelerator.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--port-ranges",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-endpoint-group",
+   "description": "Update an endpoint group.",
+   "options": [
+    {
+     "name": "--endpoint-configurations",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--health-check-interval-seconds",
+     "args": {}
+    },
+    {
+     "name": "--health-check-path",
+     "args": {}
+    },
+    {
+     "name": "--health-check-port",
+     "args": {}
+    },
+    {
+     "name": "--health-check-protocol",
+     "args": {
+      "suggestions": [
+       "TCP",
+       "HTTP",
+       "HTTPS"
+      ]
+     }
+    },
+    {
+     "name": "--port-overrides",
+     "args": {}
+    },
+    {
+     "name": "--threshold-count",
+     "args": {}
+    },
+    {
+     "name": "--traffic-dial-percentage",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-listener",
+   "description": "Update a listener.",
+   "options": [
+    {
+     "name": "--client-affinity",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "SOURCE_IP"
+      ]
+     }
+    },
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--port-ranges",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "TCP",
+       "UDP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "withdraw-byoip-cidr",
+   "description": "Stops advertising an address range that is provisioned as an address pool.",
+   "options": [
+    {
+     "name": "--cidr",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

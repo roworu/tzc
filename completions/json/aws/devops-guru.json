@@ -1,0 +1,607 @@
+{
+ "name": "devops-guru",
+ "description": "Amazon DevOps Guru is a fully managed service that helps you identify anomalous behavior in business critical operational applications.",
+ "subcommands": [
+  {
+   "name": "add-notification-channel",
+   "description": "Adds a notification channel to DevOps Guru.",
+   "options": [
+    {
+     "name": "--config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-insight",
+   "description": "Deletes the insight along with the associated anomalies, events and recommendations.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-account-health",
+   "description": "Returns the number of open reactive insights, the number of open proactive insights, and the number of metrics analyzed in your Amazon Web Services account."
+  },
+  {
+   "name": "describe-account-overview",
+   "description": "For the time range passed in, returns the number of open reactive insight that were created, the number of open proactive insights that were created, and the Mean Time to Recover (MTTR) for all closed reactive insights.",
+   "options": [
+    {
+     "name": "--from-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--to-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-anomaly",
+   "description": "Returns details about an anomaly that you specify using its ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-event-sources-config",
+   "description": "Returns the integration status of services that are integrated with DevOps Guru as Consumer via EventBridge."
+  },
+  {
+   "name": "describe-feedback",
+   "description": "Returns the most recent feedback submitted in the current Amazon Web Services account and Region.",
+   "options": [
+    {
+     "name": "--insight-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-insight",
+   "description": "Returns details about an insight that you specify using its ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-health",
+   "description": "Returns active insights, predictive insights, and resource hours analyzed in last hour.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--organizational-unit-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-overview",
+   "description": "Returns an overview of your organization's history based on the specified time range.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--from-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organizational-unit-ids",
+     "args": {}
+    },
+    {
+     "name": "--to-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-resource-collection-health",
+   "description": "Provides an overview of your system's health.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--organization-resource-collection-type",
+     "args": {
+      "suggestions": [
+       "AWS_CLOUD_FORMATION",
+       "AWS_SERVICE",
+       "AWS_ACCOUNT",
+       "AWS_TAGS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--organizational-unit-ids",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-collection-health",
+   "description": "Returns the number of open proactive insights, open reactive insights, and the Mean Time to Recover (MTTR) for all closed insights in resource collections in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--resource-collection-type",
+     "args": {
+      "suggestions": [
+       "AWS_CLOUD_FORMATION",
+       "AWS_SERVICE",
+       "AWS_TAGS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-service-integration",
+   "description": "Returns the integration status of services that are integrated with DevOps Guru."
+  },
+  {
+   "name": "get-cost-estimation",
+   "description": "Returns an estimate of the monthly cost for DevOps Guru to analyze your Amazon Web Services resources.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-collection",
+   "description": "Returns lists Amazon Web Services resources that are of the specified resource collection type.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--resource-collection-type",
+     "args": {
+      "suggestions": [
+       "AWS_CLOUD_FORMATION",
+       "AWS_SERVICE",
+       "AWS_TAGS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-anomalies-for-insight",
+   "description": "Returns a list of the anomalies that belong to an insight that you specify using its ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--insight-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time-range",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-anomalous-log-groups",
+   "description": "Returns the list of log groups that contain log anomalies.",
+   "options": [
+    {
+     "name": "--insight-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-events",
+   "description": "Returns a list of the events emitted by the resources that are evaluated by DevOps Guru.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-insights",
+   "description": "Returns a list of insights in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-monitored-resources",
+   "description": "Returns the list of all log groups that are being monitored and tagged by DevOps Guru.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-notification-channels",
+   "description": "Returns a list of notification channels configured for DevOps Guru.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-organization-insights",
+   "description": "Returns a list of insights associated with the account or OU Id.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organizational-unit-ids",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-recommendations",
+   "description": "Returns a list of a specified insight's recommendations.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--insight-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "DE_DE",
+       "EN_US",
+       "EN_GB",
+       "ES_ES",
+       "FR_FR",
+       "IT_IT",
+       "JA_JP",
+       "KO_KR",
+       "PT_BR",
+       "ZH_CN",
+       "ZH_TW"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-feedback",
+   "description": "Collects customer feedback about the specified insight.",
+   "options": [
+    {
+     "name": "--insight-feedback",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-notification-channel",
+   "description": "Removes a notification channel from DevOps Guru.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-insights",
+   "description": "Returns a list of insights in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time-range",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "REACTIVE",
+       "PROACTIVE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-organization-insights",
+   "description": "Returns a list of insights in your organization.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time-range",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "REACTIVE",
+       "PROACTIVE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-cost-estimation",
+   "description": "Starts the creation of an estimate of the monthly cost to analyze your Amazon Web Services resources.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-collection",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-event-sources-config",
+   "description": "Enables or disables integration with a service that can be integrated with DevOps Guru.",
+   "options": [
+    {
+     "name": "--event-sources",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-resource-collection",
+   "description": "Updates the collection of resources that DevOps Guru analyzes.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "ADD",
+       "REMOVE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-collection",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-integration",
+   "description": "Enables or disables integration with a service that can be integrated with DevOps Guru.",
+   "options": [
+    {
+     "name": "--service-integration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

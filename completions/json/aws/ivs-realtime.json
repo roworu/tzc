@@ -1,0 +1,759 @@
+{
+ "name": "ivs-realtime",
+ "description": "The Amazon Interactive Video Service (IVS) real-time API is REST compatible, using a standard HTTP API and an AWS EventBridge event stream for responses.",
+ "subcommands": [
+  {
+   "name": "create-encoder-configuration",
+   "description": "Creates an EncoderConfiguration object.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--video",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-ingest-configuration",
+   "description": "Creates a new IngestConfiguration resource, used to specify the ingest protocol for a stage.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--ingest-protocol",
+     "args": {
+      "suggestions": [
+       "RTMP",
+       "RTMPS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--insecure-ingest"
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-insecure-ingest"
+    },
+    {
+     "name": "--no-redundant-ingest"
+    },
+    {
+     "name": "--redundant-ingest"
+    },
+    {
+     "name": "--stage-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-participant-token",
+   "description": "Creates an additional token for a specified stage.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--stage-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-stage",
+   "description": "Creates a new stage (and optionally participant tokens).",
+   "options": [
+    {
+     "name": "--auto-participant-recording-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--participant-token-configurations",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-storage-configuration",
+   "description": "Creates a new storage configuration, used to enable recording to Amazon S3.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--s3",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-encoder-configuration",
+   "description": "Deletes an EncoderConfiguration resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ingest-configuration",
+   "description": "Deletes a specified IngestConfiguration, so it can no longer be used to broadcast.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "delete-public-key",
+   "description": "Deletes the specified public key used to sign stage participant tokens.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-stage",
+   "description": "Shuts down and deletes the specified stage (disconnecting all participants).",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-storage-configuration",
+   "description": "Deletes the storage configuration for the specified ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disconnect-participant",
+   "description": "Disconnects a specified participant from a specified stage.",
+   "options": [
+    {
+     "name": "--participant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--stage-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-composition",
+   "description": "Get information about the specified Composition resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-encoder-configuration",
+   "description": "Gets information about the specified EncoderConfiguration resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ingest-configuration",
+   "description": "Gets information about the specified IngestConfiguration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-participant",
+   "description": "Gets information about the specified participant token.",
+   "options": [
+    {
+     "name": "--participant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-public-key",
+   "description": "Gets information for the specified public key.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-stage",
+   "description": "Gets information for the specified stage.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-stage-session",
+   "description": "Gets information for the specified stage session.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-storage-configuration",
+   "description": "Gets the storage configuration for the specified ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-public-key",
+   "description": "Import a public key to be used for signing stage participant tokens.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--public-key-material",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-compositions",
+   "description": "Gets summary information about all Compositions in your account, in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--filter-by-encoder-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--filter-by-stage-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-encoder-configurations",
+   "description": "Gets summary information about all EncoderConfigurations in your account, in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ingest-configurations",
+   "description": "Lists all IngestConfigurations in your account, in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--filter-by-stage-arn",
+     "args": {}
+    },
+    {
+     "name": "--filter-by-state",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-participant-events",
+   "description": "Lists events for a specified participant that occurred during a specified stage session.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--participant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-participant-replicas",
+   "description": "Lists all the replicas for a participant from a source stage.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--participant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-stage-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-participants",
+   "description": "Lists all participants in a specified stage session.",
+   "options": [
+    {
+     "name": "--filter-by-published"
+    },
+    {
+     "name": "--filter-by-recording-state",
+     "args": {
+      "suggestions": [
+       "STARTING",
+       "ACTIVE",
+       "STOPPING",
+       "STOPPED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--filter-by-state",
+     "args": {
+      "suggestions": [
+       "CONNECTED",
+       "DISCONNECTED"
+      ]
+     }
+    },
+    {
+     "name": "--filter-by-user-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-filter-by-published"
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stage-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-public-keys",
+   "description": "Gets summary information about all public keys in your account, in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stage-sessions",
+   "description": "Gets all sessions for a specified stage.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--stage-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-stages",
+   "description": "Gets summary information about all stages in your account, in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-storage-configurations",
+   "description": "Gets summary information about all storage configurations in your account, in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets information about AWS tags for the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-composition",
+   "description": "Starts a Composition from a stage based on the configuration provided in the request.",
+   "options": [
+    {
+     "name": "--destinations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--layout",
+     "args": {}
+    },
+    {
+     "name": "--stage-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-participant-replication",
+   "description": "Starts replicating a publishing participant from a source stage to a destination stage.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--destination-stage-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--participant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reconnect-window-seconds",
+     "args": {}
+    },
+    {
+     "name": "--source-stage-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-composition",
+   "description": "Stops and deletes a Composition resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-participant-replication",
+   "description": "Stops a replicated participant session.",
+   "options": [
+    {
+     "name": "--destination-stage-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--participant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-stage-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for the AWS resource with the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the resource with the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-ingest-configuration",
+   "description": "Updates a specified IngestConfiguration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-redundant-ingest"
+    },
+    {
+     "name": "--redundant-ingest"
+    },
+    {
+     "name": "--stage-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-stage",
+   "description": "Updates a stage\u2019s configuration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-participant-recording-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1542 @@
+{
+ "name": "redshift-serverless",
+ "description": "This is an interface reference for Amazon Redshift Serverless.",
+ "subcommands": [
+  {
+   "name": "convert-recovery-point-to-snapshot",
+   "description": "Converts a recovery point to a snapshot.",
+   "options": [
+    {
+     "name": "--recovery-point-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retention-period",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-custom-domain-association",
+   "description": "Creates a custom domain association for Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--custom-domain-certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-endpoint-access",
+   "description": "Creates an Amazon Redshift Serverless managed VPC endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-namespace",
+   "description": "Creates a namespace in Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--admin-password-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--admin-user-password",
+     "args": {}
+    },
+    {
+     "name": "--admin-username",
+     "args": {}
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--default-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--iam-roles",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--log-exports",
+     "args": {}
+    },
+    {
+     "name": "--manage-admin-password"
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-manage-admin-password"
+    },
+    {
+     "name": "--redshift-idc-application-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-reservation",
+   "description": "Creates an Amazon Redshift Serverless reservation, which gives you the option to commit to a specified number of Redshift Processing Units (RPUs) for a year at a discount from Serverless on-demand (OD) rates.",
+   "options": [
+    {
+     "name": "--capacity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--offering-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-scheduled-action",
+   "description": "Creates a scheduled action.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduled-action-description",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--target-action",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot",
+   "description": "Creates a snapshot of all databases in a namespace.",
+   "options": [
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retention-period",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot-copy-configuration",
+   "description": "Creates a snapshot copy configuration that lets you copy snapshots to another Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--destination-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--destination-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-retention-period",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-usage-limit",
+   "description": "Creates a usage limit for a specified Amazon Redshift Serverless usage type.",
+   "options": [
+    {
+     "name": "--amount",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--breach-action",
+     "args": {
+      "suggestions": [
+       "log",
+       "emit-metric",
+       "deactivate"
+      ]
+     }
+    },
+    {
+     "name": "--period",
+     "args": {
+      "suggestions": [
+       "daily",
+       "weekly",
+       "monthly"
+      ]
+     }
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--usage-type",
+     "args": {
+      "suggestions": [
+       "serverless-compute",
+       "cross-region-datasharing"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workgroup",
+   "description": "Creates an workgroup in Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--base-capacity",
+     "args": {}
+    },
+    {
+     "name": "--config-parameters",
+     "args": {}
+    },
+    {
+     "name": "--enhanced-vpc-routing"
+    },
+    {
+     "name": "--extra-compute-for-automatic-optimization"
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {}
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enhanced-vpc-routing"
+    },
+    {
+     "name": "--no-extra-compute-for-automatic-optimization"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--price-performance-target",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--track-name",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-domain-association",
+   "description": "Deletes a custom domain association for Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--custom-domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-endpoint-access",
+   "description": "Deletes an Amazon Redshift Serverless managed VPC endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-namespace",
+   "description": "Deletes a namespace from Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--final-snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--final-snapshot-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes the specified resource policy.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scheduled-action",
+   "description": "Deletes a scheduled action.",
+   "options": [
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-snapshot",
+   "description": "Deletes a snapshot from Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-snapshot-copy-configuration",
+   "description": "Deletes a snapshot copy configuration",
+   "options": [
+    {
+     "name": "--snapshot-copy-configuration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-usage-limit",
+   "description": "Deletes a usage limit from Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--usage-limit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workgroup",
+   "description": "Deletes a workgroup.",
+   "options": [
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-credentials",
+   "description": "Returns a database user name and temporary password with temporary authorization to log in to Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--custom-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-custom-domain-association",
+   "description": "Gets information about a specific custom domain association.",
+   "options": [
+    {
+     "name": "--custom-domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-endpoint-access",
+   "description": "Returns information, such as the name, about a VPC endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-identity-center-auth-token",
+   "description": "Returns an Identity Center authentication token for accessing Amazon Redshift Serverless workgroups.",
+   "options": [
+    {
+     "name": "--workgroup-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-namespace",
+   "description": "Returns information about a namespace in Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-recovery-point",
+   "description": "Returns information about a recovery point.",
+   "options": [
+    {
+     "name": "--recovery-point-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-reservation",
+   "description": "Gets an Amazon Redshift Serverless reservation.",
+   "options": [
+    {
+     "name": "--reservation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-reservation-offering",
+   "description": "Returns the reservation offering.",
+   "options": [
+    {
+     "name": "--offering-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Returns a resource policy.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-scheduled-action",
+   "description": "Returns information about a scheduled action.",
+   "options": [
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-snapshot",
+   "description": "Returns information about a specific snapshot.",
+   "options": [
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-arn",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-table-restore-status",
+   "description": "Returns information about a TableRestoreStatus object.",
+   "options": [
+    {
+     "name": "--table-restore-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-track",
+   "description": "Get the Redshift Serverless version for a specified track.",
+   "options": [
+    {
+     "name": "--track-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-usage-limit",
+   "description": "Returns information about a usage limit.",
+   "options": [
+    {
+     "name": "--usage-limit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workgroup",
+   "description": "Returns information about a specific workgroup.",
+   "options": [
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-custom-domain-associations",
+   "description": "Lists custom domain associations for Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--custom-domain-certificate-arn",
+     "args": {}
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-endpoint-access",
+   "description": "Returns an array of EndpointAccess objects and relevant information.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-workgroups",
+   "description": "Returns information about a list of specified managed workgroups in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-namespaces",
+   "description": "Returns information about a list of specified namespaces.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recovery-points",
+   "description": "Returns an array of recovery points.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-arn",
+     "args": {}
+    },
+    {
+     "name": "--namespace-name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-reservation-offerings",
+   "description": "Returns the current reservation offerings in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-reservations",
+   "description": "Returns a list of Reservation objects.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-scheduled-actions",
+   "description": "Returns a list of scheduled actions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-snapshot-copy-configurations",
+   "description": "Returns a list of snapshot copy configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-snapshots",
+   "description": "Returns a list of snapshots.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-arn",
+     "args": {}
+    },
+    {
+     "name": "--namespace-name",
+     "args": {}
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-table-restore-status",
+   "description": "Returns information about an array of TableRestoreStatus objects.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags assigned to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tracks",
+   "description": "List the Amazon Redshift Serverless versions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-usage-limits",
+   "description": "Lists all usage limits within Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--usage-type",
+     "args": {
+      "suggestions": [
+       "serverless-compute",
+       "cross-region-datasharing"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-workgroups",
+   "description": "Returns information about a list of specified workgroups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Creates or updates a resource policy.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-from-recovery-point",
+   "description": "Restore the data from a recovery point.",
+   "options": [
+    {
+     "name": "--maintain-integration"
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-maintain-integration"
+    },
+    {
+     "name": "--recovery-point-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-from-snapshot",
+   "description": "Restores a namespace from a snapshot.",
+   "options": [
+    {
+     "name": "--admin-password-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--maintain-integration"
+    },
+    {
+     "name": "--manage-admin-password"
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-maintain-integration"
+    },
+    {
+     "name": "--no-manage-admin-password"
+    },
+    {
+     "name": "--owner-account",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-arn",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-table-from-recovery-point",
+   "description": "Restores a table from a recovery point to your Amazon Redshift Serverless instance.",
+   "options": [
+    {
+     "name": "--activate-case-sensitive-identifier"
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-activate-case-sensitive-identifier"
+    },
+    {
+     "name": "--recovery-point-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-schema-name",
+     "args": {}
+    },
+    {
+     "name": "--source-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-database-name",
+     "args": {}
+    },
+    {
+     "name": "--target-schema-name",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-table-from-snapshot",
+   "description": "Restores a table from a snapshot to your Amazon Redshift Serverless instance.",
+   "options": [
+    {
+     "name": "--activate-case-sensitive-identifier"
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-activate-case-sensitive-identifier"
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-schema-name",
+     "args": {}
+    },
+    {
+     "name": "--source-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-database-name",
+     "args": {}
+    },
+    {
+     "name": "--target-schema-name",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag or set of tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-custom-domain-association",
+   "description": "Updates an Amazon Redshift Serverless certificate associated with a custom domain.",
+   "options": [
+    {
+     "name": "--custom-domain-certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-endpoint-access",
+   "description": "Updates an Amazon Redshift Serverless managed endpoint.",
+   "options": [
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-lakehouse-configuration",
+   "description": "Modifies the lakehouse configuration for a namespace.",
+   "options": [
+    {
+     "name": "--catalog-name",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--lakehouse-idc-application-arn",
+     "args": {}
+    },
+    {
+     "name": "--lakehouse-idc-registration",
+     "args": {
+      "suggestions": [
+       "Associate",
+       "Disassociate"
+      ]
+     }
+    },
+    {
+     "name": "--lakehouse-registration",
+     "args": {
+      "suggestions": [
+       "Register",
+       "Deregister"
+      ]
+     }
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "update-namespace",
+   "description": "Updates a namespace with the specified settings.",
+   "options": [
+    {
+     "name": "--admin-password-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--admin-user-password",
+     "args": {}
+    },
+    {
+     "name": "--admin-username",
+     "args": {}
+    },
+    {
+     "name": "--default-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--iam-roles",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--log-exports",
+     "args": {}
+    },
+    {
+     "name": "--manage-admin-password"
+    },
+    {
+     "name": "--namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-manage-admin-password"
+    }
+   ]
+  },
+  {
+   "name": "update-scheduled-action",
+   "description": "Updates a scheduled action.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-description",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--target-action",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-snapshot",
+   "description": "Updates a snapshot.",
+   "options": [
+    {
+     "name": "--retention-period",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-snapshot-copy-configuration",
+   "description": "Updates a snapshot copy configuration.",
+   "options": [
+    {
+     "name": "--snapshot-copy-configuration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-retention-period",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-usage-limit",
+   "description": "Update a usage limit in Amazon Redshift Serverless.",
+   "options": [
+    {
+     "name": "--amount",
+     "args": {}
+    },
+    {
+     "name": "--breach-action",
+     "args": {
+      "suggestions": [
+       "log",
+       "emit-metric",
+       "deactivate"
+      ]
+     }
+    },
+    {
+     "name": "--usage-limit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workgroup",
+   "description": "Updates a workgroup with the specified configuration settings.",
+   "options": [
+    {
+     "name": "--base-capacity",
+     "args": {}
+    },
+    {
+     "name": "--config-parameters",
+     "args": {}
+    },
+    {
+     "name": "--enhanced-vpc-routing"
+    },
+    {
+     "name": "--extra-compute-for-automatic-optimization"
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {}
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--no-enhanced-vpc-routing"
+    },
+    {
+     "name": "--no-extra-compute-for-automatic-optimization"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--price-performance-target",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--track-name",
+     "args": {}
+    },
+    {
+     "name": "--workgroup-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7042 @@
+{
+ "name": "rds",
+ "description": "Amazon Relational Database Service Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the cloud.",
+ "subcommands": [
+  {
+   "name": "add-option-to-option-group",
+   "description": "Modifies an existing option group.",
+   "options": [
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "add-role-to-db-cluster",
+   "description": "Associates an Identity and Access Management (IAM) role with a DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature-name",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-role-to-db-instance",
+   "description": "Associates an Amazon Web Services Identity and Access Management (IAM) role with a DB instance.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-source-identifier-to-subscription",
+   "description": "Adds a source identifier to an existing RDS event notification subscription.",
+   "options": [
+    {
+     "name": "--source-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-tags-to-resource",
+   "description": "Adds metadata tags to an Amazon RDS resource.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "apply-pending-maintenance-action",
+   "description": "Applies a pending maintenance action to a resource (for example, to a DB instance).",
+   "options": [
+    {
+     "name": "--apply-action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--opt-in-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "authorize-db-security-group-ingress",
+   "description": "Enables ingress to a DBSecurityGroup using one of two forms of authorization.",
+   "options": [
+    {
+     "name": "--cidrip",
+     "args": {}
+    },
+    {
+     "name": "--db-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ec2-security-group-id",
+     "args": {}
+    },
+    {
+     "name": "--ec2-security-group-name",
+     "args": {}
+    },
+    {
+     "name": "--ec2-security-group-owner-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "backtrack-db-cluster",
+   "description": "Backtracks a DB cluster to a specific time, without creating a new DB cluster.",
+   "options": [
+    {
+     "name": "--backtrack-to",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--no-use-earliest-time-on-point-in-time-unavailable"
+    },
+    {
+     "name": "--use-earliest-time-on-point-in-time-unavailable"
+    }
+   ]
+  },
+  {
+   "name": "cancel-export-task",
+   "description": "Cancels an export task in progress that is exporting a snapshot or cluster to Amazon S3.",
+   "options": [
+    {
+     "name": "--export-task-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-db-cluster-parameter-group",
+   "description": "Copies the specified DB cluster parameter group.",
+   "options": [
+    {
+     "name": "--source-db-cluster-parameter-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-db-cluster-parameter-group-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-db-cluster-parameter-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-db-cluster-snapshot",
+   "description": "Copies a snapshot of a DB cluster.",
+   "options": [
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--pre-signed-url",
+     "args": {}
+    },
+    {
+     "name": "--source-db-cluster-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-region",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-db-cluster-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-db-parameter-group",
+   "description": "Copies the specified DB parameter group.",
+   "options": [
+    {
+     "name": "--source-db-parameter-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-db-parameter-group-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-db-parameter-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-db-snapshot",
+   "description": "Copies the specified DB snapshot.",
+   "options": [
+    {
+     "name": "--copy-option-group"
+    },
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-option-group"
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--pre-signed-url",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-target",
+     "args": {}
+    },
+    {
+     "name": "--source-db-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-region",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-custom-availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--target-db-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-option-group",
+   "description": "Copies the specified option group.",
+   "options": [
+    {
+     "name": "--source-option-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-option-group-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-option-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-blue-green-deployment",
+   "description": "Creates a blue/green deployment.",
+   "options": [
+    {
+     "name": "--blue-green-deployment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-upgrade-target-storage-config"
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--target-db-cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--target-db-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--target-db-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--target-engine-version",
+     "args": {}
+    },
+    {
+     "name": "--target-iops",
+     "args": {}
+    },
+    {
+     "name": "--target-storage-throughput",
+     "args": {}
+    },
+    {
+     "name": "--target-storage-type",
+     "args": {}
+    },
+    {
+     "name": "--upgrade-target-storage-config"
+    }
+   ]
+  },
+  {
+   "name": "create-custom-db-engine-version",
+   "description": "Creates a custom DB engine version (CEV).",
+   "options": [
+    {
+     "name": "--database-installation-files",
+     "args": {}
+    },
+    {
+     "name": "--database-installation-files-s3-bucket-name",
+     "args": {}
+    },
+    {
+     "name": "--database-installation-files-s3-prefix",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-id",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--manifest",
+     "args": {}
+    },
+    {
+     "name": "--no-use-aws-provided-latest-image"
+    },
+    {
+     "name": "--source-custom-db-engine-version-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--use-aws-provided-latest-image"
+    }
+   ]
+  },
+  {
+   "name": "create-db-cluster",
+   "description": "Creates a new Amazon Aurora DB cluster or Multi-AZ DB cluster.",
+   "options": [
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--associated-roles",
+     "args": {}
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--backtrack-window",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--ca-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--character-set-name",
+     "args": {}
+    },
+    {
+     "name": "--cluster-scalability-type",
+     "args": {
+      "suggestions": [
+       "standard",
+       "limitless"
+      ]
+     }
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--database-insights-mode",
+     "args": {
+      "suggestions": [
+       "standard",
+       "advanced"
+      ]
+     }
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-cluster-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-system-id",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--enable-cloudwatch-logs-exports",
+     "args": {}
+    },
+    {
+     "name": "--enable-global-write-forwarding"
+    },
+    {
+     "name": "--enable-http-endpoint"
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--enable-limitless-database"
+    },
+    {
+     "name": "--enable-local-write-forwarding"
+    },
+    {
+     "name": "--enable-performance-insights"
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--engine-mode",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--global-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-authentication-type",
+     "args": {
+      "suggestions": [
+       "password",
+       "iam-db-auth"
+      ]
+     }
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--master-username",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-interval",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-global-write-forwarding"
+    },
+    {
+     "name": "--no-enable-http-endpoint"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-enable-limitless-database"
+    },
+    {
+     "name": "--no-enable-local-write-forwarding"
+    },
+    {
+     "name": "--no-enable-performance-insights"
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-storage-encrypted"
+    },
+    {
+     "name": "--no-with-express-configuration"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--pre-signed-url",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--rds-custom-cluster-configuration",
+     "args": {}
+    },
+    {
+     "name": "--replication-source-identifier",
+     "args": {}
+    },
+    {
+     "name": "--scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--serverless-v2-scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--source-region",
+     "args": {}
+    },
+    {
+     "name": "--storage-encrypted"
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--with-express-configuration"
+    }
+   ]
+  },
+  {
+   "name": "create-db-cluster-endpoint",
+   "description": "Creates a new custom endpoint and associates it with an Amazon Aurora DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-endpoint-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--excluded-members",
+     "args": {}
+    },
+    {
+     "name": "--static-members",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-db-cluster-parameter-group",
+   "description": "Creates a new DB cluster parameter group.",
+   "options": [
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-parameter-group-family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-db-cluster-snapshot",
+   "description": "Creates a snapshot of a DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-cluster-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-db-instance",
+   "description": "Creates a new DB instance.",
+   "options": [
+    {
+     "name": "--additional-storage-volumes",
+     "args": {}
+    },
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--backup-target",
+     "args": {}
+    },
+    {
+     "name": "--ca-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--character-set-name",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--custom-iam-instance-profile",
+     "args": {}
+    },
+    {
+     "name": "--database-insights-mode",
+     "args": {
+      "suggestions": [
+       "standard",
+       "advanced"
+      ]
+     }
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-class",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--db-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-system-id",
+     "args": {}
+    },
+    {
+     "name": "--dedicated-log-volume"
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-auth-secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--domain-dns-ips",
+     "args": {}
+    },
+    {
+     "name": "--domain-fqdn",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--domain-ou",
+     "args": {}
+    },
+    {
+     "name": "--enable-cloudwatch-logs-exports",
+     "args": {}
+    },
+    {
+     "name": "--enable-customer-owned-ip"
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--enable-performance-insights"
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--license-model",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-authentication-type",
+     "args": {
+      "suggestions": [
+       "password",
+       "iam-db-auth"
+      ]
+     }
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--master-username",
+     "args": {}
+    },
+    {
+     "name": "--max-allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-interval",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--multi-tenant"
+    },
+    {
+     "name": "--nchar-character-set-name",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-dedicated-log-volume"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-customer-owned-ip"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-enable-performance-insights"
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-multi-tenant"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-storage-encrypted"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--processor-features",
+     "args": {}
+    },
+    {
+     "name": "--promotion-tier",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--storage-encrypted"
+    },
+    {
+     "name": "--storage-throughput",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tde-credential-arn",
+     "args": {}
+    },
+    {
+     "name": "--tde-credential-password",
+     "args": {}
+    },
+    {
+     "name": "--timezone",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-db-instance-read-replica",
+   "description": "Creates a new DB instance that acts as a read replica for an existing source DB instance or Multi-AZ DB cluster.",
+   "options": [
+    {
+     "name": "--additional-storage-volumes",
+     "args": {}
+    },
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--backup-target",
+     "args": {}
+    },
+    {
+     "name": "--ca-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--custom-iam-instance-profile",
+     "args": {}
+    },
+    {
+     "name": "--database-insights-mode",
+     "args": {
+      "suggestions": [
+       "standard",
+       "advanced"
+      ]
+     }
+    },
+    {
+     "name": "--db-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--dedicated-log-volume"
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-auth-secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--domain-dns-ips",
+     "args": {}
+    },
+    {
+     "name": "--domain-fqdn",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--domain-ou",
+     "args": {}
+    },
+    {
+     "name": "--enable-cloudwatch-logs-exports",
+     "args": {}
+    },
+    {
+     "name": "--enable-customer-owned-ip"
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--enable-performance-insights"
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--max-allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-interval",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-dedicated-log-volume"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-customer-owned-ip"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-enable-performance-insights"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-upgrade-storage-config"
+    },
+    {
+     "name": "--no-use-default-processor-features"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--pre-signed-url",
+     "args": {}
+    },
+    {
+     "name": "--processor-features",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--replica-mode",
+     "args": {
+      "suggestions": [
+       "open-read-only",
+       "mounted"
+      ]
+     }
+    },
+    {
+     "name": "--source-db-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-db-instance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-region",
+     "args": {}
+    },
+    {
+     "name": "--storage-throughput",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--upgrade-storage-config"
+    },
+    {
+     "name": "--use-default-processor-features"
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-db-parameter-group",
+   "description": "Creates a new DB parameter group.",
+   "options": [
+    {
+     "name": "--db-parameter-group-family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-db-proxy",
+   "description": "Creates a new DB proxy.",
+   "options": [
+    {
+     "name": "--auth",
+     "args": {}
+    },
+    {
+     "name": "--db-proxy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--debug-logging"
+    },
+    {
+     "name": "--default-auth-scheme",
+     "args": {
+      "suggestions": [
+       "IAM_AUTH",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--endpoint-network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6",
+       "DUAL"
+      ]
+     }
+    },
+    {
+     "name": "--engine-family",
+     "args": {
+      "suggestions": [
+       "MYSQL",
+       "POSTGRESQL",
+       "SQLSERVER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--idle-client-timeout",
+     "args": {}
+    },
+    {
+     "name": "--no-debug-logging"
+    },
+    {
+     "name": "--no-require-tls"
+    },
+    {
+     "name": "--require-tls"
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-connection-network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--vpc-subnet-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-db-proxy-endpoint",
+   "description": "Creates a DBProxyEndpoint.",
+   "options": [
+    {
+     "name": "--db-proxy-endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-proxy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6",
+       "DUAL"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-role",
+     "args": {
+      "suggestions": [
+       "READ_WRITE",
+       "READ_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--vpc-subnet-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-db-security-group",
+   "description": "Creates a new DB security group.",
+   "options": [
+    {
+     "name": "--db-security-group-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-db-shard-group",
+   "description": "Creates a new DB shard group for Aurora Limitless Database.",
+   "options": [
+    {
+     "name": "--compute-redundancy",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-shard-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-acu",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--min-acu",
+     "args": {}
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-db-snapshot",
+   "description": "Creates a snapshot of a DB instance.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-db-subnet-group",
+   "description": "Creates a new DB subnet group.",
+   "options": [
+    {
+     "name": "--db-subnet-group-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-subscription",
+   "description": "Creates an RDS event notification subscription.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--event-categories",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-ids",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {}
+    },
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-global-cluster",
+   "description": "Creates an Aurora global database spread across multiple Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--global-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-storage-encrypted"
+    },
+    {
+     "name": "--source-db-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--storage-encrypted"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-integration",
+   "description": "Creates a zero-ETL integration with Amazon Redshift.",
+   "options": [
+    {
+     "name": "--additional-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--data-filter",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--integration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--source-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-option-group",
+   "description": "Creates a new option group.",
+   "options": [
+    {
+     "name": "--engine-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--major-engine-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--option-group-description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--option-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-tenant-database",
+   "description": "Creates a tenant database in a DB instance that uses the multi-tenant configuration.",
+   "options": [
+    {
+     "name": "--character-set-name",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--master-username",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nchar-character-set-name",
+     "args": {}
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tenant-db-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-blue-green-deployment",
+   "description": "Deletes a blue/green deployment.",
+   "options": [
+    {
+     "name": "--blue-green-deployment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delete-target"
+    },
+    {
+     "name": "--no-delete-target"
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-db-engine-version",
+   "description": "Deletes a custom engine version.",
+   "options": [
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-cluster",
+   "description": "The DeleteDBCluster action deletes a previously provisioned DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delete-automated-backups"
+    },
+    {
+     "name": "--final-db-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-delete-automated-backups"
+    },
+    {
+     "name": "--no-skip-final-snapshot"
+    },
+    {
+     "name": "--skip-final-snapshot"
+    }
+   ]
+  },
+  {
+   "name": "delete-db-cluster-automated-backup",
+   "description": "Deletes automated backups using the DbClusterResourceId value of the source DB cluster or the Amazon Resource Name (ARN) of the automated backups.",
+   "options": [
+    {
+     "name": "--db-cluster-resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-cluster-endpoint",
+   "description": "Deletes a custom endpoint and removes it from an Amazon Aurora DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-endpoint-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-cluster-parameter-group",
+   "description": "Deletes a specified DB cluster parameter group.",
+   "options": [
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-cluster-snapshot",
+   "description": "Deletes a DB cluster snapshot.",
+   "options": [
+    {
+     "name": "--db-cluster-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-instance",
+   "description": "Deletes a previously provisioned DB instance.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delete-automated-backups"
+    },
+    {
+     "name": "--final-db-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-delete-automated-backups"
+    },
+    {
+     "name": "--no-skip-final-snapshot"
+    },
+    {
+     "name": "--skip-final-snapshot"
+    }
+   ]
+  },
+  {
+   "name": "delete-db-instance-automated-backup",
+   "description": "Deletes automated backups using the DbiResourceId value of the source DB instance or the Amazon Resource Name (ARN) of the automated backups.",
+   "options": [
+    {
+     "name": "--db-instance-automated-backups-arn",
+     "args": {}
+    },
+    {
+     "name": "--dbi-resource-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-db-parameter-group",
+   "description": "Deletes a specified DB parameter group.",
+   "options": [
+    {
+     "name": "--db-parameter-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-proxy",
+   "description": "Deletes an existing DB proxy.",
+   "options": [
+    {
+     "name": "--db-proxy-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-proxy-endpoint",
+   "description": "Deletes a DBProxyEndpoint.",
+   "options": [
+    {
+     "name": "--db-proxy-endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-security-group",
+   "description": "Deletes a DB security group.",
+   "options": [
+    {
+     "name": "--db-security-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-shard-group",
+   "description": "Deletes an Aurora Limitless Database DB shard group.",
+   "options": [
+    {
+     "name": "--db-shard-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-snapshot",
+   "description": "Deletes a DB snapshot.",
+   "options": [
+    {
+     "name": "--db-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-subnet-group",
+   "description": "Deletes a DB subnet group.",
+   "options": [
+    {
+     "name": "--db-subnet-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-subscription",
+   "description": "Deletes an RDS event notification subscription.",
+   "options": [
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-global-cluster",
+   "description": "Deletes a global database cluster.",
+   "options": [
+    {
+     "name": "--global-cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-integration",
+   "description": "Deletes a zero-ETL integration with Amazon Redshift.",
+   "options": [
+    {
+     "name": "--integration-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-option-group",
+   "description": "Deletes an existing option group.",
+   "options": [
+    {
+     "name": "--option-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tenant-database",
+   "description": "Deletes a tenant database from your DB instance.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--final-db-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-skip-final-snapshot"
+    },
+    {
+     "name": "--skip-final-snapshot"
+    },
+    {
+     "name": "--tenant-db-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-db-proxy-targets",
+   "description": "Remove the association between one or more DBProxyTarget data structures and a DBProxyTargetGroup.",
+   "options": [
+    {
+     "name": "--db-cluster-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--db-proxy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-account-attributes",
+   "description": "Lists all of the attributes for a customer account."
+  },
+  {
+   "name": "describe-blue-green-deployments",
+   "description": "Describes one or more blue/green deployments.",
+   "options": [
+    {
+     "name": "--blue-green-deployment-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-certificates",
+   "description": "Lists the set of certificate authority (CA) certificates provided by Amazon RDS for this Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-cluster-automated-backups",
+   "description": "Displays backups for both current and deleted DB clusters.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-cluster-backtracks",
+   "description": "Returns information about backtracks for a DB cluster.",
+   "options": [
+    {
+     "name": "--backtrack-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-cluster-endpoints",
+   "description": "Returns information about endpoints for an Amazon Aurora DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-endpoint-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-cluster-parameter-groups",
+   "description": "Returns a list of DBClusterParameterGroup descriptions.",
+   "options": [
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-cluster-parameters",
+   "description": "Returns the detailed parameter list for a particular DB cluster parameter group.",
+   "options": [
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-cluster-snapshot-attributes",
+   "description": "Returns a list of DB cluster snapshot attribute names and values for a manual DB cluster snapshot.",
+   "options": [
+    {
+     "name": "--db-cluster-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-db-cluster-snapshots",
+   "description": "Returns information about DB cluster snapshots.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-public"
+    },
+    {
+     "name": "--include-shared"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-public"
+    },
+    {
+     "name": "--no-include-shared"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-clusters",
+   "description": "Describes existing Amazon Aurora DB clusters and Multi-AZ DB clusters.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-shared"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-shared"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-engine-versions",
+   "description": "Describes the properties of specific versions of DB engines.",
+   "options": [
+    {
+     "name": "--db-parameter-group-family",
+     "args": {}
+    },
+    {
+     "name": "--default-only"
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-all"
+    },
+    {
+     "name": "--list-supported-character-sets"
+    },
+    {
+     "name": "--list-supported-timezones"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-default-only"
+    },
+    {
+     "name": "--no-include-all"
+    },
+    {
+     "name": "--no-list-supported-character-sets"
+    },
+    {
+     "name": "--no-list-supported-timezones"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-instance-automated-backups",
+   "description": "Displays backups for both current and deleted instances.",
+   "options": [
+    {
+     "name": "--db-instance-automated-backups-arn",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--dbi-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-instances",
+   "description": "Describes provisioned RDS instances.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-log-files",
+   "description": "Returns a list of DB log files for the DB instance.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-last-written",
+     "args": {}
+    },
+    {
+     "name": "--file-size",
+     "args": {}
+    },
+    {
+     "name": "--filename-contains",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-major-engine-versions",
+   "description": "Describes the properties of specific major versions of DB engines.",
+   "options": [
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--major-engine-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-parameter-groups",
+   "description": "Returns a list of DBParameterGroup descriptions.",
+   "options": [
+    {
+     "name": "--db-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-parameters",
+   "description": "Returns the detailed parameter list for a particular DB parameter group.",
+   "options": [
+    {
+     "name": "--db-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-proxies",
+   "description": "Returns information about DB proxies.",
+   "options": [
+    {
+     "name": "--db-proxy-name",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-proxy-endpoints",
+   "description": "Returns information about DB proxy endpoints.",
+   "options": [
+    {
+     "name": "--db-proxy-endpoint-name",
+     "args": {}
+    },
+    {
+     "name": "--db-proxy-name",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-proxy-target-groups",
+   "description": "Returns information about DB proxy target groups, represented by DBProxyTargetGroup data structures.",
+   "options": [
+    {
+     "name": "--db-proxy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-proxy-targets",
+   "description": "Returns information about DBProxyTarget objects.",
+   "options": [
+    {
+     "name": "--db-proxy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-recommendations",
+   "description": "Describes the recommendations to resolve the issues for your DB instances, DB clusters, and DB parameter groups.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--last-updated-after",
+     "args": {}
+    },
+    {
+     "name": "--last-updated-before",
+     "args": {}
+    },
+    {
+     "name": "--locale",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-security-groups",
+   "description": "Returns a list of DBSecurityGroup descriptions.",
+   "options": [
+    {
+     "name": "--db-security-group-name",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-shard-groups",
+   "description": "Describes existing Aurora Limitless Database DB shard groups.",
+   "options": [
+    {
+     "name": "--db-shard-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-snapshot-attributes",
+   "description": "Returns a list of DB snapshot attribute names and values for a manual DB snapshot.",
+   "options": [
+    {
+     "name": "--db-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-db-snapshot-tenant-databases",
+   "description": "Describes the tenant databases that exist in a DB snapshot.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--dbi-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-snapshots",
+   "description": "Returns information about DB snapshots.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--dbi-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-public"
+    },
+    {
+     "name": "--include-shared"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-public"
+    },
+    {
+     "name": "--no-include-shared"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-db-subnet-groups",
+   "description": "Returns a list of DBSubnetGroup descriptions.",
+   "options": [
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-engine-default-cluster-parameters",
+   "description": "Returns the default engine and system parameter information for the cluster database engine.",
+   "options": [
+    {
+     "name": "--db-parameter-group-family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-engine-default-parameters",
+   "description": "Returns the default engine and system parameter information for the specified database engine.",
+   "options": [
+    {
+     "name": "--db-parameter-group-family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-event-categories",
+   "description": "Displays a list of categories for all event source types, or, if specified, for a specified source type.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-event-subscriptions",
+   "description": "Lists all the subscription descriptions for a customer account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subscription-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-events",
+   "description": "Returns events related to DB instances, DB clusters, DB parameter groups, DB security groups, DB snapshots, DB cluster snapshots, and RDS Proxies for the past 14 days.",
+   "options": [
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--event-categories",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "db-instance",
+       "db-parameter-group",
+       "db-security-group",
+       "db-snapshot",
+       "db-cluster",
+       "db-cluster-snapshot",
+       "custom-engine-version",
+       "db-proxy",
+       "blue-green-deployment",
+       "db-shard-group",
+       "zero-etl"
+      ]
+     }
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-export-tasks",
+   "description": "Returns information about a snapshot or cluster export to Amazon S3.",
+   "options": [
+    {
+     "name": "--export-task-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-arn",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "SNAPSHOT",
+       "CLUSTER"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-global-clusters",
+   "description": "Returns information about Aurora global database clusters.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--global-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-integrations",
+   "description": "Describe one or more zero-ETL integrations with Amazon Redshift.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--integration-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-option-group-options",
+   "description": "Describes all available options for the specified engine.",
+   "options": [
+    {
+     "name": "--engine-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--major-engine-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-option-groups",
+   "description": "Describes the available option groups.",
+   "options": [
+    {
+     "name": "--engine-name",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--major-engine-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-orderable-db-instance-options",
+   "description": "Describes the orderable DB instance options for a specified DB engine.",
+   "options": [
+    {
+     "name": "--availability-zone-group",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--license-model",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-vpc"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc"
+    }
+   ]
+  },
+  {
+   "name": "describe-pending-maintenance-actions",
+   "description": "Returns a list of resources (for example, DB instances) that have at least one pending maintenance action.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-db-instances",
+   "description": "Returns information about reserved DB instances for this account, or about a specified reserved DB instance.",
+   "options": [
+    {
+     "name": "--db-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--lease-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--offering-type",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--product-description",
+     "args": {}
+    },
+    {
+     "name": "--reserved-db-instance-id",
+     "args": {}
+    },
+    {
+     "name": "--reserved-db-instances-offering-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-db-instances-offerings",
+   "description": "Lists available reserved DB instance offerings.",
+   "options": [
+    {
+     "name": "--db-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--offering-type",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--product-description",
+     "args": {}
+    },
+    {
+     "name": "--reserved-db-instances-offering-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-serverless-v2-platform-versions",
+   "description": "Describes the properties of specific platform versions for Aurora Serverless v2.",
+   "options": [
+    {
+     "name": "--default-only"
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-all"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-default-only"
+    },
+    {
+     "name": "--no-include-all"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--serverless-v2-platform-version",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-source-regions",
+   "description": "Returns a list of the source Amazon Web Services Regions where the current Amazon Web Services Region can create a read replica, copy a DB snapshot from, or replicate automated backups from.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--region-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tenant-databases",
+   "description": "Describes the tenant databases in a DB instance that uses the multi-tenant configuration.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tenant-db-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-valid-db-instance-modifications",
+   "description": "You can call DescribeValidDBInstanceModifications to learn what modifications you can make to your DB instance.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-http-endpoint",
+   "description": "Disables the HTTP endpoint for the specified DB cluster.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "download-db-log-file-portion",
+   "description": "Downloads all or a portion of the specified log file, up to 1 MB in size.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-file-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "enable-http-endpoint",
+   "description": "Enables the HTTP endpoint for the DB cluster.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "failover-db-cluster",
+   "description": "Forces a failover for a DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-db-instance-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "failover-global-cluster",
+   "description": "Promotes the specified secondary DB cluster to be the primary DB cluster in the global database cluster to fail over or switch over a global database.",
+   "options": [
+    {
+     "name": "--allow-data-loss"
+    },
+    {
+     "name": "--global-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-data-loss"
+    },
+    {
+     "name": "--no-switchover"
+    },
+    {
+     "name": "--switchover"
+    },
+    {
+     "name": "--target-db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-db-auth-token",
+   "description": "Generates an auth token used to connect to a db with IAM credentials.",
+   "options": [
+    {
+     "name": "--hostname",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--port",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags on an Amazon RDS resource.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-activity-stream",
+   "description": "Changes the audit policy state of a database activity stream to either locked (default) or unlocked.",
+   "options": [
+    {
+     "name": "--audit-policy-state",
+     "args": {
+      "suggestions": [
+       "locked",
+       "unlocked"
+      ]
+     }
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-certificates",
+   "description": "Override the system-default Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificate for Amazon RDS for new DB instances, or remove the override.",
+   "options": [
+    {
+     "name": "--certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-remove-customer-override"
+    },
+    {
+     "name": "--remove-customer-override"
+    }
+   ]
+  },
+  {
+   "name": "modify-current-db-cluster-capacity",
+   "description": "Set the capacity of an Aurora Serverless v1 DB cluster to a specific value.",
+   "options": [
+    {
+     "name": "--capacity",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--seconds-before-timeout",
+     "args": {}
+    },
+    {
+     "name": "--timeout-action",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-custom-db-engine-version",
+   "description": "Modifies the status of a custom engine version (CEV).",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "available",
+       "inactive",
+       "inactive-except-restore"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "modify-db-cluster",
+   "description": "Modifies the settings of an Amazon Aurora DB cluster or a Multi-AZ DB cluster.",
+   "options": [
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--allow-engine-mode-change"
+    },
+    {
+     "name": "--allow-major-version-upgrade"
+    },
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--aws-backup-recovery-point-arn",
+     "args": {}
+    },
+    {
+     "name": "--backtrack-window",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--ca-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--cloudwatch-logs-export-configuration",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--database-insights-mode",
+     "args": {
+      "suggestions": [
+       "standard",
+       "advanced"
+      ]
+     }
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-cluster-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--enable-global-write-forwarding"
+    },
+    {
+     "name": "--enable-http-endpoint"
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--enable-limitless-database"
+    },
+    {
+     "name": "--enable-local-write-forwarding"
+    },
+    {
+     "name": "--enable-performance-insights"
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--engine-mode",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-authentication-type",
+     "args": {
+      "suggestions": [
+       "password",
+       "iam-db-auth"
+      ]
+     }
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-interval",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--new-db-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-engine-mode-change"
+    },
+    {
+     "name": "--no-allow-major-version-upgrade"
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-global-write-forwarding"
+    },
+    {
+     "name": "--no-enable-http-endpoint"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-enable-limitless-database"
+    },
+    {
+     "name": "--no-enable-local-write-forwarding"
+    },
+    {
+     "name": "--no-enable-performance-insights"
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--no-rotate-master-user-password"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--rotate-master-user-password"
+    },
+    {
+     "name": "--scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--serverless-v2-scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-cluster-endpoint",
+   "description": "Modifies the properties of an endpoint in an Amazon Aurora DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-endpoint-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {}
+    },
+    {
+     "name": "--excluded-members",
+     "args": {}
+    },
+    {
+     "name": "--static-members",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-cluster-parameter-group",
+   "description": "Modifies the parameters of a DB cluster parameter group.",
+   "options": [
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-db-cluster-snapshot-attribute",
+   "description": "Adds an attribute and values to, or removes an attribute and values from, a manual DB cluster snapshot.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-cluster-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--values-to-add",
+     "args": {}
+    },
+    {
+     "name": "--values-to-remove",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-instance",
+   "description": "Modifies settings for a DB instance.",
+   "options": [
+    {
+     "name": "--additional-storage-volumes",
+     "args": {}
+    },
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--allow-major-version-upgrade"
+    },
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--automation-mode",
+     "args": {
+      "suggestions": [
+       "full",
+       "all-paused"
+      ]
+     }
+    },
+    {
+     "name": "--aws-backup-recovery-point-arn",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--ca-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--certificate-rotation-restart"
+    },
+    {
+     "name": "--cloudwatch-logs-export-configuration",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--database-insights-mode",
+     "args": {
+      "suggestions": [
+       "standard",
+       "advanced"
+      ]
+     }
+    },
+    {
+     "name": "--db-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-port-number",
+     "args": {}
+    },
+    {
+     "name": "--db-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--dedicated-log-volume"
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--disable-domain"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-auth-secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--domain-dns-ips",
+     "args": {}
+    },
+    {
+     "name": "--domain-fqdn",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--domain-ou",
+     "args": {}
+    },
+    {
+     "name": "--enable-customer-owned-ip"
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--enable-performance-insights"
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--license-model",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-authentication-type",
+     "args": {
+      "suggestions": [
+       "password",
+       "iam-db-auth"
+      ]
+     }
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--max-allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-interval",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--multi-tenant"
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--new-db-instance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-major-version-upgrade"
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-certificate-rotation-restart"
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-dedicated-log-volume"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-disable-domain"
+    },
+    {
+     "name": "--no-enable-customer-owned-ip"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-enable-performance-insights"
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-multi-tenant"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-rotate-master-user-password"
+    },
+    {
+     "name": "--no-use-default-processor-features"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--processor-features",
+     "args": {}
+    },
+    {
+     "name": "--promotion-tier",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--replica-mode",
+     "args": {
+      "suggestions": [
+       "open-read-only",
+       "mounted"
+      ]
+     }
+    },
+    {
+     "name": "--resume-full-automation-mode-minutes",
+     "args": {}
+    },
+    {
+     "name": "--rotate-master-user-password"
+    },
+    {
+     "name": "--storage-throughput",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tde-credential-arn",
+     "args": {}
+    },
+    {
+     "name": "--tde-credential-password",
+     "args": {}
+    },
+    {
+     "name": "--use-default-processor-features"
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-parameter-group",
+   "description": "Modifies the parameters of a DB parameter group.",
+   "options": [
+    {
+     "name": "--db-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-db-proxy",
+   "description": "Changes the settings for an existing DB proxy.",
+   "options": [
+    {
+     "name": "--auth",
+     "args": {}
+    },
+    {
+     "name": "--db-proxy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--debug-logging"
+    },
+    {
+     "name": "--default-auth-scheme",
+     "args": {
+      "suggestions": [
+       "IAM_AUTH",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--idle-client-timeout",
+     "args": {}
+    },
+    {
+     "name": "--new-db-proxy-name",
+     "args": {}
+    },
+    {
+     "name": "--no-debug-logging"
+    },
+    {
+     "name": "--no-require-tls"
+    },
+    {
+     "name": "--require-tls"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--security-groups",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-proxy-endpoint",
+   "description": "Changes the settings for an existing DB proxy endpoint.",
+   "options": [
+    {
+     "name": "--db-proxy-endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-db-proxy-endpoint-name",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-proxy-target-group",
+   "description": "Modifies the properties of a DBProxyTargetGroup.",
+   "options": [
+    {
+     "name": "--connection-pool-config",
+     "args": {}
+    },
+    {
+     "name": "--db-proxy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-name",
+     "args": {}
+    },
+    {
+     "name": "--target-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-db-recommendation",
+   "description": "Updates the recommendation status and recommended action status for the specified recommendation.",
+   "options": [
+    {
+     "name": "--locale",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommended-action-updates",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-shard-group",
+   "description": "Modifies the settings of an Aurora Limitless Database DB shard group.",
+   "options": [
+    {
+     "name": "--compute-redundancy",
+     "args": {}
+    },
+    {
+     "name": "--db-shard-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-acu",
+     "args": {}
+    },
+    {
+     "name": "--min-acu",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-snapshot",
+   "description": "Updates a manual DB snapshot with a new engine version.",
+   "options": [
+    {
+     "name": "--db-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-snapshot-attribute",
+   "description": "Adds an attribute and values to, or removes an attribute and values from, a manual DB snapshot.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--values-to-add",
+     "args": {}
+    },
+    {
+     "name": "--values-to-remove",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-db-subnet-group",
+   "description": "Modifies an existing DB subnet group.",
+   "options": [
+    {
+     "name": "--db-subnet-group-description",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-event-subscription",
+   "description": "Modifies an existing RDS event notification subscription.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--event-categories",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {}
+    },
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-global-cluster",
+   "description": "Modifies a setting for an Amazon Aurora global database cluster.",
+   "options": [
+    {
+     "name": "--allow-major-version-upgrade"
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--global-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-global-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-major-version-upgrade"
+    },
+    {
+     "name": "--no-deletion-protection"
+    }
+   ]
+  },
+  {
+   "name": "modify-integration",
+   "description": "Modifies a zero-ETL integration with Amazon Redshift.",
+   "options": [
+    {
+     "name": "--data-filter",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--integration-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-tenant-database",
+   "description": "Modifies an existing tenant database in a DB instance.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--new-tenant-db-name",
+     "args": {}
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--no-rotate-master-user-password"
+    },
+    {
+     "name": "--rotate-master-user-password"
+    },
+    {
+     "name": "--tenant-db-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "promote-read-replica",
+   "description": "Promotes a read replica DB instance to a standalone DB instance.",
+   "options": [
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "promote-read-replica-db-cluster",
+   "description": "Promotes a read replica DB cluster to a standalone DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "purchase-reserved-db-instances-offering",
+   "description": "Purchases a reserved DB instance offering.",
+   "options": [
+    {
+     "name": "--db-instance-count",
+     "args": {}
+    },
+    {
+     "name": "--reserved-db-instance-id",
+     "args": {}
+    },
+    {
+     "name": "--reserved-db-instances-offering-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reboot-db-cluster",
+   "description": "You might need to reboot your DB cluster, usually for maintenance reasons.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reboot-db-instance",
+   "description": "You might need to reboot your DB instance, usually for maintenance reasons.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-failover"
+    },
+    {
+     "name": "--no-force-failover"
+    }
+   ]
+  },
+  {
+   "name": "reboot-db-shard-group",
+   "description": "You might need to reboot your DB shard group, usually for maintenance reasons.",
+   "options": [
+    {
+     "name": "--db-shard-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-db-proxy-targets",
+   "description": "Associate one or more DBProxyTarget data structures with a DBProxyTargetGroup.",
+   "options": [
+    {
+     "name": "--db-cluster-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--db-proxy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-from-global-cluster",
+   "description": "Detaches an Aurora secondary cluster from an Aurora global database cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--global-cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-option-from-option-group",
+   "description": "Modifies an existing option group.",
+   "options": [
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-role-from-db-cluster",
+   "description": "Removes the asssociation of an Amazon Web Services Identity and Access Management (IAM) role from a DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature-name",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-role-from-db-instance",
+   "description": "Disassociates an Amazon Web Services Identity and Access Management (IAM) role from a DB instance.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-source-identifier-from-subscription",
+   "description": "Removes a source identifier from an existing RDS event notification subscription.",
+   "options": [
+    {
+     "name": "--source-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-resource",
+   "description": "Removes metadata tags from an Amazon RDS resource.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-db-cluster-parameter-group",
+   "description": "Modifies the parameters of a DB cluster parameter group to the default value.",
+   "options": [
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-reset-all-parameters"
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--reset-all-parameters"
+    }
+   ]
+  },
+  {
+   "name": "reset-db-parameter-group",
+   "description": "Modifies the parameters of a DB parameter group to the engine/system default value.",
+   "options": [
+    {
+     "name": "--db-parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-reset-all-parameters"
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--reset-all-parameters"
+    }
+   ]
+  },
+  {
+   "name": "restore-db-cluster-from-s3",
+   "description": "Creates an Amazon Aurora DB cluster from MySQL data stored in an Amazon S3 bucket.",
+   "options": [
+    {
+     "name": "--associated-roles",
+     "args": {}
+    },
+    {
+     "name": "--availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--backtrack-window",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--character-set-name",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--enable-cloudwatch-logs-exports",
+     "args": {}
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--master-username",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--no-storage-encrypted"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-ingestion-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-prefix",
+     "args": {}
+    },
+    {
+     "name": "--serverless-v2-scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--source-engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-engine-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-encrypted"
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-db-cluster-from-snapshot",
+   "description": "Creates a new DB cluster from a DB snapshot or DB cluster snapshot.",
+   "options": [
+    {
+     "name": "--associated-roles",
+     "args": {}
+    },
+    {
+     "name": "--availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--backtrack-window",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--database-name",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-cluster-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--enable-cloudwatch-logs-exports",
+     "args": {}
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--enable-internet-access-gateway"
+    },
+    {
+     "name": "--enable-performance-insights"
+    },
+    {
+     "name": "--enable-vpc-networking"
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--engine-mode",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-interval",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-enable-internet-access-gateway"
+    },
+    {
+     "name": "--no-enable-performance-insights"
+    },
+    {
+     "name": "--no-enable-vpc-networking"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--rds-custom-cluster-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--serverless-v2-scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-db-cluster-to-point-in-time",
+   "description": "Restores a DB cluster to an arbitrary point in time.",
+   "options": [
+    {
+     "name": "--associated-roles",
+     "args": {}
+    },
+    {
+     "name": "--backtrack-window",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-cluster-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--enable-cloudwatch-logs-exports",
+     "args": {}
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--enable-internet-access-gateway"
+    },
+    {
+     "name": "--enable-performance-insights"
+    },
+    {
+     "name": "--enable-vpc-networking"
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--engine-mode",
+     "args": {}
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-interval",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-enable-internet-access-gateway"
+    },
+    {
+     "name": "--no-enable-performance-insights"
+    },
+    {
+     "name": "--no-enable-vpc-networking"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-use-latest-restorable-time"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--rds-custom-cluster-configuration",
+     "args": {}
+    },
+    {
+     "name": "--restore-to-time",
+     "args": {}
+    },
+    {
+     "name": "--restore-type",
+     "args": {}
+    },
+    {
+     "name": "--scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--serverless-v2-scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--source-db-cluster-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-db-cluster-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--use-latest-restorable-time"
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-db-instance-from-db-snapshot",
+   "description": "Creates a new DB instance from a DB snapshot.",
+   "options": [
+    {
+     "name": "--additional-storage-volumes",
+     "args": {}
+    },
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--backup-target",
+     "args": {}
+    },
+    {
+     "name": "--ca-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--custom-iam-instance-profile",
+     "args": {}
+    },
+    {
+     "name": "--db-cluster-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--db-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-snapshot-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--dedicated-log-volume"
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-auth-secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--domain-dns-ips",
+     "args": {}
+    },
+    {
+     "name": "--domain-fqdn",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--domain-ou",
+     "args": {}
+    },
+    {
+     "name": "--enable-cloudwatch-logs-exports",
+     "args": {}
+    },
+    {
+     "name": "--enable-customer-owned-ip"
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--license-model",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-dedicated-log-volume"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-customer-owned-ip"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-use-default-processor-features"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--processor-features",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--storage-throughput",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tde-credential-arn",
+     "args": {}
+    },
+    {
+     "name": "--tde-credential-password",
+     "args": {}
+    },
+    {
+     "name": "--use-default-processor-features"
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-db-instance-from-s3",
+   "description": "Amazon Relational Database Service (Amazon RDS) supports importing MySQL databases by using backup files.",
+   "options": [
+    {
+     "name": "--additional-storage-volumes",
+     "args": {}
+    },
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--ca-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--database-insights-mode",
+     "args": {
+      "suggestions": [
+       "standard",
+       "advanced"
+      ]
+     }
+    },
+    {
+     "name": "--db-instance-class",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--db-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--dedicated-log-volume"
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--enable-cloudwatch-logs-exports",
+     "args": {}
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--enable-performance-insights"
+    },
+    {
+     "name": "--engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--license-model",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-password",
+     "args": {}
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--master-username",
+     "args": {}
+    },
+    {
+     "name": "--max-allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-interval",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-dedicated-log-volume"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-enable-performance-insights"
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-storage-encrypted"
+    },
+    {
+     "name": "--no-use-default-processor-features"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--performance-insights-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--processor-features",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--s3-bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-ingestion-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-prefix",
+     "args": {}
+    },
+    {
+     "name": "--source-engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-engine-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-encrypted"
+    },
+    {
+     "name": "--storage-throughput",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--use-default-processor-features"
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-db-instance-to-point-in-time",
+   "description": "Restores a DB instance to an arbitrary point in time.",
+   "options": [
+    {
+     "name": "--additional-storage-volumes",
+     "args": {}
+    },
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--auto-minor-version-upgrade"
+    },
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--backup-target",
+     "args": {}
+    },
+    {
+     "name": "--ca-certificate-identifier",
+     "args": {}
+    },
+    {
+     "name": "--copy-tags-to-snapshot"
+    },
+    {
+     "name": "--custom-iam-instance-profile",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-class",
+     "args": {}
+    },
+    {
+     "name": "--db-name",
+     "args": {}
+    },
+    {
+     "name": "--db-parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--db-subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--dedicated-log-volume"
+    },
+    {
+     "name": "--deletion-protection"
+    },
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--domain-auth-secret-arn",
+     "args": {}
+    },
+    {
+     "name": "--domain-dns-ips",
+     "args": {}
+    },
+    {
+     "name": "--domain-fqdn",
+     "args": {}
+    },
+    {
+     "name": "--domain-iam-role-name",
+     "args": {}
+    },
+    {
+     "name": "--domain-ou",
+     "args": {}
+    },
+    {
+     "name": "--enable-cloudwatch-logs-exports",
+     "args": {}
+    },
+    {
+     "name": "--enable-customer-owned-ip"
+    },
+    {
+     "name": "--enable-iam-database-authentication"
+    },
+    {
+     "name": "--engine",
+     "args": {}
+    },
+    {
+     "name": "--engine-lifecycle-support",
+     "args": {}
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--license-model",
+     "args": {}
+    },
+    {
+     "name": "--manage-master-user-password"
+    },
+    {
+     "name": "--master-user-secret-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--max-allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--multi-az"
+    },
+    {
+     "name": "--network-type",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-minor-version-upgrade"
+    },
+    {
+     "name": "--no-copy-tags-to-snapshot"
+    },
+    {
+     "name": "--no-dedicated-log-volume"
+    },
+    {
+     "name": "--no-deletion-protection"
+    },
+    {
+     "name": "--no-enable-customer-owned-ip"
+    },
+    {
+     "name": "--no-enable-iam-database-authentication"
+    },
+    {
+     "name": "--no-manage-master-user-password"
+    },
+    {
+     "name": "--no-multi-az"
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--no-use-default-processor-features"
+    },
+    {
+     "name": "--no-use-latest-restorable-time"
+    },
+    {
+     "name": "--option-group-name",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--processor-features",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--restore-time",
+     "args": {}
+    },
+    {
+     "name": "--source-db-instance-automated-backups-arn",
+     "args": {}
+    },
+    {
+     "name": "--source-db-instance-identifier",
+     "args": {}
+    },
+    {
+     "name": "--source-dbi-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--storage-throughput",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tde-credential-arn",
+     "args": {}
+    },
+    {
+     "name": "--tde-credential-password",
+     "args": {}
+    },
+    {
+     "name": "--use-default-processor-features"
+    },
+    {
+     "name": "--use-latest-restorable-time"
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "revoke-db-security-group-ingress",
+   "description": "Revokes ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC security groups.",
+   "options": [
+    {
+     "name": "--cidrip",
+     "args": {}
+    },
+    {
+     "name": "--db-security-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ec2-security-group-id",
+     "args": {}
+    },
+    {
+     "name": "--ec2-security-group-name",
+     "args": {}
+    },
+    {
+     "name": "--ec2-security-group-owner-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-activity-stream",
+   "description": "Starts a database activity stream to monitor activity on the database.",
+   "options": [
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--engine-native-audit-fields-included"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "sync",
+       "async"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--no-engine-native-audit-fields-included"
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-db-cluster",
+   "description": "Starts an Amazon Aurora DB cluster that was stopped using the Amazon Web Services console, the stop-db-cluster CLI command, or the StopDBCluster operation.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-db-instance",
+   "description": "Starts an Amazon RDS DB instance that was stopped using the Amazon Web Services console, the stop-db-instance CLI command, or the StopDBInstance operation.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-db-instance-automated-backups-replication",
+   "description": "Enables replication of automated backups to a different Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--pre-signed-url",
+     "args": {}
+    },
+    {
+     "name": "--source-db-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-region",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-export-task",
+   "description": "Starts an export of DB snapshot or DB cluster data to Amazon S3.",
+   "options": [
+    {
+     "name": "--export-only",
+     "args": {}
+    },
+    {
+     "name": "--export-task-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-bucket-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-prefix",
+     "args": {}
+    },
+    {
+     "name": "--source-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-activity-stream",
+   "description": "Stops a database activity stream that was started using the Amazon Web Services console, the start-activity-stream CLI command, or the StartActivityStream operation.",
+   "options": [
+    {
+     "name": "--apply-immediately"
+    },
+    {
+     "name": "--no-apply-immediately"
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-db-cluster",
+   "description": "Stops an Amazon Aurora DB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-db-instance",
+   "description": "Stops an Amazon RDS DB instance temporarily.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-snapshot-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-db-instance-automated-backups-replication",
+   "description": "Stops automated backup replication for a DB instance.",
+   "options": [
+    {
+     "name": "--source-db-instance-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "switchover-blue-green-deployment",
+   "description": "Switches over a blue/green deployment.",
+   "options": [
+    {
+     "name": "--blue-green-deployment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--switchover-timeout",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "switchover-global-cluster",
+   "description": "Switches over the specified secondary DB cluster to be the new primary DB cluster in the global database cluster.",
+   "options": [
+    {
+     "name": "--global-cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-db-cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "switchover-read-replica",
+   "description": "Switches over an Oracle standby database in an Oracle Data Guard environment, making it the new primary database.",
+   "options": [
+    {
+     "name": "--db-instance-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "db-cluster-available",
+     "description": "Wait until JMESPath query DBClusters[].Status returns available for all elements when polling with ``describe-db-clusters``.",
+     "options": [
+      {
+       "name": "--db-cluster-identifier",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--include-shared"
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-shared"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "db-cluster-deleted",
+     "description": "Wait until JMESPath query length(DBClusters) == `0` returns True when polling with ``describe-db-clusters``.",
+     "options": [
+      {
+       "name": "--db-cluster-identifier",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--include-shared"
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-shared"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "db-cluster-snapshot-available",
+     "description": "Wait until JMESPath query DBClusterSnapshots[].Status returns available for all elements when polling with ``describe-db-cluster-snapshots``.",
+     "options": [
+      {
+       "name": "--db-cluster-identifier",
+       "args": {}
+      },
+      {
+       "name": "--db-cluster-resource-id",
+       "args": {}
+      },
+      {
+       "name": "--db-cluster-snapshot-identifier",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--include-public"
+      },
+      {
+       "name": "--include-shared"
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-public"
+      },
+      {
+       "name": "--no-include-shared"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--snapshot-type",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "db-cluster-snapshot-deleted",
+     "description": "Wait until JMESPath query length(DBClusterSnapshots) == `0` returns True when polling with ``describe-db-cluster-snapshots``.",
+     "options": [
+      {
+       "name": "--db-cluster-identifier",
+       "args": {}
+      },
+      {
+       "name": "--db-cluster-resource-id",
+       "args": {}
+      },
+      {
+       "name": "--db-cluster-snapshot-identifier",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--include-public"
+      },
+      {
+       "name": "--include-shared"
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-public"
+      },
+      {
+       "name": "--no-include-shared"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--snapshot-type",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "db-instance-available",
+     "description": "Wait until JMESPath query DBInstances[].DBInstanceStatus returns available for all elements when polling with ``describe-db-instances``.",
+     "options": [
+      {
+       "name": "--db-instance-identifier",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "db-instance-deleted",
+     "description": "Wait until JMESPath query length(DBInstances) == `0` returns True when polling with ``describe-db-instances``.",
+     "options": [
+      {
+       "name": "--db-instance-identifier",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "db-snapshot-available",
+     "description": "Wait until JMESPath query DBSnapshots[].Status returns available for all elements when polling with ``describe-db-snapshots``.",
+     "options": [
+      {
+       "name": "--db-instance-identifier",
+       "args": {}
+      },
+      {
+       "name": "--db-snapshot-identifier",
+       "args": {}
+      },
+      {
+       "name": "--dbi-resource-id",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--include-public"
+      },
+      {
+       "name": "--include-shared"
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-public"
+      },
+      {
+       "name": "--no-include-shared"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--snapshot-type",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "db-snapshot-completed",
+     "description": "Wait until DBSnapshotNotFound is thrown when polling with ``describe-db-snapshots``.",
+     "options": [
+      {
+       "name": "--db-instance-identifier",
+       "args": {}
+      },
+      {
+       "name": "--db-snapshot-identifier",
+       "args": {}
+      },
+      {
+       "name": "--dbi-resource-id",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--include-public"
+      },
+      {
+       "name": "--include-shared"
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-public"
+      },
+      {
+       "name": "--no-include-shared"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--snapshot-type",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "db-snapshot-deleted",
+     "description": "Wait until JMESPath query length(DBSnapshots) == `0` returns True when polling with ``describe-db-snapshots``.",
+     "options": [
+      {
+       "name": "--db-instance-identifier",
+       "args": {}
+      },
+      {
+       "name": "--db-snapshot-identifier",
+       "args": {}
+      },
+      {
+       "name": "--dbi-resource-id",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--include-public"
+      },
+      {
+       "name": "--include-shared"
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-public"
+      },
+      {
+       "name": "--no-include-shared"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--snapshot-type",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "tenant-database-available",
+     "description": "Wait until JMESPath query TenantDatabases[].Status returns available for all elements when polling with ``describe-tenant-databases``.",
+     "options": [
+      {
+       "name": "--db-instance-identifier",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--tenant-db-name",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "tenant-database-deleted",
+     "description": "Wait until JMESPath query length(TenantDatabases) == `0` returns True when polling with ``describe-tenant-databases``.",
+     "options": [
+      {
+       "name": "--db-instance-identifier",
+       "args": {}
+      },
+      {
+       "name": "--filters",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--tenant-db-name",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

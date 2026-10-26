@@ -1,0 +1,694 @@
+{
+ "name": "route53domains",
+ "description": "Amazon Route 53 API actions let you register domain names and perform related operations.",
+ "subcommands": [
+  {
+   "name": "accept-domain-transfer-from-another-aws-account",
+   "description": "Accepts the transfer of a domain from another Amazon Web Services account to the currentAmazon Web Services account.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-delegation-signer-to-domain",
+   "description": "Creates a delegation signer (DS) record in the registry zone for this domain name.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signing-attributes",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-domain-transfer-to-another-aws-account",
+   "description": "Cancels the transfer of a domain from the current Amazon Web Services account to another Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "check-domain-availability",
+   "description": "This operation checks the availability of one domain name.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idn-lang-code",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "check-domain-transferability",
+   "description": "Checks whether a domain name can be transferred to Amazon Route 53.",
+   "options": [
+    {
+     "name": "--auth-code",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain",
+   "description": "This operation deletes the specified domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tags-for-domain",
+   "description": "This operation deletes the specified tags for a domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags-to-delete",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-domain-auto-renew",
+   "description": "This operation disables automatic renewal of domain registration for the specified domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-domain-transfer-lock",
+   "description": "This operation removes the transfer lock on the domain (specifically the clientTransferProhibited status) to allow domain transfers.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-delegation-signer-from-domain",
+   "description": "Deletes a delegation signer (DS) record in the registry zone for this domain name.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-domain-auto-renew",
+   "description": "This operation configures Amazon Route 53 to automatically renew the specified domain before the domain registration expires.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-domain-transfer-lock",
+   "description": "This operation sets the transfer lock on the domain (specifically the clientTransferProhibited status) to prevent domain transfers.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-contact-reachability-status",
+   "description": "For operations that require confirmation that the email address for the registrant contact is valid, such as registering a new domain, this operation returns information about whether the registrant contact has responded.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-domain-detail",
+   "description": "This operation returns detailed information about a specified domain that is associated with the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain-suggestions",
+   "description": "The GetDomainSuggestions operation returns a list of suggested domain names.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-only-available"
+    },
+    {
+     "name": "--only-available",
+     "priority": 75
+    },
+    {
+     "name": "--suggestion-count",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-operation-detail",
+   "description": "This operation returns the current status of an operation that is not completed.",
+   "options": [
+    {
+     "name": "--operation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-domains",
+   "description": "This operation returns all the domain names registered with Amazon Route 53 for the current Amazon Web Services account if no filtering conditions are used.",
+   "options": [
+    {
+     "name": "--filter-conditions",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-condition",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-operations",
+   "description": "Returns information about all of the operations that return an operation ID and that have ever been performed on domains that were registered by the current account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "SubmittedDate"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    },
+    {
+     "name": "--submitted-since",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-prices",
+   "description": "Lists the following prices for either all the TLDs supported by Route 53, or the specified TLD: Registration Transfer Owner change Domain renewal Domain restoration",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tld",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-domain",
+   "description": "This operation returns all of the tags that are associated with the specified domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "push-domain",
+   "description": "Moves a domain from Amazon Web Services to another registrar.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-domain",
+   "description": "This operation registers a domain.",
+   "options": [
+    {
+     "name": "--admin-contact",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-renew"
+    },
+    {
+     "name": "--billing-contact",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--duration-in-years",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idn-lang-code",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-renew"
+    },
+    {
+     "name": "--no-privacy-protect-admin-contact"
+    },
+    {
+     "name": "--no-privacy-protect-billing-contact"
+    },
+    {
+     "name": "--no-privacy-protect-registrant-contact"
+    },
+    {
+     "name": "--no-privacy-protect-tech-contact"
+    },
+    {
+     "name": "--privacy-protect-admin-contact"
+    },
+    {
+     "name": "--privacy-protect-billing-contact"
+    },
+    {
+     "name": "--privacy-protect-registrant-contact"
+    },
+    {
+     "name": "--privacy-protect-tech-contact"
+    },
+    {
+     "name": "--registrant-contact",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tech-contact",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-domain-transfer-from-another-aws-account",
+   "description": "Rejects the transfer of a domain from another Amazon Web Services account to the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "renew-domain",
+   "description": "This operation renews a domain for the specified number of years.",
+   "options": [
+    {
+     "name": "--current-expiry-year",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--duration-in-years",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "resend-contact-reachability-email",
+   "description": "For operations that require confirmation that the email address for the registrant contact is valid, such as registering a new domain, this operation resends the confirmation email to the current email address for the registrant contact.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "resend-operation-authorization",
+   "description": "Resend the form of authorization email for this operation.",
+   "options": [
+    {
+     "name": "--operation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "retrieve-domain-auth-code",
+   "description": "This operation returns the authorization code for the domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "transfer-domain",
+   "description": "Transfers a domain from another registrar to Amazon Route 53.",
+   "options": [
+    {
+     "name": "--admin-contact",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-code",
+     "args": {}
+    },
+    {
+     "name": "--auto-renew"
+    },
+    {
+     "name": "--billing-contact",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--duration-in-years",
+     "args": {}
+    },
+    {
+     "name": "--idn-lang-code",
+     "args": {}
+    },
+    {
+     "name": "--nameservers",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-renew"
+    },
+    {
+     "name": "--no-privacy-protect-admin-contact"
+    },
+    {
+     "name": "--no-privacy-protect-billing-contact"
+    },
+    {
+     "name": "--no-privacy-protect-registrant-contact"
+    },
+    {
+     "name": "--no-privacy-protect-tech-contact"
+    },
+    {
+     "name": "--privacy-protect-admin-contact"
+    },
+    {
+     "name": "--privacy-protect-billing-contact"
+    },
+    {
+     "name": "--privacy-protect-registrant-contact"
+    },
+    {
+     "name": "--privacy-protect-tech-contact"
+    },
+    {
+     "name": "--registrant-contact",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tech-contact",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "transfer-domain-to-another-aws-account",
+   "description": "Transfers a domain from the current Amazon Web Services account to another Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-domain-contact",
+   "description": "This operation updates the contact information for a particular domain.",
+   "options": [
+    {
+     "name": "--admin-contact",
+     "args": {}
+    },
+    {
+     "name": "--billing-contact",
+     "args": {}
+    },
+    {
+     "name": "--consent",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registrant-contact",
+     "args": {}
+    },
+    {
+     "name": "--tech-contact",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-domain-contact-privacy",
+   "description": "This operation updates the specified domain contact's privacy setting.",
+   "options": [
+    {
+     "name": "--admin-privacy"
+    },
+    {
+     "name": "--billing-privacy"
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-admin-privacy"
+    },
+    {
+     "name": "--no-billing-privacy"
+    },
+    {
+     "name": "--no-registrant-privacy"
+    },
+    {
+     "name": "--no-tech-privacy"
+    },
+    {
+     "name": "--registrant-privacy"
+    },
+    {
+     "name": "--tech-privacy"
+    }
+   ]
+  },
+  {
+   "name": "update-domain-nameservers",
+   "description": "This operation replaces the current set of name servers for the domain with the specified set of name servers.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fi-auth-key",
+     "args": {}
+    },
+    {
+     "name": "--nameservers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-tags-for-domain",
+   "description": "This operation adds or updates tags for a specified domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags-to-update",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "view-billing",
+   "description": "Returns all the domain-related billing records for the current Amazon Web Services account for a specified period",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

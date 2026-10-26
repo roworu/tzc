@@ -1,0 +1,588 @@
+{
+ "name": "security-ir",
+ "description": "This guide documents the action and response elements for use of the service.",
+ "subcommands": [
+  {
+   "name": "batch-get-member-account-details",
+   "description": "Provides information on whether the supplied account IDs are associated with a membership.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--membership-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-membership",
+   "description": "Cancels an existing membership.",
+   "options": [
+    {
+     "name": "--membership-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "close-case",
+   "description": "Closes an existing case.",
+   "options": [
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-case",
+   "description": "Creates a new case.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engagement-type",
+     "args": {
+      "suggestions": [
+       "Security Incident",
+       "Investigation"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--impacted-accounts",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--impacted-aws-regions",
+     "args": {}
+    },
+    {
+     "name": "--impacted-services",
+     "args": {}
+    },
+    {
+     "name": "--reported-incident-start-date",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resolver-type",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Self"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--threat-actor-ip-addresses",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--watchers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-case-comment",
+   "description": "Adds a comment to an existing case.",
+   "options": [
+    {
+     "name": "--body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-membership",
+   "description": "Creates a new membership.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cover-entire-organization"
+    },
+    {
+     "name": "--incident-response-team",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--membership-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-cover-entire-organization"
+    },
+    {
+     "name": "--opt-in-features",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-case",
+   "description": "Returns the attributes of a case.",
+   "options": [
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-case-attachment-download-url",
+   "description": "Returns a Pre-Signed URL for uploading attachments into a case.",
+   "options": [
+    {
+     "name": "--attachment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-case-attachment-upload-url",
+   "description": "Uploads an attachment to a case.",
+   "options": [
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--content-length",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-membership",
+   "description": "Returns the attributes of a membership.",
+   "options": [
+    {
+     "name": "--membership-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-case-edits",
+   "description": "Views the case history for edits made to a designated case.",
+   "options": [
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cases",
+   "description": "Lists all cases the requester has access to.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-comments",
+   "description": "Returns comments for a designated case.",
+   "options": [
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-investigations",
+   "description": "Investigation performed by an agent for a security incident...",
+   "options": [
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-memberships",
+   "description": "Returns the memberships that the calling principal can access.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns currently configured tags on a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-feedback",
+   "description": "Send feedback based on response investigation action",
+   "options": [
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--result-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--usefulness",
+     "args": {
+      "suggestions": [
+       "USEFUL",
+       "NOT_USEFUL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds a tag(s) to a designated resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag(s) from a designate resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-case",
+   "description": "Updates an existing case.",
+   "options": [
+    {
+     "name": "--actual-incident-start-date",
+     "args": {}
+    },
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--case-metadata",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engagement-type",
+     "args": {
+      "suggestions": [
+       "Security Incident",
+       "Investigation"
+      ]
+     }
+    },
+    {
+     "name": "--impacted-accounts-to-add",
+     "args": {}
+    },
+    {
+     "name": "--impacted-accounts-to-delete",
+     "args": {}
+    },
+    {
+     "name": "--impacted-aws-regions-to-add",
+     "args": {}
+    },
+    {
+     "name": "--impacted-aws-regions-to-delete",
+     "args": {}
+    },
+    {
+     "name": "--impacted-services-to-add",
+     "args": {}
+    },
+    {
+     "name": "--impacted-services-to-delete",
+     "args": {}
+    },
+    {
+     "name": "--reported-incident-start-date",
+     "args": {}
+    },
+    {
+     "name": "--threat-actor-ip-addresses-to-add",
+     "args": {}
+    },
+    {
+     "name": "--threat-actor-ip-addresses-to-delete",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {}
+    },
+    {
+     "name": "--watchers-to-add",
+     "args": {}
+    },
+    {
+     "name": "--watchers-to-delete",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-case-comment",
+   "description": "Updates an existing case comment.",
+   "options": [
+    {
+     "name": "--body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--comment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-case-status",
+   "description": "Updates the state transitions for a designated cases.",
+   "options": [
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--case-status",
+     "args": {
+      "suggestions": [
+       "Submitted",
+       "Detection and Analysis",
+       "Containment, Eradication and Recovery",
+       "Post-incident Activities"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-membership",
+   "description": "Updates membership configuration.",
+   "options": [
+    {
+     "name": "--incident-response-team",
+     "args": {}
+    },
+    {
+     "name": "--membership-accounts-configurations-update",
+     "args": {}
+    },
+    {
+     "name": "--membership-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--membership-name",
+     "args": {}
+    },
+    {
+     "name": "--no-undo-membership-cancellation"
+    },
+    {
+     "name": "--opt-in-features",
+     "args": {}
+    },
+    {
+     "name": "--undo-membership-cancellation"
+    }
+   ]
+  },
+  {
+   "name": "update-resolver-type",
+   "description": "Updates the resolver type for a case.",
+   "options": [
+    {
+     "name": "--case-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resolver-type",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "Self"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

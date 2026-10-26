@@ -1,0 +1,2259 @@
+{
+ "name": "proton",
+ "description": "This is the Proton Service API Reference.",
+ "subcommands": [
+  {
+   "name": "accept-environment-account-connection",
+   "description": "In a management account, an environment account connection request is accepted.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-component-deployment",
+   "description": "Attempts to cancel a component deployment (for a component that is in the IN_PROGRESS deployment status).",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-environment-deployment",
+   "description": "Attempts to cancel an environment deployment on an UpdateEnvironment action, if the deployment is IN_PROGRESS.",
+   "options": [
+    {
+     "name": "--environment-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-service-instance-deployment",
+   "description": "Attempts to cancel a service instance deployment on an UpdateServiceInstance action, if the deployment is IN_PROGRESS.",
+   "options": [
+    {
+     "name": "--service-instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-service-pipeline-deployment",
+   "description": "Attempts to cancel a service pipeline deployment on an UpdateServicePipeline action, if the deployment is IN_PROGRESS.",
+   "options": [
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-component",
+   "description": "Create an Proton component.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--manifest",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-instance-name",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {}
+    },
+    {
+     "name": "--service-spec",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-file",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment",
+   "description": "Deploy a new environment.",
+   "options": [
+    {
+     "name": "--codebuild-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--component-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-account-connection-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--proton-service-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--provisioning-repository",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-major-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-minor-version",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment-account-connection",
+   "description": "Create an environment account connection in an environment account so that environment infrastructure resources can be provisioned in the environment account from a management account.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--codebuild-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--component-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--management-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-environment-template",
+   "description": "Create an environment template for Proton.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioning",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-environment-template-version",
+   "description": "Create a new major or minor version of an environment template.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--major-version",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-repository",
+   "description": "Create and register a link to a repository.",
+   "options": [
+    {
+     "name": "--connection-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITHUB_ENTERPRISE",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service",
+   "description": "Create an Proton service.",
+   "options": [
+    {
+     "name": "--branch-name",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-connection-arn",
+     "args": {}
+    },
+    {
+     "name": "--repository-id",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-major-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-minor-version",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-service-instance",
+   "description": "Create a service instance.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-major-version",
+     "args": {}
+    },
+    {
+     "name": "--template-minor-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service-sync-config",
+   "description": "Create the Proton Ops configuration file.",
+   "options": [
+    {
+     "name": "--branch",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITHUB_ENTERPRISE",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-service-template",
+   "description": "Create a service template.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-provisioning",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service-template-version",
+   "description": "Create a new major or minor version of a service template.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--compatible-environment-templates",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--major-version",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--supported-component-sources",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-template-sync-config",
+   "description": "Set up a template to create new template versions automatically by tracking a linked repository.",
+   "options": [
+    {
+     "name": "--branch",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITHUB_ENTERPRISE",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-type",
+     "args": {
+      "suggestions": [
+       "ENVIRONMENT",
+       "SERVICE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-component",
+   "description": "Delete an Proton component resource.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-deployment",
+   "description": "Delete the deployment.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment",
+   "description": "Delete an environment.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-account-connection",
+   "description": "In an environment account, delete an environment account connection.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-template",
+   "description": "If no other major or minor versions of an environment template exist, delete the environment template.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-template-version",
+   "description": "If no other minor versions of an environment template exist, delete a major version of the environment template if it's not the Recommended version.",
+   "options": [
+    {
+     "name": "--major-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minor-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-repository",
+   "description": "De-register and unlink your repository.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITHUB_ENTERPRISE",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service",
+   "description": "Delete a service, with its instances and pipeline.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-sync-config",
+   "description": "Delete the Proton Ops file.",
+   "options": [
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-template",
+   "description": "If no other major or minor versions of the service template exist, delete the service template.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-template-version",
+   "description": "If no other minor versions of a service template exist, delete a major version of the service template if it's not the Recommended version.",
+   "options": [
+    {
+     "name": "--major-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minor-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-template-sync-config",
+   "description": "Delete a template sync configuration.",
+   "options": [
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-type",
+     "args": {
+      "suggestions": [
+       "ENVIRONMENT",
+       "SERVICE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-settings",
+   "description": "Get detail data for Proton account-wide settings."
+  },
+  {
+   "name": "get-component",
+   "description": "Get detailed data for a component.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment",
+   "description": "Get detailed data for a deployment.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-instance-name",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-environment",
+   "description": "Get detailed data for an environment.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment-account-connection",
+   "description": "In an environment account, get the detailed data for an environment account connection.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment-template",
+   "description": "Get detailed data for an environment template.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment-template-version",
+   "description": "Get detailed data for a major or minor version of an environment template.",
+   "options": [
+    {
+     "name": "--major-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minor-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-repository",
+   "description": "Get detail data for a linked repository.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITHUB_ENTERPRISE",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-repository-sync-status",
+   "description": "Get the sync status of a repository used for Proton template sync.",
+   "options": [
+    {
+     "name": "--branch",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITHUB_ENTERPRISE",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "TEMPLATE_SYNC",
+       "SERVICE_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resources-summary",
+   "description": "Get counts of Proton resources."
+  },
+  {
+   "name": "get-service",
+   "description": "Get detailed data for a service.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-instance",
+   "description": "Get detailed data for a service instance.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-instance-sync-status",
+   "description": "Get the status of the synced service instance.",
+   "options": [
+    {
+     "name": "--service-instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-sync-blocker-summary",
+   "description": "Get detailed data for the service sync blocker summary.",
+   "options": [
+    {
+     "name": "--service-instance-name",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-sync-config",
+   "description": "Get detailed information for the service sync configuration.",
+   "options": [
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-template",
+   "description": "Get detailed data for a service template.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-template-version",
+   "description": "Get detailed data for a major or minor version of a service template.",
+   "options": [
+    {
+     "name": "--major-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minor-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-template-sync-config",
+   "description": "Get detail data for a template sync configuration.",
+   "options": [
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-type",
+     "args": {
+      "suggestions": [
+       "ENVIRONMENT",
+       "SERVICE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-template-sync-status",
+   "description": "Get the status of a template sync.",
+   "options": [
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-type",
+     "args": {
+      "suggestions": [
+       "ENVIRONMENT",
+       "SERVICE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--template-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-component-outputs",
+   "description": "Get a list of component Infrastructure as Code (IaC) outputs.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-component-provisioned-resources",
+   "description": "List provisioned resources for a component with details.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-components",
+   "description": "List components with summary data.",
+   "options": [
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-instance-name",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployments",
+   "description": "List deployments.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-instance-name",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-account-connections",
+   "description": "View a list of environment account connections.",
+   "options": [
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--requested-by",
+     "args": {
+      "suggestions": [
+       "MANAGEMENT_ACCOUNT",
+       "ENVIRONMENT_ACCOUNT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--statuses",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-outputs",
+   "description": "List the infrastructure as code outputs for your environment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-provisioned-resources",
+   "description": "List the provisioned resources for your environment.",
+   "options": [
+    {
+     "name": "--environment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-template-versions",
+   "description": "List major or minor versions of an environment template with detail data.",
+   "options": [
+    {
+     "name": "--major-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-environment-templates",
+   "description": "List environment templates.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environments",
+   "description": "List environments with detail data summaries.",
+   "options": [
+    {
+     "name": "--environment-templates",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-repositories",
+   "description": "List linked repositories with detail data.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-repository-sync-definitions",
+   "description": "List repository sync definitions with detail data.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITHUB_ENTERPRISE",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--sync-type",
+     "args": {
+      "suggestions": [
+       "TEMPLATE_SYNC",
+       "SERVICE_SYNC"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-service-instance-outputs",
+   "description": "Get a list service of instance Infrastructure as Code (IaC) outputs.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--service-instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-instance-provisioned-resources",
+   "description": "List provisioned resources for a service instance with details.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--service-instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-instances",
+   "description": "List service instances with summary data.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "name",
+       "deploymentStatus",
+       "templateName",
+       "serviceName",
+       "environmentName",
+       "lastDeploymentAttemptedAt",
+       "createdAt"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-pipeline-outputs",
+   "description": "Get a list of service pipeline Infrastructure as Code (IaC) outputs.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-pipeline-provisioned-resources",
+   "description": "List provisioned resources for a service and pipeline with details.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-template-versions",
+   "description": "List major or minor versions of a service template with detail data.",
+   "options": [
+    {
+     "name": "--major-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-service-templates",
+   "description": "List service templates with detail data.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "List services with summaries of detail data.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List tags for a resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "notify-resource-deployment-status-change",
+   "description": "Notify Proton of status changes to a provisioned resource when you use self-managed provisioning.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--outputs",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "FAILED",
+       "SUCCEEDED"
+      ]
+     }
+    },
+    {
+     "name": "--status-message",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reject-environment-account-connection",
+   "description": "In a management account, reject an environment account connection from another environment account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tag a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove a customer tag from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-account-settings",
+   "description": "Update Proton settings that are used for multiple services in the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--delete-pipeline-provisioning-repository"
+    },
+    {
+     "name": "--no-delete-pipeline-provisioning-repository"
+    },
+    {
+     "name": "--pipeline-codebuild-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-provisioning-repository",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-service-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-component",
+   "description": "Update a component.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--deployment-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "CURRENT_VERSION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-instance-name",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {}
+    },
+    {
+     "name": "--service-spec",
+     "args": {}
+    },
+    {
+     "name": "--template-file",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-environment",
+   "description": "Update an environment.",
+   "options": [
+    {
+     "name": "--codebuild-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--component-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--deployment-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "CURRENT_VERSION",
+       "MINOR_VERSION",
+       "MAJOR_VERSION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-account-connection-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--proton-service-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--provisioning-repository",
+     "args": {}
+    },
+    {
+     "name": "--spec",
+     "args": {}
+    },
+    {
+     "name": "--template-major-version",
+     "args": {}
+    },
+    {
+     "name": "--template-minor-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-environment-account-connection",
+   "description": "In an environment account, update an environment account connection to use a new IAM role.",
+   "options": [
+    {
+     "name": "--codebuild-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--component-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-environment-template",
+   "description": "Update an environment template.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-environment-template-version",
+   "description": "Update a major or minor version of an environment template.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--major-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minor-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "REGISTRATION_IN_PROGRESS",
+       "REGISTRATION_FAILED",
+       "DRAFT",
+       "PUBLISHED"
+      ]
+     }
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service",
+   "description": "Edit a service description or use a spec to add and delete service instances.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--spec",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-service-instance",
+   "description": "Update a service instance.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--deployment-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "CURRENT_VERSION",
+       "MINOR_VERSION",
+       "MAJOR_VERSION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--spec",
+     "args": {}
+    },
+    {
+     "name": "--template-major-version",
+     "args": {}
+    },
+    {
+     "name": "--template-minor-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-service-pipeline",
+   "description": "Update the service pipeline.",
+   "options": [
+    {
+     "name": "--deployment-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "CURRENT_VERSION",
+       "MINOR_VERSION",
+       "MAJOR_VERSION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--spec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-major-version",
+     "args": {}
+    },
+    {
+     "name": "--template-minor-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-service-sync-blocker",
+   "description": "Update the service sync blocker by resolving it.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resolved-reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-sync-config",
+   "description": "Update the Proton Ops config file.",
+   "options": [
+    {
+     "name": "--branch",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITHUB_ENTERPRISE",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-template",
+   "description": "Update a service template.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-template-version",
+   "description": "Update a major or minor version of a service template.",
+   "options": [
+    {
+     "name": "--compatible-environment-templates",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--major-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minor-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "REGISTRATION_IN_PROGRESS",
+       "REGISTRATION_FAILED",
+       "DRAFT",
+       "PUBLISHED"
+      ]
+     }
+    },
+    {
+     "name": "--supported-component-sources",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-template-sync-config",
+   "description": "Update template sync configuration parameters, except for the templateName and templateType.",
+   "options": [
+    {
+     "name": "--branch",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repository-provider",
+     "args": {
+      "suggestions": [
+       "GITHUB",
+       "GITHUB_ENTERPRISE",
+       "BITBUCKET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--subdirectory",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-type",
+     "args": {
+      "suggestions": [
+       "ENVIRONMENT",
+       "SERVICE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "component-deleted",
+     "description": "Wait until a Component is deleted.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "component-deployed",
+     "description": "Wait until a Component is deployed.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "environment-deployed",
+     "description": "Wait until an Environment is deployed.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "environment-template-version-registered",
+     "description": "Wait until an EnvironmentTemplateVersion is registered.",
+     "options": [
+      {
+       "name": "--major-version",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--minor-version",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--template-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "service-created",
+     "description": "Wait until an Service has deployed its instances and possibly pipeline.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "service-deleted",
+     "description": "Wait until a Service, its instances, and possibly pipeline have been deleted after DeleteService is invoked It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "service-instance-deployed",
+     "description": "Wait until a ServiceInstance is deployed.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--service-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "service-pipeline-deployed",
+     "description": "Wait until an ServicePipeline is deployed.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "service-template-version-registered",
+     "description": "Wait until a ServiceTemplateVersion is registered.",
+     "options": [
+      {
+       "name": "--major-version",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--minor-version",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--template-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "service-updated",
+     "description": "Wait until a Service, its instances, and possibly pipeline have been deployed after UpdateService is invoked It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

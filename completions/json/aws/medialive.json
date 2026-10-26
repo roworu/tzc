@@ -1,0 +1,3052 @@
+{
+ "name": "medialive",
+ "description": "API for AWS Elemental MediaLive",
+ "subcommands": [
+  {
+   "name": "accept-input-device-transfer",
+   "description": "Accept an incoming input device transfer.",
+   "options": [
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete",
+   "description": "Starts delete of resources.",
+   "options": [
+    {
+     "name": "--channel-ids",
+     "args": {}
+    },
+    {
+     "name": "--input-ids",
+     "args": {}
+    },
+    {
+     "name": "--input-security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--multiplex-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-start",
+   "description": "Starts existing resources",
+   "options": [
+    {
+     "name": "--channel-ids",
+     "args": {}
+    },
+    {
+     "name": "--multiplex-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-stop",
+   "description": "Stops running resources",
+   "options": [
+    {
+     "name": "--channel-ids",
+     "args": {}
+    },
+    {
+     "name": "--multiplex-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-update-schedule",
+   "description": "Update a channel schedule",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--creates",
+     "args": {}
+    },
+    {
+     "name": "--deletes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-input-device-transfer",
+   "description": "Cancel an input device transfer that you have requested.",
+   "options": [
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "claim-device",
+   "description": "Send a request to claim an AWS Elemental device that you have purchased from a third-party vendor.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-channel",
+   "description": "Creates a new channel",
+   "options": [
+    {
+     "name": "--anywhere-settings",
+     "args": {}
+    },
+    {
+     "name": "--cdi-input-specification",
+     "args": {}
+    },
+    {
+     "name": "--channel-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "SINGLE_PIPELINE"
+      ]
+     }
+    },
+    {
+     "name": "--channel-engine-version",
+     "args": {}
+    },
+    {
+     "name": "--channel-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--destinations",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encoder-settings",
+     "args": {}
+    },
+    {
+     "name": "--inference-settings",
+     "args": {}
+    },
+    {
+     "name": "--input-attachments",
+     "args": {}
+    },
+    {
+     "name": "--input-specification",
+     "args": {}
+    },
+    {
+     "name": "--linked-channel-settings",
+     "args": {}
+    },
+    {
+     "name": "--log-level",
+     "args": {
+      "suggestions": [
+       "ERROR",
+       "WARNING",
+       "INFO",
+       "DEBUG",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--maintenance",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--reserved",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-channel-placement-group",
+   "description": "Create a ChannelPlacementGroup in the specified Cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--nodes",
+     "args": {}
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cloud-watch-alarm-template",
+   "description": "Creates a cloudwatch alarm template to dynamically generate cloudwatch metric alarms on targeted resource types.",
+   "options": [
+    {
+     "name": "--comparison-operator",
+     "args": {
+      "suggestions": [
+       "GreaterThanOrEqualToThreshold",
+       "GreaterThanThreshold",
+       "LessThanThreshold",
+       "LessThanOrEqualToThreshold"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--datapoints-to-alarm",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-periods",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--statistic",
+     "args": {
+      "suggestions": [
+       "SampleCount",
+       "Average",
+       "Sum",
+       "Minimum",
+       "Maximum"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-resource-type",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT_DISTRIBUTION",
+       "MEDIALIVE_MULTIPLEX",
+       "MEDIALIVE_CHANNEL",
+       "MEDIALIVE_INPUT_DEVICE",
+       "MEDIAPACKAGE_CHANNEL",
+       "MEDIAPACKAGE_ORIGIN_ENDPOINT",
+       "MEDIACONNECT_FLOW",
+       "S3_BUCKET",
+       "MEDIATAILOR_PLAYBACK_CONFIGURATION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--threshold",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--treat-missing-data",
+     "args": {
+      "suggestions": [
+       "notBreaching",
+       "breaching",
+       "ignore",
+       "missing"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cloud-watch-alarm-template-group",
+   "description": "Creates a cloudwatch alarm template group to group your cloudwatch alarm templates and to attach to signal maps for dynamically creating alarms.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Create a new Cluster.",
+   "options": [
+    {
+     "name": "--cluster-type",
+     "args": {
+      "suggestions": [
+       "ON_PREMISES"
+      ]
+     }
+    },
+    {
+     "name": "--instance-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--network-settings",
+     "args": {}
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-bridge-rule-template",
+   "description": "Creates an eventbridge rule template to monitor events and send notifications to your targeted resources.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-targets",
+     "args": {}
+    },
+    {
+     "name": "--event-type",
+     "args": {
+      "suggestions": [
+       "MEDIALIVE_MULTIPLEX_ALERT",
+       "MEDIALIVE_MULTIPLEX_STATE_CHANGE",
+       "MEDIALIVE_CHANNEL_ALERT",
+       "MEDIALIVE_CHANNEL_INPUT_CHANGE",
+       "MEDIALIVE_CHANNEL_STATE_CHANGE",
+       "MEDIAPACKAGE_INPUT_NOTIFICATION",
+       "MEDIAPACKAGE_KEY_PROVIDER_NOTIFICATION",
+       "MEDIAPACKAGE_HARVEST_JOB_NOTIFICATION",
+       "SIGNAL_MAP_ACTIVE_ALARM",
+       "MEDIACONNECT_ALERT",
+       "MEDIACONNECT_SOURCE_HEALTH",
+       "MEDIACONNECT_OUTPUT_HEALTH",
+       "MEDIACONNECT_FLOW_STATUS_CHANGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-bridge-rule-template-group",
+   "description": "Creates an eventbridge rule template group to group your eventbridge rule templates and to attach to signal maps for dynamically creating notification rules.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-input",
+   "description": "Create an input",
+   "options": [
+    {
+     "name": "--destinations",
+     "args": {}
+    },
+    {
+     "name": "--input-devices",
+     "args": {}
+    },
+    {
+     "name": "--input-network-location",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "ON_PREMISES"
+      ]
+     }
+    },
+    {
+     "name": "--input-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--media-connect-flows",
+     "args": {}
+    },
+    {
+     "name": "--multicast-settings",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--router-settings",
+     "args": {}
+    },
+    {
+     "name": "--sdi-sources",
+     "args": {}
+    },
+    {
+     "name": "--smpte2110-receiver-group-settings",
+     "args": {}
+    },
+    {
+     "name": "--sources",
+     "args": {}
+    },
+    {
+     "name": "--srt-settings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "UDP_PUSH",
+       "RTP_PUSH",
+       "RTMP_PUSH",
+       "RTMP_PULL",
+       "URL_PULL",
+       "MP4_FILE",
+       "MEDIACONNECT",
+       "INPUT_DEVICE",
+       "AWS_CDI",
+       "TS_FILE",
+       "SRT_CALLER",
+       "MULTICAST",
+       "SMPTE_2110_RECEIVER_GROUP",
+       "SDI",
+       "MEDIACONNECT_ROUTER",
+       "SRT_LISTENER"
+      ]
+     }
+    },
+    {
+     "name": "--vpc",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-input-security-group",
+   "description": "Creates a Input Security Group",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--whitelist-rules",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-multiplex",
+   "description": "Create a new multiplex.",
+   "options": [
+    {
+     "name": "--availability-zones",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--multiplex-settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-multiplex-program",
+   "description": "Create a new program in the multiplex.",
+   "options": [
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--multiplex-program-settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-network",
+   "description": "Create as many Networks as you need.",
+   "options": [
+    {
+     "name": "--ip-pools",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--routes",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-node",
+   "description": "Create a Node in the specified Cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--node-interface-mappings",
+     "args": {}
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "BACKUP",
+       "ACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-node-registration-script",
+   "description": "Create the Register Node script for all the nodes intended for a specific Cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--node-interface-mappings",
+     "args": {}
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "BACKUP",
+       "ACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-partner-input",
+   "description": "Create a partner input",
+   "options": [
+    {
+     "name": "--input-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-sdi-source",
+   "description": "Create an SdiSource for each video source that uses the SDI protocol.",
+   "options": [
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "QUADRANT",
+       "INTERLEAVE"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SINGLE",
+       "QUAD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-signal-map",
+   "description": "Initiates the creation of a new signal map.",
+   "options": [
+    {
+     "name": "--cloud-watch-alarm-template-group-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--discovery-entry-point-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-bridge-rule-template-group-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-tags",
+   "description": "Create tags for a resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-channel",
+   "description": "Starts deletion of channel.",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-channel-placement-group",
+   "description": "Delete the specified ChannelPlacementGroup that exists in the specified Cluster.",
+   "options": [
+    {
+     "name": "--channel-placement-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cloud-watch-alarm-template",
+   "description": "Deletes a cloudwatch alarm template.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cloud-watch-alarm-template-group",
+   "description": "Deletes a cloudwatch alarm template group.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Delete a Cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-bridge-rule-template",
+   "description": "Deletes an eventbridge rule template.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-bridge-rule-template-group",
+   "description": "Deletes an eventbridge rule template group.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-input",
+   "description": "Deletes the input end point",
+   "options": [
+    {
+     "name": "--input-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-input-security-group",
+   "description": "Deletes an Input Security Group",
+   "options": [
+    {
+     "name": "--input-security-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-multiplex",
+   "description": "Delete a multiplex.",
+   "options": [
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-multiplex-program",
+   "description": "Delete a program from a multiplex.",
+   "options": [
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-network",
+   "description": "Delete a Network.",
+   "options": [
+    {
+     "name": "--network-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-node",
+   "description": "Delete a Node.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-reservation",
+   "description": "Delete an expired reservation.",
+   "options": [
+    {
+     "name": "--reservation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-schedule",
+   "description": "Delete all schedule actions on a channel.",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-sdi-source",
+   "description": "Delete an SdiSource.",
+   "options": [
+    {
+     "name": "--sdi-source-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-signal-map",
+   "description": "Deletes the specified signal map.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tags",
+   "description": "Removes tags for a resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-account-configuration",
+   "description": "Describe account configuration"
+  },
+  {
+   "name": "describe-channel",
+   "description": "Gets details about a channel",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-channel-placement-group",
+   "description": "Get details about a ChannelPlacementGroup.",
+   "options": [
+    {
+     "name": "--channel-placement-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster",
+   "description": "Get details about a Cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-input",
+   "description": "Produces details about an input",
+   "options": [
+    {
+     "name": "--input-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-input-device",
+   "description": "Gets the details for the input device",
+   "options": [
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-input-device-thumbnail",
+   "description": "Get the latest thumbnail data for the input device.",
+   "options": [
+    {
+     "name": "--accept",
+     "args": {
+      "suggestions": [
+       "image/jpeg"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-input-security-group",
+   "description": "Produces a summary of an Input Security Group",
+   "options": [
+    {
+     "name": "--input-security-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-multiplex",
+   "description": "Gets details about a multiplex.",
+   "options": [
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-multiplex-program",
+   "description": "Get the details for a program in a multiplex.",
+   "options": [
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-network",
+   "description": "Get details about a Network.",
+   "options": [
+    {
+     "name": "--network-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-node",
+   "description": "Get details about a Node in the specified Cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-offering",
+   "description": "Get details for an offering.",
+   "options": [
+    {
+     "name": "--offering-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-reservation",
+   "description": "Get details for a reservation.",
+   "options": [
+    {
+     "name": "--reservation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-schedule",
+   "description": "Get a channel schedule",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-sdi-source",
+   "description": "Gets details about a SdiSource.",
+   "options": [
+    {
+     "name": "--sdi-source-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-thumbnails",
+   "description": "Describe the latest thumbnails data.",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thumbnail-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cloud-watch-alarm-template",
+   "description": "Retrieves the specified cloudwatch alarm template.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cloud-watch-alarm-template-group",
+   "description": "Retrieves the specified cloudwatch alarm template group.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event-bridge-rule-template",
+   "description": "Retrieves the specified eventbridge rule template.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event-bridge-rule-template-group",
+   "description": "Retrieves the specified eventbridge rule template group.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-signal-map",
+   "description": "Retrieves the specified signal map.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-alerts",
+   "description": "List the alerts for a channel with optional filtering based on alert state.",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-channel-placement-groups",
+   "description": "Retrieve the list of ChannelPlacementGroups in the specified Cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-channels",
+   "description": "Produces list of channels that have been created",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cloud-watch-alarm-template-groups",
+   "description": "Lists cloudwatch alarm template groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {}
+    },
+    {
+     "name": "--signal-map-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cloud-watch-alarm-templates",
+   "description": "Lists cloudwatch alarm templates.",
+   "options": [
+    {
+     "name": "--group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {}
+    },
+    {
+     "name": "--signal-map-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cluster-alerts",
+   "description": "List the alerts for a cluster with optional filtering based on alert state.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-clusters",
+   "description": "Retrieve the list of Clusters.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-bridge-rule-template-groups",
+   "description": "Lists eventbridge rule template groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--signal-map-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-bridge-rule-templates",
+   "description": "Lists eventbridge rule templates.",
+   "options": [
+    {
+     "name": "--group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--signal-map-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-input-device-transfers",
+   "description": "List input devices that are currently being transferred.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--transfer-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-input-devices",
+   "description": "List input devices",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-input-security-groups",
+   "description": "Produces a list of Input Security Groups for an account",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-inputs",
+   "description": "Produces list of inputs that have been created",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-multiplex-alerts",
+   "description": "List the alerts for a multiplex with optional filtering based on alert state.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-multiplex-programs",
+   "description": "List the programs that currently exist for a specific multiplex.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-multiplexes",
+   "description": "Retrieve a list of the existing multiplexes.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-networks",
+   "description": "Retrieve the list of Networks.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-nodes",
+   "description": "Retrieve the list of Nodes.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-offerings",
+   "description": "List offerings available for purchase.",
+   "options": [
+    {
+     "name": "--channel-class",
+     "args": {}
+    },
+    {
+     "name": "--channel-configuration",
+     "args": {}
+    },
+    {
+     "name": "--codec",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--maximum-bitrate",
+     "args": {}
+    },
+    {
+     "name": "--maximum-framerate",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resolution",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--special-feature",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--video-quality",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-reservations",
+   "description": "List purchased reservations.",
+   "options": [
+    {
+     "name": "--channel-class",
+     "args": {}
+    },
+    {
+     "name": "--codec",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--maximum-bitrate",
+     "args": {}
+    },
+    {
+     "name": "--maximum-framerate",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resolution",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--special-feature",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--video-quality",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sdi-sources",
+   "description": "List all the SdiSources in the AWS account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-signal-maps",
+   "description": "Lists signal maps.",
+   "options": [
+    {
+     "name": "--cloud-watch-alarm-template-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--event-bridge-rule-template-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Produces list of tags that have been created for a resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-versions",
+   "description": "Retrieves an array of all the encoder engine versions that are available in this AWS account."
+  },
+  {
+   "name": "purchase-offering",
+   "description": "Purchase an offering and create a reservation.",
+   "options": [
+    {
+     "name": "--count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--offering-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--renewal-settings",
+     "args": {}
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--start",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reboot-input-device",
+   "description": "Send a reboot command to the specified input device.",
+   "options": [
+    {
+     "name": "--force",
+     "args": {
+      "suggestions": [
+       "NO",
+       "YES"
+      ]
+     }
+    },
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-input-device-transfer",
+   "description": "Reject the transfer of the specified input device to your AWS account.",
+   "options": [
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restart-channel-pipelines",
+   "description": "Restart pipelines in one channel that is currently running.",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-channel",
+   "description": "Starts an existing channel",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-delete-monitor-deployment",
+   "description": "Initiates a deployment to delete the monitor of the specified signal map.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-input-device",
+   "description": "Start an input device that is attached to a MediaConnect flow.",
+   "options": [
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-input-device-maintenance-window",
+   "description": "Start a maintenance window for the specified input device.",
+   "options": [
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-monitor-deployment",
+   "description": "Initiates a deployment to deploy the latest monitor of the specified signal map.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "start-multiplex",
+   "description": "Start (run) the multiplex.",
+   "options": [
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-update-signal-map",
+   "description": "Initiates an update for the specified signal map.",
+   "options": [
+    {
+     "name": "--cloud-watch-alarm-template-group-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--discovery-entry-point-arn",
+     "args": {}
+    },
+    {
+     "name": "--event-bridge-rule-template-group-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--force-rediscovery"
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-force-rediscovery"
+    }
+   ]
+  },
+  {
+   "name": "stop-channel",
+   "description": "Stops a running channel",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-input-device",
+   "description": "Stop an input device that is attached to a MediaConnect flow.",
+   "options": [
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-multiplex",
+   "description": "Stops a running multiplex.",
+   "options": [
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "transfer-input-device",
+   "description": "Start an input device transfer to another AWS account.",
+   "options": [
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-customer-id",
+     "args": {}
+    },
+    {
+     "name": "--target-region",
+     "args": {}
+    },
+    {
+     "name": "--transfer-message",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-account-configuration",
+   "description": "Update account configuration",
+   "options": [
+    {
+     "name": "--account-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-channel",
+   "description": "Updates a channel.",
+   "options": [
+    {
+     "name": "--anywhere-settings",
+     "args": {}
+    },
+    {
+     "name": "--cdi-input-specification",
+     "args": {}
+    },
+    {
+     "name": "--channel-engine-version",
+     "args": {}
+    },
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--destinations",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encoder-settings",
+     "args": {}
+    },
+    {
+     "name": "--inference-settings",
+     "args": {}
+    },
+    {
+     "name": "--input-attachments",
+     "args": {}
+    },
+    {
+     "name": "--input-specification",
+     "args": {}
+    },
+    {
+     "name": "--linked-channel-settings",
+     "args": {}
+    },
+    {
+     "name": "--log-level",
+     "args": {
+      "suggestions": [
+       "ERROR",
+       "WARNING",
+       "INFO",
+       "DEBUG",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--maintenance",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--special-router-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-channel-class",
+   "description": "Changes the class of the channel.",
+   "options": [
+    {
+     "name": "--channel-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "SINGLE_PIPELINE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destinations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-channel-placement-group",
+   "description": "Change the settings for a ChannelPlacementGroup.",
+   "options": [
+    {
+     "name": "--channel-placement-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--nodes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-cloud-watch-alarm-template",
+   "description": "Updates the specified cloudwatch alarm template.",
+   "options": [
+    {
+     "name": "--comparison-operator",
+     "args": {
+      "suggestions": [
+       "GreaterThanOrEqualToThreshold",
+       "GreaterThanThreshold",
+       "LessThanThreshold",
+       "LessThanOrEqualToThreshold"
+      ]
+     }
+    },
+    {
+     "name": "--datapoints-to-alarm",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-periods",
+     "args": {}
+    },
+    {
+     "name": "--group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--period",
+     "args": {}
+    },
+    {
+     "name": "--statistic",
+     "args": {
+      "suggestions": [
+       "SampleCount",
+       "Average",
+       "Sum",
+       "Minimum",
+       "Maximum"
+      ]
+     }
+    },
+    {
+     "name": "--target-resource-type",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT_DISTRIBUTION",
+       "MEDIALIVE_MULTIPLEX",
+       "MEDIALIVE_CHANNEL",
+       "MEDIALIVE_INPUT_DEVICE",
+       "MEDIAPACKAGE_CHANNEL",
+       "MEDIAPACKAGE_ORIGIN_ENDPOINT",
+       "MEDIACONNECT_FLOW",
+       "S3_BUCKET",
+       "MEDIATAILOR_PLAYBACK_CONFIGURATION"
+      ]
+     }
+    },
+    {
+     "name": "--threshold",
+     "args": {}
+    },
+    {
+     "name": "--treat-missing-data",
+     "args": {
+      "suggestions": [
+       "notBreaching",
+       "breaching",
+       "ignore",
+       "missing"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-cloud-watch-alarm-template-group",
+   "description": "Updates the specified cloudwatch alarm template group.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cluster",
+   "description": "Change the settings for a Cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--network-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-event-bridge-rule-template",
+   "description": "Updates the specified eventbridge rule template.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-targets",
+     "args": {}
+    },
+    {
+     "name": "--event-type",
+     "args": {
+      "suggestions": [
+       "MEDIALIVE_MULTIPLEX_ALERT",
+       "MEDIALIVE_MULTIPLEX_STATE_CHANGE",
+       "MEDIALIVE_CHANNEL_ALERT",
+       "MEDIALIVE_CHANNEL_INPUT_CHANGE",
+       "MEDIALIVE_CHANNEL_STATE_CHANGE",
+       "MEDIAPACKAGE_INPUT_NOTIFICATION",
+       "MEDIAPACKAGE_KEY_PROVIDER_NOTIFICATION",
+       "MEDIAPACKAGE_HARVEST_JOB_NOTIFICATION",
+       "SIGNAL_MAP_ACTIVE_ALARM",
+       "MEDIACONNECT_ALERT",
+       "MEDIACONNECT_SOURCE_HEALTH",
+       "MEDIACONNECT_OUTPUT_HEALTH",
+       "MEDIACONNECT_FLOW_STATUS_CHANGE"
+      ]
+     }
+    },
+    {
+     "name": "--group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-event-bridge-rule-template-group",
+   "description": "Updates the specified eventbridge rule template group.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-input",
+   "description": "Updates an input.",
+   "options": [
+    {
+     "name": "--destinations",
+     "args": {}
+    },
+    {
+     "name": "--input-devices",
+     "args": {}
+    },
+    {
+     "name": "--input-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--media-connect-flows",
+     "args": {}
+    },
+    {
+     "name": "--multicast-settings",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--sdi-sources",
+     "args": {}
+    },
+    {
+     "name": "--smpte2110-receiver-group-settings",
+     "args": {}
+    },
+    {
+     "name": "--sources",
+     "args": {}
+    },
+    {
+     "name": "--special-router-settings",
+     "args": {}
+    },
+    {
+     "name": "--srt-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-input-device",
+   "description": "Updates the parameters for the input device.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--hd-device-settings",
+     "args": {}
+    },
+    {
+     "name": "--input-device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--uhd-device-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-input-security-group",
+   "description": "Update an Input Security Group's Whilelists.",
+   "options": [
+    {
+     "name": "--input-security-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--whitelist-rules",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-multiplex",
+   "description": "Updates a multiplex.",
+   "options": [
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--multiplex-settings",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--packet-identifiers-mapping",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-multiplex-program",
+   "description": "Update a program in a multiplex.",
+   "options": [
+    {
+     "name": "--multiplex-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--multiplex-program-settings",
+     "args": {}
+    },
+    {
+     "name": "--program-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-network",
+   "description": "Change the settings for a Network.",
+   "options": [
+    {
+     "name": "--ip-pools",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--network-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--routes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-node",
+   "description": "Change the settings for a Node.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--node-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "BACKUP",
+       "ACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--sdi-source-mappings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-node-state",
+   "description": "Update the state of a node.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DRAINING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-reservation",
+   "description": "Update reservation.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--renewal-settings",
+     "args": {}
+    },
+    {
+     "name": "--reservation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-sdi-source",
+   "description": "Change some of the settings in an SdiSource.",
+   "options": [
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "QUADRANT",
+       "INTERLEAVE"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--sdi-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SINGLE",
+       "QUAD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "channel-created",
+     "description": "Wait until a channel has been created It will poll every 3 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--channel-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "channel-deleted",
+     "description": "Wait until a channel has been deleted It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--channel-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "channel-placement-group-assigned",
+     "description": "Wait until the channel placement group has been assigned It will poll every 3 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--channel-placement-group-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "channel-placement-group-deleted",
+     "description": "Wait until the channel placement group has been deleted It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--channel-placement-group-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "channel-placement-group-unassigned",
+     "description": "Wait until the channel placement group has been unassigned It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--channel-placement-group-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "channel-running",
+     "description": "Wait until a channel is running It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--channel-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "channel-stopped",
+     "description": "Wait until a channel has is stopped It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--channel-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "cluster-created",
+     "description": "Wait until a cluster has been created It will poll every 3 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "cluster-deleted",
+     "description": "Wait until a cluster has been deleted It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "input-attached",
+     "description": "Wait until an input has been attached It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--input-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "input-deleted",
+     "description": "Wait until an input has been deleted It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--input-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "input-detached",
+     "description": "Wait until an input has been detached It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--input-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "multiplex-created",
+     "description": "Wait until a multiplex has been created It will poll every 3 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--multiplex-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "multiplex-deleted",
+     "description": "Wait until a multiplex has been deleted It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--multiplex-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "multiplex-running",
+     "description": "Wait until a multiplex is running It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--multiplex-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "multiplex-stopped",
+     "description": "Wait until a multiplex has is stopped It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--multiplex-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "node-deregistered",
+     "description": "Wait until a node has been deregistered It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--node-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "node-registered",
+     "description": "Wait until a node has been registered It will poll every 3 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--node-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "signal-map-created",
+     "description": "Wait until a signal map has been created It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "signal-map-monitor-deleted",
+     "description": "Wait until a signal map's monitor has been deleted It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "signal-map-monitor-deployed",
+     "description": "Wait until a signal map's monitor has been deployed It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "signal-map-updated",
+     "description": "Wait until a signal map has been updated It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

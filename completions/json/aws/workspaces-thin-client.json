@@ -1,0 +1,353 @@
+{
+ "name": "workspaces-thin-client",
+ "description": "Amazon WorkSpaces Thin Client is an affordable device built to work with Amazon Web Services End User Computing (EUC) virtual desktops to provide users with a complete cloud desktop solution.",
+ "subcommands": [
+  {
+   "name": "create-environment",
+   "description": "Creates an environment for your thin client devices.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--desired-software-set-id",
+     "args": {}
+    },
+    {
+     "name": "--desktop-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--desktop-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--device-creation-tags",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--software-set-update-mode",
+     "args": {
+      "suggestions": [
+       "USE_LATEST",
+       "USE_DESIRED"
+      ]
+     }
+    },
+    {
+     "name": "--software-set-update-schedule",
+     "args": {
+      "suggestions": [
+       "USE_MAINTENANCE_WINDOW",
+       "APPLY_IMMEDIATELY"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-device",
+   "description": "Deletes a thin client device.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment",
+   "description": "Deletes an environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-device",
+   "description": "Deregisters a thin client device.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-device-status",
+     "args": {
+      "suggestions": [
+       "DEREGISTERED",
+       "ARCHIVED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-device",
+   "description": "Returns information for a thin client device.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment",
+   "description": "Returns information for an environment.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-software-set",
+   "description": "Returns information for a software set.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-devices",
+   "description": "Returns a list of thin client devices.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environments",
+   "description": "Returns a list of environments.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-software-sets",
+   "description": "Returns a list of software sets.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag or tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-device",
+   "description": "Updates a thin client device.",
+   "options": [
+    {
+     "name": "--desired-software-set-id",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--software-set-update-schedule",
+     "args": {
+      "suggestions": [
+       "USE_MAINTENANCE_WINDOW",
+       "APPLY_IMMEDIATELY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-environment",
+   "description": "Updates an environment.",
+   "options": [
+    {
+     "name": "--desired-software-set-id",
+     "args": {}
+    },
+    {
+     "name": "--desktop-arn",
+     "args": {}
+    },
+    {
+     "name": "--desktop-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--device-creation-tags",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--software-set-update-mode",
+     "args": {
+      "suggestions": [
+       "USE_LATEST",
+       "USE_DESIRED"
+      ]
+     }
+    },
+    {
+     "name": "--software-set-update-schedule",
+     "args": {
+      "suggestions": [
+       "USE_MAINTENANCE_WINDOW",
+       "APPLY_IMMEDIATELY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-software-set",
+   "description": "Updates a software set.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-status",
+     "args": {
+      "suggestions": [
+       "VALIDATED",
+       "NOT_VALIDATED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

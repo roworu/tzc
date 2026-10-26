@@ -1,0 +1,276 @@
+{
+ "name": "workspaces-instances",
+ "description": "Amazon WorkSpaces Instances provides an API framework for managing virtual workspace environments across multiple AWS regions, enabling programmatic creation and configuration of desktop infrastructure.",
+ "subcommands": [
+  {
+   "name": "associate-volume",
+   "description": "Attaches a volume to a WorkSpace Instance.",
+   "options": [
+    {
+     "name": "--device",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--volume-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-volume",
+   "description": "Creates a new volume for WorkSpace Instances.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--encrypted"
+    },
+    {
+     "name": "--iops",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-encrypted"
+    },
+    {
+     "name": "--size-in-gb",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-id",
+     "args": {}
+    },
+    {
+     "name": "--tag-specifications",
+     "args": {}
+    },
+    {
+     "name": "--throughput",
+     "args": {}
+    },
+    {
+     "name": "--volume-type",
+     "args": {
+      "suggestions": [
+       "standard",
+       "io1",
+       "io2",
+       "gp2",
+       "sc1",
+       "st1",
+       "gp3"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-workspace-instance",
+   "description": "Launches a new WorkSpace Instance with specified configuration parameters, enabling programmatic workspace deployment.",
+   "options": [
+    {
+     "name": "--billing-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--managed-instance",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-volume",
+   "description": "Deletes a specified volume.",
+   "options": [
+    {
+     "name": "--volume-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workspace-instance",
+   "description": "Deletes the specified WorkSpace Usage of this API will result in deletion of the resource in question.",
+   "options": [
+    {
+     "name": "--workspace-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-volume",
+   "description": "Detaches a volume from a WorkSpace Instance.",
+   "options": [
+    {
+     "name": "--device",
+     "args": {}
+    },
+    {
+     "name": "--disassociate-mode",
+     "args": {
+      "suggestions": [
+       "FORCE",
+       "NO_FORCE"
+      ]
+     }
+    },
+    {
+     "name": "--volume-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workspace-instance",
+   "description": "Retrieves detailed information about a specific WorkSpace Instance.",
+   "options": [
+    {
+     "name": "--workspace-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-instance-types",
+   "description": "Retrieves a list of instance types supported by Amazon WorkSpaces Instances, enabling precise workspace infrastructure configuration.",
+   "options": [
+    {
+     "name": "--instance-configuration-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-regions",
+   "description": "Retrieves a list of AWS regions supported by Amazon WorkSpaces Instances, enabling region discovery for workspace deployments.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves tags for a WorkSpace Instance.",
+   "options": [
+    {
+     "name": "--workspace-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workspace-instances",
+   "description": "Retrieves a collection of WorkSpaces Instances based on specified filters.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--provision-states",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a WorkSpace Instance.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a WorkSpace Instance.",
+   "options": [
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

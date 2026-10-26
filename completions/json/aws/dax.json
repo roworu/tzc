@@ -1,0 +1,491 @@
+{
+ "name": "dax",
+ "description": "DAX is a managed caching service engineered for Amazon DynamoDB.",
+ "subcommands": [
+  {
+   "name": "create-cluster",
+   "description": "Creates a DAX cluster.",
+   "options": [
+    {
+     "name": "--availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--cluster-endpoint-encryption-type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "TLS"
+      ]
+     }
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6",
+       "dual_stack"
+      ]
+     }
+    },
+    {
+     "name": "--node-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--replication-factor",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--sse-specification",
+     "args": {}
+    },
+    {
+     "name": "--subnet-group-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-parameter-group",
+   "description": "Creates a new parameter group.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-subnet-group",
+   "description": "Creates a new subnet group.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "decrease-replication-factor",
+   "description": "Removes one or more nodes from a DAX cluster.",
+   "options": [
+    {
+     "name": "--availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-replication-factor",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-ids-to-remove",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Deletes a previously provisioned DAX cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-parameter-group",
+   "description": "Deletes the specified parameter group.",
+   "options": [
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subnet-group",
+   "description": "Deletes a subnet group.",
+   "options": [
+    {
+     "name": "--subnet-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-clusters",
+   "description": "Returns information about all provisioned DAX clusters if no cluster identifier is specified, or about a specific DAX cluster if a cluster identifier is supplied.",
+   "options": [
+    {
+     "name": "--cluster-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-default-parameters",
+   "description": "Returns the default system parameter information for the DAX caching software.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-events",
+   "description": "Returns events related to DAX clusters and parameter groups.",
+   "options": [
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-name",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "CLUSTER",
+       "PARAMETER_GROUP",
+       "SUBNET_GROUP"
+      ]
+     }
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-parameter-groups",
+   "description": "Returns a list of parameter group descriptions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-names",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-parameters",
+   "description": "Returns the detailed parameter list for a particular parameter group.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-subnet-groups",
+   "description": "Returns a list of subnet group descriptions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subnet-group-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "increase-replication-factor",
+   "description": "Adds one or more nodes to a DAX cluster.",
+   "options": [
+    {
+     "name": "--availability-zones",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-replication-factor",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags",
+   "description": "List all of the tags for a DAX cluster.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reboot-node",
+   "description": "Reboots a single node of a DAX cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates a set of tags with a DAX resource.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the association of tags from a DAX resource.",
+   "options": [
+    {
+     "name": "--resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cluster",
+   "description": "Modifies the settings for a DAX cluster.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--notification-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--notification-topic-status",
+     "args": {}
+    },
+    {
+     "name": "--parameter-group-name",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-parameter-group",
+   "description": "Modifies the parameters of a parameter group.",
+   "options": [
+    {
+     "name": "--parameter-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameter-name-values",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-subnet-group",
+   "description": "Modifies an existing subnet group.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--subnet-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

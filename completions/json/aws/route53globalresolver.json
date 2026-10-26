@@ -1,0 +1,1088 @@
+{
+ "name": "route53globalresolver",
+ "description": "Amazon Route 53 Global Resolver is a global, internet-accessible DNS resolver that enables customers to resolve and forward traffic for both public and private domains while ensuring security and authenticity of queries over the internet.",
+ "subcommands": [
+  {
+   "name": "associate-hosted-zone",
+   "description": "Associates a Route 53 private hosted zone with a Route 53 Global Resolver resource.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-create-firewall-rule",
+   "description": "Creates multiple DNS firewall rules in a single operation.",
+   "options": [
+    {
+     "name": "--firewall-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-firewall-rule",
+   "description": "Deletes multiple DNS firewall rules in a single operation.",
+   "options": [
+    {
+     "name": "--firewall-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-firewall-rule",
+   "description": "Updates multiple DNS firewall rules in a single operation.",
+   "options": [
+    {
+     "name": "--firewall-rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-access-source",
+   "description": "Creates an access source for a DNS view.",
+   "options": [
+    {
+     "name": "--cidr",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "DO53",
+       "DOH",
+       "DOT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-access-token",
+   "description": "Creates an access token for a DNS view.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expires-at",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dns-view",
+   "description": "Creates a DNS view within a Route 53 Global Resolver.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dnssec-validation",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--edns-client-subnet",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--firewall-rules-fail-open",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--global-resolver-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-firewall-domain-list",
+   "description": "Creates a firewall domain list.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--global-resolver-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-firewall-rule",
+   "description": "Creates a DNS firewall rule.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "ALERT",
+       "BLOCK"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--block-override-dns-type",
+     "args": {
+      "suggestions": [
+       "CNAME"
+      ]
+     }
+    },
+    {
+     "name": "--block-override-domain",
+     "args": {}
+    },
+    {
+     "name": "--block-override-ttl",
+     "args": {}
+    },
+    {
+     "name": "--block-response",
+     "args": {
+      "suggestions": [
+       "NODATA",
+       "NXDOMAIN",
+       "OVERRIDE"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--confidence-threshold",
+     "args": {
+      "suggestions": [
+       "LOW",
+       "MEDIUM",
+       "HIGH"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dns-advanced-protection",
+     "args": {
+      "suggestions": [
+       "DGA",
+       "DNS_TUNNELING",
+       "DICTIONARY_DGA"
+      ]
+     }
+    },
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-domain-list-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--q-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-global-resolver",
+   "description": "Creates a new Route 53 Global Resolver instance.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL_STACK"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--observability-region",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-access-source",
+   "description": "Deletes an access source.",
+   "options": [
+    {
+     "name": "--access-source-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-token",
+   "description": "Deletes an access token.",
+   "options": [
+    {
+     "name": "--access-token-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dns-view",
+   "description": "Deletes a DNS view.",
+   "options": [
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-firewall-domain-list",
+   "description": "Deletes a firewall domain list.",
+   "options": [
+    {
+     "name": "--firewall-domain-list-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-firewall-rule",
+   "description": "Deletes a DNS firewall rule.",
+   "options": [
+    {
+     "name": "--firewall-rule-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-global-resolver",
+   "description": "Deletes a Route 53 Global Resolver instance.",
+   "options": [
+    {
+     "name": "--global-resolver-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-dns-view",
+   "description": "Disables a DNS view, preventing it from serving DNS queries.",
+   "options": [
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-hosted-zone",
+   "description": "Disassociates a Route 53 private hosted zone from a Route 53 Global Resolver resource.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-dns-view",
+   "description": "Enables a disabled DNS view, allowing it to serve DNS queries again.",
+   "options": [
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-source",
+   "description": "Retrieves information about an access source.",
+   "options": [
+    {
+     "name": "--access-source-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-token",
+   "description": "Retrieves information about an access token.",
+   "options": [
+    {
+     "name": "--access-token-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dns-view",
+   "description": "Retrieves information about a DNS view.",
+   "options": [
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-firewall-domain-list",
+   "description": "Retrieves information about a firewall domain list.",
+   "options": [
+    {
+     "name": "--firewall-domain-list-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-firewall-rule",
+   "description": "Retrieves information about a DNS firewall rule.",
+   "options": [
+    {
+     "name": "--firewall-rule-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-global-resolver",
+   "description": "Retrieves information about a Route 53 Global Resolver instance.",
+   "options": [
+    {
+     "name": "--global-resolver-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-hosted-zone-association",
+   "description": "Retrieves information about a hosted zone association.",
+   "options": [
+    {
+     "name": "--hosted-zone-association-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-firewall-domain-list",
+   "description": "Retrieves information about an Amazon Web Services-managed firewall domain list.",
+   "options": [
+    {
+     "name": "--managed-firewall-domain-list-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-firewall-domains",
+   "description": "Imports a list of domains from an Amazon S3 file into a firewall domain list.",
+   "options": [
+    {
+     "name": "--domain-file-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-domain-list-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operation",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-access-sources",
+   "description": "Lists all access sources with pagination support.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-access-tokens",
+   "description": "Lists all access tokens for a DNS view with pagination support.",
+   "options": [
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dns-views",
+   "description": "Lists all DNS views for a Route 53 Global Resolver with pagination support.",
+   "options": [
+    {
+     "name": "--global-resolver-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-firewall-domain-lists",
+   "description": "Lists all firewall domain lists for a Route 53 Global Resolver with pagination support.",
+   "options": [
+    {
+     "name": "--global-resolver-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-firewall-domains",
+   "description": "Lists all the domains in DNS Firewall domain list you have created.",
+   "options": [
+    {
+     "name": "--firewall-domain-list-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-firewall-rules",
+   "description": "Lists all DNS firewall rules for a DNS view with pagination support.",
+   "options": [
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-global-resolvers",
+   "description": "Lists all Route 53 Global Resolver instances in your account with pagination support.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-hosted-zone-associations",
+   "description": "Lists hosted zone associations with pagination support.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-firewall-domain-lists",
+   "description": "Returns a paginated list of the Amazon Web Services Managed DNS Lists and the categories for DNS Firewall.",
+   "options": [
+    {
+     "name": "--managed-firewall-domain-list-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-shared-dns-views",
+   "description": "Lists the DNS views that have been shared with your Amazon Web Services account through Amazon Web Services Resource Access Manager (Amazon Web Services RAM), with pagination support.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags associated with a Route 53 Global Resolver resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a Route 53 Global Resolver resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a Route 53 Global Resolver resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-access-source",
+   "description": "Updates the configuration of an access source.",
+   "options": [
+    {
+     "name": "--access-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cidr",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "IPV6"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "DO53",
+       "DOH",
+       "DOT"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-access-token",
+   "description": "Updates the configuration of an access token.",
+   "options": [
+    {
+     "name": "--access-token-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dns-view",
+   "description": "Updates the configuration of a DNS view.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dns-view-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dnssec-validation",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--edns-client-subnet",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--firewall-rules-fail-open",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-firewall-domains",
+   "description": "Updates a DNS Firewall domain list from an array of specified domains.",
+   "options": [
+    {
+     "name": "--domains",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-domain-list-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operation",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-firewall-rule",
+   "description": "Updates the configuration of a DNS firewall rule.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "ALERT",
+       "BLOCK"
+      ]
+     }
+    },
+    {
+     "name": "--block-override-dns-type",
+     "args": {
+      "suggestions": [
+       "CNAME"
+      ]
+     }
+    },
+    {
+     "name": "--block-override-domain",
+     "args": {}
+    },
+    {
+     "name": "--block-override-ttl",
+     "args": {}
+    },
+    {
+     "name": "--block-response",
+     "args": {
+      "suggestions": [
+       "NODATA",
+       "NXDOMAIN",
+       "OVERRIDE"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--confidence-threshold",
+     "args": {
+      "suggestions": [
+       "LOW",
+       "MEDIUM",
+       "HIGH"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dns-advanced-protection",
+     "args": {
+      "suggestions": [
+       "DGA",
+       "DNS_TUNNELING",
+       "DICTIONARY_DGA"
+      ]
+     }
+    },
+    {
+     "name": "--firewall-rule-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-global-resolver",
+   "description": "Updates the configuration of a Route 53 Global Resolver instance.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--global-resolver-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL_STACK"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--observability-region",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-hosted-zone-association",
+   "description": "Updates the configuration of a hosted zone association.",
+   "options": [
+    {
+     "name": "--hosted-zone-association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

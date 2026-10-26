@@ -1,0 +1,801 @@
+{
+ "name": "stepfunctions",
+ "description": "Step Functions With Step Functions, you can create workflows, also called state machines, to build distributed applications, automate processes, orchestrate microservices, and create data and machine learning pipelines.",
+ "subcommands": [
+  {
+   "name": "create-activity",
+   "description": "Creates an activity.",
+   "options": [
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-state-machine",
+   "description": "Creates a state machine.",
+   "options": [
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-publish"
+    },
+    {
+     "name": "--publish"
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tracing-configuration",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "EXPRESS"
+      ]
+     }
+    },
+    {
+     "name": "--version-description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-state-machine-alias",
+   "description": "Creates an alias for a state machine that points to one or two versions of the same state machine.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--routing-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-activity",
+   "description": "Deletes an activity.",
+   "options": [
+    {
+     "name": "--activity-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-state-machine",
+   "description": "Deletes a state machine.",
+   "options": [
+    {
+     "name": "--state-machine-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-state-machine-alias",
+   "description": "Deletes a state machine alias.",
+   "options": [
+    {
+     "name": "--state-machine-alias-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-state-machine-version",
+   "description": "Deletes a state machine version.",
+   "options": [
+    {
+     "name": "--state-machine-version-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-activity",
+   "description": "Describes an activity.",
+   "options": [
+    {
+     "name": "--activity-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-execution",
+   "description": "Provides information about a state machine execution, such as the state machine associated with the execution, the execution input and output, and relevant execution metadata.",
+   "options": [
+    {
+     "name": "--execution-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--included-data",
+     "args": {
+      "suggestions": [
+       "ALL_DATA",
+       "METADATA_ONLY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-map-run",
+   "description": "Provides information about a Map Run's configuration, progress, and results.",
+   "options": [
+    {
+     "name": "--map-run-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-state-machine",
+   "description": "Provides information about a state machine's definition, its IAM role Amazon Resource Name (ARN), and configuration.",
+   "options": [
+    {
+     "name": "--included-data",
+     "args": {
+      "suggestions": [
+       "ALL_DATA",
+       "METADATA_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--state-machine-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-state-machine-alias",
+   "description": "Returns details about a state machine alias.",
+   "options": [
+    {
+     "name": "--state-machine-alias-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-state-machine-for-execution",
+   "description": "Provides information about a state machine's definition, its execution role ARN, and configuration.",
+   "options": [
+    {
+     "name": "--execution-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--included-data",
+     "args": {
+      "suggestions": [
+       "ALL_DATA",
+       "METADATA_ONLY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-activity-task",
+   "description": "Used by workers to retrieve a task (with the specified activity ARN) which has been scheduled for execution by a running state machine.",
+   "options": [
+    {
+     "name": "--activity-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--worker-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-execution-history",
+   "description": "Returns the history of the specified execution as a list of events.",
+   "options": [
+    {
+     "name": "--execution-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-execution-data"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-execution-data"
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-activities",
+   "description": "Lists the existing activities.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-executions",
+   "description": "Lists all executions of a state machine or a Map Run.",
+   "options": [
+    {
+     "name": "--map-run-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--redrive-filter",
+     "args": {
+      "suggestions": [
+       "REDRIVEN",
+       "NOT_REDRIVEN"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state-machine-arn",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {
+      "suggestions": [
+       "RUNNING",
+       "SUCCEEDED",
+       "FAILED",
+       "TIMED_OUT",
+       "ABORTED",
+       "PENDING_REDRIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-map-runs",
+   "description": "Lists all Map Runs that were started by a given state machine execution.",
+   "options": [
+    {
+     "name": "--execution-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-state-machine-aliases",
+   "description": "Lists aliases for a specified state machine ARN.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--state-machine-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-state-machine-versions",
+   "description": "Lists versions for the specified state machine Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--state-machine-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-state-machines",
+   "description": "Lists the existing state machines.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List tags for a given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "publish-state-machine-version",
+   "description": "Creates a version from the current revision of a state machine.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--revision-id",
+     "args": {}
+    },
+    {
+     "name": "--state-machine-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "redrive-execution",
+   "description": "Restarts unsuccessful executions of Standard workflows that didn't complete successfully in the last 14 days.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--execution-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-task-failure",
+   "description": "Used by activity workers, Task states using the callback pattern, and optionally Task states using the job run pattern to report that the task identified by the taskToken failed.",
+   "options": [
+    {
+     "name": "--cause",
+     "args": {}
+    },
+    {
+     "name": "--error",
+     "args": {}
+    },
+    {
+     "name": "--task-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-task-heartbeat",
+   "description": "Used by activity workers and Task states using the callback pattern, and optionally Task states using the job run pattern to report to Step Functions that the task represented by the specified taskToken is still making progress.",
+   "options": [
+    {
+     "name": "--task-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-task-success",
+   "description": "Used by activity workers, Task states using the callback pattern, and optionally Task states using the job run pattern to report that the task identified by the taskToken completed successfully.",
+   "options": [
+    {
+     "name": "--task-output",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-execution",
+   "description": "Starts a state machine execution.",
+   "options": [
+    {
+     "name": "--input",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--state-machine-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trace-header",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-sync-execution",
+   "description": "Starts a Synchronous Express state machine execution.",
+   "options": [
+    {
+     "name": "--included-data",
+     "args": {
+      "suggestions": [
+       "ALL_DATA",
+       "METADATA_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--input",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--state-machine-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trace-header",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-execution",
+   "description": "Stops an execution.",
+   "options": [
+    {
+     "name": "--cause",
+     "args": {}
+    },
+    {
+     "name": "--error",
+     "args": {}
+    },
+    {
+     "name": "--execution-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add a tag to a Step Functions resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-state",
+   "description": "Accepts the definition of a single state and executes it.",
+   "options": [
+    {
+     "name": "--context",
+     "args": {}
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input",
+     "args": {}
+    },
+    {
+     "name": "--inspection-level",
+     "args": {
+      "suggestions": [
+       "INFO",
+       "DEBUG",
+       "TRACE"
+      ]
+     }
+    },
+    {
+     "name": "--mock",
+     "args": {}
+    },
+    {
+     "name": "--no-reveal-secrets"
+    },
+    {
+     "name": "--reveal-secrets"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--state-configuration",
+     "args": {}
+    },
+    {
+     "name": "--state-name",
+     "args": {}
+    },
+    {
+     "name": "--variables",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove a tag from a Step Functions resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-map-run",
+   "description": "Updates an in-progress Map Run's configuration to include changes to the settings that control maximum concurrency and Map Run failure.",
+   "options": [
+    {
+     "name": "--map-run-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-concurrency",
+     "args": {}
+    },
+    {
+     "name": "--tolerated-failure-count",
+     "args": {}
+    },
+    {
+     "name": "--tolerated-failure-percentage",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-state-machine",
+   "description": "Updates an existing state machine by modifying its definition, roleArn, loggingConfiguration, or EncryptionConfiguration.",
+   "options": [
+    {
+     "name": "--definition",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-publish"
+    },
+    {
+     "name": "--publish"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--state-machine-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tracing-configuration",
+     "args": {}
+    },
+    {
+     "name": "--version-description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-state-machine-alias",
+   "description": "Updates the configuration of an existing state machine alias by modifying its description or routingConfiguration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--routing-configuration",
+     "args": {}
+    },
+    {
+     "name": "--state-machine-alias-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-state-machine-definition",
+   "description": "Validates the syntax of a state machine definition specified in Amazon States Language (ASL), a JSON-based, structured language.",
+   "options": [
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--severity",
+     "args": {
+      "suggestions": [
+       "ERROR",
+       "WARNING"
+      ]
+     }
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "EXPRESS"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

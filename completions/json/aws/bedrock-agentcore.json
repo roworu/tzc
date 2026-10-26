@@ -1,0 +1,1726 @@
+{
+ "name": "bedrock-agentcore",
+ "description": "Welcome to the Amazon Bedrock AgentCore Data Plane API reference.",
+ "subcommands": [
+  {
+   "name": "batch-create-memory-records",
+   "description": "Creates multiple memory records in a single batch operation for the specified memory with custom content.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--records",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-memory-records",
+   "description": "Deletes multiple memory records in a single batch operation from the specified memory.",
+   "options": [
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--records",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-memory-records",
+   "description": "Updates multiple memory records with custom content in a single batch operation within the specified memory.",
+   "options": [
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--records",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "complete-resource-token-auth",
+   "description": "Confirms the user authentication session for obtaining OAuth2.0 tokens for a resource.",
+   "options": [
+    {
+     "name": "--session-uri",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-ab-test",
+   "description": "Creates an A/B test for comparing agent configurations.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--enable-on-create"
+    },
+    {
+     "name": "--evaluation-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-filter",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enable-on-create"
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--variants",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-event",
+   "description": "Creates an event in an AgentCore Memory resource.",
+   "options": [
+    {
+     "name": "--actor-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--branch",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--event-timestamp",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--extraction-mode",
+     "args": {
+      "suggestions": [
+       "SKIP"
+      ]
+     }
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-payment-instrument",
+   "description": "Create a new payment instrument for a connector.",
+   "options": [
+    {
+     "name": "--agent-name",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--payment-connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-instrument-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-instrument-type",
+     "args": {
+      "suggestions": [
+       "EMBEDDED_CRYPTO_WALLET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-payment-session",
+   "description": "Create a new payment session.",
+   "options": [
+    {
+     "name": "--agent-name",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--expiry-time-in-minutes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limits",
+     "args": {}
+    },
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-ab-test",
+   "description": "Deletes an A/B test and its associated gateway rules.",
+   "options": [
+    {
+     "name": "--ab-test-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-batch-evaluation",
+   "description": "Deletes a batch evaluation and its associated results.",
+   "options": [
+    {
+     "name": "--batch-evaluation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event",
+   "description": "Deletes an event from an AgentCore Memory resource.",
+   "options": [
+    {
+     "name": "--actor-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-memory-record",
+   "description": "Deletes a memory record from an AgentCore Memory resource.",
+   "options": [
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--memory-record-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-payment-instrument",
+   "description": "Deletes a payment instrument.",
+   "options": [
+    {
+     "name": "--payment-connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-instrument-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-payment-session",
+   "description": "Deletes a payment session.",
+   "options": [
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-recommendation",
+   "description": "Deletes a recommendation and its associated results.",
+   "options": [
+    {
+     "name": "--recommendation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "evaluate",
+   "description": "Performs on-demand evaluation of agent traces using a specified evaluator.",
+   "options": [
+    {
+     "name": "--evaluation-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--evaluation-reference-inputs",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-target",
+     "args": {}
+    },
+    {
+     "name": "--evaluator-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ab-test",
+   "description": "Retrieves detailed information about an A/B test, including its configuration, status, and statistical results.",
+   "options": [
+    {
+     "name": "--ab-test-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent-card",
+   "description": "Retrieves the A2A agent card associated with an AgentCore Runtime agent.",
+   "options": [
+    {
+     "name": "--agent-runtime-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--qualifier",
+     "args": {}
+    },
+    {
+     "name": "--runtime-session-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-batch-evaluation",
+   "description": "Retrieves detailed information about a batch evaluation, including its status, configuration, results, and any error details.",
+   "options": [
+    {
+     "name": "--batch-evaluation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-browser-session",
+   "description": "Retrieves detailed information about a specific browser session in Amazon Bedrock AgentCore.",
+   "options": [
+    {
+     "name": "--browser-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-code-interpreter-session",
+   "description": "Retrieves detailed information about a specific code interpreter session in Amazon Bedrock AgentCore.",
+   "options": [
+    {
+     "name": "--code-interpreter-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event",
+   "description": "Retrieves information about a specific event in an AgentCore Memory resource.",
+   "options": [
+    {
+     "name": "--actor-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-memory-record",
+   "description": "Retrieves a specific memory record from an AgentCore Memory resource.",
+   "options": [
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--memory-record-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-payment-instrument",
+   "description": "Get a payment instrument by ID.",
+   "options": [
+    {
+     "name": "--agent-name",
+     "args": {}
+    },
+    {
+     "name": "--payment-connector-id",
+     "args": {}
+    },
+    {
+     "name": "--payment-instrument-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-payment-instrument-balance",
+   "description": "Get the balance of a payment instrument.",
+   "options": [
+    {
+     "name": "--agent-name",
+     "args": {}
+    },
+    {
+     "name": "--chain",
+     "args": {
+      "suggestions": [
+       "BASE",
+       "BASE_SEPOLIA",
+       "ETHEREUM",
+       "SOLANA",
+       "SOLANA_DEVNET"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--payment-connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-instrument-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--token",
+     "args": {
+      "suggestions": [
+       "USDC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-payment-session",
+   "description": "Get a payment session.",
+   "options": [
+    {
+     "name": "--agent-name",
+     "args": {}
+    },
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-recommendation",
+   "description": "Retrieves detailed information about a recommendation, including its configuration, status, and results.",
+   "options": [
+    {
+     "name": "--recommendation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-api-key",
+   "description": "Retrieves the API key associated with an API key credential provider.",
+   "options": [
+    {
+     "name": "--resource-credential-provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-identity-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-oauth2-token",
+   "description": "Returns the OAuth 2.0 token of the provided resource.",
+   "options": [
+    {
+     "name": "--audiences",
+     "args": {}
+    },
+    {
+     "name": "--custom-parameters",
+     "args": {}
+    },
+    {
+     "name": "--custom-state",
+     "args": {}
+    },
+    {
+     "name": "--force-authentication"
+    },
+    {
+     "name": "--no-force-authentication"
+    },
+    {
+     "name": "--oauth2-flow",
+     "args": {
+      "suggestions": [
+       "USER_FEDERATION",
+       "M2M",
+       "ON_BEHALF_OF_TOKEN_EXCHANGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-credential-provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-oauth2-return-url",
+     "args": {}
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    },
+    {
+     "name": "--scopes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-uri",
+     "args": {}
+    },
+    {
+     "name": "--workload-identity-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-payment-token",
+   "description": "Generates authentication tokens for payment providers that use vendor-specific authentication mechanisms.",
+   "options": [
+    {
+     "name": "--payment-token-request",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-credential-provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-identity-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workload-access-token",
+   "description": "Obtains a workload access token for agentic workloads not acting on behalf of a user.",
+   "options": [
+    {
+     "name": "--workload-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workload-access-token-for-jwt",
+   "description": "Obtains a workload access token for agentic workloads acting on behalf of a user, using a JWT token.",
+   "options": [
+    {
+     "name": "--user-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workload-access-token-for-user-id",
+   "description": "Obtains a workload access token for agentic workloads acting on behalf of a user, using the user's ID.",
+   "options": [
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "invoke-agent-runtime",
+   "description": "Sends a request to an agent or tool hosted in an Amazon Bedrock AgentCore Runtime and receives responses in real-time.",
+   "options": [
+    {
+     "name": "--accept",
+     "args": {}
+    },
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--agent-runtime-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--baggage",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--mcp-method",
+     "args": {}
+    },
+    {
+     "name": "--mcp-name",
+     "args": {}
+    },
+    {
+     "name": "--mcp-protocol-version",
+     "args": {}
+    },
+    {
+     "name": "--mcp-session-id",
+     "args": {}
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--qualifier",
+     "args": {}
+    },
+    {
+     "name": "--runtime-session-id",
+     "args": {}
+    },
+    {
+     "name": "--runtime-user-id",
+     "args": {}
+    },
+    {
+     "name": "--trace-id",
+     "args": {}
+    },
+    {
+     "name": "--trace-parent",
+     "args": {}
+    },
+    {
+     "name": "--trace-state",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "invoke-browser",
+   "description": "Invokes an operating system-level action on a browser session in Amazon Bedrock AgentCore.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--browser-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-ab-tests",
+   "description": "Lists all A/B tests in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-actors",
+   "description": "Lists all actors in an AgentCore Memory resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-batch-evaluations",
+   "description": "Lists all batch evaluations in the account, providing summary information about each evaluation's status and configuration.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-browser-sessions",
+   "description": "Retrieves a list of browser sessions in Amazon Bedrock AgentCore that match the specified criteria.",
+   "options": [
+    {
+     "name": "--browser-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "READY",
+       "TERMINATED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-code-interpreter-sessions",
+   "description": "Retrieves a list of code interpreter sessions in Amazon Bedrock AgentCore that match the specified criteria.",
+   "options": [
+    {
+     "name": "--code-interpreter-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "READY",
+       "TERMINATED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-events",
+   "description": "Lists events in an AgentCore Memory resource based on specified criteria.",
+   "options": [
+    {
+     "name": "--actor-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--include-payloads"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-payloads"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-memory-extraction-jobs",
+   "description": "Lists all long-term memory extraction jobs that are eligible to be started with optional filtering.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-memory-records",
+   "description": "Lists memory records in an AgentCore Memory resource based on specified criteria.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--memory-strategy-id",
+     "args": {}
+    },
+    {
+     "name": "--metadata-filters",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--namespace-path",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-payment-instruments",
+   "description": "List payment instruments for a manager.",
+   "options": [
+    {
+     "name": "--agent-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--payment-connector-id",
+     "args": {}
+    },
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-payment-sessions",
+   "description": "List payment sessions.",
+   "options": [
+    {
+     "name": "--agent-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommendations",
+   "description": "Lists all recommendations in the account, with optional filtering by status.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "IN_PROGRESS",
+       "COMPLETED",
+       "FAILED",
+       "DELETING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-sessions",
+   "description": "Lists sessions in an AgentCore Memory resource based on specified criteria.",
+   "options": [
+    {
+     "name": "--actor-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "process-payment",
+   "description": "Processes a payment using a payment instrument within a payment session.",
+   "options": [
+    {
+     "name": "--agent-name",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--payment-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-instrument-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-manager-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-type",
+     "args": {
+      "suggestions": [
+       "CRYPTO_X402"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "retrieve-memory-records",
+   "description": "Searches for and retrieves memory records from an AgentCore Memory resource based on specified search criteria.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--namespace-path",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-criteria",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "save-browser-session-profile",
+   "description": "Saves the current state of a browser session as a reusable profile in Amazon Bedrock AgentCore.",
+   "options": [
+    {
+     "name": "--browser-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trace-id",
+     "args": {}
+    },
+    {
+     "name": "--trace-parent",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-registry-records",
+   "description": "Searches for registry records using semantic, lexical, or hybrid queries.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--registry-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--search-query",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-batch-evaluation",
+   "description": "Starts a batch evaluation job that evaluates agent performance across multiple sessions.",
+   "options": [
+    {
+     "name": "--batch-evaluation-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-source-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-metadata",
+     "args": {}
+    },
+    {
+     "name": "--evaluators",
+     "args": {}
+    },
+    {
+     "name": "--insights",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-browser-session",
+   "description": "Creates and initializes a browser session in Amazon Bedrock AgentCore.",
+   "options": [
+    {
+     "name": "--browser-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificates",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--enterprise-policies",
+     "args": {}
+    },
+    {
+     "name": "--extensions",
+     "args": {}
+    },
+    {
+     "name": "--filesystem-configurations",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--profile-configuration",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration",
+     "args": {}
+    },
+    {
+     "name": "--session-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--trace-id",
+     "args": {}
+    },
+    {
+     "name": "--trace-parent",
+     "args": {}
+    },
+    {
+     "name": "--view-port",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-code-interpreter-session",
+   "description": "Creates and initializes a code interpreter session in Amazon Bedrock AgentCore.",
+   "options": [
+    {
+     "name": "--certificates",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--code-interpreter-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filesystem-configurations",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--session-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--trace-id",
+     "args": {}
+    },
+    {
+     "name": "--trace-parent",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-memory-extraction-job",
+   "description": "Starts a memory extraction job that processes events that failed extraction previously in an AgentCore Memory resource and produces structured memory records.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--extraction-job",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-recommendation",
+   "description": "Starts a recommendation job that analyzes agent traces and generates optimization suggestions for system prompts or tool descriptions to improve agent performance.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SYSTEM_PROMPT_RECOMMENDATION",
+       "TOOL_DESCRIPTION_RECOMMENDATION"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-batch-evaluation",
+   "description": "Stops a running batch evaluation.",
+   "options": [
+    {
+     "name": "--batch-evaluation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-browser-session",
+   "description": "Terminates an active browser session in Amazon Bedrock AgentCore.",
+   "options": [
+    {
+     "name": "--browser-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trace-id",
+     "args": {}
+    },
+    {
+     "name": "--trace-parent",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-code-interpreter-session",
+   "description": "Terminates an active code interpreter session in Amazon Bedrock AgentCore.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--code-interpreter-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trace-id",
+     "args": {}
+    },
+    {
+     "name": "--trace-parent",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-runtime-session",
+   "description": "Stops a session that is running in an running AgentCore Runtime agent.",
+   "options": [
+    {
+     "name": "--agent-runtime-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--qualifier",
+     "args": {}
+    },
+    {
+     "name": "--runtime-session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-ab-test",
+   "description": "Updates an A/B test's configuration, including variants, traffic allocation, evaluation settings, or execution status.",
+   "options": [
+    {
+     "name": "--ab-test-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-config",
+     "args": {}
+    },
+    {
+     "name": "--execution-status",
+     "args": {
+      "suggestions": [
+       "PAUSED",
+       "RUNNING",
+       "STOPPED",
+       "NOT_STARTED"
+      ]
+     }
+    },
+    {
+     "name": "--gateway-filter",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--variants",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-browser-stream",
+   "description": "Updates a browser stream.",
+   "options": [
+    {
+     "name": "--browser-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-update",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

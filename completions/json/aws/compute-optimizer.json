@@ -1,0 +1,917 @@
+{
+ "name": "compute-optimizer",
+ "description": "Compute Optimizer is a service that analyzes the configuration and utilization metrics of your Amazon Web Services compute resources, such as Amazon EC2 instances, Amazon EC2 Auto Scaling groups, Lambda functions, Amazon EBS volumes, and Amazon ECS services on Fargate.",
+ "subcommands": [
+  {
+   "name": "delete-recommendation-preferences",
+   "description": "Deletes a recommendation preference, such as enhanced infrastructure metrics.",
+   "options": [
+    {
+     "name": "--recommendation-preference-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Ec2Instance",
+       "AutoScalingGroup",
+       "EbsVolume",
+       "LambdaFunction",
+       "NotApplicable",
+       "EcsService",
+       "License",
+       "RdsDBInstance",
+       "AuroraDBClusterStorage",
+       "Idle"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-recommendation-export-jobs",
+   "description": "Describes recommendation export jobs created in the last seven days.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--job-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "export-auto-scaling-group-recommendations",
+   "description": "Exports optimization recommendations for Auto Scaling groups.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--fields-to-export",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "Csv"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--recommendation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--s3-destination-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-ebs-volume-recommendations",
+   "description": "Exports optimization recommendations for Amazon EBS volumes.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--fields-to-export",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "Csv"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--s3-destination-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-ec2-instance-recommendations",
+   "description": "Exports optimization recommendations for Amazon EC2 instances.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--fields-to-export",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "Csv"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--recommendation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--s3-destination-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-ecs-service-recommendations",
+   "description": "Exports optimization recommendations for Amazon ECS services on Fargate.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--fields-to-export",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "Csv"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--s3-destination-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-idle-recommendations",
+   "description": "Export optimization recommendations for your idle resources.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--fields-to-export",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "Csv"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--s3-destination-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-lambda-function-recommendations",
+   "description": "Exports optimization recommendations for Lambda functions.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--fields-to-export",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "Csv"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--s3-destination-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-license-recommendations",
+   "description": "Export optimization recommendations for your licenses.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--fields-to-export",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "Csv"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--s3-destination-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-rds-database-recommendations",
+   "description": "Export optimization recommendations for your Amazon Aurora and Amazon Relational Database Service (Amazon RDS) databases.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--fields-to-export",
+     "args": {}
+    },
+    {
+     "name": "--file-format",
+     "args": {
+      "suggestions": [
+       "Csv"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--recommendation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--s3-destination-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-auto-scaling-group-recommendations",
+   "description": "Returns Auto Scaling group recommendations.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--auto-scaling-group-arns",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-preferences",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-ebs-volume-recommendations",
+   "description": "Returns Amazon Elastic Block Store (Amazon EBS) volume recommendations.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--volume-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-ec2-instance-recommendations",
+   "description": "Returns Amazon EC2 instance recommendations.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--instance-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-preferences",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-ec2-recommendation-projected-metrics",
+   "description": "Returns the projected utilization metrics of Amazon EC2 instance recommendations.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stat",
+     "args": {
+      "suggestions": [
+       "Maximum",
+       "Average"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ecs-service-recommendation-projected-metrics",
+   "description": "Returns the projected metrics of Amazon ECS service recommendations.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stat",
+     "args": {
+      "suggestions": [
+       "Maximum",
+       "Average"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ecs-service-recommendations",
+   "description": "Returns Amazon ECS service recommendations.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--service-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-effective-recommendation-preferences",
+   "description": "Returns the recommendation preferences that are in effect for a given resource, such as enhanced infrastructure metrics.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-enrollment-status",
+   "description": "Returns the enrollment (opt in) status of an account to the Compute Optimizer service."
+  },
+  {
+   "name": "get-enrollment-statuses-for-organization",
+   "description": "Returns the Compute Optimizer enrollment (opt-in) status of organization member accounts, if your account is an organization management account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-idle-recommendations",
+   "description": "Returns idle resource recommendations.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--order-by",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-lambda-function-recommendations",
+   "description": "Returns Lambda function recommendations.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--function-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-license-recommendations",
+   "description": "Returns license recommendations for Amazon EC2 instances that run on a specific license.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-rds-database-recommendation-projected-metrics",
+   "description": "Returns the projected metrics of Aurora and RDS database recommendations.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stat",
+     "args": {
+      "suggestions": [
+       "Maximum",
+       "Average"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-rds-database-recommendations",
+   "description": "Returns Amazon Aurora and RDS database recommendations.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-recommendation-preferences",
+   "description": "Returns existing recommendation preferences, such as enhanced infrastructure metrics.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Ec2Instance",
+       "AutoScalingGroup",
+       "EbsVolume",
+       "LambdaFunction",
+       "NotApplicable",
+       "EcsService",
+       "License",
+       "RdsDBInstance",
+       "AuroraDBClusterStorage",
+       "Idle"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-recommendation-summaries",
+   "description": "Returns the optimization findings for an account.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-recommendation-preferences",
+   "description": "Creates a new recommendation preference or updates an existing recommendation preference, such as enhanced infrastructure metrics.",
+   "options": [
+    {
+     "name": "--enhanced-infrastructure-metrics",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Inactive"
+      ]
+     }
+    },
+    {
+     "name": "--external-metrics-preference",
+     "args": {}
+    },
+    {
+     "name": "--inferred-workload-types",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Inactive"
+      ]
+     }
+    },
+    {
+     "name": "--look-back-period",
+     "args": {
+      "suggestions": [
+       "DAYS_14",
+       "DAYS_32",
+       "DAYS_93"
+      ]
+     }
+    },
+    {
+     "name": "--preferred-resources",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Ec2Instance",
+       "AutoScalingGroup",
+       "EbsVolume",
+       "LambdaFunction",
+       "NotApplicable",
+       "EcsService",
+       "License",
+       "RdsDBInstance",
+       "AuroraDBClusterStorage",
+       "Idle"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--savings-estimation-mode",
+     "args": {
+      "suggestions": [
+       "AfterDiscounts",
+       "BeforeDiscounts"
+      ]
+     }
+    },
+    {
+     "name": "--scope",
+     "args": {}
+    },
+    {
+     "name": "--utilization-preferences",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-enrollment-status",
+   "description": "Updates the enrollment (opt in and opt out) status of an account to the Compute Optimizer service.",
+   "options": [
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Inactive",
+       "Pending",
+       "Failed"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

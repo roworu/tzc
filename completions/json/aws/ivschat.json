@@ -1,0 +1,320 @@
+{
+ "name": "ivschat",
+ "description": "Introduction The Amazon IVS Chat control-plane API enables you to create and manage Amazon IVS Chat resources.",
+ "subcommands": [
+  {
+   "name": "create-chat-token",
+   "description": "Creates an encrypted token that is used by a chat participant to establish an individual WebSocket chat connection to a room.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--room-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-duration-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-logging-configuration",
+   "description": "Creates a logging configuration that allows clients to store and record sent messages.",
+   "options": [
+    {
+     "name": "--destination-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-room",
+   "description": "Creates a room that allows clients to connect and pass messages.",
+   "options": [
+    {
+     "name": "--logging-configuration-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--maximum-message-length",
+     "args": {}
+    },
+    {
+     "name": "--maximum-message-rate-per-second",
+     "args": {}
+    },
+    {
+     "name": "--message-review-handler",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-logging-configuration",
+   "description": "Deletes the specified logging configuration.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-message",
+   "description": "Sends an event to a specific room which directs clients to delete a specific message; that is, unrender it from view and delete it from the client\u2019s chat history.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--room-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-room",
+   "description": "Deletes the specified room.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disconnect-user",
+   "description": "Disconnects all connections using a specified user ID from a room.",
+   "options": [
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--room-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-logging-configuration",
+   "description": "Gets the specified logging configuration.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-room",
+   "description": "Gets the specified room.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-logging-configurations",
+   "description": "Gets summary information about all your logging configurations in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-rooms",
+   "description": "Gets summary information about all your rooms in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--logging-configuration-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--message-review-handler-uri",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets information about AWS tags for the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-event",
+   "description": "Sends an event to a room.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--event-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--room-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for the AWS resource with the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the resource with the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-logging-configuration",
+   "description": "Updates a specified logging configuration.",
+   "options": [
+    {
+     "name": "--destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-room",
+   "description": "Updates a room\u2019s configuration.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging-configuration-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--maximum-message-length",
+     "args": {}
+    },
+    {
+     "name": "--maximum-message-rate-per-second",
+     "args": {}
+    },
+    {
+     "name": "--message-review-handler",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

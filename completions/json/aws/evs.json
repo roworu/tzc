@@ -1,0 +1,549 @@
+{
+ "name": "evs",
+ "description": "Amazon Elastic VMware Service (Amazon EVS) is a service that you can use to deploy a VMware Cloud Foundation (VCF) software environment directly on EC2 bare metal instances within an Amazon Virtual Private Cloud (VPC).",
+ "subcommands": [
+  {
+   "name": "associate-eip-to-vlan",
+   "description": "Associates an Elastic IP address with a public HCX VLAN.",
+   "options": [
+    {
+     "name": "--allocation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vlan-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-entitlement",
+   "description": "Creates a Windows Server License entitlement for virtual machines in an Amazon EVS environment using the provided vCenter Server connector.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entitlement-type",
+     "args": {
+      "suggestions": [
+       "WINDOWS_SERVER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vm-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment",
+   "description": "Creates an Amazon EVS environment that runs VCF software, such as SDDC Manager, NSX Manager, and vCenter Server.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--connectivity-info",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--hosts",
+     "args": {}
+    },
+    {
+     "name": "--initial-vlans",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--license-info",
+     "args": {}
+    },
+    {
+     "name": "--no-terms-accepted"
+    },
+    {
+     "name": "--service-access-security-groups",
+     "args": {}
+    },
+    {
+     "name": "--service-access-subnet-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--site-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--terms-accepted",
+     "priority": 75
+    },
+    {
+     "name": "--vcf-hostnames",
+     "args": {}
+    },
+    {
+     "name": "--vcf-version",
+     "args": {
+      "suggestions": [
+       "VCF-5.2.1",
+       "VCF-5.2.2",
+       "SELF_DEPLOYED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment-connector",
+   "description": "Creates a connector for an Amazon EVS environment.",
+   "options": [
+    {
+     "name": "--appliance-fqdn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "OPERATIONS_MANAGER",
+       "SDDC_MANAGER",
+       "VCENTER"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment-host",
+   "description": "Creates an ESX host and adds it to an Amazon EVS environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--esx-version",
+     "args": {}
+    },
+    {
+     "name": "--host",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-entitlement",
+   "description": "Deletes a Windows Server License entitlement for virtual machines in an Amazon EVS environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entitlement-type",
+     "args": {
+      "suggestions": [
+       "WINDOWS_SERVER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vm-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment",
+   "description": "Deletes an Amazon EVS environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-connector",
+   "description": "Deletes a connector from an Amazon EVS environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-host",
+   "description": "Deletes a host from an Amazon EVS environment.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--host-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-eip-from-vlan",
+   "description": "Disassociates an Elastic IP address from a public HCX VLAN.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vlan-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-depot-url",
+   "description": "Returns a URL and authentication token for accessing the Amazon EVS Custom Addon depot.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-rotate"
+    },
+    {
+     "name": "--rotate"
+    }
+   ]
+  },
+  {
+   "name": "get-environment",
+   "description": "Returns a description of the specified environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-versions",
+   "description": "Returns information about VCF versions, ESX versions and EC2 instance types provided by Amazon EVS."
+  },
+  {
+   "name": "list-environment-connectors",
+   "description": "Lists the connectors within an environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-hosts",
+   "description": "List the hosts within an environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environment-vlans",
+   "description": "Lists environment VLANs that are associated with the specified environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environments",
+   "description": "Lists the Amazon EVS environments in your Amazon Web Services account in the specified Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for an Amazon EVS resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-vm-entitlements",
+   "description": "Lists the Windows Server License entitlements for virtual machines in an Amazon EVS environment.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entitlement-type",
+     "args": {
+      "suggestions": [
+       "WINDOWS_SERVER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags to an Amazon EVS resource with the specified resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes specified tags from an Amazon EVS resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-environment-connector",
+   "description": "Updates a connector for an Amazon EVS environment.",
+   "options": [
+    {
+     "name": "--appliance-fqdn",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-identifier",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1201 @@
+{
+ "name": "elasticbeanstalk",
+ "description": "AWS Elastic Beanstalk AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running on the Amazon Web Services cloud.",
+ "subcommands": [
+  {
+   "name": "abort-environment-update",
+   "description": "Cancels in-progress environment configuration update or application version deployment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "apply-environment-managed-action",
+   "description": "Applies a scheduled managed action immediately.",
+   "options": [
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "associate-environment-operations-role",
+   "description": "Add or change the operations role used by an environment.",
+   "options": [
+    {
+     "name": "--environment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operations-role",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "check-dns-availability",
+   "description": "Checks if the specified CNAME is available.",
+   "options": [
+    {
+     "name": "--cname-prefix",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "compose-environments",
+   "description": "Create or update a group of environments that each run a separate component of a single application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--version-labels",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates an application that has one configuration template named default and no application versions.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--resource-lifecycle-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-application-version",
+   "description": "Creates an application version for the specified application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-create-application"
+    },
+    {
+     "name": "--build-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-create-application"
+    },
+    {
+     "name": "--no-process"
+    },
+    {
+     "name": "--process"
+    },
+    {
+     "name": "--source-build-information",
+     "args": {}
+    },
+    {
+     "name": "--source-bundle",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--version-label",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-configuration-template",
+   "description": "Creates an AWS Elastic Beanstalk configuration template, associated with a specific Elastic Beanstalk application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--option-settings",
+     "args": {}
+    },
+    {
+     "name": "--platform-arn",
+     "args": {}
+    },
+    {
+     "name": "--solution-stack-name",
+     "args": {}
+    },
+    {
+     "name": "--source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-environment",
+   "description": "Launches an AWS Elastic Beanstalk environment for the specified application using the specified configuration.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cname-prefix",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--operations-role",
+     "args": {}
+    },
+    {
+     "name": "--option-settings",
+     "args": {}
+    },
+    {
+     "name": "--options-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--platform-arn",
+     "args": {}
+    },
+    {
+     "name": "--solution-stack-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    },
+    {
+     "name": "--tier",
+     "args": {}
+    },
+    {
+     "name": "--version-label",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-platform-version",
+   "description": "Create a new version of your custom platform.",
+   "options": [
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--option-settings",
+     "args": {}
+    },
+    {
+     "name": "--platform-definition-bundle",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--platform-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--platform-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-storage-location",
+   "description": "Creates a bucket in Amazon S3 to store application versions, logs, and other files used by Elastic Beanstalk environments."
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes the specified application along with all associated versions and configurations.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-terminate-env-by-force"
+    },
+    {
+     "name": "--terminate-env-by-force"
+    }
+   ]
+  },
+  {
+   "name": "delete-application-version",
+   "description": "Deletes the specified version from the specified application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delete-source-bundle"
+    },
+    {
+     "name": "--no-delete-source-bundle"
+    },
+    {
+     "name": "--version-label",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-configuration-template",
+   "description": "Deletes the specified configuration template.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment-configuration",
+   "description": "Deletes the draft configuration associated with the running environment.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-platform-version",
+   "description": "Deletes the specified version of a custom platform.",
+   "options": [
+    {
+     "name": "--platform-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-account-attributes",
+   "description": "Returns attributes related to AWS Elastic Beanstalk that are associated with the calling AWS account."
+  },
+  {
+   "name": "describe-application-versions",
+   "description": "Retrieve a list of application versions.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--version-labels",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-applications",
+   "description": "Returns the descriptions of existing applications.",
+   "options": [
+    {
+     "name": "--application-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-configuration-options",
+   "description": "Describes the configuration options that are used in a particular configuration template or environment, or that a specified solution stack defines.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--options",
+     "args": {}
+    },
+    {
+     "name": "--platform-arn",
+     "args": {}
+    },
+    {
+     "name": "--solution-stack-name",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-configuration-settings",
+   "description": "Returns a description of the settings for the specified configuration set, that is, either a configuration template or the configuration set associated with a running environment.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-environment-health",
+   "description": "Returns information about the overall health of the specified environment.",
+   "options": [
+    {
+     "name": "--attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-environment-managed-action-history",
+   "description": "Lists an environment's completed and failed managed actions.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-environment-managed-actions",
+   "description": "Lists an environment's upcoming and in-progress managed actions.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Scheduled",
+       "Pending",
+       "Running",
+       "Unknown"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-environment-resources",
+   "description": "Returns AWS resources for this environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-environments",
+   "description": "Returns descriptions for existing environments.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {}
+    },
+    {
+     "name": "--environment-ids",
+     "args": {}
+    },
+    {
+     "name": "--environment-names",
+     "args": {}
+    },
+    {
+     "name": "--include-deleted"
+    },
+    {
+     "name": "--included-deleted-back-to",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-deleted"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--version-label",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-events",
+   "description": "Returns list of event descriptions matching criteria up to the last 6 weeks.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--platform-arn",
+     "args": {}
+    },
+    {
+     "name": "--request-id",
+     "args": {}
+    },
+    {
+     "name": "--severity",
+     "args": {
+      "suggestions": [
+       "TRACE",
+       "DEBUG",
+       "INFO",
+       "WARN",
+       "ERROR",
+       "FATAL"
+      ]
+     }
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    },
+    {
+     "name": "--version-label",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-instances-health",
+   "description": "Retrieves detailed information about the health of instances in your AWS Elastic Beanstalk.",
+   "options": [
+    {
+     "name": "--attribute-names",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-platform-version",
+   "description": "Describes a platform version.",
+   "options": [
+    {
+     "name": "--platform-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-environment-operations-role",
+   "description": "Disassociate the operations role from an environment.",
+   "options": [
+    {
+     "name": "--environment-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-available-solution-stacks",
+   "description": "Returns a list of the available solution stack names, with the public version first and then in reverse chronological order."
+  },
+  {
+   "name": "list-platform-branches",
+   "description": "Lists the platform branches available for your account in an AWS Region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-records",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-platform-versions",
+   "description": "Lists the platform versions available for your account in an AWS Region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Return the tags applied to an AWS Elastic Beanstalk resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "rebuild-environment",
+   "description": "Deletes and recreates all of the AWS resources (for example: the Auto Scaling group, load balancer, etc.) for a specified environment and forces a restart.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "request-environment-info",
+   "description": "Initiates a request to compile the specified type of information of the deployed environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--info-type",
+     "args": {
+      "suggestions": [
+       "tail",
+       "bundle",
+       "analyze"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restart-app-server",
+   "description": "Causes the environment to restart the application container server running on each Amazon EC2 instance.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "retrieve-environment-info",
+   "description": "Retrieves the compiled information from a RequestEnvironmentInfo request.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--info-type",
+     "args": {
+      "suggestions": [
+       "tail",
+       "bundle",
+       "analyze"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "swap-environment-cnames",
+   "description": "Swaps the CNAMEs of two environments.",
+   "options": [
+    {
+     "name": "--destination-environment-id",
+     "args": {}
+    },
+    {
+     "name": "--destination-environment-name",
+     "args": {}
+    },
+    {
+     "name": "--source-environment-id",
+     "args": {}
+    },
+    {
+     "name": "--source-environment-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "terminate-environment",
+   "description": "Terminates the specified environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--force-terminate"
+    },
+    {
+     "name": "--no-force-terminate"
+    },
+    {
+     "name": "--no-terminate-resources"
+    },
+    {
+     "name": "--terminate-resources"
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates the specified application to have the specified properties.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-application-resource-lifecycle",
+   "description": "Modifies lifecycle settings for an application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-lifecycle-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application-version",
+   "description": "Updates the specified application version to have the specified properties.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--version-label",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-configuration-template",
+   "description": "Updates the specified configuration template to have the specified properties or configuration option values.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--option-settings",
+     "args": {}
+    },
+    {
+     "name": "--options-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-environment",
+   "description": "Updates the environment description, deploys a new application version, updates the configuration settings to an entirely new configuration template, or updates select configuration option values in the running environment.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--option-settings",
+     "args": {}
+    },
+    {
+     "name": "--options-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--platform-arn",
+     "args": {}
+    },
+    {
+     "name": "--solution-stack-name",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    },
+    {
+     "name": "--tier",
+     "args": {}
+    },
+    {
+     "name": "--version-label",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-tags-for-resource",
+   "description": "Update the list of tags applied to an AWS Elastic Beanstalk resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags-to-add",
+     "args": {}
+    },
+    {
+     "name": "--tags-to-remove",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "validate-configuration-settings",
+   "description": "Takes a set of configuration settings and either a configuration template or environment, and determines whether those values are valid.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-name",
+     "args": {}
+    },
+    {
+     "name": "--option-settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "environment-exists",
+     "description": "Wait until JMESPath query Environments[].Status returns Ready for all elements when polling with ``describe-environments``.",
+     "options": [
+      {
+       "name": "--application-name",
+       "args": {}
+      },
+      {
+       "name": "--environment-ids",
+       "args": {}
+      },
+      {
+       "name": "--environment-names",
+       "args": {}
+      },
+      {
+       "name": "--include-deleted"
+      },
+      {
+       "name": "--included-deleted-back-to",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-deleted"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--version-label",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "environment-terminated",
+     "description": "Wait until JMESPath query Environments[].Status returns Terminated for all elements when polling with ``describe-environments``.",
+     "options": [
+      {
+       "name": "--application-name",
+       "args": {}
+      },
+      {
+       "name": "--environment-ids",
+       "args": {}
+      },
+      {
+       "name": "--environment-names",
+       "args": {}
+      },
+      {
+       "name": "--include-deleted"
+      },
+      {
+       "name": "--included-deleted-back-to",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-deleted"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--version-label",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "environment-updated",
+     "description": "Wait until JMESPath query Environments[].Status returns Ready for all elements when polling with ``describe-environments``.",
+     "options": [
+      {
+       "name": "--application-name",
+       "args": {}
+      },
+      {
+       "name": "--environment-ids",
+       "args": {}
+      },
+      {
+       "name": "--environment-names",
+       "args": {}
+      },
+      {
+       "name": "--include-deleted"
+      },
+      {
+       "name": "--included-deleted-back-to",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-deleted"
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      },
+      {
+       "name": "--version-label",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

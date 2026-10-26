@@ -1,0 +1,629 @@
+{
+ "name": "application-autoscaling",
+ "description": "With Application Auto Scaling, you can configure automatic scaling for the following resources: Amazon AppStream 2.0 fleets Amazon Aurora Replicas Amazon Comprehend document classification and entity recognizer endpoints Amazon DynamoDB tables and global secondary indexes throughput capacity Amazon ECS services Amazon ElastiCache replication groups (Redis OSS and Valkey) and Memcached clusters Amazon EMR clusters Amazon Keyspaces (for Apache Cassandra) tables Lambda function provisioned concurrency Amazon Managed Streaming for Apache Kafka broker storage Amazon Neptune clusters Amazon SageMaker endpoint variants Amazon SageMaker inference components Amazon SageMaker serverless endpoint provisioned concurrency Spot Fleets (Amazon EC2) Pool of WorkSpaces Custom resources provided by your own applications or services To learn more about Application Auto Scaling, see the Application Auto Scaling User Guide.",
+ "subcommands": [
+  {
+   "name": "delete-scaling-policy",
+   "description": "Deletes the specified scaling policy for an Application Auto Scaling scalable target.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scheduled-action",
+   "description": "Deletes the specified scheduled action for an Application Auto Scaling scalable target.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-scalable-target",
+   "description": "Deregisters an Application Auto Scaling scalable target when you have finished using it.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-scalable-targets",
+   "description": "Gets information about the scalable targets in the specified namespace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-ids",
+     "args": {}
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {}
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-scaling-activities",
+   "description": "Provides descriptive information about the scaling activities in the specified namespace from the previous six weeks.",
+   "options": [
+    {
+     "name": "--include-not-scaled-activities"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-not-scaled-activities"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {}
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {}
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-scaling-policies",
+   "description": "Describes the Application Auto Scaling scaling policies for the specified service namespace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-names",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {}
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {}
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-scheduled-actions",
+   "description": "Describes the Application Auto Scaling scheduled actions for the specified service namespace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {}
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-names",
+     "args": {}
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-predictive-scaling-forecast",
+   "description": "Retrieves the forecast data for a predictive scaling policy.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns all the tags on the specified Application Auto Scaling scalable target.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-scaling-policy",
+   "description": "Creates or updates a scaling policy for an Application Auto Scaling scalable target.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "StepScaling",
+       "TargetTrackingScaling",
+       "PredictiveScaling"
+      ]
+     }
+    },
+    {
+     "name": "--predictive-scaling-policy-configuration",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--step-scaling-policy-configuration",
+     "args": {}
+    },
+    {
+     "name": "--target-tracking-scaling-policy-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-scheduled-action",
+   "description": "Creates or updates a scheduled action for an Application Auto Scaling scalable target.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scalable-target-action",
+     "args": {}
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--timezone",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-scalable-target",
+   "description": "Registers or updates a scalable target, which is the resource that you want to scale.",
+   "options": [
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--min-capacity",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--scalable-dimension",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-namespace",
+     "args": {
+      "suggestions": [
+       "ecs",
+       "elasticmapreduce",
+       "ec2",
+       "appstream",
+       "dynamodb",
+       "rds",
+       "sagemaker",
+       "custom-resource",
+       "comprehend",
+       "lambda",
+       "cassandra",
+       "kafka",
+       "elasticache",
+       "neptune",
+       "workspaces"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--suspended-state",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or edits tags on an Application Auto Scaling scalable target.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes tags from an Application Auto Scaling scalable target.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

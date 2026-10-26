@@ -1,0 +1,752 @@
+{
+ "name": "kinesisanalyticsv2",
+ "description": "Amazon Managed Service for Apache Flink was previously known as Amazon Kinesis Data Analytics for Apache Flink.",
+ "subcommands": [
+  {
+   "name": "add-application-cloud-watch-logging-option",
+   "description": "Adds an Amazon CloudWatch log stream to monitor application configuration errors.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cloud-watch-logging-option",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditional-token",
+     "args": {}
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "add-application-input",
+   "description": "Adds a streaming source to your SQL-based Kinesis Data Analytics application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-application-input-processing-configuration",
+   "description": "Adds an InputProcessingConfiguration to a SQL-based Kinesis Data Analytics application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-processing-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-application-output",
+   "description": "Adds an external destination to your SQL-based Kinesis Data Analytics application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-output",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-application-reference-data-source",
+   "description": "Adds a reference data source to an existing SQL-based Kinesis Data Analytics application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reference-data-source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-application-vpc-configuration",
+   "description": "Adds a Virtual Private Cloud (VPC) configuration to the application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditional-token",
+     "args": {}
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates a Managed Service for Apache Flink application.",
+   "options": [
+    {
+     "name": "--application-configuration",
+     "args": {}
+    },
+    {
+     "name": "--application-description",
+     "args": {}
+    },
+    {
+     "name": "--application-mode",
+     "args": {
+      "suggestions": [
+       "STREAMING",
+       "INTERACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cloud-watch-logging-options",
+     "args": {}
+    },
+    {
+     "name": "--runtime-environment",
+     "args": {
+      "suggestions": [
+       "SQL-1_0",
+       "FLINK-1_6",
+       "FLINK-1_8",
+       "ZEPPELIN-FLINK-1_0",
+       "FLINK-1_11",
+       "FLINK-1_13",
+       "ZEPPELIN-FLINK-2_0",
+       "FLINK-1_15",
+       "ZEPPELIN-FLINK-3_0",
+       "FLINK-1_18",
+       "FLINK-1_19",
+       "FLINK-1_20",
+       "FLINK-2_2",
+       "FLINK-2_3"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-execution-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-application-presigned-url",
+   "description": "Creates and returns a URL that you can use to connect to an application's extension.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-expiration-duration-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--url-type",
+     "args": {
+      "suggestions": [
+       "FLINK_DASHBOARD_URL",
+       "ZEPPELIN_UI_URL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-application-snapshot",
+   "description": "Creates a snapshot of the application's state data.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes the specified application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--create-timestamp",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-cloud-watch-logging-option",
+   "description": "Deletes an Amazon CloudWatch log stream from an SQL-based Kinesis Data Analytics application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cloud-watch-logging-option-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditional-token",
+     "args": {}
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application-input-processing-configuration",
+   "description": "Deletes an InputProcessingConfiguration from an input.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-output",
+   "description": "Deletes the output destination configuration from your SQL-based Kinesis Data Analytics application's configuration.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-reference-data-source",
+   "description": "Deletes a reference data source configuration from the specified SQL-based Kinesis Data Analytics application's configuration.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reference-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-snapshot",
+   "description": "Deletes a snapshot of application state.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-creation-timestamp",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application-vpc-configuration",
+   "description": "Removes a VPC configuration from a Managed Service for Apache Flink application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditional-token",
+     "args": {}
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-application",
+   "description": "Returns information about a specific Managed Service for Apache Flink application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-additional-details"
+    },
+    {
+     "name": "--no-include-additional-details"
+    }
+   ]
+  },
+  {
+   "name": "describe-application-operation",
+   "description": "Provides a detailed description of a specified application operation.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-application-snapshot",
+   "description": "Returns information about a snapshot of application state data.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-application-version",
+   "description": "Provides a detailed description of a specified version of the application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "discover-input-schema",
+   "description": "Infers a schema for a SQL-based Kinesis Data Analytics application by evaluating sample records on the specified streaming source (Kinesis data stream or Kinesis Data Firehose delivery stream) or Amazon S3 object.",
+   "options": [
+    {
+     "name": "--input-processing-configuration",
+     "args": {}
+    },
+    {
+     "name": "--input-starting-position-configuration",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--s3-configuration",
+     "args": {}
+    },
+    {
+     "name": "--service-execution-role",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-application-operations",
+   "description": "Lists all the operations performed for the specified application such as UpdateApplication, StartApplication etc.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--operation",
+     "args": {}
+    },
+    {
+     "name": "--operation-status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "CANCELLED",
+       "SUCCESSFUL",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-application-snapshots",
+   "description": "Lists information about the current application snapshots.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-application-versions",
+   "description": "Lists all the versions for the specified application, including versions that were rolled back.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Returns a list of Managed Service for Apache Flink applications in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves the list of key-value tags assigned to the application.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "rollback-application",
+   "description": "Reverts the application to the previous running version.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-application",
+   "description": "Starts the specified Managed Service for Apache Flink application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-application",
+   "description": "Stops the application from processing data.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more key-value tags to a Managed Service for Apache Flink application.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from a Managed Service for Apache Flink application.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates an existing Managed Service for Apache Flink application.",
+   "options": [
+    {
+     "name": "--application-configuration-update",
+     "args": {}
+    },
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cloud-watch-logging-option-updates",
+     "args": {}
+    },
+    {
+     "name": "--conditional-token",
+     "args": {}
+    },
+    {
+     "name": "--current-application-version-id",
+     "args": {}
+    },
+    {
+     "name": "--run-configuration-update",
+     "args": {}
+    },
+    {
+     "name": "--runtime-environment-update",
+     "args": {
+      "suggestions": [
+       "SQL-1_0",
+       "FLINK-1_6",
+       "FLINK-1_8",
+       "ZEPPELIN-FLINK-1_0",
+       "FLINK-1_11",
+       "FLINK-1_13",
+       "ZEPPELIN-FLINK-2_0",
+       "FLINK-1_15",
+       "ZEPPELIN-FLINK-3_0",
+       "FLINK-1_18",
+       "FLINK-1_19",
+       "FLINK-1_20",
+       "FLINK-2_2",
+       "FLINK-2_3"
+      ]
+     }
+    },
+    {
+     "name": "--service-execution-role-update",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-application-maintenance-configuration",
+   "description": "Updates the maintenance configuration of the Managed Service for Apache Flink application.",
+   "options": [
+    {
+     "name": "--application-maintenance-configuration-update",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

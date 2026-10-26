@@ -1,0 +1,338 @@
+{
+ "name": "chime-sdk-meetings",
+ "description": "The Amazon Chime SDK meetings APIs in this section allow software developers to create Amazon Chime SDK meetings, set the Amazon Web Services Regions for meetings, create and manage users, and send and receive meeting notifications.",
+ "subcommands": [
+  {
+   "name": "batch-create-attendee",
+   "description": "Creates up to 100 attendees for an active Amazon Chime SDK meeting.",
+   "options": [
+    {
+     "name": "--attendees",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-attendee-capabilities-except",
+   "description": "Updates AttendeeCapabilities except the capabilities listed in an ExcludedAttendeeIds table.",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--excluded-attendee-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-attendee",
+   "description": "Creates a new attendee for an active Amazon Chime SDK meeting.",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--external-user-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-meeting",
+   "description": "Creates a new Amazon Chime SDK meeting in the specified media Region with no initial attendees.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--external-meeting-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-placement-network-type",
+     "args": {
+      "suggestions": [
+       "Ipv4Only",
+       "DualStack"
+      ]
+     }
+    },
+    {
+     "name": "--media-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meeting-features",
+     "args": {}
+    },
+    {
+     "name": "--meeting-host-id",
+     "args": {}
+    },
+    {
+     "name": "--notifications-configuration",
+     "args": {}
+    },
+    {
+     "name": "--primary-meeting-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tenant-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-meeting-with-attendees",
+   "description": "Creates a new Amazon Chime SDK meeting in the specified media Region, with attendees.",
+   "options": [
+    {
+     "name": "--attendees",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--external-meeting-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-placement-network-type",
+     "args": {
+      "suggestions": [
+       "Ipv4Only",
+       "DualStack"
+      ]
+     }
+    },
+    {
+     "name": "--media-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meeting-features",
+     "args": {}
+    },
+    {
+     "name": "--meeting-host-id",
+     "args": {}
+    },
+    {
+     "name": "--notifications-configuration",
+     "args": {}
+    },
+    {
+     "name": "--primary-meeting-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tenant-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-attendee",
+   "description": "Deletes an attendee from the specified Amazon Chime SDK meeting and deletes their JoinToken.",
+   "options": [
+    {
+     "name": "--attendee-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-meeting",
+   "description": "Deletes the specified Amazon Chime SDK meeting.",
+   "options": [
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-attendee",
+   "description": "Gets the Amazon Chime SDK attendee details for a specified meeting ID and attendee ID.",
+   "options": [
+    {
+     "name": "--attendee-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-meeting",
+   "description": "Gets the Amazon Chime SDK meeting details for the specified meeting ID.",
+   "options": [
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-attendees",
+   "description": "Lists the attendees for the specified Amazon Chime SDK meeting.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of the tags available for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-meeting-transcription",
+   "description": "Starts transcription for the specified meetingId.",
+   "options": [
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transcription-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-meeting-transcription",
+   "description": "Stops transcription for the specified meetingId.",
+   "options": [
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "The resource that supports tags.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-attendee-capabilities",
+   "description": "The capabilities that you want to update.",
+   "options": [
+    {
+     "name": "--attendee-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capabilities",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meeting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

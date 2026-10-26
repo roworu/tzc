@@ -1,0 +1,1287 @@
+{
+ "name": "workdocs",
+ "description": "The Amazon WorkDocs API is designed for the following use cases: File Migration: File migration applications are supported for users who want to migrate their files from an on-premises or off-premises file system or service.",
+ "subcommands": [
+  {
+   "name": "abort-document-version-upload",
+   "description": "Aborts the upload of the specified document version that was previously initiated by InitiateDocumentVersionUpload.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "activate-user",
+   "description": "Activates the specified user.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-resource-permissions",
+   "description": "Creates a set of permissions for the specified folder or document.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--notification-options",
+     "args": {}
+    },
+    {
+     "name": "--principals",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-comment",
+   "description": "Adds a new comment to the specified document version.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-notify-collaborators"
+    },
+    {
+     "name": "--notify-collaborators"
+    },
+    {
+     "name": "--parent-id",
+     "args": {}
+    },
+    {
+     "name": "--text",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thread-id",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--visibility",
+     "args": {
+      "suggestions": [
+       "PUBLIC",
+       "PRIVATE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-custom-metadata",
+   "description": "Adds one or more custom properties to the specified resource (a folder, document, or version).",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--custom-metadata",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-folder",
+   "description": "Creates a folder with the specified name and parent folder.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--parent-folder-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-labels",
+   "description": "Adds the specified list of labels to the given resource (a document or folder)",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--labels",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-notification-subscription",
+   "description": "Configure Amazon WorkDocs to use Amazon SNS notifications.",
+   "options": [
+    {
+     "name": "--notification-endpoint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "HTTPS",
+       "SQS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--subscription-type",
+     "args": {
+      "suggestions": [
+       "ALL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "Creates a user in a Simple AD or Microsoft AD directory.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--email-address",
+     "args": {}
+    },
+    {
+     "name": "--given-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-id",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-rule",
+     "args": {}
+    },
+    {
+     "name": "--surname",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--time-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deactivate-user",
+   "description": "Deactivates the specified user, which revokes the user's access to Amazon WorkDocs.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-comment",
+   "description": "Deletes the specified comment from the document version.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--comment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-metadata",
+   "description": "Deletes custom metadata from the specified resource.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--delete-all"
+    },
+    {
+     "name": "--keys",
+     "args": {}
+    },
+    {
+     "name": "--no-delete-all"
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-document",
+   "description": "Permanently deletes the specified document and its associated metadata.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-document-version",
+   "description": "Deletes a specific version of a document.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--delete-prior-versions",
+     "priority": 75
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-delete-prior-versions"
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-folder",
+   "description": "Permanently deletes the specified folder and its contents.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--folder-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-folder-contents",
+   "description": "Deletes the contents of the specified folder.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--folder-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-labels",
+   "description": "Deletes the specified list of labels from a resource.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--delete-all"
+    },
+    {
+     "name": "--labels",
+     "args": {}
+    },
+    {
+     "name": "--no-delete-all"
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-notification-subscription",
+   "description": "Deletes the specified subscription from the specified organization.",
+   "options": [
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user",
+   "description": "Deletes the specified user from a Simple AD or Microsoft AD directory.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-activities",
+   "description": "Describes the user activities in a specified time period.",
+   "options": [
+    {
+     "name": "--activity-types",
+     "args": {}
+    },
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--include-indirect-activities"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-indirect-activities"
+    },
+    {
+     "name": "--organization-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-comments",
+   "description": "List all the comments for the specified document version.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-document-versions",
+   "description": "Retrieves the document versions for the specified document.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fields",
+     "args": {}
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-folder-contents",
+   "description": "Describes the contents of the specified folder, including its documents and subfolders.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--folder-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {
+      "suggestions": [
+       "DATE",
+       "NAME"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "DOCUMENT",
+       "FOLDER"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-groups",
+   "description": "Describes the groups specified by the query.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-query",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-notification-subscriptions",
+   "description": "Lists the specified notification subscriptions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-permissions",
+   "description": "Describes the permissions of a specified resource.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-root-folders",
+   "description": "Describes the current user's special folders; the RootFolder and the RecycleBin.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-users",
+   "description": "Describes the specified users.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--fields",
+     "args": {}
+    },
+    {
+     "name": "--include",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "ACTIVE_PENDING"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--organization-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {
+      "suggestions": [
+       "USER_NAME",
+       "FULL_NAME",
+       "STORAGE_LIMIT",
+       "USER_STATUS",
+       "STORAGE_USED"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-ids",
+     "args": {}
+    },
+    {
+     "name": "--user-query",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-current-user",
+   "description": "Retrieves details of the current user for whom the authentication token was generated.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-document",
+   "description": "Retrieves details of a document.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-custom-metadata"
+    },
+    {
+     "name": "--no-include-custom-metadata"
+    }
+   ]
+  },
+  {
+   "name": "get-document-path",
+   "description": "Retrieves the path information (the hierarchy from the root folder) for the requested document.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fields",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-document-version",
+   "description": "Retrieves version metadata for the specified document.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fields",
+     "args": {}
+    },
+    {
+     "name": "--include-custom-metadata"
+    },
+    {
+     "name": "--no-include-custom-metadata"
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-folder",
+   "description": "Retrieves the metadata of the specified folder.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--folder-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-custom-metadata"
+    },
+    {
+     "name": "--no-include-custom-metadata"
+    }
+   ]
+  },
+  {
+   "name": "get-folder-path",
+   "description": "Retrieves the path information (the hierarchy from the root folder) for the specified folder.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--fields",
+     "args": {}
+    },
+    {
+     "name": "--folder-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resources",
+   "description": "Retrieves a collection of resources, including folders and documents.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--collection-type",
+     "args": {
+      "suggestions": [
+       "SHARED_WITH_ME"
+      ]
+     }
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "initiate-document-version-upload",
+   "description": "Creates a new document object and version object.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--content-created-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--content-modified-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--document-size-in-bytes",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--parent-folder-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-all-resource-permissions",
+   "description": "Removes all the permissions from the specified resource.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-resource-permission",
+   "description": "Removes the permission for the specified principal from the specified resource.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--principal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP",
+       "INVITE",
+       "ANONYMOUS",
+       "ORGANIZATION"
+      ]
+     }
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-document-versions",
+   "description": "Recovers a deleted version of an Amazon WorkDocs document.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-resources",
+   "description": "Searches metadata and the content of folders, documents, document versions, and comments.",
+   "options": [
+    {
+     "name": "--additional-response-fields",
+     "args": {}
+    },
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order-by",
+     "args": {}
+    },
+    {
+     "name": "--organization-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-scopes",
+     "args": {}
+    },
+    {
+     "name": "--query-text",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-document",
+   "description": "Updates the specified attributes of a document.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--parent-folder-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-state",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "RESTORING",
+       "RECYCLING",
+       "RECYCLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-document-version",
+   "description": "Changes the status of the document version to ACTIVE.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-status",
+     "args": {
+      "suggestions": [
+       "ACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-folder",
+   "description": "Updates the specified attributes of the specified folder.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--folder-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--parent-folder-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-state",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "RESTORING",
+       "RECYCLING",
+       "RECYCLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-user",
+   "description": "Updates the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon WorkDocs site.",
+   "options": [
+    {
+     "name": "--authentication-token",
+     "args": {}
+    },
+    {
+     "name": "--given-name",
+     "args": {}
+    },
+    {
+     "name": "--grant-poweruser-privileges",
+     "args": {
+      "suggestions": [
+       "TRUE",
+       "FALSE"
+      ]
+     }
+    },
+    {
+     "name": "--locale",
+     "args": {
+      "suggestions": [
+       "en",
+       "fr",
+       "ko",
+       "de",
+       "es",
+       "ja",
+       "ru",
+       "zh_CN",
+       "zh_TW",
+       "pt_BR",
+       "default"
+      ]
+     }
+    },
+    {
+     "name": "--storage-rule",
+     "args": {}
+    },
+    {
+     "name": "--surname",
+     "args": {}
+    },
+    {
+     "name": "--time-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "ADMIN",
+       "POWERUSER",
+       "MINIMALUSER",
+       "WORKSPACESUSER"
+      ]
+     }
+    },
+    {
+     "name": "--user-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

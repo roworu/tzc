@@ -1,0 +1,851 @@
+{
+ "name": "mediaconvert",
+ "description": "AWS Elemental MediaConvert",
+ "subcommands": [
+  {
+   "name": "associate-certificate",
+   "description": "Associates an AWS Certificate Manager (ACM) Amazon Resource Name (ARN) with AWS Elemental MediaConvert.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-job",
+   "description": "Permanently cancel a job.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-job",
+   "description": "Create a new transcoding job.",
+   "options": [
+    {
+     "name": "--acceleration-settings",
+     "args": {}
+    },
+    {
+     "name": "--billing-tags-source",
+     "args": {
+      "suggestions": [
+       "QUEUE",
+       "PRESET",
+       "JOB_TEMPLATE",
+       "JOB"
+      ]
+     }
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--hop-destinations",
+     "args": {}
+    },
+    {
+     "name": "--job-engine-version",
+     "args": {}
+    },
+    {
+     "name": "--job-template",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--queue",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--simulate-reserved-queue",
+     "args": {
+      "suggestions": [
+       "DISABLED",
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--status-update-interval",
+     "args": {
+      "suggestions": [
+       "SECONDS_10",
+       "SECONDS_12",
+       "SECONDS_15",
+       "SECONDS_20",
+       "SECONDS_30",
+       "SECONDS_60",
+       "SECONDS_120",
+       "SECONDS_180",
+       "SECONDS_240",
+       "SECONDS_300",
+       "SECONDS_360",
+       "SECONDS_420",
+       "SECONDS_480",
+       "SECONDS_540",
+       "SECONDS_600"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-metadata",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-job-template",
+   "description": "Create a new job template.",
+   "options": [
+    {
+     "name": "--acceleration-settings",
+     "args": {}
+    },
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--hop-destinations",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--queue",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status-update-interval",
+     "args": {
+      "suggestions": [
+       "SECONDS_10",
+       "SECONDS_12",
+       "SECONDS_15",
+       "SECONDS_20",
+       "SECONDS_30",
+       "SECONDS_60",
+       "SECONDS_120",
+       "SECONDS_180",
+       "SECONDS_240",
+       "SECONDS_300",
+       "SECONDS_360",
+       "SECONDS_420",
+       "SECONDS_480",
+       "SECONDS_540",
+       "SECONDS_600"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-preset",
+   "description": "Create a new preset.",
+   "options": [
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-queue",
+   "description": "Create a new transcoding queue.",
+   "options": [
+    {
+     "name": "--concurrent-jobs",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--maximum-concurrent-feeds",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "ON_DEMAND",
+       "RESERVED"
+      ]
+     }
+    },
+    {
+     "name": "--reservation-plan-settings",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "PAUSED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-resource-share",
+   "description": "Create a new resource share request for MediaConvert resources with AWS Support.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--support-case-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-job-template",
+   "description": "Permanently delete a job template you have created.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy",
+   "description": "Permanently delete a policy that you created."
+  },
+  {
+   "name": "delete-preset",
+   "description": "Permanently delete a preset you have created.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-queue",
+   "description": "Permanently delete a queue you have created.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-endpoints",
+   "description": "Send a request with an empty body to the regional API endpoint to get your account API endpoint.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "GET_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-certificate",
+   "description": "Removes an association between the Amazon Resource Name (ARN) of an AWS Certificate Manager (ACM) certificate and an AWS Elemental MediaConvert resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job",
+   "description": "Retrieve the JSON for a specific transcoding job.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job-template",
+   "description": "Retrieve the JSON for a specific job template.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-jobs-query-results",
+   "description": "Retrieve a JSON array of up to twenty of your most recent jobs matched by a jobs query.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy",
+   "description": "Retrieve the JSON for your policy."
+  },
+  {
+   "name": "get-preset",
+   "description": "Retrieve the JSON for a specific preset.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-queue",
+   "description": "Retrieve the JSON for a specific queue.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-job-templates",
+   "description": "Retrieve a JSON array of up to twenty of your job templates.",
+   "options": [
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--list-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "CREATION_DATE",
+       "SYSTEM"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "Retrieve a JSON array of up to twenty of your most recently created jobs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--queue",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "PROGRESSING",
+       "COMPLETE",
+       "CANCELED",
+       "ERROR"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-presets",
+   "description": "Retrieve a JSON array of up to twenty of your presets.",
+   "options": [
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--list-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "CREATION_DATE",
+       "SYSTEM"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-queues",
+   "description": "Retrieve a JSON array of up to twenty of your queues.",
+   "options": [
+    {
+     "name": "--list-by",
+     "args": {
+      "suggestions": [
+       "NAME",
+       "CREATION_DATE"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieve the tags for a MediaConvert resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-versions",
+   "description": "Retrieve a JSON array of all available Job engine versions and the date they expire.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "probe",
+   "description": "Use Probe to obtain detailed information about your input media files.",
+   "options": [
+    {
+     "name": "--input-files",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-policy",
+   "description": "Create or change your policy.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-jobs",
+   "description": "Retrieve a JSON array that includes job details for up to twenty of your most recent jobs.",
+   "options": [
+    {
+     "name": "--input-file",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--queue",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "PROGRESSING",
+       "COMPLETE",
+       "CANCELED",
+       "ERROR"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "start-jobs-query",
+   "description": "Start an asynchronous jobs query using the provided filters.",
+   "options": [
+    {
+     "name": "--filter-list",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add tags to a MediaConvert queue, preset, job, or job template.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove tags from a MediaConvert queue, preset, job, or job template.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-job-template",
+   "description": "Modify one of your existing job templates.",
+   "options": [
+    {
+     "name": "--acceleration-settings",
+     "args": {}
+    },
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--hop-destinations",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--queue",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--status-update-interval",
+     "args": {
+      "suggestions": [
+       "SECONDS_10",
+       "SECONDS_12",
+       "SECONDS_15",
+       "SECONDS_20",
+       "SECONDS_30",
+       "SECONDS_60",
+       "SECONDS_120",
+       "SECONDS_180",
+       "SECONDS_240",
+       "SECONDS_300",
+       "SECONDS_360",
+       "SECONDS_420",
+       "SECONDS_480",
+       "SECONDS_540",
+       "SECONDS_600"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-preset",
+   "description": "Modify one of your existing presets.",
+   "options": [
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-queue",
+   "description": "Modify one of your existing queues.",
+   "options": [
+    {
+     "name": "--concurrent-jobs",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--maximum-concurrent-feeds",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reservation-plan-settings",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "PAUSED"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

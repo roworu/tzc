@@ -1,0 +1,1789 @@
+{
+ "name": "transfer",
+ "description": "Transfer Family is a fully managed service that enables the transfer of files over the File Transfer Protocol (FTP), File Transfer Protocol over SSL (FTPS), or Secure Shell (SSH) File Transfer Protocol (SFTP) directly into and out of Amazon Simple Storage Service (Amazon S3) or Amazon EFS.",
+ "subcommands": [
+  {
+   "name": "create-access",
+   "description": "Used by administrators to choose which groups in the directory should have access to upload and download files over the enabled protocols using Transfer Family.",
+   "options": [
+    {
+     "name": "--external-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--home-directory",
+     "args": {}
+    },
+    {
+     "name": "--home-directory-mappings",
+     "args": {}
+    },
+    {
+     "name": "--home-directory-type",
+     "args": {
+      "suggestions": [
+       "PATH",
+       "LOGICAL"
+      ]
+     }
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--posix-profile",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-agreement",
+   "description": "Creates an agreement.",
+   "options": [
+    {
+     "name": "--access-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--base-directory",
+     "args": {}
+    },
+    {
+     "name": "--custom-directories",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--enforce-message-signing",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--local-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--partner-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--preserve-filename",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-connector",
+   "description": "Creates the connector, which captures the parameters for a connection for the AS2 or SFTP protocol.",
+   "options": [
+    {
+     "name": "--access-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--as2-config",
+     "args": {}
+    },
+    {
+     "name": "--egress-config",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUALSTACK"
+      ]
+     }
+    },
+    {
+     "name": "--logging-role",
+     "args": {}
+    },
+    {
+     "name": "--security-policy-name",
+     "args": {}
+    },
+    {
+     "name": "--sftp-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-profile",
+   "description": "Creates the local or partner profile to use for AS2 transfers.",
+   "options": [
+    {
+     "name": "--as2-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-ids",
+     "args": {}
+    },
+    {
+     "name": "--profile-type",
+     "args": {
+      "suggestions": [
+       "LOCAL",
+       "PARTNER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-server",
+   "description": "Instantiates an auto-scaling virtual server based on the selected file transfer protocol in Amazon Web Services.",
+   "options": [
+    {
+     "name": "--certificate",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {
+      "suggestions": [
+       "S3",
+       "EFS"
+      ]
+     }
+    },
+    {
+     "name": "--endpoint-details",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {
+      "suggestions": [
+       "PUBLIC",
+       "VPC",
+       "VPC_ENDPOINT"
+      ]
+     }
+    },
+    {
+     "name": "--host-key",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-details",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-type",
+     "args": {
+      "suggestions": [
+       "SERVICE_MANAGED",
+       "API_GATEWAY",
+       "AWS_DIRECTORY_SERVICE",
+       "AWS_LAMBDA"
+      ]
+     }
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUALSTACK"
+      ]
+     }
+    },
+    {
+     "name": "--logging-role",
+     "args": {}
+    },
+    {
+     "name": "--post-authentication-login-banner",
+     "args": {}
+    },
+    {
+     "name": "--pre-authentication-login-banner",
+     "args": {}
+    },
+    {
+     "name": "--protocol-details",
+     "args": {}
+    },
+    {
+     "name": "--protocols",
+     "args": {}
+    },
+    {
+     "name": "--s3-storage-options",
+     "args": {}
+    },
+    {
+     "name": "--security-policy-name",
+     "args": {}
+    },
+    {
+     "name": "--structured-log-destinations",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workflow-details",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "Creates a user and associates them with an existing file transfer protocol-enabled server.",
+   "options": [
+    {
+     "name": "--home-directory",
+     "args": {}
+    },
+    {
+     "name": "--home-directory-mappings",
+     "args": {}
+    },
+    {
+     "name": "--home-directory-type",
+     "args": {
+      "suggestions": [
+       "PATH",
+       "LOGICAL"
+      ]
+     }
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--posix-profile",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ssh-public-key-body",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-web-app",
+   "description": "Creates a web app based on specified parameters, and returns the ID for the new web app.",
+   "options": [
+    {
+     "name": "--access-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-details",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--web-app-endpoint-policy",
+     "args": {
+      "suggestions": [
+       "FIPS",
+       "STANDARD"
+      ]
+     }
+    },
+    {
+     "name": "--web-app-units",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-workflow",
+   "description": "Allows you to create a workflow with specified steps and step details the workflow invokes after file transfer completes.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--on-exception-steps",
+     "args": {}
+    },
+    {
+     "name": "--steps",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-access",
+   "description": "Allows you to delete the access specified in the ServerID and ExternalID parameters.",
+   "options": [
+    {
+     "name": "--external-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-agreement",
+   "description": "Delete the agreement that's specified in the provided AgreementId.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-certificate",
+   "description": "Deletes the certificate that's specified in the CertificateId parameter.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connector",
+   "description": "Deletes the connector that's specified in the provided ConnectorId.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-host-key",
+   "description": "Deletes the host key that's specified in the HostKeyId parameter.",
+   "options": [
+    {
+     "name": "--host-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-profile",
+   "description": "Deletes the profile that's specified in the ProfileId parameter.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-server",
+   "description": "Deletes the file transfer protocol-enabled server that you specify.",
+   "options": [
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ssh-public-key",
+   "description": "Deletes a user's Secure Shell (SSH) public key.",
+   "options": [
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ssh-public-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user",
+   "description": "Deletes the user belonging to a file transfer protocol-enabled server you specify.",
+   "options": [
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-web-app",
+   "description": "Deletes the specified web app.",
+   "options": [
+    {
+     "name": "--web-app-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-web-app-customization",
+   "description": "Deletes the WebAppCustomization object that corresponds to the web app ID specified.",
+   "options": [
+    {
+     "name": "--web-app-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow",
+   "description": "Deletes the specified workflow.",
+   "options": [
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-access",
+   "description": "Describes the access that is assigned to the specific file transfer protocol-enabled server, as identified by its ServerId property and its ExternalId.",
+   "options": [
+    {
+     "name": "--external-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-agreement",
+   "description": "Describes the agreement that's identified by the AgreementId.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-certificate",
+   "description": "Describes the certificate that's identified by the CertificateId.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-connector",
+   "description": "Describes the connector that's identified by the ConnectorId.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-execution",
+   "description": "You can use DescribeExecution to check the details of the execution of the specified workflow.",
+   "options": [
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-host-key",
+   "description": "Returns the details of the host key that's specified by the HostKeyId and ServerId.",
+   "options": [
+    {
+     "name": "--host-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-profile",
+   "description": "Returns the details of the profile that's specified by the ProfileId.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-security-policy",
+   "description": "Describes the security policy that is attached to your server or SFTP connector.",
+   "options": [
+    {
+     "name": "--security-policy-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-server",
+   "description": "Describes a file transfer protocol-enabled server that you specify by passing the ServerId parameter.",
+   "options": [
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-user",
+   "description": "Describes the user assigned to the specific file transfer protocol-enabled server, as identified by its ServerId property.",
+   "options": [
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-web-app",
+   "description": "Describes the web app that's identified by WebAppId.",
+   "options": [
+    {
+     "name": "--web-app-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-web-app-customization",
+   "description": "Describes the web app customization object that's identified by WebAppId.",
+   "options": [
+    {
+     "name": "--web-app-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-workflow",
+   "description": "Describes the specified workflow.",
+   "options": [
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-certificate",
+   "description": "Imports the signing and encryption certificates that you need to create local (AS2) profiles and partner profiles.",
+   "options": [
+    {
+     "name": "--active-date",
+     "args": {}
+    },
+    {
+     "name": "--certificate",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-chain",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--inactive-date",
+     "args": {}
+    },
+    {
+     "name": "--private-key",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--usage",
+     "args": {
+      "suggestions": [
+       "SIGNING",
+       "ENCRYPTION",
+       "TLS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-host-key",
+   "description": "Adds a host key to the server that's specified by the ServerId parameter.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--host-key-body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-ssh-public-key",
+   "description": "Adds a Secure Shell (SSH) public key to a Transfer Family user identified by a UserName value assigned to the specific file transfer protocol-enabled server, identified by ServerId.",
+   "options": [
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ssh-public-key-body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-accesses",
+   "description": "Lists the details for all the accesses you have on your server.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-agreements",
+   "description": "Returns a list of the agreements for the server that's identified by the ServerId that you supply.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-certificates",
+   "description": "Returns a list of the current certificates that have been imported into Transfer Family.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connectors",
+   "description": "Lists the connectors for the specified Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-executions",
+   "description": "Lists all in-progress executions for the specified workflow.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-file-transfer-results",
+   "description": "Returns real-time updates and detailed information on the status of each individual file being transferred in a specific file transfer operation.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--transfer-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-host-keys",
+   "description": "Returns a list of host keys for the server that's specified by the ServerId parameter.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-profiles",
+   "description": "Returns a list of the profiles for your system.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--profile-type",
+     "args": {
+      "suggestions": [
+       "LOCAL",
+       "PARTNER"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-security-policies",
+   "description": "Lists the security policies that are attached to your servers and SFTP connectors.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-servers",
+   "description": "Lists the file transfer protocol-enabled servers that are associated with your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-users",
+   "description": "Lists the users for a file transfer protocol-enabled server that you specify by passing the ServerId parameter.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-web-apps",
+   "description": "Lists all web apps associated with your Amazon Web Services account for your current region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflows",
+   "description": "Lists all workflows associated with your Amazon Web Services account for your current region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-workflow-step-state",
+   "description": "Sends a callback for asynchronous custom steps.",
+   "options": [
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "SUCCESS",
+       "FAILURE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-directory-listing",
+   "description": "Retrieves a list of the contents of a directory from a remote SFTP server.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--output-directory-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remote-directory-path",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-file-transfer",
+   "description": "Begins a file transfer between local Amazon Web Services storage and a remote AS2 or SFTP server.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-http-headers",
+     "args": {}
+    },
+    {
+     "name": "--local-directory-path",
+     "args": {}
+    },
+    {
+     "name": "--remote-directory-path",
+     "args": {}
+    },
+    {
+     "name": "--retrieve-file-paths",
+     "args": {}
+    },
+    {
+     "name": "--send-file-paths",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-remote-delete",
+   "description": "Deletes a file or directory on the remote SFTP server.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delete-path",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-remote-move",
+   "description": "Moves or renames a file or directory on the remote SFTP server.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-path",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-server",
+   "description": "Changes the state of a file transfer protocol-enabled server from OFFLINE to ONLINE.",
+   "options": [
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-server",
+   "description": "Changes the state of a file transfer protocol-enabled server from ONLINE to OFFLINE.",
+   "options": [
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Attaches a key-value pair to a resource, as identified by its Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-connection",
+   "description": "Tests whether your SFTP connector is set up successfully.",
+   "options": [
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-identity-provider",
+   "description": "If the IdentityProviderType of a file transfer protocol-enabled server is AWS_DIRECTORY_SERVICE or API_Gateway, tests whether your identity provider is set up successfully.",
+   "options": [
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-protocol",
+     "args": {
+      "suggestions": [
+       "SFTP",
+       "FTP",
+       "FTPS",
+       "AS2"
+      ]
+     }
+    },
+    {
+     "name": "--source-ip",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-password",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Detaches a key-value pair from a resource, as identified by its Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-access",
+   "description": "Allows you to update parameters for the access specified in the ServerID and ExternalID parameters.",
+   "options": [
+    {
+     "name": "--external-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--home-directory",
+     "args": {}
+    },
+    {
+     "name": "--home-directory-mappings",
+     "args": {}
+    },
+    {
+     "name": "--home-directory-type",
+     "args": {
+      "suggestions": [
+       "PATH",
+       "LOGICAL"
+      ]
+     }
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--posix-profile",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {}
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-agreement",
+   "description": "Updates some of the parameters for an existing agreement.",
+   "options": [
+    {
+     "name": "--access-role",
+     "args": {}
+    },
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--base-directory",
+     "args": {}
+    },
+    {
+     "name": "--custom-directories",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--enforce-message-signing",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--local-profile-id",
+     "args": {}
+    },
+    {
+     "name": "--partner-profile-id",
+     "args": {}
+    },
+    {
+     "name": "--preserve-filename",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-certificate",
+   "description": "Updates the active and inactive dates for a certificate.",
+   "options": [
+    {
+     "name": "--active-date",
+     "args": {}
+    },
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--inactive-date",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-connector",
+   "description": "Updates some of the parameters for an existing connector.",
+   "options": [
+    {
+     "name": "--access-role",
+     "args": {}
+    },
+    {
+     "name": "--as2-config",
+     "args": {}
+    },
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--egress-config",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUALSTACK"
+      ]
+     }
+    },
+    {
+     "name": "--logging-role",
+     "args": {}
+    },
+    {
+     "name": "--security-policy-name",
+     "args": {}
+    },
+    {
+     "name": "--sftp-config",
+     "args": {}
+    },
+    {
+     "name": "--url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-host-key",
+   "description": "Updates the description for the host key that's specified by the ServerId and HostKeyId parameters.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--host-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-profile",
+   "description": "Updates some of the parameters for an existing profile.",
+   "options": [
+    {
+     "name": "--certificate-ids",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-server",
+   "description": "Updates the file transfer protocol-enabled server's properties after that server has been created.",
+   "options": [
+    {
+     "name": "--certificate",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-details",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {
+      "suggestions": [
+       "PUBLIC",
+       "VPC",
+       "VPC_ENDPOINT"
+      ]
+     }
+    },
+    {
+     "name": "--host-key",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-details",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-type",
+     "args": {
+      "suggestions": [
+       "SERVICE_MANAGED",
+       "API_GATEWAY",
+       "AWS_DIRECTORY_SERVICE",
+       "AWS_LAMBDA"
+      ]
+     }
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUALSTACK"
+      ]
+     }
+    },
+    {
+     "name": "--logging-role",
+     "args": {}
+    },
+    {
+     "name": "--post-authentication-login-banner",
+     "args": {}
+    },
+    {
+     "name": "--pre-authentication-login-banner",
+     "args": {}
+    },
+    {
+     "name": "--protocol-details",
+     "args": {}
+    },
+    {
+     "name": "--protocols",
+     "args": {}
+    },
+    {
+     "name": "--s3-storage-options",
+     "args": {}
+    },
+    {
+     "name": "--security-policy-name",
+     "args": {}
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--structured-log-destinations",
+     "args": {}
+    },
+    {
+     "name": "--workflow-details",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-user",
+   "description": "Assigns new properties to a user.",
+   "options": [
+    {
+     "name": "--home-directory",
+     "args": {}
+    },
+    {
+     "name": "--home-directory-mappings",
+     "args": {}
+    },
+    {
+     "name": "--home-directory-type",
+     "args": {
+      "suggestions": [
+       "PATH",
+       "LOGICAL"
+      ]
+     }
+    },
+    {
+     "name": "--policy",
+     "args": {}
+    },
+    {
+     "name": "--posix-profile",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {}
+    },
+    {
+     "name": "--server-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-web-app",
+   "description": "Assigns new properties to a web app.",
+   "options": [
+    {
+     "name": "--access-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-details",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-details",
+     "args": {}
+    },
+    {
+     "name": "--web-app-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--web-app-units",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-web-app-customization",
+   "description": "Assigns new customization properties to a web app.",
+   "options": [
+    {
+     "name": "--favicon-file",
+     "args": {}
+    },
+    {
+     "name": "--logo-file",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {}
+    },
+    {
+     "name": "--web-app-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "server-offline",
+     "description": "Wait until JMESPath query Server.State returns OFFLINE when polling with ``describe-server``.",
+     "options": [
+      {
+       "name": "--server-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "server-online",
+     "description": "Wait until JMESPath query Server.State returns ONLINE when polling with ``describe-server``.",
+     "options": [
+      {
+       "name": "--server-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

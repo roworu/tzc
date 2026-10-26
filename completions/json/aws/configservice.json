@@ -1,0 +1,2057 @@
+{
+ "name": "configservice",
+ "description": "Config Config provides a way to keep track of the configurations of all the Amazon Web Services resources associated with your Amazon Web Services account.",
+ "subcommands": [
+  {
+   "name": "associate-resource-types",
+   "description": "Adds all resource types specified in the ResourceTypes list to the RecordingGroup of specified configuration recorder and includes those resource types when recording.",
+   "options": [
+    {
+     "name": "--configuration-recorder-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-types",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-aggregate-resource-config",
+   "description": "Returns the current configuration items for resources that are present in your Config aggregator.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-resource-config",
+   "description": "Returns the BaseConfigurationItem for one or more requested resources.",
+   "options": [
+    {
+     "name": "--resource-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-aggregation-authorization",
+   "description": "Deletes the authorization granted to the specified configuration aggregator account in a specified region.",
+   "options": [
+    {
+     "name": "--authorized-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorized-aws-region",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-config-rule",
+   "description": "Deletes the specified Config rule and all of its evaluation results.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-configuration-aggregator",
+   "description": "Deletes the specified configuration aggregator and the aggregated data associated with the aggregator.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-configuration-recorder",
+   "description": "Deletes the customer managed configuration recorder.",
+   "options": [
+    {
+     "name": "--configuration-recorder-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-conformance-pack",
+   "description": "Deletes the specified conformance pack and all the Config rules, remediation actions, and all evaluation results within that conformance pack.",
+   "options": [
+    {
+     "name": "--conformance-pack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connector",
+   "description": "Deletes the specified connector.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-delivery-channel",
+   "description": "Deletes the delivery channel.",
+   "options": [
+    {
+     "name": "--delivery-channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-evaluation-results",
+   "description": "Deletes the evaluation results for the specified Config rule.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-organization-config-rule",
+   "description": "Deletes the specified organization Config rule and all of its evaluation results from all member accounts in that organization.",
+   "options": [
+    {
+     "name": "--organization-config-rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-organization-conformance-pack",
+   "description": "Deletes the specified organization conformance pack and all of the Config rules and remediation actions from all member accounts in that organization.",
+   "options": [
+    {
+     "name": "--organization-conformance-pack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-pending-aggregation-request",
+   "description": "Deletes pending authorization requests for a specified aggregator account in a specified region.",
+   "options": [
+    {
+     "name": "--requester-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requester-aws-region",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-remediation-configuration",
+   "description": "Deletes the remediation configuration.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-remediation-exceptions",
+   "description": "Deletes one or more remediation exceptions mentioned in the resource keys.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-config",
+   "description": "Records the configuration state for a custom resource that has been deleted.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-retention-configuration",
+   "description": "Deletes the retention configuration.",
+   "options": [
+    {
+     "name": "--retention-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-linked-configuration-recorder",
+   "description": "Deletes an existing service-linked configuration recorder.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--service-principal",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-stored-query",
+   "description": "Deletes the stored query for a single Amazon Web Services account and a single Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--query-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deliver-config-snapshot",
+   "description": "Schedules delivery of a configuration snapshot to the Amazon S3 bucket in the specified delivery channel.",
+   "options": [
+    {
+     "name": "--delivery-channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-aggregate-compliance-by-config-rules",
+   "description": "Returns a list of compliant and noncompliant rules with the number of resources for compliant and noncompliant rules.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-aggregate-compliance-by-conformance-packs",
+   "description": "Returns a list of the existing and deleted conformance packs and their associated compliance status with the count of compliant and noncompliant Config rules within each conformance pack.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-aggregation-authorizations",
+   "description": "Returns a list of authorizations granted to various aggregator accounts and regions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-compliance-by-config-rule",
+   "description": "Indicates whether the specified Config rules are compliant.",
+   "options": [
+    {
+     "name": "--compliance-types",
+     "args": {}
+    },
+    {
+     "name": "--config-rule-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-compliance-by-resource",
+   "description": "Indicates whether the specified Amazon Web Services resources are compliant.",
+   "options": [
+    {
+     "name": "--compliance-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-config-rule-evaluation-status",
+   "description": "Returns status information for each of your Config managed rules.",
+   "options": [
+    {
+     "name": "--config-rule-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-config-rules",
+   "description": "Returns details about your Config rules.",
+   "options": [
+    {
+     "name": "--config-rule-names",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-configuration-aggregator-sources-status",
+   "description": "Returns status information for sources within an aggregator.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--update-status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-configuration-aggregators",
+   "description": "Returns the details of one or more configuration aggregators.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-configuration-recorder-status",
+   "description": "Returns the current status of the configuration recorder you specify as well as the status of the last recording event for the configuration recorders.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--configuration-recorder-names",
+     "args": {}
+    },
+    {
+     "name": "--service-principal",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-configuration-recorders",
+   "description": "Returns details for the configuration recorder you specify.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--configuration-recorder-names",
+     "args": {}
+    },
+    {
+     "name": "--service-principal",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-conformance-pack-compliance",
+   "description": "Returns compliance details for each rule in that conformance pack.",
+   "options": [
+    {
+     "name": "--conformance-pack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-conformance-pack-status",
+   "description": "Provides one or more conformance packs deployment status.",
+   "options": [
+    {
+     "name": "--conformance-pack-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-conformance-packs",
+   "description": "Returns a list of one or more conformance packs.",
+   "options": [
+    {
+     "name": "--conformance-pack-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-delivery-channel-status",
+   "description": "Returns the current status of the specified delivery channel.",
+   "options": [
+    {
+     "name": "--delivery-channel-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-delivery-channels",
+   "description": "Returns details about the specified delivery channel.",
+   "options": [
+    {
+     "name": "--delivery-channel-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-config-rule-statuses",
+   "description": "Provides organization Config rule deployment status for an organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-config-rule-names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-config-rules",
+   "description": "Returns a list of organization Config rules.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-config-rule-names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-conformance-pack-statuses",
+   "description": "Provides organization conformance pack deployment status for an organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-conformance-pack-names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-conformance-packs",
+   "description": "Returns a list of organization conformance packs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-conformance-pack-names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-pending-aggregation-requests",
+   "description": "Returns a list of all pending aggregation requests.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-remediation-configurations",
+   "description": "Returns the details of one or more remediation configurations.",
+   "options": [
+    {
+     "name": "--config-rule-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-remediation-exceptions",
+   "description": "Returns the details of one or more remediation exceptions.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-keys",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-remediation-execution-status",
+   "description": "Provides a detailed view of a Remediation Execution for a set of resources including state, timestamps for when steps for the remediation execution occur, and any error messages for steps that have failed.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-keys",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-retention-configurations",
+   "description": "Returns the details of one or more retention configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--retention-configuration-names",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-resource-types",
+   "description": "Removes all resource types specified in the ResourceTypes list from the RecordingGroup of configuration recorder and excludes these resource types when recording.",
+   "options": [
+    {
+     "name": "--configuration-recorder-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-types",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-aggregate-compliance-details-by-config-rule",
+   "description": "Returns the evaluation results for the specified Config rule for a specific resource in a rule.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--aws-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compliance-type",
+     "args": {
+      "suggestions": [
+       "COMPLIANT",
+       "NON_COMPLIANT",
+       "NOT_APPLICABLE",
+       "INSUFFICIENT_DATA"
+      ]
+     }
+    },
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-aggregate-config-rule-compliance-summary",
+   "description": "Returns the number of compliant and noncompliant rules for one or more accounts and regions in an aggregator.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--group-by-key",
+     "args": {
+      "suggestions": [
+       "ACCOUNT_ID",
+       "AWS_REGION"
+      ]
+     }
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-aggregate-conformance-pack-compliance-summary",
+   "description": "Returns the count of compliant and noncompliant conformance packs across all Amazon Web Services accounts and Amazon Web Services Regions in an aggregator.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--group-by-key",
+     "args": {
+      "suggestions": [
+       "ACCOUNT_ID",
+       "AWS_REGION"
+      ]
+     }
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-aggregate-discovered-resource-counts",
+   "description": "Returns the resource counts across accounts and regions that are present in your Config aggregator.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--group-by-key",
+     "args": {
+      "suggestions": [
+       "RESOURCE_TYPE",
+       "ACCOUNT_ID",
+       "AWS_REGION"
+      ]
+     }
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-aggregate-resource-config",
+   "description": "Returns configuration item that is aggregated for your specific resource in a specific source account and region.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-compliance-details-by-config-rule",
+   "description": "Returns the evaluation results for the specified Config rule.",
+   "options": [
+    {
+     "name": "--compliance-types",
+     "args": {}
+    },
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-compliance-details-by-resource",
+   "description": "Returns the evaluation results for the specified Amazon Web Services resource.",
+   "options": [
+    {
+     "name": "--compliance-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--resource-evaluation-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-compliance-summary-by-config-rule",
+   "description": "Returns the number of Config rules that are compliant and noncompliant, up to a maximum of 25 for each."
+  },
+  {
+   "name": "get-compliance-summary-by-resource-type",
+   "description": "Returns the number of resources that are compliant and the number that are noncompliant.",
+   "options": [
+    {
+     "name": "--resource-types",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-conformance-pack-compliance-details",
+   "description": "Returns compliance details of a conformance pack for all Amazon Web Services resources that are monitered by conformance pack.",
+   "options": [
+    {
+     "name": "--conformance-pack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-conformance-pack-compliance-summary",
+   "description": "Returns compliance details for the conformance pack based on the cumulative compliance results of all the rules in that conformance pack.",
+   "options": [
+    {
+     "name": "--conformance-pack-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-connector",
+   "description": "Returns the details of the specified connector.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-custom-rule-policy",
+   "description": "Returns the policy definition containing the logic for your Config Custom Policy rule.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-discovered-resource-counts",
+   "description": "Returns the resource types, the number of each resource type, and the total number of resources that Config is recording in this region for your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-organization-config-rule-detailed-status",
+   "description": "Returns detailed status for each member account within an organization for a given organization Config rule.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-organization-conformance-pack-detailed-status",
+   "description": "Returns detailed status for each member account within an organization for a given organization conformance pack.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-conformance-pack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-organization-custom-rule-policy",
+   "description": "Returns the policy definition containing the logic for your organization Config Custom Policy rule.",
+   "options": [
+    {
+     "name": "--organization-config-rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-config-history",
+   "description": "For accurate reporting on the compliance status, you must record the AWS::Config::ResourceCompliance resource type.",
+   "options": [
+    {
+     "name": "--chronological-order",
+     "args": {
+      "suggestions": [
+       "Reverse",
+       "Forward"
+      ]
+     }
+    },
+    {
+     "name": "--earlier-time",
+     "args": {}
+    },
+    {
+     "name": "--later-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-evaluation-summary",
+   "description": "Returns a summary of resource evaluation for the specified resource evaluation ID from the proactive rules that were run.",
+   "options": [
+    {
+     "name": "--resource-evaluation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-status",
+   "description": "Reports the status of all of configuration recorders and delivery channels."
+  },
+  {
+   "name": "get-stored-query",
+   "description": "Returns the details of a specific stored query.",
+   "options": [
+    {
+     "name": "--query-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-aggregate-discovered-resources",
+   "description": "Accepts a resource type and returns a list of resource identifiers that are aggregated for a specific resource type across accounts and regions.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-configuration-recorders",
+   "description": "Returns a list of configuration recorders depending on the filters you specify.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-conformance-pack-compliance-scores",
+   "description": "Returns a list of conformance pack compliance scores.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "SCORE"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-connectors",
+   "description": "Returns a list of connectors depending on the filters you specify.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-discovered-resources",
+   "description": "Returns a list of resource resource identifiers for the specified resource types for the resources of that type.",
+   "options": [
+    {
+     "name": "--include-deleted-resources"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-deleted-resources"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-ids",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-evaluations",
+   "description": "Returns a list of proactive resource evaluations.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stored-queries",
+   "description": "Lists the stored queries for a single Amazon Web Services account and a single Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List the tags for Config resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-aggregation-authorization",
+   "description": "Authorizes the aggregator account and region to collect data from the source account and region.",
+   "options": [
+    {
+     "name": "--authorized-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorized-aws-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-config-rule",
+   "description": "Adds or updates an Config rule to evaluate if your Amazon Web Services resources comply with your desired configurations.",
+   "options": [
+    {
+     "name": "--config-rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-configuration-aggregator",
+   "description": "Creates and updates the configuration aggregator with the selected source accounts and regions.",
+   "options": [
+    {
+     "name": "--account-aggregation-sources",
+     "args": {}
+    },
+    {
+     "name": "--aggregator-filters",
+     "args": {}
+    },
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-aggregation-source",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-configuration-recorder",
+   "description": "Creates or updates the customer managed configuration recorder.",
+   "options": [
+    {
+     "name": "--configuration-recorder",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recording-group",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-conformance-pack",
+   "description": "Creates or updates a conformance pack.",
+   "options": [
+    {
+     "name": "--conformance-pack-input-parameters",
+     "args": {}
+    },
+    {
+     "name": "--conformance-pack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delivery-s3-bucket",
+     "args": {}
+    },
+    {
+     "name": "--delivery-s3-key-prefix",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-s3-uri",
+     "args": {}
+    },
+    {
+     "name": "--template-ssm-document-details",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-connector",
+   "description": "Creates a connector that specifies the connection between a third-party cloud service provider and Config.",
+   "options": [
+    {
+     "name": "--connector-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-delivery-channel",
+   "description": "Creates or updates a delivery channel to deliver configuration information and other compliance information.",
+   "options": [
+    {
+     "name": "--delivery-channel",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-evaluations",
+   "description": "Used by an Lambda function to deliver evaluation results to Config.",
+   "options": [
+    {
+     "name": "--evaluations",
+     "args": {}
+    },
+    {
+     "name": "--no-test-mode"
+    },
+    {
+     "name": "--result-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-mode"
+    }
+   ]
+  },
+  {
+   "name": "put-external-evaluation",
+   "description": "Add or updates the evaluations for process checks.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--external-evaluation",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-organization-config-rule",
+   "description": "Adds or updates an Config rule for your entire organization to evaluate if your Amazon Web Services resources comply with your desired configurations.",
+   "options": [
+    {
+     "name": "--excluded-accounts",
+     "args": {}
+    },
+    {
+     "name": "--organization-config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-custom-policy-rule-metadata",
+     "args": {}
+    },
+    {
+     "name": "--organization-custom-rule-metadata",
+     "args": {}
+    },
+    {
+     "name": "--organization-managed-rule-metadata",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-organization-conformance-pack",
+   "description": "Deploys conformance packs across member accounts in an Amazon Web Services Organization.",
+   "options": [
+    {
+     "name": "--conformance-pack-input-parameters",
+     "args": {}
+    },
+    {
+     "name": "--delivery-s3-bucket",
+     "args": {}
+    },
+    {
+     "name": "--delivery-s3-key-prefix",
+     "args": {}
+    },
+    {
+     "name": "--excluded-accounts",
+     "args": {}
+    },
+    {
+     "name": "--organization-conformance-pack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-s3-uri",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-remediation-configurations",
+   "description": "Adds or updates the remediation configuration with a specific Config rule with the selected target or action.",
+   "options": [
+    {
+     "name": "--remediation-configurations",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-remediation-exceptions",
+   "description": "A remediation exception is when a specified resource is no longer considered for auto-remediation.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expiration-time",
+     "args": {}
+    },
+    {
+     "name": "--message",
+     "args": {}
+    },
+    {
+     "name": "--resource-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-config",
+   "description": "Records the configuration state for the resource provided in the request.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-retention-configuration",
+   "description": "Creates and updates the retention configuration with details about retention period (number of days) that Config stores your historical information.",
+   "options": [
+    {
+     "name": "--retention-period-in-days",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-service-linked-configuration-recorder",
+   "description": "Creates a service-linked configuration recorder that is linked to a specific Amazon Web Services service based on the ServicePrincipal you specify.",
+   "options": [
+    {
+     "name": "--service-principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-stored-query",
+   "description": "Saves a new query or updates an existing saved query.",
+   "options": [
+    {
+     "name": "--stored-query",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-third-party-service-linked-configuration-recorder",
+   "description": "Creates or updates a service-linked configuration recorder that is linked to a third-party cloud service provider based on the ConnectorArn you specify.",
+   "options": [
+    {
+     "name": "--connector-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "select-aggregate-resource-config",
+   "description": "Accepts a structured query language (SQL) SELECT command and an aggregator to query configuration state of Amazon Web Services resources across multiple accounts and regions, performs the corresponding search, and returns resource configurations matching the properties.",
+   "options": [
+    {
+     "name": "--configuration-aggregator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "select-resource-config",
+   "description": "Accepts a structured query language (SQL) SELECT command, performs the corresponding search, and returns resource configurations matching the properties.",
+   "options": [
+    {
+     "name": "--expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-config-rules-evaluation",
+   "description": "Runs an on-demand evaluation for the specified Config rules against the last known configuration state of the resources.",
+   "options": [
+    {
+     "name": "--config-rule-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-configuration-recorder",
+   "description": "Starts the customer managed configuration recorder.",
+   "options": [
+    {
+     "name": "--configuration-recorder-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-remediation-execution",
+   "description": "Runs an on-demand remediation for the specified Config rules against the last known remediation configuration.",
+   "options": [
+    {
+     "name": "--config-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-resource-evaluation",
+   "description": "Runs an on-demand evaluation for the specified resource to determine whether the resource details will comply with configured Config rules.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-context",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-mode",
+     "args": {
+      "suggestions": [
+       "DETECTIVE",
+       "PROACTIVE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--evaluation-timeout",
+     "args": {}
+    },
+    {
+     "name": "--resource-details",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-configuration-recorder",
+   "description": "Stops the customer managed configuration recorder.",
+   "options": [
+    {
+     "name": "--configuration-recorder-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "subscribe",
+   "description": "Subscribes user to AWS Config by creating an AWS Config delivery channel and configuration recorder to track AWS resource configurations.",
+   "options": [
+    {
+     "name": "--iam-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sns-topic",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags to a resource with the specified ResourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes specified tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

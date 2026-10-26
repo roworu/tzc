@@ -1,0 +1,535 @@
+{
+ "name": "rolesanywhere",
+ "description": "Identity and Access Management Roles Anywhere provides a secure way for your workloads such as servers, containers, and applications that run outside of Amazon Web Services to obtain temporary Amazon Web Services credentials.",
+ "subcommands": [
+  {
+   "name": "create-profile",
+   "description": "Creates a profile, a list of the roles that Roles Anywhere service is trusted to assume.",
+   "options": [
+    {
+     "name": "--accept-role-session-name"
+    },
+    {
+     "name": "--duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--managed-policy-arns",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-accept-role-session-name"
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--no-require-instance-properties"
+    },
+    {
+     "name": "--require-instance-properties"
+    },
+    {
+     "name": "--role-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-policy",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-trust-anchor",
+   "description": "Creates a trust anchor to establish trust between IAM Roles Anywhere and your certificate authority (CA).",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--notification-settings",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-attribute-mapping",
+   "description": "Delete an entry from the attribute mapping rules enforced by a given profile.",
+   "options": [
+    {
+     "name": "--certificate-field",
+     "args": {
+      "suggestions": [
+       "x509Subject",
+       "x509Issuer",
+       "x509SAN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--specifiers",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-crl",
+   "description": "Deletes a certificate revocation list (CRL).",
+   "options": [
+    {
+     "name": "--crl-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-profile",
+   "description": "Deletes a profile.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-trust-anchor",
+   "description": "Deletes a trust anchor.",
+   "options": [
+    {
+     "name": "--trust-anchor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-crl",
+   "description": "Disables a certificate revocation list (CRL).",
+   "options": [
+    {
+     "name": "--crl-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-profile",
+   "description": "Disables a profile.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-trust-anchor",
+   "description": "Disables a trust anchor.",
+   "options": [
+    {
+     "name": "--trust-anchor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-crl",
+   "description": "Enables a certificate revocation list (CRL).",
+   "options": [
+    {
+     "name": "--crl-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-profile",
+   "description": "Enables temporary credential requests for a profile.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-trust-anchor",
+   "description": "Enables a trust anchor.",
+   "options": [
+    {
+     "name": "--trust-anchor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-crl",
+   "description": "Gets a certificate revocation list (CRL).",
+   "options": [
+    {
+     "name": "--crl-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile",
+   "description": "Gets a profile.",
+   "options": [
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-subject",
+   "description": "Gets a subject, which associates a certificate identity with authentication attempts.",
+   "options": [
+    {
+     "name": "--subject-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-trust-anchor",
+   "description": "Gets a trust anchor.",
+   "options": [
+    {
+     "name": "--trust-anchor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-crl",
+   "description": "Imports the certificate revocation list (CRL).",
+   "options": [
+    {
+     "name": "--crl-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--trust-anchor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-crls",
+   "description": "Lists all certificate revocation lists (CRL) in the authenticated account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-profiles",
+   "description": "Lists all profiles in the authenticated account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subjects",
+   "description": "Lists the subjects in the authenticated account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags attached to the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-trust-anchors",
+   "description": "Lists the trust anchors in the authenticated account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-attribute-mapping",
+   "description": "Put an entry in the attribute mapping rules that will be enforced by a given profile.",
+   "options": [
+    {
+     "name": "--certificate-field",
+     "args": {
+      "suggestions": [
+       "x509Subject",
+       "x509Issuer",
+       "x509SAN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--mapping-rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-notification-settings",
+   "description": "Attaches a list of notification settings to a trust anchor.",
+   "options": [
+    {
+     "name": "--notification-settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trust-anchor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-notification-settings",
+   "description": "Resets the custom notification setting to IAM Roles Anywhere default setting.",
+   "options": [
+    {
+     "name": "--notification-setting-keys",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trust-anchor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Attaches tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-crl",
+   "description": "Updates the certificate revocation list (CRL).",
+   "options": [
+    {
+     "name": "--crl-data",
+     "args": {}
+    },
+    {
+     "name": "--crl-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-profile",
+   "description": "Updates a profile, a list of the roles that IAM Roles Anywhere service is trusted to assume.",
+   "options": [
+    {
+     "name": "--accept-role-session-name"
+    },
+    {
+     "name": "--duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--managed-policy-arns",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-accept-role-session-name"
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arns",
+     "args": {}
+    },
+    {
+     "name": "--session-policy",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-trust-anchor",
+   "description": "Updates a trust anchor.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {}
+    },
+    {
+     "name": "--trust-anchor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

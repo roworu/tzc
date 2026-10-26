@@ -1,0 +1,1605 @@
+{
+ "name": "greengrass",
+ "description": "AWS IoT Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while still using the cloud for management, analytics, and durable storage.",
+ "subcommands": [
+  {
+   "name": "associate-role-to-group",
+   "description": "Associates a role with a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-service-role-to-account",
+   "description": "Associates a role with your account.",
+   "options": [
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-connector-definition",
+   "description": "Creates a connector definition.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--initial-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-connector-definition-version",
+   "description": "Creates a version of a connector definition which has already been defined.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--connector-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connectors",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-core-definition",
+   "description": "Creates a core definition.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--initial-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-core-definition-version",
+   "description": "Creates a version of a core definition that has already been defined.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--core-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cores",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-deployment",
+   "description": "Creates a deployment.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--deployment-type",
+     "args": {
+      "suggestions": [
+       "NewDeployment",
+       "Redeployment",
+       "ResetDeployment",
+       "ForceResetDeployment"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-device-definition",
+   "description": "Creates a device definition.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--initial-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-device-definition-version",
+   "description": "Creates a version of a device definition that has already been defined.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--device-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--devices",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-function-definition",
+   "description": "Creates a Lambda function definition which contains a list of Lambda functions and their configurations to be used in a group.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--initial-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-function-definition-version",
+   "description": "Creates a version of a Lambda function definition that has already been defined.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--default-config",
+     "args": {}
+    },
+    {
+     "name": "--function-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--functions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-group",
+   "description": "Creates a group.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--initial-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-group-certificate-authority",
+   "description": "Creates a CA for the group.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-group-version",
+   "description": "Creates a version of a group which has already been defined.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--connector-definition-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--core-definition-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--device-definition-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--function-definition-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logger-definition-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-definition-version-arn",
+     "args": {}
+    },
+    {
+     "name": "--subscription-definition-version-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-logger-definition",
+   "description": "Creates a logger definition.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--initial-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-logger-definition-version",
+   "description": "Creates a version of a logger definition that has already been defined.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--logger-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--loggers",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-resource-definition",
+   "description": "Creates a resource definition which contains a list of resources to be used in a group.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--initial-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-resource-definition-version",
+   "description": "Creates a version of a resource definition that has already been defined.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-software-update-job",
+   "description": "Creates a software update for a core or group of cores (specified as an IoT thing group.) Use this to update the OTA Agent as well as the Greengrass core software.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--s3-url-signer-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--software-to-update",
+     "args": {
+      "suggestions": [
+       "core",
+       "ota_agent"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--update-agent-log-level",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "TRACE",
+       "DEBUG",
+       "VERBOSE",
+       "INFO",
+       "WARN",
+       "ERROR",
+       "FATAL"
+      ]
+     }
+    },
+    {
+     "name": "--update-targets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-targets-architecture",
+     "args": {
+      "suggestions": [
+       "armv6l",
+       "armv7l",
+       "x86_64",
+       "aarch64"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--update-targets-operating-system",
+     "args": {
+      "suggestions": [
+       "ubuntu",
+       "raspbian",
+       "amazon_linux",
+       "openwrt"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-subscription-definition",
+   "description": "Creates a subscription definition.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--initial-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-subscription-definition-version",
+   "description": "Creates a version of a subscription definition which has already been defined.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--subscription-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscriptions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-connector-definition",
+   "description": "Deletes a connector definition.",
+   "options": [
+    {
+     "name": "--connector-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-core-definition",
+   "description": "Deletes a core definition.",
+   "options": [
+    {
+     "name": "--core-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-device-definition",
+   "description": "Deletes a device definition.",
+   "options": [
+    {
+     "name": "--device-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-function-definition",
+   "description": "Deletes a Lambda function definition.",
+   "options": [
+    {
+     "name": "--function-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-group",
+   "description": "Deletes a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-logger-definition",
+   "description": "Deletes a logger definition.",
+   "options": [
+    {
+     "name": "--logger-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-definition",
+   "description": "Deletes a resource definition.",
+   "options": [
+    {
+     "name": "--resource-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subscription-definition",
+   "description": "Deletes a subscription definition.",
+   "options": [
+    {
+     "name": "--subscription-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-role-from-group",
+   "description": "Disassociates the role from a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-service-role-from-account",
+   "description": "Disassociates the service role from your account."
+  },
+  {
+   "name": "get-associated-role",
+   "description": "Retrieves the role associated with a particular group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bulk-deployment-status",
+   "description": "Returns the status of a bulk deployment.",
+   "options": [
+    {
+     "name": "--bulk-deployment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connectivity-info",
+   "description": "Retrieves the connectivity information for a core.",
+   "options": [
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connector-definition",
+   "description": "Retrieves information about a connector definition.",
+   "options": [
+    {
+     "name": "--connector-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connector-definition-version",
+   "description": "Retrieves information about a connector definition version, including the connectors that the version contains.",
+   "options": [
+    {
+     "name": "--connector-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--connector-definition-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-core-definition",
+   "description": "Retrieves information about a core definition version.",
+   "options": [
+    {
+     "name": "--core-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-core-definition-version",
+   "description": "Retrieves information about a core definition version.",
+   "options": [
+    {
+     "name": "--core-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--core-definition-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment-status",
+   "description": "Returns the status of a deployment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-device-definition",
+   "description": "Retrieves information about a device definition.",
+   "options": [
+    {
+     "name": "--device-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-device-definition-version",
+   "description": "Retrieves information about a device definition version.",
+   "options": [
+    {
+     "name": "--device-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-definition-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-function-definition",
+   "description": "Retrieves information about a Lambda function definition, including its creation time and latest version.",
+   "options": [
+    {
+     "name": "--function-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-function-definition-version",
+   "description": "Retrieves information about a Lambda function definition version, including which Lambda functions are included in the version and their configurations.",
+   "options": [
+    {
+     "name": "--function-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-definition-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-group",
+   "description": "Retrieves information about a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-group-certificate-authority",
+   "description": "Retreives the CA associated with a group.",
+   "options": [
+    {
+     "name": "--certificate-authority-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-group-certificate-configuration",
+   "description": "Retrieves the current configuration for the CA used by the group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-group-version",
+   "description": "Retrieves information about a group version.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-logger-definition",
+   "description": "Retrieves information about a logger definition.",
+   "options": [
+    {
+     "name": "--logger-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-logger-definition-version",
+   "description": "Retrieves information about a logger definition version.",
+   "options": [
+    {
+     "name": "--logger-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logger-definition-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-definition",
+   "description": "Retrieves information about a resource definition, including its creation time and latest version.",
+   "options": [
+    {
+     "name": "--resource-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-definition-version",
+   "description": "Retrieves information about a resource definition version, including which resources are included in the version.",
+   "options": [
+    {
+     "name": "--resource-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-definition-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-role-for-account",
+   "description": "Retrieves the service role that is attached to your account."
+  },
+  {
+   "name": "get-subscription-definition",
+   "description": "Retrieves information about a subscription definition.",
+   "options": [
+    {
+     "name": "--subscription-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-subscription-definition-version",
+   "description": "Retrieves information about a subscription definition version.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--subscription-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-definition-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-thing-runtime-configuration",
+   "description": "Get the runtime configuration of a thing.",
+   "options": [
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-bulk-deployment-detailed-reports",
+   "description": "Gets a paginated list of the deployments that have been started in a bulk deployment operation, and their current deployment status.",
+   "options": [
+    {
+     "name": "--bulk-deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bulk-deployments",
+   "description": "Returns a list of bulk deployments.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connector-definition-versions",
+   "description": "Lists the versions of a connector definition, which are containers for connectors.",
+   "options": [
+    {
+     "name": "--connector-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connector-definitions",
+   "description": "Retrieves a list of connector definitions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-core-definition-versions",
+   "description": "Lists the versions of a core definition.",
+   "options": [
+    {
+     "name": "--core-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-core-definitions",
+   "description": "Retrieves a list of core definitions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployments",
+   "description": "Returns a history of deployments for the group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-device-definition-versions",
+   "description": "Lists the versions of a device definition.",
+   "options": [
+    {
+     "name": "--device-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-device-definitions",
+   "description": "Retrieves a list of device definitions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-function-definition-versions",
+   "description": "Lists the versions of a Lambda function definition.",
+   "options": [
+    {
+     "name": "--function-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-function-definitions",
+   "description": "Retrieves a list of Lambda function definitions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-group-certificate-authorities",
+   "description": "Retrieves the current CAs for a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-group-versions",
+   "description": "Lists the versions of a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-groups",
+   "description": "Retrieves a list of groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-logger-definition-versions",
+   "description": "Lists the versions of a logger definition.",
+   "options": [
+    {
+     "name": "--logger-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-logger-definitions",
+   "description": "Retrieves a list of logger definitions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-definition-versions",
+   "description": "Lists the versions of a resource definition.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-definitions",
+   "description": "Retrieves a list of resource definitions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subscription-definition-versions",
+   "description": "Lists the versions of a subscription definition.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subscription-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-subscription-definitions",
+   "description": "Retrieves a list of subscription definitions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves a list of resource tags for a resource arn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-deployments",
+   "description": "Resets a group's deployments.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "start-bulk-deployment",
+   "description": "Deploys multiple groups in one operation.",
+   "options": [
+    {
+     "name": "--amzn-client-token",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-file-uri",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-bulk-deployment",
+   "description": "Stops the execution of a bulk deployment.",
+   "options": [
+    {
+     "name": "--bulk-deployment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a Greengrass resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove resource tags from a Greengrass Resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-connectivity-info",
+   "description": "Updates the connectivity information for the core.",
+   "options": [
+    {
+     "name": "--connectivity-info",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-connector-definition",
+   "description": "Updates a connector definition.",
+   "options": [
+    {
+     "name": "--connector-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-core-definition",
+   "description": "Updates a core definition.",
+   "options": [
+    {
+     "name": "--core-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-device-definition",
+   "description": "Updates a device definition.",
+   "options": [
+    {
+     "name": "--device-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-function-definition",
+   "description": "Updates a Lambda function definition.",
+   "options": [
+    {
+     "name": "--function-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-group",
+   "description": "Updates a group.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-group-certificate-configuration",
+   "description": "Updates the Certificate expiry time for a group.",
+   "options": [
+    {
+     "name": "--certificate-expiry-in-milliseconds",
+     "args": {}
+    },
+    {
+     "name": "--group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-logger-definition",
+   "description": "Updates a logger definition.",
+   "options": [
+    {
+     "name": "--logger-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-resource-definition",
+   "description": "Updates a resource definition.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--resource-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-subscription-definition",
+   "description": "Updates a subscription definition.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--subscription-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-thing-runtime-configuration",
+   "description": "Updates the runtime configuration of a thing.",
+   "options": [
+    {
+     "name": "--telemetry-configuration",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

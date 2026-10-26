@@ -21,7 +21,7 @@ if [[ ${1:-} == --regenerate ]]; then
 fi
 
 count=0
-for file in "$dir"/zsh/*.zsh(N); do
+for file in "$dir"/zsh/**/*.zsh(N); do
   # zcompile writes a read-only .zwc; remove it so reruns can replace it
   rm -f "$file.zwc"
   zcompile "$file"

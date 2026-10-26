@@ -1,0 +1,1474 @@
+{
+ "name": "devops-agent",
+ "description": "AWS DevOps Agent is your always-available operations teammate.",
+ "subcommands": [
+  {
+   "name": "associate-service",
+   "description": "Adds a specific service association to an AgentSpace.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-agent-space",
+   "description": "Creates a new AgentSpace with the specified name and description.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--locale",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-asset",
+   "description": "Creates a new asset in the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-asset-file",
+   "description": "Creates a file in an asset",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--path",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-backlog-task",
+   "description": "Creates a new backlog task in the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {
+      "suggestions": [
+       "CRITICAL",
+       "HIGH",
+       "MEDIUM",
+       "LOW",
+       "MINIMAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--reference",
+     "args": {}
+    },
+    {
+     "name": "--task-type",
+     "args": {
+      "suggestions": [
+       "INVESTIGATION",
+       "EVALUATION",
+       "RELEASE_READINESS_REVIEW",
+       "RELEASE_TESTING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-chat",
+   "description": "Creates a new chat execution in the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    },
+    {
+     "name": "--user-type",
+     "args": {
+      "suggestions": [
+       "IAM",
+       "IDC",
+       "IDP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-private-connection",
+   "description": "Creates a Private Connection to a target resource.",
+   "options": [
+    {
+     "name": "--mode",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-trigger",
+   "description": "Creates a new Trigger in the specified agent space",
+   "options": [
+    {
+     "name": "--action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--condition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-agent-space",
+   "description": "Deletes an AgentSpace.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-asset",
+   "description": "Deletes an asset and all its files from the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-asset-file",
+   "description": "Deletes a file from an asset",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--path",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-private-connection",
+   "description": "Deletes a Private Connection.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-trigger",
+   "description": "Deletes a Trigger from the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trigger-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-service",
+   "description": "Deregister a service",
+   "options": [
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-private-connection",
+   "description": "Retrieves details of an existing Private Connection.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-operator-app",
+   "description": "Disable the Operator App for the specified AgentSpace",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-flow",
+     "args": {
+      "suggestions": [
+       "iam",
+       "idc",
+       "idp"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "disassociate-service",
+   "description": "Deletes a specific service association from an AgentSpace.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-operator-app",
+   "description": "Enable the Operator App to access the given AgentSpace",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-flow",
+     "args": {
+      "suggestions": [
+       "iam",
+       "idc",
+       "idp"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--idc-instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--idp-client-id",
+     "args": {}
+    },
+    {
+     "name": "--idp-client-secret",
+     "args": {}
+    },
+    {
+     "name": "--issuer-url",
+     "args": {}
+    },
+    {
+     "name": "--operator-app-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-account-usage",
+   "description": "Retrieves monthly account usage metrics and limits for the AWS account."
+  },
+  {
+   "name": "get-agent-space",
+   "description": "Retrieves detailed information about a specific AgentSpace.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-asset",
+   "description": "Gets an asset from the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-asset-content",
+   "description": "Gets an asset's content as a zip bundle",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-asset-file",
+   "description": "Gets a file from an asset",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-version",
+     "args": {}
+    },
+    {
+     "name": "--path",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-association",
+   "description": "Retrieves given associations configured for a specific AgentSpace.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-backlog-task",
+   "description": "Gets a backlog task for the specified agent space and task id",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-operator-app",
+   "description": "Get the full auth configuration of operator including any enabled auth flow",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-recommendation",
+   "description": "Retrieves a specific recommendation by its ID",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-service",
+   "description": "Retrieves given service by it's unique identifier",
+   "options": [
+    {
+     "name": "--service-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-trigger",
+   "description": "Gets a Trigger from the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trigger-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-agent-spaces",
+   "description": "Lists all AgentSpaces with optional pagination.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-files",
+   "description": "Lists files in an asset",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-types",
+   "description": "Lists the supported asset types",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-versions",
+   "description": "Lists versions of an asset in the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-assets",
+   "description": "Lists assets in the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-type",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--updated-after",
+     "args": {}
+    },
+    {
+     "name": "--updated-before",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-associations",
+   "description": "List all associations for given AgentSpace",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-service-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-backlog-tasks",
+   "description": "Lists backlog tasks in the specified agent space with optional filtering and sorting",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-field",
+     "args": {
+      "suggestions": [
+       "CREATED_AT",
+       "PRIORITY"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-chats",
+   "description": "Retrieves a paginated list of the user's recent chat executions",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-executions",
+   "description": "List executions",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-goals",
+   "description": "Lists goals in the specified agent space with optional filtering",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--goal-type",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_DEFINED",
+       "ONCALL_REPORT"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "PAUSED",
+       "COMPLETE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-journal-records",
+   "description": "List journal records for a specific execution",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--record-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pending-messages",
+   "description": "List pending messages for a specific execution.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-private-connections",
+   "description": "Lists all Private Connections in the caller's account."
+  },
+  {
+   "name": "list-recommendations",
+   "description": "Lists recommendations for the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--goal-id",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {
+      "suggestions": [
+       "HIGH",
+       "MEDIUM",
+       "LOW"
+      ]
+     }
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PROPOSED",
+       "ACCEPTED",
+       "REJECTED",
+       "CLOSED",
+       "COMPLETED",
+       "UPDATE_IN_PROGRESS"
+      ]
+     }
+    },
+    {
+     "name": "--task-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "List a list of registered service on the account level.",
+   "options": [
+    {
+     "name": "--filter-service-type",
+     "args": {
+      "suggestions": [
+       "github",
+       "slack",
+       "azure",
+       "azuredevops",
+       "dynatrace",
+       "servicenow",
+       "pagerduty",
+       "gitlab",
+       "eventChannel",
+       "mcpservernewrelic",
+       "mcpservergrafana",
+       "mcpserverdatadog",
+       "mcpserver",
+       "mcpserversplunk",
+       "azureidentity",
+       "mcpserversigv4",
+       "remoteagent",
+       "remoteagentsigv4"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags for the specified AWS DevOps Agent resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-triggers",
+   "description": "Lists Triggers in the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-webhooks",
+   "description": "List all webhooks for given Association",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-service",
+   "description": "This operation registers the specified service",
+   "options": [
+    {
+     "name": "--exchange-url-private-connection-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--private-connection-name",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {
+      "suggestions": [
+       "dynatrace",
+       "servicenow",
+       "pagerduty",
+       "gitlab",
+       "eventChannel",
+       "mcpservernewrelic",
+       "mcpservergrafana",
+       "mcpserverdatadog",
+       "mcpserver",
+       "mcpserversplunk",
+       "azureidentity",
+       "mcpserversigv4",
+       "remoteagent",
+       "remoteagentsigv4"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-url-private-connection-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or overwrites tags for the specified AWS DevOps Agent resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the specified AWS DevOps Agent resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-agent-space",
+   "description": "Updates the information of an existing AgentSpace.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--locale",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-asset",
+   "description": "Updates an asset in the specified agent space",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-asset-file",
+   "description": "Updates a file in an asset",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--path",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-association",
+   "description": "Partially updates the configuration of an existing service association for an AgentSpace.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-backlog-task",
+   "description": "Update an existing backlog task.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-status",
+     "args": {
+      "suggestions": [
+       "PENDING_TRIAGE",
+       "LINKED",
+       "PENDING_START",
+       "IN_PROGRESS",
+       "PENDING_CUSTOMER_APPROVAL",
+       "COMPLETED",
+       "FAILED",
+       "TIMED_OUT",
+       "CANCELED",
+       "SKIPPED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-goal",
+   "description": "Update an existing goal",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-schedule",
+     "args": {}
+    },
+    {
+     "name": "--goal-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-operator-app-idp-config",
+   "description": "Update the external Identity Provider configuration for the Operator App",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idp-client-secret",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-private-connection-certificate",
+   "description": "Updates the certificate associated with a Private Connection.",
+   "options": [
+    {
+     "name": "--certificate",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-recommendation",
+   "description": "Updates an existing recommendation with new content, status, or metadata",
+   "options": [
+    {
+     "name": "--additional-context",
+     "args": {}
+    },
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PROPOSED",
+       "ACCEPTED",
+       "REJECTED",
+       "CLOSED",
+       "COMPLETED",
+       "UPDATE_IN_PROGRESS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-trigger",
+   "description": "Updates the status of an existing Trigger",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    },
+    {
+     "name": "--trigger-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-aws-associations",
+   "description": "Validates an aws association and set status and returns a 204 No Content response on success.",
+   "options": [
+    {
+     "name": "--agent-space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

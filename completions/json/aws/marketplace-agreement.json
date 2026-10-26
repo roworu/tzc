@@ -1,0 +1,640 @@
+{
+ "name": "marketplace-agreement",
+ "description": "AWS Marketplace is a curated digital catalog that customers can use to find, buy, deploy, and manage third-party software, data, and services to build solutions and run their businesses.",
+ "subcommands": [
+  {
+   "name": "accept-agreement-cancellation-request",
+   "description": "Allows buyers (acceptors) to accept a cancellation request that is in PENDING_APPROVAL status.",
+   "options": [
+    {
+     "name": "--agreement-cancellation-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "accept-agreement-payment-request",
+   "description": "Allows buyers (acceptors) to accept a payment request that is in PENDING_APPROVAL status.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--purchase-order-reference",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "accept-agreement-request",
+   "description": "Accepts an agreement request to finalize the agreement.",
+   "options": [
+    {
+     "name": "--agreement-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--purchase-orders",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-create-billing-adjustment-request",
+   "description": "Allows sellers (proposers) to submit billing adjustment requests for one or more invoices within an agreement.",
+   "options": [
+    {
+     "name": "--billing-adjustment-request-entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-agreement",
+   "description": "Allows an acceptor to cancel an active agreement.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-agreement-cancellation-request",
+   "description": "Allows sellers (proposers) to withdraw an existing agreement cancellation request that is in a pending state.",
+   "options": [
+    {
+     "name": "--agreement-cancellation-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cancellation-reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-agreement-payment-request",
+   "description": "Allows sellers (proposers) to cancel a payment request that is in PENDING_APPROVAL status.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-agreement-request",
+   "description": "Creates an agreement request that acts as a quote for the terms you want to accept.",
+   "options": [
+    {
+     "name": "--agreement-proposal-identifier",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--intent",
+     "args": {
+      "suggestions": [
+       "NEW",
+       "AMEND",
+       "REPLACE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--requested-terms",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-agreement-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tax-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-agreement",
+   "description": "Provides details about an agreement, such as the proposer, acceptor, start date, and end date.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agreement-cancellation-request",
+   "description": "Retrieves detailed information about a specific agreement cancellation request.",
+   "options": [
+    {
+     "name": "--agreement-cancellation-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agreement-entitlements",
+   "description": "Obtains details about the entitlements of an agreement.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-agreement-payment-request",
+   "description": "Retrieves detailed information about a specific payment request.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agreement-terms",
+   "description": "Obtains details about the terms in an agreement that you participated in as proposer or acceptor.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-billing-adjustment-request",
+   "description": "Retrieves detailed information about a specific billing adjustment request.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-adjustment-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-agreement-cancellation-requests",
+   "description": "Lists agreement cancellation requests available to you as a seller or buyer.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {}
+    },
+    {
+     "name": "--agreement-type",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--party-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING_APPROVAL",
+       "APPROVED",
+       "REJECTED",
+       "CANCELLED",
+       "VALIDATION_FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-agreement-charges",
+   "description": "Allows acceptors to view charges and purchase orders that are associated with an agreement.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {}
+    },
+    {
+     "name": "--agreement-type",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-agreement-invoice-line-items",
+   "description": "Allows sellers (proposers) to retrieve aggregated billing data from AWS Marketplace agreements using flexible grouping.",
+   "options": [
+    {
+     "name": "--after-issued-time",
+     "args": {}
+    },
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--before-issued-time",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {
+      "suggestions": [
+       "INVOICE_ID"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--invoice-billing-period",
+     "args": {}
+    },
+    {
+     "name": "--invoice-id",
+     "args": {}
+    },
+    {
+     "name": "--invoice-type",
+     "args": {
+      "suggestions": [
+       "INVOICE",
+       "CREDIT_MEMO"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-agreement-payment-requests",
+   "description": "Lists payment requests available to you as a seller or buyer.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {}
+    },
+    {
+     "name": "--agreement-type",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--party-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "VALIDATING",
+       "VALIDATION_FAILED",
+       "PENDING_APPROVAL",
+       "APPROVED",
+       "REJECTED",
+       "CANCELLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-billing-adjustment-requests",
+   "description": "Lists billing adjustment requests for a specific agreement.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {}
+    },
+    {
+     "name": "--agreement-type",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {}
+    },
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "VALIDATION_FAILED",
+       "COMPLETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "reject-agreement-cancellation-request",
+   "description": "Allows buyers (acceptors) to reject a cancellation request that is in PENDING_APPROVAL status.",
+   "options": [
+    {
+     "name": "--agreement-cancellation-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rejection-reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-agreement-payment-request",
+   "description": "Allows buyers (acceptors) to reject a payment request that is in PENDING_APPROVAL status.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payment-request-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rejection-reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-agreements",
+   "description": "Searches across all agreements that a proposer or an acceptor has in AWS Marketplace.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-agreement-cancellation-request",
+   "description": "Allows sellers (proposers) to submit a cancellation request for an active agreement.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--reason-code",
+     "args": {
+      "suggestions": [
+       "INCORRECT_TERMS_ACCEPTED",
+       "REPLACING_AGREEMENT",
+       "TEST_AGREEMENT",
+       "ALTERNATIVE_PROCUREMENT_CHANNEL",
+       "PRODUCT_DISCONTINUED",
+       "UNINTENDED_RENEWAL",
+       "BUYER_DISSATISFACTION",
+       "OTHER"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-agreement-payment-request",
+   "description": "Allows sellers (proposers) to submit a payment request to buyers (acceptors) for a specific charge amount for an agreement that includes a VariablePaymentTerm.",
+   "options": [
+    {
+     "name": "--agreement-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--charge-amount",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--term-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-purchase-orders",
+   "description": "Allows acceptors to associate purchase orders with agreement charges after an agreement is created.",
+   "options": [
+    {
+     "name": "--purchase-orders",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

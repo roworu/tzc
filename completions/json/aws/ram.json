@@ -1,0 +1,957 @@
+{
+ "name": "ram",
+ "description": "This is the Resource Access Manager API Reference.",
+ "subcommands": [
+  {
+   "name": "accept-resource-share-invitation",
+   "description": "Accepts an invitation to a resource share from another Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-invitation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-resource-share",
+   "description": "Adds the specified list of principals, resources, and source constraints to a resource share.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--principals",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sources",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "associate-resource-share-permission",
+   "description": "Adds or replaces the RAM permission for a resource type included in a resource share.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--no-replace"
+    },
+    {
+     "name": "--permission-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-version",
+     "args": {}
+    },
+    {
+     "name": "--replace"
+    },
+    {
+     "name": "--resource-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-permission",
+   "description": "Creates a customer managed permission for a specified resource type that you can attach to resource shares.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-template",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-permission-version",
+   "description": "Creates a new version of the specified customer managed permission.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-template",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-resource-share",
+   "description": "Creates a resource share.",
+   "options": [
+    {
+     "name": "--allow-external-principals"
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-external-principals"
+    },
+    {
+     "name": "--permission-arns",
+     "args": {}
+    },
+    {
+     "name": "--principals",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-configuration",
+     "args": {}
+    },
+    {
+     "name": "--sources",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-permission",
+   "description": "Deletes the specified customer managed permission in the Amazon Web Services Region in which you call this operation.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-permission-version",
+   "description": "Deletes one version of a customer managed permission.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-share",
+   "description": "Deletes the specified resource share.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-resource-share",
+   "description": "Removes the specified principals, resources, or source constraints from participating in the specified resource share.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--principals",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sources",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-resource-share-permission",
+   "description": "Removes a managed permission from a resource share.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-sharing-with-aws-organization",
+   "description": "Enables resource sharing within your organization in Organizations."
+  },
+  {
+   "name": "get-permission",
+   "description": "Retrieves the contents of a managed permission in JSON format.",
+   "options": [
+    {
+     "name": "--permission-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policies",
+   "description": "Retrieves the resource policies for the specified resources that you own and have shared.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-share-associations",
+   "description": "Retrieves the lists of resources and principals that associated for resource shares that you own.",
+   "options": [
+    {
+     "name": "--association-status",
+     "args": {
+      "suggestions": [
+       "ASSOCIATING",
+       "ASSOCIATED",
+       "FAILED",
+       "DISASSOCIATING",
+       "DISASSOCIATED",
+       "SUSPENDED",
+       "SUSPENDING",
+       "RESTORING"
+      ]
+     }
+    },
+    {
+     "name": "--association-type",
+     "args": {
+      "suggestions": [
+       "PRINCIPAL",
+       "RESOURCE",
+       "SOURCE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-arns",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-share-invitations",
+   "description": "Retrieves details about invitations that you have received for resource shares.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-arns",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-invitation-arns",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-shares",
+   "description": "Retrieves details about the resource shares that you own or that are shared with you.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--permission-arn",
+     "args": {}
+    },
+    {
+     "name": "--permission-version",
+     "args": {}
+    },
+    {
+     "name": "--resource-owner",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "OTHER-ACCOUNTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-share-arns",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "ACTIVE",
+       "FAILED",
+       "DELETING",
+       "DELETED"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-filters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pending-invitation-resources",
+   "description": "Lists the resources in a resource share that is shared with you but for which the invitation is still PENDING.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-region-scope",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "REGIONAL",
+       "GLOBAL"
+      ]
+     }
+    },
+    {
+     "name": "--resource-share-invitation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-permission-associations",
+   "description": "Lists information about the managed permission and its associations to any resource shares that use this managed permission.",
+   "options": [
+    {
+     "name": "--association-status",
+     "args": {
+      "suggestions": [
+       "ASSOCIATING",
+       "ASSOCIATED",
+       "FAILED",
+       "DISASSOCIATING",
+       "DISASSOCIATED",
+       "SUSPENDED",
+       "SUSPENDING",
+       "RESTORING"
+      ]
+     }
+    },
+    {
+     "name": "--default-version"
+    },
+    {
+     "name": "--feature-set",
+     "args": {
+      "suggestions": [
+       "CREATED_FROM_POLICY",
+       "PROMOTING_TO_STANDARD",
+       "STANDARD"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-default-version"
+    },
+    {
+     "name": "--permission-arn",
+     "args": {}
+    },
+    {
+     "name": "--permission-version",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-permission-versions",
+   "description": "Lists the available versions of the specified RAM permission.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-permissions",
+   "description": "Retrieves a list of available RAM permissions that you can use for the supported resource types.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-type",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "AWS_MANAGED",
+       "CUSTOMER_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-principals",
+   "description": "Lists the principals that you are sharing resources with or that are sharing resources with you.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principals",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-owner",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "OTHER-ACCOUNTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-share-arns",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-replace-permission-associations-work",
+   "description": "Retrieves the current status of the asynchronous tasks performed by RAM when you perform the ReplacePermissionAssociationsWork operation.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "COMPLETED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--work-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-share-permissions",
+   "description": "Lists the RAM permissions that are associated with a resource share.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-resource-types",
+   "description": "Lists the resource types that can be shared by RAM.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-region-scope",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "REGIONAL",
+       "GLOBAL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-resources",
+   "description": "Lists the resources that you added to a resource share or the resources that are shared with you.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {}
+    },
+    {
+     "name": "--resource-arns",
+     "args": {}
+    },
+    {
+     "name": "--resource-owner",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "OTHER-ACCOUNTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-region-scope",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "REGIONAL",
+       "GLOBAL"
+      ]
+     }
+    },
+    {
+     "name": "--resource-share-arns",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-source-associations",
+   "description": "Lists source associations for resource shares.",
+   "options": [
+    {
+     "name": "--association-status",
+     "args": {
+      "suggestions": [
+       "ASSOCIATING",
+       "ASSOCIATED",
+       "FAILED",
+       "DISASSOCIATING",
+       "DISASSOCIATED",
+       "SUSPENDED",
+       "SUSPENDING",
+       "RESTORING"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-arns",
+     "args": {}
+    },
+    {
+     "name": "--source-id",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "promote-permission-created-from-policy",
+   "description": "When you attach a resource-based policy to a resource, RAM automatically creates a resource share of featureSet=CREATED_FROM_POLICY with a managed permission that has the same IAM permissions as the original resource-based policy.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "promote-resource-share-created-from-policy",
+   "description": "When you attach a resource-based policy to a resource, RAM automatically creates a resource share of featureSet=CREATED_FROM_POLICY with a managed permission that has the same IAM permissions as the original resource-based policy.",
+   "options": [
+    {
+     "name": "--resource-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-resource-share-invitation",
+   "description": "Rejects an invitation to a resource share from another Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-invitation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "replace-permission-associations",
+   "description": "Updates all resource shares that use a managed permission to a different managed permission.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--from-permission-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--from-permission-version",
+     "args": {}
+    },
+    {
+     "name": "--to-permission-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-default-permission-version",
+   "description": "Designates the specified version number as the default version for the specified customer managed permission.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds the specified tag keys and values to a resource share or managed permission.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tag key and value pairs from the specified resource share or managed permission.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-share-arn",
+     "args": {}
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-resource-share",
+   "description": "Modifies some of the properties of the specified resource share.",
+   "options": [
+    {
+     "name": "--allow-external-principals"
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-external-principals"
+    },
+    {
+     "name": "--resource-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1214 @@
+{
+ "name": "organizations",
+ "description": "Organizations is a web service that enables you to consolidate your multiple Amazon Web Services accounts into an organization and centrally manage your accounts and their resources.",
+ "subcommands": [
+  {
+   "name": "accept-handshake",
+   "description": "Accepts a handshake by sending an ACCEPTED response to the sender.",
+   "options": [
+    {
+     "name": "--handshake-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-policy",
+   "description": "Attaches a policy to a root, an organizational unit (OU), or an individual account.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-handshake",
+   "description": "Cancels a Handshake.",
+   "options": [
+    {
+     "name": "--handshake-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "close-account",
+   "description": "Closes an Amazon Web Services member account within an organization.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-account",
+   "description": "Creates an Amazon Web Services account that is automatically a member of the organization whose credentials made the request.",
+   "options": [
+    {
+     "name": "--account-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-user-access-to-billing",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "DENY"
+      ]
+     }
+    },
+    {
+     "name": "--role-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-gov-cloud-account",
+   "description": "This action is available if all of the following are true: You're authorized to create accounts in the Amazon Web Services GovCloud (US) Region.",
+   "options": [
+    {
+     "name": "--account-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-user-access-to-billing",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "DENY"
+      ]
+     }
+    },
+    {
+     "name": "--role-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-organization",
+   "description": "Creates an Amazon Web Services organization.",
+   "options": [
+    {
+     "name": "--feature-set",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "CONSOLIDATED_BILLING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-organizational-unit",
+   "description": "Creates an organizational unit (OU) within a root or parent OU.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-policy",
+   "description": "Creates a policy of a specified type that you can attach to a root, an organizational unit (OU), or an individual Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SERVICE_CONTROL_POLICY",
+       "RESOURCE_CONTROL_POLICY",
+       "TAG_POLICY",
+       "BACKUP_POLICY",
+       "AISERVICES_OPT_OUT_POLICY",
+       "CHATBOT_POLICY",
+       "DECLARATIVE_POLICY_EC2",
+       "SECURITYHUB_POLICY",
+       "INSPECTOR_POLICY",
+       "UPGRADE_ROLLOUT_POLICY",
+       "BEDROCK_POLICY",
+       "S3_POLICY",
+       "NETWORK_SECURITY_DIRECTOR_POLICY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "decline-handshake",
+   "description": "Declines a Handshake.",
+   "options": [
+    {
+     "name": "--handshake-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-organization",
+   "description": "Deletes the organization."
+  },
+  {
+   "name": "delete-organizational-unit",
+   "description": "Deletes an organizational unit (OU) from a root or another OU.",
+   "options": [
+    {
+     "name": "--organizational-unit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy",
+   "description": "Deletes the specified policy from your organization.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes the resource policy from your organization."
+  },
+  {
+   "name": "deregister-delegated-administrator",
+   "description": "Removes the specified member Amazon Web Services account as a delegated administrator for the specified Amazon Web Services service.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-principal",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-account",
+   "description": "Retrieves Organizations-related information about the specified account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-create-account-status",
+   "description": "Retrieves the current status of an asynchronous request to create an account.",
+   "options": [
+    {
+     "name": "--create-account-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-effective-policy",
+   "description": "Returns the contents of the effective policy for specified policy type and account.",
+   "options": [
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "TAG_POLICY",
+       "BACKUP_POLICY",
+       "AISERVICES_OPT_OUT_POLICY",
+       "CHATBOT_POLICY",
+       "DECLARATIVE_POLICY_EC2",
+       "SECURITYHUB_POLICY",
+       "INSPECTOR_POLICY",
+       "UPGRADE_ROLLOUT_POLICY",
+       "BEDROCK_POLICY",
+       "S3_POLICY",
+       "NETWORK_SECURITY_DIRECTOR_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--target-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-handshake",
+   "description": "Returns details for a handshake.",
+   "options": [
+    {
+     "name": "--handshake-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-organization",
+   "description": "Retrieves information about the organization that the user's account belongs to."
+  },
+  {
+   "name": "describe-organizational-unit",
+   "description": "Retrieves information about an organizational unit (OU).",
+   "options": [
+    {
+     "name": "--organizational-unit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-policy",
+   "description": "Retrieves information about a policy.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-policy",
+   "description": "Retrieves information about a resource policy."
+  },
+  {
+   "name": "describe-responsibility-transfer",
+   "description": "Returns details for a transfer.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-policy",
+   "description": "Detaches a policy from a target root, organizational unit (OU), or account.",
+   "options": [
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-aws-service-access",
+   "description": "Disables the integration of an Amazon Web Services service (the service that is specified by ServicePrincipal) with Organizations.",
+   "options": [
+    {
+     "name": "--service-principal",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-policy-type",
+   "description": "Disables an organizational policy type in a root.",
+   "options": [
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "SERVICE_CONTROL_POLICY",
+       "RESOURCE_CONTROL_POLICY",
+       "TAG_POLICY",
+       "BACKUP_POLICY",
+       "AISERVICES_OPT_OUT_POLICY",
+       "CHATBOT_POLICY",
+       "DECLARATIVE_POLICY_EC2",
+       "SECURITYHUB_POLICY",
+       "INSPECTOR_POLICY",
+       "UPGRADE_ROLLOUT_POLICY",
+       "BEDROCK_POLICY",
+       "S3_POLICY",
+       "NETWORK_SECURITY_DIRECTOR_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--root-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-all-features",
+   "description": "Enables all features in an organization."
+  },
+  {
+   "name": "enable-aws-service-access",
+   "description": "Provides an Amazon Web Services service (the service that is specified by ServicePrincipal) with permissions to view the structure of an organization, create a service-linked role in all the accounts in the organization, and allow the service to perform operations on behalf of the organization and its accounts.",
+   "options": [
+    {
+     "name": "--service-principal",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-policy-type",
+   "description": "Enables a policy type in a root.",
+   "options": [
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "SERVICE_CONTROL_POLICY",
+       "RESOURCE_CONTROL_POLICY",
+       "TAG_POLICY",
+       "BACKUP_POLICY",
+       "AISERVICES_OPT_OUT_POLICY",
+       "CHATBOT_POLICY",
+       "DECLARATIVE_POLICY_EC2",
+       "SECURITYHUB_POLICY",
+       "INSPECTOR_POLICY",
+       "UPGRADE_ROLLOUT_POLICY",
+       "BEDROCK_POLICY",
+       "S3_POLICY",
+       "NETWORK_SECURITY_DIRECTOR_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--root-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "invite-account-to-organization",
+   "description": "Sends an invitation to another account to join your organization as a member account.",
+   "options": [
+    {
+     "name": "--notes",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "invite-organization-to-transfer-responsibility",
+   "description": "Sends an invitation to another organization's management account to designate your account with the specified responsibilities for their organization.",
+   "options": [
+    {
+     "name": "--notes",
+     "args": {}
+    },
+    {
+     "name": "--source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-timestamp",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BILLING"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "leave-organization",
+   "description": "Removes a member account from its parent organization."
+  },
+  {
+   "name": "list-accounts",
+   "description": "Lists all the accounts in the organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-accounts-for-parent",
+   "description": "Lists the accounts in an organization that are contained by the specified target root or organizational unit (OU).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-accounts-with-invalid-effective-policy",
+   "description": "Lists all the accounts in an organization that have invalid effective policies.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "TAG_POLICY",
+       "BACKUP_POLICY",
+       "AISERVICES_OPT_OUT_POLICY",
+       "CHATBOT_POLICY",
+       "DECLARATIVE_POLICY_EC2",
+       "SECURITYHUB_POLICY",
+       "INSPECTOR_POLICY",
+       "UPGRADE_ROLLOUT_POLICY",
+       "BEDROCK_POLICY",
+       "S3_POLICY",
+       "NETWORK_SECURITY_DIRECTOR_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-aws-service-access-for-organization",
+   "description": "Returns a list of the Amazon Web Services services that you enabled to integrate with your organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-children",
+   "description": "Lists all of the organizational units (OUs) or accounts that are contained in the specified parent OU or root.",
+   "options": [
+    {
+     "name": "--child-type",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "ORGANIZATIONAL_UNIT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-create-account-status",
+   "description": "Lists the account creation requests that match the specified status that is currently being tracked for the organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--states",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-delegated-administrators",
+   "description": "Lists the Amazon Web Services accounts that are designated as delegated administrators in this organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-principal",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-delegated-services-for-account",
+   "description": "List the Amazon Web Services services for which the specified account is a delegated administrator.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-effective-policy-validation-errors",
+   "description": "Lists all the validation errors on an effective policy for a specified account and policy type.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "TAG_POLICY",
+       "BACKUP_POLICY",
+       "AISERVICES_OPT_OUT_POLICY",
+       "CHATBOT_POLICY",
+       "DECLARATIVE_POLICY_EC2",
+       "SECURITYHUB_POLICY",
+       "INSPECTOR_POLICY",
+       "UPGRADE_ROLLOUT_POLICY",
+       "BEDROCK_POLICY",
+       "S3_POLICY",
+       "NETWORK_SECURITY_DIRECTOR_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-handshakes-for-account",
+   "description": "Lists the recent handshakes that you have received.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-handshakes-for-organization",
+   "description": "Lists the recent handshakes that you have sent.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-inbound-responsibility-transfers",
+   "description": "Lists transfers that allow you to manage the specified responsibilities for another organization.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BILLING"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-organizational-units-for-parent",
+   "description": "Lists the organizational units (OUs) in a parent organizational unit or root.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-outbound-responsibility-transfers",
+   "description": "Lists transfers that allow an account outside your organization to manage the specified responsibilities for your organization.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BILLING"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-parents",
+   "description": "Lists the root or organizational units (OUs) that serve as the immediate parent of the specified child OU or account.",
+   "options": [
+    {
+     "name": "--child-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policies",
+   "description": "Retrieves the list of all policies in an organization of a specified type.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {
+      "suggestions": [
+       "SERVICE_CONTROL_POLICY",
+       "RESOURCE_CONTROL_POLICY",
+       "TAG_POLICY",
+       "BACKUP_POLICY",
+       "AISERVICES_OPT_OUT_POLICY",
+       "CHATBOT_POLICY",
+       "DECLARATIVE_POLICY_EC2",
+       "SECURITYHUB_POLICY",
+       "INSPECTOR_POLICY",
+       "UPGRADE_ROLLOUT_POLICY",
+       "BEDROCK_POLICY",
+       "S3_POLICY",
+       "NETWORK_SECURITY_DIRECTOR_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policies-for-target",
+   "description": "Lists the policies that are directly attached to the specified target root, organizational unit (OU), or account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {
+      "suggestions": [
+       "SERVICE_CONTROL_POLICY",
+       "RESOURCE_CONTROL_POLICY",
+       "TAG_POLICY",
+       "BACKUP_POLICY",
+       "AISERVICES_OPT_OUT_POLICY",
+       "CHATBOT_POLICY",
+       "DECLARATIVE_POLICY_EC2",
+       "SECURITYHUB_POLICY",
+       "INSPECTOR_POLICY",
+       "UPGRADE_ROLLOUT_POLICY",
+       "BEDROCK_POLICY",
+       "S3_POLICY",
+       "NETWORK_SECURITY_DIRECTOR_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-roots",
+   "description": "Lists the roots that are defined in the current organization.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags that are attached to the specified resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-targets-for-policy",
+   "description": "Lists all the roots, organizational units (OUs), and accounts that the specified policy is attached to.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "move-account",
+   "description": "Moves an account from its current source parent root or organizational unit (OU) to the specified destination parent root or OU.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-parent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-parent-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Creates or updates a resource policy.",
+   "options": [
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-delegated-administrator",
+   "description": "Enables the specified member account to administer the Organizations features of the specified Amazon Web Services service.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-principal",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-account-from-organization",
+   "description": "Removes the specified account from the organization.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-responsibility-transfer",
+   "description": "Ends a transfer.",
+   "options": [
+    {
+     "name": "--end-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes any tags with the specified keys from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-organizational-unit",
+   "description": "Renames the specified organizational unit (OU).",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--organizational-unit-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-policy",
+   "description": "Updates an existing policy with a new name, description, or content.",
+   "options": [
+    {
+     "name": "--content",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-responsibility-transfer",
+   "description": "Updates a transfer.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

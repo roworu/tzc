@@ -1,0 +1,978 @@
+{
+ "name": "neptunedata",
+ "description": "Neptune Data API The Amazon Neptune data API provides SDK support for more than 40 of Neptune's data operations, including data loading, query execution, data inquiry, and machine learning.",
+ "subcommands": [
+  {
+   "name": "cancel-gremlin-query",
+   "description": "Cancels a Gremlin query.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-loader-job",
+   "description": "Cancels a specified load job.",
+   "options": [
+    {
+     "name": "--load-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-ml-data-processing-job",
+   "description": "Cancels a Neptune ML data processing job.",
+   "options": [
+    {
+     "name": "--clean"
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-clean"
+    }
+   ]
+  },
+  {
+   "name": "cancel-ml-model-training-job",
+   "description": "Cancels a Neptune ML model training job.",
+   "options": [
+    {
+     "name": "--clean"
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-clean"
+    }
+   ]
+  },
+  {
+   "name": "cancel-ml-model-transform-job",
+   "description": "Cancels a specified model transform job.",
+   "options": [
+    {
+     "name": "--clean"
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-clean"
+    }
+   ]
+  },
+  {
+   "name": "cancel-open-cypher-query",
+   "description": "Cancels a specified openCypher query.",
+   "options": [
+    {
+     "name": "--no-silent"
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--silent"
+    }
+   ]
+  },
+  {
+   "name": "create-ml-endpoint",
+   "description": "Creates a new Neptune ML inference endpoint that lets you query one specific model that the model-training process constructed.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--instance-count",
+     "args": {}
+    },
+    {
+     "name": "--instance-type",
+     "args": {}
+    },
+    {
+     "name": "--ml-model-training-job-id",
+     "args": {}
+    },
+    {
+     "name": "--ml-model-transform-job-id",
+     "args": {}
+    },
+    {
+     "name": "--model-name",
+     "args": {}
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-update"
+    },
+    {
+     "name": "--update"
+    },
+    {
+     "name": "--volume-encryption-kms-key",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-ml-endpoint",
+   "description": "Cancels the creation of a Neptune ML inference endpoint.",
+   "options": [
+    {
+     "name": "--clean"
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-clean"
+    }
+   ]
+  },
+  {
+   "name": "delete-propertygraph-statistics",
+   "description": "Deletes statistics for Gremlin and openCypher (property graph) data."
+  },
+  {
+   "name": "delete-sparql-statistics",
+   "description": "Deletes SPARQL statistics When invoking this operation in a Neptune cluster that has IAM authentication enabled, the IAM user or role making the request must have a policy attached that allows the neptune-db:DeleteStatistics IAM action in that cluster."
+  },
+  {
+   "name": "execute-fast-reset",
+   "description": "The fast reset REST API lets you reset a Neptune graph quicky and easily, removing all of its data.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "initiateDatabaseReset",
+       "performDatabaseReset"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "execute-gremlin-explain-query",
+   "description": "Executes a Gremlin Explain query.",
+   "options": [
+    {
+     "name": "--gremlin-query",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-gremlin-profile-query",
+   "description": "Executes a Gremlin Profile query, which runs a specified traversal, collects various metrics about the run, and produces a profile report as output.",
+   "options": [
+    {
+     "name": "--chop",
+     "args": {}
+    },
+    {
+     "name": "--gremlin-query",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-ops"
+    },
+    {
+     "name": "--no-index-ops"
+    },
+    {
+     "name": "--no-results"
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--results"
+    },
+    {
+     "name": "--serializer",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "execute-gremlin-query",
+   "description": "This commands executes a Gremlin query.",
+   "options": [
+    {
+     "name": "--gremlin-query",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--serializer",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "execute-open-cypher-explain-query",
+   "description": "Executes an openCypher explain request.",
+   "options": [
+    {
+     "name": "--explain-mode",
+     "args": {
+      "suggestions": [
+       "static",
+       "dynamic",
+       "details"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--open-cypher-query",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "execute-open-cypher-query",
+   "description": "Executes an openCypher query.",
+   "options": [
+    {
+     "name": "--open-cypher-query",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-engine-status",
+   "description": "Retrieves the status of the graph database on the host."
+  },
+  {
+   "name": "get-gremlin-query-status",
+   "description": "Gets the status of a specified Gremlin query.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-loader-job-status",
+   "description": "Gets status information about a specified load job.",
+   "options": [
+    {
+     "name": "--details"
+    },
+    {
+     "name": "--errors"
+    },
+    {
+     "name": "--errors-per-page",
+     "args": {}
+    },
+    {
+     "name": "--load-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-details"
+    },
+    {
+     "name": "--no-errors"
+    },
+    {
+     "name": "--page",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-ml-data-processing-job",
+   "description": "Retrieves information about a specified data processing job.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-ml-endpoint",
+   "description": "Retrieves details about an inference endpoint.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-ml-model-training-job",
+   "description": "Retrieves information about a Neptune ML model training job.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-ml-model-transform-job",
+   "description": "Gets information about a specified model transform job.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-open-cypher-query-status",
+   "description": "Retrieves the status of a specified openCypher query.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-propertygraph-statistics",
+   "description": "Gets property graph statistics (Gremlin and openCypher)."
+  },
+  {
+   "name": "get-propertygraph-stream",
+   "description": "Gets a stream for a property graph.",
+   "options": [
+    {
+     "name": "--commit-num",
+     "args": {}
+    },
+    {
+     "name": "--encoding",
+     "args": {
+      "suggestions": [
+       "gzip"
+      ]
+     }
+    },
+    {
+     "name": "--iterator-type",
+     "args": {
+      "suggestions": [
+       "AT_SEQUENCE_NUMBER",
+       "AFTER_SEQUENCE_NUMBER",
+       "TRIM_HORIZON",
+       "LATEST"
+      ]
+     }
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--op-num",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-propertygraph-summary",
+   "description": "Gets a graph summary for a property graph.",
+   "options": [
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "basic",
+       "detailed"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-rdf-graph-summary",
+   "description": "Gets a graph summary for an RDF graph.",
+   "options": [
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "basic",
+       "detailed"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-sparql-statistics",
+   "description": "Gets RDF statistics (SPARQL)."
+  },
+  {
+   "name": "get-sparql-stream",
+   "description": "Gets a stream for an RDF graph.",
+   "options": [
+    {
+     "name": "--commit-num",
+     "args": {}
+    },
+    {
+     "name": "--encoding",
+     "args": {
+      "suggestions": [
+       "gzip"
+      ]
+     }
+    },
+    {
+     "name": "--iterator-type",
+     "args": {
+      "suggestions": [
+       "AT_SEQUENCE_NUMBER",
+       "AFTER_SEQUENCE_NUMBER",
+       "TRIM_HORIZON",
+       "LATEST"
+      ]
+     }
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--op-num",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-gremlin-queries",
+   "description": "Lists active Gremlin queries.",
+   "options": [
+    {
+     "name": "--include-waiting"
+    },
+    {
+     "name": "--no-include-waiting"
+    }
+   ]
+  },
+  {
+   "name": "list-loader-jobs",
+   "description": "Retrieves a list of the loadIds for all active loader jobs.",
+   "options": [
+    {
+     "name": "--include-queued-loads"
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--no-include-queued-loads"
+    }
+   ]
+  },
+  {
+   "name": "list-ml-data-processing-jobs",
+   "description": "Returns a list of Neptune ML data processing jobs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ml-endpoints",
+   "description": "Lists existing inference endpoints.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ml-model-training-jobs",
+   "description": "Lists Neptune ML model-training jobs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ml-model-transform-jobs",
+   "description": "Returns a list of model transform job IDs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-open-cypher-queries",
+   "description": "Lists active openCypher queries.",
+   "options": [
+    {
+     "name": "--include-waiting"
+    },
+    {
+     "name": "--no-include-waiting"
+    }
+   ]
+  },
+  {
+   "name": "manage-propertygraph-statistics",
+   "description": "Manages the generation and use of property graph statistics.",
+   "options": [
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "disableAutoCompute",
+       "enableAutoCompute",
+       "refresh"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "manage-sparql-statistics",
+   "description": "Manages the generation and use of RDF graph statistics.",
+   "options": [
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "disableAutoCompute",
+       "enableAutoCompute",
+       "refresh"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "start-loader-job",
+   "description": "Starts a Neptune bulk loader job to load data from an Amazon S3 bucket into a Neptune DB instance.",
+   "options": [
+    {
+     "name": "--dependencies",
+     "args": {}
+    },
+    {
+     "name": "--edge-only-load"
+    },
+    {
+     "name": "--fail-on-error"
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "csv",
+       "opencypher",
+       "ntriples",
+       "nquads",
+       "rdfxml",
+       "turtle"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "RESUME",
+       "NEW",
+       "AUTO"
+      ]
+     }
+    },
+    {
+     "name": "--no-edge-only-load"
+    },
+    {
+     "name": "--no-fail-on-error"
+    },
+    {
+     "name": "--no-queue-request"
+    },
+    {
+     "name": "--no-update-single-cardinality-properties"
+    },
+    {
+     "name": "--no-user-provided-edge-ids"
+    },
+    {
+     "name": "--parallelism",
+     "args": {
+      "suggestions": [
+       "LOW",
+       "MEDIUM",
+       "HIGH",
+       "OVERSUBSCRIBE"
+      ]
+     }
+    },
+    {
+     "name": "--parser-configuration",
+     "args": {}
+    },
+    {
+     "name": "--queue-request"
+    },
+    {
+     "name": "--s3-bucket-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-single-cardinality-properties"
+    },
+    {
+     "name": "--user-provided-edge-ids"
+    }
+   ]
+  },
+  {
+   "name": "start-ml-data-processing-job",
+   "description": "Creates a new Neptune ML data processing job for processing the graph data exported from Neptune for training.",
+   "options": [
+    {
+     "name": "--config-file-name",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--input-data-s3-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-type",
+     "args": {}
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--previous-data-processing-job-id",
+     "args": {}
+    },
+    {
+     "name": "--processed-data-s3-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--processing-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--processing-instance-volume-size-in-gb",
+     "args": {}
+    },
+    {
+     "name": "--processing-time-out-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--s3-output-encryption-kms-key",
+     "args": {}
+    },
+    {
+     "name": "--sagemaker-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--subnets",
+     "args": {}
+    },
+    {
+     "name": "--volume-encryption-kms-key",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-ml-model-training-job",
+   "description": "Creates a new Neptune ML model training job.",
+   "options": [
+    {
+     "name": "--base-processing-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--custom-model-training-parameters",
+     "args": {}
+    },
+    {
+     "name": "--data-processing-job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-managed-spot-training"
+    },
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--max-hpo-number-of-training-jobs",
+     "args": {}
+    },
+    {
+     "name": "--max-hpo-parallel-training-jobs",
+     "args": {}
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-managed-spot-training"
+    },
+    {
+     "name": "--previous-model-training-job-id",
+     "args": {}
+    },
+    {
+     "name": "--s3-output-encryption-kms-key",
+     "args": {}
+    },
+    {
+     "name": "--sagemaker-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--subnets",
+     "args": {}
+    },
+    {
+     "name": "--train-model-s3-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--training-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--training-instance-volume-size-in-gb",
+     "args": {}
+    },
+    {
+     "name": "--training-time-out-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--volume-encryption-kms-key",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-ml-model-transform-job",
+   "description": "Creates a new model transform job.",
+   "options": [
+    {
+     "name": "--base-processing-instance-type",
+     "args": {}
+    },
+    {
+     "name": "--base-processing-instance-volume-size-in-gb",
+     "args": {}
+    },
+    {
+     "name": "--custom-model-transform-parameters",
+     "args": {}
+    },
+    {
+     "name": "--data-processing-job-id",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--ml-model-training-job-id",
+     "args": {}
+    },
+    {
+     "name": "--model-transform-output-s3-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--neptune-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--s3-output-encryption-kms-key",
+     "args": {}
+    },
+    {
+     "name": "--sagemaker-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--security-group-ids",
+     "args": {}
+    },
+    {
+     "name": "--subnets",
+     "args": {}
+    },
+    {
+     "name": "--training-job-name",
+     "args": {}
+    },
+    {
+     "name": "--volume-encryption-kms-key",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

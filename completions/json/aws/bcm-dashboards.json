@@ -1,0 +1,279 @@
+{
+ "name": "bcm-dashboards",
+ "description": "Amazon Web Services Billing and Cost Management Dashboards is a service that enables you to create, manage, and share dashboards that combine multiple visualizations of your Amazon Web Services cost and usage data.",
+ "subcommands": [
+  {
+   "name": "create-dashboard",
+   "description": "Creates a new dashboard that can contain multiple widgets displaying cost and usage data.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--widgets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-scheduled-report",
+   "description": "Creates a new scheduled report for a dashboard.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-report",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dashboard",
+   "description": "Deletes a specified dashboard.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scheduled-report",
+   "description": "Deletes a specified scheduled report.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-scheduled-report",
+   "description": "Triggers an immediate execution of a scheduled report, outside of its regular schedule.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "get-dashboard",
+   "description": "Retrieves the configuration and metadata of a specified dashboard, including its widgets and layout settings.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Retrieves the resource-based policy attached to a dashboard, showing sharing configurations and permissions.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-scheduled-report",
+   "description": "Retrieves the configuration and metadata of a specified scheduled report.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-dashboards",
+   "description": "Returns a list of all dashboards in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-scheduled-reports",
+   "description": "Returns a list of scheduled reports in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of all tags associated with a specified dashboard resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a specified dashboard resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes specified tags from a dashboard resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dashboard",
+   "description": "Updates an existing dashboard's properties, including its name, description, and widget configurations.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--widgets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-scheduled-report",
+   "description": "Updates an existing scheduled report's properties, including its name, description, schedule configuration, and widget settings.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--clear-widget-date-range-override"
+    },
+    {
+     "name": "--clear-widget-ids"
+    },
+    {
+     "name": "--dashboard-arn",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-clear-widget-date-range-override"
+    },
+    {
+     "name": "--no-clear-widget-ids"
+    },
+    {
+     "name": "--schedule-config",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-report-execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--widget-date-range-override",
+     "args": {}
+    },
+    {
+     "name": "--widget-ids",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

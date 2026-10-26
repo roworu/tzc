@@ -1,0 +1,324 @@
+{
+ "name": "artifact",
+ "description": "This reference provides descriptions of the low-level AWS Artifact Service API.",
+ "subcommands": [
+  {
+   "name": "create-compliance-inquiry",
+   "description": "Create a new compliance inquiry.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--inquiry-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--support-mode",
+     "args": {
+      "suggestions": [
+       "AI_ONLY",
+       "FULL_SUPPORT"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "export-compliance-inquiry",
+   "description": "Export a compliance inquiry report.",
+   "options": [
+    {
+     "name": "--compliance-inquiry-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-citations"
+    },
+    {
+     "name": "--no-include-citations"
+    },
+    {
+     "name": "--query-identifiers",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-account-settings",
+   "description": "Get the account settings for Artifact."
+  },
+  {
+   "name": "get-compliance-inquiry-metadata",
+   "description": "Get the metadata for a single compliance inquiry.",
+   "options": [
+    {
+     "name": "--compliance-inquiry-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-report",
+   "description": "Get the content for a single report.",
+   "options": [
+    {
+     "name": "--report-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-version",
+     "args": {}
+    },
+    {
+     "name": "--term-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-report-metadata",
+   "description": "Get the metadata for a single report.",
+   "options": [
+    {
+     "name": "--report-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-term-for-report",
+   "description": "Get the Term content associated with a single report.",
+   "options": [
+    {
+     "name": "--report-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-compliance-inquiries",
+   "description": "List available compliance inquiries.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-compliance-inquiry-queries",
+   "description": "List queries within a compliance inquiry.",
+   "options": [
+    {
+     "name": "--compliance-inquiry-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-customer-agreements",
+   "description": "List active customer-agreements applicable to calling identity.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-report-versions",
+   "description": "List available report versions for a given report.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--report-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-reports",
+   "description": "List available reports.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-account-settings",
+   "description": "Put the account settings for Artifact.",
+   "options": [
+    {
+     "name": "--notification-subscription-status",
+     "args": {
+      "suggestions": [
+       "SUBSCRIBED",
+       "NOT_SUBSCRIBED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "put-compliance-inquiry-feedback",
+   "description": "Submits feedback on a compliance inquiry response.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--compliance-inquiry-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-identifier",
+     "args": {}
+    },
+    {
+     "name": "--rating",
+     "args": {
+      "suggestions": [
+       "THUMBS_UP",
+       "THUMBS_DOWN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--reason-codes",
+     "args": {}
+    },
+    {
+     "name": "--response-revision-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

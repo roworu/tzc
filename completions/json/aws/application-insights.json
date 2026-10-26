@@ -1,0 +1,829 @@
+{
+ "name": "application-insights",
+ "description": "Amazon CloudWatch Application Insights Amazon CloudWatch Application Insights is a service that helps you detect common problems with your applications.",
+ "subcommands": [
+  {
+   "name": "add-workload",
+   "description": "Adds a workload to a component.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Adds an application that is created from a resource group.",
+   "options": [
+    {
+     "name": "--attach-missing-permission"
+    },
+    {
+     "name": "--auto-config-enabled"
+    },
+    {
+     "name": "--auto-create"
+    },
+    {
+     "name": "--cwe-monitor-enabled"
+    },
+    {
+     "name": "--grouping-type",
+     "args": {
+      "suggestions": [
+       "ACCOUNT_BASED"
+      ]
+     }
+    },
+    {
+     "name": "--no-attach-missing-permission"
+    },
+    {
+     "name": "--no-auto-config-enabled"
+    },
+    {
+     "name": "--no-auto-create"
+    },
+    {
+     "name": "--no-cwe-monitor-enabled"
+    },
+    {
+     "name": "--no-ops-center-enabled"
+    },
+    {
+     "name": "--ops-center-enabled"
+    },
+    {
+     "name": "--ops-item-sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {}
+    },
+    {
+     "name": "--sns-notification-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-component",
+   "description": "Creates a custom component by grouping similar standalone instances to monitor.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-log-pattern",
+   "description": "Adds an log pattern to a LogPatternSet.",
+   "options": [
+    {
+     "name": "--pattern",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pattern-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pattern-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rank",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Removes the specified application from monitoring.",
+   "options": [
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-component",
+   "description": "Ungroups a custom component.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-log-pattern",
+   "description": "Removes the specified log pattern from a LogPatternSet.",
+   "options": [
+    {
+     "name": "--pattern-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pattern-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-application",
+   "description": "Describes the application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-component",
+   "description": "Describes a component and lists the resources that are grouped together in a component.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-component-configuration",
+   "description": "Describes the monitoring configuration of the component.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-component-configuration-recommendation",
+   "description": "Describes the recommended monitoring configuration of the component.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-type",
+     "args": {
+      "suggestions": [
+       "INFRA_ONLY",
+       "WORKLOAD_ONLY",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-log-pattern",
+   "description": "Describe a specific log pattern from a LogPatternSet.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--pattern-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pattern-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-observation",
+   "description": "Describes an anomaly or error with the application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--observation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-problem",
+   "description": "Describes an application problem.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--problem-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-problem-observations",
+   "description": "Describes the anomalies or errors associated with the problem.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--problem-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-workload",
+   "description": "Describes a workload and its configuration.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists the IDs of the applications that you are monitoring.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-components",
+   "description": "Lists the auto-grouped, standalone, and custom components of the application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-configuration-history",
+   "description": "Lists the INFO, WARN, and ERROR events for periodic configuration updates performed by Application Insights.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--event-status",
+     "args": {
+      "suggestions": [
+       "INFO",
+       "WARN",
+       "ERROR"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-log-pattern-sets",
+   "description": "Lists the log pattern sets in the specific application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-log-patterns",
+   "description": "Lists the log patterns in the specific log LogPatternSet.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--pattern-set-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-problems",
+   "description": "Lists the problems with your application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--component-name",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--visibility",
+     "args": {
+      "suggestions": [
+       "IGNORED",
+       "VISIBLE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieve a list of the tags (keys and values) that are associated with a specified application.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workloads",
+   "description": "Lists the workloads that are configured on a given component.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-workload",
+   "description": "Remove workload from a component.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add one or more tags (keys and values) to a specified application.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove one or more tags (keys and values) from a specified application.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates the application.",
+   "options": [
+    {
+     "name": "--attach-missing-permission"
+    },
+    {
+     "name": "--auto-config-enabled"
+    },
+    {
+     "name": "--cwe-monitor-enabled"
+    },
+    {
+     "name": "--no-attach-missing-permission"
+    },
+    {
+     "name": "--no-auto-config-enabled"
+    },
+    {
+     "name": "--no-cwe-monitor-enabled"
+    },
+    {
+     "name": "--no-ops-center-enabled"
+    },
+    {
+     "name": "--no-remove-sns-topic"
+    },
+    {
+     "name": "--ops-center-enabled"
+    },
+    {
+     "name": "--ops-item-sns-topic-arn",
+     "args": {}
+    },
+    {
+     "name": "--remove-sns-topic"
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sns-notification-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-component",
+   "description": "Updates the custom component name and/or the list of resources that make up the component.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-component-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-component-configuration",
+   "description": "Updates the monitoring configurations for the component.",
+   "options": [
+    {
+     "name": "--auto-config-enabled"
+    },
+    {
+     "name": "--component-configuration",
+     "args": {}
+    },
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--monitor"
+    },
+    {
+     "name": "--no-auto-config-enabled"
+    },
+    {
+     "name": "--no-monitor"
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-log-pattern",
+   "description": "Adds a log pattern to a LogPatternSet.",
+   "options": [
+    {
+     "name": "--pattern",
+     "args": {}
+    },
+    {
+     "name": "--pattern-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pattern-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rank",
+     "args": {}
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-problem",
+   "description": "Updates the visibility of the problem or specifies the problem as RESOLVED.",
+   "options": [
+    {
+     "name": "--problem-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-status",
+     "args": {
+      "suggestions": [
+       "RESOLVED"
+      ]
+     }
+    },
+    {
+     "name": "--visibility",
+     "args": {
+      "suggestions": [
+       "IGNORED",
+       "VISIBLE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-workload",
+   "description": "Adds a workload to a component.",
+   "options": [
+    {
+     "name": "--component-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-id",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

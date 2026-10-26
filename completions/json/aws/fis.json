@@ -1,0 +1,499 @@
+{
+ "name": "fis",
+ "description": "Amazon Web Services Fault Injection Service is a managed service that enables you to perform fault injection experiments on your Amazon Web Services workloads.",
+ "subcommands": [
+  {
+   "name": "create-experiment-template",
+   "description": "Creates an experiment template.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--experiment-options",
+     "args": {}
+    },
+    {
+     "name": "--experiment-report-configuration",
+     "args": {}
+    },
+    {
+     "name": "--log-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stop-conditions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-target-account-configuration",
+   "description": "Creates a target account configuration for the experiment template.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--experiment-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-experiment-template",
+   "description": "Deletes the specified experiment template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-target-account-configuration",
+   "description": "Deletes the specified target account configuration of the experiment template.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--experiment-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-action",
+   "description": "Gets information about the specified FIS action.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-experiment",
+   "description": "Gets information about the specified experiment.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-experiment-target-account-configuration",
+   "description": "Gets information about the specified target account configuration of the experiment.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--experiment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-experiment-template",
+   "description": "Gets information about the specified experiment template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-safety-lever",
+   "description": "Gets information about the specified safety lever.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-target-account-configuration",
+   "description": "Gets information about the specified target account configuration of the experiment template.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--experiment-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-target-resource-type",
+   "description": "Gets information about the specified resource type.",
+   "options": [
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-actions",
+   "description": "Lists the available FIS actions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-experiment-resolved-targets",
+   "description": "Lists the resolved targets information of the specified experiment.",
+   "options": [
+    {
+     "name": "--experiment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-experiment-target-account-configurations",
+   "description": "Lists the target account configurations of the specified experiment.",
+   "options": [
+    {
+     "name": "--experiment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-experiment-templates",
+   "description": "Lists your experiment templates.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-experiments",
+   "description": "Lists your experiments.",
+   "options": [
+    {
+     "name": "--experiment-template-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-target-account-configurations",
+   "description": "Lists the target account configurations of the specified experiment template.",
+   "options": [
+    {
+     "name": "--experiment-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-target-resource-types",
+   "description": "Lists the target resource types.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-experiment",
+   "description": "Starts running an experiment from the specified experiment template.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--experiment-options",
+     "args": {}
+    },
+    {
+     "name": "--experiment-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-experiment",
+   "description": "Stops the specified experiment.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Applies the specified tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-experiment-template",
+   "description": "Updates the specified experiment template.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--experiment-options",
+     "args": {}
+    },
+    {
+     "name": "--experiment-report-configuration",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--stop-conditions",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-safety-lever-state",
+   "description": "Updates the specified safety lever state.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-target-account-configuration",
+   "description": "Updates the target account configuration for the specified experiment template.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--experiment-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

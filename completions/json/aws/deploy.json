@@ -1,0 +1,1139 @@
+{
+ "name": "deploy",
+ "description": "CodeDeploy is a deployment service that automates application deployments to Amazon EC2 instances, on-premises instances running in your own facility, serverless Lambda functions, or applications in an Amazon ECS service.",
+ "subcommands": [
+  {
+   "name": "add-tags-to-on-premises-instances",
+   "description": "Adds tags to on-premises instances.",
+   "options": [
+    {
+     "name": "--instance-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-application-revisions",
+   "description": "Gets information about one or more application revisions.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revisions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-applications",
+   "description": "Gets information about one or more applications.",
+   "options": [
+    {
+     "name": "--application-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-deployment-groups",
+   "description": "Gets information about one or more deployment groups.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-group-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-deployment-instances",
+   "description": "This method works, but is deprecated.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-deployment-targets",
+   "description": "Returns an array of one or more targets associated with a deployment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-deployments",
+   "description": "Gets information about one or more deployments.",
+   "options": [
+    {
+     "name": "--deployment-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-on-premises-instances",
+   "description": "Gets information about one or more on-premises instances.",
+   "options": [
+    {
+     "name": "--instance-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "continue-deployment",
+   "description": "For a blue/green deployment, starts the process of rerouting traffic from instances in the original environment to instances in the replacement environment without waiting for a specified wait time to elapse.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--deployment-wait-type",
+     "args": {
+      "suggestions": [
+       "READY_WAIT",
+       "TERMINATION_WAIT"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates an application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-platform",
+     "args": {
+      "suggestions": [
+       "Server",
+       "Lambda",
+       "ECS"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-deployment",
+   "description": "Deploys an application revision through the specified deployment group.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-rollback-configuration",
+     "args": {}
+    },
+    {
+     "name": "--deployment-config-name",
+     "args": {}
+    },
+    {
+     "name": "--deployment-group-name",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--file-exists-behavior",
+     "args": {
+      "suggestions": [
+       "DISALLOW",
+       "OVERWRITE",
+       "RETAIN"
+      ]
+     }
+    },
+    {
+     "name": "--github-location",
+     "args": {}
+    },
+    {
+     "name": "--ignore-application-stop-failures"
+    },
+    {
+     "name": "--no-ignore-application-stop-failures"
+    },
+    {
+     "name": "--no-update-outdated-instances-only"
+    },
+    {
+     "name": "--override-alarm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    },
+    {
+     "name": "--s3-location",
+     "args": {}
+    },
+    {
+     "name": "--target-instances",
+     "args": {}
+    },
+    {
+     "name": "--update-outdated-instances-only"
+    }
+   ]
+  },
+  {
+   "name": "create-deployment-config",
+   "description": "Creates a deployment configuration.",
+   "options": [
+    {
+     "name": "--compute-platform",
+     "args": {
+      "suggestions": [
+       "Server",
+       "Lambda",
+       "ECS"
+      ]
+     }
+    },
+    {
+     "name": "--deployment-config-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minimum-healthy-hosts",
+     "args": {}
+    },
+    {
+     "name": "--traffic-routing-config",
+     "args": {}
+    },
+    {
+     "name": "--zonal-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-deployment-group",
+   "description": "Creates a deployment group to which application revisions are deployed.",
+   "options": [
+    {
+     "name": "--alarm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-rollback-configuration",
+     "args": {}
+    },
+    {
+     "name": "--auto-scaling-groups",
+     "args": {}
+    },
+    {
+     "name": "--blue-green-deployment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--deployment-config-name",
+     "args": {}
+    },
+    {
+     "name": "--deployment-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-style",
+     "args": {}
+    },
+    {
+     "name": "--ec2-tag-filters",
+     "args": {}
+    },
+    {
+     "name": "--ec2-tag-set",
+     "args": {}
+    },
+    {
+     "name": "--ecs-services",
+     "args": {}
+    },
+    {
+     "name": "--load-balancer-info",
+     "args": {}
+    },
+    {
+     "name": "--no-termination-hook-enabled"
+    },
+    {
+     "name": "--on-premises-instance-tag-filters",
+     "args": {}
+    },
+    {
+     "name": "--on-premises-tag-set",
+     "args": {}
+    },
+    {
+     "name": "--outdated-instances-strategy",
+     "args": {
+      "suggestions": [
+       "UPDATE",
+       "IGNORE"
+      ]
+     }
+    },
+    {
+     "name": "--service-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--termination-hook-enabled"
+    },
+    {
+     "name": "--trigger-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes an application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-deployment-config",
+   "description": "Deletes a deployment configuration.",
+   "options": [
+    {
+     "name": "--deployment-config-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-deployment-group",
+   "description": "Deletes a deployment group.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-git-hub-account-token",
+   "description": "Deletes a GitHub account connection.",
+   "options": [
+    {
+     "name": "--token-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-resources-by-external-id",
+   "description": "Deletes resources linked to an external ID.",
+   "options": [
+    {
+     "name": "--external-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "deregister",
+   "description": "Removes any tags from the on-premises instance; deregisters the on-premises instance from AWS CodeDeploy; and, unless requested otherwise, deletes the IAM user for the on-premises instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-delete-iam-user"
+    }
+   ]
+  },
+  {
+   "name": "deregister-on-premises-instance",
+   "description": "Deregisters an on-premises instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application",
+   "description": "Gets information about an application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application-revision",
+   "description": "Gets information about an application revision.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--github-location",
+     "args": {}
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    },
+    {
+     "name": "--s3-location",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-deployment",
+   "description": "Gets information about a deployment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment-config",
+   "description": "Gets information about a deployment configuration.",
+   "options": [
+    {
+     "name": "--deployment-config-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment-group",
+   "description": "Gets information about a deployment group.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment-instance",
+   "description": "Gets information about an instance as part of a deployment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment-target",
+   "description": "Returns information about a deployment target.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-on-premises-instance",
+   "description": "Gets information about an on-premises instance.",
+   "options": [
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "install",
+   "description": "Configures and installs the AWS CodeDeploy Agent on the on-premises instance.",
+   "options": [
+    {
+     "name": "--agent-installer",
+     "args": {}
+    },
+    {
+     "name": "--config-file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--override-config"
+    }
+   ]
+  },
+  {
+   "name": "list-application-revisions",
+   "description": "Lists information about revisions for an application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployed",
+     "args": {
+      "suggestions": [
+       "include",
+       "exclude",
+       "ignore"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket",
+     "args": {}
+    },
+    {
+     "name": "--s3-key-prefix",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "registerTime",
+       "firstUsedTime",
+       "lastUsedTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ascending",
+       "descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists the applications registered with the user or Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployment-configs",
+   "description": "Lists the deployment configurations with the user or Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployment-groups",
+   "description": "Lists the deployment groups for an application registered with the Amazon Web Services user or Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployment-instances",
+   "description": "The newer BatchGetDeploymentTargets should be used instead because it works with all compute types.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-status-filter",
+     "args": {}
+    },
+    {
+     "name": "--instance-type-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployment-targets",
+   "description": "Returns an array of target IDs that are associated a deployment.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-filters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployments",
+   "description": "Lists the deployments in a deployment group for an application registered with the user or Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {}
+    },
+    {
+     "name": "--create-time-range",
+     "args": {}
+    },
+    {
+     "name": "--deployment-group-name",
+     "args": {}
+    },
+    {
+     "name": "--external-id",
+     "args": {}
+    },
+    {
+     "name": "--include-only-statuses",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-git-hub-account-token-names",
+   "description": "Lists the names of stored connections to GitHub accounts.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-on-premises-instances",
+   "description": "Gets a list of names for one or more on-premises instances.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--registration-status",
+     "args": {
+      "suggestions": [
+       "Registered",
+       "Deregistered"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-filters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags for the resource identified by a specified Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "push",
+   "description": "Bundles and uploads to Amazon Simple Storage Service (Amazon S3) an application revision, which is a zip archive file that contains deployable content and an accompanying Application Specification file (AppSpec file).",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--ignore-hidden-files"
+    },
+    {
+     "name": "--no-ignore-hidden-files"
+    },
+    {
+     "name": "--s3-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-lifecycle-event-hook-execution-status",
+   "description": "Sets the result of a Lambda validation function.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-event-hook-execution-id",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Pending",
+       "InProgress",
+       "Succeeded",
+       "Failed",
+       "Skipped",
+       "Unknown"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "register",
+   "description": "Creates an IAM user for the on-premises instance, if not provided, and saves the user's credentials to an on-premises instance configuration file; registers the on-premises instance with AWS CodeDeploy; and optionally adds tags to the on-premises instance.",
+   "options": [
+    {
+     "name": "--iam-user-arn",
+     "args": {}
+    },
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-application-revision",
+   "description": "Registers with CodeDeploy a revision for the specified application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--github-location",
+     "args": {}
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    },
+    {
+     "name": "--s3-location",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-on-premises-instance",
+   "description": "Registers an on-premises instance.",
+   "options": [
+    {
+     "name": "--iam-session-arn",
+     "args": {}
+    },
+    {
+     "name": "--iam-user-arn",
+     "args": {}
+    },
+    {
+     "name": "--instance-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-on-premises-instances",
+   "description": "Removes one or more tags from one or more on-premises instances.",
+   "options": [
+    {
+     "name": "--instance-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "skip-wait-time-for-instance-termination",
+   "description": "In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the traffic routing is complete.",
+   "options": [
+    {
+     "name": "--deployment-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-deployment",
+   "description": "Attempts to stop an ongoing deployment.",
+   "options": [
+    {
+     "name": "--auto-rollback-enabled"
+    },
+    {
+     "name": "--deployment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-rollback-enabled"
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the list of tags in the input Tags parameter with the resource identified by the ResourceArn input parameter.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "uninstall",
+   "description": "Uninstalls the AWS CodeDeploy Agent from the on-premises instance."
+  },
+  {
+   "name": "untag-resource",
+   "description": "Disassociates a resource from a list of tags.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Changes the name of an application.",
+   "options": [
+    {
+     "name": "--application-name",
+     "args": {}
+    },
+    {
+     "name": "--new-application-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-deployment-group",
+   "description": "Changes information about a deployment group.",
+   "options": [
+    {
+     "name": "--alarm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--application-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auto-rollback-configuration",
+     "args": {}
+    },
+    {
+     "name": "--auto-scaling-groups",
+     "args": {}
+    },
+    {
+     "name": "--blue-green-deployment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--current-deployment-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-config-name",
+     "args": {}
+    },
+    {
+     "name": "--deployment-style",
+     "args": {}
+    },
+    {
+     "name": "--ec2-tag-filters",
+     "args": {}
+    },
+    {
+     "name": "--ec2-tag-set",
+     "args": {}
+    },
+    {
+     "name": "--ecs-services",
+     "args": {}
+    },
+    {
+     "name": "--load-balancer-info",
+     "args": {}
+    },
+    {
+     "name": "--new-deployment-group-name",
+     "args": {}
+    },
+    {
+     "name": "--no-termination-hook-enabled"
+    },
+    {
+     "name": "--on-premises-instance-tag-filters",
+     "args": {}
+    },
+    {
+     "name": "--on-premises-tag-set",
+     "args": {}
+    },
+    {
+     "name": "--outdated-instances-strategy",
+     "args": {
+      "suggestions": [
+       "UPDATE",
+       "IGNORE"
+      ]
+     }
+    },
+    {
+     "name": "--service-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--termination-hook-enabled"
+    },
+    {
+     "name": "--trigger-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "deployment-successful",
+     "description": "Wait until JMESPath query deploymentInfo.status returns Succeeded when polling with ``get-deployment``.",
+     "options": [
+      {
+       "name": "--deployment-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

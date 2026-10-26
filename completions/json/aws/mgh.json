@@ -1,0 +1,521 @@
+{
+ "name": "mgh",
+ "description": "The AWS Migration Hub API methods help to obtain server and application migration status and integrate your resource-specific migration tool by providing a programmatic interface to Migration Hub.",
+ "subcommands": [
+  {
+   "name": "associate-created-artifact",
+   "description": "Associates a created artifact of an AWS cloud resource, the target receiving the migration, with the migration task performed by a migration tool.",
+   "options": [
+    {
+     "name": "--created-artifact",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-discovered-resource",
+   "description": "Associates a discovered resource ID from Application Discovery Service with a migration task.",
+   "options": [
+    {
+     "name": "--discovered-resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-source-resource",
+   "description": "Associates a source resource with a migration task.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-resource",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-progress-update-stream",
+   "description": "Creates a progress update stream which is an AWS resource used for access control as well as a namespace for migration task names that is implicitly linked to your AWS account.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-progress-update-stream",
+   "description": "Deletes a progress update stream, including all of its tasks, which was previously created as an AWS resource used for access control.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-application-state",
+   "description": "Gets the migration status of an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-migration-task",
+   "description": "Retrieves a list of all attributes associated with a specific migration task.",
+   "options": [
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-created-artifact",
+   "description": "Disassociates a created artifact of an AWS resource with a migration task performed by a migration tool that was previously associated.",
+   "options": [
+    {
+     "name": "--created-artifact-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-discovered-resource",
+   "description": "Disassociate an Application Discovery Service discovered resource from a migration task.",
+   "options": [
+    {
+     "name": "--configuration-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-source-resource",
+   "description": "Removes the association between a source resource and a migration task.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-resource-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-migration-task",
+   "description": "Registers a new migration task which represents a server, database, etc., being migrated to AWS by a migration tool.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-application-states",
+   "description": "Lists all the migration statuses for your applications.",
+   "options": [
+    {
+     "name": "--application-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-created-artifacts",
+   "description": "Lists the created artifacts attached to a given migration task in an update stream.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-discovered-resources",
+   "description": "Lists discovered resources associated with the given MigrationTask.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-migration-task-updates",
+   "description": "This is a paginated API that returns all the migration-task states for the specified MigrationTaskName and ProgressUpdateStream.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-migration-tasks",
+   "description": "Lists all, or filtered by resource name, migration tasks associated with the user account making this call.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-progress-update-streams",
+   "description": "Lists progress update streams associated with the user account making this call.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-source-resources",
+   "description": "Lists all the source resource that are associated with the specified MigrationTaskName and ProgressUpdateStream.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "notify-application-state",
+   "description": "Sets the migration state of an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "NOT_STARTED",
+       "IN_PROGRESS",
+       "COMPLETED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--update-date-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "notify-migration-task-state",
+   "description": "Notifies Migration Hub of the current status, progress, or other detail regarding a migration task.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-update-seconds",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-date-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-attributes",
+   "description": "Provides identifying details of the resource being migrated so that it can be associated in the Application Discovery Service repository.",
+   "options": [
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--migration-task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--progress-update-stream",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-attribute-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

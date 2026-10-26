@@ -1,0 +1,1354 @@
+{
+ "name": "elbv2",
+ "description": "Elastic Load Balancing A load balancer distributes incoming traffic across targets, such as your EC2 instances.",
+ "subcommands": [
+  {
+   "name": "add-listener-certificates",
+   "description": "Adds the specified SSL server certificate to the certificate list for the specified HTTPS or TLS listener.",
+   "options": [
+    {
+     "name": "--certificates",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-tags",
+   "description": "Adds the specified tags to the specified Elastic Load Balancing resource.",
+   "options": [
+    {
+     "name": "--resource-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-trust-store-revocations",
+   "description": "Adds the specified revocation file to the specified trust store.",
+   "options": [
+    {
+     "name": "--revocation-contents",
+     "args": {}
+    },
+    {
+     "name": "--trust-store-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-listener",
+   "description": "Creates a listener for the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer.",
+   "options": [
+    {
+     "name": "--alpn-policy",
+     "args": {}
+    },
+    {
+     "name": "--certificates",
+     "args": {}
+    },
+    {
+     "name": "--default-actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mutual-authentication",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "HTTP",
+       "HTTPS",
+       "TCP",
+       "TLS",
+       "UDP",
+       "TCP_UDP",
+       "GENEVE",
+       "QUIC",
+       "TCP_QUIC"
+      ]
+     }
+    },
+    {
+     "name": "--ssl-policy",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-load-balancer",
+   "description": "Creates an Application Load Balancer, Network Load Balancer, or Gateway Load Balancer.",
+   "options": [
+    {
+     "name": "--customer-owned-ipv4-pool",
+     "args": {}
+    },
+    {
+     "name": "--enable-prefix-for-ipv6-source-nat",
+     "args": {
+      "suggestions": [
+       "on",
+       "off"
+      ]
+     }
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "dualstack",
+       "dualstack-without-public-ipv4"
+      ]
+     }
+    },
+    {
+     "name": "--ipam-pools",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheme",
+     "args": {
+      "suggestions": [
+       "internet-facing",
+       "internal"
+      ]
+     }
+    },
+    {
+     "name": "--security-groups",
+     "args": {}
+    },
+    {
+     "name": "--subnet-mappings",
+     "args": {}
+    },
+    {
+     "name": "--subnets",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "application",
+       "network",
+       "gateway"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-rule",
+   "description": "Creates a rule for the specified listener.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--priority",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--transforms",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-target-group",
+   "description": "Creates a target group.",
+   "options": [
+    {
+     "name": "--health-check-enabled"
+    },
+    {
+     "name": "--health-check-interval-seconds",
+     "args": {}
+    },
+    {
+     "name": "--health-check-path",
+     "args": {}
+    },
+    {
+     "name": "--health-check-port",
+     "args": {}
+    },
+    {
+     "name": "--health-check-protocol",
+     "args": {
+      "suggestions": [
+       "HTTP",
+       "HTTPS",
+       "TCP",
+       "TLS",
+       "UDP",
+       "TCP_UDP",
+       "GENEVE",
+       "QUIC",
+       "TCP_QUIC"
+      ]
+     }
+    },
+    {
+     "name": "--health-check-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--healthy-threshold-count",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "ipv6"
+      ]
+     }
+    },
+    {
+     "name": "--matcher",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-health-check-enabled"
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "HTTP",
+       "HTTPS",
+       "TCP",
+       "TLS",
+       "UDP",
+       "TCP_UDP",
+       "GENEVE",
+       "QUIC",
+       "TCP_QUIC"
+      ]
+     }
+    },
+    {
+     "name": "--protocol-version",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-control-port",
+     "args": {}
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "instance",
+       "ip",
+       "lambda",
+       "alb"
+      ]
+     }
+    },
+    {
+     "name": "--unhealthy-threshold-count",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-trust-store",
+   "description": "Creates a trust store.",
+   "options": [
+    {
+     "name": "--ca-certificates-bundle-s3-bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ca-certificates-bundle-s3-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ca-certificates-bundle-s3-object-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-listener",
+   "description": "Deletes the specified listener.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-load-balancer",
+   "description": "Deletes the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer.",
+   "options": [
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-rule",
+   "description": "Deletes the specified rule.",
+   "options": [
+    {
+     "name": "--rule-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-shared-trust-store-association",
+   "description": "Deletes a shared trust store association.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trust-store-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-target-group",
+   "description": "Deletes the specified target group.",
+   "options": [
+    {
+     "name": "--target-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-trust-store",
+   "description": "Deletes a trust store.",
+   "options": [
+    {
+     "name": "--trust-store-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-targets",
+   "description": "Deregisters the specified targets from the specified target group.",
+   "options": [
+    {
+     "name": "--target-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-account-limits",
+   "description": "Describes the current Elastic Load Balancing resource limits for your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-capacity-reservation",
+   "description": "Describes the capacity reservation status for the specified load balancer.",
+   "options": [
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-listener-attributes",
+   "description": "Describes the attributes for the specified listener.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-listener-certificates",
+   "description": "Describes the default certificate and the certificate list for the specified HTTPS or TLS listener.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-listeners",
+   "description": "Describes the specified listeners or the listeners for the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer.",
+   "options": [
+    {
+     "name": "--listener-arns",
+     "args": {}
+    },
+    {
+     "name": "--load-balancer-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-load-balancer-attributes",
+   "description": "Describes the attributes for the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer.",
+   "options": [
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-load-balancers",
+   "description": "Describes the specified load balancers or all of your load balancers.",
+   "options": [
+    {
+     "name": "--load-balancer-arns",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-rules",
+   "description": "Describes the specified rules or the rules for the specified listener.",
+   "options": [
+    {
+     "name": "--listener-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--rule-arns",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-ssl-policies",
+   "description": "Describes the specified policies or all policies used for SSL negotiation.",
+   "options": [
+    {
+     "name": "--load-balancer-type",
+     "args": {
+      "suggestions": [
+       "application",
+       "network",
+       "gateway"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tags",
+   "description": "Describes the tags for the specified Elastic Load Balancing resources.",
+   "options": [
+    {
+     "name": "--resource-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-target-group-attributes",
+   "description": "Describes the attributes for the specified target group.",
+   "options": [
+    {
+     "name": "--target-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-target-groups",
+   "description": "Describes the specified target groups or all of your target groups.",
+   "options": [
+    {
+     "name": "--load-balancer-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-group-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-target-health",
+   "description": "Describes the health of the specified targets or all of your targets.",
+   "options": [
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--target-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-trust-store-associations",
+   "description": "Describes all resources associated with the specified trust store.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--trust-store-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-trust-store-revocations",
+   "description": "Describes the revocation files in use by the specified trust store or revocation files.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--revocation-ids",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--trust-store-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-trust-stores",
+   "description": "Describes all trust stores for the specified account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--trust-store-arns",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Retrieves the resource policy for a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-trust-store-ca-certificates-bundle",
+   "description": "Retrieves the ca certificate bundle.",
+   "options": [
+    {
+     "name": "--trust-store-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-trust-store-revocation-content",
+   "description": "Retrieves the specified revocation file.",
+   "options": [
+    {
+     "name": "--revocation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trust-store-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-capacity-reservation",
+   "description": "Modifies the capacity reservation of the specified load balancer.",
+   "options": [
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minimum-load-balancer-capacity",
+     "args": {}
+    },
+    {
+     "name": "--no-reset-capacity-reservation"
+    },
+    {
+     "name": "--reset-capacity-reservation"
+    }
+   ]
+  },
+  {
+   "name": "modify-ip-pools",
+   "description": "[Application Load Balancers] Modify the IP pool associated to a load balancer.",
+   "options": [
+    {
+     "name": "--ipam-pools",
+     "args": {}
+    },
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remove-ipam-pools",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-listener",
+   "description": "Replaces the specified properties of the specified listener.",
+   "options": [
+    {
+     "name": "--alpn-policy",
+     "args": {}
+    },
+    {
+     "name": "--certificates",
+     "args": {}
+    },
+    {
+     "name": "--default-actions",
+     "args": {}
+    },
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mutual-authentication",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "HTTP",
+       "HTTPS",
+       "TCP",
+       "TLS",
+       "UDP",
+       "TCP_UDP",
+       "GENEVE",
+       "QUIC",
+       "TCP_QUIC"
+      ]
+     }
+    },
+    {
+     "name": "--ssl-policy",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-listener-attributes",
+   "description": "Modifies the specified attributes of the specified listener.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-load-balancer-attributes",
+   "description": "Modifies the specified attributes of the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-rule",
+   "description": "Replaces the specified properties of the specified rule.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {}
+    },
+    {
+     "name": "--conditions",
+     "args": {}
+    },
+    {
+     "name": "--no-reset-transforms"
+    },
+    {
+     "name": "--reset-transforms"
+    },
+    {
+     "name": "--rule-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transforms",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-target-group",
+   "description": "Modifies the health checks used when evaluating the health state of the targets in the specified target group.",
+   "options": [
+    {
+     "name": "--health-check-enabled"
+    },
+    {
+     "name": "--health-check-interval-seconds",
+     "args": {}
+    },
+    {
+     "name": "--health-check-path",
+     "args": {}
+    },
+    {
+     "name": "--health-check-port",
+     "args": {}
+    },
+    {
+     "name": "--health-check-protocol",
+     "args": {
+      "suggestions": [
+       "HTTP",
+       "HTTPS",
+       "TCP",
+       "TLS",
+       "UDP",
+       "TCP_UDP",
+       "GENEVE",
+       "QUIC",
+       "TCP_QUIC"
+      ]
+     }
+    },
+    {
+     "name": "--health-check-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--healthy-threshold-count",
+     "args": {}
+    },
+    {
+     "name": "--matcher",
+     "args": {}
+    },
+    {
+     "name": "--no-health-check-enabled"
+    },
+    {
+     "name": "--target-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unhealthy-threshold-count",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-target-group-attributes",
+   "description": "Modifies the specified attributes of the specified target group.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-group-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-trust-store",
+   "description": "Update the ca certificate bundle for the specified trust store.",
+   "options": [
+    {
+     "name": "--ca-certificates-bundle-s3-bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ca-certificates-bundle-s3-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ca-certificates-bundle-s3-object-version",
+     "args": {}
+    },
+    {
+     "name": "--trust-store-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-targets",
+   "description": "Registers the specified targets with the specified target group.",
+   "options": [
+    {
+     "name": "--target-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-listener-certificates",
+   "description": "Removes the specified certificate from the certificate list for the specified HTTPS or TLS listener.",
+   "options": [
+    {
+     "name": "--certificates",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--listener-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags",
+   "description": "Removes the specified tags from the specified Elastic Load Balancing resources.",
+   "options": [
+    {
+     "name": "--resource-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-trust-store-revocations",
+   "description": "Removes the specified revocation file from the specified trust store.",
+   "options": [
+    {
+     "name": "--revocation-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trust-store-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-ip-address-type",
+   "description": "Sets the type of IP addresses used by the subnets of the specified load balancer.",
+   "options": [
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "dualstack",
+       "dualstack-without-public-ipv4"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-rule-priorities",
+   "description": "Sets the priorities of the specified rules.",
+   "options": [
+    {
+     "name": "--rule-priorities",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-security-groups",
+   "description": "Associates the specified security groups with the specified Application Load Balancer or Network Load Balancer.",
+   "options": [
+    {
+     "name": "--enforce-security-group-inbound-rules-on-private-link-traffic",
+     "args": {
+      "suggestions": [
+       "on",
+       "off"
+      ]
+     }
+    },
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-groups",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-subnets",
+   "description": "Enables the Availability Zones for the specified public subnets for the specified Application Load Balancer, Network Load Balancer or Gateway Load Balancer.",
+   "options": [
+    {
+     "name": "--enable-prefix-for-ipv6-source-nat",
+     "args": {
+      "suggestions": [
+       "on",
+       "off"
+      ]
+     }
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "ipv4",
+       "dualstack",
+       "dualstack-without-public-ipv4"
+      ]
+     }
+    },
+    {
+     "name": "--load-balancer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-mappings",
+     "args": {}
+    },
+    {
+     "name": "--subnets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "load-balancer-available",
+     "description": "Wait until JMESPath query LoadBalancers[].State.Code returns active for all elements when polling with ``describe-load-balancers``.",
+     "options": [
+      {
+       "name": "--load-balancer-arns",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--names",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "load-balancer-exists",
+     "description": "Wait until 200 response is received when polling with ``describe-load-balancers``.",
+     "options": [
+      {
+       "name": "--load-balancer-arns",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--names",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "load-balancers-deleted",
+     "description": "Wait until LoadBalancerNotFound is thrown when polling with ``describe-load-balancers``.",
+     "options": [
+      {
+       "name": "--load-balancer-arns",
+       "args": {}
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--names",
+       "args": {}
+      },
+      {
+       "name": "--page-size",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "target-deregistered",
+     "description": "Wait until InvalidTarget is thrown when polling with ``describe-target-health``.",
+     "options": [
+      {
+       "name": "--include",
+       "args": {}
+      },
+      {
+       "name": "--target-group-arn",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--targets",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "target-in-service",
+     "description": "Wait until JMESPath query TargetHealthDescriptions[].TargetHealth.State returns healthy for all elements when polling with ``describe-target-health``.",
+     "options": [
+      {
+       "name": "--include",
+       "args": {}
+      },
+      {
+       "name": "--target-group-arn",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--targets",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

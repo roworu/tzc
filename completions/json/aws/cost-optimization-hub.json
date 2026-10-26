@@ -1,0 +1,203 @@
+{
+ "name": "cost-optimization-hub",
+ "description": "You can use the Cost Optimization Hub API to programmatically identify, filter, aggregate, and quantify savings for your cost optimization recommendations across multiple Amazon Web Services Regions and Amazon Web Services accounts in your organization.",
+ "subcommands": [
+  {
+   "name": "get-preferences",
+   "description": "Returns a set of preferences for an account in order to add account-specific preferences into the service."
+  },
+  {
+   "name": "get-recommendation",
+   "description": "Returns both the current and recommended resource configuration and the estimated cost impact for a recommendation.",
+   "options": [
+    {
+     "name": "--recommendation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-efficiency-metrics",
+   "description": "Returns cost efficiency metrics aggregated over time and optionally grouped by a specified dimension.",
+   "options": [
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "Daily",
+       "Monthly"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--group-by",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--order-by",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-enrollment-statuses",
+   "description": "Retrieves the enrollment status for an account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--include-organization-info"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-organization-info"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommendation-summaries",
+   "description": "Returns a concise representation of savings estimates for resources.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metrics",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommendations",
+   "description": "Returns a list of recommendations.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--include-all-recommendations"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-all-recommendations"
+    },
+    {
+     "name": "--order-by",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-enrollment-status",
+   "description": "Updates the enrollment (opt in and opt out) status of an account to the Cost Optimization Hub service.",
+   "options": [
+    {
+     "name": "--include-member-accounts"
+    },
+    {
+     "name": "--no-include-member-accounts"
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Inactive"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-preferences",
+   "description": "Updates a set of preferences for an account in order to add account-specific preferences into the service.",
+   "options": [
+    {
+     "name": "--member-account-discount-visibility",
+     "args": {
+      "suggestions": [
+       "All",
+       "None"
+      ]
+     }
+    },
+    {
+     "name": "--preferred-commitment",
+     "args": {}
+    },
+    {
+     "name": "--savings-estimation-mode",
+     "args": {
+      "suggestions": [
+       "BeforeDiscounts",
+       "AfterDiscounts"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

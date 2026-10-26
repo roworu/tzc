@@ -1,0 +1,2607 @@
+{
+ "name": "bedrock",
+ "description": "Describes the API operations for creating, managing, fine-turning, and evaluating Amazon Bedrock models.",
+ "subcommands": [
+  {
+   "name": "batch-delete-advanced-prompt-optimization-job",
+   "description": "Deletes one or more advanced prompt optimization jobs.",
+   "options": [
+    {
+     "name": "--job-identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-evaluation-job",
+   "description": "Deletes a batch of evaluation jobs.",
+   "options": [
+    {
+     "name": "--job-identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-automated-reasoning-policy-build-workflow",
+   "description": "Cancels a running Automated Reasoning policy build workflow.",
+   "options": [
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-advanced-prompt-optimization-job",
+   "description": "Creates an advanced prompt optimization job.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--input-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-description",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-automated-reasoning-policy",
+   "description": "Creates an Automated Reasoning policy for Amazon Bedrock Guardrails.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-definition",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-automated-reasoning-policy-test-case",
+   "description": "Creates a test for an Automated Reasoning policy.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--confidence-threshold",
+     "args": {}
+    },
+    {
+     "name": "--expected-aggregated-findings-result",
+     "args": {
+      "suggestions": [
+       "VALID",
+       "INVALID",
+       "SATISFIABLE",
+       "IMPOSSIBLE",
+       "TRANSLATION_AMBIGUOUS",
+       "TOO_COMPLEX",
+       "NO_TRANSLATION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--guard-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-content",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-automated-reasoning-policy-version",
+   "description": "Creates a new version of an existing Automated Reasoning policy.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--last-updated-definition-hash",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-custom-model",
+   "description": "Creates a new custom model in Amazon Bedrock.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--custom-model-data-source",
+     "args": {}
+    },
+    {
+     "name": "--model-kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-source-config",
+     "args": {}
+    },
+    {
+     "name": "--model-tags",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-custom-model-deployment",
+   "description": "Deploys a custom model for on-demand inference in Amazon Bedrock.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-deployment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-evaluation-job",
+   "description": "Creates an evaluation job.",
+   "options": [
+    {
+     "name": "--application-type",
+     "args": {
+      "suggestions": [
+       "ModelEvaluation",
+       "RagEvaluation"
+      ]
+     }
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--customer-encryption-key-id",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--inference-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-description",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-tags",
+     "args": {}
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-foundation-model-agreement",
+   "description": "Request a model access agreement for the specified model.",
+   "options": [
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--offer-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-guardrail",
+   "description": "Creates a guardrail to block topics and to implement safeguards for your generative AI applications.",
+   "options": [
+    {
+     "name": "--automated-reasoning-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--blocked-input-messaging",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--blocked-outputs-messaging",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--content-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--contextual-grounding-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--cross-region-config",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sensitive-information-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--topic-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--word-policy-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-guardrail-version",
+   "description": "Creates a version of the guardrail.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--guardrail-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-inference-profile",
+   "description": "Creates an application inference profile to track metrics and costs when invoking a model.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--inference-profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-marketplace-model-endpoint",
+   "description": "Creates an endpoint for a model from Amazon Bedrock Marketplace.",
+   "options": [
+    {
+     "name": "--accept-eula"
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-source-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-accept-eula"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-model-copy-job",
+   "description": "Copies a model to another region so that it can be used there.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--model-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--source-model-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-model-tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-model-customization-job",
+   "description": "Creates a fine-tuning job to customize a base model.",
+   "options": [
+    {
+     "name": "--base-model-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--custom-model-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--custom-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-model-tags",
+     "args": {}
+    },
+    {
+     "name": "--customization-config",
+     "args": {}
+    },
+    {
+     "name": "--customization-type",
+     "args": {
+      "suggestions": [
+       "FINE_TUNING",
+       "CONTINUED_PRE_TRAINING",
+       "DISTILLATION",
+       "REINFORCEMENT_FINE_TUNING",
+       "IMPORTED"
+      ]
+     }
+    },
+    {
+     "name": "--hyper-parameters",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-tags",
+     "args": {}
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--training-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-data-config",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-model-import-job",
+   "description": "Creates a model import job to import model that you have customized in other environments, such as Amazon SageMaker.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--imported-model-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--imported-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--imported-model-tags",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-tags",
+     "args": {}
+    },
+    {
+     "name": "--model-data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-model-invocation-job",
+   "description": "Creates a batch inference job to invoke a model on multiple prompts.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--input-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-invocation-type",
+     "args": {
+      "suggestions": [
+       "InvokeModel",
+       "Converse"
+      ]
+     }
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout-duration-in-hours",
+     "args": {}
+    },
+    {
+     "name": "--vpc-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-prompt-router",
+   "description": "Creates a prompt router that manages the routing of requests between multiple foundation models based on the routing criteria.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--fallback-model",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--models",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prompt-router-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--routing-criteria",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-provisioned-model-throughput",
+   "description": "Creates dedicated throughput for a base or custom model with the model units and for the duration that you specify.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--commitment-duration",
+     "args": {
+      "suggestions": [
+       "OneMonth",
+       "SixMonths"
+      ]
+     }
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-units",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provisioned-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-automated-reasoning-policy",
+   "description": "Deletes an Automated Reasoning policy or policy version.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-automated-reasoning-policy-build-workflow",
+   "description": "Deletes an Automated Reasoning policy build workflow and its associated artifacts.",
+   "options": [
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--last-updated-at",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-automated-reasoning-policy-test-case",
+   "description": "Deletes an Automated Reasoning policy test.",
+   "options": [
+    {
+     "name": "--last-updated-at",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-case-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-model",
+   "description": "Deletes a custom model that you created earlier.",
+   "options": [
+    {
+     "name": "--model-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-model-deployment",
+   "description": "Deletes a custom model deployment.",
+   "options": [
+    {
+     "name": "--custom-model-deployment-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-enforced-guardrail-configuration",
+   "description": "Deletes the account-level enforced guardrail configuration.",
+   "options": [
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-foundation-model-agreement",
+   "description": "Delete the model access agreement for the specified model.",
+   "options": [
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-guardrail",
+   "description": "Deletes a guardrail.",
+   "options": [
+    {
+     "name": "--guardrail-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guardrail-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-imported-model",
+   "description": "Deletes a custom model that you imported earlier.",
+   "options": [
+    {
+     "name": "--model-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-inference-profile",
+   "description": "Deletes an application inference profile.",
+   "options": [
+    {
+     "name": "--inference-profile-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-marketplace-model-endpoint",
+   "description": "Deletes an endpoint for a model from Amazon Bedrock Marketplace.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-model-invocation-logging-configuration",
+   "description": "Delete the invocation logging."
+  },
+  {
+   "name": "delete-prompt-router",
+   "description": "Deletes a specified prompt router.",
+   "options": [
+    {
+     "name": "--prompt-router-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-provisioned-model-throughput",
+   "description": "Deletes a Provisioned Throughput.",
+   "options": [
+    {
+     "name": "--provisioned-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes a previously created Bedrock resource policy.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-marketplace-model-endpoint",
+   "description": "Deregisters an endpoint for a model from Amazon Bedrock Marketplace.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-automated-reasoning-policy-version",
+   "description": "Exports the policy definition for an Automated Reasoning policy version.",
+   "options": [
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-data-retention",
+   "description": "Returns the account-wide data retention mode for Amazon Bedrock."
+  },
+  {
+   "name": "get-advanced-prompt-optimization-job",
+   "description": "Gets information about an advanced prompt optimization job.",
+   "options": [
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-automated-reasoning-policy",
+   "description": "Retrieves details about an Automated Reasoning policy or policy version.",
+   "options": [
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-automated-reasoning-policy-annotations",
+   "description": "Retrieves the current annotations for an Automated Reasoning policy build workflow.",
+   "options": [
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-automated-reasoning-policy-build-workflow",
+   "description": "Retrieves detailed information about an Automated Reasoning policy build workflow, including its status, configuration, and metadata.",
+   "options": [
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-automated-reasoning-policy-build-workflow-result-assets",
+   "description": "Retrieves the resulting assets from a completed Automated Reasoning policy build workflow, including build logs, quality reports, and generated policy artifacts.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-type",
+     "args": {
+      "suggestions": [
+       "BUILD_LOG",
+       "QUALITY_REPORT",
+       "POLICY_DEFINITION",
+       "GENERATED_TEST_CASES",
+       "POLICY_SCENARIOS",
+       "FIDELITY_REPORT",
+       "ASSET_MANIFEST",
+       "SOURCE_DOCUMENT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-automated-reasoning-policy-next-scenario",
+   "description": "Retrieves the next test scenario for validating an Automated Reasoning policy.",
+   "options": [
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-automated-reasoning-policy-test-case",
+   "description": "Retrieves details about a specific Automated Reasoning policy test.",
+   "options": [
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-case-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-automated-reasoning-policy-test-result",
+   "description": "Retrieves the test result for a specific Automated Reasoning policy test.",
+   "options": [
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-case-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-custom-model",
+   "description": "Get the properties associated with a Amazon Bedrock custom model that you have created.",
+   "options": [
+    {
+     "name": "--model-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-custom-model-deployment",
+   "description": "Retrieves information about a custom model deployment, including its status, configuration, and metadata.",
+   "options": [
+    {
+     "name": "--custom-model-deployment-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-evaluation-job",
+   "description": "Gets information about an evaluation job, such as the status of the job.",
+   "options": [
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-foundation-model",
+   "description": "Get details about a Amazon Bedrock foundation model.",
+   "options": [
+    {
+     "name": "--model-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-foundation-model-availability",
+   "description": "Get information about the Foundation model availability.",
+   "options": [
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-guardrail",
+   "description": "Gets details about a guardrail.",
+   "options": [
+    {
+     "name": "--guardrail-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guardrail-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-imported-model",
+   "description": "Gets properties associated with a customized model you imported.",
+   "options": [
+    {
+     "name": "--model-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-inference-profile",
+   "description": "Gets information about an inference profile.",
+   "options": [
+    {
+     "name": "--inference-profile-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-marketplace-model-endpoint",
+   "description": "Retrieves details about a specific endpoint for a model from Amazon Bedrock Marketplace.",
+   "options": [
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-model-copy-job",
+   "description": "Retrieves information about a model copy job.",
+   "options": [
+    {
+     "name": "--job-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-model-customization-job",
+   "description": "Retrieves the properties associated with a model-customization job, including the status of the job.",
+   "options": [
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-model-import-job",
+   "description": "Retrieves the properties associated with import model job, including the status of the job.",
+   "options": [
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-model-invocation-job",
+   "description": "Gets details about a batch inference job.",
+   "options": [
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-model-invocation-logging-configuration",
+   "description": "Get the current configuration values for model invocation logging."
+  },
+  {
+   "name": "get-prompt-router",
+   "description": "Retrieves details about a prompt router.",
+   "options": [
+    {
+     "name": "--prompt-router-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-provisioned-model-throughput",
+   "description": "Returns details for a Provisioned Throughput.",
+   "options": [
+    {
+     "name": "--provisioned-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Gets the resource policy document for a Bedrock resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-use-case-for-model-access",
+   "description": "Get usecase for model access."
+  },
+  {
+   "name": "list-advanced-prompt-optimization-jobs",
+   "description": "Lists the advanced prompt optimization jobs in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automated-reasoning-policies",
+   "description": "Lists all Automated Reasoning policies in your account, with optional filtering by policy ARN.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automated-reasoning-policy-build-workflows",
+   "description": "Lists all build workflows for an Automated Reasoning policy, showing the history of policy creation and modification attempts.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automated-reasoning-policy-test-cases",
+   "description": "Lists tests for an Automated Reasoning policy.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automated-reasoning-policy-test-results",
+   "description": "Lists test results for an Automated Reasoning policy, showing how the policy performed against various test scenarios and validation checks.",
+   "options": [
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-model-deployments",
+   "description": "Lists custom model deployments in your account.",
+   "options": [
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--model-arn-equals",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "Creating",
+       "Active",
+       "Failed"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-custom-models",
+   "description": "Returns a list of the custom models that you have created with the CreateModelCustomizationJob operation.",
+   "options": [
+    {
+     "name": "--base-model-arn-equals",
+     "args": {}
+    },
+    {
+     "name": "--creation-time-after",
+     "args": {}
+    },
+    {
+     "name": "--creation-time-before",
+     "args": {}
+    },
+    {
+     "name": "--foundation-model-arn-equals",
+     "args": {}
+    },
+    {
+     "name": "--is-owned"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--model-status",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Creating",
+       "Failed"
+      ]
+     }
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--no-is-owned"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-enforced-guardrails-configuration",
+   "description": "Lists the account-level enforced guardrail configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-evaluation-jobs",
+   "description": "Lists all existing evaluation jobs.",
+   "options": [
+    {
+     "name": "--application-type-equals",
+     "args": {
+      "suggestions": [
+       "ModelEvaluation",
+       "RagEvaluation"
+      ]
+     }
+    },
+    {
+     "name": "--creation-time-after",
+     "args": {}
+    },
+    {
+     "name": "--creation-time-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "InProgress",
+       "Completed",
+       "Failed",
+       "Stopping",
+       "Stopped",
+       "Deleting"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-foundation-model-agreement-offers",
+   "description": "Get the offers associated with the specified model.",
+   "options": [
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--offer-type",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "PUBLIC"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-foundation-models",
+   "description": "Lists Amazon Bedrock foundation models that you can use.",
+   "options": [
+    {
+     "name": "--by-customization-type",
+     "args": {
+      "suggestions": [
+       "FINE_TUNING",
+       "CONTINUED_PRE_TRAINING",
+       "DISTILLATION"
+      ]
+     }
+    },
+    {
+     "name": "--by-inference-type",
+     "args": {
+      "suggestions": [
+       "ON_DEMAND",
+       "PROVISIONED"
+      ]
+     }
+    },
+    {
+     "name": "--by-output-modality",
+     "args": {
+      "suggestions": [
+       "TEXT",
+       "IMAGE",
+       "EMBEDDING"
+      ]
+     }
+    },
+    {
+     "name": "--by-provider",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-guardrails",
+   "description": "Lists details about all the guardrails in an account.",
+   "options": [
+    {
+     "name": "--guardrail-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-imported-models",
+   "description": "Returns a list of models you've imported.",
+   "options": [
+    {
+     "name": "--creation-time-after",
+     "args": {}
+    },
+    {
+     "name": "--creation-time-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-inference-profiles",
+   "description": "Returns a list of inference profiles that you can use.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type-equals",
+     "args": {
+      "suggestions": [
+       "SYSTEM_DEFINED",
+       "APPLICATION"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-marketplace-model-endpoints",
+   "description": "Lists the endpoints for models from Amazon Bedrock Marketplace in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--model-source-equals",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-model-copy-jobs",
+   "description": "Returns a list of model copy jobs that you have submitted.",
+   "options": [
+    {
+     "name": "--creation-time-after",
+     "args": {}
+    },
+    {
+     "name": "--creation-time-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--source-account-equals",
+     "args": {}
+    },
+    {
+     "name": "--source-model-arn-equals",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "InProgress",
+       "Completed",
+       "Failed"
+      ]
+     }
+    },
+    {
+     "name": "--target-model-name-contains",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-model-customization-jobs",
+   "description": "Returns a list of model customization jobs that you have submitted.",
+   "options": [
+    {
+     "name": "--creation-time-after",
+     "args": {}
+    },
+    {
+     "name": "--creation-time-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "InProgress",
+       "Completed",
+       "Failed",
+       "Stopping",
+       "Stopped"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-model-import-jobs",
+   "description": "Returns a list of import jobs you've submitted.",
+   "options": [
+    {
+     "name": "--creation-time-after",
+     "args": {}
+    },
+    {
+     "name": "--creation-time-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "InProgress",
+       "Completed",
+       "Failed"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-model-invocation-jobs",
+   "description": "Lists all batch inference jobs in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "Submitted",
+       "InProgress",
+       "Completed",
+       "Failed",
+       "Stopping",
+       "Stopped",
+       "PartiallyCompleted",
+       "Expired",
+       "Validating",
+       "Scheduled"
+      ]
+     }
+    },
+    {
+     "name": "--submit-time-after",
+     "args": {}
+    },
+    {
+     "name": "--submit-time-before",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-prompt-routers",
+   "description": "Retrieves a list of prompt routers.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "custom",
+       "default"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-provisioned-model-throughputs",
+   "description": "Lists the Provisioned Throughputs in the account.",
+   "options": [
+    {
+     "name": "--creation-time-after",
+     "args": {}
+    },
+    {
+     "name": "--creation-time-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--model-arn-equals",
+     "args": {}
+    },
+    {
+     "name": "--name-contains",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CreationTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "Creating",
+       "InService",
+       "Updating",
+       "Failed"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List the tags associated with the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-account-data-retention",
+   "description": "Sets the account-wide data retention mode for Amazon Bedrock.",
+   "options": [
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "default",
+       "none",
+       "provider_data_share",
+       "inherit"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-enforced-guardrail-configuration",
+   "description": "Sets the account-level enforced guardrail configuration.",
+   "options": [
+    {
+     "name": "--config-id",
+     "args": {}
+    },
+    {
+     "name": "--guardrail-inference-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-model-invocation-logging-configuration",
+   "description": "Set the configuration values for model invocation logging.",
+   "options": [
+    {
+     "name": "--logging-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Adds a resource policy for a Bedrock resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-use-case-for-model-access",
+   "description": "Put usecase for model access.",
+   "options": [
+    {
+     "name": "--form-data",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-marketplace-model-endpoint",
+   "description": "Registers an existing Amazon SageMaker endpoint with Amazon Bedrock Marketplace, allowing it to be used with Amazon Bedrock APIs.",
+   "options": [
+    {
+     "name": "--endpoint-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-source-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-automated-reasoning-policy-build-workflow",
+   "description": "Starts a new build workflow for an Automated Reasoning policy.",
+   "options": [
+    {
+     "name": "--build-workflow-type",
+     "args": {
+      "suggestions": [
+       "INGEST_CONTENT",
+       "REFINE_POLICY",
+       "IMPORT_POLICY",
+       "GENERATE_FIDELITY_REPORT",
+       "GENERATE_POLICY_SCENARIOS",
+       "RESOLVE_POLICY_AMBIGUITIES",
+       "ITERATIVELY_REFINE_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-content",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-automated-reasoning-policy-test-workflow",
+   "description": "Initiates a test workflow to validate Automated Reasoning policy tests.",
+   "options": [
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--test-case-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-advanced-prompt-optimization-job",
+   "description": "Stops an advanced prompt optimization job that is in progress.",
+   "options": [
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-evaluation-job",
+   "description": "Stops an evaluation job that is current being created or running.",
+   "options": [
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-model-customization-job",
+   "description": "Stops an active model customization job.",
+   "options": [
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-model-invocation-job",
+   "description": "Stops a batch inference job.",
+   "options": [
+    {
+     "name": "--job-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associate tags with a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove one or more tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-automated-reasoning-policy",
+   "description": "Updates an existing Automated Reasoning policy with new rules, variables, or configuration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-automated-reasoning-policy-annotations",
+   "description": "Updates the annotations for an Automated Reasoning policy build workflow.",
+   "options": [
+    {
+     "name": "--annotations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--build-workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--last-updated-annotation-set-hash",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-automated-reasoning-policy-test-case",
+   "description": "Updates an existing Automated Reasoning policy test.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--confidence-threshold",
+     "args": {}
+    },
+    {
+     "name": "--expected-aggregated-findings-result",
+     "args": {
+      "suggestions": [
+       "VALID",
+       "INVALID",
+       "SATISFIABLE",
+       "IMPOSSIBLE",
+       "TRANSLATION_AMBIGUOUS",
+       "TOO_COMPLEX",
+       "NO_TRANSLATION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--guard-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--last-updated-at",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-content",
+     "args": {}
+    },
+    {
+     "name": "--test-case-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-custom-model-deployment",
+   "description": "Updates a custom model deployment with a new custom model.",
+   "options": [
+    {
+     "name": "--custom-model-deployment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-guardrail",
+   "description": "Updates a guardrail with the values you specify.",
+   "options": [
+    {
+     "name": "--automated-reasoning-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--blocked-input-messaging",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--blocked-outputs-messaging",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--contextual-grounding-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--cross-region-config",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--guardrail-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sensitive-information-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--topic-policy-config",
+     "args": {}
+    },
+    {
+     "name": "--word-policy-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-marketplace-model-endpoint",
+   "description": "Updates the configuration of an existing endpoint for a model from Amazon Bedrock Marketplace.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-provisioned-model-throughput",
+   "description": "Updates the name or associated model for a Provisioned Throughput.",
+   "options": [
+    {
+     "name": "--desired-model-id",
+     "args": {}
+    },
+    {
+     "name": "--desired-provisioned-model-name",
+     "args": {}
+    },
+    {
+     "name": "--provisioned-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

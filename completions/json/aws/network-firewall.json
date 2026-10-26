@@ -1,0 +1,2057 @@
+{
+ "name": "network-firewall",
+ "description": "This is the API Reference for Network Firewall.",
+ "subcommands": [
+  {
+   "name": "accept-network-firewall-transit-gateway-attachment",
+   "description": "Accepts a transit gateway attachment request for Network Firewall.",
+   "options": [
+    {
+     "name": "--transit-gateway-attachment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-availability-zones",
+   "description": "Associates the specified Availability Zones with a transit gateway-attached firewall.",
+   "options": [
+    {
+     "name": "--availability-zone-mappings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "associate-firewall-policy",
+   "description": "Associates a FirewallPolicy to a Firewall.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--firewall-policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "associate-subnets",
+   "description": "Associates the specified subnets in the Amazon VPC to the firewall.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--subnet-mappings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "attach-rule-groups-to-proxy-configuration",
+   "description": "Attaches ProxyRuleGroup resources to a ProxyConfiguration A Proxy Configuration defines the monitoring and protection behavior for a Proxy.",
+   "options": [
+    {
+     "name": "--proxy-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--rule-groups",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-container-association",
+   "description": "Creates a Network Firewall container association.",
+   "options": [
+    {
+     "name": "--container-association-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--container-monitoring-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ECS",
+       "EKS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-firewall",
+   "description": "Creates an Network Firewall Firewall and accompanying FirewallStatus for a VPC.",
+   "options": [
+    {
+     "name": "--availability-zone-change-protection"
+    },
+    {
+     "name": "--availability-zone-mappings",
+     "args": {}
+    },
+    {
+     "name": "--delete-protection"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--enabled-analysis-types",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-policy-change-protection"
+    },
+    {
+     "name": "--no-availability-zone-change-protection"
+    },
+    {
+     "name": "--no-delete-protection"
+    },
+    {
+     "name": "--no-firewall-policy-change-protection"
+    },
+    {
+     "name": "--no-subnet-change-protection"
+    },
+    {
+     "name": "--subnet-change-protection"
+    },
+    {
+     "name": "--subnet-mappings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--transit-gateway-id",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-firewall-policy",
+   "description": "Creates the firewall policy for the firewall according to the specifications.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--firewall-policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-proxy",
+   "description": "Creates an Network Firewall Proxy Attaches a Proxy configuration to a NAT Gateway.",
+   "options": [
+    {
+     "name": "--listener-properties",
+     "args": {}
+    },
+    {
+     "name": "--nat-gateway-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--proxy-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--proxy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tls-intercept-properties",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-proxy-configuration",
+   "description": "Creates an Network Firewall ProxyConfiguration A Proxy Configuration defines the monitoring and protection behavior for a Proxy.",
+   "options": [
+    {
+     "name": "--default-rule-phase-actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-group-arns",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-names",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-proxy-rule-group",
+   "description": "Creates an Network Firewall ProxyRuleGroup Collections of related proxy filtering rules.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-proxy-rules",
+   "description": "Creates Network Firewall ProxyRule resources.",
+   "options": [
+    {
+     "name": "--proxy-rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-rule-group",
+   "description": "Creates the specified stateless or stateful rule group, which includes the rules for network traffic inspection, a capacity setting, and tags.",
+   "options": [
+    {
+     "name": "--analyze-rule-group"
+    },
+    {
+     "name": "--capacity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-analyze-rule-group"
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--rule-group",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {}
+    },
+    {
+     "name": "--source-metadata",
+     "args": {}
+    },
+    {
+     "name": "--summary-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "STATELESS",
+       "STATEFUL",
+       "STATEFUL_DOMAIN"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-tls-inspection-configuration",
+   "description": "Creates an Network Firewall TLS inspection configuration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tls-inspection-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tls-inspection-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-endpoint-association",
+   "description": "Creates a firewall endpoint for an Network Firewall firewall.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-mapping",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-container-association",
+   "description": "Deletes a container association.",
+   "options": [
+    {
+     "name": "--container-association-arn",
+     "args": {}
+    },
+    {
+     "name": "--container-association-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-firewall",
+   "description": "Deletes the specified Firewall and its FirewallStatus.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-firewall-policy",
+   "description": "Deletes the specified FirewallPolicy.",
+   "options": [
+    {
+     "name": "--firewall-policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-policy-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-network-firewall-transit-gateway-attachment",
+   "description": "Deletes a transit gateway attachment from a Network Firewall.",
+   "options": [
+    {
+     "name": "--transit-gateway-attachment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-proxy",
+   "description": "Deletes the specified Proxy.",
+   "options": [
+    {
+     "name": "--nat-gateway-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--proxy-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-proxy-configuration",
+   "description": "Deletes the specified ProxyConfiguration.",
+   "options": [
+    {
+     "name": "--proxy-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-proxy-rule-group",
+   "description": "Deletes the specified ProxyRuleGroup.",
+   "options": [
+    {
+     "name": "--proxy-rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-proxy-rules",
+   "description": "Deletes the specified ProxyRule(s).",
+   "options": [
+    {
+     "name": "--proxy-rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes a resource policy that you created in a PutResourcePolicy request.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-rule-group",
+   "description": "Deletes the specified RuleGroup.",
+   "options": [
+    {
+     "name": "--rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "STATELESS",
+       "STATEFUL",
+       "STATEFUL_DOMAIN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-tls-inspection-configuration",
+   "description": "Deletes the specified TLSInspectionConfiguration.",
+   "options": [
+    {
+     "name": "--tls-inspection-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--tls-inspection-configuration-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-endpoint-association",
+   "description": "Deletes the specified VpcEndpointAssociation.",
+   "options": [
+    {
+     "name": "--vpc-endpoint-association-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-container-association",
+   "description": "Retrieves the configuration and status of a container association.",
+   "options": [
+    {
+     "name": "--container-association-arn",
+     "args": {}
+    },
+    {
+     "name": "--container-association-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-firewall",
+   "description": "Returns the data objects for the specified firewall.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-firewall-metadata",
+   "description": "Returns the high-level information about a firewall, including the Availability Zones where the Firewall is currently in use.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-firewall-policy",
+   "description": "Returns the data objects for the specified firewall policy.",
+   "options": [
+    {
+     "name": "--firewall-policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-policy-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-flow-operation",
+   "description": "Returns key information about a specific flow operation.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-operation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-endpoint-association-arn",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-logging-configuration",
+   "description": "Returns the logging configuration for the specified firewall.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-proxy",
+   "description": "Returns the data objects for the specified proxy.",
+   "options": [
+    {
+     "name": "--proxy-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-proxy-configuration",
+   "description": "Returns the data objects for the specified proxy configuration.",
+   "options": [
+    {
+     "name": "--proxy-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-proxy-rule",
+   "description": "Returns the data objects for the specified proxy configuration for the specified proxy rule group.",
+   "options": [
+    {
+     "name": "--proxy-rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-proxy-rule-group",
+   "description": "Returns the data objects for the specified proxy rule group.",
+   "options": [
+    {
+     "name": "--proxy-rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-policy",
+   "description": "Retrieves a resource policy that you created in a PutResourcePolicy request.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-rule-group",
+   "description": "Returns the data objects for the specified rule group.",
+   "options": [
+    {
+     "name": "--analyze-rule-group"
+    },
+    {
+     "name": "--no-analyze-rule-group"
+    },
+    {
+     "name": "--rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "STATELESS",
+       "STATEFUL",
+       "STATEFUL_DOMAIN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-rule-group-metadata",
+   "description": "High-level information about a rule group, returned by operations like create and describe.",
+   "options": [
+    {
+     "name": "--rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "STATELESS",
+       "STATEFUL",
+       "STATEFUL_DOMAIN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-rule-group-summary",
+   "description": "Returns detailed information for a stateful rule group.",
+   "options": [
+    {
+     "name": "--rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "STATELESS",
+       "STATEFUL",
+       "STATEFUL_DOMAIN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-tls-inspection-configuration",
+   "description": "Returns the data objects for the specified TLS inspection configuration.",
+   "options": [
+    {
+     "name": "--tls-inspection-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--tls-inspection-configuration-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-vpc-endpoint-association",
+   "description": "Returns the data object for the specified VPC endpoint association.",
+   "options": [
+    {
+     "name": "--vpc-endpoint-association-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-rule-groups-from-proxy-configuration",
+   "description": "Detaches ProxyRuleGroup resources from a ProxyConfiguration A Proxy Configuration defines the monitoring and protection behavior for a Proxy.",
+   "options": [
+    {
+     "name": "--proxy-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-arns",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-names",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-availability-zones",
+   "description": "Removes the specified Availability Zone associations from a transit gateway-attached firewall.",
+   "options": [
+    {
+     "name": "--availability-zone-mappings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-subnets",
+   "description": "Removes the specified subnet associations from the firewall.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-analysis-report-results",
+   "description": "The results of a COMPLETED analysis report generated with StartAnalysisReport.",
+   "options": [
+    {
+     "name": "--analysis-report-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-analysis-reports",
+   "description": "Returns a list of all traffic analysis reports generated within the last 30 days.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-container-associations",
+   "description": "Lists the container associations in your account and Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-firewall-policies",
+   "description": "Retrieves the metadata for the firewall policies that you have defined.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-firewalls",
+   "description": "Retrieves the metadata for the firewalls that you have defined.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-flow-operation-results",
+   "description": "Returns the results of a specific flow operation.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-operation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-association-arn",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-flow-operations",
+   "description": "Returns a list of all flow operations ran in a specific firewall.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-operation-type",
+     "args": {
+      "suggestions": [
+       "FLOW_FLUSH",
+       "FLOW_CAPTURE"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-association-arn",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-proxies",
+   "description": "Retrieves the metadata for the proxies that you have defined.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-proxy-configurations",
+   "description": "Retrieves the metadata for the proxy configuration that you have defined.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-proxy-rule-groups",
+   "description": "Retrieves the metadata for the proxy rule groups that you have defined.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-rule-groups",
+   "description": "Retrieves the metadata for the rule groups that you have defined.",
+   "options": [
+    {
+     "name": "--managed-type",
+     "args": {
+      "suggestions": [
+       "AWS_MANAGED_THREAT_SIGNATURES",
+       "AWS_MANAGED_DOMAIN_LISTS",
+       "ACTIVE_THREAT_DEFENSE",
+       "PARTNER_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "MANAGED",
+       "ACCOUNT"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subscription-status",
+     "args": {
+      "suggestions": [
+       "NOT_SUBSCRIBED",
+       "SUBSCRIBED"
+      ]
+     }
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "STATELESS",
+       "STATEFUL",
+       "STATEFUL_DOMAIN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves the tags associated with the specified resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tls-inspection-configurations",
+   "description": "Retrieves the metadata for the TLS inspection configurations that you have defined.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-endpoint-associations",
+   "description": "Retrieves the metadata for the VPC endpoint associations that you have defined.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Creates or updates an IAM policy for your rule group, firewall policy, or firewall.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-network-firewall-transit-gateway-attachment",
+   "description": "Rejects a transit gateway attachment request for Network Firewall.",
+   "options": [
+    {
+     "name": "--transit-gateway-attachment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-analysis-report",
+   "description": "Generates a traffic analysis report for the timeframe and traffic type you specify.",
+   "options": [
+    {
+     "name": "--analysis-type",
+     "args": {
+      "suggestions": [
+       "TLS_SNI",
+       "HTTP_HOST"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-flow-capture",
+   "description": "Begins capturing the flows in a firewall, according to the filters you define.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-filters",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minimum-flow-age-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-association-arn",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-flow-flush",
+   "description": "Begins the flushing of traffic from the firewall, according to the filters you define.",
+   "options": [
+    {
+     "name": "--availability-zone",
+     "args": {}
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-filters",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minimum-flow-age-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-association-arn",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds the specified tags to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the tags with the specified keys from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-availability-zone-change-protection",
+   "description": "Modifies the AvailabilityZoneChangeProtection setting for a transit gateway-attached firewall.",
+   "options": [
+    {
+     "name": "--availability-zone-change-protection",
+     "priority": 75
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--no-availability-zone-change-protection"
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-container-association",
+   "description": "Updates the monitoring configurations and description of a container association.",
+   "options": [
+    {
+     "name": "--container-association-arn",
+     "args": {}
+    },
+    {
+     "name": "--container-association-name",
+     "args": {}
+    },
+    {
+     "name": "--container-monitoring-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ECS",
+       "EKS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-firewall-analysis-settings",
+   "description": "Enables specific types of firewall analysis on a specific firewall you define.",
+   "options": [
+    {
+     "name": "--enabled-analysis-types",
+     "args": {}
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-firewall-delete-protection",
+   "description": "Modifies the flag, DeleteProtection, which indicates whether it is possible to delete the firewall.",
+   "options": [
+    {
+     "name": "--delete-protection",
+     "priority": 75
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--no-delete-protection"
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-firewall-description",
+   "description": "Modifies the description for the specified firewall.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-firewall-encryption-configuration",
+   "description": "A complex type that contains settings for encryption of your firewall resources.",
+   "options": [
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-firewall-policy",
+   "description": "Updates the properties of the specified firewall policy.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--firewall-policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--firewall-policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-policy-name",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-firewall-policy-change-protection",
+   "description": "Modifies the flag, ChangeProtection, which indicates whether it is possible to change the firewall.",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--firewall-policy-change-protection",
+     "priority": 75
+    },
+    {
+     "name": "--no-firewall-policy-change-protection"
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-logging-configuration",
+   "description": "Sets the logging configuration for the specified firewall.",
+   "options": [
+    {
+     "name": "--enable-monitoring-dashboard"
+    },
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-monitoring-dashboard"
+    }
+   ]
+  },
+  {
+   "name": "update-proxy",
+   "description": "Updates the properties of the specified proxy.",
+   "options": [
+    {
+     "name": "--listener-properties-to-add",
+     "args": {}
+    },
+    {
+     "name": "--listener-properties-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--nat-gateway-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--proxy-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-name",
+     "args": {}
+    },
+    {
+     "name": "--tls-intercept-properties",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-proxy-configuration",
+   "description": "Updates the properties of the specified proxy configuration.",
+   "options": [
+    {
+     "name": "--default-rule-phase-actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--proxy-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-proxy-rule",
+   "description": "Updates the properties of the specified proxy rule.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "ALLOW",
+       "DENY",
+       "ALERT"
+      ]
+     }
+    },
+    {
+     "name": "--add-conditions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remove-conditions",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-proxy-rule-group-priorities",
+   "description": "Updates proxy rule group priorities within a proxy configuration.",
+   "options": [
+    {
+     "name": "--proxy-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--rule-groups",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-proxy-rule-priorities",
+   "description": "Updates proxy rule priorities within a proxy rule group.",
+   "options": [
+    {
+     "name": "--proxy-rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--proxy-rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-request-phase",
+     "args": {
+      "suggestions": [
+       "PRE_DNS",
+       "PRE_REQ",
+       "POST_RES"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-rule-group",
+   "description": "Updates the rule settings for the specified rule group.",
+   "options": [
+    {
+     "name": "--analyze-rule-group"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-analyze-rule-group"
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--rule-group",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--rule-group-name",
+     "args": {}
+    },
+    {
+     "name": "--rules",
+     "args": {}
+    },
+    {
+     "name": "--source-metadata",
+     "args": {}
+    },
+    {
+     "name": "--summary-configuration",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "STATELESS",
+       "STATEFUL",
+       "STATEFUL_DOMAIN"
+      ]
+     }
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-subnet-change-protection",
+   "options": [
+    {
+     "name": "--firewall-arn",
+     "args": {}
+    },
+    {
+     "name": "--firewall-name",
+     "args": {}
+    },
+    {
+     "name": "--no-subnet-change-protection"
+    },
+    {
+     "name": "--subnet-change-protection",
+     "priority": 75
+    },
+    {
+     "name": "--update-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-tls-inspection-configuration",
+   "description": "Updates the TLS inspection configuration settings for the specified TLS inspection configuration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tls-inspection-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tls-inspection-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--tls-inspection-configuration-name",
+     "args": {}
+    },
+    {
+     "name": "--update-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

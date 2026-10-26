@@ -1,0 +1,1675 @@
+{
+ "name": "ds",
+ "description": "Directory Service Directory Service is a web service that makes it easy for you to setup and run directories in the Amazon Web Services cloud, or connect your Amazon Web Services resources with an existing self-managed Microsoft Active Directory.",
+ "subcommands": [
+  {
+   "name": "accept-shared-directory",
+   "description": "Accepts a directory sharing request that was sent from the directory owner account.",
+   "options": [
+    {
+     "name": "--shared-directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-ip-routes",
+   "description": "If the DNS server for your self-managed domain uses a publicly addressable IP address, you must add a CIDR address block to correctly route traffic to and from your Microsoft AD on Amazon Web Services.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-routes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-update-security-group-for-directory-controllers"
+    },
+    {
+     "name": "--update-security-group-for-directory-controllers"
+    }
+   ]
+  },
+  {
+   "name": "add-region",
+   "description": "Adds two domain controllers in the specified Region for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-tags-to-resource",
+   "description": "Adds or overwrites one or more tags for the specified directory.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-schema-extension",
+   "description": "Cancels an in-progress schema extension to a Microsoft AD directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-extension-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "connect-directory",
+   "description": "Creates an AD Connector to connect to a self-managed directory.",
+   "options": [
+    {
+     "name": "--connect-settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "Dual-stack",
+       "IPv4",
+       "IPv6"
+      ]
+     }
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--short-name",
+     "args": {}
+    },
+    {
+     "name": "--size",
+     "args": {
+      "suggestions": [
+       "Small",
+       "Large"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-alias",
+   "description": "Creates an alias for a directory and assigns the alias to the directory.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-computer",
+   "description": "Creates an Active Directory computer object in the specified directory.",
+   "options": [
+    {
+     "name": "--computer-attributes",
+     "args": {}
+    },
+    {
+     "name": "--computer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organizational-unit-distinguished-name",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-conditional-forwarder",
+   "description": "Creates a conditional forwarder associated with your Amazon Web Services directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dns-ip-addrs",
+     "args": {}
+    },
+    {
+     "name": "--dns-ipv6-addrs",
+     "args": {}
+    },
+    {
+     "name": "--remote-domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-directory",
+   "description": "Creates a Simple AD directory.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "Dual-stack",
+       "IPv4",
+       "IPv6"
+      ]
+     }
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--short-name",
+     "args": {}
+    },
+    {
+     "name": "--size",
+     "args": {
+      "suggestions": [
+       "Small",
+       "Large"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-hybrid-ad",
+   "description": "Creates a hybrid directory that connects your self-managed Active Directory (AD) infrastructure and Amazon Web Services.",
+   "options": [
+    {
+     "name": "--assessment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secret-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-log-subscription",
+   "description": "Creates a subscription to forward real-time Directory Service domain controller security logs to the specified Amazon CloudWatch log group in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-microsoft-ad",
+   "description": "Creates a Microsoft AD directory in the Amazon Web Services Cloud.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--edition",
+     "args": {
+      "suggestions": [
+       "Enterprise",
+       "Standard",
+       "Hybrid"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "Dual-stack",
+       "IPv4",
+       "IPv6"
+      ]
+     }
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--short-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-snapshot",
+   "description": "Creates a snapshot of a Simple AD or Microsoft AD directory in the Amazon Web Services cloud.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-trust",
+   "description": "Directory Service for Microsoft Active Directory allows you to configure trust relationships.",
+   "options": [
+    {
+     "name": "--conditional-forwarder-ip-addrs",
+     "args": {}
+    },
+    {
+     "name": "--conditional-forwarder-ipv6-addrs",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remote-domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--selective-auth",
+     "args": {
+      "suggestions": [
+       "Enabled",
+       "Disabled"
+      ]
+     }
+    },
+    {
+     "name": "--trust-direction",
+     "args": {
+      "suggestions": [
+       "One-Way: Outgoing",
+       "One-Way: Incoming",
+       "Two-Way"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--trust-password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trust-type",
+     "args": {
+      "suggestions": [
+       "Forest",
+       "External"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-ad-assessment",
+   "description": "Deletes a directory assessment and all associated data.",
+   "options": [
+    {
+     "name": "--assessment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-conditional-forwarder",
+   "description": "Deletes a conditional forwarder that has been set up for your Amazon Web Services directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remote-domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-directory",
+   "description": "Deletes an Directory Service directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-log-subscription",
+   "description": "Deletes the specified log subscription.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-snapshot",
+   "description": "Deletes a directory snapshot.",
+   "options": [
+    {
+     "name": "--snapshot-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-trust",
+   "description": "Deletes an existing trust relationship between your Managed Microsoft AD directory and an external domain.",
+   "options": [
+    {
+     "name": "--delete-associated-conditional-forwarder"
+    },
+    {
+     "name": "--no-delete-associated-conditional-forwarder"
+    },
+    {
+     "name": "--trust-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-certificate",
+   "description": "Deletes from the system the certificate that was registered for secure LDAP or client certificate authentication.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-event-topic",
+   "description": "Removes the specified directory as a publisher to the specified Amazon SNS topic.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-ad-assessment",
+   "description": "Retrieves detailed information about a directory assessment, including its current status, validation results, and configuration details.",
+   "options": [
+    {
+     "name": "--assessment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-ca-enrollment-policy",
+   "description": "Retrieves detailed information about the certificate authority (CA) enrollment policy for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-certificate",
+   "description": "Displays information about the certificate registered for secure LDAP or client certificate authentication.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-client-authentication-settings",
+   "description": "Retrieves information about the type of client authentication for the specified directory, if the type is specified.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SmartCard",
+       "SmartCardOrPassword"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-conditional-forwarders",
+   "description": "Obtains information about the conditional forwarders for this account.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remote-domain-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-directories",
+   "description": "Obtains information about the directories that belong to this account.",
+   "options": [
+    {
+     "name": "--directory-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-directory-data-access",
+   "description": "Obtains status of directory data access enablement through the Directory Service Data API for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain-controllers",
+   "description": "Provides information about any domain controllers in your directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-controller-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-event-topics",
+   "description": "Obtains information about which Amazon SNS topics receive status messages from the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {}
+    },
+    {
+     "name": "--topic-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-hybrid-ad-update",
+   "description": "Retrieves information about update activities for a hybrid directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--update-type",
+     "args": {
+      "suggestions": [
+       "SelfManagedInstances",
+       "HybridAdministratorAccount"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-ldaps-settings",
+   "description": "Describes the status of LDAP security for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "Client"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-regions",
+   "description": "Provides information about the Regions that are configured for multi-Region replication.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--region-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-settings",
+   "description": "Retrieves information about the configurable settings for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Requested",
+       "Updating",
+       "Updated",
+       "Failed",
+       "Default"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-shared-directories",
+   "description": "Returns the shared directories in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owner-directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--shared-directory-ids",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-snapshots",
+   "description": "Obtains information about the directory snapshots that belong to this account.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-ids",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-trusts",
+   "description": "Obtains information about the trust relationships for this account.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--trust-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-update-directory",
+   "description": "Describes the updates of a directory for a particular update type.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--region-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--update-type",
+     "args": {
+      "suggestions": [
+       "OS",
+       "NETWORK",
+       "SIZE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-ca-enrollment-policy",
+   "description": "Disables the certificate authority (CA) enrollment policy for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-client-authentication",
+   "description": "Disables alternative client authentication methods for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SmartCard",
+       "SmartCardOrPassword"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-directory-data-access",
+   "description": "Deactivates access to directory data via the Directory Service Data API for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-ldaps",
+   "description": "Deactivates LDAP secure calls for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "Client"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-radius",
+   "description": "Disables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD Connector or Microsoft AD directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-sso",
+   "description": "Disables single-sign on for a directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "enable-ca-enrollment-policy",
+   "description": "Enables certificate authority (CA) enrollment policy for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pca-connector-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-client-authentication",
+   "description": "Enables alternative client authentication methods for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SmartCard",
+       "SmartCardOrPassword"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-directory-data-access",
+   "description": "Enables access to directory data via the Directory Service Data API for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-ldaps",
+   "description": "Activates the switch for the specific directory to always use LDAP secure calls.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "Client"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-radius",
+   "description": "Enables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD Connector or Microsoft AD directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--radius-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-sso",
+   "description": "Enables single sign-on for a directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-directory-limits",
+   "description": "Obtains directory limit information for the current Region."
+  },
+  {
+   "name": "get-snapshot-limits",
+   "description": "Obtains the manual snapshot limits for a directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-ad-assessments",
+   "description": "Retrieves a list of directory assessments for the specified directory or all assessments in your account.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-certificates",
+   "description": "For the specified directory, lists all the certificates registered for a secure LDAP or client certificate authentication.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ip-routes",
+   "description": "Lists the address blocks that you have added to a directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-log-subscriptions",
+   "description": "Lists the active log subscriptions for the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-schema-extensions",
+   "description": "Lists all schema extensions applied to a Microsoft AD Directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags on a directory.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-certificate",
+   "description": "Registers a certificate for a secure LDAP or client certificate authentication.",
+   "options": [
+    {
+     "name": "--certificate-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-cert-auth-settings",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "ClientCertAuth",
+       "ClientLDAPS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "register-event-topic",
+   "description": "Associates a directory with an Amazon SNS topic.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-shared-directory",
+   "description": "Rejects a directory sharing request that was sent from the directory owner account.",
+   "options": [
+    {
+     "name": "--shared-directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-ip-routes",
+   "description": "Removes IP address blocks from a directory.",
+   "options": [
+    {
+     "name": "--cidr-ips",
+     "args": {}
+    },
+    {
+     "name": "--cidr-ipv6s",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-region",
+   "description": "Stops all replication and removes the domain controllers from the specified Region.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-resource",
+   "description": "Removes tags from a directory.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-user-password",
+   "description": "Resets the password for any user in your Managed Microsoft AD or Simple AD directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--user-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-from-snapshot",
+   "description": "Restores a directory using an existing directory snapshot.",
+   "options": [
+    {
+     "name": "--snapshot-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "share-directory",
+   "description": "Shares a specified directory (DirectoryId) in your Amazon Web Services account (directory owner) with another Amazon Web Services account (directory consumer).",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--share-method",
+     "args": {
+      "suggestions": [
+       "ORGANIZATIONS",
+       "HANDSHAKE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--share-notes",
+     "args": {}
+    },
+    {
+     "name": "--share-target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-ad-assessment",
+   "description": "Initiates a directory assessment to validate your self-managed AD environment for hybrid domain join.",
+   "options": [
+    {
+     "name": "--assessment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-schema-extension",
+   "description": "Applies a schema extension to a Microsoft AD directory.",
+   "options": [
+    {
+     "name": "--create-snapshot-before-schema-extension",
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ldif-content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-create-snapshot-before-schema-extension"
+    }
+   ]
+  },
+  {
+   "name": "unshare-directory",
+   "description": "Stops the directory sharing between the directory owner and consumer accounts.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unshare-target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-conditional-forwarder",
+   "description": "Updates a conditional forwarder that has been set up for your Amazon Web Services directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dns-ip-addrs",
+     "args": {}
+    },
+    {
+     "name": "--dns-ipv6-addrs",
+     "args": {}
+    },
+    {
+     "name": "--remote-domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-directory-setup",
+   "description": "Updates directory configuration for the specified update type.",
+   "options": [
+    {
+     "name": "--create-snapshot-before-update"
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--directory-size-update-settings",
+     "args": {}
+    },
+    {
+     "name": "--network-update-settings",
+     "args": {}
+    },
+    {
+     "name": "--no-create-snapshot-before-update"
+    },
+    {
+     "name": "--os-update-settings",
+     "args": {}
+    },
+    {
+     "name": "--update-type",
+     "args": {
+      "suggestions": [
+       "OS",
+       "NETWORK",
+       "SIZE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-hybrid-ad",
+   "description": "Updates the configuration of an existing hybrid directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hybrid-administrator-account-update",
+     "args": {}
+    },
+    {
+     "name": "--self-managed-instances-settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-number-of-domain-controllers",
+   "description": "Adds or removes domain controllers to or from the directory.",
+   "options": [
+    {
+     "name": "--desired-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-radius",
+   "description": "Updates the Remote Authentication Dial In User Service (RADIUS) server information for an AD Connector or Microsoft AD directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--radius-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-settings",
+   "description": "Updates the configurable settings for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-trust",
+   "description": "Updates the trust that has been set up between your Managed Microsoft AD directory and an self-managed Active Directory.",
+   "options": [
+    {
+     "name": "--selective-auth",
+     "args": {
+      "suggestions": [
+       "Enabled",
+       "Disabled"
+      ]
+     }
+    },
+    {
+     "name": "--trust-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-trust",
+   "description": "Directory Service for Microsoft Active Directory allows you to configure and verify trust relationships.",
+   "options": [
+    {
+     "name": "--trust-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "hybrid-ad-updated",
+     "description": "Wait until JMESPath query UpdateActivities.SelfManagedInstances[].Status returns Updated for all elements when polling with ``describe-hybrid-ad-update``.",
+     "options": [
+      {
+       "name": "--directory-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--next-token",
+       "args": {}
+      },
+      {
+       "name": "--update-type",
+       "args": {
+        "suggestions": [
+         "SelfManagedInstances",
+         "HybridAdministratorAccount"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

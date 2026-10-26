@@ -1,0 +1,477 @@
+{
+ "name": "detective",
+ "description": "Detective uses machine learning and purpose-built visualizations to help you to analyze and investigate security issues across your Amazon Web Services (Amazon Web Services) workloads.",
+ "subcommands": [
+  {
+   "name": "accept-invitation",
+   "description": "Accepts an invitation for the member account to contribute data to a behavior graph.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-graph-member-datasources",
+   "description": "Gets data source package information for the behavior graph.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-membership-datasources",
+   "description": "Gets information on the data source package history for an account.",
+   "options": [
+    {
+     "name": "--graph-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-graph",
+   "description": "Creates a new behavior graph for the calling account, and sets that account as the administrator account.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-members",
+   "description": "CreateMembers is used to send invitations to accounts.",
+   "options": [
+    {
+     "name": "--accounts",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disable-email-notification"
+    },
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message",
+     "args": {}
+    },
+    {
+     "name": "--no-disable-email-notification"
+    }
+   ]
+  },
+  {
+   "name": "delete-graph",
+   "description": "Disables the specified behavior graph and queues it to be deleted.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-members",
+   "description": "Removes the specified member accounts from the behavior graph.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-organization-configuration",
+   "description": "Returns information about the configuration for the organization behavior graph.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-organization-admin-account",
+   "description": "Removes the Detective administrator account in the current Region."
+  },
+  {
+   "name": "disassociate-membership",
+   "description": "Removes the member account from the specified behavior graph.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-organization-admin-account",
+   "description": "Designates the Detective administrator account for the organization in the current Region.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-investigation",
+   "description": "Detective investigations lets you investigate IAM users and IAM roles using indicators of compromise.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--investigation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-members",
+   "description": "Returns the membership details for specified member accounts for a behavior graph.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-datasource-packages",
+   "description": "Lists data source packages in the behavior graph.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-graphs",
+   "description": "Returns the list of behavior graphs that the calling account is an administrator account of.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-indicators",
+   "description": "Gets the indicators from an investigation.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--indicator-type",
+     "args": {
+      "suggestions": [
+       "TTP_OBSERVED",
+       "IMPOSSIBLE_TRAVEL",
+       "FLAGGED_IP_ADDRESS",
+       "NEW_GEOLOCATION",
+       "NEW_ASO",
+       "NEW_USER_AGENT",
+       "RELATED_FINDING",
+       "RELATED_FINDING_GROUP"
+      ]
+     }
+    },
+    {
+     "name": "--investigation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-investigations",
+   "description": "Detective investigations lets you investigate IAM users and IAM roles using indicators of compromise.",
+   "options": [
+    {
+     "name": "--filter-criteria",
+     "args": {}
+    },
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-criteria",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-invitations",
+   "description": "Retrieves the list of open and accepted behavior graph invitations for the member account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-members",
+   "description": "Retrieves the list of member accounts for a behavior graph.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-organization-admin-accounts",
+   "description": "Returns information about the Detective administrator account for an organization.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns the tag values that are assigned to a behavior graph.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-invitation",
+   "description": "Rejects an invitation to contribute the account data to a behavior graph.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-investigation",
+   "description": "Detective investigations lets you investigate IAM users and IAM roles using indicators of compromise.",
+   "options": [
+    {
+     "name": "--entity-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope-start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-monitoring-member",
+   "description": "Sends a request to enable data ingest for a member account that has a status of ACCEPTED_BUT_DISABLED.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Applies tag values to a behavior graph.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a behavior graph.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-datasource-packages",
+   "description": "Starts a data source package for the Detective behavior graph.",
+   "options": [
+    {
+     "name": "--datasource-packages",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-investigation-state",
+   "description": "Updates the state of an investigation.",
+   "options": [
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--investigation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "ARCHIVED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-organization-configuration",
+   "description": "Updates the configuration for the Organizations integration in the current Region.",
+   "options": [
+    {
+     "name": "--auto-enable"
+    },
+    {
+     "name": "--graph-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-enable"
+    }
+   ]
+  }
+ ]
+}

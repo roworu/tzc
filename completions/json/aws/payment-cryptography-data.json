@@ -1,0 +1,522 @@
+{
+ "name": "payment-cryptography-data",
+ "description": "You use the Amazon Web Services Payment Cryptography Data Plane to manage how encryption keys are used for payment-related transaction processing and associated cryptographic operations.",
+ "subcommands": [
+  {
+   "name": "decrypt-data",
+   "description": "Decrypts ciphertext data to plaintext using a symmetric (TDES, AES), asymmetric (RSA), or derived (DUKPT or EMV) encryption key scheme.",
+   "options": [
+    {
+     "name": "--cipher-text",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--decryption-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--wrapped-key",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "encrypt-data",
+   "description": "Encrypts plaintext data to ciphertext using a symmetric (TDES, AES), asymmetric (RSA), or derived (DUKPT or EMV) encryption key scheme.",
+   "options": [
+    {
+     "name": "--encryption-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plain-text",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--wrapped-key",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "generate-as2805-kek-validation",
+   "description": "Generates a KekValidationRequest or a KekValidationResponse for node-to-node initialization between payment processing nodes using Australian Standard 2805 (AS2805).",
+   "options": [
+    {
+     "name": "--kek-validation-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--random-key-send-variant-mask",
+     "args": {
+      "suggestions": [
+       "VARIANT_MASK_82C0",
+       "VARIANT_MASK_82"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-auth-request-cryptogram",
+   "description": "Generates an Authorization Request Cryptogram (ARQC) for an EMV chip payment card authorization.",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--major-key-derivation-mode",
+     "args": {
+      "suggestions": [
+       "EMV_OPTION_A",
+       "EMV_OPTION_B"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--session-key-derivation-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transaction-data",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-card-validation-data",
+   "description": "Generates card-related validation data using algorithms such as Card Verification Values (CVV/CVV2), Dynamic Card Verification Values (dCVV/dCVV2), or Card Security Codes (CSC).",
+   "options": [
+    {
+     "name": "--generation-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-account-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-data-length",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "generate-mac",
+   "description": "Generates a Message Authentication Code (MAC) cryptogram within Amazon Web Services Payment Cryptography.",
+   "options": [
+    {
+     "name": "--generation-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mac-length",
+     "args": {}
+    },
+    {
+     "name": "--message-data",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-mac-emv-pin-change",
+   "description": "Generates an issuer script mac for EMV payment cards that use offline PINs as the cardholder verification method (CVM).",
+   "options": [
+    {
+     "name": "--derivation-method-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--message-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-encrypted-pin-block",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-pin-pek-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pin-block-format",
+     "args": {
+      "suggestions": [
+       "ISO_FORMAT_0",
+       "ISO_FORMAT_1",
+       "ISO_FORMAT_3"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--secure-messaging-confidentiality-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--secure-messaging-integrity-key-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-pin-data",
+   "description": "Generates pin-related data such as PIN, PIN Verification Value (PVV), PIN Block, and PIN Offset during new card issuance or reissuance.",
+   "options": [
+    {
+     "name": "--encryption-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-wrapped-key",
+     "args": {}
+    },
+    {
+     "name": "--generation-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--generation-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pin-block-format",
+     "args": {
+      "suggestions": [
+       "ISO_FORMAT_0",
+       "ISO_FORMAT_1",
+       "ISO_FORMAT_3",
+       "ISO_FORMAT_4"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--pin-data-length",
+     "args": {}
+    },
+    {
+     "name": "--primary-account-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "re-encrypt-data",
+   "description": "Re-encrypt ciphertext using DUKPT or Symmetric data encryption keys.",
+   "options": [
+    {
+     "name": "--cipher-text",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incoming-encryption-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incoming-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incoming-wrapped-key",
+     "args": {}
+    },
+    {
+     "name": "--outgoing-encryption-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outgoing-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outgoing-wrapped-key",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "translate-key-material",
+   "description": "Translates an cryptographic key between different wrapping keys without importing the key into Amazon Web Services Payment Cryptography.",
+   "options": [
+    {
+     "name": "--incoming-key-material",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-check-value-algorithm",
+     "args": {
+      "suggestions": [
+       "CMAC",
+       "ANSI_X9_24",
+       "HMAC",
+       "SHA_1"
+      ]
+     }
+    },
+    {
+     "name": "--outgoing-key-material",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "translate-pin-data",
+   "description": "Translates encrypted PIN block from and to ISO 9564 formats 0,1,3,4.",
+   "options": [
+    {
+     "name": "--encrypted-pin-block",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incoming-as2805-attributes",
+     "args": {}
+    },
+    {
+     "name": "--incoming-dukpt-attributes",
+     "args": {}
+    },
+    {
+     "name": "--incoming-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incoming-translation-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incoming-wrapped-key",
+     "args": {}
+    },
+    {
+     "name": "--outgoing-dukpt-attributes",
+     "args": {}
+    },
+    {
+     "name": "--outgoing-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outgoing-translation-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outgoing-wrapped-key",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "verify-auth-request-cryptogram",
+   "description": "Verifies Authorization Request Cryptogram (ARQC) for a EMV chip payment card authorization.",
+   "options": [
+    {
+     "name": "--auth-request-cryptogram",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-response-attributes",
+     "args": {}
+    },
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--major-key-derivation-mode",
+     "args": {
+      "suggestions": [
+       "EMV_OPTION_A",
+       "EMV_OPTION_B"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--session-key-derivation-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transaction-data",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-card-validation-data",
+   "description": "Verifies card-related validation data using algorithms such as Card Verification Values (CVV/CVV2), Dynamic Card Verification Values (dCVV/dCVV2) and Card Security Codes (CSC).",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-account-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--verification-attributes",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-mac",
+   "description": "Verifies a Message Authentication Code (MAC).",
+   "options": [
+    {
+     "name": "--key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mac",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mac-length",
+     "args": {}
+    },
+    {
+     "name": "--message-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--verification-attributes",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-pin-data",
+   "description": "Verifies pin-related data such as PIN and PIN Offset using algorithms including VISA PVV and IBM3624.",
+   "options": [
+    {
+     "name": "--dukpt-attributes",
+     "args": {}
+    },
+    {
+     "name": "--encrypted-pin-block",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-key-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-wrapped-key",
+     "args": {}
+    },
+    {
+     "name": "--pin-block-format",
+     "args": {
+      "suggestions": [
+       "ISO_FORMAT_0",
+       "ISO_FORMAT_1",
+       "ISO_FORMAT_3",
+       "ISO_FORMAT_4"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--pin-data-length",
+     "args": {}
+    },
+    {
+     "name": "--primary-account-number",
+     "args": {}
+    },
+    {
+     "name": "--verification-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--verification-key-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

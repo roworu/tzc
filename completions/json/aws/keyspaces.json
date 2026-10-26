@@ -1,0 +1,470 @@
+{
+ "name": "keyspaces",
+ "description": "Amazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra-compatible database service.",
+ "subcommands": [
+  {
+   "name": "create-keyspace",
+   "description": "The CreateKeyspace operation adds a new keyspace to your account.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-specification",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-table",
+   "description": "The CreateTable operation adds a new table to the specified keyspace.",
+   "options": [
+    {
+     "name": "--auto-scaling-specification",
+     "args": {}
+    },
+    {
+     "name": "--capacity-specification",
+     "args": {}
+    },
+    {
+     "name": "--cdc-specification",
+     "args": {}
+    },
+    {
+     "name": "--client-side-timestamps",
+     "args": {}
+    },
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--default-time-to-live",
+     "args": {}
+    },
+    {
+     "name": "--encryption-specification",
+     "args": {}
+    },
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--point-in-time-recovery",
+     "args": {}
+    },
+    {
+     "name": "--replica-specifications",
+     "args": {}
+    },
+    {
+     "name": "--schema-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--ttl",
+     "args": {}
+    },
+    {
+     "name": "--warm-throughput-specification",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-type",
+   "description": "The CreateType operation creates a new user-defined type in the specified keyspace.",
+   "options": [
+    {
+     "name": "--field-definitions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-keyspace",
+   "description": "The DeleteKeyspace operation deletes a keyspace and all of its tables.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-table",
+   "description": "The DeleteTable operation deletes a table and all of its data.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-type",
+   "description": "The DeleteType operation deletes a user-defined type (UDT).",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-keyspace",
+   "description": "Returns the name of the specified keyspace, the Amazon Resource Name (ARN), the replication strategy, the Amazon Web Services Regions of a multi-Region keyspace, and the status of newly added Regions after an UpdateKeyspace operation.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-table",
+   "description": "Returns information about the table, including the table's name and current status, the keyspace name, configuration settings, and metadata.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-table-auto-scaling-settings",
+   "description": "Returns auto scaling related settings of the specified table in JSON format.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-type",
+   "description": "The GetType operation returns information about the type, for example the field definitions, the timestamp when the type was last modified, the level of nesting, the status, and details about if the type is used in other types and tables.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-keyspaces",
+   "description": "The ListKeyspaces operation returns a list of keyspaces.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tables",
+   "description": "The ListTables operation returns a list of tables for a specified keyspace.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of all tags associated with the specified Amazon Keyspaces resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-types",
+   "description": "The ListTypes operation returns a list of types for a specified keyspace.",
+   "options": [
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-table",
+   "description": "Restores the table to the specified point in time within the earliest_restorable_timestamp and the current time.",
+   "options": [
+    {
+     "name": "--auto-scaling-specification",
+     "args": {}
+    },
+    {
+     "name": "--capacity-specification-override",
+     "args": {}
+    },
+    {
+     "name": "--encryption-specification-override",
+     "args": {}
+    },
+    {
+     "name": "--point-in-time-recovery-override",
+     "args": {}
+    },
+    {
+     "name": "--replica-specifications",
+     "args": {}
+    },
+    {
+     "name": "--restore-timestamp",
+     "args": {}
+    },
+    {
+     "name": "--source-keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags-override",
+     "args": {}
+    },
+    {
+     "name": "--target-keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-table-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates a set of tags with a Amazon Keyspaces resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the association of tags from a Amazon Keyspaces resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-keyspace",
+   "description": "Adds a new Amazon Web Services Region to the keyspace.",
+   "options": [
+    {
+     "name": "--client-side-timestamps",
+     "args": {}
+    },
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-specification",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-table",
+   "description": "Adds new columns to the table or updates one of the table's settings, for example capacity mode, auto scaling, encryption, point-in-time recovery, or ttl settings.",
+   "options": [
+    {
+     "name": "--add-columns",
+     "args": {}
+    },
+    {
+     "name": "--auto-scaling-specification",
+     "args": {}
+    },
+    {
+     "name": "--capacity-specification",
+     "args": {}
+    },
+    {
+     "name": "--cdc-specification",
+     "args": {}
+    },
+    {
+     "name": "--client-side-timestamps",
+     "args": {}
+    },
+    {
+     "name": "--default-time-to-live",
+     "args": {}
+    },
+    {
+     "name": "--encryption-specification",
+     "args": {}
+    },
+    {
+     "name": "--keyspace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--point-in-time-recovery",
+     "args": {}
+    },
+    {
+     "name": "--replica-specifications",
+     "args": {}
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ttl",
+     "args": {}
+    },
+    {
+     "name": "--warm-throughput-specification",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

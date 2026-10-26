@@ -1,0 +1,588 @@
+{
+ "name": "chime-sdk-media-pipelines",
+ "description": "The Amazon Chime SDK media pipeline APIs in this section allow software developers to create Amazon Chime SDK media pipelines that capture, concatenate, or stream your Amazon Chime SDK meetings.",
+ "subcommands": [
+  {
+   "name": "create-media-capture-pipeline",
+   "description": "Creates a media pipeline.",
+   "options": [
+    {
+     "name": "--chime-sdk-meeting-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--sink-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sink-iam-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--sink-type",
+     "args": {
+      "suggestions": [
+       "S3Bucket"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--source-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "ChimeSdkMeeting"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--sse-aws-key-management-params",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-media-concatenation-pipeline",
+   "description": "Creates a media concatenation pipeline.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--sinks",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sources",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-media-insights-pipeline",
+   "description": "Creates a media insights pipeline.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--kinesis-video-stream-recording-source-runtime-configuration",
+     "args": {}
+    },
+    {
+     "name": "--kinesis-video-stream-source-runtime-configuration",
+     "args": {}
+    },
+    {
+     "name": "--media-insights-pipeline-configuration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-insights-runtime-metadata",
+     "args": {}
+    },
+    {
+     "name": "--s3-recording-sink-runtime-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-media-insights-pipeline-configuration",
+   "description": "A structure that contains the static configurations for a media insights pipeline.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--elements",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-insights-pipeline-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--real-time-alert-configuration",
+     "args": {}
+    },
+    {
+     "name": "--resource-access-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-media-live-connector-pipeline",
+   "description": "Creates a media live connector pipeline in an Amazon Chime SDK meeting.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--sinks",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sources",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-media-pipeline-kinesis-video-stream-pool",
+   "description": "Creates an Amazon Kinesis Video Stream pool for use with media stream pipelines.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--pool-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-media-stream-pipeline",
+   "description": "Creates a streaming media pipeline.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--sinks",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sources",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-media-capture-pipeline",
+   "description": "Deletes the media pipeline.",
+   "options": [
+    {
+     "name": "--media-pipeline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-media-insights-pipeline-configuration",
+   "description": "Deletes the specified configuration settings.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-media-pipeline",
+   "description": "Deletes the media pipeline.",
+   "options": [
+    {
+     "name": "--media-pipeline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-media-pipeline-kinesis-video-stream-pool",
+   "description": "Deletes an Amazon Kinesis Video Stream pool.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-media-capture-pipeline",
+   "description": "Gets an existing media pipeline.",
+   "options": [
+    {
+     "name": "--media-pipeline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-media-insights-pipeline-configuration",
+   "description": "Gets the configuration settings for a media insights pipeline.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-media-pipeline",
+   "description": "Gets an existing media pipeline.",
+   "options": [
+    {
+     "name": "--media-pipeline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-media-pipeline-kinesis-video-stream-pool",
+   "description": "Gets an Kinesis video stream pool.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-speaker-search-task",
+   "description": "Retrieves the details of the specified speaker search task.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--speaker-search-task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-voice-tone-analysis-task",
+   "description": "Retrieves the details of a voice tone analysis task.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--voice-tone-analysis-task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-media-capture-pipelines",
+   "description": "Returns a list of media pipelines.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-media-insights-pipeline-configurations",
+   "description": "Lists the available media insights pipeline configurations.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-media-pipeline-kinesis-video-stream-pools",
+   "description": "Lists the video stream pools in the media pipeline.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-media-pipelines",
+   "description": "Returns a list of media pipelines.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags available for a media pipeline.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-speaker-search-task",
+   "description": "Starts a speaker search task.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kinesis-video-stream-source-task-configuration",
+     "args": {}
+    },
+    {
+     "name": "--voice-profile-domain-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-voice-tone-analysis-task",
+   "description": "Starts a voice tone analysis task.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kinesis-video-stream-source-task-configuration",
+     "args": {}
+    },
+    {
+     "name": "--language-code",
+     "args": {
+      "suggestions": [
+       "en-US"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-speaker-search-task",
+   "description": "Stops a speaker search task.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--speaker-search-task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-voice-tone-analysis-task",
+   "description": "Stops a voice tone analysis task.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--voice-tone-analysis-task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "The ARN of the media pipeline that you want to tag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes any tags from a media pipeline.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-media-insights-pipeline-configuration",
+   "description": "Updates the media insights pipeline's configuration settings.",
+   "options": [
+    {
+     "name": "--elements",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--real-time-alert-configuration",
+     "args": {}
+    },
+    {
+     "name": "--resource-access-role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-media-insights-pipeline-status",
+   "description": "Updates the status of a media insights pipeline.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-status",
+     "args": {
+      "suggestions": [
+       "Pause",
+       "Resume"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-media-pipeline-kinesis-video-stream-pool",
+   "description": "Updates an Amazon Kinesis Video Stream pool in a media pipeline.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-configuration",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

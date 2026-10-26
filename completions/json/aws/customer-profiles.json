@@ -1,0 +1,2803 @@
+{
+ "name": "customer-profiles",
+ "description": "Connect Customer Customer Profiles Customer Profiles actions Customer Profiles data types Connect Customer Customer Profiles is a unified customer profile for your contact center that has pre-built connectors powered by AppFlow that make it easy to combine customer information from third party applications, such as Salesforce (CRM), ServiceNow (ITSM), and your enterprise resource planning (ERP), with contact history from your Connect Customer contact center.",
+ "subcommands": [
+  {
+   "name": "add-profile-key",
+   "description": "Associates a new key value with a specific profile, such as a Contact Record ContactId.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--values",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-calculated-attribute-for-profile",
+   "description": "Fetch the possible attribute values given the attribute name.",
+   "options": [
+    {
+     "name": "--calculated-attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--condition-overrides",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-profile",
+   "description": "Get a batch of profiles.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-put-profile-object",
+   "description": "Adds multiple profile objects to a domain of a given ObjectType in a single API call.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--items",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-calculated-attribute-definition",
+   "description": "Creates a new calculated attribute definition.",
+   "options": [
+    {
+     "name": "--attribute-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--calculated-attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--no-use-historical-data"
+    },
+    {
+     "name": "--statistic",
+     "args": {
+      "suggestions": [
+       "FIRST_OCCURRENCE",
+       "LAST_OCCURRENCE",
+       "COUNT",
+       "SUM",
+       "MINIMUM",
+       "MAXIMUM",
+       "AVERAGE",
+       "MAX_OCCURRENCE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--use-historical-data"
+    }
+   ]
+  },
+  {
+   "name": "create-domain",
+   "description": "Creates a domain, which is a container for all customer data, such as customer profile attributes, object types, profile keys, and encryption keys.",
+   "options": [
+    {
+     "name": "--data-store",
+     "args": {}
+    },
+    {
+     "name": "--dead-letter-queue-url",
+     "args": {}
+    },
+    {
+     "name": "--default-encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--default-expiration-days",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--matching",
+     "args": {}
+    },
+    {
+     "name": "--rule-based-matching",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-domain-layout",
+   "description": "Creates the layout to view data for a specific domain.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--is-default"
+    },
+    {
+     "name": "--layout",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--layout-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--layout-type",
+     "args": {
+      "suggestions": [
+       "PROFILE_EXPLORER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--no-is-default"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-stream",
+   "description": "Creates an event stream, which is a subscription to real-time events, such as when profiles are created and updated through Connect Customer Customer Profiles.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--uri",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-event-trigger",
+   "description": "Creates an event trigger, which specifies the rules when to perform action based on customer's ingested data.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-trigger-conditions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-trigger-limits",
+     "args": {}
+    },
+    {
+     "name": "--event-trigger-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-filter",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-integration-workflow",
+   "description": "Creates an integration workflow.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workflow-type",
+     "args": {
+      "suggestions": [
+       "APPFLOW_INTEGRATION"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-profile",
+   "description": "Creates a standard profile.",
+   "options": [
+    {
+     "name": "--account-number",
+     "args": {}
+    },
+    {
+     "name": "--additional-information",
+     "args": {}
+    },
+    {
+     "name": "--address",
+     "args": {}
+    },
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--billing-address",
+     "args": {}
+    },
+    {
+     "name": "--birth-date",
+     "args": {}
+    },
+    {
+     "name": "--business-email-address",
+     "args": {}
+    },
+    {
+     "name": "--business-name",
+     "args": {}
+    },
+    {
+     "name": "--business-phone-number",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email-address",
+     "args": {}
+    },
+    {
+     "name": "--engagement-preferences",
+     "args": {}
+    },
+    {
+     "name": "--first-name",
+     "args": {}
+    },
+    {
+     "name": "--gender",
+     "args": {
+      "suggestions": [
+       "MALE",
+       "FEMALE",
+       "UNSPECIFIED"
+      ]
+     }
+    },
+    {
+     "name": "--gender-string",
+     "args": {}
+    },
+    {
+     "name": "--home-phone-number",
+     "args": {}
+    },
+    {
+     "name": "--last-name",
+     "args": {}
+    },
+    {
+     "name": "--mailing-address",
+     "args": {}
+    },
+    {
+     "name": "--middle-name",
+     "args": {}
+    },
+    {
+     "name": "--mobile-phone-number",
+     "args": {}
+    },
+    {
+     "name": "--party-type",
+     "args": {
+      "suggestions": [
+       "INDIVIDUAL",
+       "BUSINESS",
+       "OTHER"
+      ]
+     }
+    },
+    {
+     "name": "--party-type-string",
+     "args": {}
+    },
+    {
+     "name": "--personal-email-address",
+     "args": {}
+    },
+    {
+     "name": "--phone-number",
+     "args": {}
+    },
+    {
+     "name": "--profile-type",
+     "args": {
+      "suggestions": [
+       "ACCOUNT_PROFILE",
+       "PROFILE"
+      ]
+     }
+    },
+    {
+     "name": "--shipping-address",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-recommender",
+   "description": "Creates a recommender",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-config",
+     "args": {}
+    },
+    {
+     "name": "--recommender-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-recipe-name",
+     "args": {
+      "suggestions": [
+       "recommended-for-you",
+       "similar-items",
+       "frequently-paired-items",
+       "popular-items",
+       "trending-now",
+       "personalized-ranking"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--recommender-schema-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-recommender-filter",
+   "description": "Creates a recommender filter.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-filter-expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-filter-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-schema-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-recommender-schema",
+   "description": "Creates a recommender schema.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fields",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-schema-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-segment-definition",
+   "description": "Creates a segment definition associated to the given domain.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-groups",
+     "args": {}
+    },
+    {
+     "name": "--segment-sort",
+     "args": {}
+    },
+    {
+     "name": "--segment-sql-query",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-segment-estimate",
+   "description": "Creates a segment estimate query.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-query",
+     "args": {}
+    },
+    {
+     "name": "--segment-sql-query",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-segment-snapshot",
+   "description": "Triggers a job to export a segment to a specified destination.",
+   "options": [
+    {
+     "name": "--data-format",
+     "args": {
+      "suggestions": [
+       "CSV",
+       "JSONL",
+       "ORC"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--destination-uri",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--segment-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-upload-job",
+   "description": "Creates an Upload job to ingest data for segment imports.",
+   "options": [
+    {
+     "name": "--data-expiry",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fields",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unique-key",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-calculated-attribute-definition",
+   "description": "Deletes an existing calculated attribute definition.",
+   "options": [
+    {
+     "name": "--calculated-attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain",
+   "description": "Deletes a specific domain and all of its customer data, such as customer profile attributes and their related objects.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain-layout",
+   "description": "Deletes the layout used to view data for a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--layout-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain-object-type",
+   "description": "Delete a DomainObjectType for the given Domain and ObjectType name.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-stream",
+   "description": "Disables and deletes the specified event stream.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-stream-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-trigger",
+   "description": "Disable and deletes the Event Trigger.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-trigger-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-integration",
+   "description": "Removes an integration from a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--uri",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-profile",
+   "description": "Deletes the standard customer profile and all data pertaining to the profile.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-profile-key",
+   "description": "Removes a searchable key from a customer profile.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--values",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-profile-object",
+   "description": "Removes an object associated with a profile of a given ProfileObjectType.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-object-unique-key",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-profile-object-type",
+   "description": "Removes a ProfileObjectType from a specific domain as well as removes all the ProfileObjects of that type.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-recommender",
+   "description": "Deletes a recommender.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-recommender-filter",
+   "description": "Deletes a recommender filter from a domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-filter-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-recommender-schema",
+   "description": "Deletes a recommender schema from a domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-schema-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-segment-definition",
+   "description": "Deletes a segment definition from the domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow",
+   "description": "Deletes the specified workflow and all its corresponding resources.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detect-profile-object-type",
+   "description": "The process of detecting profile object type mapping by using given objects.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--objects",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-auto-merging-preview",
+   "description": "Tests the auto-merging settings of your Identity Resolution Job without merging your data.",
+   "options": [
+    {
+     "name": "--conflict-resolution",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--consolidation",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--min-allowed-confidence-score-for-merging",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-calculated-attribute-definition",
+   "description": "Provides more information on a calculated attribute definition for Customer Profiles.",
+   "options": [
+    {
+     "name": "--calculated-attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-calculated-attribute-for-profile",
+   "description": "Retrieve a calculated attribute for a customer profile.",
+   "options": [
+    {
+     "name": "--calculated-attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain",
+   "description": "Returns information about a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain-layout",
+   "description": "Gets the layout to view data for a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--layout-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-domain-object-type",
+   "description": "Return a DomainObjectType for the input Domain and ObjectType names.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event-stream",
+   "description": "Returns information about the specified event stream in a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-stream-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event-trigger",
+   "description": "Get a specific Event Trigger from the domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-trigger-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-identity-resolution-job",
+   "description": "Returns information about an Identity Resolution Job in a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-integration",
+   "description": "Returns an integration for a domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--uri",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-matches",
+   "description": "Before calling this API, use CreateDomain or UpdateDomain to enable identity resolution: set Matching to true.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object-type-attribute-statistics",
+   "description": "The GetObjectTypeAttributeValues API delivers statistical insights about attributes within a specific object type, but is exclusively available for domains with data store enabled.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile-history-record",
+   "description": "Returns a history record for a specific profile, for a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile-object-type",
+   "description": "Returns the object types for a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile-object-type-template",
+   "description": "Returns the template information for a specific object type.",
+   "options": [
+    {
+     "name": "--template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-profile-recommendations",
+   "description": "Fetches the recommendations for a profile in the input Customer Profiles domain.",
+   "options": [
+    {
+     "name": "--candidate-ids",
+     "args": {}
+    },
+    {
+     "name": "--context",
+     "args": {}
+    },
+    {
+     "name": "--diversity-config",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--metadata-config",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-filters",
+     "args": {}
+    },
+    {
+     "name": "--recommender-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-promotional-filters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-recommender",
+   "description": "Retrieves a recommender.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--training-metrics-count",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-recommender-filter",
+   "description": "Retrieves information about a specific recommender filter in a domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-filter-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-recommender-schema",
+   "description": "Retrieves information about a specific recommender schema in a domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-schema-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-segment-definition",
+   "description": "Gets a segment definition from the domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-segment-estimate",
+   "description": "Gets the result of a segment estimate query.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--estimate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-segment-membership",
+   "description": "Determines if the given profiles are within a segment.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-segment-snapshot",
+   "description": "Retrieve the latest status of a segment snapshot.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-similar-profiles",
+   "description": "Returns a set of profiles that belong to the same matching group using the matchId or profileId.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--match-type",
+     "args": {
+      "suggestions": [
+       "RULE_BASED_MATCHING",
+       "ML_BASED_MATCHING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--search-value",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-upload-job",
+   "description": "This API retrieves the details of a specific upload job.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-upload-job-path",
+   "description": "This API retrieves the pre-signed URL and client token for uploading the file associated with the upload job.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow",
+   "description": "Get details of specified workflow.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-steps",
+   "description": "Get granular list of steps in workflow.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-account-integrations",
+   "description": "Lists all of the integrations associated to a specific URI in the AWS account.",
+   "options": [
+    {
+     "name": "--include-hidden"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-include-hidden"
+    },
+    {
+     "name": "--uri",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-calculated-attribute-definitions",
+   "description": "Lists calculated attribute definitions for Customer Profiles",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-calculated-attributes-for-profile",
+   "description": "Retrieve a list of calculated attributes for a customer profile.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-domain-layouts",
+   "description": "Lists the existing layouts that can be used to view data for a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domain-object-types",
+   "description": "List all DomainObjectType(s) in a Customer Profiles domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domains",
+   "description": "Returns a list of all the domains for an AWS account that have been created.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-streams",
+   "description": "Returns a list of all the event streams in a specific domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-triggers",
+   "description": "List all Event Triggers under a domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-identity-resolution-jobs",
+   "description": "Lists all of the Identity Resolution Jobs in your domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-integrations",
+   "description": "Lists all of the integrations in your domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-hidden"
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-include-hidden"
+    }
+   ]
+  },
+  {
+   "name": "list-object-type-attribute-values",
+   "description": "The ListObjectTypeAttributeValues API provides access to the most recent distinct values for any specified attribute, making it valuable for real-time data validation and consistency checks within your object types.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-object-type-attributes",
+   "description": "Fetch the possible attribute values given the attribute name.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-profile-attribute-values",
+   "description": "Fetch the possible attribute values given the attribute name.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-profile-history-records",
+   "description": "Returns a list of history records for a specific profile, for a specific domain.",
+   "options": [
+    {
+     "name": "--action-type",
+     "args": {
+      "suggestions": [
+       "ADDED_PROFILE_KEY",
+       "DELETED_PROFILE_KEY",
+       "CREATED",
+       "UPDATED",
+       "INGESTED",
+       "DELETED_BY_CUSTOMER",
+       "EXPIRED",
+       "MERGED",
+       "DELETED_BY_MERGE"
+      ]
+     }
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--object-type-name",
+     "args": {}
+    },
+    {
+     "name": "--performed-by",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-profile-object-type-templates",
+   "description": "Lists all of the template information for object types.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-profile-object-types",
+   "description": "Lists all of the templates available within the service.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-profile-objects",
+   "description": "Returns a list of objects associated with a profile of a given ProfileObjectType.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--object-filter",
+     "args": {}
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-recommender-filters",
+   "description": "Returns a list of recommender filters in the specified domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommender-recipes",
+   "description": "Returns a list of available recommender recipes that can be used to create recommenders.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommender-schemas",
+   "description": "Returns a list of recommender schemas in the specified domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommenders",
+   "description": "Returns a list of recommenders in the specified domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-rule-based-matches",
+   "description": "Returns a set of MatchIds that belong to the given domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-segment-definitions",
+   "description": "Lists all segment definitions under a domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Displays the tags associated with an Amazon Connect Customer Profiles resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-upload-jobs",
+   "description": "This API retrieves a list of upload jobs for the specified domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflows",
+   "description": "Query to list all workflows.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--query-end-date",
+     "args": {}
+    },
+    {
+     "name": "--query-start-date",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "NOT_STARTED",
+       "IN_PROGRESS",
+       "COMPLETE",
+       "FAILED",
+       "SPLIT",
+       "RETRY",
+       "CANCELLED"
+      ]
+     }
+    },
+    {
+     "name": "--workflow-type",
+     "args": {
+      "suggestions": [
+       "APPFLOW_INTEGRATION"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "merge-profiles",
+   "description": "Runs an AWS Lambda job that does the following: All the profileKeys in the ProfileToBeMerged will be moved to the main profile.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--field-source-profile-ids",
+     "args": {}
+    },
+    {
+     "name": "--main-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-ids-to-be-merged",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-domain-object-type",
+   "description": "Create/Update a DomainObjectType in a Customer Profiles domain.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--fields",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-integration",
+   "description": "Adds an integration between the service and a third-party service, which includes Amazon AppFlow and Amazon Connect.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-trigger-names",
+     "args": {}
+    },
+    {
+     "name": "--flow-definition",
+     "args": {}
+    },
+    {
+     "name": "--object-type-name",
+     "args": {}
+    },
+    {
+     "name": "--object-type-names",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "PROFILE",
+       "DOMAIN"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--uri",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-profile-object",
+   "description": "Adds additional objects to customer profiles of a given ObjectType.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-profile-object-type",
+   "description": "Defines a ProfileObjectType.",
+   "options": [
+    {
+     "name": "--allow-profile-creation"
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--expiration-days",
+     "args": {}
+    },
+    {
+     "name": "--fields",
+     "args": {}
+    },
+    {
+     "name": "--keys",
+     "args": {}
+    },
+    {
+     "name": "--max-profile-object-count",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-profile-creation"
+    },
+    {
+     "name": "--object-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-last-updated-timestamp-format",
+     "args": {}
+    },
+    {
+     "name": "--source-priority",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-profiles",
+   "description": "Searches for profiles within a specific domain using one or more predefined search keys (e.g., _fullName, _phone, _email, _account, etc.) and/or custom-defined search keys.",
+   "options": [
+    {
+     "name": "--additional-search-keys",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logical-operator",
+     "args": {
+      "suggestions": [
+       "AND",
+       "OR"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--values",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-recommender",
+   "description": "Starts a recommender that was previously stopped.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-upload-job",
+   "description": "This API starts the processing of an upload job to ingest profile data.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-recommender",
+   "description": "Stops a recommender, suspending its ability to generate recommendations.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-upload-job",
+   "description": "This API stops the processing of an upload job.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified Amazon Connect Customer Profiles resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified Amazon Connect Customer Profiles resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-calculated-attribute-definition",
+   "description": "Updates an existing calculated attribute definition.",
+   "options": [
+    {
+     "name": "--calculated-attribute-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--conditions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-domain",
+   "description": "Updates the properties of a domain, including creating or selecting a dead letter queue or an encryption key.",
+   "options": [
+    {
+     "name": "--data-store",
+     "args": {}
+    },
+    {
+     "name": "--dead-letter-queue-url",
+     "args": {}
+    },
+    {
+     "name": "--default-encryption-key",
+     "args": {}
+    },
+    {
+     "name": "--default-expiration-days",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--matching",
+     "args": {}
+    },
+    {
+     "name": "--rule-based-matching",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-domain-layout",
+   "description": "Updates the layout used to view data for a specific domain.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--is-default"
+    },
+    {
+     "name": "--layout",
+     "args": {}
+    },
+    {
+     "name": "--layout-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--layout-type",
+     "args": {
+      "suggestions": [
+       "PROFILE_EXPLORER"
+      ]
+     }
+    },
+    {
+     "name": "--no-is-default"
+    }
+   ]
+  },
+  {
+   "name": "update-event-trigger",
+   "description": "Update the properties of an Event Trigger.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-trigger-conditions",
+     "args": {}
+    },
+    {
+     "name": "--event-trigger-limits",
+     "args": {}
+    },
+    {
+     "name": "--event-trigger-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-type-name",
+     "args": {}
+    },
+    {
+     "name": "--segment-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-profile",
+   "description": "Updates the properties of a profile.",
+   "options": [
+    {
+     "name": "--account-number",
+     "args": {}
+    },
+    {
+     "name": "--additional-information",
+     "args": {}
+    },
+    {
+     "name": "--address",
+     "args": {}
+    },
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--billing-address",
+     "args": {}
+    },
+    {
+     "name": "--birth-date",
+     "args": {}
+    },
+    {
+     "name": "--business-email-address",
+     "args": {}
+    },
+    {
+     "name": "--business-name",
+     "args": {}
+    },
+    {
+     "name": "--business-phone-number",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email-address",
+     "args": {}
+    },
+    {
+     "name": "--engagement-preferences",
+     "args": {}
+    },
+    {
+     "name": "--first-name",
+     "args": {}
+    },
+    {
+     "name": "--gender",
+     "args": {
+      "suggestions": [
+       "MALE",
+       "FEMALE",
+       "UNSPECIFIED"
+      ]
+     }
+    },
+    {
+     "name": "--gender-string",
+     "args": {}
+    },
+    {
+     "name": "--home-phone-number",
+     "args": {}
+    },
+    {
+     "name": "--last-name",
+     "args": {}
+    },
+    {
+     "name": "--mailing-address",
+     "args": {}
+    },
+    {
+     "name": "--middle-name",
+     "args": {}
+    },
+    {
+     "name": "--mobile-phone-number",
+     "args": {}
+    },
+    {
+     "name": "--party-type",
+     "args": {
+      "suggestions": [
+       "INDIVIDUAL",
+       "BUSINESS",
+       "OTHER"
+      ]
+     }
+    },
+    {
+     "name": "--party-type-string",
+     "args": {}
+    },
+    {
+     "name": "--personal-email-address",
+     "args": {}
+    },
+    {
+     "name": "--phone-number",
+     "args": {}
+    },
+    {
+     "name": "--profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--profile-type",
+     "args": {
+      "suggestions": [
+       "ACCOUNT_PROFILE",
+       "PROFILE"
+      ]
+     }
+    },
+    {
+     "name": "--shipping-address",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-recommender",
+   "description": "Updates the properties of an existing recommender, allowing you to modify its configuration and description.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-config",
+     "args": {}
+    },
+    {
+     "name": "--recommender-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recommender-version-name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

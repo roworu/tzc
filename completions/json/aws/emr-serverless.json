@@ -1,0 +1,631 @@
+{
+ "name": "emr-serverless",
+ "description": "Amazon EMR Serverless is a new deployment option for Amazon EMR.",
+ "subcommands": [
+  {
+   "name": "cancel-job-run",
+   "description": "Cancels a job run.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shutdown-grace-period-in-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates an application.",
+   "options": [
+    {
+     "name": "--architecture",
+     "args": {
+      "suggestions": [
+       "ARM64",
+       "X86_64"
+      ]
+     }
+    },
+    {
+     "name": "--auto-start-configuration",
+     "args": {}
+    },
+    {
+     "name": "--auto-stop-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--disk-encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--identity-center-configuration",
+     "args": {}
+    },
+    {
+     "name": "--image-configuration",
+     "args": {}
+    },
+    {
+     "name": "--initial-capacity",
+     "args": {}
+    },
+    {
+     "name": "--interactive-configuration",
+     "args": {}
+    },
+    {
+     "name": "--job-level-cost-allocation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--maximum-capacity",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--release-label",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--runtime-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scheduler-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--worker-type-specifications",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application",
+   "description": "Displays detailed information about a specified application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dashboard-for-job-run",
+   "description": "Creates and returns a URL that you can use to access the application UIs for a job run.",
+   "options": [
+    {
+     "name": "--access-system-profile-logs"
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attempt",
+     "args": {}
+    },
+    {
+     "name": "--job-run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-access-system-profile-logs"
+    }
+   ]
+  },
+  {
+   "name": "get-job-run",
+   "description": "Displays detailed information about a job run.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attempt",
+     "args": {}
+    },
+    {
+     "name": "--job-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-dashboard",
+   "description": "Returns a URL that you can use to access the application UIs for a specified resource, such as a session.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "SESSION"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-session",
+   "description": "Displays detailed information about a session.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-session-endpoint",
+   "description": "Returns the session endpoint URL and a time-limited authentication token for the specified session.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists applications based on a set of parameters.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--states",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-job-run-attempts",
+   "description": "Lists all attempt of a job run.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-job-runs",
+   "description": "Lists job runs based on a set of parameters.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--created-at-after",
+     "args": {}
+    },
+    {
+     "name": "--created-at-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "BATCH",
+       "STREAMING"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--states",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sessions",
+   "description": "Lists sessions for the specified application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--created-at-after",
+     "args": {}
+    },
+    {
+     "name": "--created-at-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--states",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags assigned to the resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-application",
+   "description": "Starts a specified application and initializes initial capacity if configured.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-job-run",
+   "description": "Starts a job run.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration-overrides",
+     "args": {}
+    },
+    {
+     "name": "--execution-iam-policy",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-timeout-minutes",
+     "args": {}
+    },
+    {
+     "name": "--job-driver",
+     "args": {}
+    },
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "BATCH",
+       "STREAMING"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--retry-policy",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-session",
+   "description": "Creates and starts a new session on the specified application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration-overrides",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idle-timeout-minutes",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-application",
+   "description": "Stops a specified application and releases initial capacity if configured.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns tags to resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-session",
+   "description": "Terminates the specified session.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates a specified application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--architecture",
+     "args": {
+      "suggestions": [
+       "ARM64",
+       "X86_64"
+      ]
+     }
+    },
+    {
+     "name": "--auto-start-configuration",
+     "args": {}
+    },
+    {
+     "name": "--auto-stop-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--disk-encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--identity-center-configuration",
+     "args": {}
+    },
+    {
+     "name": "--image-configuration",
+     "args": {}
+    },
+    {
+     "name": "--initial-capacity",
+     "args": {}
+    },
+    {
+     "name": "--interactive-configuration",
+     "args": {}
+    },
+    {
+     "name": "--job-level-cost-allocation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--maximum-capacity",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-configuration",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--release-label",
+     "args": {}
+    },
+    {
+     "name": "--runtime-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scheduler-configuration",
+     "args": {}
+    },
+    {
+     "name": "--worker-type-specifications",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

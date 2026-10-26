@@ -1,0 +1,421 @@
+{
+ "name": "nova-act",
+ "description": "The Nova Act service provides a REST API for managing AI-powered workflow automation.",
+ "subcommands": [
+  {
+   "name": "create-act",
+   "description": "Creates a new AI task (act) within a session that can interact with tools and perform specific actions.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tool-specs",
+     "args": {}
+    },
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-session",
+   "description": "Creates a new session context within a workflow run to manage conversation state and acts.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workflow-definition",
+   "description": "Creates a new workflow definition template that can be used to execute multiple workflow runs.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--export-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workflow-run",
+   "description": "Creates a new execution instance of a workflow definition with specified parameters.",
+   "options": [
+    {
+     "name": "--client-info",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow-definition",
+   "description": "Deletes a workflow definition and all associated resources.",
+   "options": [
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow-run",
+   "description": "Terminates and cleans up a workflow run, stopping all associated acts and sessions.",
+   "options": [
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-definition",
+   "description": "Retrieves the details and configuration of a specific workflow definition.",
+   "options": [
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-run",
+   "description": "Retrieves the current state, configuration, and execution details of a workflow run.",
+   "options": [
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "invoke-act-step",
+   "description": "Executes the next step of an act, processing tool call results and returning new tool calls if needed.",
+   "options": [
+    {
+     "name": "--act-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--call-results",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--previous-step-id",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-acts",
+   "description": "Lists all acts within a specific session with their current status and execution details.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-run-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-models",
+   "description": "Lists all available AI models that can be used for workflow execution, including their status and compatibility information.",
+   "options": [
+    {
+     "name": "--client-compatibility-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-sessions",
+   "description": "Lists all sessions within a specific workflow run.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-definitions",
+   "description": "Lists all workflow definitions in your account with optional filtering and pagination.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-runs",
+   "description": "Lists all workflow runs for a specific workflow definition with optional filtering and pagination.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-act",
+   "description": "Updates an existing act's configuration, status, or error information.",
+   "options": [
+    {
+     "name": "--act-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--error",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "RUNNING",
+       "PENDING_CLIENT_ACTION",
+       "PENDING_HUMAN_ACTION",
+       "SUCCEEDED",
+       "FAILED",
+       "TIMED_OUT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workflow-run",
+   "description": "Updates the configuration or state of an active workflow run.",
+   "options": [
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "RUNNING",
+       "SUCCEEDED",
+       "FAILED",
+       "TIMED_OUT",
+       "DELETING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--workflow-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

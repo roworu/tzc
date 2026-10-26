@@ -1,0 +1,453 @@
+{
+ "name": "servicecatalog-appregistry",
+ "description": "Amazon Web Services Service Catalog AppRegistry enables organizations to understand the application context of their Amazon Web Services resources.",
+ "subcommands": [
+  {
+   "name": "associate-attribute-group",
+   "description": "Associates an attribute group with an application to augment the application's metadata with the group's attributes.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attribute-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-resource",
+   "description": "Associates a resource with an application.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--options",
+     "args": {}
+    },
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK",
+       "RESOURCE_TAG_VALUE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates a new application that is the top-level node in a hierarchy of related cloud resource abstractions.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-attribute-group",
+   "description": "Creates a new attribute group as a container for user-defined attributes.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes an application that is specified either by its application ID, name, or ARN.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-attribute-group",
+   "description": "Deletes an attribute group, specified either by its attribute group ID, name, or ARN.",
+   "options": [
+    {
+     "name": "--attribute-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-attribute-group",
+   "description": "Disassociates an attribute group from an application to remove the extra attributes contained in the attribute group from the application's metadata.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attribute-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-resource",
+   "description": "Disassociates a resource from application.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK",
+       "RESOURCE_TAG_VALUE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-application",
+   "description": "Retrieves metadata information about one of your applications.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-associated-resource",
+   "description": "Gets the resource associated with the application.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tag-status",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK",
+       "RESOURCE_TAG_VALUE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-attribute-group",
+   "description": "Retrieves an attribute group by its ARN, ID, or name.",
+   "options": [
+    {
+     "name": "--attribute-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-configuration",
+   "description": "Retrieves a TagKey configuration from an account."
+  },
+  {
+   "name": "list-applications",
+   "description": "Retrieves a list of all of your applications.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-associated-attribute-groups",
+   "description": "Lists all attribute groups that are associated with specified application.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-associated-resources",
+   "description": "Lists all of the resources that are associated with the specified application.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-attribute-groups",
+   "description": "Lists all attribute groups which you have access to.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-attribute-groups-for-application",
+   "description": "Lists the details of all attribute groups associated with a specific application.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all of the tags on the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-configuration",
+   "description": "Associates a TagKey configuration to an account.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "sync-resource",
+   "description": "Syncs the resource with current AppRegistry records.",
+   "options": [
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "CFN_STACK",
+       "RESOURCE_TAG_VALUE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates an existing application with new attributes.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-attribute-group",
+   "description": "Updates an existing attribute group with new details.",
+   "options": [
+    {
+     "name": "--attribute-group",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

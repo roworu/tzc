@@ -1,0 +1,648 @@
+{
+ "name": "grafana",
+ "description": "Amazon Managed Grafana is a fully managed and secure data visualization service that you can use to instantly query, correlate, and visualize operational metrics, logs, and traces from multiple sources.",
+ "subcommands": [
+  {
+   "name": "associate-license",
+   "description": "Assigns a Grafana Enterprise license to a workspace.",
+   "options": [
+    {
+     "name": "--grafana-token",
+     "args": {}
+    },
+    {
+     "name": "--license-type",
+     "args": {
+      "suggestions": [
+       "ENTERPRISE",
+       "ENTERPRISE_FREE_TRIAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workspace",
+   "description": "Creates a workspace.",
+   "options": [
+    {
+     "name": "--account-access-type",
+     "args": {
+      "suggestions": [
+       "CURRENT_ACCOUNT",
+       "ORGANIZATION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--authentication-providers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--grafana-version",
+     "args": {}
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPv4",
+       "DualStack"
+      ]
+     }
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--network-access-control",
+     "args": {}
+    },
+    {
+     "name": "--organization-role-name",
+     "args": {}
+    },
+    {
+     "name": "--permission-type",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_MANAGED",
+       "SERVICE_MANAGED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration",
+     "args": {}
+    },
+    {
+     "name": "--workspace-data-sources",
+     "args": {}
+    },
+    {
+     "name": "--workspace-description",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    },
+    {
+     "name": "--workspace-notification-destinations",
+     "args": {}
+    },
+    {
+     "name": "--workspace-organizational-units",
+     "args": {}
+    },
+    {
+     "name": "--workspace-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-workspace-api-key",
+   "description": "Creates a Grafana API key for the workspace.",
+   "options": [
+    {
+     "name": "--key-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--seconds-to-live",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workspace-service-account",
+   "description": "Creates a service account for the workspace.",
+   "options": [
+    {
+     "name": "--grafana-role",
+     "args": {
+      "suggestions": [
+       "ADMIN",
+       "EDITOR",
+       "VIEWER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workspace-service-account-token",
+   "description": "Creates a token that can be used to authenticate and authorize Grafana HTTP API operations for the given workspace service account.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--seconds-to-live",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workspace",
+   "description": "Deletes an Amazon Managed Grafana workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workspace-api-key",
+   "description": "Deletes a Grafana API key for the workspace.",
+   "options": [
+    {
+     "name": "--key-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workspace-service-account",
+   "description": "Deletes a workspace service account from the workspace.",
+   "options": [
+    {
+     "name": "--service-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workspace-service-account-token",
+   "description": "Deletes a token for the workspace service account.",
+   "options": [
+    {
+     "name": "--service-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--token-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-workspace",
+   "description": "Displays information about one Amazon Managed Grafana workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-workspace-authentication",
+   "description": "Displays information about the authentication methods used in one Amazon Managed Grafana workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-workspace-configuration",
+   "description": "Gets the current configuration string for the given workspace.",
+   "options": [
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-license",
+   "description": "Removes the Grafana Enterprise license from a workspace.",
+   "options": [
+    {
+     "name": "--license-type",
+     "args": {
+      "suggestions": [
+       "ENTERPRISE",
+       "ENTERPRISE_FREE_TRIAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-permissions",
+   "description": "Lists the users and groups who have the Grafana Admin and Editor roles in this workspace.",
+   "options": [
+    {
+     "name": "--group-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    },
+    {
+     "name": "--user-type",
+     "args": {
+      "suggestions": [
+       "SSO_USER",
+       "SSO_GROUP"
+      ]
+     }
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "The ListTagsForResource operation returns the tags that are associated with the Amazon Managed Service for Grafana resource specified by the resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-versions",
+   "description": "Lists available versions of Grafana.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workspace-service-account-tokens",
+   "description": "Returns a list of tokens for a workspace service account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workspace-service-accounts",
+   "description": "Returns a list of service accounts for a workspace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workspaces",
+   "description": "Returns a list of Amazon Managed Grafana workspaces in the account, with some information about each workspace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "The TagResource operation associates tags with an Amazon Managed Grafana resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "The UntagResource operation removes the association of the tag with the Amazon Managed Grafana resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-permissions",
+   "description": "Updates which users in a workspace have the Grafana Admin or Editor roles.",
+   "options": [
+    {
+     "name": "--update-instruction-batch",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workspace",
+   "description": "Modifies an existing Amazon Managed Grafana workspace.",
+   "options": [
+    {
+     "name": "--account-access-type",
+     "args": {
+      "suggestions": [
+       "CURRENT_ACCOUNT",
+       "ORGANIZATION"
+      ]
+     }
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPv4",
+       "DualStack"
+      ]
+     }
+    },
+    {
+     "name": "--network-access-control",
+     "args": {}
+    },
+    {
+     "name": "--no-remove-network-access-configuration"
+    },
+    {
+     "name": "--no-remove-vpc-configuration"
+    },
+    {
+     "name": "--organization-role-name",
+     "args": {}
+    },
+    {
+     "name": "--permission-type",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_MANAGED",
+       "SERVICE_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--remove-network-access-configuration"
+    },
+    {
+     "name": "--remove-vpc-configuration"
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration",
+     "args": {}
+    },
+    {
+     "name": "--workspace-data-sources",
+     "args": {}
+    },
+    {
+     "name": "--workspace-description",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    },
+    {
+     "name": "--workspace-notification-destinations",
+     "args": {}
+    },
+    {
+     "name": "--workspace-organizational-units",
+     "args": {}
+    },
+    {
+     "name": "--workspace-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-workspace-authentication",
+   "description": "Use this operation to define the identity provider (IdP) that this workspace authenticates users from, using SAML.",
+   "options": [
+    {
+     "name": "--authentication-providers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--saml-configuration",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workspace-configuration",
+   "description": "Updates the configuration string for the given workspace",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--grafana-version",
+     "args": {}
+    },
+    {
+     "name": "--workspace-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

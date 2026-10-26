@@ -1,0 +1,112 @@
+{
+ "name": "sagemakerjobruntime",
+ "description": "Agentic RFT Runtime Service - manages trajectory and transition data for reinforcement fine-tuning jobs.",
+ "subcommands": [
+  {
+   "name": "complete-rollout",
+   "description": "Marks a rollout as complete, indicating that no further turns will be appended to the trajectory.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--job-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ready",
+       "failed"
+      ]
+     }
+    },
+    {
+     "name": "--trajectory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "sample",
+   "description": "Sends an inference request to the model during a job execution.",
+   "options": [
+    {
+     "name": "--body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trajectory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "sample-with-response-stream",
+   "description": "Sends a streaming inference request to the model during a job execution.",
+   "options": [
+    {
+     "name": "--body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trajectory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-reward",
+   "description": "Updates the reward values for a trajectory and transitions it to reward-received status, signaling that it is eligible for processing.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--job-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rewards",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trajectory-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

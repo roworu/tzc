@@ -1,0 +1,788 @@
+{
+ "name": "entityresolution",
+ "description": "Welcome to the Entity Resolution API Reference.",
+ "subcommands": [
+  {
+   "name": "add-policy-statement",
+   "description": "Adds a policy statement object.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--condition",
+     "args": {}
+    },
+    {
+     "name": "--effect",
+     "args": {
+      "suggestions": [
+       "Allow",
+       "Deny"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-unique-id",
+   "description": "Deletes multiple unique IDs in a matching workflow.",
+   "options": [
+    {
+     "name": "--input-source",
+     "args": {}
+    },
+    {
+     "name": "--unique-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-id-mapping-workflow",
+   "description": "Creates an IdMappingWorkflow object which stores the configuration of the data processing job to be run.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id-mapping-techniques",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incremental-run-config",
+     "args": {}
+    },
+    {
+     "name": "--input-source-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-source-config",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-id-namespace",
+   "description": "Creates an ID namespace object which will help customers provide metadata explaining their dataset and how to use it.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id-mapping-workflow-properties",
+     "args": {}
+    },
+    {
+     "name": "--id-namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-source-config",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "SOURCE",
+       "TARGET"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-matching-workflow",
+   "description": "Creates a matching workflow that defines the configuration for a data processing job.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--incremental-run-config",
+     "args": {}
+    },
+    {
+     "name": "--input-source-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-source-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resolution-techniques",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-schema-mapping",
+   "description": "Creates a schema mapping, which defines the schema of the input customer records table.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--mapped-input-fields",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-id-mapping-workflow",
+   "description": "Deletes the IdMappingWorkflow with a given name.",
+   "options": [
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-id-namespace",
+   "description": "Deletes the IdNamespace with a given name.",
+   "options": [
+    {
+     "name": "--id-namespace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-matching-workflow",
+   "description": "Deletes the MatchingWorkflow with a given name.",
+   "options": [
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy-statement",
+   "description": "Deletes the policy statement.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-schema-mapping",
+   "description": "Deletes the SchemaMapping with a given name.",
+   "options": [
+    {
+     "name": "--schema-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-match-id",
+   "description": "Generates or retrieves Match IDs for records using a rule-based matching workflow.",
+   "options": [
+    {
+     "name": "--processing-type",
+     "args": {
+      "suggestions": [
+       "CONSISTENT",
+       "EVENTUAL",
+       "EVENTUAL_NO_LOOKUP"
+      ]
+     }
+    },
+    {
+     "name": "--records",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-id-mapping-job",
+   "description": "Returns the status, metrics, and errors (if there are any) that are associated with a job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-id-mapping-workflow",
+   "description": "Returns the IdMappingWorkflow with a given name, if it exists.",
+   "options": [
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-id-namespace",
+   "description": "Returns the IdNamespace with a given name, if it exists.",
+   "options": [
+    {
+     "name": "--id-namespace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-match-id",
+   "description": "Returns the corresponding Match ID of a customer record if the record has been processed in a rule-based matching workflow.",
+   "options": [
+    {
+     "name": "--apply-normalization"
+    },
+    {
+     "name": "--no-apply-normalization"
+    },
+    {
+     "name": "--record",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-matching-job",
+   "description": "Returns the status, metrics, and errors (if there are any) that are associated with a job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-matching-workflow",
+   "description": "Returns the MatchingWorkflow with a given name, if it exists.",
+   "options": [
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy",
+   "description": "Returns the resource-based policy.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-provider-service",
+   "description": "Returns the ProviderService of a given name.",
+   "options": [
+    {
+     "name": "--provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--provider-service-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-schema-mapping",
+   "description": "Returns the SchemaMapping of a given name.",
+   "options": [
+    {
+     "name": "--schema-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-id-mapping-jobs",
+   "description": "Lists all ID mapping jobs for a given workflow.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-id-mapping-workflows",
+   "description": "Returns a list of all the IdMappingWorkflows that have been created for an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-id-namespaces",
+   "description": "Returns a list of all ID namespaces.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-matching-jobs",
+   "description": "Lists all jobs for a given workflow.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-matching-workflows",
+   "description": "Returns a list of all the MatchingWorkflows that have been created for an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-provider-services",
+   "description": "Returns a list of all the ProviderServices that are available in this Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--provider-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-schema-mappings",
+   "description": "Returns a list of all the SchemaMappings that have been created for an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Displays the tags associated with an Entity Resolution resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-policy",
+   "description": "Updates the resource-based policy.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-id-mapping-job",
+   "description": "Starts the IdMappingJob of a workflow.",
+   "options": [
+    {
+     "name": "--job-type",
+     "args": {
+      "suggestions": [
+       "BATCH",
+       "INCREMENTAL",
+       "DELETE_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--output-source-config",
+     "args": {}
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-matching-job",
+   "description": "Starts the MatchingJob of a workflow.",
+   "options": [
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified Entity Resolution resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified Entity Resolution resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-id-mapping-workflow",
+   "description": "Updates an existing IdMappingWorkflow.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id-mapping-techniques",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--incremental-run-config",
+     "args": {}
+    },
+    {
+     "name": "--input-source-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-source-config",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-id-namespace",
+   "description": "Updates an existing ID namespace.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--id-mapping-workflow-properties",
+     "args": {}
+    },
+    {
+     "name": "--id-namespace-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-source-config",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-matching-workflow",
+   "description": "Updates an existing matching workflow.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--incremental-run-config",
+     "args": {}
+    },
+    {
+     "name": "--input-source-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-source-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resolution-techniques",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-schema-mapping",
+   "description": "Updates a schema mapping.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--mapped-input-fields",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schema-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

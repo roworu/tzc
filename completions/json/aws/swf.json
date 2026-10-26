@@ -1,0 +1,1003 @@
+{
+ "name": "swf",
+ "description": "Amazon Simple Workflow Service The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to coordinate work across distributed components.",
+ "subcommands": [
+  {
+   "name": "count-closed-workflow-executions",
+   "description": "Returns the number of closed workflow executions within the given domain that meet the specified filtering criteria.",
+   "options": [
+    {
+     "name": "--close-status-filter",
+     "args": {}
+    },
+    {
+     "name": "--close-time-filter",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-filter",
+     "args": {}
+    },
+    {
+     "name": "--start-time-filter",
+     "args": {}
+    },
+    {
+     "name": "--tag-filter",
+     "args": {}
+    },
+    {
+     "name": "--type-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "count-open-workflow-executions",
+   "description": "Returns the number of open workflow executions within the given domain that meet the specified filtering criteria.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-filter",
+     "args": {}
+    },
+    {
+     "name": "--start-time-filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-filter",
+     "args": {}
+    },
+    {
+     "name": "--type-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "count-pending-activity-tasks",
+   "description": "Returns the estimated number of activity tasks in the specified task list.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "count-pending-decision-tasks",
+   "description": "Returns the estimated number of decision tasks in the specified task list.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-activity-type",
+   "description": "Deletes the specified activity type.",
+   "options": [
+    {
+     "name": "--activity-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow-type",
+   "description": "Deletes the specified workflow type.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deprecate-activity-type",
+   "description": "Deprecates the specified activity type.",
+   "options": [
+    {
+     "name": "--activity-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deprecate-domain",
+   "description": "Deprecates the specified domain.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deprecate-workflow-type",
+   "description": "Deprecates the specified workflow type.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-activity-type",
+   "description": "Returns information about the specified activity type.",
+   "options": [
+    {
+     "name": "--activity-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain",
+   "description": "Returns information about the specified domain, including description and status.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-workflow-execution",
+   "description": "Returns information about the specified workflow execution including its type and some statistics.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-workflow-type",
+   "description": "Returns information about the specified workflow type.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-execution-history",
+   "description": "Returns the history of the specified workflow execution.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-activity-types",
+   "description": "Returns information about all activities registered in the specified domain that match the specified name and registration status.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registration-status",
+     "args": {
+      "suggestions": [
+       "REGISTERED",
+       "DEPRECATED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-closed-workflow-executions",
+   "description": "Returns a list of closed workflow executions in the specified domain that meet the filtering criteria.",
+   "options": [
+    {
+     "name": "--close-status-filter",
+     "args": {}
+    },
+    {
+     "name": "--close-time-filter",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--start-time-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-filter",
+     "args": {}
+    },
+    {
+     "name": "--type-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domains",
+   "description": "Returns the list of domains registered in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registration-status",
+     "args": {
+      "suggestions": [
+       "REGISTERED",
+       "DEPRECATED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-open-workflow-executions",
+   "description": "Returns a list of open workflow executions in the specified domain that meet the filtering criteria.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--start-time-filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-filter",
+     "args": {}
+    },
+    {
+     "name": "--type-filter",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List tags for a given domain.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-types",
+   "description": "Returns information about workflow types in the specified domain.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--registration-status",
+     "args": {
+      "suggestions": [
+       "REGISTERED",
+       "DEPRECATED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "poll-for-activity-task",
+   "description": "Used by workers to get an ActivityTask from the specified activity taskList.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity",
+     "args": {}
+    },
+    {
+     "name": "--task-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "poll-for-decision-task",
+   "description": "Used by deciders to get a DecisionTask from the specified decision taskList.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--no-start-at-previous-started-event"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--start-at-previous-started-event"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "record-activity-task-heartbeat",
+   "description": "Used by activity workers to report to the service that the ActivityTask represented by the specified taskToken is still making progress.",
+   "options": [
+    {
+     "name": "--details",
+     "args": {}
+    },
+    {
+     "name": "--task-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-activity-type",
+   "description": "Registers a new activity type along with its configuration settings in the specified domain.",
+   "options": [
+    {
+     "name": "--activity-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-task-heartbeat-timeout",
+     "args": {}
+    },
+    {
+     "name": "--default-task-list",
+     "args": {}
+    },
+    {
+     "name": "--default-task-priority",
+     "args": {}
+    },
+    {
+     "name": "--default-task-schedule-to-close-timeout",
+     "args": {}
+    },
+    {
+     "name": "--default-task-schedule-to-start-timeout",
+     "args": {}
+    },
+    {
+     "name": "--default-task-start-to-close-timeout",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-domain",
+   "description": "Registers a new domain.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workflow-execution-retention-period-in-days",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-workflow-type",
+   "description": "Registers a new workflow type and its configuration settings in the specified domain.",
+   "options": [
+    {
+     "name": "--default-child-policy",
+     "args": {
+      "suggestions": [
+       "TERMINATE",
+       "REQUEST_CANCEL",
+       "ABANDON"
+      ]
+     }
+    },
+    {
+     "name": "--default-execution-start-to-close-timeout",
+     "args": {}
+    },
+    {
+     "name": "--default-lambda-role",
+     "args": {}
+    },
+    {
+     "name": "--default-task-list",
+     "args": {}
+    },
+    {
+     "name": "--default-task-priority",
+     "args": {}
+    },
+    {
+     "name": "--default-task-start-to-close-timeout",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "request-cancel-workflow-execution",
+   "description": "Records a WorkflowExecutionCancelRequested event in the currently running workflow execution identified by the given domain, workflowId, and runId.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "respond-activity-task-canceled",
+   "description": "Used by workers to tell the service that the ActivityTask identified by the taskToken was successfully canceled.",
+   "options": [
+    {
+     "name": "--details",
+     "args": {}
+    },
+    {
+     "name": "--task-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "respond-activity-task-completed",
+   "description": "Used by workers to tell the service that the ActivityTask identified by the taskToken completed successfully with a result (if provided).",
+   "options": [
+    {
+     "name": "--result",
+     "args": {}
+    },
+    {
+     "name": "--task-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "respond-activity-task-failed",
+   "description": "Used by workers to tell the service that the ActivityTask identified by the taskToken has failed with reason (if specified).",
+   "options": [
+    {
+     "name": "--details",
+     "args": {}
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--task-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "respond-decision-task-completed",
+   "description": "Used by deciders to tell the service that the DecisionTask identified by the taskToken has successfully completed.",
+   "options": [
+    {
+     "name": "--decisions",
+     "args": {}
+    },
+    {
+     "name": "--execution-context",
+     "args": {}
+    },
+    {
+     "name": "--task-list",
+     "args": {}
+    },
+    {
+     "name": "--task-list-schedule-to-start-timeout",
+     "args": {}
+    },
+    {
+     "name": "--task-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "signal-workflow-execution",
+   "description": "Records a WorkflowExecutionSignaled event in the workflow execution history and creates a decision task for the workflow execution identified by the given domain, workflowId and runId.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input",
+     "args": {}
+    },
+    {
+     "name": "--run-id",
+     "args": {}
+    },
+    {
+     "name": "--signal-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-workflow-execution",
+   "description": "Starts an execution of the workflow type in the specified domain using the provided workflowId and input data.",
+   "options": [
+    {
+     "name": "--child-policy",
+     "args": {
+      "suggestions": [
+       "TERMINATE",
+       "REQUEST_CANCEL",
+       "ABANDON"
+      ]
+     }
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-start-to-close-timeout",
+     "args": {}
+    },
+    {
+     "name": "--input",
+     "args": {}
+    },
+    {
+     "name": "--lambda-role",
+     "args": {}
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    },
+    {
+     "name": "--task-list",
+     "args": {}
+    },
+    {
+     "name": "--task-priority",
+     "args": {}
+    },
+    {
+     "name": "--task-start-to-close-timeout",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add a tag to a Amazon SWF domain.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-workflow-execution",
+   "description": "Records a WorkflowExecutionTerminated event and forces closure of the workflow execution identified by the given domain, runId, and workflowId.",
+   "options": [
+    {
+     "name": "--child-policy",
+     "args": {
+      "suggestions": [
+       "TERMINATE",
+       "REQUEST_CANCEL",
+       "ABANDON"
+      ]
+     }
+    },
+    {
+     "name": "--details",
+     "args": {}
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--run-id",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "undeprecate-activity-type",
+   "description": "Undeprecates a previously deprecated activity type.",
+   "options": [
+    {
+     "name": "--activity-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "undeprecate-domain",
+   "description": "Undeprecates a previously deprecated domain.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "undeprecate-workflow-type",
+   "description": "Undeprecates a previously deprecated workflow type.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove a tag from a Amazon SWF domain.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

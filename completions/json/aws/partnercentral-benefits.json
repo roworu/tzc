@@ -1,0 +1,465 @@
+{
+ "name": "partnercentral-benefits",
+ "description": "AWS Partner Central Benefits Service provides APIs for managing partner benefits, applications, and allocations within the AWS Partner Network ecosystem.",
+ "subcommands": [
+  {
+   "name": "amend-benefit-application",
+   "description": "Modifies an existing benefit application by applying amendments to specific fields while maintaining revision control.",
+   "options": [
+    {
+     "name": "--amendment-reason",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--amendments",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-benefit-application-resource",
+   "description": "Links an AWS resource to an existing benefit application for tracking and management purposes.",
+   "options": [
+    {
+     "name": "--benefit-application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-benefit-application",
+   "description": "Cancels a benefit application that is currently in progress, preventing further processing.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-benefit-application",
+   "description": "Creates a new benefit application for a partner to request access to AWS benefits and programs.",
+   "options": [
+    {
+     "name": "--associated-resources",
+     "args": {}
+    },
+    {
+     "name": "--benefit-application-details",
+     "args": {}
+    },
+    {
+     "name": "--benefit-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--file-details",
+     "args": {}
+    },
+    {
+     "name": "--fulfillment-types",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--partner-contacts",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-benefit-application-resource",
+   "description": "Removes the association between an AWS resource and a benefit application.",
+   "options": [
+    {
+     "name": "--benefit-application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-benefit",
+   "description": "Retrieves detailed information about a specific benefit available in the partner catalog.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-benefit-allocation",
+   "description": "Retrieves detailed information about a specific benefit allocation that has been granted to a partner.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-benefit-application",
+   "description": "Retrieves detailed information about a specific benefit application.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-benefit-allocations",
+   "description": "Retrieves a paginated list of benefit allocations based on specified filter criteria.",
+   "options": [
+    {
+     "name": "--benefit-application-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--benefit-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fulfillment-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-benefit-applications",
+   "description": "Retrieves a paginated list of benefit applications based on specified filter criteria.",
+   "options": [
+    {
+     "name": "--associated-resource-arns",
+     "args": {}
+    },
+    {
+     "name": "--associated-resources",
+     "args": {}
+    },
+    {
+     "name": "--benefit-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fulfillment-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--programs",
+     "args": {}
+    },
+    {
+     "name": "--stages",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-benefits",
+   "description": "Retrieves a paginated list of available benefits based on specified filter criteria.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fulfillment-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--programs",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves all tags associated with a specific resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "recall-benefit-application",
+   "description": "Recalls a submitted benefit application, returning it to draft status for further modifications.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "submit-benefit-application",
+   "description": "Submits a benefit application for review and processing by AWS.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes specified tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-benefit-application",
+   "description": "Updates an existing benefit application with new information while maintaining revision control.",
+   "options": [
+    {
+     "name": "--benefit-application-details",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--file-details",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--partner-contacts",
+     "args": {}
+    },
+    {
+     "name": "--revision",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

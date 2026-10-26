@@ -1,0 +1,828 @@
+{
+ "name": "acm",
+ "description": "Certificate Manager You can use Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web Services-based websites and applications.",
+ "subcommands": [
+  {
+   "name": "add-tags-to-certificate",
+   "description": "Adds one or more tags to an ACM certificate.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-acme-domain-validation",
+   "description": "Creates a domain validation for an ACME endpoint.",
+   "options": [
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--prevalidation-options",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-acme-endpoint",
+   "description": "Creates an ACME endpoint, which is a managed ACME server with a unique endpoint URL.",
+   "options": [
+    {
+     "name": "--authorization-behavior",
+     "args": {
+      "suggestions": [
+       "PRE_APPROVED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--certificate-authority",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-tags",
+     "args": {}
+    },
+    {
+     "name": "--contact",
+     "args": {
+      "suggestions": [
+       "REQUIRED",
+       "NOT_REQUIRED"
+      ]
+     }
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-acme-external-account-binding",
+   "description": "Creates an external account binding (EAB) for an ACME endpoint.",
+   "options": [
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expiration",
+     "args": {}
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-acme-domain-validation",
+   "description": "Deletes a domain validation.",
+   "options": [
+    {
+     "name": "--acme-domain-validation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-acme-endpoint",
+   "description": "Deletes an ACME endpoint.",
+   "options": [
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-acme-external-account-binding",
+   "description": "Deletes an external account binding.",
+   "options": [
+    {
+     "name": "--acme-external-account-binding-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-certificate",
+   "description": "Deletes a certificate and its associated private key.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-acme-account",
+   "description": "Returns detailed metadata about the specified ACME account, including its status, public key thumbprint, and associated external account binding.",
+   "options": [
+    {
+     "name": "--account-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-acme-domain-validation",
+   "description": "Returns detailed metadata about the specified domain validation, including its status, domain scope, and DNS resource records required for validation.",
+   "options": [
+    {
+     "name": "--acme-domain-validation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-acme-endpoint",
+   "description": "Returns detailed metadata about the specified ACME endpoint, including its status, URL, authorization behavior, and certificate authority configuration.",
+   "options": [
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-acme-external-account-binding",
+   "description": "Returns detailed metadata about the specified external account binding, including the associated IAM role, expiration time, and usage history.",
+   "options": [
+    {
+     "name": "--acme-external-account-binding-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-certificate",
+   "description": "Returns detailed metadata about the specified ACM certificate.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-certificate",
+   "description": "Exports a private certificate issued by a private certificate authority (CA) or a public certificate for use anywhere.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--passphrase",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-configuration",
+   "description": "Returns the account configuration options associated with an Amazon Web Services account."
+  },
+  {
+   "name": "get-acme-external-account-binding-credentials",
+   "description": "Retrieves the key ID and MAC key credentials for an external account binding.",
+   "options": [
+    {
+     "name": "--acme-external-account-binding-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-certificate",
+   "description": "Retrieves a certificate and its certificate chain.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-certificate",
+   "description": "Imports a certificate into Certificate Manager (ACM) to use with services that are integrated with ACM.",
+   "options": [
+    {
+     "name": "--certificate",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-arn",
+     "args": {}
+    },
+    {
+     "name": "--certificate-chain",
+     "args": {}
+    },
+    {
+     "name": "--private-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-acme-accounts",
+   "description": "Retrieves a list of ACME accounts registered with the specified ACME endpoint.",
+   "options": [
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-acme-domain-validations",
+   "description": "Retrieves a list of domain validations for the specified ACME endpoint.",
+   "options": [
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-acme-endpoints",
+   "description": "Retrieves a list of ACME endpoints in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-acme-external-account-bindings",
+   "description": "Retrieves a list of external account bindings for the specified ACME endpoint.",
+   "options": [
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-certificates",
+   "description": "Retrieves a list of certificate ARNs and domain names.",
+   "options": [
+    {
+     "name": "--certificate-key-pair-origins",
+     "args": {}
+    },
+    {
+     "name": "--certificate-statuses",
+     "args": {}
+    },
+    {
+     "name": "--includes",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "CREATED_AT"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-certificate",
+   "description": "Lists the tags that have been applied to the ACM certificate.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags associated with an ACM resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-account-configuration",
+   "description": "Adds or modifies account-level configurations in ACM.",
+   "options": [
+    {
+     "name": "--expiry-events",
+     "args": {}
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-certificate",
+   "description": "Remove one or more tags from an ACM certificate.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "renew-certificate",
+   "description": "Renews an eligible ACM certificate.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "request-certificate",
+   "description": "Requests an ACM certificate for use with other Amazon Web Services services.",
+   "options": [
+    {
+     "name": "--certificate-authority-arn",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-validation-options",
+     "args": {}
+    },
+    {
+     "name": "--idempotency-token",
+     "args": {}
+    },
+    {
+     "name": "--key-algorithm",
+     "args": {
+      "suggestions": [
+       "RSA_1024",
+       "RSA_2048",
+       "RSA_3072",
+       "RSA_4096",
+       "EC_prime256v1",
+       "EC_secp384r1",
+       "EC_secp521r1"
+      ]
+     }
+    },
+    {
+     "name": "--managed-by",
+     "args": {
+      "suggestions": [
+       "CLOUDFRONT"
+      ]
+     }
+    },
+    {
+     "name": "--options",
+     "args": {}
+    },
+    {
+     "name": "--subject-alternative-names",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--validation-method",
+     "args": {
+      "suggestions": [
+       "EMAIL",
+       "DNS",
+       "HTTP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "resend-validation-email",
+   "description": "Resends the email that requests domain ownership validation.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--validation-domain",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-acme-account",
+   "description": "Revokes an ACME account, preventing it from requesting or revoking certificates.",
+   "options": [
+    {
+     "name": "--account-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-acme-external-account-binding",
+   "description": "Revokes an external account binding, preventing new ACME accounts from being registered using this binding.",
+   "options": [
+    {
+     "name": "--acme-external-account-binding-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-certificate",
+   "description": "Revokes a public ACM certificate.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revocation-reason",
+     "args": {
+      "suggestions": [
+       "UNSPECIFIED",
+       "KEY_COMPROMISE",
+       "CA_COMPROMISE",
+       "AFFILIATION_CHANGED",
+       "SUPERCEDED",
+       "SUPERSEDED",
+       "CESSATION_OF_OPERATION",
+       "CERTIFICATE_HOLD",
+       "REMOVE_FROM_CRL",
+       "PRIVILEGE_WITHDRAWN",
+       "A_A_COMPROMISE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-certificates",
+   "description": "Retrieves a list of certificates matching search criteria.",
+   "options": [
+    {
+     "name": "--filter-statement",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to an ACM resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from an ACM resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-acme-domain-validation",
+   "description": "Updates the prevalidation configuration of an existing domain validation.",
+   "options": [
+    {
+     "name": "--acme-domain-validation-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--prevalidation-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-acme-endpoint",
+   "description": "Updates the configuration of an existing ACME endpoint.",
+   "options": [
+    {
+     "name": "--acme-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorization-behavior",
+     "args": {
+      "suggestions": [
+       "PRE_APPROVED"
+      ]
+     }
+    },
+    {
+     "name": "--certificate-authority",
+     "args": {}
+    },
+    {
+     "name": "--contact",
+     "args": {
+      "suggestions": [
+       "REQUIRED",
+       "NOT_REQUIRED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-certificate-options",
+   "description": "Updates a certificate.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--options",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "acme-domain-validation-deleted",
+     "description": "Wait until an ACME domain validation has been deleted.",
+     "options": [
+      {
+       "name": "--acme-domain-validation-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "acme-domain-validation-validated",
+     "description": "Wait until an ACME domain validation reaches a terminal validation state.",
+     "options": [
+      {
+       "name": "--acme-domain-validation-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "acme-endpoint-active",
+     "description": "Wait until an ACME endpoint has finished provisioning and is ACTIVE.",
+     "options": [
+      {
+       "name": "--acme-endpoint-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "acme-endpoint-deleted",
+     "description": "Wait until an ACME endpoint has been deleted.",
+     "options": [
+      {
+       "name": "--acme-endpoint-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "certificate-validated",
+     "description": "Wait until JMESPath query Certificate.DomainValidationOptions[].ValidationStatus returns SUCCESS for all elements when polling with ``describe-certificate``.",
+     "options": [
+      {
+       "name": "--certificate-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

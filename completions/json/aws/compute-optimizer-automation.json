@@ -1,0 +1,575 @@
+{
+ "name": "compute-optimizer-automation",
+ "description": "Automation is a feature within Amazon Web Services Compute Optimizer that enables you to apply optimization recommendations to your Amazon Web Services resources, reducing costs and improving performance.",
+ "subcommands": [
+  {
+   "name": "associate-accounts",
+   "description": "Associates one or more member accounts with your organization's management account, enabling centralized implementation of optimization actions across those accounts.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-automation-rule",
+   "description": "Creates a new automation rule to apply recommended actions to resources based on specified criteria.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--criteria",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization-configuration",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--recommended-action-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-type",
+     "args": {
+      "suggestions": [
+       "OrganizationRule",
+       "AccountRule"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--schedule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Inactive"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-automation-rule",
+   "description": "Deletes an existing automation rule.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--rule-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-revision",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-accounts",
+   "description": "Disassociates member accounts from your organization's management account, removing centralized automation capabilities.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-automation-event",
+   "description": "Retrieves details about a specific automation event.",
+   "options": [
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-automation-rule",
+   "description": "Retrieves details about a specific automation rule.",
+   "options": [
+    {
+     "name": "--rule-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-enrollment-configuration",
+   "description": "Retrieves the current enrollment configuration for Compute Optimizer Automation."
+  },
+  {
+   "name": "list-accounts",
+   "description": "Lists the accounts in your organization that are enrolled in Compute Optimizer and whether they have enabled Automation.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automation-event-steps",
+   "description": "Lists the steps for a specific automation event.",
+   "options": [
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automation-event-summaries",
+   "description": "Provides a summary of automation events based on specified filters.",
+   "options": [
+    {
+     "name": "--end-date-exclusive",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-date-inclusive",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automation-events",
+   "description": "Lists automation events based on specified filters.",
+   "options": [
+    {
+     "name": "--end-time-exclusive",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time-inclusive",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automation-rule-preview",
+   "description": "Returns a preview of the recommended actions that match your Automation rule's configuration and criteria.",
+   "options": [
+    {
+     "name": "--criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-scope",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recommended-action-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-type",
+     "args": {
+      "suggestions": [
+       "OrganizationRule",
+       "AccountRule"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automation-rule-preview-summaries",
+   "description": "Returns a summary of the recommended actions that match your rule preview configuration and criteria.",
+   "options": [
+    {
+     "name": "--criteria",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-scope",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recommended-action-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-type",
+     "args": {
+      "suggestions": [
+       "OrganizationRule",
+       "AccountRule"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-automation-rules",
+   "description": "Lists the automation rules that match specified filters.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommended-action-summaries",
+   "description": "Provides a summary of recommended actions based on specified filters.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recommended-actions",
+   "description": "Lists the recommended actions based that match specified filters.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "rollback-automation-event",
+   "description": "Initiates a rollback for a completed automation event.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--event-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-automation-event",
+   "description": "Initiates a one-time, on-demand automation for the specified recommended action.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--recommended-action-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to the specified resource.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-revision",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the specified resource.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-revision",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-automation-rule",
+   "description": "Updates an existing automation rule.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--criteria",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--organization-configuration",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--recommended-action-types",
+     "args": {}
+    },
+    {
+     "name": "--rule-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-revision",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule-type",
+     "args": {
+      "suggestions": [
+       "OrganizationRule",
+       "AccountRule"
+      ]
+     }
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Inactive"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-enrollment-configuration",
+   "description": "Updates your account\u2019s Compute Optimizer Automation enrollment configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Inactive",
+       "Pending",
+       "Failed"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

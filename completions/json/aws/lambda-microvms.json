@@ -1,0 +1,574 @@
+{
+ "name": "lambda-microvms",
+ "description": "Provides APIs to create, manage, and operate AWS Lambda MicroVMs and their associated MicroVM Image environments.",
+ "subcommands": [
+  {
+   "name": "create-microvm-auth-token",
+   "description": "Creates an authentication token for accessing a running MicroVM.",
+   "options": [
+    {
+     "name": "--allowed-ports",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expiration-in-minutes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--microvm-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-microvm-image",
+   "description": "Creates a MicroVM image from the specified code artifact and base image.",
+   "options": [
+    {
+     "name": "--additional-os-capabilities",
+     "args": {}
+    },
+    {
+     "name": "--base-image-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--base-image-version",
+     "args": {}
+    },
+    {
+     "name": "--build-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--code-artifact",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cpu-configurations",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--egress-network-connectors",
+     "args": {}
+    },
+    {
+     "name": "--environment-variables",
+     "args": {}
+    },
+    {
+     "name": "--hooks",
+     "args": {}
+    },
+    {
+     "name": "--logging",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-microvm-shell-auth-token",
+   "description": "Creates a shell authentication token for interactive shell access to a running MicroVM.",
+   "options": [
+    {
+     "name": "--expiration-in-minutes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--microvm-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-microvm-image",
+   "description": "Deletes a MicroVM image.",
+   "options": [
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-microvm-image-version",
+   "description": "Deletes a specific version of a MicroVM image.",
+   "options": [
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-microvm",
+   "description": "Retrieves the details of a specific MicroVM, including its state, endpoint, image information, and configuration.",
+   "options": [
+    {
+     "name": "--microvm-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-microvm-image",
+   "description": "Retrieves the details of a MicroVM image, including its state, versions, and configuration.",
+   "options": [
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-microvm-image-build",
+   "description": "Retrieves the details of a specific MicroVM image build, including its state, target architecture, and snapshot information.",
+   "options": [
+    {
+     "name": "--build-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-microvm-image-version",
+   "description": "Retrieves the details of a specific version of a MicroVM image, including its configuration, state, and build information.",
+   "options": [
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-managed-microvm-image-versions",
+   "description": "Lists versions of a managed MicroVM image.",
+   "options": [
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-microvm-images",
+   "description": "Lists AWS managed MicroVM images available for use as base images.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-microvm-image-builds",
+   "description": "Lists builds for a MicroVM image version with optional filtering by architecture and chipset.",
+   "options": [
+    {
+     "name": "--architecture",
+     "args": {
+      "suggestions": [
+       "ARM_64"
+      ]
+     }
+    },
+    {
+     "name": "--chipset",
+     "args": {
+      "suggestions": [
+       "GRAVITON"
+      ]
+     }
+    },
+    {
+     "name": "--chipset-generation",
+     "args": {}
+    },
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-microvm-image-versions",
+   "description": "Lists versions of a MicroVM image.",
+   "options": [
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-microvm-images",
+   "description": "Lists MicroVM images in the account with optional name filtering.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-filter",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-microvms",
+   "description": "Lists MicroVMs in the account with optional filtering by image and version.",
+   "options": [
+    {
+     "name": "--image-identifier",
+     "args": {}
+    },
+    {
+     "name": "--image-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags",
+   "description": "Lists the tags associated with a Lambda MicroVM resource.",
+   "options": [
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resume-microvm",
+   "description": "Resumes a suspended MicroVM, restoring it to RUNNING state with all state intact.",
+   "options": [
+    {
+     "name": "--microvm-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "run-microvm",
+   "description": "Runs a new MicroVM from the specified image.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--egress-network-connectors",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--idle-policy",
+     "args": {}
+    },
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-version",
+     "args": {}
+    },
+    {
+     "name": "--ingress-network-connectors",
+     "args": {}
+    },
+    {
+     "name": "--logging",
+     "args": {}
+    },
+    {
+     "name": "--maximum-duration-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--run-hook-payload",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "suspend-microvm",
+   "description": "Suspends a running MicroVM, preserving its full memory and disk state.",
+   "options": [
+    {
+     "name": "--microvm-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a Lambda MicroVM resource.",
+   "options": [
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-microvm",
+   "description": "Terminates a MicroVM.",
+   "options": [
+    {
+     "name": "--microvm-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a Lambda MicroVM resource.",
+   "options": [
+    {
+     "name": "--resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-microvm-image",
+   "description": "Updates the configuration of a MicroVM image and triggers a new version build.",
+   "options": [
+    {
+     "name": "--additional-os-capabilities",
+     "args": {}
+    },
+    {
+     "name": "--base-image-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--base-image-version",
+     "args": {}
+    },
+    {
+     "name": "--build-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--code-artifact",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cpu-configurations",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--egress-network-connectors",
+     "args": {}
+    },
+    {
+     "name": "--environment-variables",
+     "args": {}
+    },
+    {
+     "name": "--hooks",
+     "args": {}
+    },
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logging",
+     "args": {}
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-microvm-image-version",
+   "description": "Updates the status of a specific MicroVM image version.",
+   "options": [
+    {
+     "name": "--image-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--image-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

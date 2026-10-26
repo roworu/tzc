@@ -1,0 +1,4044 @@
+{
+ "name": "iotsitewise",
+ "description": "Welcome to the IoT SiteWise API Reference.",
+ "subcommands": [
+  {
+   "name": "associate-assets",
+   "description": "Associates a child asset with the given parent asset through a hierarchy defined in the parent asset's model.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--child-asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--hierarchy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-time-series-to-asset-property",
+   "description": "Associates a time series (data stream) with an asset property.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--property-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-associate-data-segments-to-dataset",
+   "description": "Associates a batch of data segments with a curated dataset.",
+   "options": [
+    {
+     "name": "--associate-data-segment-entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-associate-project-assets",
+   "description": "The IoT SiteWise Monitor feature will no longer be open to new customers starting November 7, 2025.",
+   "options": [
+    {
+     "name": "--asset-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--project-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-dataset-data-segments",
+   "description": "Deletes a batch of data segments from a session dataset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delete-data-segment-entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-disassociate-data-segments-from-dataset",
+   "description": "Disassociates a batch of data segments from a curated dataset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disassociate-data-segment-entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-disassociate-project-assets",
+   "description": "Disassociates a group (batch) of assets from an IoT SiteWise Monitor project.",
+   "options": [
+    {
+     "name": "--asset-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--project-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-asset-property-aggregates",
+   "description": "Gets aggregated values (for example, average, minimum, and maximum) for one or more asset properties.",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-get-asset-property-value",
+   "description": "Gets the current value for one or more asset properties.",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-get-asset-property-value-history",
+   "description": "Gets the historical values for one or more asset properties.",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "batch-put-asset-property-value",
+   "description": "Sends a list of asset property values to IoT SiteWise.",
+   "options": [
+    {
+     "name": "--enable-partial-entry-processing"
+    },
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enable-partial-entry-processing"
+    }
+   ]
+  },
+  {
+   "name": "cancel-enrichment-job",
+   "description": "Cancels a running or pending enrichment job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-pipeline-execution",
+   "description": "Cancels a pipeline execution in the specified workspace.",
+   "options": [
+    {
+     "name": "--pipeline-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-query",
+   "description": "Cancels a running query.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-access-policy",
+   "description": "The IoT SiteWise Monitor feature will no longer be open to new customers starting November 7, 2025.",
+   "options": [
+    {
+     "name": "--access-policy-identity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--access-policy-permission",
+     "args": {
+      "suggestions": [
+       "ADMINISTRATOR",
+       "VIEWER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--access-policy-resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-application",
+   "description": "Creates a new application for the workspace and IdC application provided",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--idc-instance-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-asset",
+   "description": "Creates an asset from an existing asset model.",
+   "options": [
+    {
+     "name": "--asset-description",
+     "args": {}
+    },
+    {
+     "name": "--asset-external-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-asset-model",
+   "description": "Creates an asset model from specified property and hierarchy definitions.",
+   "options": [
+    {
+     "name": "--asset-model-composite-models",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-description",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-external-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-hierarchies",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-properties",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-type",
+     "args": {
+      "suggestions": [
+       "ASSET_MODEL",
+       "COMPONENT_MODEL",
+       "INTERFACE"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-asset-model-composite-model",
+   "description": "Creates a custom composite model from specified property and hierarchy definitions.",
+   "options": [
+    {
+     "name": "--asset-model-composite-model-description",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-composite-model-external-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-composite-model-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-composite-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-composite-model-properties",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-composite-model-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--composed-asset-model-id",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--match-for-version-type",
+     "args": {
+      "suggestions": [
+       "LATEST",
+       "ACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--parent-asset-model-composite-model-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-bulk-import-job",
+   "description": "Defines a job to ingest data to IoT SiteWise from Amazon S3.",
+   "options": [
+    {
+     "name": "--adaptive-ingestion"
+    },
+    {
+     "name": "--dataset-id",
+     "args": {}
+    },
+    {
+     "name": "--delete-files-after-import"
+    },
+    {
+     "name": "--error-report-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--files",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-configuration",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-adaptive-ingestion"
+    },
+    {
+     "name": "--no-delete-files-after-import"
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-computation-model",
+   "description": "Create a computation model with a configuration and data binding.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--computation-model-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--computation-model-data-binding",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--computation-model-description",
+     "args": {}
+    },
+    {
+     "name": "--computation-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dashboard",
+   "description": "The IoT SiteWise Monitor feature will no longer be open to new customers starting November 7, 2025.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dashboard-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dashboard-description",
+     "args": {}
+    },
+    {
+     "name": "--dashboard-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset",
+   "description": "Creates a dataset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-config",
+     "args": {}
+    },
+    {
+     "name": "--dataset-description",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-type",
+     "args": {
+      "suggestions": [
+       "SESSION",
+       "CURATED",
+       "EXTERNAL"
+      ]
+     }
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataset-export-job",
+   "description": "Starts an asynchronous job that exports dataset and time-series data from a workspace to Amazon S3.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destination-s3-uri",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--error-report-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-enrichment-job",
+   "description": "Creates an asynchronous enrichment job to analyze time-series sensor data.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--job-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-gateway",
+   "description": "Creates a gateway, which is a virtual or edge device that delivers industrial data streams from local servers to IoT SiteWise.",
+   "options": [
+    {
+     "name": "--gateway-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-platform",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-version",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-pipeline",
+   "description": "Creates a new pipeline in the specified workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--computations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-variables",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-portal",
+   "description": "The IoT SiteWise Monitor feature will no longer be open to new customers starting November 7, 2025.",
+   "options": [
+    {
+     "name": "--alarms",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--notification-sender-email",
+     "args": {}
+    },
+    {
+     "name": "--portal-auth-mode",
+     "args": {
+      "suggestions": [
+       "IAM",
+       "SSO"
+      ]
+     }
+    },
+    {
+     "name": "--portal-contact-email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--portal-description",
+     "args": {}
+    },
+    {
+     "name": "--portal-logo-image-file",
+     "args": {}
+    },
+    {
+     "name": "--portal-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--portal-type",
+     "args": {
+      "suggestions": [
+       "SITEWISE_PORTAL_V1",
+       "SITEWISE_PORTAL_V2"
+      ]
+     }
+    },
+    {
+     "name": "--portal-type-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-project",
+   "description": "The IoT SiteWise Monitor feature will no longer be open to new customers starting November 7, 2025.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-description",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-task",
+   "description": "Creates a new task in the specified workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-workspace",
+   "description": "Creates a workspace in IoT SiteWise.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--workspace-description",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-policy",
+   "description": "Deletes an access policy that grants the specified identity access to the specified IoT SiteWise Monitor resource.",
+   "options": [
+    {
+     "name": "--access-policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes an application by ID",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-asset",
+   "description": "Deletes an asset.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-asset-model",
+   "description": "Deletes an asset model.",
+   "options": [
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--match-for-version-type",
+     "args": {
+      "suggestions": [
+       "LATEST",
+       "ACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-asset-model-composite-model",
+   "description": "Deletes a composite model.",
+   "options": [
+    {
+     "name": "--asset-model-composite-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--match-for-version-type",
+     "args": {
+      "suggestions": [
+       "LATEST",
+       "ACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-asset-model-interface-relationship",
+   "description": "Deletes an interface relationship between an asset model and an interface asset model.",
+   "options": [
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--interface-asset-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-computation-model",
+   "description": "Deletes a computation model.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--computation-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dashboard",
+   "description": "Deletes a dashboard from IoT SiteWise Monitor.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dashboard-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset",
+   "description": "Deletes a dataset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-gateway",
+   "description": "Deletes a gateway from IoT SiteWise.",
+   "options": [
+    {
+     "name": "--gateway-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-pipeline",
+   "description": "Deletes a pipeline from the specified workspace.",
+   "options": [
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-portal",
+   "description": "Deletes a portal from IoT SiteWise Monitor.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project",
+   "description": "Deletes a project from IoT SiteWise Monitor.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--project-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-task",
+   "description": "Deletes a task from the specified workspace.",
+   "options": [
+    {
+     "name": "--task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-time-series",
+   "description": "Deletes a time series (data stream).",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--asset-id",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--property-id",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-workspace",
+   "description": "Deletes a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-access-policy",
+   "description": "Describes an access policy, which specifies an identity's access to an IoT SiteWise Monitor portal or project.",
+   "options": [
+    {
+     "name": "--access-policy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-action",
+   "description": "Retrieves information about an action.",
+   "options": [
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-application",
+   "description": "Retrieves Application details based on the ID",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-asset",
+   "description": "Retrieves information about an asset.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exclude-properties"
+    },
+    {
+     "name": "--no-exclude-properties"
+    }
+   ]
+  },
+  {
+   "name": "describe-asset-composite-model",
+   "description": "Retrieves information about an asset composite model (also known as an asset component).",
+   "options": [
+    {
+     "name": "--asset-composite-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-asset-model",
+   "description": "Retrieves information about an asset model.",
+   "options": [
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-version",
+     "args": {}
+    },
+    {
+     "name": "--exclude-properties"
+    },
+    {
+     "name": "--no-exclude-properties"
+    }
+   ]
+  },
+  {
+   "name": "describe-asset-model-composite-model",
+   "description": "Retrieves information about an asset model composite model (also known as an asset model component).",
+   "options": [
+    {
+     "name": "--asset-model-composite-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-asset-model-interface-relationship",
+   "description": "Retrieves information about an interface relationship between an asset model and an interface asset model.",
+   "options": [
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--interface-asset-model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-asset-property",
+   "description": "Retrieves information about an asset property.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--property-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-bulk-import-job",
+   "description": "Retrieves information about a bulk import job request.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-computation-model",
+   "description": "Retrieves information about a computation model.",
+   "options": [
+    {
+     "name": "--computation-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--computation-model-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-computation-model-execution-summary",
+   "description": "Retrieves information about the execution summary of a computation model.",
+   "options": [
+    {
+     "name": "--computation-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resolve-to-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resolve-to-resource-type",
+     "args": {
+      "suggestions": [
+       "ASSET"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-dashboard",
+   "description": "Retrieves information about a dashboard.",
+   "options": [
+    {
+     "name": "--dashboard-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset",
+   "description": "Retrieves information about a dataset.",
+   "options": [
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-version",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset-export-job",
+   "description": "Retrieves information about a dataset export job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-default-encryption-configuration",
+   "description": "Retrieves information about the default encryption configuration for the Amazon Web Services account in the default or specified Region."
+  },
+  {
+   "name": "describe-enrichment-job",
+   "description": "Retrieves detailed information about a specific enrichment job, including its current status, configuration, and timestamps.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-execution",
+   "description": "Retrieves information about the execution.",
+   "options": [
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-gateway",
+   "description": "Retrieves information about a gateway.",
+   "options": [
+    {
+     "name": "--gateway-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-gateway-capability-configuration",
+   "description": "Each gateway capability defines data sources for a gateway.",
+   "options": [
+    {
+     "name": "--capability-namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-logging-options",
+   "description": "Retrieves the current IoT SiteWise logging options.",
+   "options": [
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-pipeline",
+   "description": "Retrieves detailed information about a specific pipeline in a workspace.",
+   "options": [
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-version",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-pipeline-execution",
+   "description": "Retrieves detailed information about a specific pipeline execution, including the overall execution status and the status of each individual compute node.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-portal",
+   "description": "Retrieves information about a portal.",
+   "options": [
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-project",
+   "description": "Retrieves information about a project.",
+   "options": [
+    {
+     "name": "--project-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-query",
+   "description": "Retrieves information about a query, including its status.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-search",
+   "description": "Returns the current status and metadata of a single search, including the query that was submitted, the search type, and \u2014 when the search has failed \u2014 the reason.",
+   "options": [
+    {
+     "name": "--search-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-storage-configuration",
+   "description": "Retrieves information about the storage configuration for IoT SiteWise."
+  },
+  {
+   "name": "describe-task",
+   "description": "Retrieves detailed information about a specific task in a workspace.",
+   "options": [
+    {
+     "name": "--task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-version",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-time-series",
+   "description": "Retrieves information about a time series (data stream).",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--asset-id",
+     "args": {}
+    },
+    {
+     "name": "--property-id",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-workspace",
+   "description": "Retrieves information about a workspace.",
+   "options": [
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-assets",
+   "description": "Disassociates a child asset from the given parent asset through a hierarchy defined in the parent asset's model.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--child-asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--hierarchy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-time-series-from-asset-property",
+   "description": "Disassociates a time series (data stream) from an asset property.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--property-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-action",
+   "description": "Executes an action on a target resource.",
+   "options": [
+    {
+     "name": "--action-definition-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--resolve-to",
+     "args": {}
+    },
+    {
+     "name": "--target-resource",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "execute-query",
+   "description": "Run SQL queries to retrieve metadata and time-series data from asset models, assets, measurements, metrics, transforms, and aggregates.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-statement",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-asset-property-aggregates",
+   "description": "Gets aggregated values for an asset property.",
+   "options": [
+    {
+     "name": "--aggregate-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-id",
+     "args": {}
+    },
+    {
+     "name": "--end-date",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--property-alias",
+     "args": {}
+    },
+    {
+     "name": "--property-id",
+     "args": {}
+    },
+    {
+     "name": "--qualities",
+     "args": {}
+    },
+    {
+     "name": "--resolution",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-date",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-ordering",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-asset-property-value",
+   "description": "Gets an asset property's current value.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {}
+    },
+    {
+     "name": "--property-alias",
+     "args": {}
+    },
+    {
+     "name": "--property-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-asset-property-value-history",
+   "description": "Gets the history of an asset property's values.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {}
+    },
+    {
+     "name": "--end-date",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--property-alias",
+     "args": {}
+    },
+    {
+     "name": "--property-id",
+     "args": {}
+    },
+    {
+     "name": "--qualities",
+     "args": {}
+    },
+    {
+     "name": "--start-date",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-ordering",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-capture-data",
+   "description": "Retrieves video data for a specific time range.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format-settings",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--property-alias",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--time-series-id",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-interpolated-asset-property-values",
+   "description": "Get interpolated values for an asset property for a specified time interval, during a period of time.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {}
+    },
+    {
+     "name": "--end-time-in-seconds",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-time-offset-in-nanos",
+     "args": {}
+    },
+    {
+     "name": "--interval-in-seconds",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--interval-window-in-seconds",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--property-alias",
+     "args": {}
+    },
+    {
+     "name": "--property-id",
+     "args": {}
+    },
+    {
+     "name": "--quality",
+     "args": {
+      "suggestions": [
+       "GOOD",
+       "BAD",
+       "UNCERTAIN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--start-time-in-seconds",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time-offset-in-nanos",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-query-results",
+   "description": "Retrieves the paginated results of a query.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-search-results",
+   "description": "Retrieves the ranked results of a search, ordered by descending relevance score.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-access-policies",
+   "description": "Retrieves a paginated list of access policies for an identity (an IAM Identity Center user, an IAM Identity Center group, or an IAM user) or an IoT SiteWise Monitor resource (a portal or project).",
+   "options": [
+    {
+     "name": "--iam-arn",
+     "args": {}
+    },
+    {
+     "name": "--identity-id",
+     "args": {}
+    },
+    {
+     "name": "--identity-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP",
+       "IAM"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "PORTAL",
+       "PROJECT"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-actions",
+   "description": "Retrieves a paginated list of actions for a specific target resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resolve-to-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resolve-to-resource-type",
+     "args": {
+      "suggestions": [
+       "ASSET"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-resource-type",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "COMPUTATION_MODEL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Retrieves a paginated list of existing applications",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-model-composite-models",
+   "description": "Retrieves a paginated list of composite models associated with the asset model",
+   "options": [
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-model-properties",
+   "description": "Retrieves a paginated list of properties associated with an asset model.",
+   "options": [
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-version",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "BASE"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-models",
+   "description": "Retrieves a paginated list of summaries of all asset models.",
+   "options": [
+    {
+     "name": "--asset-model-types",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-properties",
+   "description": "Retrieves a paginated list of properties associated with an asset.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "BASE"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-asset-relationships",
+   "description": "Retrieves a paginated list of asset relationships for an asset.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--traversal-type",
+     "args": {
+      "suggestions": [
+       "PATH_TO_ROOT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-assets",
+   "description": "Retrieves a paginated list of asset summaries.",
+   "options": [
+    {
+     "name": "--asset-model-id",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "TOP_LEVEL"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-associated-assets",
+   "description": "Retrieves a paginated list of associated assets.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hierarchy-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--traversal-direction",
+     "args": {
+      "suggestions": [
+       "PARENT",
+       "CHILD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-bulk-import-jobs",
+   "description": "Retrieves a paginated list of bulk import job requests.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "PENDING",
+       "RUNNING",
+       "CANCELLED",
+       "FAILED",
+       "COMPLETED_WITH_FAILURES",
+       "COMPLETED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-composition-relationships",
+   "description": "Retrieves a paginated list of composition relationships for an asset model of type COMPONENT_MODEL.",
+   "options": [
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-computation-model-data-binding-usages",
+   "description": "Lists all data binding usages for computation models.",
+   "options": [
+    {
+     "name": "--data-binding-value-filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-computation-model-resolve-to-resources",
+   "description": "Lists all distinct resources that are resolved from the executed actions of the computation model.",
+   "options": [
+    {
+     "name": "--computation-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-computation-models",
+   "description": "Retrieves a paginated list of summaries of all computation models.",
+   "options": [
+    {
+     "name": "--computation-model-type",
+     "args": {
+      "suggestions": [
+       "ANOMALY_DETECTION"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dashboards",
+   "description": "Retrieves a paginated list of dashboards for an IoT SiteWise Monitor project.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-data-segment-relationships",
+   "description": "Retrieves a paginated list of data segment relationships for a session dataset.",
+   "options": [
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-data-segments",
+   "description": "Retrieves a paginated list of data segments associated with a dataset.",
+   "options": [
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-version",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-dataset-export-jobs",
+   "description": "Retrieves a paginated list of dataset export jobs for a workspace.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {
+      "suggestions": [
+       "ALL",
+       "SUBMITTED",
+       "RUNNING",
+       "COMPLETED",
+       "COMPLETED_WITH_ERRORS",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-datasets",
+   "description": "Retrieves a paginated list of datasets for a specific target resource.",
+   "options": [
+    {
+     "name": "--dataset-type",
+     "args": {
+      "suggestions": [
+       "SESSION",
+       "CURATED",
+       "EXTERNAL"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "KENDRA",
+       "SITEWISE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-enrichment-jobs",
+   "description": "Lists enrichment jobs within a workspace with optional filtering and pagination.",
+   "options": [
+    {
+     "name": "--dataset-id",
+     "args": {}
+    },
+    {
+     "name": "--end-date",
+     "args": {}
+    },
+    {
+     "name": "--job-type",
+     "args": {
+      "suggestions": [
+       "EVENT_DETECTION"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--property-alias",
+     "args": {}
+    },
+    {
+     "name": "--start-date",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "RUNNING",
+       "COMPLETED",
+       "FAILED",
+       "TIMED_OUT",
+       "CANCELLED"
+      ]
+     }
+    },
+    {
+     "name": "--time-series-id",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-executions",
+   "description": "Retrieves a paginated list of summaries of all executions.",
+   "options": [
+    {
+     "name": "--action-type",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resolve-to-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resolve-to-resource-type",
+     "args": {
+      "suggestions": [
+       "ASSET"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-resource-type",
+     "args": {
+      "suggestions": [
+       "ASSET",
+       "COMPUTATION_MODEL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-gateways",
+   "description": "Retrieves a paginated list of gateways.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-interface-relationships",
+   "description": "Retrieves a paginated list of asset models that have a specific interface asset model applied to them.",
+   "options": [
+    {
+     "name": "--interface-asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pipeline-executions",
+   "description": "Lists pipeline executions for a specific pipeline in a workspace.",
+   "options": [
+    {
+     "name": "--end-time-after",
+     "args": {}
+    },
+    {
+     "name": "--end-time-before",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time-after",
+     "args": {}
+    },
+    {
+     "name": "--start-time-before",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "NOT_STARTED",
+       "RUNNING",
+       "SUCCEEDED",
+       "FAILED",
+       "CANCELLING",
+       "CANCELLED"
+      ]
+     }
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-pipelines",
+   "description": "Lists pipelines in a workspace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-portals",
+   "description": "Retrieves a paginated list of IoT SiteWise Monitor portals.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-project-assets",
+   "description": "Retrieves a paginated list of assets associated with an IoT SiteWise Monitor project.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-projects",
+   "description": "Retrieves a paginated list of projects for an IoT SiteWise Monitor portal.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-queries",
+   "description": "Retrieves a paginated list of queries for a workspace.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-searches",
+   "description": "Lists the searches in a workspace, most recently started first.",
+   "options": [
+    {
+     "name": "--list-searches-filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves the list of tags for an IoT SiteWise resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tasks",
+   "description": "Lists tasks in a workspace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-time-series",
+   "description": "Retrieves a paginated list of time series (data streams).",
+   "options": [
+    {
+     "name": "--alias-prefix",
+     "args": {}
+    },
+    {
+     "name": "--asset-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-series-type",
+     "args": {
+      "suggestions": [
+       "ASSOCIATED",
+       "DISASSOCIATED"
+      ]
+     }
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workspaces",
+   "description": "Retrieves a paginated list of workspaces.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-asset-model-interface-relationship",
+   "description": "Creates or updates an interface relationship between an asset model and an interface asset model.",
+   "options": [
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--interface-asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--property-mapping-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-default-encryption-configuration",
+   "description": "Sets the default encryption configuration for the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "SITEWISE_DEFAULT_ENCRYPTION",
+       "KMS_BASED_ENCRYPTION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-logging-options",
+   "description": "Sets logging options for IoT SiteWise.",
+   "options": [
+    {
+     "name": "--logging-options",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-storage-configuration",
+   "description": "Configures storage settings for IoT SiteWise.",
+   "options": [
+    {
+     "name": "--disallow-ingest-null-na-n"
+    },
+    {
+     "name": "--disassociated-data-storage",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--multi-layer-storage",
+     "args": {}
+    },
+    {
+     "name": "--no-disallow-ingest-null-na-n"
+    },
+    {
+     "name": "--retention-period",
+     "args": {}
+    },
+    {
+     "name": "--storage-type",
+     "args": {
+      "suggestions": [
+       "SITEWISE_DEFAULT_STORAGE",
+       "MULTI_LAYER_STORAGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--warm-tier",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--warm-tier-retention-period",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-pipeline-execution",
+   "description": "Starts execution of a pipeline in the specified workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--execution-environment-variable-overrides",
+     "args": {}
+    },
+    {
+     "name": "--execution-priority",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-query",
+   "description": "Starts an asynchronous SQL query against workspace telemetry, annotations, data segment, and dataset data.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--query-statement",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-search",
+   "description": "Starts an asynchronous search over the data in a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--group-id",
+     "args": {}
+    },
+    {
+     "name": "--query-statement",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--search-filters",
+     "args": {}
+    },
+    {
+     "name": "--search-type",
+     "args": {
+      "suggestions": [
+       "DEEP",
+       "QUICK"
+      ]
+     }
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to an IoT SiteWise resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from an IoT SiteWise resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-access-policy",
+   "description": "The IoT SiteWise Monitor feature will no longer be open to new customers starting November 7, 2025.",
+   "options": [
+    {
+     "name": "--access-policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--access-policy-identity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--access-policy-permission",
+     "args": {
+      "suggestions": [
+       "ADMINISTRATOR",
+       "VIEWER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--access-policy-resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-asset",
+   "description": "Updates an asset's name.",
+   "options": [
+    {
+     "name": "--asset-description",
+     "args": {}
+    },
+    {
+     "name": "--asset-external-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-asset-model",
+   "description": "Updates an asset model and all of the assets that were created from the model.",
+   "options": [
+    {
+     "name": "--asset-model-composite-models",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-description",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-external-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-hierarchies",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-properties",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--match-for-version-type",
+     "args": {
+      "suggestions": [
+       "LATEST",
+       "ACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-asset-model-composite-model",
+   "description": "Updates a composite model and all of the assets that were created from the model.",
+   "options": [
+    {
+     "name": "--asset-model-composite-model-description",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-composite-model-external-id",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-composite-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-composite-model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--asset-model-composite-model-properties",
+     "args": {}
+    },
+    {
+     "name": "--asset-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--match-for-version-type",
+     "args": {
+      "suggestions": [
+       "LATEST",
+       "ACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-asset-property",
+   "description": "Updates an asset property's alias and notification state.",
+   "options": [
+    {
+     "name": "--asset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--property-alias",
+     "args": {}
+    },
+    {
+     "name": "--property-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--property-notification-state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--property-unit",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-computation-model",
+   "description": "Updates the computation model.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--computation-model-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--computation-model-data-binding",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--computation-model-description",
+     "args": {}
+    },
+    {
+     "name": "--computation-model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--computation-model-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dashboard",
+   "description": "The IoT SiteWise Monitor feature will no longer be open to new customers starting November 7, 2025.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dashboard-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dashboard-description",
+     "args": {}
+    },
+    {
+     "name": "--dashboard-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dashboard-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dataset",
+   "description": "Updates a dataset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-config",
+     "args": {}
+    },
+    {
+     "name": "--dataset-description",
+     "args": {}
+    },
+    {
+     "name": "--dataset-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-gateway",
+   "description": "Updates a gateway's name.",
+   "options": [
+    {
+     "name": "--gateway-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-gateway-capability-configuration",
+   "description": "Updates a gateway capability configuration or defines a new capability configuration.",
+   "options": [
+    {
+     "name": "--capability-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capability-namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--gateway-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-pipeline",
+   "description": "Updates an existing pipeline in the specified workspace.",
+   "options": [
+    {
+     "name": "--computations",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-variables",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-portal",
+   "description": "The IoT SiteWise Monitor feature will no longer be open to new customers starting November 7, 2025.",
+   "options": [
+    {
+     "name": "--alarms",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--notification-sender-email",
+     "args": {}
+    },
+    {
+     "name": "--portal-contact-email",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--portal-description",
+     "args": {}
+    },
+    {
+     "name": "--portal-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--portal-logo-image",
+     "args": {}
+    },
+    {
+     "name": "--portal-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--portal-type",
+     "args": {
+      "suggestions": [
+       "SITEWISE_PORTAL_V1",
+       "SITEWISE_PORTAL_V2"
+      ]
+     }
+    },
+    {
+     "name": "--portal-type-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-project",
+   "description": "The IoT SiteWise Monitor feature will no longer be open to new customers starting November 7, 2025.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--project-description",
+     "args": {}
+    },
+    {
+     "name": "--project-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-task",
+   "description": "Updates an existing task in the specified workspace.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--task-configuration",
+     "args": {}
+    },
+    {
+     "name": "--task-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workspace",
+   "description": "Updates a workspace.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--workspace-description",
+     "args": {}
+    },
+    {
+     "name": "--workspace-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "asset-active",
+     "description": "Wait until JMESPath query assetStatus.state returns ACTIVE when polling with ``describe-asset``.",
+     "options": [
+      {
+       "name": "--asset-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--exclude-properties"
+      },
+      {
+       "name": "--no-exclude-properties"
+      }
+     ]
+    },
+    {
+     "name": "asset-model-active",
+     "description": "Wait until JMESPath query assetModelStatus.state returns ACTIVE when polling with ``describe-asset-model``.",
+     "options": [
+      {
+       "name": "--asset-model-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--asset-model-version",
+       "args": {}
+      },
+      {
+       "name": "--exclude-properties"
+      },
+      {
+       "name": "--no-exclude-properties"
+      }
+     ]
+    },
+    {
+     "name": "asset-model-not-exists",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-asset-model``.",
+     "options": [
+      {
+       "name": "--asset-model-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--asset-model-version",
+       "args": {}
+      },
+      {
+       "name": "--exclude-properties"
+      },
+      {
+       "name": "--no-exclude-properties"
+      }
+     ]
+    },
+    {
+     "name": "asset-not-exists",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-asset``.",
+     "options": [
+      {
+       "name": "--asset-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--exclude-properties"
+      },
+      {
+       "name": "--no-exclude-properties"
+      }
+     ]
+    },
+    {
+     "name": "portal-active",
+     "description": "Wait until JMESPath query portalStatus.state returns ACTIVE when polling with ``describe-portal``.",
+     "options": [
+      {
+       "name": "--portal-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "portal-not-exists",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``describe-portal``.",
+     "options": [
+      {
+       "name": "--portal-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

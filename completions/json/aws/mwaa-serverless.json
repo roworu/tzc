@@ -1,0 +1,345 @@
+{
+ "name": "mwaa-serverless",
+ "description": "Amazon Managed Workflows for Apache Airflow Serverless provides a managed workflow orchestration platform for running Apache Airflow workflows in a serverless environment.",
+ "subcommands": [
+  {
+   "name": "create-workflow",
+   "description": "Creates a new workflow in Amazon Managed Workflows for Apache Airflow Serverless.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--definition-s3-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--trigger-mode",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-workflow",
+   "description": "Deletes a workflow and all its versions.",
+   "options": [
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-task-instance",
+   "description": "Retrieves detailed information about a specific task instance within a workflow run.",
+   "options": [
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow",
+   "description": "Retrieves detailed information about a workflow, including its configuration, status, and metadata.",
+   "options": [
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-run",
+   "description": "Retrieves detailed information about a specific workflow run, including its status, execution details, and task instances.",
+   "options": [
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags that are associated with a specified Amazon Managed Workflows for Apache Airflow Serverless resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-task-instances",
+   "description": "Lists all task instances for a specific workflow run, with optional pagination support.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-runs",
+   "description": "Lists all runs for a specified workflow, with optional pagination and filtering support.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-versions",
+   "description": "Lists all versions of a specified workflow, with optional pagination support.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workflows",
+   "description": "Lists all workflows in your account, with optional pagination support.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-workflow-run",
+   "description": "Starts a new execution of a workflow.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--override-parameters",
+     "args": {}
+    },
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-workflow-run",
+   "description": "Stops a running workflow execution.",
+   "options": [
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to an Amazon Managed Workflows for Apache Airflow Serverless resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from an Amazon Managed Workflows for Apache Airflow Serverless resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-workflow",
+   "description": "Updates an existing workflow with new configuration settings.",
+   "options": [
+    {
+     "name": "--definition-s3-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine-version",
+     "args": {}
+    },
+    {
+     "name": "--logging-configuration",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trigger-mode",
+     "args": {}
+    },
+    {
+     "name": "--workflow-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

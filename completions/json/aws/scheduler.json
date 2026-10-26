@@ -1,0 +1,329 @@
+{
+ "name": "scheduler",
+ "description": "Amazon EventBridge Scheduler is a serverless scheduler that allows you to create, run, and manage tasks from one central, managed service.",
+ "subcommands": [
+  {
+   "name": "create-schedule",
+   "description": "Creates the specified schedule.",
+   "options": [
+    {
+     "name": "--action-after-completion",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "DELETE"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--end-date",
+     "args": {}
+    },
+    {
+     "name": "--flexible-time-window",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-expression-timezone",
+     "args": {}
+    },
+    {
+     "name": "--start-date",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-schedule-group",
+   "description": "Creates the specified schedule group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-schedule",
+   "description": "Deletes the specified schedule.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-schedule-group",
+   "description": "Deletes the specified schedule group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-schedule",
+   "description": "Retrieves the specified schedule.",
+   "options": [
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-schedule-group",
+   "description": "Retrieves the specified schedule group.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-schedule-groups",
+   "description": "Returns a paginated list of your schedule groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-schedules",
+   "description": "Returns a paginated list of your EventBridge Scheduler schedules.",
+   "options": [
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags associated with the Scheduler resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified EventBridge Scheduler resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified EventBridge Scheduler schedule group.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-schedule",
+   "description": "Updates the specified schedule.",
+   "options": [
+    {
+     "name": "--action-after-completion",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "DELETE"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--end-date",
+     "args": {}
+    },
+    {
+     "name": "--flexible-time-window",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-expression-timezone",
+     "args": {}
+    },
+    {
+     "name": "--start-date",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

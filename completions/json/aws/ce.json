@@ -1,0 +1,1406 @@
+{
+ "name": "ce",
+ "description": "You can use the Cost Explorer API to programmatically query your cost and usage data.",
+ "subcommands": [
+  {
+   "name": "create-anomaly-monitor",
+   "description": "Creates a new cost anomaly detection monitor with the requested type and monitor specification.",
+   "options": [
+    {
+     "name": "--anomaly-monitor",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-anomaly-subscription",
+   "description": "Adds an alert subscription to a cost anomaly detection monitor.",
+   "options": [
+    {
+     "name": "--anomaly-subscription",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cost-category-definition",
+   "description": "Creates a new cost category with the requested name and rules.",
+   "options": [
+    {
+     "name": "--default-value",
+     "args": {}
+    },
+    {
+     "name": "--effective-start",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--rule-version",
+     "args": {
+      "suggestions": [
+       "CostCategoryExpression.v1"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--split-charge-rules",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-anomaly-monitor",
+   "description": "Deletes a cost anomaly monitor.",
+   "options": [
+    {
+     "name": "--monitor-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-anomaly-subscription",
+   "description": "Deletes a cost anomaly subscription.",
+   "options": [
+    {
+     "name": "--subscription-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cost-category-definition",
+   "description": "Deletes a cost category.",
+   "options": [
+    {
+     "name": "--cost-category-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cost-category-definition",
+   "description": "Returns the name, Amazon Resource Name (ARN), rules, definition, and effective dates of a cost category that's defined in the account.",
+   "options": [
+    {
+     "name": "--cost-category-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--effective-on",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-anomalies",
+   "description": "Retrieves all of the cost anomalies detected on your account during the time period that's specified by the DateInterval object.",
+   "options": [
+    {
+     "name": "--date-interval",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feedback",
+     "args": {
+      "suggestions": [
+       "YES",
+       "NO",
+       "PLANNED_ACTIVITY"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--monitor-arn",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--total-impact",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-anomaly-monitors",
+   "description": "Retrieves the cost anomaly monitor definitions for your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--monitor-arn-list",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-anomaly-subscriptions",
+   "description": "Retrieves the cost anomaly subscription objects for your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--monitor-arn",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--subscription-arn-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-approximate-usage-records",
+   "description": "Retrieves estimated usage records for hourly granularity or resource-level data at daily granularity.",
+   "options": [
+    {
+     "name": "--approximation-dimension",
+     "args": {
+      "suggestions": [
+       "SERVICE",
+       "RESOURCE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "MONTHLY",
+       "HOURLY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--services",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-commitment-purchase-analysis",
+   "description": "Retrieves a commitment purchase analysis result based on the AnalysisId.",
+   "options": [
+    {
+     "name": "--analysis-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cost-and-usage",
+   "description": "Retrieves cost and usage metrics for your account.",
+   "options": [
+    {
+     "name": "--billing-view-arn",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "MONTHLY",
+       "HOURLY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--group-by",
+     "args": {}
+    },
+    {
+     "name": "--metrics",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-page-token",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cost-and-usage-comparisons",
+   "description": "Retrieves cost and usage comparisons for your account between two periods within the last 13 months.",
+   "options": [
+    {
+     "name": "--baseline-time-period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-view-arn",
+     "args": {}
+    },
+    {
+     "name": "--comparison-time-period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-for-comparison",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-cost-and-usage-with-resources",
+   "description": "Retrieves cost and usage metrics with resources for your account.",
+   "options": [
+    {
+     "name": "--billing-view-arn",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "MONTHLY",
+       "HOURLY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--group-by",
+     "args": {}
+    },
+    {
+     "name": "--metrics",
+     "args": {}
+    },
+    {
+     "name": "--next-page-token",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cost-categories",
+   "description": "Retrieves an array of cost category names and values incurred cost.",
+   "options": [
+    {
+     "name": "--billing-view-arn",
+     "args": {}
+    },
+    {
+     "name": "--cost-category-name",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-page-token",
+     "args": {}
+    },
+    {
+     "name": "--search-string",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cost-comparison-drivers",
+   "description": "Retrieves key factors driving cost changes between two time periods within the last 13 months, such as usage changes, discount changes, and commitment-based savings.",
+   "options": [
+    {
+     "name": "--baseline-time-period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-view-arn",
+     "args": {}
+    },
+    {
+     "name": "--comparison-time-period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-for-comparison",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-cost-forecast",
+   "description": "Retrieves a forecast for how much Amazon Web Services predicts that you will spend over the forecast time period that you select, based on your past costs.",
+   "options": [
+    {
+     "name": "--billing-view-arn",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "MONTHLY",
+       "HOURLY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--metric",
+     "args": {
+      "suggestions": [
+       "BLENDED_COST",
+       "UNBLENDED_COST",
+       "AMORTIZED_COST",
+       "NET_UNBLENDED_COST",
+       "NET_AMORTIZED_COST",
+       "USAGE_QUANTITY",
+       "NORMALIZED_USAGE_AMOUNT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--prediction-interval-level",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dimension-values",
+   "description": "Retrieves all available filter values for a specified filter over a period of time.",
+   "options": [
+    {
+     "name": "--billing-view-arn",
+     "args": {}
+    },
+    {
+     "name": "--context",
+     "args": {
+      "suggestions": [
+       "COST_AND_USAGE",
+       "RESERVATIONS",
+       "SAVINGS_PLANS"
+      ]
+     }
+    },
+    {
+     "name": "--dimension",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-page-token",
+     "args": {}
+    },
+    {
+     "name": "--search-string",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-reservation-coverage",
+   "description": "Retrieves the reservation coverage for your account, which you can use to see how much of your Amazon Elastic Compute Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "MONTHLY",
+       "HOURLY"
+      ]
+     }
+    },
+    {
+     "name": "--group-by",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--metrics",
+     "args": {}
+    },
+    {
+     "name": "--next-page-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-reservation-purchase-recommendation",
+   "description": "Gets recommendations for reservation purchases.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--account-scope",
+     "args": {
+      "suggestions": [
+       "PAYER",
+       "LINKED"
+      ]
+     }
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--lookback-period-in-days",
+     "args": {
+      "suggestions": [
+       "SEVEN_DAYS",
+       "THIRTY_DAYS",
+       "SIXTY_DAYS"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--payment-option",
+     "args": {
+      "suggestions": [
+       "NO_UPFRONT",
+       "PARTIAL_UPFRONT",
+       "ALL_UPFRONT",
+       "LIGHT_UTILIZATION",
+       "MEDIUM_UTILIZATION",
+       "HEAVY_UTILIZATION"
+      ]
+     }
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-specification",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--term-in-years",
+     "args": {
+      "suggestions": [
+       "ONE_YEAR",
+       "THREE_YEARS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-reservation-utilization",
+   "description": "Retrieves the reservation utilization for your account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "MONTHLY",
+       "HOURLY"
+      ]
+     }
+    },
+    {
+     "name": "--group-by",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-page-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-rightsizing-recommendation",
+   "description": "Creates recommendations that help you save cost by identifying idle and underutilized Amazon EC2 instances.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-savings-plan-purchase-recommendation-details",
+   "description": "Retrieves the details for a Savings Plan recommendation.",
+   "options": [
+    {
+     "name": "--recommendation-detail-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-savings-plans-coverage",
+   "description": "Retrieves the Savings Plans covered for your account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "MONTHLY",
+       "HOURLY"
+      ]
+     }
+    },
+    {
+     "name": "--group-by",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--metrics",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-savings-plans-purchase-recommendation",
+   "description": "Retrieves the Savings Plans recommendations for your account.",
+   "options": [
+    {
+     "name": "--account-scope",
+     "args": {
+      "suggestions": [
+       "PAYER",
+       "LINKED"
+      ]
+     }
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--lookback-period-in-days",
+     "args": {
+      "suggestions": [
+       "SEVEN_DAYS",
+       "THIRTY_DAYS",
+       "SIXTY_DAYS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--next-page-token",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--payment-option",
+     "args": {
+      "suggestions": [
+       "NO_UPFRONT",
+       "PARTIAL_UPFRONT",
+       "ALL_UPFRONT",
+       "LIGHT_UTILIZATION",
+       "MEDIUM_UTILIZATION",
+       "HEAVY_UTILIZATION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--savings-plans-type",
+     "args": {
+      "suggestions": [
+       "COMPUTE_SP",
+       "EC2_INSTANCE_SP",
+       "SAGEMAKER_SP",
+       "DATABASE_SP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--term-in-years",
+     "args": {
+      "suggestions": [
+       "ONE_YEAR",
+       "THREE_YEARS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-savings-plans-utilization",
+   "description": "Retrieves the Savings Plans utilization for your account across date ranges with daily or monthly granularity.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "MONTHLY",
+       "HOURLY"
+      ]
+     }
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-savings-plans-utilization-details",
+   "description": "Retrieves attribute data along with aggregate utilization and savings data for a given time period.",
+   "options": [
+    {
+     "name": "--data-type",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-tags",
+   "description": "Queries for available tag keys and tag values for a specified period.",
+   "options": [
+    {
+     "name": "--billing-view-arn",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-page-token",
+     "args": {}
+    },
+    {
+     "name": "--search-string",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--tag-key",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-usage-forecast",
+   "description": "Retrieves a forecast for how much Amazon Web Services predicts that you will use over the forecast time period that you select, based on your past usage.",
+   "options": [
+    {
+     "name": "--billing-view-arn",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--granularity",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "MONTHLY",
+       "HOURLY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--metric",
+     "args": {
+      "suggestions": [
+       "BLENDED_COST",
+       "UNBLENDED_COST",
+       "AMORTIZED_COST",
+       "NET_UNBLENDED_COST",
+       "NET_AMORTIZED_COST",
+       "USAGE_QUANTITY",
+       "NORMALIZED_USAGE_AMOUNT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--prediction-interval-level",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-commitment-purchase-analyses",
+   "description": "Lists the commitment purchase analyses for your account.",
+   "options": [
+    {
+     "name": "--analysis-ids",
+     "args": {}
+    },
+    {
+     "name": "--analysis-status",
+     "args": {
+      "suggestions": [
+       "SUCCEEDED",
+       "PROCESSING",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cost-allocation-tag-backfill-history",
+   "description": "Retrieves a list of your historical cost allocation tag backfill requests.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cost-allocation-tags",
+   "description": "Get a list of cost allocation tags.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Active",
+       "Inactive"
+      ]
+     }
+    },
+    {
+     "name": "--tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "AWSGenerated",
+       "UserDefined"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-cost-category-definitions",
+   "description": "Returns the name, Amazon Resource Name (ARN), NumberOfRules and effective dates of all cost categories defined in the account.",
+   "options": [
+    {
+     "name": "--effective-on",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--supported-resource-types",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cost-category-resource-associations",
+   "description": "Returns resource associations of all cost categories defined in the account.",
+   "options": [
+    {
+     "name": "--cost-category-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-savings-plans-purchase-recommendation-generation",
+   "description": "Retrieves a list of your historical recommendation generations within the past 30 days.",
+   "options": [
+    {
+     "name": "--generation-status",
+     "args": {
+      "suggestions": [
+       "SUCCEEDED",
+       "PROCESSING",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-ids",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of resource tags associated with the resource specified by the Amazon Resource Name (ARN).",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "provide-anomaly-feedback",
+   "description": "Modifies the feedback property of a given cost anomaly.",
+   "options": [
+    {
+     "name": "--anomaly-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feedback",
+     "args": {
+      "suggestions": [
+       "YES",
+       "NO",
+       "PLANNED_ACTIVITY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-commitment-purchase-analysis",
+   "description": "Specifies the parameters of a planned commitment purchase and starts the generation of the analysis.",
+   "options": [
+    {
+     "name": "--commitment-purchase-analysis-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-cost-allocation-tag-backfill",
+   "description": "Request a cost allocation tag backfill.",
+   "options": [
+    {
+     "name": "--backfill-from",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-savings-plans-purchase-recommendation-generation",
+   "description": "Requests a Savings Plans recommendation generation."
+  },
+  {
+   "name": "tag-resource",
+   "description": "An API operation for adding one or more tags (key-value pairs) to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-anomaly-monitor",
+   "description": "Updates an existing cost anomaly monitor.",
+   "options": [
+    {
+     "name": "--monitor-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--monitor-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-anomaly-subscription",
+   "description": "Updates an existing cost anomaly subscription.",
+   "options": [
+    {
+     "name": "--frequency",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "IMMEDIATE",
+       "WEEKLY"
+      ]
+     }
+    },
+    {
+     "name": "--monitor-arn-list",
+     "args": {}
+    },
+    {
+     "name": "--subscribers",
+     "args": {}
+    },
+    {
+     "name": "--subscription-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-name",
+     "args": {}
+    },
+    {
+     "name": "--threshold",
+     "args": {}
+    },
+    {
+     "name": "--threshold-expression",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-cost-allocation-tags-status",
+   "description": "Updates status for cost allocation tags in bulk, with maximum batch size of 20.",
+   "options": [
+    {
+     "name": "--cost-allocation-tags-status",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cost-category-definition",
+   "description": "Updates an existing cost category.",
+   "options": [
+    {
+     "name": "--cost-category-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-value",
+     "args": {}
+    },
+    {
+     "name": "--effective-start",
+     "args": {}
+    },
+    {
+     "name": "--rule-version",
+     "args": {
+      "suggestions": [
+       "CostCategoryExpression.v1"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--split-charge-rules",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

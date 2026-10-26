@@ -1,0 +1,470 @@
+{
+ "name": "securitylake",
+ "description": "Amazon Security Lake is a fully managed security data lake service.",
+ "subcommands": [
+  {
+   "name": "create-aws-log-source",
+   "description": "Adds a natively supported Amazon Web Services service as an Amazon Security Lake source.",
+   "options": [
+    {
+     "name": "--sources",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-custom-log-source",
+   "description": "Adds a third-party custom source in Amazon Security Lake, from the Amazon Web Services Region where you want to create a custom source.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-classes",
+     "args": {}
+    },
+    {
+     "name": "--source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-lake",
+   "description": "Initializes an Amazon Security Lake instance with the provided (or default) configuration.",
+   "options": [
+    {
+     "name": "--configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meta-store-manager-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-lake-exception-subscription",
+   "description": "Creates the specified notification subscription in Amazon Security Lake for the organization you specify.",
+   "options": [
+    {
+     "name": "--exception-time-to-live",
+     "args": {}
+    },
+    {
+     "name": "--notification-endpoint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-protocol",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-lake-organization-configuration",
+   "description": "Automatically enables Amazon Security Lake for new member accounts in your organization.",
+   "options": [
+    {
+     "name": "--auto-enable-new-account",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-subscriber",
+   "description": "Creates a subscriber for accounts that are already enabled in Amazon Security Lake.",
+   "options": [
+    {
+     "name": "--access-types",
+     "args": {}
+    },
+    {
+     "name": "--sources",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscriber-description",
+     "args": {}
+    },
+    {
+     "name": "--subscriber-identity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscriber-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-subscriber-notification",
+   "description": "Notifies the subscriber when new data is written to the data lake for the sources that the subscriber consumes in Security Lake.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscriber-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-aws-log-source",
+   "description": "Removes a natively supported Amazon Web Services service as an Amazon Security Lake source.",
+   "options": [
+    {
+     "name": "--sources",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-log-source",
+   "description": "Removes a custom log source from Amazon Security Lake, to stop sending data from the custom source to Security Lake.",
+   "options": [
+    {
+     "name": "--source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-data-lake",
+   "description": "When you disable Amazon Security Lake from your account, Security Lake is disabled in all Amazon Web Services Regions and it stops collecting data from your sources.",
+   "options": [
+    {
+     "name": "--regions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-lake-exception-subscription",
+   "description": "Deletes the specified notification subscription in Amazon Security Lake for the organization you specify."
+  },
+  {
+   "name": "delete-data-lake-organization-configuration",
+   "description": "Turns off automatic enablement of Amazon Security Lake for member accounts that are added to an organization in Organizations.",
+   "options": [
+    {
+     "name": "--auto-enable-new-account",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-subscriber",
+   "description": "Deletes the subscription permission and all notification settings for accounts that are already enabled in Amazon Security Lake.",
+   "options": [
+    {
+     "name": "--subscriber-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subscriber-notification",
+   "description": "Deletes the specified subscription notification in Amazon Security Lake for the organization you specify.",
+   "options": [
+    {
+     "name": "--subscriber-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-data-lake-delegated-administrator",
+   "description": "Deletes the Amazon Security Lake delegated administrator account for the organization."
+  },
+  {
+   "name": "get-data-lake-exception-subscription",
+   "description": "Retrieves the protocol and endpoint that were provided when subscribing to Amazon SNS topics for exception notifications."
+  },
+  {
+   "name": "get-data-lake-organization-configuration",
+   "description": "Retrieves the configuration that will be automatically set up for accounts added to the organization after the organization has onboarded to Amazon Security Lake."
+  },
+  {
+   "name": "get-data-lake-sources",
+   "description": "Retrieves a snapshot of the current Region, including whether Amazon Security Lake is enabled for those accounts and which sources Security Lake is collecting data from.",
+   "options": [
+    {
+     "name": "--accounts",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-subscriber",
+   "description": "Retrieves the subscription information for the specified subscription ID.",
+   "options": [
+    {
+     "name": "--subscriber-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-data-lake-exceptions",
+   "description": "Lists the Amazon Security Lake exceptions that you can use to find the source of problems and fix them.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-lakes",
+   "description": "Retrieves the Amazon Security Lake configuration object for the specified Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--regions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-log-sources",
+   "description": "Retrieves the log sources.",
+   "options": [
+    {
+     "name": "--accounts",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    },
+    {
+     "name": "--sources",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-subscribers",
+   "description": "Lists all subscribers for the specific Amazon Security Lake account ID.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves the tags (keys and values) that are associated with an Amazon Security Lake resource: a subscriber, or the data lake configuration for your Amazon Web Services account in a particular Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-data-lake-delegated-administrator",
+   "description": "Designates the Amazon Security Lake delegated administrator account for the organization.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates one or more tags that are associated with an Amazon Security Lake resource: a subscriber, or the data lake configuration for your Amazon Web Services account in a particular Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags (keys and values) from an Amazon Security Lake resource: a subscriber, or the data lake configuration for your Amazon Web Services account in a particular Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-lake",
+   "description": "You can use UpdateDataLake to specify where to store your security data, how it should be encrypted at rest and for how long.",
+   "options": [
+    {
+     "name": "--configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meta-store-manager-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-data-lake-exception-subscription",
+   "description": "Updates the specified notification subscription in Amazon Security Lake for the organization you specify.",
+   "options": [
+    {
+     "name": "--exception-time-to-live",
+     "args": {}
+    },
+    {
+     "name": "--notification-endpoint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscription-protocol",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-subscriber",
+   "description": "Updates an existing subscription for the given Amazon Security Lake account ID.",
+   "options": [
+    {
+     "name": "--sources",
+     "args": {}
+    },
+    {
+     "name": "--subscriber-description",
+     "args": {}
+    },
+    {
+     "name": "--subscriber-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscriber-identity",
+     "args": {}
+    },
+    {
+     "name": "--subscriber-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-subscriber-notification",
+   "description": "Updates an existing notification method for the subscription (SQS or HTTPs endpoint) or switches the notification subscription endpoint for a subscriber.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscriber-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

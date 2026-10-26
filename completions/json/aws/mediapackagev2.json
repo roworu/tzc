@@ -1,0 +1,845 @@
+{
+ "name": "mediapackagev2",
+ "description": "This guide is intended for creating AWS Elemental MediaPackage resources in MediaPackage Version 2 (v2) starting from May 2023.",
+ "subcommands": [
+  {
+   "name": "cancel-harvest-job",
+   "description": "Cancels an in-progress harvest job.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--e-tag",
+     "args": {}
+    },
+    {
+     "name": "--harvest-job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-channel",
+   "description": "Create a channel to start receiving content streams.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--input-switch-configuration",
+     "args": {}
+    },
+    {
+     "name": "--input-type",
+     "args": {
+      "suggestions": [
+       "HLS",
+       "CMAF"
+      ]
+     }
+    },
+    {
+     "name": "--output-header-configuration",
+     "args": {}
+    },
+    {
+     "name": "--output-locking-mode",
+     "args": {
+      "suggestions": [
+       "EPOCH_LOCKED",
+       "NON_EPOCH_LOCKED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-channel-group",
+   "description": "Create a channel group to group your channels and origin endpoints.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-harvest-job",
+   "description": "Creates a new harvest job to export content from a MediaPackage v2 channel to an S3 bucket.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--harvest-job-name",
+     "args": {}
+    },
+    {
+     "name": "--harvested-manifests",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-origin-endpoint",
+   "description": "The endpoint is attached to a channel, and represents the output of the live content.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--container-type",
+     "args": {
+      "suggestions": [
+       "TS",
+       "CMAF",
+       "ISM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--dash-manifests",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--force-endpoint-error-configuration",
+     "args": {}
+    },
+    {
+     "name": "--hls-manifests",
+     "args": {}
+    },
+    {
+     "name": "--low-latency-hls-manifests",
+     "args": {}
+    },
+    {
+     "name": "--mss-manifests",
+     "args": {}
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment",
+     "args": {}
+    },
+    {
+     "name": "--startover-window-seconds",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--uri-separator",
+     "args": {
+      "suggestions": [
+       "UNDERSCORE",
+       "HYPHEN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-channel",
+   "description": "Delete a channel to stop AWS Elemental MediaPackage from receiving further content.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-channel-group",
+   "description": "Delete a channel group.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-channel-policy",
+   "description": "Delete a channel policy.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-origin-endpoint",
+   "description": "Origin endpoints can serve content until they're deleted.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-origin-endpoint-policy",
+   "description": "Delete an origin endpoint policy.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-channel",
+   "description": "Retrieves the specified channel that's configured in AWS Elemental MediaPackage.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-channel-group",
+   "description": "Retrieves the specified channel group that's configured in AWS Elemental MediaPackage.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-channel-policy",
+   "description": "Retrieves the specified channel policy that's configured in AWS Elemental MediaPackage.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-harvest-job",
+   "description": "Retrieves the details of a specific harvest job.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--harvest-job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-origin-endpoint",
+   "description": "Retrieves the specified origin endpoint that's configured in AWS Elemental MediaPackage to obtain its playback URL and to view the packaging settings that it's currently using.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-origin-endpoint-policy",
+   "description": "Retrieves the specified origin endpoint policy that's configured in AWS Elemental MediaPackage.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-channel-groups",
+   "description": "Retrieves all channel groups that are configured in Elemental MediaPackage.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-channels",
+   "description": "Retrieves all channels in a specific channel group that are configured in AWS Elemental MediaPackage.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-harvest-jobs",
+   "description": "Retrieves a list of harvest jobs that match the specified criteria.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "IN_PROGRESS",
+       "CANCELLED",
+       "COMPLETED",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-origin-endpoints",
+   "description": "Retrieves all origin endpoints in a specific channel that are configured in AWS Elemental MediaPackage.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags assigned to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-channel-policy",
+   "description": "Attaches an IAM policy to the specified channel.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-origin-endpoint-policy",
+   "description": "Attaches an IAM policy to the specified origin endpoint.",
+   "options": [
+    {
+     "name": "--cdn-auth-configuration",
+     "args": {}
+    },
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-channel-state",
+   "description": "Resetting the channel can help to clear errors from misconfigurations in the encoder.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-origin-endpoint-state",
+   "description": "Resetting the origin endpoint can help to resolve unexpected behavior and other content packaging issues.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one of more tags (key-value pairs) to the specified MediaPackage resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-channel",
+   "description": "Update the specified channel.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--e-tag",
+     "args": {}
+    },
+    {
+     "name": "--input-switch-configuration",
+     "args": {}
+    },
+    {
+     "name": "--output-header-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-channel-group",
+   "description": "Update the specified channel group.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--e-tag",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-origin-endpoint",
+   "description": "Update the specified origin endpoint.",
+   "options": [
+    {
+     "name": "--channel-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--container-type",
+     "args": {
+      "suggestions": [
+       "TS",
+       "CMAF",
+       "ISM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--dash-manifests",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--e-tag",
+     "args": {}
+    },
+    {
+     "name": "--force-endpoint-error-configuration",
+     "args": {}
+    },
+    {
+     "name": "--hls-manifests",
+     "args": {}
+    },
+    {
+     "name": "--low-latency-hls-manifests",
+     "args": {}
+    },
+    {
+     "name": "--mss-manifests",
+     "args": {}
+    },
+    {
+     "name": "--origin-endpoint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment",
+     "args": {}
+    },
+    {
+     "name": "--startover-window-seconds",
+     "args": {}
+    },
+    {
+     "name": "--uri-separator",
+     "args": {
+      "suggestions": [
+       "UNDERSCORE",
+       "HYPHEN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "harvest-job-finished",
+     "description": "Wait until JMESPath query Status returns COMPLETED when polling with ``get-harvest-job``.",
+     "options": [
+      {
+       "name": "--channel-group-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--channel-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--harvest-job-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--origin-endpoint-name",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

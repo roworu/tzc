@@ -1,0 +1,1749 @@
+{
+ "name": "emr",
+ "description": "Amazon EMR is a web service that makes it easier to process large amounts of data efficiently.",
+ "subcommands": [
+  {
+   "name": "add-instance-fleet",
+   "description": "Adds an instance fleet to a running cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-fleet",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-instance-groups",
+   "description": "Adds an instance group to a running cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-groups",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-steps",
+   "description": "Add a list of steps to a cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--steps",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-tags",
+   "description": "Adds tags to an Amazon EMR resource, such as a cluster or an Amazon EMR Studio.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-steps",
+   "description": "Cancels a pending step or steps in a running cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-cancellation-option",
+     "args": {
+      "suggestions": [
+       "SEND_INTERRUPT",
+       "TERMINATE_PROCESS"
+      ]
+     }
+    },
+    {
+     "name": "--step-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Creates an Amazon EMR cluster with the specified configurations.",
+   "options": [
+    {
+     "name": "--additional-info",
+     "args": {}
+    },
+    {
+     "name": "--ami-version",
+     "args": {}
+    },
+    {
+     "name": "--applications",
+     "args": {}
+    },
+    {
+     "name": "--auto-scaling-role",
+     "args": {}
+    },
+    {
+     "name": "--auto-terminate"
+    },
+    {
+     "name": "--auto-termination-policy",
+     "args": {}
+    },
+    {
+     "name": "--bootstrap-actions",
+     "args": {}
+    },
+    {
+     "name": "--configurations",
+     "args": {}
+    },
+    {
+     "name": "--custom-ami-id",
+     "args": {}
+    },
+    {
+     "name": "--ebs-root-volume-iops",
+     "args": {}
+    },
+    {
+     "name": "--ebs-root-volume-size",
+     "args": {}
+    },
+    {
+     "name": "--ebs-root-volume-throughput",
+     "args": {}
+    },
+    {
+     "name": "--ec2-attributes",
+     "args": {}
+    },
+    {
+     "name": "--emrfs",
+     "args": {}
+    },
+    {
+     "name": "--enable-debugging"
+    },
+    {
+     "name": "--extended-support"
+    },
+    {
+     "name": "--instance-count",
+     "args": {}
+    },
+    {
+     "name": "--instance-fleets",
+     "args": {}
+    },
+    {
+     "name": "--instance-groups",
+     "args": {}
+    },
+    {
+     "name": "--instance-type",
+     "args": {}
+    },
+    {
+     "name": "--kerberos-attributes",
+     "args": {}
+    },
+    {
+     "name": "--log-encryption-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--log-uri",
+     "args": {}
+    },
+    {
+     "name": "--managed-scaling-policy",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-terminate"
+    },
+    {
+     "name": "--no-enable-debugging"
+    },
+    {
+     "name": "--no-extended-support"
+    },
+    {
+     "name": "--no-session-enabled"
+    },
+    {
+     "name": "--no-termination-protected"
+    },
+    {
+     "name": "--no-unhealthy-node-replacement"
+    },
+    {
+     "name": "--no-visible-to-all-users"
+    },
+    {
+     "name": "--os-release-label",
+     "args": {}
+    },
+    {
+     "name": "--placement-group-configs",
+     "args": {}
+    },
+    {
+     "name": "--release-label",
+     "args": {}
+    },
+    {
+     "name": "--repo-upgrade-on-boot",
+     "args": {}
+    },
+    {
+     "name": "--restore-from-hbase-backup",
+     "args": {}
+    },
+    {
+     "name": "--scale-down-behavior",
+     "args": {}
+    },
+    {
+     "name": "--security-configuration",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--session-enabled"
+    },
+    {
+     "name": "--step-concurrency-level",
+     "args": {}
+    },
+    {
+     "name": "--step-execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--steps",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--termination-protected"
+    },
+    {
+     "name": "--unhealthy-node-replacement"
+    },
+    {
+     "name": "--use-default-roles"
+    },
+    {
+     "name": "--visible-to-all-users"
+    }
+   ]
+  },
+  {
+   "name": "create-default-roles",
+   "description": "Creates the default IAM role EMR_EC2_DefaultRole and EMR_DefaultRole which can be used when creating the cluster using the create-cluster command.",
+   "options": [
+    {
+     "name": "--iam-endpoint",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-hbase-backup",
+   "description": "Creates a HBase backup in S3.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--consistent"
+    },
+    {
+     "name": "--dir",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-persistent-app-ui",
+   "description": "Creates a persistent application user interface.",
+   "options": [
+    {
+     "name": "--emr-containers-config",
+     "args": {}
+    },
+    {
+     "name": "--profiler-type",
+     "args": {
+      "suggestions": [
+       "SHS",
+       "TEZUI",
+       "YTS"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--x-referer",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-security-configuration",
+   "description": "Creates a security configuration, which is stored in the service and can be specified when a cluster is created.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-studio",
+   "description": "Creates a new Amazon EMR Studio.",
+   "options": [
+    {
+     "name": "--auth-mode",
+     "args": {
+      "suggestions": [
+       "SSO",
+       "IAM"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--default-s3-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--engine-security-group-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--idc-instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--idc-user-assignment",
+     "args": {
+      "suggestions": [
+       "REQUIRED",
+       "OPTIONAL"
+      ]
+     }
+    },
+    {
+     "name": "--idp-auth-url",
+     "args": {}
+    },
+    {
+     "name": "--idp-relay-state-parameter-name",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-trusted-identity-propagation-enabled"
+    },
+    {
+     "name": "--service-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--trusted-identity-propagation-enabled"
+    },
+    {
+     "name": "--user-role",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workspace-security-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-studio-session-mapping",
+   "description": "Maps a user or group to the Amazon EMR Studio specified by StudioId, and applies a session policy to refine Studio permissions for that user or group.",
+   "options": [
+    {
+     "name": "--identity-id",
+     "args": {}
+    },
+    {
+     "name": "--identity-name",
+     "args": {}
+    },
+    {
+     "name": "--identity-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--session-policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--studio-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-security-configuration",
+   "description": "Deletes a security configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-studio",
+   "description": "Removes an Amazon EMR Studio from the Studio metadata store.",
+   "options": [
+    {
+     "name": "--studio-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-studio-session-mapping",
+   "description": "Removes a user or group from an Amazon EMR Studio.",
+   "options": [
+    {
+     "name": "--identity-id",
+     "args": {}
+    },
+    {
+     "name": "--identity-name",
+     "args": {}
+    },
+    {
+     "name": "--identity-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--studio-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-cluster",
+   "description": "Provides cluster-level details including status, hardware and software configuration, VPC settings, bootstrap actions, instance groups and so on.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-notebook-execution",
+   "description": "Provides details of a notebook execution.",
+   "options": [
+    {
+     "name": "--notebook-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-persistent-app-ui",
+   "description": "Describes a persistent application user interface.",
+   "options": [
+    {
+     "name": "--persistent-app-ui-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-release-label",
+   "description": "Provides Amazon EMR release label details, such as the releases available the Region where the API request is run, and the available applications for a specific Amazon EMR release label.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--release-label",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-security-configuration",
+   "description": "Provides the details of a security configuration by returning the configuration JSON.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-step",
+   "description": "Provides more detail about the cluster step.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--step-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-studio",
+   "description": "Returns details for the specified Amazon EMR Studio including ID, Name, VPC, Studio access URL, and so on.",
+   "options": [
+    {
+     "name": "--studio-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-hbase-backups",
+   "description": "Add a step to disable automated HBase backups.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--full"
+    },
+    {
+     "name": "--incremental"
+    }
+   ]
+  },
+  {
+   "name": "get",
+   "description": "Get file from master node.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dest",
+     "args": {}
+    },
+    {
+     "name": "--key-pair-file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--src",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ssh-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-auto-termination-policy",
+   "description": "Returns the auto-termination policy for an Amazon EMR cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-block-public-access-configuration",
+   "description": "Returns the Amazon EMR block public access configuration for your Amazon Web Services account in the current Region."
+  },
+  {
+   "name": "get-cluster-session-credentials",
+   "description": "Provides temporary, HTTP basic credentials that are associated with a given runtime IAM role and used by a cluster with fine-grained access control activated.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-managed-scaling-policy",
+   "description": "Fetches the attached managed scaling policy for an Amazon EMR cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-on-cluster-app-ui-presigned-url",
+   "description": "The presigned URL properties for the cluster's application user interface.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {}
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--on-cluster-app-ui-type",
+     "args": {
+      "suggestions": [
+       "SparkHistoryServer",
+       "YarnTimelineService",
+       "TezUI",
+       "ApplicationMaster",
+       "JobHistoryServer",
+       "ResourceManager"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-persistent-app-ui-presigned-url",
+   "description": "The presigned URL properties for the cluster's application user interface.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {}
+    },
+    {
+     "name": "--auth-proxy-call"
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-auth-proxy-call"
+    },
+    {
+     "name": "--persistent-app-ui-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--persistent-app-ui-type",
+     "args": {
+      "suggestions": [
+       "SHS",
+       "TEZ",
+       "YTS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-session",
+   "description": "Returns detailed information about a session.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-session-endpoint",
+   "description": "Returns the Spark Connect endpoint URL and a time-limited authentication token for the specified session.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-studio-session-mapping",
+   "description": "Fetches mapping details for the specified Amazon EMR Studio and identity (user or group).",
+   "options": [
+    {
+     "name": "--identity-id",
+     "args": {}
+    },
+    {
+     "name": "--identity-name",
+     "args": {}
+    },
+    {
+     "name": "--identity-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--studio-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "install-applications",
+   "description": "Installs applications on a running cluster.",
+   "options": [
+    {
+     "name": "--applications",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-clusters",
+   "description": "Provides the status of all clusters visible to this Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--active"
+    },
+    {
+     "name": "--cluster-states",
+     "args": {}
+    },
+    {
+     "name": "--created-after",
+     "args": {}
+    },
+    {
+     "name": "--created-before",
+     "args": {}
+    },
+    {
+     "name": "--failed"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--terminated"
+    }
+   ]
+  },
+  {
+   "name": "list-instance-fleets",
+   "description": "Lists all available details about the instance fleets in a cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-instances",
+   "description": "Provides information for all active Amazon EC2 instances and Amazon EC2 instances terminated in the last 30 days, up to a maximum of 2,000.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-fleet-id",
+     "args": {}
+    },
+    {
+     "name": "--instance-fleet-type",
+     "args": {
+      "suggestions": [
+       "MASTER",
+       "CORE",
+       "TASK"
+      ]
+     }
+    },
+    {
+     "name": "--instance-group-id",
+     "args": {}
+    },
+    {
+     "name": "--instance-group-types",
+     "args": {}
+    },
+    {
+     "name": "--instance-states",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-notebook-executions",
+   "description": "Provides summaries of all notebook executions.",
+   "options": [
+    {
+     "name": "--editor-id",
+     "args": {}
+    },
+    {
+     "name": "--execution-engine-id",
+     "args": {}
+    },
+    {
+     "name": "--from",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "START_PENDING",
+       "STARTING",
+       "RUNNING",
+       "FINISHING",
+       "FINISHED",
+       "FAILING",
+       "FAILED",
+       "STOP_PENDING",
+       "STOPPING",
+       "STOPPED"
+      ]
+     }
+    },
+    {
+     "name": "--to",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-release-labels",
+   "description": "Retrieves release labels of Amazon EMR services in the Region where the API is called.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-security-configurations",
+   "description": "Lists all the security configurations visible to this account, providing their creation dates and times, and their names.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sessions",
+   "description": "Lists the sessions on a cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--session-states",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-steps",
+   "description": "Provides a list of steps for the cluster in reverse order unless you specify stepIds with the request or filter by StepStates.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--step-ids",
+     "args": {}
+    },
+    {
+     "name": "--step-states",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-studio-session-mappings",
+   "description": "Returns a list of all user or group session mappings for the Amazon EMR Studio specified by StudioId.",
+   "options": [
+    {
+     "name": "--identity-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--studio-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-studios",
+   "description": "Returns a list of all Amazon EMR Studios associated with the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-supported-instance-types",
+   "description": "A list of the instance types that Amazon EMR supports.",
+   "options": [
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--release-label",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster",
+   "description": "Modifies the number of steps that can be executed concurrently for the cluster specified using ClusterID.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--extended-support"
+    },
+    {
+     "name": "--no-extended-support"
+    },
+    {
+     "name": "--step-concurrency-level",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "modify-cluster-attributes",
+   "description": "Modifies the cluster attributes 'visible-to-all-users', 'termination-protected' and 'unhealthy-node-replacement'.",
+   "options": [
+    {
+     "name": "--auto-terminate"
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-terminate"
+    },
+    {
+     "name": "--no-termination-protected"
+    },
+    {
+     "name": "--no-unhealthy-node-replacement"
+    },
+    {
+     "name": "--no-visible-to-all-users"
+    },
+    {
+     "name": "--termination-protected"
+    },
+    {
+     "name": "--unhealthy-node-replacement"
+    },
+    {
+     "name": "--visible-to-all-users"
+    }
+   ]
+  },
+  {
+   "name": "modify-instance-fleet",
+   "description": "Modifies the target On-Demand and target Spot capacities for the instance fleet with the specified InstanceFleetID within the cluster specified using ClusterID.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-fleet",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-instance-groups",
+   "description": "ModifyInstanceGroups modifies the number of nodes and configuration settings of an instance group.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--instance-groups",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put",
+   "description": "Put file onto the master node.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dest",
+     "args": {}
+    },
+    {
+     "name": "--key-pair-file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--src",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ssh-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-auto-scaling-policy",
+   "description": "Creates or updates an automatic scaling policy for a core instance group or task instance group in an Amazon EMR cluster.",
+   "options": [
+    {
+     "name": "--auto-scaling-policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-auto-termination-policy",
+   "description": "Auto-termination is supported in Amazon EMR releases 5.30.0 and 6.1.0 and later.",
+   "options": [
+    {
+     "name": "--auto-termination-policy",
+     "args": {}
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-block-public-access-configuration",
+   "description": "Creates or updates an Amazon EMR block public access configuration for your Amazon Web Services account in the current Region.",
+   "options": [
+    {
+     "name": "--block-public-access-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-managed-scaling-policy",
+   "description": "Creates or updates a managed scaling policy for an Amazon EMR cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-scaling-policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-auto-scaling-policy",
+   "description": "Removes an automatic scaling policy from a specified instance group within an Amazon EMR cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-auto-termination-policy",
+   "description": "Removes an auto-termination policy from an Amazon EMR cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-managed-scaling-policy",
+   "description": "Removes a managed scaling policy from a specified Amazon EMR cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags",
+   "description": "Removes tags from an Amazon EMR resource, such as a cluster or Amazon EMR Studio.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-from-hbase-backup",
+   "description": "Restores HBase from S3.",
+   "options": [
+    {
+     "name": "--backup-version",
+     "args": {}
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dir",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "schedule-hbase-backup",
+   "description": "Adds a step to schedule automated HBase backup.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--consistent"
+    },
+    {
+     "name": "--dir",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--interval",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unit",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "socks",
+   "description": "Create a socks tunnel on port 8157 from your machine to the master.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-pair-file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ssh-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "ssh",
+   "description": "SSH into master node of the cluster.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--command",
+     "args": {}
+    },
+    {
+     "name": "--key-pair-file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ssh-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-notebook-execution",
+   "description": "Starts a notebook execution.",
+   "options": [
+    {
+     "name": "--editor-id",
+     "args": {}
+    },
+    {
+     "name": "--environment-variables",
+     "args": {}
+    },
+    {
+     "name": "--execution-engine",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notebook-execution-name",
+     "args": {}
+    },
+    {
+     "name": "--notebook-instance-security-group-id",
+     "args": {}
+    },
+    {
+     "name": "--notebook-params",
+     "args": {}
+    },
+    {
+     "name": "--notebook-s3-location",
+     "args": {}
+    },
+    {
+     "name": "--output-notebook-format",
+     "args": {
+      "suggestions": [
+       "HTML"
+      ]
+     }
+    },
+    {
+     "name": "--output-notebook-s3-location",
+     "args": {}
+    },
+    {
+     "name": "--relative-path",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-session",
+   "description": "Creates and starts a new Spark Connect session on the specified cluster.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--engine-configurations",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--session-idle-timeout-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-notebook-execution",
+   "description": "Stops a notebook execution.",
+   "options": [
+    {
+     "name": "--notebook-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-clusters",
+   "description": "Shuts down one or more clusters, each specified by cluster ID.",
+   "options": [
+    {
+     "name": "--cluster-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-session",
+   "description": "Terminates an active session.",
+   "options": [
+    {
+     "name": "--cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-studio",
+   "description": "Updates an Amazon EMR Studio configuration, including attributes such as name, description, and subnets.",
+   "options": [
+    {
+     "name": "--default-s3-location",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--studio-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-studio-session-mapping",
+   "description": "Updates the session policy attached to the user or group for the specified Amazon EMR Studio.",
+   "options": [
+    {
+     "name": "--identity-id",
+     "args": {}
+    },
+    {
+     "name": "--identity-name",
+     "args": {}
+    },
+    {
+     "name": "--identity-type",
+     "args": {
+      "suggestions": [
+       "USER",
+       "GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--session-policy-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--studio-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "cluster-running",
+     "description": "Wait until JMESPath query Cluster.Status.State returns RUNNING when polling with ``describe-cluster``.",
+     "options": [
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "cluster-terminated",
+     "description": "Wait until JMESPath query Cluster.Status.State returns TERMINATED when polling with ``describe-cluster``.",
+     "options": [
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "step-complete",
+     "description": "Wait until JMESPath query Step.Status.State returns COMPLETED when polling with ``describe-step``.",
+     "options": [
+      {
+       "name": "--cluster-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--step-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

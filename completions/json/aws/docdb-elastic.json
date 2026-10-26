@@ -1,0 +1,447 @@
+{
+ "name": "docdb-elastic",
+ "description": "Amazon DocumentDB elastic clusters Amazon DocumentDB elastic-clusters support workloads with millions of reads/writes per second and petabytes of storage capacity.",
+ "subcommands": [
+  {
+   "name": "apply-pending-maintenance-action",
+   "description": "The type of pending maintenance action to be applied to the resource.",
+   "options": [
+    {
+     "name": "--apply-action",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--apply-on",
+     "args": {}
+    },
+    {
+     "name": "--opt-in-type",
+     "args": {
+      "suggestions": [
+       "IMMEDIATE",
+       "NEXT_MAINTENANCE",
+       "APPLY_ON",
+       "UNDO_OPT_IN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-cluster-snapshot",
+   "description": "Copies a snapshot of an elastic cluster.",
+   "options": [
+    {
+     "name": "--copy-tags"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-tags"
+    },
+    {
+     "name": "--snapshot-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-snapshot-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Creates a new Amazon DocumentDB elastic cluster and returns its cluster structure.",
+   "options": [
+    {
+     "name": "--admin-user-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--admin-user-password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "PLAIN_TEXT",
+       "SECRET_ARN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--shard-capacity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shard-count",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--shard-instance-count",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster-snapshot",
+   "description": "Creates a snapshot of an elastic cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--snapshot-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Delete an elastic cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster-snapshot",
+   "description": "Delete an elastic cluster snapshot.",
+   "options": [
+    {
+     "name": "--snapshot-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cluster",
+   "description": "Returns information about a specific elastic cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cluster-snapshot",
+   "description": "Returns information about a specific elastic cluster snapshot",
+   "options": [
+    {
+     "name": "--snapshot-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pending-maintenance-action",
+   "description": "Retrieves all maintenance actions that are pending.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-cluster-snapshots",
+   "description": "Returns information about snapshots for a specified elastic cluster.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-type",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-clusters",
+   "description": "Returns information about provisioned Amazon DocumentDB elastic clusters.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pending-maintenance-actions",
+   "description": "Retrieves a list of all maintenance actions that are pending.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags on a elastic cluster resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "restore-cluster-from-snapshot",
+   "description": "Restores an elastic cluster from a snapshot.",
+   "options": [
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--shard-capacity",
+     "args": {}
+    },
+    {
+     "name": "--shard-instance-count",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-cluster",
+   "description": "Restarts the stopped elastic cluster that is specified by clusterARN.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-cluster",
+   "description": "Stops the running elastic cluster that is specified by clusterArn.",
+   "options": [
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds metadata tags to an elastic cluster resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes metadata tags from an elastic cluster resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cluster",
+   "description": "Modifies an elastic cluster.",
+   "options": [
+    {
+     "name": "--admin-user-password",
+     "args": {}
+    },
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "PLAIN_TEXT",
+       "SECRET_ARN"
+      ]
+     }
+    },
+    {
+     "name": "--backup-retention-period",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--preferred-backup-window",
+     "args": {}
+    },
+    {
+     "name": "--preferred-maintenance-window",
+     "args": {}
+    },
+    {
+     "name": "--shard-capacity",
+     "args": {}
+    },
+    {
+     "name": "--shard-count",
+     "args": {}
+    },
+    {
+     "name": "--shard-instance-count",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

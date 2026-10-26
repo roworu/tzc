@@ -1,0 +1,978 @@
+{
+ "name": "es",
+ "description": "Amazon Elasticsearch Configuration Service Use the Amazon Elasticsearch Configuration API to create, configure, and manage Elasticsearch domains.",
+ "subcommands": [
+  {
+   "name": "accept-inbound-cross-cluster-search-connection",
+   "description": "Allows the destination domain owner to accept an inbound cross-cluster search connection request.",
+   "options": [
+    {
+     "name": "--cross-cluster-search-connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "add-tags",
+   "description": "Attaches tags to an existing Elasticsearch domain.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-package",
+   "description": "Associates a package with an Amazon ES domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "authorize-vpc-endpoint-access",
+   "description": "Provides access to an Amazon OpenSearch Service domain through the use of an interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-domain-config-change",
+   "description": "Cancels a pending configuration change on an Amazon OpenSearch Service domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--no-dry-run"
+    }
+   ]
+  },
+  {
+   "name": "cancel-elasticsearch-service-software-update",
+   "description": "Cancels a scheduled service software update for an Amazon ES domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-elasticsearch-domain",
+   "description": "Creates a new Elasticsearch domain.",
+   "options": [
+    {
+     "name": "--access-policies",
+     "args": {}
+    },
+    {
+     "name": "--advanced-options",
+     "args": {}
+    },
+    {
+     "name": "--advanced-security-options",
+     "args": {}
+    },
+    {
+     "name": "--auto-tune-options",
+     "args": {}
+    },
+    {
+     "name": "--automated-snapshot-pause-options",
+     "args": {}
+    },
+    {
+     "name": "--cognito-options",
+     "args": {}
+    },
+    {
+     "name": "--deployment-strategy-options",
+     "args": {}
+    },
+    {
+     "name": "--domain-endpoint-options",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ebs-options",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-cluster-config",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-version",
+     "args": {}
+    },
+    {
+     "name": "--encryption-at-rest-options",
+     "args": {}
+    },
+    {
+     "name": "--engine-mode",
+     "args": {
+      "suggestions": [
+       "GENERAL",
+       "OPTIMIZED"
+      ]
+     }
+    },
+    {
+     "name": "--log-publishing-options",
+     "args": {}
+    },
+    {
+     "name": "--node-to-node-encryption-options",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-options",
+     "args": {}
+    },
+    {
+     "name": "--tag-list",
+     "args": {}
+    },
+    {
+     "name": "--use-case",
+     "args": {
+      "suggestions": [
+       "SEARCH",
+       "VECTOR",
+       "OBSERVABILITY",
+       "MIXED"
+      ]
+     }
+    },
+    {
+     "name": "--vpc-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-outbound-cross-cluster-search-connection",
+   "description": "Creates a new cross-cluster search connection from a source domain to a destination domain.",
+   "options": [
+    {
+     "name": "--connection-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-domain-info",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-domain-info",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-package",
+   "description": "Create a package for use with Amazon ES domains.",
+   "options": [
+    {
+     "name": "--package-description",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-type",
+     "args": {
+      "suggestions": [
+       "TXT-DICTIONARY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-endpoint",
+   "description": "Creates an Amazon OpenSearch Service-managed VPC endpoint.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--domain-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-options",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-elasticsearch-domain",
+   "description": "Permanently deletes the specified Elasticsearch domain and all of its data.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-elasticsearch-service-role",
+   "description": "Deletes the service-linked role that Elasticsearch Service uses to manage and maintain VPC domains."
+  },
+  {
+   "name": "delete-inbound-cross-cluster-search-connection",
+   "description": "Allows the destination domain owner to delete an existing inbound cross-cluster search connection.",
+   "options": [
+    {
+     "name": "--cross-cluster-search-connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-outbound-cross-cluster-search-connection",
+   "description": "Allows the source domain owner to delete an existing outbound cross-cluster search connection.",
+   "options": [
+    {
+     "name": "--cross-cluster-search-connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-package",
+   "description": "Delete the package.",
+   "options": [
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-endpoint",
+   "description": "Deletes an Amazon OpenSearch Service-managed interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain-auto-tunes",
+   "description": "Provides scheduled Auto-Tune action details for the Elasticsearch domain, such as Auto-Tune action type, description, severity, and scheduled date.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-domain-change-progress",
+   "description": "Returns information about the current blue/green deployment happening on a domain, including a change ID, status, and progress stages.",
+   "options": [
+    {
+     "name": "--change-id",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-elasticsearch-domain",
+   "description": "Returns domain configuration information about the specified Elasticsearch domain, including the domain ID, domain endpoint, and domain ARN.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-elasticsearch-domain-config",
+   "description": "Provides cluster configuration information about the specified Elasticsearch domain, such as the state, creation date, update version, and update date for cluster options.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-elasticsearch-domains",
+   "description": "Returns domain configuration information about the specified Elasticsearch domains, including the domain ID, domain endpoint, and domain ARN.",
+   "options": [
+    {
+     "name": "--domain-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-elasticsearch-instance-type-limits",
+   "description": "Describe Elasticsearch Limits for a given InstanceType and ElasticsearchVersion.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-inbound-cross-cluster-search-connections",
+   "description": "Lists all the inbound cross-cluster search connections for a destination domain.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-outbound-cross-cluster-search-connections",
+   "description": "Lists all the outbound cross-cluster search connections for a source domain.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-packages",
+   "description": "Describes all packages available to Amazon ES.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-elasticsearch-instance-offerings",
+   "description": "Lists available reserved Elasticsearch instance offerings.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reserved-elasticsearch-instance-offering-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-reserved-elasticsearch-instances",
+   "description": "Returns information about reserved Elasticsearch instances for this account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reserved-elasticsearch-instance-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-vpc-endpoints",
+   "description": "Describes one or more Amazon OpenSearch Service-managed VPC endpoints.",
+   "options": [
+    {
+     "name": "--vpc-endpoint-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "dissociate-package",
+   "description": "Dissociates a package from the Amazon ES domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-compatible-elasticsearch-versions",
+   "description": "Returns a list of upgrade compatible Elastisearch versions.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-package-version-history",
+   "description": "Returns a list of versions of the package, along with their creation time and commit message.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-upgrade-history",
+   "description": "Retrieves the complete history of the last 10 upgrades that were performed on the domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-upgrade-status",
+   "description": "Retrieves the latest status of the last upgrade or upgrade eligibility check that was performed on the domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-domain-names",
+   "description": "Returns the name of all Elasticsearch domains owned by the current user's account.",
+   "options": [
+    {
+     "name": "--engine-type",
+     "args": {
+      "suggestions": [
+       "OpenSearch",
+       "Elasticsearch"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-domains-for-package",
+   "description": "Lists all Amazon ES domains associated with the package.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-elasticsearch-instance-types",
+   "description": "List all Elasticsearch instance types that are supported for given ElasticsearchVersion",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-elasticsearch-versions",
+   "description": "List all supported Elasticsearch versions",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-packages-for-domain",
+   "description": "Lists all packages associated with the Amazon ES domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags",
+   "description": "Returns all tags for the given Elasticsearch domain.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-endpoint-access",
+   "description": "Retrieves information about each principal that is allowed to access a given Amazon OpenSearch Service domain through the use of an interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-endpoints",
+   "description": "Retrieves all Amazon OpenSearch Service-managed VPC endpoints in the current account and Region.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-endpoints-for-domain",
+   "description": "Retrieves all Amazon OpenSearch Service-managed VPC endpoints associated with a particular domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "purchase-reserved-elasticsearch-instance-offering",
+   "description": "Allows you to purchase reserved Elasticsearch instances.",
+   "options": [
+    {
+     "name": "--instance-count",
+     "args": {}
+    },
+    {
+     "name": "--reservation-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reserved-elasticsearch-instance-offering-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-inbound-cross-cluster-search-connection",
+   "description": "Allows the destination domain owner to reject an inbound cross-cluster search connection request.",
+   "options": [
+    {
+     "name": "--cross-cluster-search-connection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags",
+   "description": "Removes the specified set of tags from the specified Elasticsearch domain.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "revoke-vpc-endpoint-access",
+   "description": "Revokes access to an Amazon OpenSearch Service domain that was provided through an interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-elasticsearch-service-software-update",
+   "description": "Schedules a service software update for an Amazon ES domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-elasticsearch-domain-config",
+   "description": "Modifies the cluster configuration of the specified Elasticsearch domain, setting as setting the instance type and the number of instances.",
+   "options": [
+    {
+     "name": "--access-policies",
+     "args": {}
+    },
+    {
+     "name": "--advanced-options",
+     "args": {}
+    },
+    {
+     "name": "--advanced-security-options",
+     "args": {}
+    },
+    {
+     "name": "--auto-tune-options",
+     "args": {}
+    },
+    {
+     "name": "--automated-snapshot-pause-options",
+     "args": {}
+    },
+    {
+     "name": "--cognito-options",
+     "args": {}
+    },
+    {
+     "name": "--deployment-strategy-options",
+     "args": {}
+    },
+    {
+     "name": "--domain-endpoint-options",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--ebs-options",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-cluster-config",
+     "args": {}
+    },
+    {
+     "name": "--encryption-at-rest-options",
+     "args": {}
+    },
+    {
+     "name": "--engine-mode",
+     "args": {
+      "suggestions": [
+       "GENERAL",
+       "OPTIMIZED"
+      ]
+     }
+    },
+    {
+     "name": "--log-publishing-options",
+     "args": {}
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--node-to-node-encryption-options",
+     "args": {}
+    },
+    {
+     "name": "--snapshot-options",
+     "args": {}
+    },
+    {
+     "name": "--use-case",
+     "args": {
+      "suggestions": [
+       "SEARCH",
+       "VECTOR",
+       "OBSERVABILITY",
+       "MIXED"
+      ]
+     }
+    },
+    {
+     "name": "--vpc-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-package",
+   "description": "Updates a package for use with Amazon ES domains.",
+   "options": [
+    {
+     "name": "--commit-message",
+     "args": {}
+    },
+    {
+     "name": "--package-description",
+     "args": {}
+    },
+    {
+     "name": "--package-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--package-source",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-vpc-endpoint",
+   "description": "Modifies an Amazon OpenSearch Service-managed interface VPC endpoint.",
+   "options": [
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-options",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "upgrade-elasticsearch-domain",
+   "description": "Allows you to either upgrade your domain or perform an Upgrade eligibility check to a compatible Elasticsearch version.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-perform-check-only"
+    },
+    {
+     "name": "--perform-check-only"
+    },
+    {
+     "name": "--target-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

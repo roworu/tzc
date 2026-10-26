@@ -1,0 +1,1473 @@
+{
+ "name": "appconfig",
+ "description": "AppConfig helps you safely change application behavior in production without redeploying code.",
+ "subcommands": [
+  {
+   "name": "create-application",
+   "description": "Creates an application.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-configuration-profile",
+   "description": "Creates a configuration profile, which is information that enables AppConfig to access the configuration source.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--location-uri",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retrieval-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {}
+    },
+    {
+     "name": "--validators",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-deployment-strategy",
+   "description": "Creates a deployment strategy that defines important criteria for rolling out your configuration to the designated targets.",
+   "options": [
+    {
+     "name": "--deployment-duration-in-minutes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--final-bake-time-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--growth-factor",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--growth-type",
+     "args": {
+      "suggestions": [
+       "LINEAR",
+       "EXPONENTIAL"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replicate-to",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "SSM_DOCUMENT"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-environment",
+   "description": "Creates an environment.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--monitors",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-experiment-definition",
+   "description": "Creates an experiment definition in AppConfig.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--audience-description",
+     "args": {}
+    },
+    {
+     "name": "--audience-rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--control",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flag-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hypothesis",
+     "args": {}
+    },
+    {
+     "name": "--launch-criteria",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--treatments",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-extension",
+   "description": "Creates an AppConfig extension.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--latest-version-number",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-extension-association",
+   "description": "When you create an extension or configure an Amazon Web Services authored extension, you associate the extension with an AppConfig application, environment, or configuration profile.",
+   "options": [
+    {
+     "name": "--extension-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--extension-version-number",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-hosted-configuration-version",
+   "description": "Creates a new configuration in the AppConfig hosted configuration store.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--content-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--latest-version-number",
+     "args": {}
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-label",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-application",
+   "description": "Deletes an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-configuration-profile",
+   "description": "Deletes a configuration profile.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deletion-protection-check",
+     "args": {
+      "suggestions": [
+       "ACCOUNT_DEFAULT",
+       "APPLY",
+       "BYPASS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-deployment-strategy",
+   "description": "Deletes a deployment strategy.",
+   "options": [
+    {
+     "name": "--deployment-strategy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-environment",
+   "description": "Deletes an environment.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deletion-protection-check",
+     "args": {
+      "suggestions": [
+       "ACCOUNT_DEFAULT",
+       "APPLY",
+       "BYPASS"
+      ]
+     }
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-experiment-definition",
+   "description": "Deletes an experiment definition.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delete-type",
+     "args": {
+      "suggestions": [
+       "ARCHIVE",
+       "DESTROY"
+      ]
+     }
+    },
+    {
+     "name": "--experiment-definition-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-extension",
+   "description": "Deletes an AppConfig extension.",
+   "options": [
+    {
+     "name": "--extension-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-extension-association",
+   "description": "Deletes an extension association.",
+   "options": [
+    {
+     "name": "--extension-association-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-hosted-configuration-version",
+   "description": "Deletes a version of a configuration from the AppConfig hosted configuration store.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-settings",
+   "description": "Returns information about the status of the DeletionProtection parameter."
+  },
+  {
+   "name": "get-application",
+   "description": "Retrieves information about an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-configuration",
+   "description": "(Deprecated) Retrieves the latest deployed configuration.",
+   "options": [
+    {
+     "name": "--application",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-configuration-version",
+     "args": {}
+    },
+    {
+     "name": "--client-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-configuration-profile",
+   "description": "Retrieves information about a configuration profile.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment",
+   "description": "Retrieves information about a configuration deployment.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-deployment-strategy",
+   "description": "Retrieves information about a deployment strategy.",
+   "options": [
+    {
+     "name": "--deployment-strategy-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment",
+   "description": "Retrieves information about an environment.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-experiment-definition",
+   "description": "Retrieves information about an experiment definition.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--experiment-definition-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-experiment-run",
+   "description": "Retrieves information about an experiment run, including its status, start time, and exposure settings.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--experiment-definition-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-extension",
+   "description": "Returns information about an AppConfig extension.",
+   "options": [
+    {
+     "name": "--extension-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-extension-association",
+   "description": "Returns information about an AppConfig extension association.",
+   "options": [
+    {
+     "name": "--extension-association-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-hosted-configuration-version",
+   "description": "Retrieves information about a specific configuration version.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-number",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-applications",
+   "description": "Lists all applications in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-configuration-profiles",
+   "description": "Lists the configuration profiles for an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployment-strategies",
+   "description": "Lists deployment strategies.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-deployments",
+   "description": "Lists the deployments for an environment in descending deployment number order.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-environments",
+   "description": "Lists the environments for an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-experiment-definitions",
+   "description": "Lists the experiment definitions for an account.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {}
+    },
+    {
+     "name": "--configuration-profile-identifier",
+     "args": {}
+    },
+    {
+     "name": "--environment-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "IDLE",
+       "ARCHIVED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-experiment-run-events",
+   "description": "Lists the events for a specified experiment run.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--experiment-definition-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--run",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-experiment-runs",
+   "description": "Lists the experiment runs for a specified experiment definition.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--experiment-definition-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "RUNNING",
+       "DONE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-extension-associations",
+   "description": "Lists all AppConfig extension associations in the account.",
+   "options": [
+    {
+     "name": "--extension-identifier",
+     "args": {}
+    },
+    {
+     "name": "--extension-version-number",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-extensions",
+   "description": "Lists all custom and Amazon Web Services authored AppConfig extensions in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-hosted-configuration-versions",
+   "description": "Lists configurations stored in the AppConfig hosted configuration store by version.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--version-label",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Retrieves the list of key-value tags assigned to the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-deployment",
+   "description": "Starts a deployment.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-strategy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dynamic-extension-parameters",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--latest-deployment-number",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-experiment-run",
+   "description": "Starts an experiment run for the specified experiment definition.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-parameters",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--experiment-definition-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exposure-percentage",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--treatment-overrides",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-deployment",
+   "description": "Stops a deployment.",
+   "options": [
+    {
+     "name": "--allow-revert"
+    },
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-revert"
+    }
+   ]
+  },
+  {
+   "name": "stop-experiment-run",
+   "description": "Stops a running experiment.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-parameters",
+     "args": {}
+    },
+    {
+     "name": "--experiment-definition-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--result",
+     "args": {}
+    },
+    {
+     "name": "--run",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns metadata to an AppConfig resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes a tag key and value from an AppConfig resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-account-settings",
+   "description": "Updates the value of the DeletionProtection parameter.",
+   "options": [
+    {
+     "name": "--deletion-protection",
+     "args": {}
+    },
+    {
+     "name": "--vended-metrics",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-application",
+   "description": "Updates an application.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-configuration-profile",
+   "description": "Updates a configuration profile.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-identifier",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--retrieval-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--validators",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-deployment-strategy",
+   "description": "Updates a deployment strategy.",
+   "options": [
+    {
+     "name": "--deployment-duration-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--deployment-strategy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--final-bake-time-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--growth-factor",
+     "args": {}
+    },
+    {
+     "name": "--growth-type",
+     "args": {
+      "suggestions": [
+       "LINEAR",
+       "EXPONENTIAL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-environment",
+   "description": "Updates an environment.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--monitors",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-experiment-definition",
+   "description": "Updates an experiment definition.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--audience-description",
+     "args": {}
+    },
+    {
+     "name": "--audience-rule",
+     "args": {}
+    },
+    {
+     "name": "--control",
+     "args": {}
+    },
+    {
+     "name": "--experiment-definition-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hypothesis",
+     "args": {}
+    },
+    {
+     "name": "--launch-criteria",
+     "args": {}
+    },
+    {
+     "name": "--treatments",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-experiment-run",
+   "description": "Updates a running experiment.",
+   "options": [
+    {
+     "name": "--application-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-parameters",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--experiment-definition-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exposure-percentage",
+     "args": {}
+    },
+    {
+     "name": "--run",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--treatment-overrides",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-extension",
+   "description": "Updates an AppConfig extension.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--extension-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-extension-association",
+   "description": "Updates an association.",
+   "options": [
+    {
+     "name": "--extension-association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "validate-configuration",
+   "description": "Uses the validators in a configuration profile to validate a configuration.",
+   "options": [
+    {
+     "name": "--application-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "deployment-complete",
+     "description": "Wait until JMESPath query State returns COMPLETE when polling with ``get-deployment``.",
+     "options": [
+      {
+       "name": "--application-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--deployment-number",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--environment-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "environment-ready-for-deployment",
+     "description": "Wait until JMESPath query State returns ReadyForDeployment when polling with ``get-environment``.",
+     "options": [
+      {
+       "name": "--application-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--environment-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

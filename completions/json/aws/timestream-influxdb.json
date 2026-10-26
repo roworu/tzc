@@ -1,0 +1,582 @@
+{
+ "name": "timestream-influxdb",
+ "description": "Amazon Timestream for InfluxDB is a managed time-series database engine that makes it easy for application developers and DevOps teams to run InfluxDB databases on Amazon Web Services for near real-time time-series applications using open-source APIs.",
+ "subcommands": [
+  {
+   "name": "create-db-cluster",
+   "description": "Creates a new Timestream for InfluxDB cluster.",
+   "options": [
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--bucket",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-type",
+     "args": {
+      "suggestions": [
+       "db.influx.medium",
+       "db.influx.large",
+       "db.influx.xlarge",
+       "db.influx.2xlarge",
+       "db.influx.4xlarge",
+       "db.influx.8xlarge",
+       "db.influx.12xlarge",
+       "db.influx.16xlarge",
+       "db.influx.24xlarge"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--db-parameter-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-storage-type",
+     "args": {
+      "suggestions": [
+       "InfluxIOIncludedT1",
+       "InfluxIOIncludedT2",
+       "InfluxIOIncludedT3"
+      ]
+     }
+    },
+    {
+     "name": "--deployment-type",
+     "args": {
+      "suggestions": [
+       "MULTI_NODE_READ_REPLICAS"
+      ]
+     }
+    },
+    {
+     "name": "--failover-mode",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "NO_FAILOVER"
+      ]
+     }
+    },
+    {
+     "name": "--log-delivery-configuration",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-schedule",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL"
+      ]
+     }
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--organization",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-subnet-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-db-instance",
+   "description": "Creates a new Timestream for InfluxDB DB instance.",
+   "options": [
+    {
+     "name": "--allocated-storage",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-type",
+     "args": {
+      "suggestions": [
+       "db.influx.medium",
+       "db.influx.large",
+       "db.influx.xlarge",
+       "db.influx.2xlarge",
+       "db.influx.4xlarge",
+       "db.influx.8xlarge",
+       "db.influx.12xlarge",
+       "db.influx.16xlarge",
+       "db.influx.24xlarge"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--db-parameter-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-storage-type",
+     "args": {
+      "suggestions": [
+       "InfluxIOIncludedT1",
+       "InfluxIOIncludedT2",
+       "InfluxIOIncludedT3"
+      ]
+     }
+    },
+    {
+     "name": "--deployment-type",
+     "args": {
+      "suggestions": [
+       "SINGLE_AZ",
+       "WITH_MULTIAZ_STANDBY"
+      ]
+     }
+    },
+    {
+     "name": "--log-delivery-configuration",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-schedule",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--network-type",
+     "args": {
+      "suggestions": [
+       "IPV4",
+       "DUAL"
+      ]
+     }
+    },
+    {
+     "name": "--no-publicly-accessible"
+    },
+    {
+     "name": "--organization",
+     "args": {}
+    },
+    {
+     "name": "--password",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--publicly-accessible"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    },
+    {
+     "name": "--vpc-security-group-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-subnet-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-db-parameter-group",
+   "description": "Creates a new Timestream for InfluxDB DB parameter group to associate with DB instances.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-db-cluster",
+   "description": "Deletes a Timestream for InfluxDB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-db-instance",
+   "description": "Deletes a Timestream for InfluxDB DB instance.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-db-cluster",
+   "description": "Retrieves information about a Timestream for InfluxDB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-db-instance",
+   "description": "Returns a Timestream for InfluxDB DB instance.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-db-parameter-group",
+   "description": "Returns a Timestream for InfluxDB DB parameter group.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-db-clusters",
+   "description": "Returns a list of Timestream for InfluxDB DB clusters.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-db-instances",
+   "description": "Returns a list of Timestream for InfluxDB DB instances.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-db-instances-for-cluster",
+   "description": "Returns a list of Timestream for InfluxDB clusters.",
+   "options": [
+    {
+     "name": "--db-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-db-parameter-groups",
+   "description": "Returns a list of Timestream for InfluxDB DB parameter groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "A list of tags applied to the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reboot-db-cluster",
+   "description": "Reboots a Timestream for InfluxDB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reboot-db-instance",
+   "description": "Reboots a Timestream for InfluxDB instance.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tags are composed of a Key/Value pairs.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the tag from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-db-cluster",
+   "description": "Updates a Timestream for InfluxDB cluster.",
+   "options": [
+    {
+     "name": "--db-cluster-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--db-instance-type",
+     "args": {
+      "suggestions": [
+       "db.influx.medium",
+       "db.influx.large",
+       "db.influx.xlarge",
+       "db.influx.2xlarge",
+       "db.influx.4xlarge",
+       "db.influx.8xlarge",
+       "db.influx.12xlarge",
+       "db.influx.16xlarge",
+       "db.influx.24xlarge"
+      ]
+     }
+    },
+    {
+     "name": "--db-parameter-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--failover-mode",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "NO_FAILOVER"
+      ]
+     }
+    },
+    {
+     "name": "--log-delivery-configuration",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-schedule",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-db-instance",
+   "description": "Updates a Timestream for InfluxDB DB instance.",
+   "options": [
+    {
+     "name": "--allocated-storage",
+     "args": {}
+    },
+    {
+     "name": "--db-instance-type",
+     "args": {
+      "suggestions": [
+       "db.influx.medium",
+       "db.influx.large",
+       "db.influx.xlarge",
+       "db.influx.2xlarge",
+       "db.influx.4xlarge",
+       "db.influx.8xlarge",
+       "db.influx.12xlarge",
+       "db.influx.16xlarge",
+       "db.influx.24xlarge"
+      ]
+     }
+    },
+    {
+     "name": "--db-parameter-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--db-storage-type",
+     "args": {
+      "suggestions": [
+       "InfluxIOIncludedT1",
+       "InfluxIOIncludedT2",
+       "InfluxIOIncludedT3"
+      ]
+     }
+    },
+    {
+     "name": "--deployment-type",
+     "args": {
+      "suggestions": [
+       "SINGLE_AZ",
+       "WITH_MULTIAZ_STANDBY"
+      ]
+     }
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-delivery-configuration",
+     "args": {}
+    },
+    {
+     "name": "--maintenance-schedule",
+     "args": {}
+    },
+    {
+     "name": "--port",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,941 @@
+{
+ "name": "groundstation",
+ "description": "Welcome to the AWS Ground Station API Reference.",
+ "subcommands": [
+  {
+   "name": "cancel-contact",
+   "description": "Cancels or stops a contact with a specified contact ID based on its position in the contact lifecycle.",
+   "options": [
+    {
+     "name": "--contact-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-config",
+   "description": "Creates a Config with the specified configData parameters.",
+   "options": [
+    {
+     "name": "--config-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataflow-endpoint-group",
+   "description": "Creates a DataflowEndpoint group containing the specified list of DataflowEndpoint objects.",
+   "options": [
+    {
+     "name": "--contact-post-pass-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--contact-pre-pass-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dataflow-endpoint-group-v2",
+   "description": "Creates a DataflowEndpoint group containing the specified list of Ground Station Agent based endpoints.",
+   "options": [
+    {
+     "name": "--contact-post-pass-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--contact-pre-pass-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--endpoints",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-ephemeris",
+   "description": "Create an ephemeris with your specified EphemerisData.",
+   "options": [
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--ephemeris",
+     "args": {}
+    },
+    {
+     "name": "--expiration-time",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--satellite-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-mission-profile",
+   "description": "Creates a mission profile.",
+   "options": [
+    {
+     "name": "--contact-post-pass-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--contact-pre-pass-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--dataflow-edges",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--minimum-viable-contact-duration-seconds",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--streams-kms-key",
+     "args": {}
+    },
+    {
+     "name": "--streams-kms-role",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--telemetry-sink-config-arn",
+     "args": {}
+    },
+    {
+     "name": "--tracking-config-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-config",
+   "description": "Deletes a Config.",
+   "options": [
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-type",
+     "args": {
+      "suggestions": [
+       "antenna-downlink",
+       "antenna-downlink-demod-decode",
+       "tracking",
+       "dataflow-endpoint",
+       "antenna-uplink",
+       "uplink-echo",
+       "s3-recording",
+       "telemetry-sink"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dataflow-endpoint-group",
+   "description": "Deletes a dataflow endpoint group.",
+   "options": [
+    {
+     "name": "--dataflow-endpoint-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ephemeris",
+   "description": "Delete an ephemeris.",
+   "options": [
+    {
+     "name": "--ephemeris-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-mission-profile",
+   "description": "Deletes a mission profile.",
+   "options": [
+    {
+     "name": "--mission-profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-contact",
+   "description": "Describes an existing contact.",
+   "options": [
+    {
+     "name": "--contact-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-contact-version",
+   "description": "Describes a specific version of a contact.",
+   "options": [
+    {
+     "name": "--contact-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-ephemeris",
+   "description": "Retrieve information about an existing ephemeris.",
+   "options": [
+    {
+     "name": "--ephemeris-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent-configuration",
+   "description": "For use by AWS Ground Station Agent and shouldn't be called directly.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent-task-response-url",
+   "description": "For use by AWS Ground Station Agent and shouldn't be called directly.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-config",
+   "description": "Returns Config information.",
+   "options": [
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-type",
+     "args": {
+      "suggestions": [
+       "antenna-downlink",
+       "antenna-downlink-demod-decode",
+       "tracking",
+       "dataflow-endpoint",
+       "antenna-uplink",
+       "uplink-echo",
+       "s3-recording",
+       "telemetry-sink"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dataflow-endpoint-group",
+   "description": "Returns the dataflow endpoint group.",
+   "options": [
+    {
+     "name": "--dataflow-endpoint-group-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-minute-usage",
+   "description": "Returns the number of reserved minutes used by account.",
+   "options": [
+    {
+     "name": "--month",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--year",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-mission-profile",
+   "description": "Returns a mission profile.",
+   "options": [
+    {
+     "name": "--mission-profile-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-satellite",
+   "description": "Returns a satellite.",
+   "options": [
+    {
+     "name": "--satellite-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-antennas",
+   "description": "Returns a list of antennas at a specified ground station.",
+   "options": [
+    {
+     "name": "--ground-station-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-configs",
+   "description": "Returns a list of Config objects.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-contact-versions",
+   "description": "Returns a list of versions for a specified contact.",
+   "options": [
+    {
+     "name": "--contact-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-contacts",
+   "description": "Returns a list of contacts.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ephemeris",
+     "args": {}
+    },
+    {
+     "name": "--ground-station",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--mission-profile-arn",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--satellite-arn",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-list",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-dataflow-endpoint-groups",
+   "description": "Returns a list of DataflowEndpoint groups.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ephemerides",
+   "description": "List your existing ephemerides.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ephemeris-type",
+     "args": {
+      "suggestions": [
+       "TLE",
+       "OEM",
+       "AZ_EL",
+       "SERVICE_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--satellite-id",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-list",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ground-station-reservations",
+   "description": "Returns a list of reservations for a specified ground station.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ground-station-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reservation-types",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ground-stations",
+   "description": "Returns a list of ground stations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--satellite-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-mission-profiles",
+   "description": "Returns a list of mission profiles.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-satellites",
+   "description": "Returns a list of satellites.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags for a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-agent",
+   "description": "For use by AWS Ground Station Agent and shouldn't be called directly.",
+   "options": [
+    {
+     "name": "--agent-details",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--discovery-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "reserve-contact",
+   "description": "Reserves a contact using specified parameters.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ground-station",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mission-profile-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--satellite-arn",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tracking-overrides",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns a tag to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deassigns a resource tag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-agent-status",
+   "description": "For use by AWS Ground Station Agent and shouldn't be called directly.",
+   "options": [
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--aggregate-status",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--component-statuses",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-config",
+   "description": "Updates the Config used when scheduling contacts.",
+   "options": [
+    {
+     "name": "--config-data",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-type",
+     "args": {
+      "suggestions": [
+       "antenna-downlink",
+       "antenna-downlink-demod-decode",
+       "tracking",
+       "dataflow-endpoint",
+       "antenna-uplink",
+       "uplink-echo",
+       "s3-recording",
+       "telemetry-sink"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-contact",
+   "description": "Updates a specific contact.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--contact-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--satellite-arn",
+     "args": {}
+    },
+    {
+     "name": "--tracking-overrides",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-ephemeris",
+   "description": "Update an existing ephemeris.",
+   "options": [
+    {
+     "name": "--enabled",
+     "priority": 75
+    },
+    {
+     "name": "--ephemeris-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-mission-profile",
+   "description": "Updates a mission profile.",
+   "options": [
+    {
+     "name": "--contact-post-pass-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--contact-pre-pass-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--dataflow-edges",
+     "args": {}
+    },
+    {
+     "name": "--minimum-viable-contact-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--mission-profile-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--streams-kms-key",
+     "args": {}
+    },
+    {
+     "name": "--streams-kms-role",
+     "args": {}
+    },
+    {
+     "name": "--telemetry-sink-config-arn",
+     "args": {}
+    },
+    {
+     "name": "--tracking-config-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "contact-scheduled",
+     "description": "Waits until a contact has been scheduled It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--contact-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "contact-updated",
+     "description": "Waits until a contact has been updated It will poll every 5 seconds until a successful state has been reached.",
+     "options": [
+      {
+       "name": "--contact-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--version-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

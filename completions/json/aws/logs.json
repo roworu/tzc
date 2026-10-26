@@ -1,0 +1,2747 @@
+{
+ "name": "logs",
+ "description": "You can use Amazon CloudWatch Logs to monitor, store, and access your log files from EC2 instances, CloudTrail, and other sources.",
+ "subcommands": [
+  {
+   "name": "associate-kms-key",
+   "description": "Associates the specified KMS key with either one log group in the account, or with all stored CloudWatch Logs query insights results in the account.",
+   "options": [
+    {
+     "name": "--kms-key-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "associate-source-to-s3-table-integration",
+   "description": "Associates a data source with an S3 Table Integration for query access in the 'logs' namespace.",
+   "options": [
+    {
+     "name": "--data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-export-task",
+   "description": "Cancels the specified export task.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-import-task",
+   "description": "Cancels an active import task and stops importing data from the CloudTrail Lake Event Data Store.",
+   "options": [
+    {
+     "name": "--import-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-delivery",
+   "description": "Creates a delivery.",
+   "options": [
+    {
+     "name": "--delivery-destination-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delivery-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--field-delimiter",
+     "args": {}
+    },
+    {
+     "name": "--record-fields",
+     "args": {}
+    },
+    {
+     "name": "--s3-delivery-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-export-task",
+   "description": "Creates an export task so that you can efficiently export data from a log group to an Amazon S3 bucket.",
+   "options": [
+    {
+     "name": "--destination",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-prefix",
+     "args": {}
+    },
+    {
+     "name": "--from",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-stream-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--task-name",
+     "args": {}
+    },
+    {
+     "name": "--to",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-import-task",
+   "description": "Starts an import from a data source to CloudWatch Log and creates a managed log group as the destination for the imported data.",
+   "options": [
+    {
+     "name": "--import-filter",
+     "args": {}
+    },
+    {
+     "name": "--import-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--import-source-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-log-anomaly-detector",
+   "description": "Creates an anomaly detector that regularly scans one or more log groups and look for patterns and anomalies in the logs.",
+   "options": [
+    {
+     "name": "--anomaly-visibility-time",
+     "args": {}
+    },
+    {
+     "name": "--detector-name",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-frequency",
+     "args": {
+      "suggestions": [
+       "ONE_MIN",
+       "FIVE_MIN",
+       "TEN_MIN",
+       "FIFTEEN_MIN",
+       "THIRTY_MIN",
+       "ONE_HOUR"
+      ]
+     }
+    },
+    {
+     "name": "--filter-pattern",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--log-group-arn-list",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-log-group",
+   "description": "Creates a log group with the specified name.",
+   "options": [
+    {
+     "name": "--deletion-protection-enabled"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--log-group-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "INFREQUENT_ACCESS",
+       "DELIVERY"
+      ]
+     }
+    },
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-deletion-protection-enabled"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-log-stream",
+   "description": "Creates a log stream for the specified log group.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-stream-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-lookup-table",
+   "description": "Creates a lookup table by uploading CSV data or from CloudWatch Logs query results.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--lookup-table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-id",
+     "args": {}
+    },
+    {
+     "name": "--table-body",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-scheduled-query",
+   "description": "Creates a scheduled query that runs CloudWatch Logs Insights queries at regular intervals.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--end-time-offset",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-language",
+     "args": {
+      "suggestions": [
+       "CWLI",
+       "SQL",
+       "PPL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-end-time",
+     "args": {}
+    },
+    {
+     "name": "--schedule-expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-start-time",
+     "args": {}
+    },
+    {
+     "name": "--start-time-offset",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timezone",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-account-policy",
+   "description": "Deletes a CloudWatch Logs account policy.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "DATA_PROTECTION_POLICY",
+       "SUBSCRIPTION_FILTER_POLICY",
+       "FIELD_INDEX_POLICY",
+       "TRANSFORMER_POLICY",
+       "METRIC_EXTRACTION_POLICY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-protection-policy",
+   "description": "Deletes the data protection policy from the specified log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-delivery",
+   "description": "Deletes a delivery.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-delivery-destination",
+   "description": "Deletes a delivery destination.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-delivery-destination-policy",
+   "description": "Deletes a delivery destination policy.",
+   "options": [
+    {
+     "name": "--delivery-destination-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-delivery-source",
+   "description": "Deletes a delivery source.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-destination",
+   "description": "Deletes the specified destination, and eventually disables all the subscription filters that publish to it.",
+   "options": [
+    {
+     "name": "--destination-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-index-policy",
+   "description": "Deletes a log-group level field index policy that was applied to a single log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-integration",
+   "description": "Deletes the integration between CloudWatch Logs and OpenSearch Service.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--integration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "delete-log-anomaly-detector",
+   "description": "Deletes the specified CloudWatch Logs anomaly detector.",
+   "options": [
+    {
+     "name": "--anomaly-detector-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-log-group",
+   "description": "Deletes the specified log group and permanently deletes all the archived log events associated with the log group.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-log-stream",
+   "description": "Deletes the specified log stream and permanently deletes all the archived log events associated with the log stream.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-stream-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-lookup-table",
+   "description": "Deletes a lookup table permanently.",
+   "options": [
+    {
+     "name": "--lookup-table-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-metric-filter",
+   "description": "Deletes the specified metric filter.",
+   "options": [
+    {
+     "name": "--filter-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-query-definition",
+   "description": "Deletes a saved CloudWatch Logs Insights query definition.",
+   "options": [
+    {
+     "name": "--query-definition-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes a resource policy from this account.",
+   "options": [
+    {
+     "name": "--expected-revision-id",
+     "args": {}
+    },
+    {
+     "name": "--policy-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-retention-policy",
+   "description": "Deletes the specified retention policy.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scheduled-query",
+   "description": "Deletes a scheduled query and stops all future executions.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subscription-filter",
+   "description": "Deletes the specified subscription filter.",
+   "options": [
+    {
+     "name": "--filter-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-syslog-configuration",
+   "description": "Deletes a syslog configuration for a log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-transformer",
+   "description": "Deletes the log transformer for the specified log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-account-policies",
+   "description": "Returns a list of all CloudWatch Logs account policies in the account.",
+   "options": [
+    {
+     "name": "--account-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-name",
+     "args": {}
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "DATA_PROTECTION_POLICY",
+       "SUBSCRIPTION_FILTER_POLICY",
+       "FIELD_INDEX_POLICY",
+       "TRANSFORMER_POLICY",
+       "METRIC_EXTRACTION_POLICY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-configuration-templates",
+   "description": "Use this operation to return the valid and default values that are used when creating delivery sources, delivery destinations, and deliveries.",
+   "options": [
+    {
+     "name": "--delivery-destination-types",
+     "args": {}
+    },
+    {
+     "name": "--log-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-deliveries",
+   "description": "Retrieves a list of the deliveries that have been created in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-delivery-destinations",
+   "description": "Retrieves a list of the delivery destinations that have been created in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-delivery-sources",
+   "description": "Retrieves a list of the delivery sources that have been created in the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-destinations",
+   "description": "Lists all your destinations.",
+   "options": [
+    {
+     "name": "--destination-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-export-tasks",
+   "description": "Lists the specified export tasks.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-code",
+     "args": {
+      "suggestions": [
+       "CANCELLED",
+       "COMPLETED",
+       "FAILED",
+       "PENDING",
+       "PENDING_CANCEL",
+       "RUNNING"
+      ]
+     }
+    },
+    {
+     "name": "--task-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-field-indexes",
+   "description": "Returns a list of custom and default field indexes which are discovered in log data.",
+   "options": [
+    {
+     "name": "--log-group-identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-import-task-batches",
+   "description": "Gets detailed information about the individual batches within an import task, including their status and any error messages.",
+   "options": [
+    {
+     "name": "--batch-import-status",
+     "args": {}
+    },
+    {
+     "name": "--import-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-import-tasks",
+   "description": "Lists and describes import tasks, with optional filtering by import status and source ARN.",
+   "options": [
+    {
+     "name": "--import-id",
+     "args": {}
+    },
+    {
+     "name": "--import-source-arn",
+     "args": {}
+    },
+    {
+     "name": "--import-status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "CANCELLED",
+       "COMPLETED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-index-policies",
+   "description": "Returns the field index policies of the specified log group.",
+   "options": [
+    {
+     "name": "--log-group-identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-log-groups",
+   "description": "Returns information about log groups, including data sources that ingest into each log group.",
+   "options": [
+    {
+     "name": "--account-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--include-linked-accounts"
+    },
+    {
+     "name": "--log-group-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "INFREQUENT_ACCESS",
+       "DELIVERY"
+      ]
+     }
+    },
+    {
+     "name": "--log-group-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name-pattern",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-linked-accounts"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-log-streams",
+   "description": "Lists the log streams for the specified log group.",
+   "options": [
+    {
+     "name": "--descending"
+    },
+    {
+     "name": "--log-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--log-stream-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-descending"
+    },
+    {
+     "name": "--order-by",
+     "args": {
+      "suggestions": [
+       "LogStreamName",
+       "LastEventTime"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-lookup-tables",
+   "description": "Retrieves metadata about lookup tables in your account.",
+   "options": [
+    {
+     "name": "--lookup-table-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-metric-filters",
+   "description": "Lists the specified metric filters.",
+   "options": [
+    {
+     "name": "--filter-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {}
+    },
+    {
+     "name": "--metric-namespace",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-queries",
+   "description": "Returns a list of CloudWatch Logs Insights queries that are scheduled, running, or have been run recently in this account.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-language",
+     "args": {
+      "suggestions": [
+       "CWLI",
+       "SQL",
+       "PPL"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Scheduled",
+       "Running",
+       "Complete",
+       "Failed",
+       "Cancelled",
+       "Timeout",
+       "Unknown"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-query-definitions",
+   "description": "This operation returns a paginated list of your saved CloudWatch Logs Insights query definitions.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--query-definition-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--query-language",
+     "args": {
+      "suggestions": [
+       "CWLI",
+       "SQL",
+       "PPL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-policies",
+   "description": "Lists the resource policies in this account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-scope",
+     "args": {
+      "suggestions": [
+       "ACCOUNT",
+       "RESOURCE"
+      ]
+     }
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-subscription-filters",
+   "description": "Lists the subscription filters for the specified log group.",
+   "options": [
+    {
+     "name": "--filter-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-kms-key",
+   "description": "Disassociates the specified KMS key from the specified log group or from all CloudWatch Logs Insights query results in the account.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-source-from-s3-table-integration",
+   "description": "Disassociates a data source from an S3 Table Integration, removing query access and deleting all associated data from the integration.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "filter-log-events",
+   "description": "Lists log events from the specified log group.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--filter-pattern",
+     "args": {}
+    },
+    {
+     "name": "--interleaved"
+    },
+    {
+     "name": "--log-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--log-stream-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--log-stream-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-interleaved"
+    },
+    {
+     "name": "--no-start-from-head"
+    },
+    {
+     "name": "--no-unmask"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-from-head"
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--unmask"
+    }
+   ]
+  },
+  {
+   "name": "get-data-protection-policy",
+   "description": "Returns information about a log group data protection policy.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-delivery",
+   "description": "Returns complete information about one logical delivery.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-delivery-destination",
+   "description": "Retrieves complete information about one delivery destination.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-delivery-destination-policy",
+   "description": "Retrieves the delivery destination policy assigned to the delivery destination that you specify.",
+   "options": [
+    {
+     "name": "--delivery-destination-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-delivery-source",
+   "description": "Retrieves complete information about one delivery source.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-integration",
+   "description": "Returns information about one integration between CloudWatch Logs and OpenSearch Service.",
+   "options": [
+    {
+     "name": "--integration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-log-anomaly-detector",
+   "description": "Retrieves information about the log anomaly detector that you specify.",
+   "options": [
+    {
+     "name": "--anomaly-detector-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-log-events",
+   "description": "Lists log events from the specified log stream.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--log-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--log-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-start-from-head"
+    },
+    {
+     "name": "--no-unmask"
+    },
+    {
+     "name": "--start-from-head"
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--unmask"
+    }
+   ]
+  },
+  {
+   "name": "get-log-fields",
+   "description": "Discovers available fields for a specific data source and type.",
+   "options": [
+    {
+     "name": "--data-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-log-group-fields",
+   "description": "Returns a list of the fields that are included in log events in the specified log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-log-record",
+   "description": "Retrieves all of the fields and values of a single log event.",
+   "options": [
+    {
+     "name": "--log-record-pointer",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-unmask"
+    },
+    {
+     "name": "--unmask"
+    }
+   ]
+  },
+  {
+   "name": "get-lookup-table",
+   "description": "Retrieves the full content of a lookup table, including the CSV data.",
+   "options": [
+    {
+     "name": "--lookup-table-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-query-results",
+   "description": "Returns the results from the specified query.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-scheduled-query",
+   "description": "Retrieves details about a specific scheduled query, including its configuration, execution status, and metadata.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-scheduled-query-history",
+   "description": "Retrieves the execution history of a scheduled query within a specified time range, including query results and destination processing status.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-statuses",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-storage-tier-policy",
+   "description": "Returns the storage tier policy for the account."
+  },
+  {
+   "name": "get-transformer",
+   "description": "Returns the information about the log transformer associated with this log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-aggregate-log-group-summaries",
+   "description": "Returns an aggregate summary of all log groups in the Region grouped by specified data source characteristics.",
+   "options": [
+    {
+     "name": "--account-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--data-sources",
+     "args": {}
+    },
+    {
+     "name": "--group-by",
+     "args": {
+      "suggestions": [
+       "DATA_SOURCE_NAME_TYPE_AND_FORMAT",
+       "DATA_SOURCE_NAME_AND_TYPE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--include-linked-accounts"
+    },
+    {
+     "name": "--log-group-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "INFREQUENT_ACCESS",
+       "DELIVERY"
+      ]
+     }
+    },
+    {
+     "name": "--log-group-name-pattern",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-linked-accounts"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-anomalies",
+   "description": "Returns a list of anomalies that log anomaly detectors have found.",
+   "options": [
+    {
+     "name": "--anomaly-detector-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--suppression-state",
+     "args": {
+      "suggestions": [
+       "SUPPRESSED",
+       "UNSUPPRESSED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-integrations",
+   "description": "Returns a list of integrations between CloudWatch Logs and other services in this account.",
+   "options": [
+    {
+     "name": "--integration-name-prefix",
+     "args": {}
+    },
+    {
+     "name": "--integration-status",
+     "args": {
+      "suggestions": [
+       "PROVISIONING",
+       "ACTIVE",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--integration-type",
+     "args": {
+      "suggestions": [
+       "OPENSEARCH"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-log-anomaly-detectors",
+   "description": "Retrieves a list of the log anomaly detectors in the account.",
+   "options": [
+    {
+     "name": "--filter-log-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-log-groups",
+   "description": "Returns a list of log groups in the Region in your account.",
+   "options": [
+    {
+     "name": "--account-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--data-sources",
+     "args": {}
+    },
+    {
+     "name": "--field-index-names",
+     "args": {}
+    },
+    {
+     "name": "--include-linked-accounts"
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--log-group-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "INFREQUENT_ACCESS",
+       "DELIVERY"
+      ]
+     }
+    },
+    {
+     "name": "--log-group-name-pattern",
+     "args": {}
+    },
+    {
+     "name": "--log-group-tags",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-include-linked-accounts"
+    }
+   ]
+  },
+  {
+   "name": "list-log-groups-for-query",
+   "description": "Returns a list of the log groups that were analyzed during a single CloudWatch Logs Insights query.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-scheduled-queries",
+   "description": "Lists all scheduled queries in your account and region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--schedule-type",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_MANAGED",
+       "AWS_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-sources-for-s3-table-integration",
+   "description": "Returns a list of data source associations for a specified S3 Table Integration, showing which data sources are currently associated for query access.",
+   "options": [
+    {
+     "name": "--integration-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-syslog-configurations",
+   "description": "Returns a list of syslog configurations.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Displays the tags associated with a CloudWatch Logs resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-log-group",
+   "description": "The ListTagsLogGroup operation is on the path to deprecation.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-account-policy",
+   "description": "Creates an account-level data protection policy, subscription filter policy, field index policy, transformer policy, or metric extraction policy that applies to all log groups, a subset of log groups, or a data source name and type combination in the account.",
+   "options": [
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-type",
+     "args": {
+      "suggestions": [
+       "DATA_PROTECTION_POLICY",
+       "SUBSCRIPTION_FILTER_POLICY",
+       "FIELD_INDEX_POLICY",
+       "TRANSFORMER_POLICY",
+       "METRIC_EXTRACTION_POLICY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {
+      "suggestions": [
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--selection-criteria",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bearer-token-authentication",
+   "description": "Enables or disables bearer token authentication for the specified log group.",
+   "options": [
+    {
+     "name": "--bearer-token-authentication-enabled",
+     "priority": 75
+    },
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-bearer-token-authentication-enabled"
+    }
+   ]
+  },
+  {
+   "name": "put-data-protection-policy",
+   "description": "Creates a data protection policy for the specified log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-delivery-destination",
+   "description": "Creates or updates a logical delivery destination.",
+   "options": [
+    {
+     "name": "--delivery-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--delivery-destination-type",
+     "args": {
+      "suggestions": [
+       "S3",
+       "CWL",
+       "FH",
+       "XRAY"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-format",
+     "args": {
+      "suggestions": [
+       "json",
+       "plain",
+       "w3c",
+       "raw",
+       "parquet"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-delivery-destination-policy",
+   "description": "Creates and assigns an IAM policy that grants permissions to CloudWatch Logs to deliver logs cross-account to a specified destination in this account.",
+   "options": [
+    {
+     "name": "--delivery-destination-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delivery-destination-policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-delivery-source",
+   "description": "Creates or updates a logical delivery source.",
+   "options": [
+    {
+     "name": "--delivery-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--log-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-destination",
+   "description": "Creates or updates a destination.",
+   "options": [
+    {
+     "name": "--destination-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-destination-policy",
+   "description": "Creates or updates an access policy associated with an existing destination.",
+   "options": [
+    {
+     "name": "--access-policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-update"
+    },
+    {
+     "name": "--no-force-update"
+    }
+   ]
+  },
+  {
+   "name": "put-index-policy",
+   "description": "Creates or updates a field index policy for the specified log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-integration",
+   "description": "Creates an integration between CloudWatch Logs and another service in this account.",
+   "options": [
+    {
+     "name": "--integration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--integration-type",
+     "args": {
+      "suggestions": [
+       "OPENSEARCH"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-log-events",
+   "description": "Uploads a batch of log events to the specified log stream.",
+   "options": [
+    {
+     "name": "--entity",
+     "args": {}
+    },
+    {
+     "name": "--log-events",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sequence-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-log-group-deletion-protection",
+   "description": "Enables or disables deletion protection for the specified log group.",
+   "options": [
+    {
+     "name": "--deletion-protection-enabled",
+     "priority": 75
+    },
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-deletion-protection-enabled"
+    }
+   ]
+  },
+  {
+   "name": "put-metric-filter",
+   "description": "Creates or updates a metric filter and associates it with the specified log group.",
+   "options": [
+    {
+     "name": "--apply-on-transformed-logs"
+    },
+    {
+     "name": "--emit-system-field-dimensions",
+     "args": {}
+    },
+    {
+     "name": "--field-selection-criteria",
+     "args": {}
+    },
+    {
+     "name": "--filter-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-pattern",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-transformations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-apply-on-transformed-logs"
+    }
+   ]
+  },
+  {
+   "name": "put-query-definition",
+   "description": "Creates or updates a query definition for CloudWatch Logs Insights.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--log-group-names",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--query-definition-id",
+     "args": {}
+    },
+    {
+     "name": "--query-language",
+     "args": {
+      "suggestions": [
+       "CWLI",
+       "SQL",
+       "PPL"
+      ]
+     }
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Creates or updates a resource policy allowing other Amazon Web Services services to put log events to this account, such as Amazon Route 53.",
+   "options": [
+    {
+     "name": "--expected-revision-id",
+     "args": {}
+    },
+    {
+     "name": "--policy-document",
+     "args": {}
+    },
+    {
+     "name": "--policy-name",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-retention-policy",
+   "description": "Sets the retention of the specified log group.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retention-in-days",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-storage-tier-policy",
+   "description": "Sets the storage tier policy for the account.",
+   "options": [
+    {
+     "name": "--storage-tier",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "INTELLIGENT_TIERING"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-subscription-filter",
+   "description": "Creates or updates a subscription filter and associates it with the specified log group.",
+   "options": [
+    {
+     "name": "--apply-on-transformed-logs"
+    },
+    {
+     "name": "--destination-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--distribution",
+     "args": {
+      "suggestions": [
+       "Random",
+       "ByLogStream"
+      ]
+     }
+    },
+    {
+     "name": "--emit-system-fields",
+     "args": {}
+    },
+    {
+     "name": "--field-selection-criteria",
+     "args": {}
+    },
+    {
+     "name": "--filter-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-pattern",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-apply-on-transformed-logs"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-syslog-configuration",
+   "description": "Creates or updates a syslog configuration for a log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-endpoint-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-transformer",
+   "description": "Creates or updates a log transformer for a single log group.",
+   "options": [
+    {
+     "name": "--log-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transformer-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-live-tail",
+   "description": "Starts a Live Tail streaming session for one or more log groups.",
+   "options": [
+    {
+     "name": "--log-event-filter-pattern",
+     "args": {}
+    },
+    {
+     "name": "--log-group-identifiers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-stream-name-prefixes",
+     "args": {}
+    },
+    {
+     "name": "--log-stream-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-query",
+   "description": "Starts a query of one or more log groups or data sources using CloudWatch Logs Insights.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    },
+    {
+     "name": "--log-group-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--log-group-name",
+     "args": {}
+    },
+    {
+     "name": "--log-group-names",
+     "args": {}
+    },
+    {
+     "name": "--query-language",
+     "args": {
+      "suggestions": [
+       "CWLI",
+       "SQL",
+       "PPL"
+      ]
+     }
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-query",
+   "description": "Stops a CloudWatch Logs Insights query that is in progress.",
+   "options": [
+    {
+     "name": "--query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-log-group",
+   "description": "The TagLogGroup operation is on the path to deprecation.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified CloudWatch Logs resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-metric-filter",
+   "description": "Tests the filter pattern of a metric filter against a sample of log event messages.",
+   "options": [
+    {
+     "name": "--filter-pattern",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-event-messages",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-transformer",
+   "description": "Use this operation to test a log transformer.",
+   "options": [
+    {
+     "name": "--log-event-messages",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transformer-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-log-group",
+   "description": "The UntagLogGroup operation is on the path to deprecation.",
+   "options": [
+    {
+     "name": "--log-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-anomaly",
+   "description": "Use this operation to suppress anomaly detection for a specified anomaly or pattern.",
+   "options": [
+    {
+     "name": "--anomaly-detector-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--anomaly-id",
+     "args": {}
+    },
+    {
+     "name": "--baseline"
+    },
+    {
+     "name": "--no-baseline"
+    },
+    {
+     "name": "--pattern-id",
+     "args": {}
+    },
+    {
+     "name": "--suppression-period",
+     "args": {}
+    },
+    {
+     "name": "--suppression-type",
+     "args": {
+      "suggestions": [
+       "LIMITED",
+       "INFINITE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-delivery-configuration",
+   "description": "Use this operation to update the configuration of a delivery to change either the S3 path pattern or the format of the delivered logs.",
+   "options": [
+    {
+     "name": "--field-delimiter",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--record-fields",
+     "args": {}
+    },
+    {
+     "name": "--s3-delivery-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-log-anomaly-detector",
+   "description": "Updates an existing log anomaly detector.",
+   "options": [
+    {
+     "name": "--anomaly-detector-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--anomaly-visibility-time",
+     "args": {}
+    },
+    {
+     "name": "--enabled",
+     "priority": 75
+    },
+    {
+     "name": "--evaluation-frequency",
+     "args": {
+      "suggestions": [
+       "ONE_MIN",
+       "FIVE_MIN",
+       "TEN_MIN",
+       "FIFTEEN_MIN",
+       "THIRTY_MIN",
+       "ONE_HOUR"
+      ]
+     }
+    },
+    {
+     "name": "--filter-pattern",
+     "args": {}
+    },
+    {
+     "name": "--no-enabled"
+    }
+   ]
+  },
+  {
+   "name": "update-lookup-table",
+   "description": "Updates an existing lookup table by replacing all of its content with new CSV data or CloudWatch Logs query results.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--lookup-table-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-id",
+     "args": {}
+    },
+    {
+     "name": "--table-body",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-scheduled-query",
+   "description": "Updates an existing scheduled query with new configuration.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--end-time-offset",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-group-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--query-language",
+     "args": {
+      "suggestions": [
+       "CWLI",
+       "SQL",
+       "PPL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-end-time",
+     "args": {}
+    },
+    {
+     "name": "--schedule-expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-start-time",
+     "args": {}
+    },
+    {
+     "name": "--start-time-offset",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--timezone",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

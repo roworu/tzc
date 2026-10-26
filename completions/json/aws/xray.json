@@ -1,0 +1,711 @@
+{
+ "name": "xray",
+ "description": "Amazon Web Services X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those traces.",
+ "subcommands": [
+  {
+   "name": "batch-get-traces",
+   "description": "You cannot find traces through this API if Transaction Search is enabled since trace is not indexed in X-Ray.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--trace-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-trace-retrieval",
+   "description": "Cancels an ongoing trace retrieval job initiated by StartTraceRetrieval using the provided RetrievalToken.",
+   "options": [
+    {
+     "name": "--retrieval-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-group",
+   "description": "Creates a group resource with a name and a filter expression.",
+   "options": [
+    {
+     "name": "--filter-expression",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--insights-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-sampling-rule",
+   "description": "Creates a rule to control sampling behavior for instrumented applications.",
+   "options": [
+    {
+     "name": "--sampling-rule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-group",
+   "description": "Deletes a group resource.",
+   "options": [
+    {
+     "name": "--group-arn",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes a resource policy from the target Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-revision-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-sampling-rule",
+   "description": "Deletes a sampling rule.",
+   "options": [
+    {
+     "name": "--rule-arn",
+     "args": {}
+    },
+    {
+     "name": "--rule-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-encryption-config",
+   "description": "Retrieves the current encryption configuration for X-Ray data."
+  },
+  {
+   "name": "get-group",
+   "description": "Retrieves group resource details.",
+   "options": [
+    {
+     "name": "--group-arn",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-groups",
+   "description": "Retrieves all active group details.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-indexing-rules",
+   "description": "Retrieves all indexing rules.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-insight",
+   "description": "Retrieves the summary information of an insight.",
+   "options": [
+    {
+     "name": "--insight-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-insight-events",
+   "description": "X-Ray reevaluates insights periodically until they're resolved, and records each intermediate state as an event.",
+   "options": [
+    {
+     "name": "--insight-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-insight-impact-graph",
+   "description": "Retrieves a service graph structure filtered by the specified insight.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--insight-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-insight-summaries",
+   "description": "Retrieves the summaries of all insights in the specified group matching the provided filter values.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-arn",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--states",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-retrieved-traces-graph",
+   "description": "Retrieves a service graph for traces based on the specified RetrievalToken from the CloudWatch log group generated by Transaction Search.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--retrieval-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sampling-rules",
+   "description": "Retrieves all sampling rules.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-sampling-statistic-summaries",
+   "description": "Retrieves information about recent sampling results for all sampling rules.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-sampling-targets",
+   "description": "Requests a sampling quota for rules that the service is using to sample requests.",
+   "options": [
+    {
+     "name": "--sampling-boost-statistics-documents",
+     "args": {}
+    },
+    {
+     "name": "--sampling-statistics-documents",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-graph",
+   "description": "Retrieves a document that describes services that process incoming requests, and downstream services that they call as a result.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-arn",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-time-series-service-statistics",
+   "description": "Get an aggregation of service statistics defined by a specific time range.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-selector-expression",
+     "args": {}
+    },
+    {
+     "name": "--forecast-statistics"
+    },
+    {
+     "name": "--group-arn",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-forecast-statistics"
+    },
+    {
+     "name": "--period",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-trace-graph",
+   "description": "Retrieves a service graph for one or more specific trace IDs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--trace-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-trace-segment-destination",
+   "description": "Retrieves the current destination of data sent to PutTraceSegments and OpenTelemetry protocol (OTLP) endpoint."
+  },
+  {
+   "name": "get-trace-summaries",
+   "description": "Retrieves IDs and annotations for traces available for a specified time frame using an optional filter.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filter-expression",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-sampling"
+    },
+    {
+     "name": "--sampling"
+    },
+    {
+     "name": "--sampling-strategy",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-range-type",
+     "args": {
+      "suggestions": [
+       "TraceId",
+       "Event",
+       "Service"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-resource-policies",
+   "description": "Returns the list of resource policies in the target Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-retrieved-traces",
+   "description": "Retrieves a list of traces for a given RetrievalToken from the CloudWatch log group generated by Transaction Search.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--retrieval-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trace-format",
+     "args": {
+      "suggestions": [
+       "XRAY",
+       "OTEL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags that are applied to the specified Amazon Web Services X-Ray group or sampling rule.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-encryption-config",
+   "description": "Updates the encryption configuration for X-Ray data.",
+   "options": [
+    {
+     "name": "--key-id",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "NONE",
+       "KMS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Sets the resource policy to grant one or more Amazon Web Services services and accounts permissions to access X-Ray.",
+   "options": [
+    {
+     "name": "--bypass-policy-lockout-check"
+    },
+    {
+     "name": "--no-bypass-policy-lockout-check"
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-revision-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-telemetry-records",
+   "description": "Used by the Amazon Web Services X-Ray daemon to upload telemetry.",
+   "options": [
+    {
+     "name": "--ec2-instance-id",
+     "args": {}
+    },
+    {
+     "name": "--hostname",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {}
+    },
+    {
+     "name": "--telemetry-records",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-trace-segments",
+   "description": "Uploads segment documents to Amazon Web Services X-Ray.",
+   "options": [
+    {
+     "name": "--trace-segment-documents",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-trace-retrieval",
+   "description": "Initiates a trace retrieval process using the specified time range and for the given trace IDs in the Transaction Search generated CloudWatch log group.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--trace-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Applies tags to an existing Amazon Web Services X-Ray group or sampling rule.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from an Amazon Web Services X-Ray group or sampling rule.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-group",
+   "description": "Updates a group resource.",
+   "options": [
+    {
+     "name": "--filter-expression",
+     "args": {}
+    },
+    {
+     "name": "--group-arn",
+     "args": {}
+    },
+    {
+     "name": "--group-name",
+     "args": {}
+    },
+    {
+     "name": "--insights-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-indexing-rule",
+   "description": "Modifies an indexing rule\u2019s configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rule",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-sampling-rule",
+   "description": "Modifies a sampling rule's configuration.",
+   "options": [
+    {
+     "name": "--sampling-rule-update",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-trace-segment-destination",
+   "description": "Modifies the destination of data sent to PutTraceSegments.",
+   "options": [
+    {
+     "name": "--destination",
+     "args": {
+      "suggestions": [
+       "XRay",
+       "CloudWatchLogs"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

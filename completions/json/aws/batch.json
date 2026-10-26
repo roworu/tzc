@@ -1,0 +1,1159 @@
+{
+ "name": "batch",
+ "description": "Batch Using Batch, you can run batch computing workloads on the Amazon Web Services Cloud.",
+ "subcommands": [
+  {
+   "name": "cancel-job",
+   "description": "Cancels a job in an Batch job queue.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-compute-environment",
+   "description": "Creates an Batch compute environment.",
+   "options": [
+    {
+     "name": "--compute-environment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-resources",
+     "args": {}
+    },
+    {
+     "name": "--context",
+     "args": {}
+    },
+    {
+     "name": "--eks-configuration",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "MANAGED",
+       "UNMANAGED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--unmanagedv-cpus",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-consumable-resource",
+   "description": "Creates an Batch consumable resource.",
+   "options": [
+    {
+     "name": "--consumable-resource-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--total-quantity",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-job-queue",
+   "description": "Creates an Batch job queue.",
+   "options": [
+    {
+     "name": "--compute-environment-order",
+     "args": {}
+    },
+    {
+     "name": "--job-queue-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-queue-type",
+     "args": {
+      "suggestions": [
+       "EKS",
+       "ECS",
+       "ECS_FARGATE",
+       "SAGEMAKER_TRAINING"
+      ]
+     }
+    },
+    {
+     "name": "--job-state-time-limit-actions",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduling-policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--service-environment-order",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-quota-share",
+   "description": "Creates an Batch quota share.",
+   "options": [
+    {
+     "name": "--capacity-limits",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-queue",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--preemption-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--quota-share-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-sharing-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-scheduling-policy",
+   "description": "Creates an Batch scheduling policy.",
+   "options": [
+    {
+     "name": "--fairshare-policy",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--quota-share-policy",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service-environment",
+   "description": "Creates a service environment for running service jobs.",
+   "options": [
+    {
+     "name": "--capacity-limits",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-environment-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-environment-type",
+     "args": {
+      "suggestions": [
+       "SAGEMAKER_TRAINING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-compute-environment",
+   "description": "Deletes an Batch compute environment.",
+   "options": [
+    {
+     "name": "--compute-environment",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-consumable-resource",
+   "description": "Deletes the specified consumable resource.",
+   "options": [
+    {
+     "name": "--consumable-resource",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-job-queue",
+   "description": "Deletes the specified job queue.",
+   "options": [
+    {
+     "name": "--job-queue",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-quota-share",
+   "description": "Deletes the specified quota share.",
+   "options": [
+    {
+     "name": "--quota-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scheduling-policy",
+   "description": "Deletes the specified scheduling policy.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-environment",
+   "description": "Deletes a Service environment.",
+   "options": [
+    {
+     "name": "--service-environment",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-job-definition",
+   "description": "Deregisters an Batch job definition.",
+   "options": [
+    {
+     "name": "--job-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-compute-environments",
+   "description": "Describes one or more of your compute environments.",
+   "options": [
+    {
+     "name": "--compute-environments",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-consumable-resource",
+   "description": "Returns a description of the specified consumable resource.",
+   "options": [
+    {
+     "name": "--consumable-resource",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job-definitions",
+   "description": "Describes a list of job definitions.",
+   "options": [
+    {
+     "name": "--job-definition-name",
+     "args": {}
+    },
+    {
+     "name": "--job-definitions",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-job-queues",
+   "description": "Describes one or more of your job queues.",
+   "options": [
+    {
+     "name": "--job-queues",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-jobs",
+   "description": "Describes a list of Batch jobs.",
+   "options": [
+    {
+     "name": "--jobs",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-quota-share",
+   "description": "Returns a description of the specified quota share.",
+   "options": [
+    {
+     "name": "--quota-share-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-scheduling-policies",
+   "description": "Describes one or more of your scheduling policies.",
+   "options": [
+    {
+     "name": "--arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-service-environments",
+   "description": "Describes one or more of your service environments.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-environments",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-service-job",
+   "description": "The details of a service job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job-queue-snapshot",
+   "description": "Provides a snapshot of job queue state, including ordering of RUNNABLE jobs, as well as capacity utilization for already dispatched jobs.",
+   "options": [
+    {
+     "name": "--job-queue",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-consumable-resources",
+   "description": "Returns a list of Batch consumable resources.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "Returns a list of Batch jobs.",
+   "options": [
+    {
+     "name": "--array-job-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--job-queue",
+     "args": {}
+    },
+    {
+     "name": "--job-status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "PENDING",
+       "RUNNABLE",
+       "STARTING",
+       "RUNNING",
+       "SUCCEEDED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--multi-node-job-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs-by-consumable-resource",
+   "description": "Returns a list of Batch jobs that require a specific consumable resource.",
+   "options": [
+    {
+     "name": "--consumable-resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-quota-shares",
+   "description": "Returns a list of Batch quota shares associated with a job queue.",
+   "options": [
+    {
+     "name": "--job-queue",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-scheduling-policies",
+   "description": "Returns a list of Batch scheduling policies.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-jobs",
+   "description": "Returns a list of service jobs for a specified job queue.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--job-queue",
+     "args": {}
+    },
+    {
+     "name": "--job-status",
+     "args": {
+      "suggestions": [
+       "SUBMITTED",
+       "PENDING",
+       "RUNNABLE",
+       "SCHEDULED",
+       "STARTING",
+       "RUNNING",
+       "SUCCEEDED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for an Batch resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-job-definition",
+   "description": "Registers an Batch job definition.",
+   "options": [
+    {
+     "name": "--consumable-resource-properties",
+     "args": {}
+    },
+    {
+     "name": "--container-properties",
+     "args": {}
+    },
+    {
+     "name": "--ecs-properties",
+     "args": {}
+    },
+    {
+     "name": "--eks-properties",
+     "args": {}
+    },
+    {
+     "name": "--job-definition-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-propagate-tags"
+    },
+    {
+     "name": "--node-properties",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--platform-capabilities",
+     "args": {}
+    },
+    {
+     "name": "--propagate-tags"
+    },
+    {
+     "name": "--retry-strategy",
+     "args": {}
+    },
+    {
+     "name": "--scheduling-priority",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "container",
+       "multinode"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "submit-job",
+   "description": "Submits an Batch job from a job definition.",
+   "options": [
+    {
+     "name": "--array-properties",
+     "args": {}
+    },
+    {
+     "name": "--consumable-resource-properties-override",
+     "args": {}
+    },
+    {
+     "name": "--container-overrides",
+     "args": {}
+    },
+    {
+     "name": "--depends-on",
+     "args": {}
+    },
+    {
+     "name": "--ecs-properties-override",
+     "args": {}
+    },
+    {
+     "name": "--eks-properties-override",
+     "args": {}
+    },
+    {
+     "name": "--job-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-queue",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-propagate-tags"
+    },
+    {
+     "name": "--node-overrides",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--propagate-tags"
+    },
+    {
+     "name": "--retry-strategy",
+     "args": {}
+    },
+    {
+     "name": "--scheduling-priority-override",
+     "args": {}
+    },
+    {
+     "name": "--share-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "submit-service-job",
+   "description": "Submits a service job to a specified job queue to run on SageMaker AI.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--job-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-queue",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--preemption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--quota-share-name",
+     "args": {}
+    },
+    {
+     "name": "--retry-strategy",
+     "args": {}
+    },
+    {
+     "name": "--scheduling-priority",
+     "args": {}
+    },
+    {
+     "name": "--service-job-type",
+     "args": {
+      "suggestions": [
+       "SAGEMAKER_TRAINING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--service-request-payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--share-identifier",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags to a resource with the specified resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-job",
+   "description": "Terminates a job in a job queue.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-service-job",
+   "description": "Terminates a service job in a job queue.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reason",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes specified tags from an Batch resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-compute-environment",
+   "description": "Updates an Batch compute environment.",
+   "options": [
+    {
+     "name": "--compute-environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-resources",
+     "args": {}
+    },
+    {
+     "name": "--context",
+     "args": {}
+    },
+    {
+     "name": "--service-role",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--unmanagedv-cpus",
+     "args": {}
+    },
+    {
+     "name": "--update-policy",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-consumable-resource",
+   "description": "Updates a consumable resource.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--consumable-resource",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--operation",
+     "args": {}
+    },
+    {
+     "name": "--quantity",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-job-queue",
+   "description": "Updates a job queue.",
+   "options": [
+    {
+     "name": "--compute-environment-order",
+     "args": {}
+    },
+    {
+     "name": "--job-queue",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-state-time-limit-actions",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--scheduling-policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--service-environment-order",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-quota-share",
+   "description": "Updates a quota share.",
+   "options": [
+    {
+     "name": "--capacity-limits",
+     "args": {}
+    },
+    {
+     "name": "--preemption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--quota-share-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-sharing-configuration",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-scheduling-policy",
+   "description": "Updates a scheduling policy.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--fairshare-policy",
+     "args": {}
+    },
+    {
+     "name": "--quota-share-policy",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-service-environment",
+   "description": "Updates a service environment.",
+   "options": [
+    {
+     "name": "--capacity-limits",
+     "args": {}
+    },
+    {
+     "name": "--service-environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-service-job",
+   "description": "Updates the priority of a specified service job in an Batch job queue.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduling-priority",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

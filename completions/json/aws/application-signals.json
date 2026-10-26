@@ -1,0 +1,861 @@
+{
+ "name": "application-signals",
+ "description": "Use CloudWatch Application Signals for comprehensive observability of your cloud-based applications.",
+ "subcommands": [
+  {
+   "name": "batch-delete-instrumentation-configurations",
+   "description": "Deletes multiple instrumentation configurations in a single request.",
+   "options": [
+    {
+     "name": "--deletion-target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-service-level-objective-budget-report",
+   "description": "Use this operation to retrieve one or more service level objective (SLO) budget reports.",
+   "options": [
+    {
+     "name": "--slo-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--timestamp",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-exclusion-windows",
+   "description": "Add or remove time window exclusions for one or more Service Level Objectives (SLOs).",
+   "options": [
+    {
+     "name": "--add-exclusion-windows",
+     "args": {}
+    },
+    {
+     "name": "--remove-exclusion-windows",
+     "args": {}
+    },
+    {
+     "name": "--slo-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-instrumentation-configuration",
+   "description": "Creates a dynamic instrumentation configuration for a specific code or endpoint location within a service and environment.",
+   "options": [
+    {
+     "name": "--attribute-filters",
+     "args": {}
+    },
+    {
+     "name": "--capture-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expires-at",
+     "args": {}
+    },
+    {
+     "name": "--instrumentation-type",
+     "args": {
+      "suggestions": [
+       "BREAKPOINT",
+       "PROBE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signal-type",
+     "args": {
+      "suggestions": [
+       "SNAPSHOT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service-level-objective",
+   "description": "Creates a service level objective (SLO), which can help you ensure that your critical business operations are meeting customer expectations.",
+   "options": [
+    {
+     "name": "--auto-investigation-enabled"
+    },
+    {
+     "name": "--burn-rate-configurations",
+     "args": {}
+    },
+    {
+     "name": "--create-recommended-slo"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--goal",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-investigation-enabled"
+    },
+    {
+     "name": "--no-create-recommended-slo"
+    },
+    {
+     "name": "--request-based-sli-config",
+     "args": {}
+    },
+    {
+     "name": "--sli-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-grouping-configuration",
+   "description": "Deletes the grouping configuration for this account."
+  },
+  {
+   "name": "delete-instrumentation-configuration",
+   "description": "Deletes the specified instrumentation configuration.",
+   "options": [
+    {
+     "name": "--environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instrumentation-type",
+     "args": {
+      "suggestions": [
+       "BREAKPOINT",
+       "PROBE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--location-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signal-type",
+     "args": {
+      "suggestions": [
+       "SNAPSHOT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service-level-objective",
+   "description": "Deletes the specified service level objective.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instrumentation-configuration",
+   "description": "Returns the details of a single instrumentation configuration identified by service, environment, signal type, and location.",
+   "options": [
+    {
+     "name": "--environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instrumentation-type",
+     "args": {
+      "suggestions": [
+       "BREAKPOINT",
+       "PROBE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--location-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signal-type",
+     "args": {
+      "suggestions": [
+       "SNAPSHOT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-instrumentation-configuration-status",
+   "description": "Retrieves the status history for a single instrumentation configuration during a specified time range.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instrumentation-type",
+     "args": {
+      "suggestions": [
+       "BREAKPOINT",
+       "PROBE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--location-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--signal-type",
+     "args": {
+      "suggestions": [
+       "SNAPSHOT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "READY",
+       "ERROR",
+       "ACTIVE",
+       "DISABLED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-service",
+   "description": "Returns information about a service discovered by Application Signals.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-service-level-objective",
+   "description": "Returns information about one SLO created in the account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-audit-findings",
+   "description": "Returns a list of audit findings that provide automated analysis of service behavior and root cause analysis.",
+   "options": [
+    {
+     "name": "--audit-targets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auditors",
+     "args": {}
+    },
+    {
+     "name": "--detail-level",
+     "args": {
+      "suggestions": [
+       "BRIEF",
+       "DETAILED"
+      ]
+     }
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-entity-events",
+   "description": "Returns a list of change events for a specific entity, such as deployments, configuration changes, or other state-changing activities.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-grouping-attribute-definitions",
+   "description": "Returns the current grouping configuration for this account, including all custom grouping attribute definitions that have been configured.",
+   "options": [
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--include-linked-accounts"
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-include-linked-accounts"
+    }
+   ]
+  },
+  {
+   "name": "list-instrumentation-configurations",
+   "description": "Returns all active instrumentation configurations for a service and environment.",
+   "options": [
+    {
+     "name": "--environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instrumentation-type",
+     "args": {
+      "suggestions": [
+       "BREAKPOINT",
+       "PROBE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--synced-at",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-dependencies",
+   "description": "Returns a list of service dependencies of the service that you specify.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-dependents",
+   "description": "Returns the list of dependents that invoked the specified service during the provided time range.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-level-objective-exclusion-windows",
+   "description": "Retrieves all exclusion windows configured for a specific SLO.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-level-objectives",
+   "description": "Returns a list of SLOs created in this account.",
+   "options": [
+    {
+     "name": "--dependency-config",
+     "args": {}
+    },
+    {
+     "name": "--include-linked-accounts"
+    },
+    {
+     "name": "--key-attributes",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-source",
+     "args": {}
+    },
+    {
+     "name": "--metric-source-types",
+     "args": {}
+    },
+    {
+     "name": "--no-include-linked-accounts"
+    },
+    {
+     "name": "--operation-name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--slo-owner-aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-operations",
+   "description": "Returns a list of the operations of this service that have been discovered by Application Signals.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-states",
+   "description": "Returns information about the last deployment and other change states of services.",
+   "options": [
+    {
+     "name": "--attribute-filters",
+     "args": {}
+    },
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-linked-accounts"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-linked-accounts"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "Returns a list of services that have been discovered by Application Signals.",
+   "options": [
+    {
+     "name": "--aws-account-id",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-linked-accounts"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-linked-accounts"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Displays the tags associated with a CloudWatch resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-grouping-configuration",
+   "description": "Creates or updates the grouping configuration for this account.",
+   "options": [
+    {
+     "name": "--grouping-attribute-definitions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "report-instrumentation-configuration-status",
+   "description": "Reports the status of one or more instrumentation configurations from SDK instances.",
+   "options": [
+    {
+     "name": "--configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-discovery",
+   "description": "Enables this Amazon Web Services account to be able to use CloudWatch Application Signals by creating the AWSServiceRoleForCloudWatchApplicationSignals service-linked role."
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified CloudWatch resource, such as a service level objective.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-level-objective",
+   "description": "Updates an existing service level objective (SLO).",
+   "options": [
+    {
+     "name": "--auto-investigation-enabled"
+    },
+    {
+     "name": "--burn-rate-configurations",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--goal",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-auto-investigation-enabled"
+    },
+    {
+     "name": "--request-based-sli-config",
+     "args": {}
+    },
+    {
+     "name": "--sli-config",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

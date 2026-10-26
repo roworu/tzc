@@ -1,0 +1,1981 @@
+{
+ "name": "appsync",
+ "description": "AppSync provides API actions for creating and interacting with data sources using GraphQL from your application.",
+ "subcommands": [
+  {
+   "name": "associate-api",
+   "description": "Maps an endpoint to your custom domain.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-merged-graphql-api",
+   "description": "Creates an association between a Merged API and source API using the source API's identifier.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--merged-api-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-api-association-config",
+     "args": {}
+    },
+    {
+     "name": "--source-api-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-source-graphql-api",
+   "description": "Creates an association between a Merged API and source API using the Merged API's identifier.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--merged-api-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-api-association-config",
+     "args": {}
+    },
+    {
+     "name": "--source-api-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-api",
+   "description": "Creates an Api object.",
+   "options": [
+    {
+     "name": "--event-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owner-contact",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-api-cache",
+   "description": "Creates a cache for the GraphQL API.",
+   "options": [
+    {
+     "name": "--api-caching-behavior",
+     "args": {
+      "suggestions": [
+       "FULL_REQUEST_CACHING",
+       "PER_RESOLVER_CACHING",
+       "OPERATION_LEVEL_CACHING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--at-rest-encryption-enabled"
+    },
+    {
+     "name": "--health-metrics-config",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--no-at-rest-encryption-enabled"
+    },
+    {
+     "name": "--no-transit-encryption-enabled"
+    },
+    {
+     "name": "--transit-encryption-enabled"
+    },
+    {
+     "name": "--ttl",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "T2_SMALL",
+       "T2_MEDIUM",
+       "R4_LARGE",
+       "R4_XLARGE",
+       "R4_2XLARGE",
+       "R4_4XLARGE",
+       "R4_8XLARGE",
+       "SMALL",
+       "MEDIUM",
+       "LARGE",
+       "XLARGE",
+       "LARGE_2X",
+       "LARGE_4X",
+       "LARGE_8X",
+       "LARGE_12X"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-api-key",
+   "description": "Creates a unique key that you can distribute to clients who invoke your API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-channel-namespace",
+   "description": "Creates a ChannelNamespace for an Api.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-handlers",
+     "args": {}
+    },
+    {
+     "name": "--handler-configs",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--publish-auth-modes",
+     "args": {}
+    },
+    {
+     "name": "--subscribe-auth-modes",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-source",
+   "description": "Creates a DataSource object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dynamodb-config",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-config",
+     "args": {}
+    },
+    {
+     "name": "--event-bridge-config",
+     "args": {}
+    },
+    {
+     "name": "--http-config",
+     "args": {}
+    },
+    {
+     "name": "--lambda-config",
+     "args": {}
+    },
+    {
+     "name": "--metrics-config",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--open-search-service-config",
+     "args": {}
+    },
+    {
+     "name": "--relational-database-config",
+     "args": {}
+    },
+    {
+     "name": "--service-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "AWS_LAMBDA",
+       "AMAZON_DYNAMODB",
+       "AMAZON_ELASTICSEARCH",
+       "NONE",
+       "HTTP",
+       "RELATIONAL_DATABASE",
+       "AMAZON_OPENSEARCH_SERVICE",
+       "AMAZON_EVENTBRIDGE",
+       "AMAZON_BEDROCK_RUNTIME"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-domain-name",
+   "description": "Creates a custom DomainName object.",
+   "options": [
+    {
+     "name": "--certificate-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-function",
+   "description": "Creates a Function object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code",
+     "args": {}
+    },
+    {
+     "name": "--data-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--function-version",
+     "args": {}
+    },
+    {
+     "name": "--max-batch-size",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--response-mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--runtime",
+     "args": {}
+    },
+    {
+     "name": "--sync-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-graphql-api",
+   "description": "Creates a GraphqlApi object.",
+   "options": [
+    {
+     "name": "--additional-authentication-providers",
+     "args": {}
+    },
+    {
+     "name": "--api-type",
+     "args": {
+      "suggestions": [
+       "GRAPHQL",
+       "MERGED"
+      ]
+     }
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "API_KEY",
+       "AWS_IAM",
+       "AMAZON_COGNITO_USER_POOLS",
+       "OPENID_CONNECT",
+       "AWS_LAMBDA"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--enhanced-metrics-config",
+     "args": {}
+    },
+    {
+     "name": "--introspection-config",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--lambda-authorizer-config",
+     "args": {}
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--merged-api-execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-xray-enabled"
+    },
+    {
+     "name": "--open-id-connect-config",
+     "args": {}
+    },
+    {
+     "name": "--owner-contact",
+     "args": {}
+    },
+    {
+     "name": "--query-depth-limit",
+     "args": {}
+    },
+    {
+     "name": "--resolver-count-limit",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-config",
+     "args": {}
+    },
+    {
+     "name": "--visibility",
+     "args": {
+      "suggestions": [
+       "GLOBAL",
+       "PRIVATE"
+      ]
+     }
+    },
+    {
+     "name": "--xray-enabled"
+    }
+   ]
+  },
+  {
+   "name": "create-resolver",
+   "description": "Creates a Resolver object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--caching-config",
+     "args": {}
+    },
+    {
+     "name": "--code",
+     "args": {}
+    },
+    {
+     "name": "--data-source-name",
+     "args": {}
+    },
+    {
+     "name": "--field-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kind",
+     "args": {
+      "suggestions": [
+       "UNIT",
+       "PIPELINE"
+      ]
+     }
+    },
+    {
+     "name": "--max-batch-size",
+     "args": {}
+    },
+    {
+     "name": "--metrics-config",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--pipeline-config",
+     "args": {}
+    },
+    {
+     "name": "--request-mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--response-mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--runtime",
+     "args": {}
+    },
+    {
+     "name": "--sync-config",
+     "args": {}
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-type",
+   "description": "Creates a Type object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "SDL",
+       "JSON"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-api",
+   "description": "Deletes an Api object",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-api-cache",
+   "description": "Deletes an ApiCache object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-api-key",
+   "description": "Deletes an API key.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-channel-namespace",
+   "description": "Deletes a ChannelNamespace.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-source",
+   "description": "Deletes a DataSource object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain-name",
+   "description": "Deletes a custom DomainName object.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-function",
+   "description": "Deletes a Function.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-graphql-api",
+   "description": "Deletes a GraphqlApi object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resolver",
+   "description": "Deletes a Resolver object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--field-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-type",
+   "description": "Deletes a Type object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-api",
+   "description": "Removes an ApiAssociation object from a custom domain.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-merged-graphql-api",
+   "description": "Deletes an association between a Merged API and source API using the source API's identifier and the association ID.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-api-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-source-graphql-api",
+   "description": "Deletes an association between a Merged API and source API using the Merged API's identifier and the association ID.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--merged-api-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "evaluate-code",
+   "description": "Evaluates the given code and returns the response.",
+   "options": [
+    {
+     "name": "--code",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--context",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function",
+     "args": {}
+    },
+    {
+     "name": "--runtime",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "evaluate-mapping-template",
+   "description": "Evaluates a given template and returns the response.",
+   "options": [
+    {
+     "name": "--context",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "flush-api-cache",
+   "description": "Flushes an ApiCache object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-api",
+   "description": "Retrieves an Api object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-api-association",
+   "description": "Retrieves an ApiAssociation object.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-api-cache",
+   "description": "Retrieves an ApiCache object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-channel-namespace",
+   "description": "Retrieves the channel namespace for a specified Api.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-source",
+   "description": "Retrieves a DataSource object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-source-introspection",
+   "description": "Retrieves the record of an existing introspection.",
+   "options": [
+    {
+     "name": "--include-models-sdl"
+    },
+    {
+     "name": "--introspection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-include-models-sdl"
+    }
+   ]
+  },
+  {
+   "name": "get-domain-name",
+   "description": "Retrieves a custom DomainName object.",
+   "options": [
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-function",
+   "description": "Get a Function.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-graphql-api",
+   "description": "Retrieves a GraphqlApi object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-graphql-api-environment-variables",
+   "description": "Retrieves the list of environmental variable key-value pairs associated with an API by its ID value.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-introspection-schema",
+   "description": "Retrieves the introspection schema for a GraphQL API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "SDL",
+       "JSON"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--include-directives"
+    },
+    {
+     "name": "--no-include-directives"
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resolver",
+   "description": "Retrieves a Resolver object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--field-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-schema-creation-status",
+   "description": "Retrieves the current status of a schema creation operation.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-source-api-association",
+   "description": "Retrieves a SourceApiAssociation object.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--merged-api-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-type",
+   "description": "Retrieves a Type object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "SDL",
+       "JSON"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-api-keys",
+   "description": "Lists the API keys for a given API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-apis",
+   "description": "Lists the APIs in your AppSync account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-channel-namespaces",
+   "description": "Lists the channel namespaces for a specified Api.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-sources",
+   "description": "Lists the data sources for a given API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domain-names",
+   "description": "Lists multiple custom domain names.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-functions",
+   "description": "List multiple functions.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-graphql-apis",
+   "description": "Lists your GraphQL APIs.",
+   "options": [
+    {
+     "name": "--api-type",
+     "args": {
+      "suggestions": [
+       "GRAPHQL",
+       "MERGED"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owner",
+     "args": {
+      "suggestions": [
+       "CURRENT_ACCOUNT",
+       "OTHER_ACCOUNTS"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resolvers",
+   "description": "Lists the resolvers for a given API and type.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-resolvers-by-function",
+   "description": "List the resolvers that are associated with a specific function.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-source-api-associations",
+   "description": "Lists the SourceApiAssociationSummary data.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-types",
+   "description": "Lists the types for a given API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "SDL",
+       "JSON"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-types-by-association",
+   "description": "Lists Type objects by the source API association ID.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "SDL",
+       "JSON"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--merged-api-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-graphql-api-environment-variables",
+   "description": "Creates a list of environmental variables in an API by its ID value.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--environment-variables",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-data-source-introspection",
+   "description": "Creates a new introspection.",
+   "options": [
+    {
+     "name": "--rds-data-api-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-schema-creation",
+   "description": "Adds a new schema to your GraphQL API.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-schema-merge",
+   "description": "Initiates a merge operation.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--merged-api-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tags a resource with user-supplied tags.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Untags a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-api",
+   "description": "Updates an Api.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--owner-contact",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-api-cache",
+   "description": "Updates the cache for the GraphQL API.",
+   "options": [
+    {
+     "name": "--api-caching-behavior",
+     "args": {
+      "suggestions": [
+       "FULL_REQUEST_CACHING",
+       "PER_RESOLVER_CACHING",
+       "OPERATION_LEVEL_CACHING"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--health-metrics-config",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--ttl",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "T2_SMALL",
+       "T2_MEDIUM",
+       "R4_LARGE",
+       "R4_XLARGE",
+       "R4_2XLARGE",
+       "R4_4XLARGE",
+       "R4_8XLARGE",
+       "SMALL",
+       "MEDIUM",
+       "LARGE",
+       "XLARGE",
+       "LARGE_2X",
+       "LARGE_4X",
+       "LARGE_8X",
+       "LARGE_12X"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-api-key",
+   "description": "Updates an API key.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-channel-namespace",
+   "description": "Updates a ChannelNamespace associated with an Api.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code-handlers",
+     "args": {}
+    },
+    {
+     "name": "--handler-configs",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--publish-auth-modes",
+     "args": {}
+    },
+    {
+     "name": "--subscribe-auth-modes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-data-source",
+   "description": "Updates a DataSource object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--dynamodb-config",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-config",
+     "args": {}
+    },
+    {
+     "name": "--event-bridge-config",
+     "args": {}
+    },
+    {
+     "name": "--http-config",
+     "args": {}
+    },
+    {
+     "name": "--lambda-config",
+     "args": {}
+    },
+    {
+     "name": "--metrics-config",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--open-search-service-config",
+     "args": {}
+    },
+    {
+     "name": "--relational-database-config",
+     "args": {}
+    },
+    {
+     "name": "--service-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "AWS_LAMBDA",
+       "AMAZON_DYNAMODB",
+       "AMAZON_ELASTICSEARCH",
+       "NONE",
+       "HTTP",
+       "RELATIONAL_DATABASE",
+       "AMAZON_OPENSEARCH_SERVICE",
+       "AMAZON_EVENTBRIDGE",
+       "AMAZON_BEDROCK_RUNTIME"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-domain-name",
+   "description": "Updates a custom DomainName object.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--domain-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-function",
+   "description": "Updates a Function object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--code",
+     "args": {}
+    },
+    {
+     "name": "--data-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--function-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-version",
+     "args": {}
+    },
+    {
+     "name": "--max-batch-size",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--response-mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--runtime",
+     "args": {}
+    },
+    {
+     "name": "--sync-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-graphql-api",
+   "description": "Updates a GraphqlApi object.",
+   "options": [
+    {
+     "name": "--additional-authentication-providers",
+     "args": {}
+    },
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "API_KEY",
+       "AWS_IAM",
+       "AMAZON_COGNITO_USER_POOLS",
+       "OPENID_CONNECT",
+       "AWS_LAMBDA"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--enhanced-metrics-config",
+     "args": {}
+    },
+    {
+     "name": "--introspection-config",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--lambda-authorizer-config",
+     "args": {}
+    },
+    {
+     "name": "--log-config",
+     "args": {}
+    },
+    {
+     "name": "--merged-api-execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-xray-enabled"
+    },
+    {
+     "name": "--open-id-connect-config",
+     "args": {}
+    },
+    {
+     "name": "--owner-contact",
+     "args": {}
+    },
+    {
+     "name": "--query-depth-limit",
+     "args": {}
+    },
+    {
+     "name": "--resolver-count-limit",
+     "args": {}
+    },
+    {
+     "name": "--user-pool-config",
+     "args": {}
+    },
+    {
+     "name": "--xray-enabled"
+    }
+   ]
+  },
+  {
+   "name": "update-resolver",
+   "description": "Updates a Resolver object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--caching-config",
+     "args": {}
+    },
+    {
+     "name": "--code",
+     "args": {}
+    },
+    {
+     "name": "--data-source-name",
+     "args": {}
+    },
+    {
+     "name": "--field-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--kind",
+     "args": {
+      "suggestions": [
+       "UNIT",
+       "PIPELINE"
+      ]
+     }
+    },
+    {
+     "name": "--max-batch-size",
+     "args": {}
+    },
+    {
+     "name": "--metrics-config",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--pipeline-config",
+     "args": {}
+    },
+    {
+     "name": "--request-mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--response-mapping-template",
+     "args": {}
+    },
+    {
+     "name": "--runtime",
+     "args": {}
+    },
+    {
+     "name": "--sync-config",
+     "args": {}
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-source-api-association",
+   "description": "Updates some of the configuration choices of a particular source API association.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--merged-api-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-api-association-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-type",
+   "description": "Updates a Type object.",
+   "options": [
+    {
+     "name": "--api-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--definition",
+     "args": {}
+    },
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "SDL",
+       "JSON"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

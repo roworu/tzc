@@ -1,0 +1,1869 @@
+{
+ "name": "iot-managed-integrations",
+ "description": "Managed integrations is a feature of AWS IoT Device Management that enables developers to quickly build innovative IoT solutions.",
+ "subcommands": [
+  {
+   "name": "create-account-association",
+   "description": "Creates a new account association via the destination id.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--connector-destination-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--general-authorization",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cloud-connector",
+   "description": "Creates a C2C (cloud-to-cloud) connector.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--endpoint-type",
+     "args": {
+      "suggestions": [
+       "LAMBDA"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-connector-destination",
+   "description": "Create a connector destination for connecting a cloud-to-cloud (C2C) connector to the customer's Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--auth-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "OAUTH"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cloud-connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--secrets-manager",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-credential-locker",
+   "description": "Create a credential locker.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-destination",
+   "description": "Create a notification destination such as Kinesis Data Streams that receive events and notifications from Managed integrations.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--delivery-destination-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delivery-destination-type",
+     "args": {
+      "suggestions": [
+       "KINESIS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-event-log-configuration",
+   "description": "Set the event log configuration for the account, resource type, or specific resource.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--event-log-level",
+     "args": {
+      "suggestions": [
+       "DEBUG",
+       "ERROR",
+       "INFO",
+       "WARN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-managed-thing",
+   "description": "Creates a managed thing.",
+   "options": [
+    {
+     "name": "--authentication-material",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authentication-material-type",
+     "args": {
+      "suggestions": [
+       "CUSTOM_PROTOCOL_QR_BAR_CODE",
+       "WIFI_SETUP_QR_BAR_CODE",
+       "ZWAVE_QR_BAR_CODE",
+       "ZIGBEE_QR_BAR_CODE",
+       "DISCOVERED_DEVICE",
+       "PRE_ONBOARDED_CLOUD"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--brand",
+     "args": {}
+    },
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--capability-report",
+     "args": {}
+    },
+    {
+     "name": "--capability-schemas",
+     "args": {}
+    },
+    {
+     "name": "--classification",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--credential-locker-id",
+     "args": {}
+    },
+    {
+     "name": "--meta-data",
+     "args": {}
+    },
+    {
+     "name": "--model",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--owner",
+     "args": {}
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "CONTROLLER",
+       "DEVICE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--serial-number",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--wi-fi-simple-setup-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-notification-configuration",
+   "description": "Creates a notification configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destination-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type",
+     "args": {
+      "suggestions": [
+       "DEVICE_COMMAND",
+       "DEVICE_COMMAND_REQUEST",
+       "DEVICE_DISCOVERY_STATUS",
+       "DEVICE_EVENT",
+       "DEVICE_LIFE_CYCLE",
+       "DEVICE_STATE",
+       "DEVICE_OTA",
+       "DEVICE_WSS",
+       "CONNECTOR_ASSOCIATION",
+       "ACCOUNT_ASSOCIATION",
+       "CONNECTOR_ERROR_REPORT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-ota-task",
+   "description": "Create an over-the-air (OTA) task to target a device.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--ota-mechanism",
+     "args": {
+      "suggestions": [
+       "PUSH"
+      ]
+     }
+    },
+    {
+     "name": "--ota-scheduling-config",
+     "args": {}
+    },
+    {
+     "name": "--ota-target-query-string",
+     "args": {}
+    },
+    {
+     "name": "--ota-task-execution-retry-config",
+     "args": {}
+    },
+    {
+     "name": "--ota-type",
+     "args": {
+      "suggestions": [
+       "ONE_TIME",
+       "CONTINUOUS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "HTTP"
+      ]
+     }
+    },
+    {
+     "name": "--s3-url",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {}
+    },
+    {
+     "name": "--task-configuration-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-ota-task-configuration",
+   "description": "Create a configuraiton for the over-the-air (OTA) task.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--push-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-provisioning-profile",
+   "description": "Create a provisioning profile for executing device provisioning flows.",
+   "options": [
+    {
+     "name": "--ca-certificate",
+     "args": {}
+    },
+    {
+     "name": "--claim-certificate",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--provisioning-type",
+     "args": {
+      "suggestions": [
+       "FLEET_PROVISIONING",
+       "JITR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-account-association",
+   "description": "Remove a third-party account association for an end user.",
+   "options": [
+    {
+     "name": "--account-association-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cloud-connector",
+   "description": "Delete a cloud connector.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-connector-destination",
+   "description": "Delete a connector destination linked to a cloud-to-cloud (C2C) connector.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-credential-locker",
+   "description": "Delete a credential locker.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-destination",
+   "description": "Deletes a notification destination specified by name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-event-log-configuration",
+   "description": "Delete an event log configuration.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-managed-thing",
+   "description": "Delete a managed thing.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "delete-notification-configuration",
+   "description": "Deletes a notification configuration.",
+   "options": [
+    {
+     "name": "--event-type",
+     "args": {
+      "suggestions": [
+       "DEVICE_COMMAND",
+       "DEVICE_COMMAND_REQUEST",
+       "DEVICE_DISCOVERY_STATUS",
+       "DEVICE_EVENT",
+       "DEVICE_LIFE_CYCLE",
+       "DEVICE_STATE",
+       "DEVICE_OTA",
+       "DEVICE_WSS",
+       "CONNECTOR_ASSOCIATION",
+       "ACCOUNT_ASSOCIATION",
+       "CONNECTOR_ERROR_REPORT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ota-task",
+   "description": "Delete the over-the-air (OTA) task.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ota-task-configuration",
+   "description": "Delete the over-the-air (OTA) task configuration.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-provisioning-profile",
+   "description": "Delete a provisioning profile.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-account-association",
+   "description": "Deregister an account association from a managed thing.",
+   "options": [
+    {
+     "name": "--account-association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-thing-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-association",
+   "description": "Get an account association for an Amazon Web Services account linked to a customer-managed destination.",
+   "options": [
+    {
+     "name": "--account-association-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cloud-connector",
+   "description": "Get configuration details for a cloud connector.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connector-destination",
+   "description": "Get connector destination details linked to a cloud-to-cloud (C2C) connector.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-credential-locker",
+   "description": "Get information on an existing credential locker",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-custom-endpoint",
+   "description": "Returns the IoT managed integrations custom endpoint."
+  },
+  {
+   "name": "get-default-encryption-configuration",
+   "description": "Retrieves information about the default encryption configuration for the Amazon Web Services account in the default or specified region."
+  },
+  {
+   "name": "get-destination",
+   "description": "Gets a destination by name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-device-discovery",
+   "description": "Get the current state of a device discovery.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-event-log-configuration",
+   "description": "Get an event log configuration.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-hub-configuration",
+   "description": "Get a hub configuration."
+  },
+  {
+   "name": "get-managed-thing",
+   "description": "Get details of a managed thing including its attributes and capabilities.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-thing-capabilities",
+   "description": "Get the capabilities for a managed thing using the device ID.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-thing-certificate",
+   "description": "Retrieves the certificate PEM for a managed IoT thing.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-thing-connectivity-data",
+   "description": "Get the connectivity status of a managed thing.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-thing-meta-data",
+   "description": "Get the metadata information for a managed thing.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-managed-thing-state",
+   "description": "Returns the managed thing state for the given device Id.",
+   "options": [
+    {
+     "name": "--managed-thing-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-notification-configuration",
+   "description": "Get a notification configuration for a specified event type.",
+   "options": [
+    {
+     "name": "--event-type",
+     "args": {
+      "suggestions": [
+       "DEVICE_COMMAND",
+       "DEVICE_COMMAND_REQUEST",
+       "DEVICE_DISCOVERY_STATUS",
+       "DEVICE_EVENT",
+       "DEVICE_LIFE_CYCLE",
+       "DEVICE_STATE",
+       "DEVICE_OTA",
+       "DEVICE_WSS",
+       "CONNECTOR_ASSOCIATION",
+       "ACCOUNT_ASSOCIATION",
+       "CONNECTOR_ERROR_REPORT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ota-task",
+   "description": "Get details of the over-the-air (OTA) task by its task id.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ota-task-configuration",
+   "description": "Get a configuraiton for the over-the-air (OTA) task.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-provisioning-profile",
+   "description": "Get details of a provisioning profile.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-runtime-log-configuration",
+   "description": "Get the runtime log configuration for a specific managed thing.",
+   "options": [
+    {
+     "name": "--managed-thing-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-schema-version",
+   "description": "Gets a schema version with the provided information.",
+   "options": [
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "AWS",
+       "ZCL",
+       "CONNECTOR"
+      ]
+     }
+    },
+    {
+     "name": "--schema-versioned-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "capability",
+       "definition"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-account-associations",
+   "description": "Lists all account associations, with optional filtering by connector destination ID.",
+   "options": [
+    {
+     "name": "--connector-destination-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cloud-connectors",
+   "description": "Returns a list of connectors filtered by its Lambda Amazon Resource Name (ARN) and type.",
+   "options": [
+    {
+     "name": "--lambda-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "LISTED",
+       "UNLISTED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-connector-destinations",
+   "description": "Lists all connector destinations, with optional filtering by cloud connector ID.",
+   "options": [
+    {
+     "name": "--cloud-connector-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-credential-lockers",
+   "description": "List information on an existing credential locker.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-destinations",
+   "description": "List all notification destinations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-device-discoveries",
+   "description": "Lists all device discovery tasks, with optional filtering by type and status.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-filter",
+     "args": {
+      "suggestions": [
+       "RUNNING",
+       "SUCCEEDED",
+       "FAILED",
+       "TIMED_OUT"
+      ]
+     }
+    },
+    {
+     "name": "--type-filter",
+     "args": {
+      "suggestions": [
+       "ZWAVE",
+       "ZIGBEE",
+       "CLOUD",
+       "CUSTOM",
+       "CONTROLLER_CAPABILITY_REDISCOVERY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-discovered-devices",
+   "description": "Lists all devices discovered during a specific device discovery task.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-log-configurations",
+   "description": "List all event log configurations for an account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-thing-account-associations",
+   "description": "Lists all account associations for a specific managed thing.",
+   "options": [
+    {
+     "name": "--account-association-id",
+     "args": {}
+    },
+    {
+     "name": "--managed-thing-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-thing-schemas",
+   "description": "List schemas associated with a managed thing.",
+   "options": [
+    {
+     "name": "--capability-id-filter",
+     "args": {}
+    },
+    {
+     "name": "--endpoint-id-filter",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-things",
+   "description": "Listing all managed things with provision for filters.",
+   "options": [
+    {
+     "name": "--connector-destination-id-filter",
+     "args": {}
+    },
+    {
+     "name": "--connector-device-id-filter",
+     "args": {}
+    },
+    {
+     "name": "--connector-policy-id-filter",
+     "args": {}
+    },
+    {
+     "name": "--credential-locker-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--owner-filter",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parent-controller-identifier-filter",
+     "args": {}
+    },
+    {
+     "name": "--provisioning-status-filter",
+     "args": {
+      "suggestions": [
+       "UNASSOCIATED",
+       "PRE_ASSOCIATED",
+       "DISCOVERED",
+       "ACTIVATED",
+       "DELETION_FAILED",
+       "DELETE_IN_PROGRESS",
+       "ISOLATED",
+       "DELETED"
+      ]
+     }
+    },
+    {
+     "name": "--role-filter",
+     "args": {
+      "suggestions": [
+       "CONTROLLER",
+       "DEVICE"
+      ]
+     }
+    },
+    {
+     "name": "--serial-number-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-notification-configurations",
+   "description": "List all notification configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ota-task-configurations",
+   "description": "List all of the over-the-air (OTA) task configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ota-task-executions",
+   "description": "List all of the over-the-air (OTA) task executions.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ota-tasks",
+   "description": "List all of the over-the-air (OTA) tasks.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-provisioning-profiles",
+   "description": "List the provisioning profiles within the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-schema-versions",
+   "description": "Lists schema versions with the provided information.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--schema-id",
+     "args": {}
+    },
+    {
+     "name": "--semantic-version",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "capability",
+       "definition"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--visibility",
+     "args": {
+      "suggestions": [
+       "PUBLIC",
+       "PRIVATE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags for a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-default-encryption-configuration",
+   "description": "Sets the default encryption configuration for the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "MANAGED_INTEGRATIONS_DEFAULT_ENCRYPTION",
+       "CUSTOMER_KEY_ENCRYPTION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-hub-configuration",
+   "description": "Update a hub configuration.",
+   "options": [
+    {
+     "name": "--hub-token-timer-expiry-setting-in-seconds",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-runtime-log-configuration",
+   "description": "Set the runtime log configuration for a specific managed thing.",
+   "options": [
+    {
+     "name": "--managed-thing-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--runtime-log-configurations",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-account-association",
+   "description": "Registers an account association with a managed thing, establishing a connection between a device and a third-party account.",
+   "options": [
+    {
+     "name": "--account-association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-discovery-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-thing-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-custom-endpoint",
+   "description": "Customers can request IoT managed integrations to manage the server trust for them or bring their own external server trusts for the custom domain."
+  },
+  {
+   "name": "reset-runtime-log-configuration",
+   "description": "Reset a runtime log configuration for a specific managed thing.",
+   "options": [
+    {
+     "name": "--managed-thing-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-connector-event",
+   "description": "Relays third-party device events for a connector such as a new device or a device state change event.",
+   "options": [
+    {
+     "name": "--connector-device-id",
+     "args": {}
+    },
+    {
+     "name": "--connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-discovery-id",
+     "args": {}
+    },
+    {
+     "name": "--devices",
+     "args": {}
+    },
+    {
+     "name": "--matter-endpoint",
+     "args": {}
+    },
+    {
+     "name": "--message",
+     "args": {}
+    },
+    {
+     "name": "--operation",
+     "args": {
+      "suggestions": [
+       "DEVICE_COMMAND_RESPONSE",
+       "DEVICE_DISCOVERY",
+       "DEVICE_EVENT",
+       "DEVICE_COMMAND_REQUEST"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--operation-version",
+     "args": {}
+    },
+    {
+     "name": "--status-code",
+     "args": {}
+    },
+    {
+     "name": "--trace-id",
+     "args": {}
+    },
+    {
+     "name": "--user-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "send-managed-thing-command",
+   "description": "Send the command to the device represented by the managed thing.",
+   "options": [
+    {
+     "name": "--account-association-id",
+     "args": {}
+    },
+    {
+     "name": "--connector-association-id",
+     "args": {}
+    },
+    {
+     "name": "--endpoints",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-thing-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-account-association-refresh",
+   "description": "Initiates a refresh of an existing account association to update its authorization and connection status.",
+   "options": [
+    {
+     "name": "--account-association-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-device-discovery",
+   "description": "This API is used to start device discovery for hub-connected and third-party-connected devices.",
+   "options": [
+    {
+     "name": "--account-association-id",
+     "args": {}
+    },
+    {
+     "name": "--authentication-material",
+     "args": {}
+    },
+    {
+     "name": "--authentication-material-type",
+     "args": {
+      "suggestions": [
+       "ZWAVE_INSTALL_CODE"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--connector-association-identifier",
+     "args": {}
+    },
+    {
+     "name": "--connector-device-id-list",
+     "args": {}
+    },
+    {
+     "name": "--controller-identifier",
+     "args": {}
+    },
+    {
+     "name": "--custom-protocol-detail",
+     "args": {}
+    },
+    {
+     "name": "--discovery-type",
+     "args": {
+      "suggestions": [
+       "ZWAVE",
+       "ZIGBEE",
+       "CLOUD",
+       "CUSTOM",
+       "CONTROLLER_CAPABILITY_REDISCOVERY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--end-device-identifier",
+     "args": {}
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "ZWAVE",
+       "ZIGBEE",
+       "CUSTOM"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-account-association",
+   "description": "Updates the properties of an existing account association.",
+   "options": [
+    {
+     "name": "--account-association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-cloud-connector",
+   "description": "Update an existing cloud connector.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-connector-destination",
+   "description": "Updates the properties of an existing connector destination.",
+   "options": [
+    {
+     "name": "--auth-config",
+     "args": {}
+    },
+    {
+     "name": "--auth-type",
+     "args": {
+      "suggestions": [
+       "OAUTH"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--secrets-manager",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-destination",
+   "description": "Update a destination specified by name.",
+   "options": [
+    {
+     "name": "--delivery-destination-arn",
+     "args": {}
+    },
+    {
+     "name": "--delivery-destination-type",
+     "args": {
+      "suggestions": [
+       "KINESIS"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-event-log-configuration",
+   "description": "Update an event log configuration by log configuration ID.",
+   "options": [
+    {
+     "name": "--event-log-level",
+     "args": {
+      "suggestions": [
+       "DEBUG",
+       "ERROR",
+       "INFO",
+       "WARN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-managed-thing",
+   "description": "Update the attributes and capabilities associated with a managed thing.",
+   "options": [
+    {
+     "name": "--brand",
+     "args": {}
+    },
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--capability-report",
+     "args": {}
+    },
+    {
+     "name": "--capability-schemas",
+     "args": {}
+    },
+    {
+     "name": "--classification",
+     "args": {}
+    },
+    {
+     "name": "--credential-locker-id",
+     "args": {}
+    },
+    {
+     "name": "--hub-network-mode",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "NETWORK_WIDE_EXCLUSION"
+      ]
+     }
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meta-data",
+     "args": {}
+    },
+    {
+     "name": "--model",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--owner",
+     "args": {}
+    },
+    {
+     "name": "--serial-number",
+     "args": {}
+    },
+    {
+     "name": "--wi-fi-simple-setup-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-notification-configuration",
+   "description": "Update a notification configuration.",
+   "options": [
+    {
+     "name": "--destination-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-type",
+     "args": {
+      "suggestions": [
+       "DEVICE_COMMAND",
+       "DEVICE_COMMAND_REQUEST",
+       "DEVICE_DISCOVERY_STATUS",
+       "DEVICE_EVENT",
+       "DEVICE_LIFE_CYCLE",
+       "DEVICE_STATE",
+       "DEVICE_OTA",
+       "DEVICE_WSS",
+       "CONNECTOR_ASSOCIATION",
+       "ACCOUNT_ASSOCIATION",
+       "CONNECTOR_ERROR_REPORT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-ota-task",
+   "description": "Update an over-the-air (OTA) task.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-configuration-id",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

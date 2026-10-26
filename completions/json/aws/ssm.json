@@ -1,0 +1,4343 @@
+{
+ "name": "ssm",
+ "description": "Amazon Web Services Systems Manager is the operations hub for your Amazon Web Services applications and resources and a secure end-to-end management solution for hybrid cloud environments that enables safe and secure operations at scale.",
+ "subcommands": [
+  {
+   "name": "add-tags-to-resource",
+   "description": "Adds or overwrites one or more tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Document",
+       "ManagedInstance",
+       "MaintenanceWindow",
+       "Parameter",
+       "PatchBaseline",
+       "OpsItem",
+       "OpsMetadata",
+       "Automation",
+       "Association",
+       "CloudConnector"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-ops-item-related-item",
+   "description": "Associates a related item to a Systems Manager OpsCenter OpsItem.",
+   "options": [
+    {
+     "name": "--association-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ops-item-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-uri",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-command",
+   "description": "Attempts to cancel the command specified by the Command ID.",
+   "options": [
+    {
+     "name": "--command-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-maintenance-window-execution",
+   "description": "Stops a maintenance window execution that is already in progress and cancels any tasks in the window that haven't already starting running.",
+   "options": [
+    {
+     "name": "--window-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-activation",
+   "description": "Generates an activation code and activation ID you can use to register your on-premises servers, edge devices, or virtual machine (VM) with Amazon Web Services Systems Manager.",
+   "options": [
+    {
+     "name": "--default-instance-name",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expiration-date",
+     "args": {}
+    },
+    {
+     "name": "--iam-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--registration-limit",
+     "args": {}
+    },
+    {
+     "name": "--registration-metadata",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-association",
+   "description": "A State Manager association defines the state that you want to maintain on your managed nodes.",
+   "options": [
+    {
+     "name": "--alarm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--apply-only-at-cron-interval"
+    },
+    {
+     "name": "--association-dispatch-assume-role",
+     "args": {}
+    },
+    {
+     "name": "--association-name",
+     "args": {}
+    },
+    {
+     "name": "--automation-target-parameter-name",
+     "args": {}
+    },
+    {
+     "name": "--calendar-names",
+     "args": {}
+    },
+    {
+     "name": "--compliance-severity",
+     "args": {
+      "suggestions": [
+       "CRITICAL",
+       "HIGH",
+       "MEDIUM",
+       "LOW",
+       "UNSPECIFIED"
+      ]
+     }
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--max-concurrency",
+     "args": {}
+    },
+    {
+     "name": "--max-errors",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-apply-only-at-cron-interval"
+    },
+    {
+     "name": "--output-location",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--schedule-expression",
+     "args": {}
+    },
+    {
+     "name": "--schedule-offset",
+     "args": {}
+    },
+    {
+     "name": "--sync-compliance",
+     "args": {
+      "suggestions": [
+       "AUTO",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-locations",
+     "args": {}
+    },
+    {
+     "name": "--target-maps",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-association-batch",
+   "description": "Associates the specified Amazon Web Services Systems Manager document (SSM document) with the specified managed nodes or targets.",
+   "options": [
+    {
+     "name": "--association-dispatch-assume-role",
+     "args": {}
+    },
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cloud-connector",
+   "description": "Creates a cloud connector that establishes a connection between Systems Manager and a third-party cloud environment.",
+   "options": [
+    {
+     "name": "--config-connector-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-document",
+   "description": "Creates a Amazon Web Services Systems Manager (SSM document).",
+   "options": [
+    {
+     "name": "--attachments",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--document-format",
+     "args": {
+      "suggestions": [
+       "YAML",
+       "JSON",
+       "TEXT"
+      ]
+     }
+    },
+    {
+     "name": "--document-type",
+     "args": {
+      "suggestions": [
+       "Command",
+       "Policy",
+       "Automation",
+       "Session",
+       "Package",
+       "ApplicationConfiguration",
+       "ApplicationConfigurationSchema",
+       "DeploymentStrategy",
+       "ChangeCalendar",
+       "Automation.ChangeTemplate",
+       "ProblemAnalysis",
+       "ProblemAnalysisTemplate",
+       "CloudFormation",
+       "ConformancePackTemplate",
+       "QuickSetup",
+       "ManualApprovalPolicy",
+       "AutoApprovalPolicy"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requires",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-type",
+     "args": {}
+    },
+    {
+     "name": "--version-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-maintenance-window",
+   "description": "Creates a new maintenance window.",
+   "options": [
+    {
+     "name": "--allow-unassociated-targets",
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cutoff",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-date",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-unassociated-targets"
+    },
+    {
+     "name": "--schedule",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-offset",
+     "args": {}
+    },
+    {
+     "name": "--schedule-timezone",
+     "args": {}
+    },
+    {
+     "name": "--start-date",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-ops-item",
+   "description": "Creates a new OpsItem.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--actual-end-time",
+     "args": {}
+    },
+    {
+     "name": "--actual-start-time",
+     "args": {}
+    },
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notifications",
+     "args": {}
+    },
+    {
+     "name": "--operational-data",
+     "args": {}
+    },
+    {
+     "name": "--ops-item-type",
+     "args": {}
+    },
+    {
+     "name": "--planned-end-time",
+     "args": {}
+    },
+    {
+     "name": "--planned-start-time",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--related-ops-items",
+     "args": {}
+    },
+    {
+     "name": "--severity",
+     "args": {}
+    },
+    {
+     "name": "--source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-ops-metadata",
+   "description": "If you create a new application in Application Manager, Amazon Web Services Systems Manager calls this API operation to specify information about the new application, including the application type.",
+   "options": [
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-patch-baseline",
+   "description": "Creates a patch baseline.",
+   "options": [
+    {
+     "name": "--approval-rules",
+     "args": {}
+    },
+    {
+     "name": "--approved-patches",
+     "args": {}
+    },
+    {
+     "name": "--approved-patches-compliance-level",
+     "args": {
+      "suggestions": [
+       "CRITICAL",
+       "HIGH",
+       "MEDIUM",
+       "LOW",
+       "INFORMATIONAL",
+       "UNSPECIFIED"
+      ]
+     }
+    },
+    {
+     "name": "--approved-patches-enable-non-security"
+    },
+    {
+     "name": "--available-security-updates-compliance-status",
+     "args": {
+      "suggestions": [
+       "COMPLIANT",
+       "NON_COMPLIANT"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--global-filters",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-approved-patches-enable-non-security"
+    },
+    {
+     "name": "--operating-system",
+     "args": {
+      "suggestions": [
+       "WINDOWS",
+       "AMAZON_LINUX",
+       "AMAZON_LINUX_2",
+       "AMAZON_LINUX_2022",
+       "UBUNTU",
+       "REDHAT_ENTERPRISE_LINUX",
+       "SUSE",
+       "CENTOS",
+       "ORACLE_LINUX",
+       "DEBIAN",
+       "MACOS",
+       "RASPBIAN",
+       "ROCKY_LINUX",
+       "ALMA_LINUX",
+       "AMAZON_LINUX_2023"
+      ]
+     }
+    },
+    {
+     "name": "--rejected-patches",
+     "args": {}
+    },
+    {
+     "name": "--rejected-patches-action",
+     "args": {
+      "suggestions": [
+       "ALLOW_AS_DEPENDENCY",
+       "BLOCK"
+      ]
+     }
+    },
+    {
+     "name": "--sources",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-resource-data-sync",
+   "description": "A resource data sync helps you view data from multiple sources in a single location.",
+   "options": [
+    {
+     "name": "--s3-destination",
+     "args": {}
+    },
+    {
+     "name": "--sync-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-source",
+     "args": {}
+    },
+    {
+     "name": "--sync-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-activation",
+   "description": "Deletes an activation.",
+   "options": [
+    {
+     "name": "--activation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-association",
+   "description": "Disassociates the specified Amazon Web Services Systems Manager document (SSM document) from the specified managed node.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-cloud-connector",
+   "description": "Deletes a cloud connector.",
+   "options": [
+    {
+     "name": "--cloud-connector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-document",
+   "description": "Deletes the Amazon Web Services Systems Manager document (SSM document) and all managed node associations to the document.",
+   "options": [
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--version-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-inventory",
+   "description": "Delete a custom inventory type or the data associated with a custom Inventory type.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--schema-delete-option",
+     "args": {
+      "suggestions": [
+       "DisableSchema",
+       "DeleteSchema"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-maintenance-window",
+   "description": "Deletes a maintenance window.",
+   "options": [
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ops-item",
+   "description": "Delete an OpsItem.",
+   "options": [
+    {
+     "name": "--ops-item-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ops-metadata",
+   "description": "Delete OpsMetadata related to an application.",
+   "options": [
+    {
+     "name": "--ops-metadata-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-parameter",
+   "description": "Delete a parameter from the system.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-parameters",
+   "description": "Delete a list of parameters.",
+   "options": [
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-patch-baseline",
+   "description": "Deletes a patch baseline.",
+   "options": [
+    {
+     "name": "--baseline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-data-sync",
+   "description": "Deletes a resource data sync configuration.",
+   "options": [
+    {
+     "name": "--sync-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes a Systems Manager resource policy.",
+   "options": [
+    {
+     "name": "--policy-hash",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-managed-instance",
+   "description": "Removes the server or virtual machine from the list of registered servers.",
+   "options": [
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-patch-baseline-for-patch-group",
+   "description": "Removes a patch group from a patch baseline.",
+   "options": [
+    {
+     "name": "--baseline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--patch-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-target-from-maintenance-window",
+   "description": "Removes a target from a maintenance window.",
+   "options": [
+    {
+     "name": "--no-safe"
+    },
+    {
+     "name": "--safe"
+    },
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--window-target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-task-from-maintenance-window",
+   "description": "Removes a task from a maintenance window.",
+   "options": [
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--window-task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-activations",
+   "description": "Describes details about the activation, such as the date and time the activation was created, its expiration date, the Identity and Access Management (IAM) role assigned to the managed nodes in the activation, and the number of nodes registered by using this activation.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-association",
+   "description": "Describes the association for the specified target or managed node.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {}
+    },
+    {
+     "name": "--association-version",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-association-execution-targets",
+   "description": "Views information about a specific execution of a specific association.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-association-executions",
+   "description": "Views all executions for a specific association ID.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-automation-executions",
+   "description": "Provides details about all active and terminated Automation executions.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-automation-step-executions",
+   "description": "Information about all active and terminated step executions in an Automation workflow.",
+   "options": [
+    {
+     "name": "--automation-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-reverse-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--reverse-order"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-available-patches",
+   "description": "Lists all patches eligible to be included in a patch baseline.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-document",
+   "description": "Describes the specified Amazon Web Services Systems Manager document (SSM document).",
+   "options": [
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-document-permission",
+   "description": "Describes the permissions for a Amazon Web Services Systems Manager document (SSM document).",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--permission-type",
+     "args": {
+      "suggestions": [
+       "Share"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-effective-instance-associations",
+   "description": "All associations for the managed nodes.",
+   "options": [
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-effective-patches-for-patch-baseline",
+   "description": "Retrieves the current effective patches (the patch and the approval state) for the specified patch baseline.",
+   "options": [
+    {
+     "name": "--baseline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-instance-associations-status",
+   "description": "The status of the associations for the managed nodes.",
+   "options": [
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-instance-information",
+   "description": "Provides information about one or more of your managed nodes, including the operating system platform, SSM Agent version, association status, and IP address.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--instance-information-filter-list",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-instance-patch-states",
+   "description": "Retrieves the high-level patch state of one or more managed nodes.",
+   "options": [
+    {
+     "name": "--instance-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-instance-patch-states-for-patch-group",
+   "description": "Retrieves the high-level patch state for the managed nodes in the specified patch group.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--patch-group",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-instance-patches",
+   "description": "Retrieves information about the patches on the specified managed node and their state relative to the patch baseline being used for the node.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-instance-properties",
+   "description": "An API operation used by the Systems Manager console to display information about Systems Manager managed nodes.",
+   "options": [
+    {
+     "name": "--filters-with-operator",
+     "args": {}
+    },
+    {
+     "name": "--instance-property-filter-list",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-inventory-deletions",
+   "description": "Describes a specific delete inventory operation.",
+   "options": [
+    {
+     "name": "--deletion-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-maintenance-window-execution-task-invocations",
+   "description": "Retrieves the individual task executions (one per target) for a particular task run as part of a maintenance window execution.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--window-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-maintenance-window-execution-tasks",
+   "description": "For a given maintenance window execution, lists the tasks that were run.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--window-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-maintenance-window-executions",
+   "description": "Lists the executions of a maintenance window.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-maintenance-window-schedule",
+   "description": "Retrieves information about upcoming executions of a maintenance window.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "INSTANCE",
+       "RESOURCE_GROUP"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    },
+    {
+     "name": "--window-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-maintenance-window-targets",
+   "description": "Lists the targets registered with the maintenance window.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-maintenance-window-tasks",
+   "description": "Lists the tasks in a maintenance window.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-maintenance-windows",
+   "description": "Retrieves the maintenance windows in an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-maintenance-windows-for-target",
+   "description": "Retrieves information about the maintenance window targets or tasks that a managed node is associated with.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "INSTANCE",
+       "RESOURCE_GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-ops-items",
+   "description": "Query a set of OpsItems.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ops-item-filters",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-parameters",
+   "description": "Lists the parameters in your Amazon Web Services account or the parameters shared with you when you enable the Shared option.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-shared"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-filters",
+     "args": {}
+    },
+    {
+     "name": "--shared"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-patch-baselines",
+   "description": "Lists the patch baselines in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-patch-group-state",
+   "description": "Returns high-level aggregated patch compliance state information for a patch group.",
+   "options": [
+    {
+     "name": "--patch-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-patch-groups",
+   "description": "Lists all patch groups that have been registered with patch baselines.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-patch-properties",
+   "description": "Lists the properties of available patches organized by product, product family, classification, severity, and other properties of available patches.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--operating-system",
+     "args": {
+      "suggestions": [
+       "WINDOWS",
+       "AMAZON_LINUX",
+       "AMAZON_LINUX_2",
+       "AMAZON_LINUX_2022",
+       "UBUNTU",
+       "REDHAT_ENTERPRISE_LINUX",
+       "SUSE",
+       "CENTOS",
+       "ORACLE_LINUX",
+       "DEBIAN",
+       "MACOS",
+       "RASPBIAN",
+       "ROCKY_LINUX",
+       "ALMA_LINUX",
+       "AMAZON_LINUX_2023"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--patch-set",
+     "args": {
+      "suggestions": [
+       "OS",
+       "APPLICATION"
+      ]
+     }
+    },
+    {
+     "name": "--property",
+     "args": {
+      "suggestions": [
+       "PRODUCT",
+       "PRODUCT_FAMILY",
+       "CLASSIFICATION",
+       "MSRC_SEVERITY",
+       "PRIORITY",
+       "SEVERITY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-sessions",
+   "description": "Retrieves a list of all active sessions (both connected and disconnected) or terminated sessions from the past 30 days.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "Active",
+       "History"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-ops-item-related-item",
+   "description": "Deletes the association between an OpsItem and a related item.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ops-item-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-token",
+   "description": "Returns a credentials set to be used with just-in-time node access.",
+   "options": [
+    {
+     "name": "--access-request-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-automation-execution",
+   "description": "Get detailed information about a particular Automation execution.",
+   "options": [
+    {
+     "name": "--automation-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-calendar-state",
+   "description": "Gets the state of a Amazon Web Services Systems Manager change calendar at the current time or a specified time.",
+   "options": [
+    {
+     "name": "--at-time",
+     "args": {}
+    },
+    {
+     "name": "--calendar-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cloud-connector",
+   "description": "Returns detailed information about a cloud connector.",
+   "options": [
+    {
+     "name": "--cloud-connector-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-command-invocation",
+   "description": "Returns detailed information about command execution for an invocation or plugin.",
+   "options": [
+    {
+     "name": "--command-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--plugin-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-connection-status",
+   "description": "Retrieves the Session Manager connection status for a managed node to determine whether it is running and ready to receive Session Manager connections.",
+   "options": [
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-default-patch-baseline",
+   "description": "Retrieves the default patch baseline.",
+   "options": [
+    {
+     "name": "--operating-system",
+     "args": {
+      "suggestions": [
+       "WINDOWS",
+       "AMAZON_LINUX",
+       "AMAZON_LINUX_2",
+       "AMAZON_LINUX_2022",
+       "UBUNTU",
+       "REDHAT_ENTERPRISE_LINUX",
+       "SUSE",
+       "CENTOS",
+       "ORACLE_LINUX",
+       "DEBIAN",
+       "MACOS",
+       "RASPBIAN",
+       "ROCKY_LINUX",
+       "ALMA_LINUX",
+       "AMAZON_LINUX_2023"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-deployable-patch-snapshot-for-instance",
+   "description": "Retrieves the current snapshot for the patch baseline the managed node uses.",
+   "options": [
+    {
+     "name": "--baseline-override",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-use-s3-dual-stack-endpoint"
+    },
+    {
+     "name": "--snapshot-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--use-s3-dual-stack-endpoint"
+    }
+   ]
+  },
+  {
+   "name": "get-document",
+   "description": "Gets the contents of the specified Amazon Web Services Systems Manager document (SSM document).",
+   "options": [
+    {
+     "name": "--document-format",
+     "args": {
+      "suggestions": [
+       "YAML",
+       "JSON",
+       "TEXT"
+      ]
+     }
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-execution-preview",
+   "description": "Initiates the process of retrieving an existing preview that shows the effects that running a specified Automation runbook would have on the targeted resources.",
+   "options": [
+    {
+     "name": "--execution-preview-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-inventory",
+   "description": "Query inventory information.",
+   "options": [
+    {
+     "name": "--aggregators",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--result-attributes",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-inventory-schema",
+   "description": "Return a list of inventory type names for the account, or return a list of attribute names for a specific Inventory item type.",
+   "options": [
+    {
+     "name": "--aggregator"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-aggregator"
+    },
+    {
+     "name": "--no-sub-type"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--sub-type"
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-maintenance-window",
+   "description": "Retrieves a maintenance window.",
+   "options": [
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-maintenance-window-execution",
+   "description": "Retrieves details about a specific a maintenance window execution.",
+   "options": [
+    {
+     "name": "--window-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-maintenance-window-execution-task",
+   "description": "Retrieves the details about a specific task run as part of a maintenance window execution.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--window-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-maintenance-window-execution-task-invocation",
+   "description": "Retrieves information about a specific task running on a specific target.",
+   "options": [
+    {
+     "name": "--invocation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--window-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-maintenance-window-task",
+   "description": "Retrieves the details of a maintenance window task.",
+   "options": [
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--window-task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ops-item",
+   "description": "Get information about an OpsItem by using the ID.",
+   "options": [
+    {
+     "name": "--ops-item-arn",
+     "args": {}
+    },
+    {
+     "name": "--ops-item-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ops-metadata",
+   "description": "View operational metadata related to an application in Application Manager.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--ops-metadata-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ops-summary",
+   "description": "View a summary of operations metadata (OpsData) based on specified filters and aggregators.",
+   "options": [
+    {
+     "name": "--aggregators",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--result-attributes",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--sync-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-parameter",
+   "description": "Get information about a single parameter by specifying the parameter name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-with-decryption"
+    },
+    {
+     "name": "--with-decryption"
+    }
+   ]
+  },
+  {
+   "name": "get-parameter-history",
+   "description": "Retrieves the history of all changes to a parameter.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-with-decryption"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--with-decryption"
+    }
+   ]
+  },
+  {
+   "name": "get-parameters",
+   "description": "Get information about one or more parameters by specifying multiple parameter names.",
+   "options": [
+    {
+     "name": "--names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-with-decryption"
+    },
+    {
+     "name": "--with-decryption"
+    }
+   ]
+  },
+  {
+   "name": "get-parameters-by-path",
+   "description": "Retrieve information about one or more parameters under a specified level in a hierarchy.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-recursive"
+    },
+    {
+     "name": "--no-with-decryption"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parameter-filters",
+     "args": {}
+    },
+    {
+     "name": "--path",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recursive"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--with-decryption"
+    }
+   ]
+  },
+  {
+   "name": "get-patch-baseline",
+   "description": "Retrieves information about a patch baseline.",
+   "options": [
+    {
+     "name": "--baseline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-patch-baseline-for-patch-group",
+   "description": "Retrieves the patch baseline that should be used for the specified patch group.",
+   "options": [
+    {
+     "name": "--operating-system",
+     "args": {
+      "suggestions": [
+       "WINDOWS",
+       "AMAZON_LINUX",
+       "AMAZON_LINUX_2",
+       "AMAZON_LINUX_2022",
+       "UBUNTU",
+       "REDHAT_ENTERPRISE_LINUX",
+       "SUSE",
+       "CENTOS",
+       "ORACLE_LINUX",
+       "DEBIAN",
+       "MACOS",
+       "RASPBIAN",
+       "ROCKY_LINUX",
+       "ALMA_LINUX",
+       "AMAZON_LINUX_2023"
+      ]
+     }
+    },
+    {
+     "name": "--patch-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policies",
+   "description": "Returns an array of the Policy object.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-service-setting",
+   "description": "ServiceSetting is an account-level setting for an Amazon Web Services service.",
+   "options": [
+    {
+     "name": "--setting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "label-parameter-version",
+   "description": "A parameter label is a user-defined alias to help you manage different versions of a parameter.",
+   "options": [
+    {
+     "name": "--labels",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameter-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-association-versions",
+   "description": "Retrieves all versions of an association for a specific association ID.",
+   "options": [
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-associations",
+   "description": "Returns all State Manager associations in the current Amazon Web Services account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--association-filter-list",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cloud-connectors",
+   "description": "Returns a list of cloud connectors in the current Amazon Web Services account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-command-invocations",
+   "description": "An invocation is copy of a command sent to a specific managed node.",
+   "options": [
+    {
+     "name": "--command-id",
+     "args": {}
+    },
+    {
+     "name": "--details"
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-details"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-commands",
+   "description": "Lists the commands requested by users of the Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--command-id",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-compliance-items",
+   "description": "For a specified resource ID, this API operation returns a list of compliance statuses for different resource types.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-ids",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-compliance-summaries",
+   "description": "Returns a summary count of compliant and non-compliant resources for a compliance type.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-document-metadata-history",
+   "description": "Amazon Web Services Systems Manager Change Manager is no longer open to new customers.",
+   "options": [
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {
+      "suggestions": [
+       "DocumentReviews"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-document-versions",
+   "description": "List all versions for a document.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-documents",
+   "description": "Returns all Systems Manager (SSM) documents in the current Amazon Web Services account and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--document-filter-list",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-inventory-entries",
+   "description": "A list of inventory items returned by the request.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-nodes",
+   "description": "Takes in filters and returns a list of managed nodes matching the filter criteria.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--sync-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-nodes-summary",
+   "description": "Generates a summary of managed instance/node metadata based on the filters and aggregators you specify.",
+   "options": [
+    {
+     "name": "--aggregators",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--sync-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ops-item-events",
+   "description": "Returns a list of all OpsItem events in the current Amazon Web Services Region and Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ops-item-related-items",
+   "description": "Lists all related-item resources associated with a Systems Manager OpsCenter OpsItem.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ops-item-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ops-metadata",
+   "description": "Amazon Web Services Systems Manager calls this API operation when displaying all Application Manager OpsMetadata objects or blobs.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-compliance-summaries",
+   "description": "Returns a resource-level summary count.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-data-sync",
+   "description": "Lists your resource data sync configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--sync-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of the tags assigned to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Document",
+       "ManagedInstance",
+       "MaintenanceWindow",
+       "Parameter",
+       "PatchBaseline",
+       "OpsItem",
+       "OpsMetadata",
+       "Automation",
+       "Association",
+       "CloudConnector"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "modify-document-permission",
+   "description": "Shares a Amazon Web Services Systems Manager document (SSM document)publicly or privately.",
+   "options": [
+    {
+     "name": "--account-ids-to-add",
+     "args": {}
+    },
+    {
+     "name": "--account-ids-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission-type",
+     "args": {
+      "suggestions": [
+       "Share"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--shared-document-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-compliance-items",
+   "description": "Registers a compliance type and other compliance details on a designated resource.",
+   "options": [
+    {
+     "name": "--compliance-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-summary",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--item-content-hash",
+     "args": {}
+    },
+    {
+     "name": "--items",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--upload-type",
+     "args": {
+      "suggestions": [
+       "COMPLETE",
+       "PARTIAL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "put-inventory",
+   "description": "Bulk update custom inventory items on one or more managed nodes.",
+   "options": [
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--items",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-parameter",
+   "description": "Create or update a parameter in Parameter Store.",
+   "options": [
+    {
+     "name": "--allowed-pattern",
+     "args": {}
+    },
+    {
+     "name": "--data-type",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--key-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-overwrite"
+    },
+    {
+     "name": "--overwrite"
+    },
+    {
+     "name": "--policies",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tier",
+     "args": {
+      "suggestions": [
+       "Standard",
+       "Advanced",
+       "Intelligent-Tiering"
+      ]
+     }
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "String",
+       "StringList",
+       "SecureString"
+      ]
+     }
+    },
+    {
+     "name": "--value",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Creates or updates a Systems Manager resource policy.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-hash",
+     "args": {}
+    },
+    {
+     "name": "--policy-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-default-patch-baseline",
+   "description": "Defines the default patch baseline for the relevant operating system.",
+   "options": [
+    {
+     "name": "--baseline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-patch-baseline-for-patch-group",
+   "description": "Registers a patch baseline for a patch group.",
+   "options": [
+    {
+     "name": "--baseline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--patch-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-target-with-maintenance-window",
+   "description": "Registers a target with a maintenance window.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--owner-information",
+     "args": {}
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "INSTANCE",
+       "RESOURCE_GROUP"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-task-with-maintenance-window",
+   "description": "Adds a new task to a maintenance window.",
+   "options": [
+    {
+     "name": "--alarm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cutoff-behavior",
+     "args": {
+      "suggestions": [
+       "CONTINUE_TASK",
+       "CANCEL_TASK"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--logging-info",
+     "args": {}
+    },
+    {
+     "name": "--max-concurrency",
+     "args": {}
+    },
+    {
+     "name": "--max-errors",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--service-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    },
+    {
+     "name": "--task-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-invocation-parameters",
+     "args": {}
+    },
+    {
+     "name": "--task-parameters",
+     "args": {}
+    },
+    {
+     "name": "--task-type",
+     "args": {
+      "suggestions": [
+       "RUN_COMMAND",
+       "AUTOMATION",
+       "STEP_FUNCTIONS",
+       "LAMBDA"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "remove-tags-from-resource",
+   "description": "Removes tag keys from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "Document",
+       "ManagedInstance",
+       "MaintenanceWindow",
+       "Parameter",
+       "PatchBaseline",
+       "OpsItem",
+       "OpsMetadata",
+       "Automation",
+       "Association",
+       "CloudConnector"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reset-service-setting",
+   "description": "ServiceSetting is an account-level setting for an Amazon Web Services service.",
+   "options": [
+    {
+     "name": "--setting-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "resume-session",
+   "description": "Reconnects a session to a managed node after it has been disconnected.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-automation-signal",
+   "description": "Sends a signal to an Automation execution to change the current behavior or status of the execution.",
+   "options": [
+    {
+     "name": "--automation-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payload",
+     "args": {}
+    },
+    {
+     "name": "--signal-type",
+     "args": {
+      "suggestions": [
+       "Approve",
+       "Reject",
+       "StartStep",
+       "StopStep",
+       "Resume",
+       "Revoke"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-command",
+   "description": "Runs commands on one or more managed nodes.",
+   "options": [
+    {
+     "name": "--alarm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--cloud-watch-output-config",
+     "args": {}
+    },
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--document-hash",
+     "args": {}
+    },
+    {
+     "name": "--document-hash-type",
+     "args": {
+      "suggestions": [
+       "Sha256",
+       "Sha1"
+      ]
+     }
+    },
+    {
+     "name": "--document-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--instance-ids",
+     "args": {}
+    },
+    {
+     "name": "--max-concurrency",
+     "args": {}
+    },
+    {
+     "name": "--max-errors",
+     "args": {}
+    },
+    {
+     "name": "--notification-config",
+     "args": {}
+    },
+    {
+     "name": "--output-s3-bucket-name",
+     "args": {}
+    },
+    {
+     "name": "--output-s3-key-prefix",
+     "args": {}
+    },
+    {
+     "name": "--output-s3-region",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--service-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    },
+    {
+     "name": "--timeout-seconds",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-access-request",
+   "description": "Starts the workflow for just-in-time node access sessions.",
+   "options": [
+    {
+     "name": "--reason",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-associations-once",
+   "description": "Runs an association immediately and only one time.",
+   "options": [
+    {
+     "name": "--association-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-automation-execution",
+   "description": "Initiates execution of an Automation runbook.",
+   "options": [
+    {
+     "name": "--alarm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--document-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--max-concurrency",
+     "args": {}
+    },
+    {
+     "name": "--max-errors",
+     "args": {}
+    },
+    {
+     "name": "--mode",
+     "args": {
+      "suggestions": [
+       "Auto",
+       "Interactive"
+      ]
+     }
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-locations",
+     "args": {}
+    },
+    {
+     "name": "--target-locations-url",
+     "args": {}
+    },
+    {
+     "name": "--target-maps",
+     "args": {}
+    },
+    {
+     "name": "--target-parameter-name",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-change-request-execution",
+   "description": "Amazon Web Services Systems Manager Change Manager is no longer open to new customers.",
+   "options": [
+    {
+     "name": "--auto-approve"
+    },
+    {
+     "name": "--change-details",
+     "args": {}
+    },
+    {
+     "name": "--change-request-name",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--document-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-approve"
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--runbooks",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduled-end-time",
+     "args": {}
+    },
+    {
+     "name": "--scheduled-time",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-execution-preview",
+   "description": "Initiates the process of creating a preview showing the effects that running a specified Automation runbook would have on the targeted resources.",
+   "options": [
+    {
+     "name": "--document-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--execution-inputs",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-session",
+   "description": "Initiates a connection to a target (for example, a managed node) for a Session Manager session.",
+   "options": [
+    {
+     "name": "--document-name",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-automation-execution",
+   "description": "Stop an Automation that is currently running.",
+   "options": [
+    {
+     "name": "--automation-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "Complete",
+       "Cancel"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "terminate-session",
+   "description": "Permanently ends a session and closes the data connection between the Session Manager client and SSM Agent on the managed node.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "unlabel-parameter-version",
+   "description": "Remove a label or labels from a parameter.",
+   "options": [
+    {
+     "name": "--labels",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameter-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-association",
+   "description": "Updates an association.",
+   "options": [
+    {
+     "name": "--alarm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--apply-only-at-cron-interval"
+    },
+    {
+     "name": "--association-dispatch-assume-role",
+     "args": {}
+    },
+    {
+     "name": "--association-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--association-name",
+     "args": {}
+    },
+    {
+     "name": "--association-version",
+     "args": {}
+    },
+    {
+     "name": "--automation-target-parameter-name",
+     "args": {}
+    },
+    {
+     "name": "--calendar-names",
+     "args": {}
+    },
+    {
+     "name": "--compliance-severity",
+     "args": {
+      "suggestions": [
+       "CRITICAL",
+       "HIGH",
+       "MEDIUM",
+       "LOW",
+       "UNSPECIFIED"
+      ]
+     }
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--max-concurrency",
+     "args": {}
+    },
+    {
+     "name": "--max-errors",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-apply-only-at-cron-interval"
+    },
+    {
+     "name": "--output-location",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--schedule-expression",
+     "args": {}
+    },
+    {
+     "name": "--schedule-offset",
+     "args": {}
+    },
+    {
+     "name": "--sync-compliance",
+     "args": {
+      "suggestions": [
+       "AUTO",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--target-locations",
+     "args": {}
+    },
+    {
+     "name": "--target-maps",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-association-status",
+   "description": "Updates the status of the Amazon Web Services Systems Manager document (SSM document) associated with the specified managed node.",
+   "options": [
+    {
+     "name": "--association-status",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cloud-connector",
+   "description": "Updates an existing cloud connector with new configuration details.",
+   "options": [
+    {
+     "name": "--cloud-connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-document",
+   "description": "Updates one or more values for an SSM document.",
+   "options": [
+    {
+     "name": "--attachments",
+     "args": {}
+    },
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--document-format",
+     "args": {
+      "suggestions": [
+       "YAML",
+       "JSON",
+       "TEXT"
+      ]
+     }
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-type",
+     "args": {}
+    },
+    {
+     "name": "--version-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-document-default-version",
+   "description": "Set the default version of a document.",
+   "options": [
+    {
+     "name": "--document-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-document-metadata",
+   "description": "Amazon Web Services Systems Manager Change Manager is no longer open to new customers.",
+   "options": [
+    {
+     "name": "--document-reviews",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-version",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-maintenance-window",
+   "description": "Updates an existing maintenance window.",
+   "options": [
+    {
+     "name": "--allow-unassociated-targets"
+    },
+    {
+     "name": "--cutoff",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--duration",
+     "args": {}
+    },
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--end-date",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-allow-unassociated-targets"
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--no-replace"
+    },
+    {
+     "name": "--replace"
+    },
+    {
+     "name": "--schedule",
+     "args": {}
+    },
+    {
+     "name": "--schedule-offset",
+     "args": {}
+    },
+    {
+     "name": "--schedule-timezone",
+     "args": {}
+    },
+    {
+     "name": "--start-date",
+     "args": {}
+    },
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-maintenance-window-target",
+   "description": "Modifies the target of an existing maintenance window.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-replace"
+    },
+    {
+     "name": "--owner-information",
+     "args": {}
+    },
+    {
+     "name": "--replace"
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    },
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--window-target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-maintenance-window-task",
+   "description": "Modifies a task assigned to a maintenance window.",
+   "options": [
+    {
+     "name": "--alarm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--cutoff-behavior",
+     "args": {
+      "suggestions": [
+       "CONTINUE_TASK",
+       "CANCEL_TASK"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--logging-info",
+     "args": {}
+    },
+    {
+     "name": "--max-concurrency",
+     "args": {}
+    },
+    {
+     "name": "--max-errors",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-replace"
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--replace"
+    },
+    {
+     "name": "--service-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {}
+    },
+    {
+     "name": "--task-arn",
+     "args": {}
+    },
+    {
+     "name": "--task-invocation-parameters",
+     "args": {}
+    },
+    {
+     "name": "--task-parameters",
+     "args": {}
+    },
+    {
+     "name": "--window-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--window-task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-managed-instance-role",
+   "description": "Changes the Identity and Access Management (IAM) role that is assigned to the on-premises server, edge device, or virtual machines (VM).",
+   "options": [
+    {
+     "name": "--iam-role",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-ops-item",
+   "description": "Edit or change an OpsItem.",
+   "options": [
+    {
+     "name": "--actual-end-time",
+     "args": {}
+    },
+    {
+     "name": "--actual-start-time",
+     "args": {}
+    },
+    {
+     "name": "--category",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--notifications",
+     "args": {}
+    },
+    {
+     "name": "--operational-data",
+     "args": {}
+    },
+    {
+     "name": "--operational-data-to-delete",
+     "args": {}
+    },
+    {
+     "name": "--ops-item-arn",
+     "args": {}
+    },
+    {
+     "name": "--ops-item-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--planned-end-time",
+     "args": {}
+    },
+    {
+     "name": "--planned-start-time",
+     "args": {}
+    },
+    {
+     "name": "--priority",
+     "args": {}
+    },
+    {
+     "name": "--related-ops-items",
+     "args": {}
+    },
+    {
+     "name": "--severity",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "Open",
+       "InProgress",
+       "Resolved",
+       "Pending",
+       "TimedOut",
+       "Cancelling",
+       "Cancelled",
+       "Failed",
+       "CompletedWithSuccess",
+       "CompletedWithFailure",
+       "Scheduled",
+       "RunbookInProgress",
+       "PendingChangeCalendarOverride",
+       "ChangeCalendarOverrideApproved",
+       "ChangeCalendarOverrideRejected",
+       "PendingApproval",
+       "Approved",
+       "Revoked",
+       "Rejected",
+       "Closed"
+      ]
+     }
+    },
+    {
+     "name": "--title",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-ops-metadata",
+   "description": "Amazon Web Services Systems Manager calls this API operation when you edit OpsMetadata in Application Manager.",
+   "options": [
+    {
+     "name": "--keys-to-delete",
+     "args": {}
+    },
+    {
+     "name": "--metadata-to-update",
+     "args": {}
+    },
+    {
+     "name": "--ops-metadata-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-patch-baseline",
+   "description": "Modifies an existing patch baseline.",
+   "options": [
+    {
+     "name": "--approval-rules",
+     "args": {}
+    },
+    {
+     "name": "--approved-patches",
+     "args": {}
+    },
+    {
+     "name": "--approved-patches-compliance-level",
+     "args": {
+      "suggestions": [
+       "CRITICAL",
+       "HIGH",
+       "MEDIUM",
+       "LOW",
+       "INFORMATIONAL",
+       "UNSPECIFIED"
+      ]
+     }
+    },
+    {
+     "name": "--approved-patches-enable-non-security"
+    },
+    {
+     "name": "--available-security-updates-compliance-status",
+     "args": {
+      "suggestions": [
+       "COMPLIANT",
+       "NON_COMPLIANT"
+      ]
+     }
+    },
+    {
+     "name": "--baseline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--global-filters",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-approved-patches-enable-non-security"
+    },
+    {
+     "name": "--no-replace"
+    },
+    {
+     "name": "--rejected-patches",
+     "args": {}
+    },
+    {
+     "name": "--rejected-patches-action",
+     "args": {
+      "suggestions": [
+       "ALLOW_AS_DEPENDENCY",
+       "BLOCK"
+      ]
+     }
+    },
+    {
+     "name": "--replace"
+    },
+    {
+     "name": "--sources",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-resource-data-sync",
+   "description": "Update a resource data sync.",
+   "options": [
+    {
+     "name": "--sync-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sync-type",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-service-setting",
+   "description": "ServiceSetting is an account-level setting for an Amazon Web Services service.",
+   "options": [
+    {
+     "name": "--setting-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--setting-value",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-cloud-connector",
+   "description": "Validates the configuration and connectivity of a cloud connector.",
+   "options": [
+    {
+     "name": "--cloud-connector-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "command-executed",
+     "description": "Wait until JMESPath query Status returns Success when polling with ``get-command-invocation``.",
+     "options": [
+      {
+       "name": "--command-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--instance-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--plugin-name",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

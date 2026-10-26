@@ -1,0 +1,491 @@
+{
+ "name": "repostspace",
+ "description": "AWS re:Post Private is a private version of AWS re:Post for enterprises with Enterprise Support or Enterprise On-Ramp Support plans.",
+ "subcommands": [
+  {
+   "name": "batch-add-channel-role-to-accessors",
+   "description": "Add role to multiple users or groups in a private re:Post channel.",
+   "options": [
+    {
+     "name": "--accessor-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-role",
+     "args": {
+      "suggestions": [
+       "ASKER",
+       "EXPERT",
+       "MODERATOR",
+       "SUPPORTREQUESTOR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-add-role",
+   "description": "Add a role to multiple users or groups in a private re:Post.",
+   "options": [
+    {
+     "name": "--accessor-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "EXPERT",
+       "MODERATOR",
+       "ADMINISTRATOR",
+       "SUPPORTREQUESTOR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-remove-channel-role-from-accessors",
+   "description": "Remove a role from multiple users or groups in a private re:Post channel.",
+   "options": [
+    {
+     "name": "--accessor-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-role",
+     "args": {
+      "suggestions": [
+       "ASKER",
+       "EXPERT",
+       "MODERATOR",
+       "SUPPORTREQUESTOR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-remove-role",
+   "description": "Remove a role from multiple users or groups in a private re:Post.",
+   "options": [
+    {
+     "name": "--accessor-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role",
+     "args": {
+      "suggestions": [
+       "EXPERT",
+       "MODERATOR",
+       "ADMINISTRATOR",
+       "SUPPORTREQUESTOR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-channel",
+   "description": "Creates a channel in an AWS re:Post Private private re:Post.",
+   "options": [
+    {
+     "name": "--channel-description",
+     "args": {}
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-space",
+   "description": "Creates an AWS re:Post Private private re:Post.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--subdomain",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--supported-email-domains",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tier",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "STANDARD"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--user-kms-key",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-space",
+   "description": "Deletes an AWS re:Post Private private re:Post.",
+   "options": [
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-admin",
+   "description": "Removes the user or group from the list of administrators of the private re:Post.",
+   "options": [
+    {
+     "name": "--admin-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-channel",
+   "description": "Displays information about a channel in a private re:Post.",
+   "options": [
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-space",
+   "description": "Displays information about the AWS re:Post Private private re:Post.",
+   "options": [
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-channels",
+   "description": "Returns the list of channel within a private re:Post with some information about each channel.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-spaces",
+   "description": "Returns a list of AWS re:Post Private private re:Posts in the account with some information about each private re:Post.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns the tags that are associated with the AWS re:Post Private resource specified by the resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-admin",
+   "description": "Adds a user or group to the list of administrators of the private re:Post.",
+   "options": [
+    {
+     "name": "--admin-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-invites",
+   "description": "Sends an invitation email to selected users and groups.",
+   "options": [
+    {
+     "name": "--accessor-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates tags with an AWS re:Post Private resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the association of the tag with the AWS re:Post Private resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-channel",
+   "description": "Modifies an existing channel.",
+   "options": [
+    {
+     "name": "--channel-description",
+     "args": {}
+    },
+    {
+     "name": "--channel-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-space",
+   "description": "Modifies an existing AWS re:Post Private private re:Post.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--space-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--supported-email-domains",
+     "args": {}
+    },
+    {
+     "name": "--tier",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "STANDARD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "channel-created",
+     "description": "Wait until JMESPath query channelStatus returns CREATED when polling with ``get-channel``.",
+     "options": [
+      {
+       "name": "--channel-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--space-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "channel-deleted",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``get-channel``.",
+     "options": [
+      {
+       "name": "--channel-id",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--space-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "space-created",
+     "description": "Wait until JMESPath query status returns CREATED when polling with ``get-space``.",
+     "options": [
+      {
+       "name": "--space-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "space-deleted",
+     "description": "Wait until ResourceNotFoundException is thrown when polling with ``get-space``.",
+     "options": [
+      {
+       "name": "--space-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

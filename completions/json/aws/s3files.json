@@ -1,0 +1,397 @@
+{
+ "name": "s3files",
+ "description": "S3 Files makes S3 buckets accessible as high-performance file systems powered by EFS.",
+ "subcommands": [
+  {
+   "name": "create-access-point",
+   "description": "Creates an S3 File System Access Point for application-specific access with POSIX user identity and root directory enforcement.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--posix-user",
+     "args": {}
+    },
+    {
+     "name": "--root-directory",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-file-system",
+   "description": "Creates an S3 File System resource scoped to a bucket or prefix within a bucket, enabling file system access to S3 data.",
+   "options": [
+    {
+     "name": "--accept-bucket-warning"
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-accept-bucket-warning"
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-mount-target",
+   "description": "Creates a mount target resource as an endpoint for mounting the S3 File System from compute resources in a specific Availability Zone and VPC.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ip-address-type",
+     "args": {
+      "suggestions": [
+       "IPV4_ONLY",
+       "IPV6_ONLY",
+       "DUAL_STACK"
+      ]
+     }
+    },
+    {
+     "name": "--ipv4-address",
+     "args": {}
+    },
+    {
+     "name": "--ipv6-address",
+     "args": {}
+    },
+    {
+     "name": "--security-groups",
+     "args": {}
+    },
+    {
+     "name": "--subnet-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-point",
+   "description": "Deletes an S3 File System Access Point.",
+   "options": [
+    {
+     "name": "--access-point-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-file-system",
+   "description": "Deletes an S3 File System.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--no-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "delete-file-system-policy",
+   "description": "Deletes the IAM resource policy of an S3 File System.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-mount-target",
+   "description": "Deletes the specified mount target.",
+   "options": [
+    {
+     "name": "--mount-target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-point",
+   "description": "Returns resource information for an S3 File System Access Point.",
+   "options": [
+    {
+     "name": "--access-point-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-file-system",
+   "description": "Returns resource information for the specified S3 File System including status, configuration, and metadata.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-file-system-policy",
+   "description": "Returns the IAM resource policy of an S3 File System.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-mount-target",
+   "description": "Returns detailed resource information for the specified mount target including network configuration.",
+   "options": [
+    {
+     "name": "--mount-target-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-synchronization-configuration",
+   "description": "Returns the synchronization configuration for the specified S3 File System, including import data rules and expiration data rules.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-access-points",
+   "description": "Returns resource information for all S3 File System Access Points associated with the specified S3 File System.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-file-systems",
+   "description": "Returns a list of all S3 File Systems owned by the account with optional filtering by bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-mount-targets",
+   "description": "Returns resource information for all mount targets with optional filtering by file system, access point, and VPC.",
+   "options": [
+    {
+     "name": "--access-point-id",
+     "args": {}
+    },
+    {
+     "name": "--file-system-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags for S3 Files resources.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-file-system-policy",
+   "description": "Creates or replaces the IAM resource policy for an S3 File System to control access permissions.",
+   "options": [
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-synchronization-configuration",
+   "description": "Creates or updates the synchronization configuration for the specified S3 File System, including import data rules and expiration data rules.",
+   "options": [
+    {
+     "name": "--expiration-data-rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--file-system-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--import-data-rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--latest-version-number",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Creates tags for S3 Files resources using standard Amazon Web Services tagging APIs.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from S3 Files resources.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-mount-target",
+   "description": "Updates the mount target resource, specifically security group configurations.",
+   "options": [
+    {
+     "name": "--mount-target-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-groups",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1063 @@
+{
+ "name": "mediatailor",
+ "description": "Use the AWS Elemental MediaTailor SDKs and CLI to configure scalable ad insertion and linear channels.",
+ "subcommands": [
+  {
+   "name": "configure-logs-for-channel",
+   "description": "Configures Amazon CloudWatch log settings for a channel.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--log-types",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "configure-logs-for-playback-configuration",
+   "description": "Defines where AWS Elemental MediaTailor sends logs for the playback configuration.",
+   "options": [
+    {
+     "name": "--ads-interaction-log",
+     "args": {}
+    },
+    {
+     "name": "--enabled-logging-strategies",
+     "args": {}
+    },
+    {
+     "name": "--manifest-service-interaction-log",
+     "args": {}
+    },
+    {
+     "name": "--percent-enabled",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--playback-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-channel",
+   "description": "Creates a channel.",
+   "options": [
+    {
+     "name": "--audiences",
+     "args": {}
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filler-slate",
+     "args": {}
+    },
+    {
+     "name": "--outputs",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--playback-mode",
+     "args": {
+      "suggestions": [
+       "LOOP",
+       "LINEAR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tier",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "STANDARD"
+      ]
+     }
+    },
+    {
+     "name": "--time-shift-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-live-source",
+   "description": "The live source configuration.",
+   "options": [
+    {
+     "name": "--http-package-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--live-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-prefetch-schedule",
+   "description": "Creates a prefetch schedule for a playback configuration.",
+   "options": [
+    {
+     "name": "--consumption",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--playback-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recurring-prefetch-configuration",
+     "args": {}
+    },
+    {
+     "name": "--retrieval",
+     "args": {}
+    },
+    {
+     "name": "--schedule-type",
+     "args": {
+      "suggestions": [
+       "SINGLE",
+       "RECURRING"
+      ]
+     }
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-program",
+   "description": "Creates a program within a channel.",
+   "options": [
+    {
+     "name": "--ad-breaks",
+     "args": {}
+    },
+    {
+     "name": "--audience-media",
+     "args": {}
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--live-source-name",
+     "args": {}
+    },
+    {
+     "name": "--program-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vod-source-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-source-location",
+   "description": "Creates a source location.",
+   "options": [
+    {
+     "name": "--access-configuration",
+     "args": {}
+    },
+    {
+     "name": "--default-segment-delivery-configuration",
+     "args": {}
+    },
+    {
+     "name": "--http-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-delivery-configurations",
+     "args": {}
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-vod-source",
+   "description": "The VOD source configuration parameters.",
+   "options": [
+    {
+     "name": "--http-package-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vod-source-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-channel",
+   "description": "Deletes a channel.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-channel-policy",
+   "description": "The channel policy to delete.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-function",
+   "description": "Deletes a function.",
+   "options": [
+    {
+     "name": "--function-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-live-source",
+   "description": "The live source to delete.",
+   "options": [
+    {
+     "name": "--live-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-playback-configuration",
+   "description": "Deletes a playback configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-prefetch-schedule",
+   "description": "Deletes a prefetch schedule for a specific playback configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--playback-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-program",
+   "description": "Deletes a program within a channel.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-source-location",
+   "description": "Deletes a source location.",
+   "options": [
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vod-source",
+   "description": "The video on demand (VOD) source to delete.",
+   "options": [
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vod-source-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-channel",
+   "description": "Describes a channel.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-live-source",
+   "description": "The live source to describe.",
+   "options": [
+    {
+     "name": "--live-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-program",
+   "description": "Describes a program within a channel.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-source-location",
+   "description": "Describes a source location.",
+   "options": [
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-vod-source",
+   "description": "Provides details about a specific video on demand (VOD) source in a specific source location.",
+   "options": [
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vod-source-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-channel-policy",
+   "description": "Returns the channel's IAM policy.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-channel-schedule",
+   "description": "Retrieves information about your channel's schedule.",
+   "options": [
+    {
+     "name": "--audience",
+     "args": {}
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--duration-minutes",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-function",
+   "description": "Retrieves the configuration and metadata for a function.",
+   "options": [
+    {
+     "name": "--function-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-playback-configuration",
+   "description": "Retrieves a playback configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-prefetch-schedule",
+   "description": "Retrieves a prefetch schedule for a playback configuration.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--playback-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-alerts",
+   "description": "Lists the alerts that are associated with a MediaTailor channel assembly resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-channels",
+   "description": "Retrieves information about the channels that are associated with the current AWS account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-functions",
+   "description": "Retrieves all functions associated with your AWS account in the current Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-live-sources",
+   "description": "Lists the live sources contained in a source location.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-playback-configurations",
+   "description": "Retrieves existing playback configurations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-prefetch-schedules",
+   "description": "Lists the prefetch schedules for a playback configuration.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--playback-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-type",
+     "args": {
+      "suggestions": [
+       "SINGLE",
+       "RECURRING",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-source-locations",
+   "description": "Lists the source locations for a channel.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "A list of tags that are associated with this resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-vod-sources",
+   "description": "Lists the VOD sources contained in a source location.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-channel-policy",
+   "description": "Creates an IAM policy for the channel.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-function",
+   "description": "Creates or updates a function.",
+   "options": [
+    {
+     "name": "--custom-output-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--function-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--function-type",
+     "args": {
+      "suggestions": [
+       "HTTP_REQUEST",
+       "CUSTOM_OUTPUT",
+       "SEQUENTIAL_EXECUTOR"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--http-request-configuration",
+     "args": {}
+    },
+    {
+     "name": "--sequential-executor-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-playback-configuration",
+   "description": "Creates a playback configuration.",
+   "options": [
+    {
+     "name": "--ad-conditioning-configuration",
+     "args": {}
+    },
+    {
+     "name": "--ad-decision-server-configuration",
+     "args": {}
+    },
+    {
+     "name": "--ad-decision-server-url",
+     "args": {}
+    },
+    {
+     "name": "--ads-personalization-concurrency",
+     "args": {}
+    },
+    {
+     "name": "--ads-personalization-timeouts",
+     "args": {}
+    },
+    {
+     "name": "--avail-suppression",
+     "args": {}
+    },
+    {
+     "name": "--bumper",
+     "args": {}
+    },
+    {
+     "name": "--cdn-configuration",
+     "args": {}
+    },
+    {
+     "name": "--configuration-aliases",
+     "args": {}
+    },
+    {
+     "name": "--dash-configuration",
+     "args": {}
+    },
+    {
+     "name": "--function-mapping",
+     "args": {}
+    },
+    {
+     "name": "--insertion-mode",
+     "args": {
+      "suggestions": [
+       "STITCHED_ONLY",
+       "PLAYER_SELECT"
+      ]
+     }
+    },
+    {
+     "name": "--live-pre-roll-configuration",
+     "args": {}
+    },
+    {
+     "name": "--manifest-processing-rules",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--personalization-threshold-seconds",
+     "args": {}
+    },
+    {
+     "name": "--slate-ad-url",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--transcode-profile-name",
+     "args": {}
+    },
+    {
+     "name": "--video-content-source-url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-channel",
+   "description": "Starts a channel.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-channel",
+   "description": "Stops a channel.",
+   "options": [
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "The resource to tag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "The resource to untag.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-channel",
+   "description": "Updates a channel.",
+   "options": [
+    {
+     "name": "--audiences",
+     "args": {}
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filler-slate",
+     "args": {}
+    },
+    {
+     "name": "--outputs",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--time-shift-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-live-source",
+   "description": "Updates a live source's configuration.",
+   "options": [
+    {
+     "name": "--http-package-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--live-source-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-program",
+   "description": "Updates a program within a channel.",
+   "options": [
+    {
+     "name": "--ad-breaks",
+     "args": {}
+    },
+    {
+     "name": "--audience-media",
+     "args": {}
+    },
+    {
+     "name": "--channel-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-source-location",
+   "description": "Updates a source location.",
+   "options": [
+    {
+     "name": "--access-configuration",
+     "args": {}
+    },
+    {
+     "name": "--default-segment-delivery-configuration",
+     "args": {}
+    },
+    {
+     "name": "--http-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--segment-delivery-configurations",
+     "args": {}
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-vod-source",
+   "description": "Updates a VOD source's configuration.",
+   "options": [
+    {
+     "name": "--http-package-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-location-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vod-source-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

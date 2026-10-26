@@ -1,0 +1,1407 @@
+{
+ "name": "route53",
+ "description": "Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service.",
+ "subcommands": [
+  {
+   "name": "activate-key-signing-key",
+   "description": "Activates a key-signing key (KSK) so that it can be used for signing by DNSSEC.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-vpc-with-hosted-zone",
+   "description": "Associates an Amazon VPC with a private hosted zone.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "change-cidr-collection",
+   "description": "Creates, changes, or deletes CIDR blocks within a collection.",
+   "options": [
+    {
+     "name": "--changes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--collection-version",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "change-resource-record-sets",
+   "description": "Creates, changes, or deletes a resource record set, which contains authoritative DNS information for a specified domain name or subdomain name.",
+   "options": [
+    {
+     "name": "--change-batch",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "change-tags-for-resource",
+   "description": "Adds, edits, or deletes tags for a health check or a hosted zone.",
+   "options": [
+    {
+     "name": "--add-tags",
+     "args": {}
+    },
+    {
+     "name": "--remove-tag-keys",
+     "args": {}
+    },
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "healthcheck",
+       "hostedzone"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-cidr-collection",
+   "description": "Creates a CIDR collection in the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--caller-reference",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-health-check",
+   "description": "Creates a new health check.",
+   "options": [
+    {
+     "name": "--caller-reference",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--health-check-config",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-hosted-zone",
+   "description": "Creates a new public or private hosted zone.",
+   "options": [
+    {
+     "name": "--caller-reference",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delegation-set-id",
+     "args": {}
+    },
+    {
+     "name": "--hosted-zone-config",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-key-signing-key",
+   "description": "Creates a new key-signing key (KSK) associated with a hosted zone.",
+   "options": [
+    {
+     "name": "--caller-reference",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key-management-service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-query-logging-config",
+   "description": "Creates a configuration for DNS query logging.",
+   "options": [
+    {
+     "name": "--cloud-watch-logs-log-group-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-reusable-delegation-set",
+   "description": "Creates a delegation set (a group of four name servers) that can be reused by multiple hosted zones that were created by the same Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--caller-reference",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-traffic-policy",
+   "description": "Creates a traffic policy, which you use to create multiple DNS resource record sets for one domain name (such as example.com) or one subdomain name (such as www.example.com).",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-traffic-policy-instance",
+   "description": "Creates resource record sets in a specified hosted zone based on the settings in a specified traffic policy version.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--traffic-policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--traffic-policy-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ttl",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-traffic-policy-version",
+   "description": "Creates a new version of an existing traffic policy.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-vpc-association-authorization",
+   "description": "Authorizes the Amazon Web Services account that created a specified VPC to submit an AssociateVPCWithHostedZone request to associate the VPC with a specified hosted zone that was created by a different account.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deactivate-key-signing-key",
+   "description": "Deactivates a key-signing key (KSK) so that it will not be used for signing by DNSSEC.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-cidr-collection",
+   "description": "Deletes a CIDR collection in the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-health-check",
+   "description": "Deletes a health check.",
+   "options": [
+    {
+     "name": "--health-check-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-hosted-zone",
+   "description": "Deletes a hosted zone.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-key-signing-key",
+   "description": "Deletes a key-signing key (KSK).",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-query-logging-config",
+   "description": "Deletes a configuration for DNS query logging.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-reusable-delegation-set",
+   "description": "Deletes a reusable delegation set.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-traffic-policy",
+   "description": "Deletes a traffic policy.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--traffic-policy-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-traffic-policy-instance",
+   "description": "Deletes a traffic policy instance and all of the resource record sets that Amazon Route 53 created when you created the instance.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-vpc-association-authorization",
+   "description": "Removes authorization to submit an AssociateVPCWithHostedZone request to associate a specified VPC with a hosted zone that was created by a different account.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-hosted-zone-dnssec",
+   "description": "Disables DNSSEC signing in a specific hosted zone.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-vpc-from-hosted-zone",
+   "description": "Disassociates an Amazon Virtual Private Cloud (Amazon VPC) from an Amazon Route 53 private hosted zone.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-hosted-zone-dnssec",
+   "description": "Enables DNSSEC signing in a specific hosted zone.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-limit",
+   "description": "Gets the specified limit for the current account, for example, the maximum number of health checks that you can create using the account.",
+   "options": [
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "MAX_HEALTH_CHECKS_BY_OWNER",
+       "MAX_HOSTED_ZONES_BY_OWNER",
+       "MAX_TRAFFIC_POLICY_INSTANCES_BY_OWNER",
+       "MAX_REUSABLE_DELEGATION_SETS_BY_OWNER",
+       "MAX_TRAFFIC_POLICIES_BY_OWNER"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-change",
+   "description": "Returns the current status of a change batch request.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-checker-ip-ranges",
+   "description": "Route 53 does not perform authorization for this API because it retrieves information that is already available to the public."
+  },
+  {
+   "name": "get-dnssec",
+   "description": "Returns information about DNSSEC for a specific hosted zone, including the key-signing keys (KSKs) in the hosted zone.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-geo-location",
+   "description": "Gets information about whether a specified geographic location is supported for Amazon Route 53 geolocation resource record sets.",
+   "options": [
+    {
+     "name": "--continent-code",
+     "args": {}
+    },
+    {
+     "name": "--country-code",
+     "args": {}
+    },
+    {
+     "name": "--subdivision-code",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-health-check",
+   "description": "Gets information about a specified health check.",
+   "options": [
+    {
+     "name": "--health-check-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-health-check-count",
+   "description": "Retrieves the number of health checks that are associated with the current Amazon Web Services account."
+  },
+  {
+   "name": "get-health-check-last-failure-reason",
+   "description": "Gets the reason that a specified health check failed most recently.",
+   "options": [
+    {
+     "name": "--health-check-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-health-check-status",
+   "description": "Gets status of a specified health check.",
+   "options": [
+    {
+     "name": "--health-check-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-hosted-zone",
+   "description": "Gets information about a specified hosted zone including the four name servers assigned to the hosted zone.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-hosted-zone-count",
+   "description": "Retrieves the number of hosted zones that are associated with the current Amazon Web Services account."
+  },
+  {
+   "name": "get-hosted-zone-limit",
+   "description": "Gets the specified limit for a specified hosted zone, for example, the maximum number of records that you can create in the hosted zone.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "MAX_RRSETS_BY_ZONE",
+       "MAX_VPCS_ASSOCIATED_BY_ZONE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-query-logging-config",
+   "description": "Gets information about a specified configuration for DNS query logging.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-reusable-delegation-set",
+   "description": "Retrieves information about a specified reusable delegation set, including the four name servers that are assigned to the delegation set.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-reusable-delegation-set-limit",
+   "description": "Gets the maximum number of hosted zones that you can associate with the specified reusable delegation set.",
+   "options": [
+    {
+     "name": "--delegation-set-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "MAX_ZONES_BY_REUSABLE_DELEGATION_SET"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-traffic-policy",
+   "description": "Gets information about a specific traffic policy version.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--traffic-policy-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-traffic-policy-instance",
+   "description": "Gets information about a specified traffic policy instance.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-traffic-policy-instance-count",
+   "description": "Gets the number of traffic policy instances that are associated with the current Amazon Web Services account."
+  },
+  {
+   "name": "list-cidr-blocks",
+   "description": "Returns a paginated list of location objects and their CIDR blocks.",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cidr-collections",
+   "description": "Returns a paginated list of CIDR collections in the Amazon Web Services account (metadata only).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-cidr-locations",
+   "description": "Returns a paginated list of CIDR locations for the given collection (metadata only, does not include CIDR blocks).",
+   "options": [
+    {
+     "name": "--collection-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-geo-locations",
+   "description": "Retrieves a list of supported geographic locations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--start-continent-code",
+     "args": {}
+    },
+    {
+     "name": "--start-country-code",
+     "args": {}
+    },
+    {
+     "name": "--start-subdivision-code",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-health-checks",
+   "description": "Retrieve a list of the health checks that are associated with the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-hosted-zones",
+   "description": "Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--delegation-set-id",
+     "args": {}
+    },
+    {
+     "name": "--hosted-zone-type",
+     "args": {
+      "suggestions": [
+       "PrivateHostedZone"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-hosted-zones-by-name",
+   "description": "Retrieves a list of your hosted zones in lexicographic order.",
+   "options": [
+    {
+     "name": "--dns-name",
+     "args": {}
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-hosted-zones-by-vpc",
+   "description": "Lists all the private hosted zones that a specified VPC is associated with, regardless of which Amazon Web Services account or Amazon Web Services service owns the hosted zones.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--vpc-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-region",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-query-logging-configs",
+   "description": "Lists the configurations for DNS query logging that are associated with the current Amazon Web Services account or the configuration that is associated with a specified hosted zone.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-record-sets",
+   "description": "Lists the resource record sets in a specified hosted zone.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-reusable-delegation-sets",
+   "description": "Retrieves a list of the reusable delegation sets that are associated with the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--marker",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags for one health check or hosted zone.",
+   "options": [
+    {
+     "name": "--resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "healthcheck",
+       "hostedzone"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resources",
+   "description": "Lists tags for up to 10 health checks or hosted zones.",
+   "options": [
+    {
+     "name": "--resource-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type",
+     "args": {
+      "suggestions": [
+       "healthcheck",
+       "hostedzone"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-traffic-policies",
+   "description": "Gets information about the latest version for every traffic policy that is associated with the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--traffic-policy-id-marker",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-traffic-policy-instances",
+   "description": "Gets information about the traffic policy instances that you created by using the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--hosted-zone-id-marker",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--traffic-policy-instance-name-marker",
+     "args": {}
+    },
+    {
+     "name": "--traffic-policy-instance-type-marker",
+     "args": {
+      "suggestions": [
+       "SOA",
+       "A",
+       "TXT",
+       "NS",
+       "CNAME",
+       "MX",
+       "NAPTR",
+       "PTR",
+       "SRV",
+       "SPF",
+       "AAAA",
+       "CAA",
+       "DS",
+       "TLSA",
+       "SSHFP",
+       "SVCB",
+       "HTTPS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-traffic-policy-instances-by-hosted-zone",
+   "description": "Gets information about the traffic policy instances that you created in a specified hosted zone.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--traffic-policy-instance-name-marker",
+     "args": {}
+    },
+    {
+     "name": "--traffic-policy-instance-type-marker",
+     "args": {
+      "suggestions": [
+       "SOA",
+       "A",
+       "TXT",
+       "NS",
+       "CNAME",
+       "MX",
+       "NAPTR",
+       "PTR",
+       "SRV",
+       "SPF",
+       "AAAA",
+       "CAA",
+       "DS",
+       "TLSA",
+       "SSHFP",
+       "SVCB",
+       "HTTPS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-traffic-policy-instances-by-policy",
+   "description": "Gets information about the traffic policy instances that you created by using a specify traffic policy version.",
+   "options": [
+    {
+     "name": "--hosted-zone-id-marker",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--traffic-policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--traffic-policy-instance-name-marker",
+     "args": {}
+    },
+    {
+     "name": "--traffic-policy-instance-type-marker",
+     "args": {
+      "suggestions": [
+       "SOA",
+       "A",
+       "TXT",
+       "NS",
+       "CNAME",
+       "MX",
+       "NAPTR",
+       "PTR",
+       "SRV",
+       "SPF",
+       "AAAA",
+       "CAA",
+       "DS",
+       "TLSA",
+       "SSHFP",
+       "SVCB",
+       "HTTPS"
+      ]
+     }
+    },
+    {
+     "name": "--traffic-policy-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-traffic-policy-versions",
+   "description": "Gets information about all of the versions for a specified traffic policy.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--traffic-policy-version-marker",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-vpc-association-authorizations",
+   "description": "Gets a list of the VPCs that were created by other accounts and that can be associated with a specified hosted zone because you've submitted one or more CreateVPCAssociationAuthorization requests.",
+   "options": [
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "test-dns-answer",
+   "description": "Gets the value that Amazon Route 53 returns in response to a DNS request for a specified record name and type.",
+   "options": [
+    {
+     "name": "--edns0-client-subnet-ip",
+     "args": {}
+    },
+    {
+     "name": "--edns0-client-subnet-mask",
+     "args": {}
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--record-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--record-type",
+     "args": {
+      "suggestions": [
+       "SOA",
+       "A",
+       "TXT",
+       "NS",
+       "CNAME",
+       "MX",
+       "NAPTR",
+       "PTR",
+       "SRV",
+       "SPF",
+       "AAAA",
+       "CAA",
+       "DS",
+       "TLSA",
+       "SSHFP",
+       "SVCB",
+       "HTTPS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resolver-ip",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-health-check",
+   "description": "Updates an existing health check.",
+   "options": [
+    {
+     "name": "--alarm-identifier",
+     "args": {}
+    },
+    {
+     "name": "--child-health-checks",
+     "args": {}
+    },
+    {
+     "name": "--disabled"
+    },
+    {
+     "name": "--enable-sni"
+    },
+    {
+     "name": "--failure-threshold",
+     "args": {}
+    },
+    {
+     "name": "--fully-qualified-domain-name",
+     "args": {}
+    },
+    {
+     "name": "--health-check-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--health-check-version",
+     "args": {}
+    },
+    {
+     "name": "--health-threshold",
+     "args": {}
+    },
+    {
+     "name": "--insufficient-data-health-status",
+     "args": {
+      "suggestions": [
+       "Healthy",
+       "Unhealthy",
+       "LastKnownStatus"
+      ]
+     }
+    },
+    {
+     "name": "--inverted"
+    },
+    {
+     "name": "--ip-address",
+     "args": {}
+    },
+    {
+     "name": "--no-disabled"
+    },
+    {
+     "name": "--no-enable-sni"
+    },
+    {
+     "name": "--no-inverted"
+    },
+    {
+     "name": "--port",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    },
+    {
+     "name": "--reset-elements",
+     "args": {}
+    },
+    {
+     "name": "--resource-path",
+     "args": {}
+    },
+    {
+     "name": "--search-string",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-hosted-zone-comment",
+   "description": "Updates the comment for a specified hosted zone.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-hosted-zone-features",
+   "description": "Updates the features configuration for a hosted zone.",
+   "options": [
+    {
+     "name": "--enable-accelerated-recovery"
+    },
+    {
+     "name": "--hosted-zone-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-enable-accelerated-recovery"
+    }
+   ]
+  },
+  {
+   "name": "update-traffic-policy-comment",
+   "description": "Updates the comment for a specified traffic policy version.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--traffic-policy-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-traffic-policy-instance",
+   "description": "After you submit a UpdateTrafficPolicyInstance request, there's a brief delay while Route 53 creates the resource record sets that are specified in the traffic policy definition.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--traffic-policy-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--traffic-policy-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ttl",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "resource-record-sets-changed",
+     "description": "Wait until JMESPath query ChangeInfo.Status returns INSYNC when polling with ``get-change``.",
+     "options": [
+      {
+       "name": "--id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

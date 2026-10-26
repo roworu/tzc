@@ -1,0 +1,717 @@
+{
+ "name": "bcm-pricing-calculator",
+ "description": "You can use the Pricing Calculator API to programmatically create estimates for your planned cloud use.",
+ "subcommands": [
+  {
+   "name": "batch-create-bill-scenario-commitment-modification",
+   "description": "Create Compute Savings Plans, EC2 Instance Savings Plans, or EC2 Reserved Instances commitments that you want to model in a Bill Scenario.",
+   "options": [
+    {
+     "name": "--bill-scenario-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--commitment-modifications",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-create-bill-scenario-usage-modification",
+   "description": "Create Amazon Web Services service usage that you want to model in a Bill Scenario.",
+   "options": [
+    {
+     "name": "--bill-scenario-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--usage-modifications",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-create-workload-estimate-usage",
+   "description": "Create Amazon Web Services service usage that you want to model in a Workload Estimate.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--usage",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-estimate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-bill-scenario-commitment-modification",
+   "description": "Delete commitment that you have created in a Bill Scenario.",
+   "options": [
+    {
+     "name": "--bill-scenario-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-bill-scenario-usage-modification",
+   "description": "Delete usage that you have created in a Bill Scenario.",
+   "options": [
+    {
+     "name": "--bill-scenario-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-workload-estimate-usage",
+   "description": "Delete usage that you have created in a Workload estimate.",
+   "options": [
+    {
+     "name": "--ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-estimate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-bill-scenario-commitment-modification",
+   "description": "Update a newly added or existing commitment.",
+   "options": [
+    {
+     "name": "--bill-scenario-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--commitment-modifications",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-bill-scenario-usage-modification",
+   "description": "Update a newly added or existing usage lines.",
+   "options": [
+    {
+     "name": "--bill-scenario-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--usage-modifications",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-workload-estimate-usage",
+   "description": "Update a newly added or existing usage lines.",
+   "options": [
+    {
+     "name": "--usage",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workload-estimate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-bill-estimate",
+   "description": "Create a Bill estimate from a Bill scenario.",
+   "options": [
+    {
+     "name": "--bill-scenario-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-bill-scenario",
+   "description": "Creates a new bill scenario to model potential changes to Amazon Web Services usage and costs.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cost-category-group-sharing-preference-arn",
+     "args": {}
+    },
+    {
+     "name": "--group-sharing-preference",
+     "args": {
+      "suggestions": [
+       "OPEN",
+       "PRIORITIZED",
+       "RESTRICTED"
+      ]
+     }
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-workload-estimate",
+   "description": "Creates a new workload estimate to model costs for a specific workload.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rate-type",
+     "args": {
+      "suggestions": [
+       "BEFORE_DISCOUNTS",
+       "AFTER_DISCOUNTS",
+       "AFTER_DISCOUNTS_AND_COMMITMENTS"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bill-estimate",
+   "description": "Deletes an existing bill estimate.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bill-scenario",
+   "description": "Deletes an existing bill scenario.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-workload-estimate",
+   "description": "Deletes an existing workload estimate.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bill-estimate",
+   "description": "Retrieves details of a specific bill estimate.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bill-scenario",
+   "description": "Retrieves details of a specific bill scenario.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-preferences",
+   "description": "Retrieves the current preferences for Pricing Calculator."
+  },
+  {
+   "name": "get-workload-estimate",
+   "description": "Retrieves details of a specific workload estimate.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-bill-estimate-commitments",
+   "description": "Lists the commitments associated with a bill estimate.",
+   "options": [
+    {
+     "name": "--bill-estimate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bill-estimate-input-commitment-modifications",
+   "description": "Lists the input commitment modifications associated with a bill estimate.",
+   "options": [
+    {
+     "name": "--bill-estimate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bill-estimate-input-usage-modifications",
+   "description": "Lists the input usage modifications associated with a bill estimate.",
+   "options": [
+    {
+     "name": "--bill-estimate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bill-estimate-line-items",
+   "description": "Lists the line items associated with a bill estimate.",
+   "options": [
+    {
+     "name": "--bill-estimate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bill-estimates",
+   "description": "Lists all bill estimates for the account.",
+   "options": [
+    {
+     "name": "--created-at-filter",
+     "args": {}
+    },
+    {
+     "name": "--expires-at-filter",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bill-scenario-commitment-modifications",
+   "description": "Lists the commitment modifications associated with a bill scenario.",
+   "options": [
+    {
+     "name": "--bill-scenario-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bill-scenario-usage-modifications",
+   "description": "Lists the usage modifications associated with a bill scenario.",
+   "options": [
+    {
+     "name": "--bill-scenario-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bill-scenarios",
+   "description": "Lists all bill scenarios for the account.",
+   "options": [
+    {
+     "name": "--created-at-filter",
+     "args": {}
+    },
+    {
+     "name": "--expires-at-filter",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all tags associated with a specified resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workload-estimate-usage",
+   "description": "Lists the usage associated with a workload estimate.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workload-estimate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-workload-estimates",
+   "description": "Lists all workload estimates for the account.",
+   "options": [
+    {
+     "name": "--created-at-filter",
+     "args": {}
+    },
+    {
+     "name": "--expires-at-filter",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to a specified resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from a specified resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-bill-estimate",
+   "description": "Updates an existing bill estimate.",
+   "options": [
+    {
+     "name": "--expires-at",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-bill-scenario",
+   "description": "Updates an existing bill scenario.",
+   "options": [
+    {
+     "name": "--cost-category-group-sharing-preference-arn",
+     "args": {}
+    },
+    {
+     "name": "--expires-at",
+     "args": {}
+    },
+    {
+     "name": "--group-sharing-preference",
+     "args": {
+      "suggestions": [
+       "OPEN",
+       "PRIORITIZED",
+       "RESTRICTED"
+      ]
+     }
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-preferences",
+   "description": "Updates the preferences for Pricing Calculator.",
+   "options": [
+    {
+     "name": "--management-account-rate-type-selections",
+     "args": {}
+    },
+    {
+     "name": "--member-account-rate-type-selections",
+     "args": {}
+    },
+    {
+     "name": "--standalone-account-rate-type-selections",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-workload-estimate",
+   "description": "Updates an existing workload estimate.",
+   "options": [
+    {
+     "name": "--expires-at",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

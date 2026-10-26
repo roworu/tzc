@@ -1,0 +1,5208 @@
+{
+ "name": "s3api",
+ "description": "For information about using the Amazon S3 API\u2014including authentication, signing requests, code examples, and error handling\u2014see the Amazon S3 Developer Guide.",
+ "subcommands": [
+  {
+   "name": "abort-multipart-upload",
+   "description": "This operation aborts a multipart upload.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--if-match-initiated-time",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "complete-multipart-upload",
+   "description": "Completes a multipart upload by assembling previously uploaded parts.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-crc32",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc32-c",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc64-nvme",
+     "args": {}
+    },
+    {
+     "name": "--checksum-md5",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha1",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha256",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha512",
+     "args": {}
+    },
+    {
+     "name": "--checksum-type",
+     "args": {
+      "suggestions": [
+       "COMPOSITE",
+       "FULL_OBJECT"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-xxhash128",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash3",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash64",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mpu-object-size",
+     "args": {}
+    },
+    {
+     "name": "--multipart-upload",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "copy-object",
+   "description": "Creates a copy of an object that is already stored in Amazon S3.",
+   "options": [
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "aws-exec-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control"
+      ]
+     }
+    },
+    {
+     "name": "--annotation-directive",
+     "args": {
+      "suggestions": [
+       "COPY",
+       "EXCLUDE"
+      ]
+     }
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket-key-enabled"
+    },
+    {
+     "name": "--cache-control",
+     "args": {}
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-disposition",
+     "args": {}
+    },
+    {
+     "name": "--content-encoding",
+     "args": {}
+    },
+    {
+     "name": "--content-language",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--copy-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--copy-source-if-match",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-if-modified-since",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-if-unmodified-since",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--expected-source-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--grant-full-control",
+     "args": {}
+    },
+    {
+     "name": "--grant-read",
+     "args": {}
+    },
+    {
+     "name": "--grant-read-acp",
+     "args": {}
+    },
+    {
+     "name": "--grant-write-acp",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--metadata-directive",
+     "args": {
+      "suggestions": [
+       "COPY",
+       "REPLACE"
+      ]
+     }
+    },
+    {
+     "name": "--no-bucket-key-enabled"
+    },
+    {
+     "name": "--object-lock-legal-hold-status",
+     "args": {
+      "suggestions": [
+       "ON",
+       "OFF"
+      ]
+     }
+    },
+    {
+     "name": "--object-lock-mode",
+     "args": {
+      "suggestions": [
+       "GOVERNANCE",
+       "COMPLIANCE"
+      ]
+     }
+    },
+    {
+     "name": "--object-lock-retain-until-date",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--server-side-encryption",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "aws:fsx",
+       "aws:kms",
+       "aws:kms:dsse"
+      ]
+     }
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--ssekms-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--ssekms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "REDUCED_REDUNDANCY",
+       "STANDARD_IA",
+       "ONEZONE_IA",
+       "INTELLIGENT_TIERING",
+       "GLACIER",
+       "DEEP_ARCHIVE",
+       "OUTPOSTS",
+       "GLACIER_IR",
+       "SNOW",
+       "EXPRESS_ONEZONE",
+       "FSX_OPENZFS",
+       "FSX_ONTAP"
+      ]
+     }
+    },
+    {
+     "name": "--tagging",
+     "args": {}
+    },
+    {
+     "name": "--tagging-directive",
+     "args": {
+      "suggestions": [
+       "COPY",
+       "REPLACE"
+      ]
+     }
+    },
+    {
+     "name": "--website-redirect-location",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-bucket",
+   "description": "This action creates an Amazon S3 bucket.",
+   "options": [
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read"
+      ]
+     }
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket-namespace",
+     "args": {
+      "suggestions": [
+       "account-regional",
+       "global"
+      ]
+     }
+    },
+    {
+     "name": "--create-bucket-configuration",
+     "args": {}
+    },
+    {
+     "name": "--grant-full-control",
+     "args": {}
+    },
+    {
+     "name": "--grant-read",
+     "args": {}
+    },
+    {
+     "name": "--grant-read-acp",
+     "args": {}
+    },
+    {
+     "name": "--grant-write",
+     "args": {}
+    },
+    {
+     "name": "--grant-write-acp",
+     "args": {}
+    },
+    {
+     "name": "--no-object-lock-enabled-for-bucket"
+    },
+    {
+     "name": "--object-lock-enabled-for-bucket"
+    },
+    {
+     "name": "--object-ownership",
+     "args": {
+      "suggestions": [
+       "BucketOwnerPreferred",
+       "ObjectWriter",
+       "BucketOwnerEnforced"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-bucket-metadata-configuration",
+   "description": "Creates an S3 Metadata V2 metadata configuration for a general purpose bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--metadata-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-bucket-metadata-table-configuration",
+   "description": "We recommend that you create your S3 Metadata configurations by using the V2 CreateBucketMetadataConfiguration API operation.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--metadata-table-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-multipart-upload",
+   "description": "End of support notice: As of October 1, 2025, Amazon S3 has discontinued support for Email Grantee Access Control Lists (ACLs).",
+   "options": [
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "aws-exec-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control"
+      ]
+     }
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket-key-enabled"
+    },
+    {
+     "name": "--cache-control",
+     "args": {}
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-type",
+     "args": {
+      "suggestions": [
+       "COMPOSITE",
+       "FULL_OBJECT"
+      ]
+     }
+    },
+    {
+     "name": "--content-disposition",
+     "args": {}
+    },
+    {
+     "name": "--content-encoding",
+     "args": {}
+    },
+    {
+     "name": "--content-language",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--grant-full-control",
+     "args": {}
+    },
+    {
+     "name": "--grant-read",
+     "args": {}
+    },
+    {
+     "name": "--grant-read-acp",
+     "args": {}
+    },
+    {
+     "name": "--grant-write-acp",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--no-bucket-key-enabled"
+    },
+    {
+     "name": "--object-lock-legal-hold-status",
+     "args": {
+      "suggestions": [
+       "ON",
+       "OFF"
+      ]
+     }
+    },
+    {
+     "name": "--object-lock-mode",
+     "args": {
+      "suggestions": [
+       "GOVERNANCE",
+       "COMPLIANCE"
+      ]
+     }
+    },
+    {
+     "name": "--object-lock-retain-until-date",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--server-side-encryption",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "aws:fsx",
+       "aws:kms",
+       "aws:kms:dsse"
+      ]
+     }
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--ssekms-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--ssekms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "REDUCED_REDUNDANCY",
+       "STANDARD_IA",
+       "ONEZONE_IA",
+       "INTELLIGENT_TIERING",
+       "GLACIER",
+       "DEEP_ARCHIVE",
+       "OUTPOSTS",
+       "GLACIER_IR",
+       "SNOW",
+       "EXPRESS_ONEZONE",
+       "FSX_OPENZFS",
+       "FSX_ONTAP"
+      ]
+     }
+    },
+    {
+     "name": "--tagging",
+     "args": {}
+    },
+    {
+     "name": "--website-redirect-location",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-session",
+   "description": "Creates a session that establishes temporary security credentials to support fast authentication and authorization for the Zonal endpoint API operations on directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket-key-enabled"
+    },
+    {
+     "name": "--no-bucket-key-enabled"
+    },
+    {
+     "name": "--server-side-encryption",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "aws:fsx",
+       "aws:kms",
+       "aws:kms:dsse"
+      ]
+     }
+    },
+    {
+     "name": "--session-mode",
+     "args": {
+      "suggestions": [
+       "ReadOnly",
+       "ReadWrite"
+      ]
+     }
+    },
+    {
+     "name": "--ssekms-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--ssekms-key-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket",
+   "description": "Deletes the S3 bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-analytics-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-cors",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-encryption",
+   "description": "This implementation of the DELETE action resets the default encryption for the bucket as server-side encryption with Amazon S3 managed keys (SSE-S3).",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-intelligent-tiering-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-inventory-configuration",
+   "description": "Deletes an S3 Inventory configuration (identified by the inventory ID) from the bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-lifecycle",
+   "description": "Deletes the lifecycle configuration from the specified bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-metadata-configuration",
+   "description": "Deletes an S3 Metadata configuration from a general purpose bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-metadata-table-configuration",
+   "description": "We recommend that you delete your S3 Metadata configurations by using the V2 DeleteBucketMetadataTableConfiguration API operation.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-metrics-configuration",
+   "description": "Deletes a metrics configuration for the Amazon CloudWatch request metrics (specified by the metrics configuration ID) from the bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-ownership-controls",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-policy",
+   "description": "Deletes the policy of a specified bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-replication",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-tagging",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-website",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-object",
+   "description": "Removes an object from a bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bypass-governance-retention"
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-match-last-modified-time",
+     "args": {}
+    },
+    {
+     "name": "--if-match-size",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mfa",
+     "args": {}
+    },
+    {
+     "name": "--no-bypass-governance-retention"
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-object-annotation",
+   "description": "Deletes a specific annotation from an Amazon S3 object.",
+   "options": [
+    {
+     "name": "--annotation-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-if-match",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-object-tagging",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-objects",
+   "description": "This operation enables you to delete multiple objects from a bucket using a single HTTP request.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bypass-governance-retention"
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--delete",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--mfa",
+     "args": {}
+    },
+    {
+     "name": "--no-bypass-governance-retention"
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "delete-public-access-block",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-abac",
+   "description": "Returns the attribute-based access control (ABAC) property of the general purpose bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-accelerate-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-acl",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-analytics-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-cors",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-encryption",
+   "description": "Returns the default encryption configuration for an Amazon S3 bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-intelligent-tiering-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-inventory-configuration",
+   "description": "Returns an S3 Inventory configuration (identified by the inventory configuration ID) from the bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-lifecycle",
+   "description": "For an updated version of this API, see GetBucketLifecycleConfiguration.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-lifecycle-configuration",
+   "description": "Returns the lifecycle configuration information set on the bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-location",
+   "description": "Using the GetBucketLocation operation is no longer a best practice.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-logging",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-metadata-configuration",
+   "description": "Retrieves the S3 Metadata configuration for a general purpose bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-metadata-table-configuration",
+   "description": "We recommend that you retrieve your S3 Metadata configurations by using the V2 GetBucketMetadataTableConfiguration API operation.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-metrics-configuration",
+   "description": "Gets a metrics configuration (specified by the metrics configuration ID) from the bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-notification",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-notification-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-ownership-controls",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-policy",
+   "description": "Returns the policy of a specified bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-policy-status",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-replication",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-request-payment",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-tagging",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-versioning",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-website",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object",
+   "description": "Retrieves an object from Amazon S3.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-modified-since",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--if-unmodified-since",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--part-number",
+     "args": {}
+    },
+    {
+     "name": "--range",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--response-cache-control",
+     "args": {}
+    },
+    {
+     "name": "--response-content-disposition",
+     "args": {}
+    },
+    {
+     "name": "--response-content-encoding",
+     "args": {}
+    },
+    {
+     "name": "--response-content-language",
+     "args": {}
+    },
+    {
+     "name": "--response-content-type",
+     "args": {}
+    },
+    {
+     "name": "--response-expires",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object-acl",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object-annotation",
+   "description": "Retrieves an annotation from an Amazon S3 object.",
+   "options": [
+    {
+     "name": "--annotation-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object-attributes",
+   "description": "Retrieves all of the metadata from an object without returning the object itself.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-parts",
+     "args": {}
+    },
+    {
+     "name": "--object-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--part-number-marker",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object-legal-hold",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object-lock-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object-retention",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object-tagging",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-object-torrent",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-public-access-block",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "head-bucket",
+   "description": "You can use this operation to determine if a bucket exists and if you have permission to access it.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "head-object",
+   "description": "The HEAD operation retrieves metadata from an object without returning the object itself.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-mode",
+     "args": {
+      "suggestions": [
+       "ENABLED"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-modified-since",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--if-unmodified-since",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--part-number",
+     "args": {}
+    },
+    {
+     "name": "--range",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--response-cache-control",
+     "args": {}
+    },
+    {
+     "name": "--response-content-disposition",
+     "args": {}
+    },
+    {
+     "name": "--response-content-encoding",
+     "args": {}
+    },
+    {
+     "name": "--response-content-language",
+     "args": {}
+    },
+    {
+     "name": "--response-content-type",
+     "args": {}
+    },
+    {
+     "name": "--response-expires",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bucket-analytics-configurations",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--continuation-token",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bucket-intelligent-tiering-configurations",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--continuation-token",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bucket-inventory-configurations",
+   "description": "Returns a list of S3 Inventory configurations for the bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--continuation-token",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-bucket-metrics-configurations",
+   "description": "Lists the metrics configurations for the bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--continuation-token",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-buckets",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket-region",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-directory-buckets",
+   "description": "Returns a list of all Amazon S3 directory buckets owned by the authenticated sender of the request.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-multipart-uploads",
+   "description": "This operation lists in-progress multipart uploads in a bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delimiter",
+     "args": {}
+    },
+    {
+     "name": "--encoding-type",
+     "args": {
+      "suggestions": [
+       "url"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-object-annotations",
+   "description": "Lists the annotations attached to an Amazon S3 object.",
+   "options": [
+    {
+     "name": "--annotation-prefix",
+     "args": {}
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-object-versions",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delimiter",
+     "args": {}
+    },
+    {
+     "name": "--encoding-type",
+     "args": {
+      "suggestions": [
+       "url"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--optional-object-attributes",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-objects",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delimiter",
+     "args": {}
+    },
+    {
+     "name": "--encoding-type",
+     "args": {
+      "suggestions": [
+       "url"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--optional-object-attributes",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-objects-v2",
+   "description": "Returns some or all (up to 1,000) of the objects in a bucket with each request.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delimiter",
+     "args": {}
+    },
+    {
+     "name": "--encoding-type",
+     "args": {
+      "suggestions": [
+       "url"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--fetch-owner"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-fetch-owner"
+    },
+    {
+     "name": "--optional-object-attributes",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--prefix",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--start-after",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-parts",
+   "description": "Lists the parts that have been uploaded for a specific multipart upload.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-abac",
+   "description": "Sets the attribute-based access control (ABAC) property of the general purpose bucket.",
+   "options": [
+    {
+     "name": "--abac-status",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-accelerate-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--accelerate-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-acl",
+   "description": "End of support notice: As of October 1, 2025, Amazon S3 has discontinued support for Email Grantee Access Control Lists (ACLs).",
+   "options": [
+    {
+     "name": "--access-control-policy",
+     "args": {}
+    },
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read"
+      ]
+     }
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--grant-full-control",
+     "args": {}
+    },
+    {
+     "name": "--grant-read",
+     "args": {}
+    },
+    {
+     "name": "--grant-read-acp",
+     "args": {}
+    },
+    {
+     "name": "--grant-write",
+     "args": {}
+    },
+    {
+     "name": "--grant-write-acp",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-analytics-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--analytics-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-cors",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--cors-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-encryption",
+   "description": "This operation configures default encryption and Amazon S3 Bucket Keys for an existing bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--server-side-encryption-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-intelligent-tiering-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--intelligent-tiering-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-inventory-configuration",
+   "description": "This implementation of the PUT action adds an S3 Inventory configuration (identified by the inventory ID) to the bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--inventory-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-lifecycle",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-lifecycle-configuration",
+   "description": "Creates a new lifecycle configuration for the bucket or replaces an existing lifecycle configuration.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--lifecycle-configuration",
+     "args": {}
+    },
+    {
+     "name": "--transition-default-minimum-object-size",
+     "args": {
+      "suggestions": [
+       "varies_by_storage_class",
+       "all_storage_classes_128K"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-logging",
+   "description": "End of support notice: As of October 1, 2025, Amazon S3 has discontinued support for Email Grantee Access Control Lists (ACLs).",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket-logging-status",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-metrics-configuration",
+   "description": "Sets a metrics configuration (specified by the metrics configuration ID) for the bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metrics-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-notification",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--notification-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-notification-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--no-skip-destination-validation"
+    },
+    {
+     "name": "--notification-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--skip-destination-validation"
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-ownership-controls",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--ownership-controls",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-policy",
+   "description": "Applies an Amazon S3 bucket policy to an Amazon S3 bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--confirm-remove-self-bucket-access"
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--no-confirm-remove-self-bucket-access"
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-replication",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--replication-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-request-payment",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--request-payment-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-tagging",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--tagging",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-versioning",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--mfa",
+     "args": {}
+    },
+    {
+     "name": "--versioning-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-website",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--website-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-object",
+   "description": "End of support notice: As of October 1, 2025, Amazon S3 has discontinued support for Email Grantee Access Control Lists (ACLs).",
+   "options": [
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "aws-exec-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control"
+      ]
+     }
+    },
+    {
+     "name": "--body",
+     "args": {}
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket-key-enabled"
+    },
+    {
+     "name": "--cache-control",
+     "args": {}
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-crc32",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc32-c",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc64-nvme",
+     "args": {}
+    },
+    {
+     "name": "--checksum-md5",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha1",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha256",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha512",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash128",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash3",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash64",
+     "args": {}
+    },
+    {
+     "name": "--content-disposition",
+     "args": {}
+    },
+    {
+     "name": "--content-encoding",
+     "args": {}
+    },
+    {
+     "name": "--content-language",
+     "args": {}
+    },
+    {
+     "name": "--content-length",
+     "args": {}
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--grant-full-control",
+     "args": {}
+    },
+    {
+     "name": "--grant-read",
+     "args": {}
+    },
+    {
+     "name": "--grant-read-acp",
+     "args": {}
+    },
+    {
+     "name": "--grant-write-acp",
+     "args": {}
+    },
+    {
+     "name": "--if-match",
+     "args": {}
+    },
+    {
+     "name": "--if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--no-bucket-key-enabled"
+    },
+    {
+     "name": "--object-lock-legal-hold-status",
+     "args": {
+      "suggestions": [
+       "ON",
+       "OFF"
+      ]
+     }
+    },
+    {
+     "name": "--object-lock-mode",
+     "args": {
+      "suggestions": [
+       "GOVERNANCE",
+       "COMPLIANCE"
+      ]
+     }
+    },
+    {
+     "name": "--object-lock-retain-until-date",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--server-side-encryption",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "aws:fsx",
+       "aws:kms",
+       "aws:kms:dsse"
+      ]
+     }
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--ssekms-encryption-context",
+     "args": {}
+    },
+    {
+     "name": "--ssekms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "REDUCED_REDUNDANCY",
+       "STANDARD_IA",
+       "ONEZONE_IA",
+       "INTELLIGENT_TIERING",
+       "GLACIER",
+       "DEEP_ARCHIVE",
+       "OUTPOSTS",
+       "GLACIER_IR",
+       "SNOW",
+       "EXPRESS_ONEZONE",
+       "FSX_OPENZFS",
+       "FSX_ONTAP"
+      ]
+     }
+    },
+    {
+     "name": "--tagging",
+     "args": {}
+    },
+    {
+     "name": "--website-redirect-location",
+     "args": {}
+    },
+    {
+     "name": "--write-offset-bytes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-object-acl",
+   "description": "End of support notice: As of October 1, 2025, Amazon S3 has discontinued support for Email Grantee Access Control Lists (ACLs).",
+   "options": [
+    {
+     "name": "--access-control-policy",
+     "args": {}
+    },
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read",
+       "aws-exec-read",
+       "bucket-owner-read",
+       "bucket-owner-full-control"
+      ]
+     }
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--grant-full-control",
+     "args": {}
+    },
+    {
+     "name": "--grant-read",
+     "args": {}
+    },
+    {
+     "name": "--grant-read-acp",
+     "args": {}
+    },
+    {
+     "name": "--grant-write",
+     "args": {}
+    },
+    {
+     "name": "--grant-write-acp",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-object-annotation",
+   "description": "Attaches an annotation to an Amazon S3 object.",
+   "options": [
+    {
+     "name": "--annotation-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--annotation-payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-crc32",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc32-c",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc64-nvme",
+     "args": {}
+    },
+    {
+     "name": "--checksum-md5",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha1",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha256",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha512",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash128",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash3",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash64",
+     "args": {}
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-if-match",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-object-legal-hold",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--legal-hold",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-object-lock-configuration",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--object-lock-configuration",
+     "args": {}
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-object-retention",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bypass-governance-retention"
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-bypass-governance-retention"
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--retention",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-object-tagging",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--tagging",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-public-access-block",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--public-access-block-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "rename-object",
+   "description": "Renames an existing object in a directory bucket that uses the S3 Express One Zone storage class.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--destination-if-match",
+     "args": {}
+    },
+    {
+     "name": "--destination-if-modified-since",
+     "args": {}
+    },
+    {
+     "name": "--destination-if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--destination-if-unmodified-since",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rename-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-if-match",
+     "args": {}
+    },
+    {
+     "name": "--source-if-modified-since",
+     "args": {}
+    },
+    {
+     "name": "--source-if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--source-if-unmodified-since",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "restore-object",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--restore-request",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "select-object-content",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expression-type",
+     "args": {
+      "suggestions": [
+       "SQL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--input-serialization",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-serialization",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-progress",
+     "args": {}
+    },
+    {
+     "name": "--scan-range",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-bucket-metadata-annotation-table-configuration",
+   "description": "Updates the annotation table configuration for an Amazon S3 bucket's metadata configuration.",
+   "options": [
+    {
+     "name": "--annotation-table-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-bucket-metadata-inventory-table-configuration",
+   "description": "Enables or disables a live inventory table for an S3 Metadata configuration on a general purpose bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--inventory-table-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-bucket-metadata-journal-table-configuration",
+   "description": "Enables or disables journal table record expiration for an S3 Metadata configuration on a general purpose bucket.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--journal-table-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-object-encryption",
+   "description": "This operation is not supported for directory buckets or Amazon S3 on Outposts buckets.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-encryption",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "upload-part",
+   "description": "Uploads a part in a multipart upload.",
+   "options": [
+    {
+     "name": "--body",
+     "args": {}
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--checksum-algorithm",
+     "args": {
+      "suggestions": [
+       "CRC32",
+       "CRC32C",
+       "SHA1",
+       "SHA256",
+       "CRC64NVME",
+       "SHA512",
+       "MD5",
+       "XXHASH64",
+       "XXHASH3",
+       "XXHASH128"
+      ]
+     }
+    },
+    {
+     "name": "--checksum-crc32",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc32-c",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc64-nvme",
+     "args": {}
+    },
+    {
+     "name": "--checksum-md5",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha1",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha256",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha512",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash128",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash3",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash64",
+     "args": {}
+    },
+    {
+     "name": "--content-length",
+     "args": {}
+    },
+    {
+     "name": "--content-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--part-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "upload-part-copy",
+   "description": "Uploads a part by copying data from an existing object as data source.",
+   "options": [
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--copy-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--copy-source-if-match",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-if-modified-since",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-if-none-match",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-if-unmodified-since",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-range",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--copy-source-sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--expected-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--expected-source-bucket-owner",
+     "args": {}
+    },
+    {
+     "name": "--key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--part-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-payer",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--upload-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "bucket-exists",
+     "description": "Wait until 200 response is received when polling with ``head-bucket``.",
+     "options": [
+      {
+       "name": "--bucket",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--expected-bucket-owner",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "bucket-not-exists",
+     "description": "Wait until 404 response is received when polling with ``head-bucket``.",
+     "options": [
+      {
+       "name": "--bucket",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--expected-bucket-owner",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "object-exists",
+     "description": "Wait until 200 response is received when polling with ``head-object``.",
+     "options": [
+      {
+       "name": "--bucket",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--checksum-mode",
+       "args": {
+        "suggestions": [
+         "ENABLED"
+        ]
+       }
+      },
+      {
+       "name": "--expected-bucket-owner",
+       "args": {}
+      },
+      {
+       "name": "--if-match",
+       "args": {}
+      },
+      {
+       "name": "--if-modified-since",
+       "args": {}
+      },
+      {
+       "name": "--if-none-match",
+       "args": {}
+      },
+      {
+       "name": "--if-unmodified-since",
+       "args": {}
+      },
+      {
+       "name": "--key",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--part-number",
+       "args": {}
+      },
+      {
+       "name": "--range",
+       "args": {}
+      },
+      {
+       "name": "--request-payer",
+       "args": {
+        "suggestions": [
+         "requester"
+        ]
+       }
+      },
+      {
+       "name": "--response-cache-control",
+       "args": {}
+      },
+      {
+       "name": "--response-content-disposition",
+       "args": {}
+      },
+      {
+       "name": "--response-content-encoding",
+       "args": {}
+      },
+      {
+       "name": "--response-content-language",
+       "args": {}
+      },
+      {
+       "name": "--response-content-type",
+       "args": {}
+      },
+      {
+       "name": "--response-expires",
+       "args": {}
+      },
+      {
+       "name": "--sse-customer-algorithm",
+       "args": {}
+      },
+      {
+       "name": "--sse-customer-key",
+       "args": {}
+      },
+      {
+       "name": "--sse-customer-key-md5",
+       "args": {}
+      },
+      {
+       "name": "--version-id",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "object-not-exists",
+     "description": "Wait until 404 response is received when polling with ``head-object``.",
+     "options": [
+      {
+       "name": "--bucket",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--checksum-mode",
+       "args": {
+        "suggestions": [
+         "ENABLED"
+        ]
+       }
+      },
+      {
+       "name": "--expected-bucket-owner",
+       "args": {}
+      },
+      {
+       "name": "--if-match",
+       "args": {}
+      },
+      {
+       "name": "--if-modified-since",
+       "args": {}
+      },
+      {
+       "name": "--if-none-match",
+       "args": {}
+      },
+      {
+       "name": "--if-unmodified-since",
+       "args": {}
+      },
+      {
+       "name": "--key",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--part-number",
+       "args": {}
+      },
+      {
+       "name": "--range",
+       "args": {}
+      },
+      {
+       "name": "--request-payer",
+       "args": {
+        "suggestions": [
+         "requester"
+        ]
+       }
+      },
+      {
+       "name": "--response-cache-control",
+       "args": {}
+      },
+      {
+       "name": "--response-content-disposition",
+       "args": {}
+      },
+      {
+       "name": "--response-content-encoding",
+       "args": {}
+      },
+      {
+       "name": "--response-content-language",
+       "args": {}
+      },
+      {
+       "name": "--response-content-type",
+       "args": {}
+      },
+      {
+       "name": "--response-expires",
+       "args": {}
+      },
+      {
+       "name": "--sse-customer-algorithm",
+       "args": {}
+      },
+      {
+       "name": "--sse-customer-key",
+       "args": {}
+      },
+      {
+       "name": "--sse-customer-key-md5",
+       "args": {}
+      },
+      {
+       "name": "--version-id",
+       "args": {}
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "write-get-object-response",
+   "description": "This operation is not supported for directory buckets.",
+   "options": [
+    {
+     "name": "--accept-ranges",
+     "args": {}
+    },
+    {
+     "name": "--body",
+     "args": {}
+    },
+    {
+     "name": "--bucket-key-enabled"
+    },
+    {
+     "name": "--cache-control",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc32",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc32-c",
+     "args": {}
+    },
+    {
+     "name": "--checksum-crc64-nvme",
+     "args": {}
+    },
+    {
+     "name": "--checksum-md5",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha1",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha256",
+     "args": {}
+    },
+    {
+     "name": "--checksum-sha512",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash128",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash3",
+     "args": {}
+    },
+    {
+     "name": "--checksum-xxhash64",
+     "args": {}
+    },
+    {
+     "name": "--content-disposition",
+     "args": {}
+    },
+    {
+     "name": "--content-encoding",
+     "args": {}
+    },
+    {
+     "name": "--content-language",
+     "args": {}
+    },
+    {
+     "name": "--content-length",
+     "args": {}
+    },
+    {
+     "name": "--content-range",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--delete-marker"
+    },
+    {
+     "name": "--e-tag",
+     "args": {}
+    },
+    {
+     "name": "--error-code",
+     "args": {}
+    },
+    {
+     "name": "--error-message",
+     "args": {}
+    },
+    {
+     "name": "--expiration",
+     "args": {}
+    },
+    {
+     "name": "--expires",
+     "args": {}
+    },
+    {
+     "name": "--last-modified",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--missing-meta",
+     "args": {}
+    },
+    {
+     "name": "--no-bucket-key-enabled"
+    },
+    {
+     "name": "--no-delete-marker"
+    },
+    {
+     "name": "--object-lock-legal-hold-status",
+     "args": {
+      "suggestions": [
+       "ON",
+       "OFF"
+      ]
+     }
+    },
+    {
+     "name": "--object-lock-mode",
+     "args": {
+      "suggestions": [
+       "GOVERNANCE",
+       "COMPLIANCE"
+      ]
+     }
+    },
+    {
+     "name": "--object-lock-retain-until-date",
+     "args": {}
+    },
+    {
+     "name": "--parts-count",
+     "args": {}
+    },
+    {
+     "name": "--replication-status",
+     "args": {
+      "suggestions": [
+       "COMPLETE",
+       "PENDING",
+       "FAILED",
+       "REPLICA",
+       "COMPLETED"
+      ]
+     }
+    },
+    {
+     "name": "--request-charged",
+     "args": {
+      "suggestions": [
+       "requester"
+      ]
+     }
+    },
+    {
+     "name": "--request-route",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--restore",
+     "args": {}
+    },
+    {
+     "name": "--server-side-encryption",
+     "args": {
+      "suggestions": [
+       "AES256",
+       "aws:fsx",
+       "aws:kms",
+       "aws:kms:dsse"
+      ]
+     }
+    },
+    {
+     "name": "--sse-customer-algorithm",
+     "args": {}
+    },
+    {
+     "name": "--sse-customer-key-md5",
+     "args": {}
+    },
+    {
+     "name": "--ssekms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--status-code",
+     "args": {}
+    },
+    {
+     "name": "--storage-class",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "REDUCED_REDUNDANCY",
+       "STANDARD_IA",
+       "ONEZONE_IA",
+       "INTELLIGENT_TIERING",
+       "GLACIER",
+       "DEEP_ARCHIVE",
+       "OUTPOSTS",
+       "GLACIER_IR",
+       "SNOW",
+       "EXPRESS_ONEZONE",
+       "FSX_OPENZFS",
+       "FSX_ONTAP"
+      ]
+     }
+    },
+    {
+     "name": "--tag-count",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

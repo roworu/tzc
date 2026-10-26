@@ -1,0 +1,3025 @@
+{
+ "name": "cloudformation",
+ "description": "CloudFormation CloudFormation allows you to create and manage Amazon Web Services infrastructure deployments predictably and repeatedly.",
+ "subcommands": [
+  {
+   "name": "activate-organizations-access",
+   "description": "Activate trusted access with Organizations."
+  },
+  {
+   "name": "activate-type",
+   "description": "Activates a public third-party extension, such as a resource or module, to make it available for use in stack templates in your current account and Region.",
+   "options": [
+    {
+     "name": "--auto-update"
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--logging-config",
+     "args": {}
+    },
+    {
+     "name": "--major-version",
+     "args": {}
+    },
+    {
+     "name": "--no-auto-update"
+    },
+    {
+     "name": "--public-type-arn",
+     "args": {}
+    },
+    {
+     "name": "--publisher-id",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    },
+    {
+     "name": "--type-name-alias",
+     "args": {}
+    },
+    {
+     "name": "--version-bump",
+     "args": {
+      "suggestions": [
+       "MAJOR",
+       "MINOR"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "batch-describe-type-configurations",
+   "description": "Returns configuration data for the specified CloudFormation extensions, from the CloudFormation registry in your current account and Region.",
+   "options": [
+    {
+     "name": "--type-configuration-identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-update-stack",
+   "description": "Cancels an update on the specified stack.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "continue-update-rollback",
+   "description": "Continues rolling back a stack from UPDATE_ROLLBACK_FAILED to UPDATE_ROLLBACK_COMPLETE state.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--resources-to-skip",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-change-set",
+   "description": "Creates a list of changes that will be applied to a stack so that you can review the changes before executing them.",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--change-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--change-set-type",
+     "args": {
+      "suggestions": [
+       "CREATE",
+       "UPDATE",
+       "IMPORT"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--deployment-config",
+     "args": {}
+    },
+    {
+     "name": "--deployment-mode",
+     "args": {
+      "suggestions": [
+       "REVERT_DRIFT"
+      ]
+     }
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--disable-validation"
+    },
+    {
+     "name": "--import-existing-resources"
+    },
+    {
+     "name": "--include-nested-stacks"
+    },
+    {
+     "name": "--no-disable-validation"
+    },
+    {
+     "name": "--no-import-existing-resources"
+    },
+    {
+     "name": "--no-include-nested-stacks"
+    },
+    {
+     "name": "--no-use-previous-template"
+    },
+    {
+     "name": "--notification-arns",
+     "args": {}
+    },
+    {
+     "name": "--on-stack-failure",
+     "args": {
+      "suggestions": [
+       "DO_NOTHING",
+       "ROLLBACK",
+       "DELETE"
+      ]
+     }
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    },
+    {
+     "name": "--resources-to-import",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--rollback-configuration",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-url",
+     "args": {}
+    },
+    {
+     "name": "--use-previous-template"
+    }
+   ]
+  },
+  {
+   "name": "create-generated-template",
+   "description": "Creates a template from existing resources that are not already managed with CloudFormation.",
+   "options": [
+    {
+     "name": "--generated-template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resources",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    },
+    {
+     "name": "--template-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-stack",
+   "description": "Creates a stack as specified in the template.",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--deployment-config",
+     "args": {}
+    },
+    {
+     "name": "--disable-rollback"
+    },
+    {
+     "name": "--disable-validation"
+    },
+    {
+     "name": "--enable-termination-protection"
+    },
+    {
+     "name": "--no-disable-rollback"
+    },
+    {
+     "name": "--no-disable-validation"
+    },
+    {
+     "name": "--no-enable-termination-protection"
+    },
+    {
+     "name": "--no-retain-except-on-create"
+    },
+    {
+     "name": "--notification-arns",
+     "args": {}
+    },
+    {
+     "name": "--on-failure",
+     "args": {
+      "suggestions": [
+       "DO_NOTHING",
+       "ROLLBACK",
+       "DELETE"
+      ]
+     }
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    },
+    {
+     "name": "--retain-except-on-create"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--rollback-configuration",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-policy-body",
+     "args": {}
+    },
+    {
+     "name": "--stack-policy-url",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-url",
+     "args": {}
+    },
+    {
+     "name": "--timeout-in-minutes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-stack-instances",
+   "description": "Creates stack instances for the specified accounts, within the specified Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--accounts",
+     "args": {}
+    },
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--deployment-targets",
+     "args": {}
+    },
+    {
+     "name": "--operation-id",
+     "args": {}
+    },
+    {
+     "name": "--operation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--parameter-overrides",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-stack-refactor",
+   "description": "Creates a refactor across multiple stacks, with the list of stacks and resources that are affected.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--enable-stack-creation"
+    },
+    {
+     "name": "--no-enable-stack-creation"
+    },
+    {
+     "name": "--resource-mappings",
+     "args": {}
+    },
+    {
+     "name": "--stack-definitions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-stack-set",
+   "description": "Creates a StackSet.",
+   "options": [
+    {
+     "name": "--administration-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--auto-deployment",
+     "args": {}
+    },
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-name",
+     "args": {}
+    },
+    {
+     "name": "--managed-execution",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--permission-model",
+     "args": {
+      "suggestions": [
+       "SERVICE_MANAGED",
+       "SELF_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--stack-id",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "deactivate-organizations-access",
+   "description": "Deactivates trusted access with Organizations."
+  },
+  {
+   "name": "deactivate-type",
+   "description": "Deactivates a public third-party extension, such as a resource or module, or a CloudFormation Hook when you no longer use it.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-change-set",
+   "description": "Deletes the specified change set.",
+   "options": [
+    {
+     "name": "--change-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-generated-template",
+   "description": "Deleted a generated template.",
+   "options": [
+    {
+     "name": "--generated-template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-stack",
+   "description": "Deletes a specified stack.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--deletion-mode",
+     "args": {
+      "suggestions": [
+       "STANDARD",
+       "FORCE_DELETE_STACK"
+      ]
+     }
+    },
+    {
+     "name": "--deployment-config",
+     "args": {}
+    },
+    {
+     "name": "--retain-resources",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-stack-instances",
+   "description": "Deletes stack instances for the specified accounts, in the specified Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--accounts",
+     "args": {}
+    },
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--deployment-targets",
+     "args": {}
+    },
+    {
+     "name": "--no-retain-stacks"
+    },
+    {
+     "name": "--operation-id",
+     "args": {}
+    },
+    {
+     "name": "--operation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retain-stacks",
+     "priority": 75
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-stack-set",
+   "description": "Deletes a StackSet.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deploy",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--disable-rollback"
+    },
+    {
+     "name": "--fail-on-empty-changeset"
+    },
+    {
+     "name": "--force-upload"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-disable-rollback"
+    },
+    {
+     "name": "--no-execute-changeset"
+    },
+    {
+     "name": "--no-fail-on-empty-changeset"
+    },
+    {
+     "name": "--notification-arns",
+     "args": {}
+    },
+    {
+     "name": "--parameter-overrides",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket",
+     "args": {}
+    },
+    {
+     "name": "--s3-prefix",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-file",
+     "args": {},
+     "priority": 75
+    }
+   ],
+   "subcommands": [
+    {
+     "name": "deregister",
+     "description": "Removes any tags from the on-premises instance; deregisters the on-premises instance from AWS CodeDeploy; and, unless requested otherwise, deletes the IAM user for the on-premises instance.",
+     "options": [
+      {
+       "name": "--instance-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--no-delete-iam-user"
+      }
+     ]
+    },
+    {
+     "name": "install",
+     "description": "Configures and installs the AWS CodeDeploy Agent on the on-premises instance.",
+     "options": [
+      {
+       "name": "--agent-installer",
+       "args": {}
+      },
+      {
+       "name": "--config-file",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--override-config"
+      }
+     ]
+    },
+    {
+     "name": "push",
+     "description": "Bundles and uploads to Amazon Simple Storage Service (Amazon S3) an application revision, which is a zip archive file that contains deployable content and an accompanying Application Specification file (AppSpec file).",
+     "options": [
+      {
+       "name": "--application-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--description",
+       "args": {}
+      },
+      {
+       "name": "--ignore-hidden-files"
+      },
+      {
+       "name": "--no-ignore-hidden-files"
+      },
+      {
+       "name": "--s3-location",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--source",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "register",
+     "description": "Creates an IAM user for the on-premises instance, if not provided, and saves the user's credentials to an on-premises instance configuration file; registers the on-premises instance with AWS CodeDeploy; and optionally adds tags to the on-premises instance.",
+     "options": [
+      {
+       "name": "--iam-user-arn",
+       "args": {}
+      },
+      {
+       "name": "--instance-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--tags",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "uninstall",
+     "description": "Uninstalls the AWS CodeDeploy Agent from the on-premises instance."
+    }
+   ]
+  },
+  {
+   "name": "deregister-type",
+   "description": "Marks an extension or extension version as DEPRECATED in the CloudFormation registry, removing it from active use.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-account-limits",
+   "description": "Retrieves your account's CloudFormation limits, such as the maximum number of stacks that you can create in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-change-set",
+   "description": "Returns the inputs for the change set and a list of changes that CloudFormation will make if you execute the change set.",
+   "options": [
+    {
+     "name": "--change-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-property-values"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-property-values"
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-change-set-hooks",
+   "description": "Returns Hook-related information for the change set and a list of changes that CloudFormation makes when you run the change set.",
+   "options": [
+    {
+     "name": "--change-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--logical-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-events",
+   "description": "Returns CloudFormation events based on flexible query criteria.",
+   "options": [
+    {
+     "name": "--change-set-name",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--operation-id",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-generated-template",
+   "description": "Describes a generated template.",
+   "options": [
+    {
+     "name": "--generated-template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-organizations-access",
+   "description": "Retrieves information about the account's OrganizationAccess status.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "describe-publisher",
+   "description": "Returns information about a CloudFormation extension publisher.",
+   "options": [
+    {
+     "name": "--publisher-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-scan",
+   "description": "Describes details of a resource scan.",
+   "options": [
+    {
+     "name": "--resource-scan-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-stack-drift-detection-status",
+   "description": "Returns information about a stack drift detection operation.",
+   "options": [
+    {
+     "name": "--stack-drift-detection-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-stack-events",
+   "description": "Returns all stack related events for a specified stack in reverse chronological order.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-stack-instance",
+   "description": "Returns the stack instance that's associated with the specified StackSet, Amazon Web Services account, and Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--stack-instance-account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-instance-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-stack-refactor",
+   "description": "Describes the stack refactor status.",
+   "options": [
+    {
+     "name": "--stack-refactor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-stack-resource",
+   "description": "Returns a description of the specified resource in the specified stack.",
+   "options": [
+    {
+     "name": "--logical-resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-stack-resource-drifts",
+   "description": "Returns drift information for the resources that have been checked for drift in the specified stack.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-resource-drift-status-filters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-stack-resources",
+   "description": "Returns Amazon Web Services resource descriptions for running and deleted stacks.",
+   "options": [
+    {
+     "name": "--logical-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--physical-resource-id",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-stack-set",
+   "description": "Returns the description of the specified StackSet.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-stack-set-operation",
+   "description": "Returns the description of the specified StackSet operation.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--operation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-stacks",
+   "description": "Returns the description for the specified stack; if no stack name was specified, then it returns the description for all the stacks created.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-type",
+   "description": "Returns detailed information about an extension from the CloudFormation registry in your current account and Region.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--public-version-number",
+     "args": {}
+    },
+    {
+     "name": "--publisher-id",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-type-registration",
+   "description": "Returns information about an extension's registration, including its current status and type and version identifiers.",
+   "options": [
+    {
+     "name": "--registration-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detect-stack-drift",
+   "description": "Detects whether a stack's actual configuration differs, or has drifted, from its expected configuration, as defined in the stack template and any values specified as template parameters.",
+   "options": [
+    {
+     "name": "--logical-resource-ids",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detect-stack-resource-drift",
+   "description": "Returns information about whether a resource's actual configuration differs, or has drifted, from its expected configuration, as defined in the stack template and any values specified as template parameters.",
+   "options": [
+    {
+     "name": "--logical-resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detect-stack-set-drift",
+   "description": "Detect drift on a StackSet.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--operation-id",
+     "args": {}
+    },
+    {
+     "name": "--operation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "estimate-template-cost",
+   "description": "Returns the estimated monthly cost of a template.",
+   "options": [
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "execute-change-set",
+   "description": "Updates a stack using the input information that was provided when the specified change set was created.",
+   "options": [
+    {
+     "name": "--change-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--disable-rollback"
+    },
+    {
+     "name": "--no-disable-rollback"
+    },
+    {
+     "name": "--no-retain-except-on-create"
+    },
+    {
+     "name": "--retain-except-on-create"
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "execute-stack-refactor",
+   "description": "Executes the stack refactor operation.",
+   "options": [
+    {
+     "name": "--stack-refactor-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-generated-template",
+   "description": "Retrieves a generated template.",
+   "options": [
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "JSON",
+       "YAML"
+      ]
+     }
+    },
+    {
+     "name": "--generated-template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-hook-result",
+   "description": "Retrieves detailed information and remediation guidance for a Hook invocation result.",
+   "options": [
+    {
+     "name": "--hook-result-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-stack-policy",
+   "description": "Returns the stack policy for a specified stack.",
+   "options": [
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-template",
+   "description": "Returns the template body for a specified stack.",
+   "options": [
+    {
+     "name": "--change-set-name",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    },
+    {
+     "name": "--template-stage",
+     "args": {
+      "suggestions": [
+       "Original",
+       "Processed"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-template-summary",
+   "description": "Returns information about a new or existing template.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--stack-name",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-summary-config",
+     "args": {}
+    },
+    {
+     "name": "--template-url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-stacks-to-stack-set",
+   "description": "Import existing stacks into a new StackSets.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--operation-id",
+     "args": {}
+    },
+    {
+     "name": "--operation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--organizational-unit-ids",
+     "args": {}
+    },
+    {
+     "name": "--stack-ids",
+     "args": {}
+    },
+    {
+     "name": "--stack-ids-url",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-change-sets",
+   "description": "Returns the ID and status of each active change set for a stack.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-exports",
+   "description": "Lists all exported output values in the account and Region in which you call this action.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-generated-templates",
+   "description": "Lists your generated templates in this Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-hook-results",
+   "description": "Returns summaries of invoked Hooks.",
+   "options": [
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "HOOK_IN_PROGRESS",
+       "HOOK_COMPLETE_SUCCEEDED",
+       "HOOK_COMPLETE_FAILED",
+       "HOOK_FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--target-id",
+     "args": {}
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "CHANGE_SET",
+       "STACK",
+       "RESOURCE",
+       "CLOUD_CONTROL"
+      ]
+     }
+    },
+    {
+     "name": "--type-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-imports",
+   "description": "Lists all stacks that are importing an exported output value.",
+   "options": [
+    {
+     "name": "--export-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-scan-related-resources",
+   "description": "Lists the related resources for a list of resources from a resource scan.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-scan-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resources",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-scan-resources",
+   "description": "Lists the resources from a resource scan.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--resource-scan-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-type-prefix",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tag-key",
+     "args": {}
+    },
+    {
+     "name": "--tag-value",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-resource-scans",
+   "description": "List the resource scans from newest to oldest.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--scan-type-filter",
+     "args": {
+      "suggestions": [
+       "FULL",
+       "PARTIAL"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stack-instance-resource-drifts",
+   "description": "Returns drift information for resources in a stack instance.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--operation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-instance-account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-instance-region",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-instance-resource-drift-statuses",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-stack-instances",
+   "description": "Returns summary information about stack instances that are associated with the specified StackSet.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--stack-instance-account",
+     "args": {}
+    },
+    {
+     "name": "--stack-instance-region",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stack-refactor-actions",
+   "description": "Lists the stack refactor actions that will be taken after calling the ExecuteStackRefactor action.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--stack-refactor-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stack-refactors",
+   "description": "Lists all account stack refactor operations and their statuses.",
+   "options": [
+    {
+     "name": "--execution-status-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stack-resources",
+   "description": "Returns descriptions of all resources of the specified stack.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stack-set-auto-deployment-targets",
+   "description": "Returns summary information about deployment targets for a StackSet.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-stack-set-operation-results",
+   "description": "Returns summary information about the results of a StackSet operation.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--operation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stack-set-operations",
+   "description": "Returns summary information about operations performed on a StackSet.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stack-sets",
+   "description": "Returns summary information about StackSets that are associated with the user.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DELETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-stacks",
+   "description": "Returns the summary information for stacks whose status matches the specified StackStatusFilter.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--stack-status-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-type-registrations",
+   "description": "Returns a list of registration tokens for the specified extension(s).",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--registration-status-filter",
+     "args": {
+      "suggestions": [
+       "COMPLETE",
+       "IN_PROGRESS",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-arn",
+     "args": {}
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-type-versions",
+   "description": "Returns summary information about the versions of an extension.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--deprecated-status",
+     "args": {
+      "suggestions": [
+       "LIVE",
+       "DEPRECATED"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--publisher-id",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-types",
+   "description": "Returns summary information about all extensions, including your private resource types, modules, and Hooks as well as all public extensions from Amazon Web Services and third-party publishers.",
+   "options": [
+    {
+     "name": "--deprecated-status",
+     "args": {
+      "suggestions": [
+       "LIVE",
+       "DEPRECATED"
+      ]
+     }
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--provisioning-type",
+     "args": {
+      "suggestions": [
+       "NON_PROVISIONABLE",
+       "IMMUTABLE",
+       "FULLY_MUTABLE"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--visibility",
+     "args": {
+      "suggestions": [
+       "PUBLIC",
+       "PRIVATE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "package",
+   "options": [
+    {
+     "name": "--force-upload"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--metadata",
+     "args": {}
+    },
+    {
+     "name": "--output-template-file",
+     "args": {}
+    },
+    {
+     "name": "--s3-bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-prefix",
+     "args": {}
+    },
+    {
+     "name": "--template-file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--use-json"
+    }
+   ]
+  },
+  {
+   "name": "publish-type",
+   "description": "Publishes the specified extension to the CloudFormation registry as a public extension in this Region.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--public-version-number",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "record-handler-progress",
+   "description": "Reports progress of a resource handler to CloudFormation.",
+   "options": [
+    {
+     "name": "--bearer-token",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--current-operation-status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "IN_PROGRESS",
+       "SUCCESS",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--error-code",
+     "args": {
+      "suggestions": [
+       "NotUpdatable",
+       "InvalidRequest",
+       "AccessDenied",
+       "InvalidCredentials",
+       "AlreadyExists",
+       "NotFound",
+       "ResourceConflict",
+       "Throttling",
+       "ServiceLimitExceeded",
+       "NotStabilized",
+       "GeneralServiceException",
+       "ServiceInternalError",
+       "NetworkFailure",
+       "InternalFailure",
+       "InvalidTypeConfiguration",
+       "HandlerInternalFailure",
+       "NonCompliant",
+       "Unknown",
+       "UnsupportedTarget"
+      ]
+     }
+    },
+    {
+     "name": "--operation-status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "IN_PROGRESS",
+       "SUCCESS",
+       "FAILED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-model",
+     "args": {}
+    },
+    {
+     "name": "--status-message",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-publisher",
+   "description": "Registers your account as a publisher of public extensions in the CloudFormation registry.",
+   "options": [
+    {
+     "name": "--accept-terms-and-conditions"
+    },
+    {
+     "name": "--connection-arn",
+     "args": {}
+    },
+    {
+     "name": "--no-accept-terms-and-conditions"
+    }
+   ]
+  },
+  {
+   "name": "register-type",
+   "description": "Registers an extension with the CloudFormation service.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--logging-config",
+     "args": {}
+    },
+    {
+     "name": "--schema-handler-package",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "rollback-stack",
+   "description": "When specifying RollbackStack, you preserve the state of previously provisioned resources when an operation fails.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--deployment-config",
+     "args": {}
+    },
+    {
+     "name": "--no-retain-except-on-create"
+    },
+    {
+     "name": "--retain-except-on-create"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-stack-policy",
+   "description": "Sets a stack policy for a specified stack.",
+   "options": [
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-policy-body",
+     "args": {}
+    },
+    {
+     "name": "--stack-policy-url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "set-type-configuration",
+   "description": "Specifies the configuration data for a CloudFormation extension, such as a resource or Hook, in the given account and Region.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration-alias",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-arn",
+     "args": {}
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "set-type-default-version",
+   "description": "Specify the default version of an extension.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "signal-resource",
+   "description": "Sends a signal to the specified resource with a success or failure status.",
+   "options": [
+    {
+     "name": "--logical-resource-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "SUCCESS",
+       "FAILURE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--unique-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-resource-scan",
+   "description": "Starts a scan of the resources in this account in this Region.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--scan-filters",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-stack-set-operation",
+   "description": "Stops an in-progress operation on a StackSet and its associated stack instances.",
+   "options": [
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--operation-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-type",
+   "description": "Tests a registered extension to make sure it meets all necessary requirements for being published in the CloudFormation registry.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {}
+    },
+    {
+     "name": "--log-delivery-bucket",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "RESOURCE",
+       "MODULE",
+       "HOOK"
+      ]
+     }
+    },
+    {
+     "name": "--type-name",
+     "args": {}
+    },
+    {
+     "name": "--version-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-generated-template",
+   "description": "Updates a generated template.",
+   "options": [
+    {
+     "name": "--add-resources",
+     "args": {}
+    },
+    {
+     "name": "--generated-template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-generated-template-name",
+     "args": {}
+    },
+    {
+     "name": "--no-refresh-all-resources"
+    },
+    {
+     "name": "--refresh-all-resources"
+    },
+    {
+     "name": "--remove-resources",
+     "args": {}
+    },
+    {
+     "name": "--template-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-stack",
+   "description": "Updates a stack as specified in the template.",
+   "options": [
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--deployment-config",
+     "args": {}
+    },
+    {
+     "name": "--disable-rollback"
+    },
+    {
+     "name": "--disable-validation"
+    },
+    {
+     "name": "--no-disable-rollback"
+    },
+    {
+     "name": "--no-disable-validation"
+    },
+    {
+     "name": "--no-retain-except-on-create"
+    },
+    {
+     "name": "--no-use-previous-template"
+    },
+    {
+     "name": "--notification-arns",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {}
+    },
+    {
+     "name": "--retain-except-on-create"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--rollback-configuration",
+     "args": {}
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-policy-body",
+     "args": {}
+    },
+    {
+     "name": "--stack-policy-during-update-body",
+     "args": {}
+    },
+    {
+     "name": "--stack-policy-during-update-url",
+     "args": {}
+    },
+    {
+     "name": "--stack-policy-url",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-url",
+     "args": {}
+    },
+    {
+     "name": "--use-previous-template"
+    }
+   ]
+  },
+  {
+   "name": "update-stack-instances",
+   "description": "Updates the parameter values for stack instances for the specified accounts, within the specified Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--accounts",
+     "args": {}
+    },
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--deployment-targets",
+     "args": {}
+    },
+    {
+     "name": "--operation-id",
+     "args": {}
+    },
+    {
+     "name": "--operation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--parameter-overrides",
+     "args": {}
+    },
+    {
+     "name": "--regions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-stack-set",
+   "description": "Updates the StackSet and associated stack instances in the specified accounts and Amazon Web Services Regions.",
+   "options": [
+    {
+     "name": "--accounts",
+     "args": {}
+    },
+    {
+     "name": "--administration-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--auto-deployment",
+     "args": {}
+    },
+    {
+     "name": "--call-as",
+     "args": {
+      "suggestions": [
+       "SELF",
+       "DELEGATED_ADMIN"
+      ]
+     }
+    },
+    {
+     "name": "--capabilities",
+     "args": {}
+    },
+    {
+     "name": "--deployment-targets",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-name",
+     "args": {}
+    },
+    {
+     "name": "--managed-execution",
+     "args": {}
+    },
+    {
+     "name": "--no-use-previous-template"
+    },
+    {
+     "name": "--operation-id",
+     "args": {}
+    },
+    {
+     "name": "--operation-preferences",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--permission-model",
+     "args": {
+      "suggestions": [
+       "SERVICE_MANAGED",
+       "SELF_MANAGED"
+      ]
+     }
+    },
+    {
+     "name": "--regions",
+     "args": {}
+    },
+    {
+     "name": "--stack-set-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-url",
+     "args": {}
+    },
+    {
+     "name": "--use-previous-template"
+    }
+   ]
+  },
+  {
+   "name": "update-termination-protection",
+   "description": "Updates termination protection for the specified stack.",
+   "options": [
+    {
+     "name": "--enable-termination-protection",
+     "priority": 75
+    },
+    {
+     "name": "--no-enable-termination-protection"
+    },
+    {
+     "name": "--stack-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-template",
+   "description": "Validates a specified template.",
+   "options": [
+    {
+     "name": "--template-body",
+     "args": {}
+    },
+    {
+     "name": "--template-url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "change-set-create-complete",
+     "description": "Wait until change set status is CREATE_COMPLETE.",
+     "options": [
+      {
+       "name": "--change-set-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--include-property-values"
+      },
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--no-include-property-values"
+      },
+      {
+       "name": "--stack-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "stack-create-complete",
+     "description": "Wait until stack status is CREATE_COMPLETE.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--stack-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "stack-delete-complete",
+     "description": "Wait until stack status is DELETE_COMPLETE.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--stack-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "stack-exists",
+     "description": "Wait until 200 response is received when polling with ``describe-stacks``.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--stack-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "stack-import-complete",
+     "description": "Wait until stack status is IMPORT_COMPLETE.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--stack-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "stack-refactor-create-complete",
+     "description": "Wait until the stack refactor status is CREATE_COMPLETE.",
+     "options": [
+      {
+       "name": "--stack-refactor-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "stack-refactor-execute-complete",
+     "description": "Wait until the stack refactor status is EXECUTE_COMPLETE.",
+     "options": [
+      {
+       "name": "--stack-refactor-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "stack-rollback-complete",
+     "description": "Wait until stack status is UPDATE_ROLLBACK_COMPLETE.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--stack-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "stack-update-complete",
+     "description": "Wait until stack status is UPDATE_COMPLETE.",
+     "options": [
+      {
+       "name": "--max-items",
+       "args": {}
+      },
+      {
+       "name": "--stack-name",
+       "args": {}
+      },
+      {
+       "name": "--starting-token",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "type-registration-complete",
+     "description": "Wait until type registration is COMPLETE.",
+     "options": [
+      {
+       "name": "--registration-token",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

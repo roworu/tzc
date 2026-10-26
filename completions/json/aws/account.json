@@ -1,0 +1,278 @@
+{
+ "name": "account",
+ "description": "Operations for Amazon Web Services Account Management",
+ "subcommands": [
+  {
+   "name": "accept-primary-email-update",
+   "description": "Accepts the request that originated from StartPrimaryEmailUpdate to update the primary email address (also known as the root user email address) for the specified account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--otp",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-email",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-alternate-contact",
+   "description": "Deletes the specified alternate contact from an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--alternate-contact-type",
+     "args": {
+      "suggestions": [
+       "BILLING",
+       "OPERATIONS",
+       "SECURITY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-region",
+   "description": "Disables (opts-out) a particular Region for an account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-region",
+   "description": "Enables (opts-in) a particular Region for an account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-account-information",
+   "description": "Retrieves information about the specified account including its account name, account ID, account creation date and time, and account state.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-alternate-contact",
+   "description": "Retrieves the specified alternate contact attached to an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--alternate-contact-type",
+     "args": {
+      "suggestions": [
+       "BILLING",
+       "OPERATIONS",
+       "SECURITY"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-contact-information",
+   "description": "Retrieves the primary contact information of an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-gov-cloud-account-information",
+   "description": "Retrieves information about the GovCloud account linked to the specified standard account (if it exists) including the GovCloud account ID and state.",
+   "options": [
+    {
+     "name": "--standard-account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-primary-email",
+   "description": "Retrieves the primary email address for the specified account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-primary-email-update-status",
+   "description": "Retrieves the status of the most recent primary email update for the specified account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-region-opt-status",
+   "description": "Retrieves the opt-in status of a particular Region.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--region-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-regions",
+   "description": "Lists all the Regions for a given account and their respective opt-in statuses.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--region-opt-status-contains",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-account-name",
+   "description": "Updates the account name of the specified account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--account-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-alternate-contact",
+   "description": "Modifies the specified alternate contact attached to an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--alternate-contact-type",
+     "args": {
+      "suggestions": [
+       "BILLING",
+       "OPERATIONS",
+       "SECURITY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--email-address",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--phone-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--title",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-contact-information",
+   "description": "Updates the primary contact information of an Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--contact-information",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-primary-email-update",
+   "description": "Starts the process to update the primary email address for the specified account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-email",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

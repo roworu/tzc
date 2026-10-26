@@ -1,0 +1,1965 @@
+{
+ "name": "s3control",
+ "description": "Amazon Web Services S3 Control provides access to Amazon S3 control plane actions.",
+ "subcommands": [
+  {
+   "name": "associate-access-grants-identity-center",
+   "description": "Associate your S3 Access Grants instance with an Amazon Web Services IAM Identity Center instance.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-center-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-access-grant",
+   "description": "Creates an access grant that gives a grantee access to your S3 data.",
+   "options": [
+    {
+     "name": "--access-grants-location-configuration",
+     "args": {}
+    },
+    {
+     "name": "--access-grants-location-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-arn",
+     "args": {}
+    },
+    {
+     "name": "--grantee",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--permission",
+     "args": {
+      "suggestions": [
+       "READ",
+       "WRITE",
+       "READWRITE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--s3-prefix-type",
+     "args": {
+      "suggestions": [
+       "Object"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-access-grants-instance",
+   "description": "Creates an S3 Access Grants instance, which serves as a logical grouping for access grants.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identity-center-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-access-grants-location",
+   "description": "The S3 data location that you would like to register in your S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location-scope",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-access-point",
+   "description": "Creates an access point and associates it to a specified bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket-account-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--public-access-block-configuration",
+     "args": {}
+    },
+    {
+     "name": "--scope",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--vpc-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-access-point-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-bucket",
+   "description": "This action creates an Amazon S3 on Outposts bucket.",
+   "options": [
+    {
+     "name": "--acl",
+     "args": {
+      "suggestions": [
+       "private",
+       "public-read",
+       "public-read-write",
+       "authenticated-read"
+      ]
+     }
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--create-bucket-configuration",
+     "args": {}
+    },
+    {
+     "name": "--grant-full-control",
+     "args": {}
+    },
+    {
+     "name": "--grant-read",
+     "args": {}
+    },
+    {
+     "name": "--grant-read-acp",
+     "args": {}
+    },
+    {
+     "name": "--grant-write",
+     "args": {}
+    },
+    {
+     "name": "--grant-write-acp",
+     "args": {}
+    },
+    {
+     "name": "--no-object-lock-enabled-for-bucket"
+    },
+    {
+     "name": "--object-lock-enabled-for-bucket"
+    },
+    {
+     "name": "--outpost-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-job",
+   "description": "This operation creates an S3 Batch Operations job.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--confirmation-required"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--manifest",
+     "args": {}
+    },
+    {
+     "name": "--manifest-generator",
+     "args": {}
+    },
+    {
+     "name": "--no-confirmation-required"
+    },
+    {
+     "name": "--operation",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--priority",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--report",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-multi-region-access-point",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--details",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-storage-lens-group",
+   "description": "Creates a new S3 Storage Lens group and associates it with the specified Amazon Web Services account ID.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-lens-group",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-access-grant",
+   "description": "Deletes the access grant from the S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--access-grant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-grants-instance",
+   "description": "Deletes your S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-grants-instance-resource-policy",
+   "description": "Deletes the resource policy of the S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-grants-location",
+   "description": "Deregisters a location from your S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--access-grants-location-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-point",
+   "description": "Deletes the specified access point.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-point-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-point-policy",
+   "description": "Deletes the access point policy for the specified access point.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-point-policy-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-point-scope",
+   "description": "Deletes an existing access point scope for a directory bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket",
+   "description": "This action deletes an Amazon S3 on Outposts bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-lifecycle-configuration",
+   "description": "This action deletes an Amazon S3 on Outposts bucket's lifecycle configuration.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-policy",
+   "description": "This action deletes an Amazon S3 on Outposts bucket policy.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-replication",
+   "description": "This operation deletes an Amazon S3 on Outposts bucket's replication configuration.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-bucket-tagging",
+   "description": "This action deletes an Amazon S3 on Outposts bucket's tags.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-job-tagging",
+   "description": "Removes the entire tag set from the specified S3 Batch Operations job.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-multi-region-access-point",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--details",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-public-access-block",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-storage-lens-configuration",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-storage-lens-configuration-tagging",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-storage-lens-group",
+   "description": "Deletes an existing S3 Storage Lens group.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job",
+   "description": "Retrieves the configuration parameters and status for a Batch Operations job.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-multi-region-access-point-operation",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--request-token-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "dissociate-access-grants-identity-center",
+   "description": "Dissociates the Amazon Web Services IAM Identity Center instance from the S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-grant",
+   "description": "Get the details of an access grant from your S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--access-grant-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-grants-instance",
+   "description": "Retrieves the S3 Access Grants instance for a Region in your account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-grants-instance-for-prefix",
+   "description": "Retrieve the S3 Access Grants instance that contains a particular prefix.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--s3-prefix",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-grants-instance-resource-policy",
+   "description": "Returns the resource policy of the S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-grants-location",
+   "description": "Retrieves the details of a particular location registered in your S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--access-grants-location-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-point",
+   "description": "Returns configuration information about the specified access point.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-point-configuration-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-point-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-point-policy",
+   "description": "Returns the access point policy associated with the specified access point.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-point-policy-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-point-policy-status",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-point-policy-status-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-access-point-scope",
+   "description": "Returns the access point scope for a directory bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket",
+   "description": "Gets an Amazon S3 on Outposts bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-lifecycle-configuration",
+   "description": "This action gets an Amazon S3 on Outposts bucket's lifecycle configuration.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-policy",
+   "description": "This action gets a bucket policy for an Amazon S3 on Outposts bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-replication",
+   "description": "This operation gets an Amazon S3 on Outposts bucket's replication configuration.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-tagging",
+   "description": "This action gets an Amazon S3 on Outposts bucket's tags.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-bucket-versioning",
+   "description": "This operation returns the versioning state for S3 on Outposts buckets only.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-access",
+   "description": "Returns a temporary access credential from S3 Access Grants to the grantee or client application.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--audit-context",
+     "args": {}
+    },
+    {
+     "name": "--duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--permission",
+     "args": {
+      "suggestions": [
+       "READ",
+       "WRITE",
+       "READWRITE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--privilege",
+     "args": {
+      "suggestions": [
+       "Minimal",
+       "Default"
+      ]
+     }
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "Object"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "get-job-tagging",
+   "description": "Returns the tags on an S3 Batch Operations job.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-multi-region-access-point",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-multi-region-access-point-policy",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-multi-region-access-point-policy-status",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-multi-region-access-point-routes",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mrap",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-public-access-block",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-storage-lens-configuration",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-storage-lens-configuration-tagging",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-storage-lens-group",
+   "description": "Retrieves the Storage Lens group configuration details.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-access-grants",
+   "description": "Returns the list of access grants in your S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--application-arn",
+     "args": {}
+    },
+    {
+     "name": "--grant-scope",
+     "args": {}
+    },
+    {
+     "name": "--grantee-identifier",
+     "args": {}
+    },
+    {
+     "name": "--grantee-type",
+     "args": {
+      "suggestions": [
+       "DIRECTORY_USER",
+       "DIRECTORY_GROUP",
+       "IAM"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--permission",
+     "args": {
+      "suggestions": [
+       "READ",
+       "WRITE",
+       "READWRITE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-access-grants-instances",
+   "description": "Returns a list of S3 Access Grants instances.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-access-grants-locations",
+   "description": "Returns a list of the locations registered in your S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--location-scope",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-access-points",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {}
+    },
+    {
+     "name": "--data-source-id",
+     "args": {}
+    },
+    {
+     "name": "--data-source-type",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-access-points-for-directory-buckets",
+   "description": "Returns a list of the access points that are owned by the Amazon Web Services account and that are associated with the specified directory bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--directory-bucket",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-access-points-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-caller-access-grants",
+   "description": "Use this API to list the access grants that grant the caller access to Amazon S3 data through S3 Access Grants.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--allowed-by-application"
+    },
+    {
+     "name": "--grant-scope",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-allowed-by-application"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "Lists current S3 Batch Operations jobs as well as the jobs that have ended within the last 90 days for the Amazon Web Services account making the request.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-statuses",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-multi-region-access-points",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-regional-buckets",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--outpost-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-storage-lens-configurations",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-storage-lens-groups",
+   "description": "Lists all the Storage Lens groups in the specified home Region.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "This operation allows you to list all of the tags for a specified resource.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-access-grants-instance-resource-policy",
+   "description": "Updates the resource policy of the S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--organization",
+     "args": {}
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-access-point-configuration-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-access-point-policy",
+   "description": "Associates an access policy with the specified access point.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-access-point-policy-for-object-lambda",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-access-point-scope",
+   "description": "Creates or replaces the access point scope for a directory bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scope",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-lifecycle-configuration",
+   "description": "This action puts a lifecycle configuration to an Amazon S3 on Outposts bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lifecycle-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-policy",
+   "description": "This action puts a bucket policy to an Amazon S3 on Outposts bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--confirm-remove-self-bucket-access"
+    },
+    {
+     "name": "--no-confirm-remove-self-bucket-access"
+    },
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-replication",
+   "description": "This action creates an Amazon S3 on Outposts bucket's replication configuration.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--replication-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-tagging",
+   "description": "This action puts tags on an Amazon S3 on Outposts bucket.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tagging",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-bucket-versioning",
+   "description": "This operation sets the versioning state for S3 on Outposts buckets only.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mfa",
+     "args": {}
+    },
+    {
+     "name": "--versioning-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-job-tagging",
+   "description": "Sets the supplied tag-set on an S3 Batch Operations job.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-multi-region-access-point-policy",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--details",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-public-access-block",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--public-access-block-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-storage-lens-configuration",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-lens-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-storage-lens-configuration-tagging",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--config-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "submit-multi-region-access-point-routes",
+   "description": "This operation is not supported by directory buckets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--mrap",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--route-updates",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Creates a new user-defined tag or updates an existing tag.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "This operation removes the specified user-defined tags from an S3 resource.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-access-grants-location",
+   "description": "Updates the IAM role of a registered location in your S3 Access Grants instance.",
+   "options": [
+    {
+     "name": "--access-grants-location-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-job-priority",
+   "description": "Updates an existing S3 Batch Operations job's priority.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--priority",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-job-status",
+   "description": "Updates the status for the specified job.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requested-job-status",
+     "args": {
+      "suggestions": [
+       "Cancelled",
+       "Ready"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--status-update-reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-storage-lens-group",
+   "description": "Updates the existing Storage Lens group.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--storage-lens-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

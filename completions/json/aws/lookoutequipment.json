@@ -1,0 +1,1140 @@
+{
+ "name": "lookoutequipment",
+ "description": "Amazon Lookout for Equipment is a machine learning service that uses advanced analytics to identify anomalies in machines from sensor data for use in predictive maintenance.",
+ "subcommands": [
+  {
+   "name": "create-dataset",
+   "description": "Creates a container for a collection of data being ingested for analysis.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-schema",
+     "args": {}
+    },
+    {
+     "name": "--server-side-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-inference-scheduler",
+   "description": "Creates a scheduled inference.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-delay-offset-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--data-input-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-output-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-upload-frequency",
+     "args": {
+      "suggestions": [
+       "PT5M",
+       "PT10M",
+       "PT15M",
+       "PT30M",
+       "PT1H"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--inference-scheduler-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-side-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-label",
+   "description": "Creates a label for an event.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--equipment",
+     "args": {}
+    },
+    {
+     "name": "--fault-code",
+     "args": {}
+    },
+    {
+     "name": "--label-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notes",
+     "args": {}
+    },
+    {
+     "name": "--rating",
+     "args": {
+      "suggestions": [
+       "ANOMALY",
+       "NO_ANOMALY",
+       "NEUTRAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-label-group",
+   "description": "Creates a group of labels.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--fault-codes",
+     "args": {}
+    },
+    {
+     "name": "--label-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-model",
+   "description": "Creates a machine learning model for data inference.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-pre-processing-configuration",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--dataset-schema",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-data-end-time",
+     "args": {}
+    },
+    {
+     "name": "--evaluation-data-start-time",
+     "args": {}
+    },
+    {
+     "name": "--labels-input-configuration",
+     "args": {}
+    },
+    {
+     "name": "--model-diagnostics-output-configuration",
+     "args": {}
+    },
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--off-condition",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--server-side-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--training-data-end-time",
+     "args": {}
+    },
+    {
+     "name": "--training-data-start-time",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-retraining-scheduler",
+   "description": "Creates a retraining scheduler on the specified model.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--lookback-window",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--promote-mode",
+     "args": {
+      "suggestions": [
+       "MANAGED",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--retraining-frequency",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retraining-start-date",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset",
+   "description": "Deletes a dataset and associated artifacts.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-inference-scheduler",
+   "description": "Deletes an inference scheduler that has been set up.",
+   "options": [
+    {
+     "name": "--inference-scheduler-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-label",
+   "description": "Deletes a label.",
+   "options": [
+    {
+     "name": "--label-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--label-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-label-group",
+   "description": "Deletes a group of labels.",
+   "options": [
+    {
+     "name": "--label-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-model",
+   "description": "Deletes a machine learning model currently available for Amazon Lookout for Equipment.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-resource-policy",
+   "description": "Deletes the resource policy attached to the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-retraining-scheduler",
+   "description": "Deletes a retraining scheduler from a model.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-data-ingestion-job",
+   "description": "Provides information on a specific data ingestion job such as creation time, dataset ARN, and status.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset",
+   "description": "Provides a JSON description of the data in each time series dataset, including names, column names, and data types.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-inference-scheduler",
+   "description": "Specifies information about the inference scheduler being used, including name, model, status, and associated metadata",
+   "options": [
+    {
+     "name": "--inference-scheduler-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-label",
+   "description": "Returns the name of the label.",
+   "options": [
+    {
+     "name": "--label-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--label-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-label-group",
+   "description": "Returns information about the label group.",
+   "options": [
+    {
+     "name": "--label-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-model",
+   "description": "Provides a JSON containing the overall information about a specific machine learning model, including model name and ARN, dataset, training and evaluation information, status, and so on.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-model-version",
+   "description": "Retrieves information about a specific machine learning model version.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-resource-policy",
+   "description": "Provides the details of a resource policy attached to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-retraining-scheduler",
+   "description": "Provides a description of the retraining scheduler, including information such as the model name and retraining parameters.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-dataset",
+   "description": "Imports a dataset.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {}
+    },
+    {
+     "name": "--server-side-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--source-dataset-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-model-version",
+   "description": "Imports a model that has been trained successfully.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--inference-data-import-strategy",
+     "args": {
+      "suggestions": [
+       "NO_IMPORT",
+       "ADD_WHEN_EMPTY",
+       "OVERWRITE"
+      ]
+     }
+    },
+    {
+     "name": "--labels-input-configuration",
+     "args": {}
+    },
+    {
+     "name": "--model-name",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--server-side-kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--source-model-version-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-ingestion-jobs",
+   "description": "Provides a list of all data ingestion jobs, including dataset name and ARN, S3 location of the input data, status, and so on.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "SUCCESS",
+       "FAILED",
+       "IMPORT_IN_PROGRESS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-datasets",
+   "description": "Lists all datasets currently available in your account, filtering on the dataset name.",
+   "options": [
+    {
+     "name": "--dataset-name-begins-with",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-inference-events",
+   "description": "Lists all inference events that have been found for the specified inference scheduler.",
+   "options": [
+    {
+     "name": "--inference-scheduler-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--interval-end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--interval-start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-inference-executions",
+   "description": "Lists all inference executions that have been performed by the specified inference scheduler.",
+   "options": [
+    {
+     "name": "--data-end-time-before",
+     "args": {}
+    },
+    {
+     "name": "--data-start-time-after",
+     "args": {}
+    },
+    {
+     "name": "--inference-scheduler-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "SUCCESS",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-inference-schedulers",
+   "description": "Retrieves a list of all inference schedulers currently available for your account.",
+   "options": [
+    {
+     "name": "--inference-scheduler-name-begins-with",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--model-name",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "RUNNING",
+       "STOPPING",
+       "STOPPED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-label-groups",
+   "description": "Returns a list of the label groups.",
+   "options": [
+    {
+     "name": "--label-group-name-begins-with",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-labels",
+   "description": "Provides a list of labels.",
+   "options": [
+    {
+     "name": "--equipment",
+     "args": {}
+    },
+    {
+     "name": "--fault-code",
+     "args": {}
+    },
+    {
+     "name": "--interval-end-time",
+     "args": {}
+    },
+    {
+     "name": "--interval-start-time",
+     "args": {}
+    },
+    {
+     "name": "--label-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-model-versions",
+   "description": "Generates a list of all model versions for a given model, including the model version, model version ARN, and status.",
+   "options": [
+    {
+     "name": "--created-at-end-time",
+     "args": {}
+    },
+    {
+     "name": "--created-at-start-time",
+     "args": {}
+    },
+    {
+     "name": "--max-model-version",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--min-model-version",
+     "args": {}
+    },
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--source-type",
+     "args": {
+      "suggestions": [
+       "TRAINING",
+       "RETRAINING",
+       "IMPORT"
+      ]
+     }
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "SUCCESS",
+       "FAILED",
+       "IMPORT_IN_PROGRESS",
+       "CANCELED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-models",
+   "description": "Generates a list of all models in the account, including model name and ARN, dataset, and status.",
+   "options": [
+    {
+     "name": "--dataset-name-begins-with",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--model-name-begins-with",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "SUCCESS",
+       "FAILED",
+       "IMPORT_IN_PROGRESS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-retraining-schedulers",
+   "description": "Lists all retraining schedulers in your account, filtering by model name prefix and status.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--model-name-begins-with",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "RUNNING",
+       "STOPPING",
+       "STOPPED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-sensor-statistics",
+   "description": "Lists statistics about the data collected for each of the sensors that have been successfully ingested in the particular dataset.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-job-id",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all the tags for a specified resource, including key and value.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-resource-policy",
+   "description": "Creates a resource control policy for a given resource.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--policy-revision-id",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-policy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-data-ingestion-job",
+   "description": "Starts a data ingestion job.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ingestion-input-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-inference-scheduler",
+   "description": "Starts an inference scheduler.",
+   "options": [
+    {
+     "name": "--inference-scheduler-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-retraining-scheduler",
+   "description": "Starts a retraining scheduler.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-inference-scheduler",
+   "description": "Stops an inference scheduler.",
+   "options": [
+    {
+     "name": "--inference-scheduler-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-retraining-scheduler",
+   "description": "Stops a retraining scheduler.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates a given tag to a resource in your account.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a specific tag from a given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-active-model-version",
+   "description": "Sets the active model version for a given machine learning model.",
+   "options": [
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-inference-scheduler",
+   "description": "Updates an inference scheduler.",
+   "options": [
+    {
+     "name": "--data-delay-offset-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--data-input-configuration",
+     "args": {}
+    },
+    {
+     "name": "--data-output-configuration",
+     "args": {}
+    },
+    {
+     "name": "--data-upload-frequency",
+     "args": {
+      "suggestions": [
+       "PT5M",
+       "PT10M",
+       "PT15M",
+       "PT30M",
+       "PT1H"
+      ]
+     }
+    },
+    {
+     "name": "--inference-scheduler-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-label-group",
+   "description": "Updates the label group.",
+   "options": [
+    {
+     "name": "--fault-codes",
+     "args": {}
+    },
+    {
+     "name": "--label-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-model",
+   "description": "Updates a model in the account.",
+   "options": [
+    {
+     "name": "--labels-input-configuration",
+     "args": {}
+    },
+    {
+     "name": "--model-diagnostics-output-configuration",
+     "args": {}
+    },
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-retraining-scheduler",
+   "description": "Updates a retraining scheduler.",
+   "options": [
+    {
+     "name": "--lookback-window",
+     "args": {}
+    },
+    {
+     "name": "--model-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--promote-mode",
+     "args": {
+      "suggestions": [
+       "MANAGED",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--retraining-frequency",
+     "args": {}
+    },
+    {
+     "name": "--retraining-start-date",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

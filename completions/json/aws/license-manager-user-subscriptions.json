@@ -1,0 +1,393 @@
+{
+ "name": "license-manager-user-subscriptions",
+ "description": "With License Manager, you can create user-based subscriptions to utilize licensed software with a per user subscription fee on Amazon EC2 instances.",
+ "subcommands": [
+  {
+   "name": "associate-user",
+   "description": "Associates the user to an EC2 instance to utilize user-based subscriptions.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-license-server-endpoint",
+   "description": "Creates a network endpoint for the Remote Desktop Services (RDS) license server.",
+   "options": [
+    {
+     "name": "--identity-provider-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--license-server-settings",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-license-server-endpoint",
+   "description": "Deletes a LicenseServerEndpoint resource.",
+   "options": [
+    {
+     "name": "--license-server-endpoint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--server-type",
+     "args": {
+      "suggestions": [
+       "RDS_SAL"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deregister-identity-provider",
+   "description": "Deregisters the Active Directory identity provider from License Manager user-based subscriptions.",
+   "options": [
+    {
+     "name": "--identity-provider",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-arn",
+     "args": {}
+    },
+    {
+     "name": "--product",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "disassociate-user",
+   "description": "Disassociates the user from an EC2 instance providing user-based subscriptions.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider",
+     "args": {}
+    },
+    {
+     "name": "--instance-id",
+     "args": {}
+    },
+    {
+     "name": "--instance-user-arn",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-identity-providers",
+   "description": "Lists the Active Directory identity providers for user-based subscriptions.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-instances",
+   "description": "Lists the EC2 instances providing user-based subscriptions.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-license-server-endpoints",
+   "description": "List the Remote Desktop Services (RDS) License Server endpoints",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-product-subscriptions",
+   "description": "Lists the user-based subscription products available from an identity provider.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--product",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns the list of tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-user-associations",
+   "description": "Lists user associations for an identity provider.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-identity-provider",
+   "description": "Registers an identity provider for user-based subscriptions.",
+   "options": [
+    {
+     "name": "--identity-provider",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-product-subscription",
+   "description": "Starts a product subscription for a user with the specified identity provider.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--product",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-product-subscription",
+   "description": "Stops a product subscription for a user with the specified identity provider.",
+   "options": [
+    {
+     "name": "--domain",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider",
+     "args": {}
+    },
+    {
+     "name": "--product",
+     "args": {}
+    },
+    {
+     "name": "--product-user-arn",
+     "args": {}
+    },
+    {
+     "name": "--username",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds tags to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-identity-provider-settings",
+   "description": "Updates additional product configuration settings for the registered identity provider.",
+   "options": [
+    {
+     "name": "--identity-provider",
+     "args": {}
+    },
+    {
+     "name": "--identity-provider-arn",
+     "args": {}
+    },
+    {
+     "name": "--product",
+     "args": {}
+    },
+    {
+     "name": "--update-settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

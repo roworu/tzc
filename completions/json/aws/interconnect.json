@@ -1,0 +1,307 @@
+{
+ "name": "interconnect",
+ "description": "Provides managed connections between your AWS network resources and select partner network resources.",
+ "subcommands": [
+  {
+   "name": "accept-connection-proposal",
+   "description": "Accepts a connection proposal which was generated at a supported partner's portal.",
+   "options": [
+    {
+     "name": "--activation-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--attach-point",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-connection",
+   "description": "Initiates the process to create a Connection across the specified Environment.",
+   "options": [
+    {
+     "name": "--attach-point",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--bandwidth",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--remote-account",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-connection",
+   "description": "Deletes an existing Connection with the supplied identifier.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-connection-proposal",
+   "description": "Describes the details of a connection proposal generated at a partner's portal.",
+   "options": [
+    {
+     "name": "--activation-key",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-connection",
+   "description": "Describes the current state of a Connection resource as specified by the identifier.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-environment",
+   "description": "Describes a specific Environment",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-attach-points",
+   "description": "Lists all Attach Points the caller has access to that are valid for the specified Environment.",
+   "options": [
+    {
+     "name": "--environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-connections",
+   "description": "Lists all connection objects to which the caller has access.",
+   "options": [
+    {
+     "name": "--attach-point",
+     "args": {}
+    },
+    {
+     "name": "--environment-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--provider",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "available",
+       "requested",
+       "pending",
+       "down",
+       "deleting",
+       "deleted",
+       "failed",
+       "updating"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-environments",
+   "description": "Lists all of the environments that can produce connections that will land in the called AWS region.",
+   "options": [
+    {
+     "name": "--location",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--provider",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List all current tags on the specified resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Add new tags to the specified resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the specified resource.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-connection",
+   "description": "Modifies an existing connection.",
+   "options": [
+    {
+     "name": "--bandwidth",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "connection-available",
+     "description": "Wait until JMESPath query connection.state returns available when polling with ``get-connection``.",
+     "options": [
+      {
+       "name": "--identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "connection-deleted",
+     "description": "Wait until JMESPath query connection.state returns deleted when polling with ``get-connection``.",
+     "options": [
+      {
+       "name": "--identifier",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

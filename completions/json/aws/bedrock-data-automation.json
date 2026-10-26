@@ -1,0 +1,727 @@
+{
+ "name": "bedrock-data-automation",
+ "description": "Amazon Bedrock Data Automation BuildTime",
+ "subcommands": [
+  {
+   "name": "copy-blueprint-stage",
+   "description": "Copies a Blueprint from one stage to another",
+   "options": [
+    {
+     "name": "--blueprint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--source-stage",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--target-stage",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-blueprint",
+   "description": "Creates an Amazon Bedrock Data Automation Blueprint",
+   "options": [
+    {
+     "name": "--blueprint-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--blueprint-stage",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE"
+      ]
+     }
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--schema",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "DOCUMENT",
+       "IMAGE",
+       "AUDIO",
+       "VIDEO"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-blueprint-version",
+   "description": "Creates a new version of an existing Amazon Bedrock Data Automation Blueprint",
+   "options": [
+    {
+     "name": "--blueprint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-automation-library",
+   "description": "Creates an Amazon Bedrock Data Automation Library",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--library-description",
+     "args": {}
+    },
+    {
+     "name": "--library-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-data-automation-project",
+   "description": "Creates an Amazon Bedrock Data Automation Project",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--custom-output-configuration",
+     "args": {}
+    },
+    {
+     "name": "--data-automation-library-configuration",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--override-configuration",
+     "args": {}
+    },
+    {
+     "name": "--project-description",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-stage",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE"
+      ]
+     }
+    },
+    {
+     "name": "--project-type",
+     "args": {
+      "suggestions": [
+       "ASYNC",
+       "SYNC"
+      ]
+     }
+    },
+    {
+     "name": "--standard-output-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-blueprint",
+   "description": "Deletes an existing Amazon Bedrock Data Automation Blueprint",
+   "options": [
+    {
+     "name": "--blueprint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--blueprint-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-data-automation-library",
+   "description": "Deletes an existing Amazon Bedrock Data Automation Library",
+   "options": [
+    {
+     "name": "--library-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-automation-project",
+   "description": "Deletes an existing Amazon Bedrock Data Automation Project",
+   "options": [
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-blueprint",
+   "description": "Gets an existing Amazon Bedrock Data Automation Blueprint",
+   "options": [
+    {
+     "name": "--blueprint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--blueprint-stage",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE"
+      ]
+     }
+    },
+    {
+     "name": "--blueprint-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-blueprint-optimization-status",
+   "description": "API used to get blueprint optimization status.",
+   "options": [
+    {
+     "name": "--invocation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-automation-library",
+   "description": "Gets an existing Amazon Bedrock Data Automation Library",
+   "options": [
+    {
+     "name": "--library-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-automation-library-entity",
+   "description": "Gets an existing entity based on entity type from the library",
+   "options": [
+    {
+     "name": "--entity-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "VOCABULARY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--library-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-automation-library-ingestion-job",
+   "description": "API used to get status of data automation library ingestion job",
+   "options": [
+    {
+     "name": "--job-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--library-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-automation-project",
+   "description": "Gets an existing Amazon Bedrock Data Automation Project",
+   "options": [
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-stage",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "invoke-blueprint-optimization-async",
+   "description": "Invoke an async job to perform Blueprint Optimization",
+   "options": [
+    {
+     "name": "--blueprint",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-automation-profile-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--output-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--samples",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "invoke-data-automation-library-ingestion-job",
+   "description": "Async API: Invoke data automation library ingestion job",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "VOCABULARY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--input-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--library-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-configuration",
+     "args": {}
+    },
+    {
+     "name": "--operation-type",
+     "args": {
+      "suggestions": [
+       "UPSERT",
+       "DELETE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--output-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-blueprints",
+   "description": "Lists all existing Amazon Bedrock Data Automation Blueprints",
+   "options": [
+    {
+     "name": "--blueprint-arn",
+     "args": {}
+    },
+    {
+     "name": "--blueprint-stage-filter",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-filter",
+     "args": {}
+    },
+    {
+     "name": "--resource-owner",
+     "args": {
+      "suggestions": [
+       "SERVICE",
+       "ACCOUNT"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-automation-libraries",
+   "description": "Lists all existing Amazon Bedrock Data Automation Libraries",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-automation-library-entities",
+   "description": "Lists all stored entities in the library",
+   "options": [
+    {
+     "name": "--entity-type",
+     "args": {
+      "suggestions": [
+       "VOCABULARY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--library-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-automation-library-ingestion-jobs",
+   "description": "Lists all data automation library ingestion jobs",
+   "options": [
+    {
+     "name": "--library-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-automation-projects",
+   "description": "Lists all existing Amazon Bedrock Data Automation Projects",
+   "options": [
+    {
+     "name": "--blueprint-filter",
+     "args": {}
+    },
+    {
+     "name": "--library-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-stage-filter",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE",
+       "ALL"
+      ]
+     }
+    },
+    {
+     "name": "--resource-owner",
+     "args": {
+      "suggestions": [
+       "SERVICE",
+       "ACCOUNT"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List tags for an Amazon Bedrock Data Automation resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tag an Amazon Bedrock Data Automation resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Untag an Amazon Bedrock Data Automation resource",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-blueprint",
+   "description": "Updates an existing Amazon Bedrock Data Automation Blueprint",
+   "options": [
+    {
+     "name": "--blueprint-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--blueprint-stage",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE"
+      ]
+     }
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--schema",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-automation-library",
+   "description": "Updates an existing Amazon Bedrock Data Automation Library",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--library-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--library-description",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-data-automation-project",
+   "description": "Updates an existing Amazon Bedrock Data Automation Project",
+   "options": [
+    {
+     "name": "--custom-output-configuration",
+     "args": {}
+    },
+    {
+     "name": "--data-automation-library-configuration",
+     "args": {}
+    },
+    {
+     "name": "--encryption-configuration",
+     "args": {}
+    },
+    {
+     "name": "--override-configuration",
+     "args": {}
+    },
+    {
+     "name": "--project-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-description",
+     "args": {}
+    },
+    {
+     "name": "--project-stage",
+     "args": {
+      "suggestions": [
+       "DEVELOPMENT",
+       "LIVE"
+      ]
+     }
+    },
+    {
+     "name": "--standard-output-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

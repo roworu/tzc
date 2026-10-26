@@ -1,0 +1,798 @@
+{
+ "name": "ivs",
+ "description": "Introduction The Amazon Interactive Video Service (IVS) API is REST compatible, using a standard HTTP API and an Amazon Web Services EventBridge event stream for responses.",
+ "subcommands": [
+  {
+   "name": "batch-get-channel",
+   "description": "Performs GetChannel on multiple ARNs simultaneously.",
+   "options": [
+    {
+     "name": "--arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-stream-key",
+   "description": "Performs GetStreamKey on multiple ARNs simultaneously.",
+   "options": [
+    {
+     "name": "--arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-start-viewer-session-revocation",
+   "description": "Performs StartViewerSessionRevocation on multiple channel ARN and viewer ID pairs simultaneously.",
+   "options": [
+    {
+     "name": "--viewer-sessions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-ad-configuration",
+   "description": "Creates a new ad configuration to be used for server-side ad insertion.",
+   "options": [
+    {
+     "name": "--media-tailor-playback-configurations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--post-roll-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-channel",
+   "description": "Creates a new channel and an associated stream key to start streaming.",
+   "options": [
+    {
+     "name": "--ad-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--authorized"
+    },
+    {
+     "name": "--container-format",
+     "args": {
+      "suggestions": [
+       "TS",
+       "FRAGMENTED_MP4"
+      ]
+     }
+    },
+    {
+     "name": "--insecure-ingest"
+    },
+    {
+     "name": "--latency-mode",
+     "args": {
+      "suggestions": [
+       "NORMAL",
+       "LOW"
+      ]
+     }
+    },
+    {
+     "name": "--multitrack-input-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-authorized"
+    },
+    {
+     "name": "--no-insecure-ingest"
+    },
+    {
+     "name": "--playback-restriction-policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--preset",
+     "args": {
+      "suggestions": [
+       "HIGHER_BANDWIDTH_DELIVERY",
+       "CONSTRAINED_BANDWIDTH_DELIVERY"
+      ]
+     }
+    },
+    {
+     "name": "--recording-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "STANDARD",
+       "ADVANCED_SD",
+       "ADVANCED_HD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-playback-restriction-policy",
+   "description": "Creates a new playback restriction policy, for constraining playback by countries and/or origins.",
+   "options": [
+    {
+     "name": "--allowed-countries",
+     "args": {}
+    },
+    {
+     "name": "--allowed-origins",
+     "args": {}
+    },
+    {
+     "name": "--enable-strict-origin-enforcement"
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-strict-origin-enforcement"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-recording-configuration",
+   "description": "Creates a new recording configuration, used to enable recording to Amazon S3.",
+   "options": [
+    {
+     "name": "--destination-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--recording-reconnect-window-seconds",
+     "args": {}
+    },
+    {
+     "name": "--rendition-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--thumbnail-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-stream-key",
+   "description": "Creates a stream key, used to initiate a stream, for the specified channel ARN.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-ad-configuration",
+   "description": "Deletes the specified ad configuration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-channel",
+   "description": "Deletes the specified channel and its associated stream keys.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-playback-key-pair",
+   "description": "Deletes a specified authorization key pair.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-playback-restriction-policy",
+   "description": "Deletes the specified playback restriction policy.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-recording-configuration",
+   "description": "Deletes the recording configuration for the specified ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-stream-key",
+   "description": "Deletes the stream key for the specified ARN, so it can no longer be used to stream.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-ad-configuration",
+   "description": "Gets the ad configuration represented by the specified ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-channel",
+   "description": "Gets the channel configuration for the specified channel ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-playback-key-pair",
+   "description": "Gets a specified playback authorization key pair and returns the arn and fingerprint.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-playback-restriction-policy",
+   "description": "Gets the specified playback restriction policy.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-recording-configuration",
+   "description": "Gets the recording configuration for the specified ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-stream",
+   "description": "Gets information about the active (live) stream on a specified channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-stream-key",
+   "description": "Gets stream-key information for a specified ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-stream-session",
+   "description": "Gets metadata on a specified stream.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "import-playback-key-pair",
+   "description": "Imports the public portion of a new key pair and returns its arn and fingerprint.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--public-key-material",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "insert-ad-break",
+   "description": "Inserts an ad marker in the playlist for the specified channel and duration using the ad configuration associated with the channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--duration-seconds",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-ad-configurations",
+   "description": "Gets summary information about all ad configurations in your account, in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-channels",
+   "description": "Gets summary information about all channels in your account, in the Amazon Web Services region where the API request is processed.",
+   "options": [
+    {
+     "name": "--filter-by-ad-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--filter-by-name",
+     "args": {}
+    },
+    {
+     "name": "--filter-by-playback-restriction-policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--filter-by-recording-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-playback-key-pairs",
+   "description": "Gets summary information about playback key pairs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-playback-restriction-policies",
+   "description": "Gets summary information about playback restriction policies.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recording-configurations",
+   "description": "Gets summary information about all recording configurations in your account, in the Amazon Web Services region where the API request is processed.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stream-keys",
+   "description": "Gets summary information about stream keys for the specified channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-stream-sessions",
+   "description": "Gets a summary of current and previous streams for a specified channel in your account, in the AWS region where the API request is processed.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-streams",
+   "description": "Gets summary information about live streams in your account, in the Amazon Web Services region where the API request is processed.",
+   "options": [
+    {
+     "name": "--filter-by",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Gets information about Amazon Web Services tags for the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-metadata",
+   "description": "Inserts metadata into the active stream of the specified channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-viewer-session-revocation",
+   "description": "Starts the process of revoking the viewer session associated with a specified channel ARN and viewer ID.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--viewer-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--viewer-session-versions-less-than-or-equal-to",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-stream",
+   "description": "Disconnects the incoming RTMPS stream for the specified channel.",
+   "options": [
+    {
+     "name": "--channel-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for the Amazon Web Services resource with the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from the resource with the specified ARN.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-ad-configuration",
+   "description": "Updates a specified ad configuration.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--media-tailor-playback-configurations",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--post-roll-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-channel",
+   "description": "Updates a channel's configuration.",
+   "options": [
+    {
+     "name": "--ad-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorized"
+    },
+    {
+     "name": "--container-format",
+     "args": {
+      "suggestions": [
+       "TS",
+       "FRAGMENTED_MP4"
+      ]
+     }
+    },
+    {
+     "name": "--insecure-ingest"
+    },
+    {
+     "name": "--latency-mode",
+     "args": {
+      "suggestions": [
+       "NORMAL",
+       "LOW"
+      ]
+     }
+    },
+    {
+     "name": "--multitrack-input-configuration",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-authorized"
+    },
+    {
+     "name": "--no-insecure-ingest"
+    },
+    {
+     "name": "--playback-restriction-policy-arn",
+     "args": {}
+    },
+    {
+     "name": "--preset",
+     "args": {
+      "suggestions": [
+       "HIGHER_BANDWIDTH_DELIVERY",
+       "CONSTRAINED_BANDWIDTH_DELIVERY"
+      ]
+     }
+    },
+    {
+     "name": "--recording-configuration-arn",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "BASIC",
+       "STANDARD",
+       "ADVANCED_SD",
+       "ADVANCED_HD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-playback-restriction-policy",
+   "description": "Updates a specified playback restriction policy.",
+   "options": [
+    {
+     "name": "--allowed-countries",
+     "args": {}
+    },
+    {
+     "name": "--allowed-origins",
+     "args": {}
+    },
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-strict-origin-enforcement"
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-strict-origin-enforcement"
+    }
+   ]
+  }
+ ]
+}

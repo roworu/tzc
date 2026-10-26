@@ -1,0 +1,323 @@
+{
+ "name": "firehose",
+ "description": "Amazon Data Firehose Amazon Data Firehose was previously known as Amazon Kinesis Data Firehose.",
+ "subcommands": [
+  {
+   "name": "create-delivery-stream",
+   "description": "Creates a Firehose stream.",
+   "options": [
+    {
+     "name": "--amazon-open-search-serverless-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--amazonopensearchservice-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--database-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--delivery-stream-encryption-configuration-input",
+     "args": {}
+    },
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delivery-stream-type",
+     "args": {
+      "suggestions": [
+       "DirectPut",
+       "KinesisStreamAsSource",
+       "MSKAsSource",
+       "DatabaseAsSource"
+      ]
+     }
+    },
+    {
+     "name": "--direct-put-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--elasticsearch-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--extended-s3-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--http-endpoint-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--iceberg-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--kinesis-stream-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--msk-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--redshift-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--s3-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--snowflake-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--splunk-destination-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-delivery-stream",
+   "description": "Deletes a Firehose stream and its data.",
+   "options": [
+    {
+     "name": "--allow-force-delete"
+    },
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-allow-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "describe-delivery-stream",
+   "description": "Describes the specified Firehose stream and its status.",
+   "options": [
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exclusive-start-destination-id",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-delivery-streams",
+   "description": "Lists your Firehose streams in alphabetical order of their names.",
+   "options": [
+    {
+     "name": "--delivery-stream-type",
+     "args": {
+      "suggestions": [
+       "DirectPut",
+       "KinesisStreamAsSource",
+       "MSKAsSource",
+       "DatabaseAsSource"
+      ]
+     }
+    },
+    {
+     "name": "--exclusive-start-delivery-stream-name",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-delivery-stream",
+   "description": "Lists the tags for the specified Firehose stream.",
+   "options": [
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--exclusive-start-tag-key",
+     "args": {}
+    },
+    {
+     "name": "--limit",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-record",
+   "description": "Writes a single data record into an Firehose stream.",
+   "options": [
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--record",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-record-batch",
+   "description": "Writes multiple data records into a Firehose stream in a single call, which can achieve higher throughput per producer than when writing single records.",
+   "options": [
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--records",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-delivery-stream-encryption",
+   "description": "Enables server-side encryption (SSE) for the Firehose stream.",
+   "options": [
+    {
+     "name": "--delivery-stream-encryption-configuration-input",
+     "args": {}
+    },
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-delivery-stream-encryption",
+   "description": "Disables server-side encryption (SSE) for the Firehose stream.",
+   "options": [
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-delivery-stream",
+   "description": "Adds or updates tags for the specified Firehose stream.",
+   "options": [
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-delivery-stream",
+   "description": "Removes tags from the specified Firehose stream.",
+   "options": [
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-destination",
+   "description": "Updates the specified destination of the specified Firehose stream.",
+   "options": [
+    {
+     "name": "--amazon-open-search-serverless-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--amazonopensearchservice-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--current-delivery-stream-version-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--delivery-stream-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--elasticsearch-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--extended-s3-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--http-endpoint-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--iceberg-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--redshift-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--s3-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--snowflake-destination-update",
+     "args": {}
+    },
+    {
+     "name": "--splunk-destination-update",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

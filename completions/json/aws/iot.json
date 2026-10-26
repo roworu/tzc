@@ -1,0 +1,6162 @@
+{
+ "name": "iot",
+ "description": "IoT IoT provides secure, bi-directional communication between Internet-connected devices (such as sensors, actuators, embedded devices, or smart appliances) and the Amazon Web Services cloud.",
+ "subcommands": [
+  {
+   "name": "accept-certificate-transfer",
+   "description": "Accepts a pending certificate transfer.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-set-as-active"
+    },
+    {
+     "name": "--set-as-active"
+    }
+   ]
+  },
+  {
+   "name": "add-thing-to-billing-group",
+   "description": "Adds a thing to a billing group.",
+   "options": [
+    {
+     "name": "--billing-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--billing-group-name",
+     "args": {}
+    },
+    {
+     "name": "--thing-arn",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "add-thing-to-thing-group",
+   "description": "Adds a thing to a thing group.",
+   "options": [
+    {
+     "name": "--no-override-dynamic-groups"
+    },
+    {
+     "name": "--override-dynamic-groups"
+    },
+    {
+     "name": "--thing-arn",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "associate-sbom-with-package-version",
+   "description": "Associates the selected software bill of materials (SBOM) with a specific software package version.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sbom",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "associate-targets-with-job",
+   "description": "Associates a group with a continuous job.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-id",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-policy",
+   "description": "Attaches the specified policy to the specified principal (certificate or other credential).",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-principal-policy",
+   "description": "Attaches the specified policy to the specified principal (certificate or other credential).",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-security-profile",
+   "description": "Associates a Device Defender security profile with a thing group or this account.",
+   "options": [
+    {
+     "name": "--security-profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-profile-target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "attach-thing-principal",
+   "description": "Attaches the specified principal to the specified thing.",
+   "options": [
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-principal-type",
+     "args": {
+      "suggestions": [
+       "EXCLUSIVE_THING",
+       "NON_EXCLUSIVE_THING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "cancel-audit-mitigation-actions-task",
+   "description": "Cancels a mitigation action task that is in progress.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-audit-task",
+   "description": "Cancels an audit that is in progress.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-certificate-transfer",
+   "description": "Cancels a pending transfer for the specified certificate.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-detect-mitigation-actions-task",
+   "description": "Cancels a Device Defender ML Detect mitigation action.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-job",
+   "description": "Cancels a job.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--reason-code",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-job-execution",
+   "description": "Cancels the execution of a job for a given thing.",
+   "options": [
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--status-details",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "clear-default-authorizer",
+   "description": "Clears the default authorizer."
+  },
+  {
+   "name": "confirm-topic-rule-destination",
+   "description": "Confirms a topic rule destination.",
+   "options": [
+    {
+     "name": "--confirmation-token",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-audit-suppression",
+   "description": "Creates a Device Defender audit suppression.",
+   "options": [
+    {
+     "name": "--check-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expiration-date",
+     "args": {}
+    },
+    {
+     "name": "--no-suppress-indefinitely"
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--suppress-indefinitely"
+    }
+   ]
+  },
+  {
+   "name": "create-authorizer",
+   "description": "Creates an authorizer.",
+   "options": [
+    {
+     "name": "--authorizer-function-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--authorizer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-caching-for-http"
+    },
+    {
+     "name": "--no-enable-caching-for-http"
+    },
+    {
+     "name": "--no-signing-disabled"
+    },
+    {
+     "name": "--signing-disabled"
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--token-key-name",
+     "args": {}
+    },
+    {
+     "name": "--token-signing-public-keys",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-billing-group",
+   "description": "Creates a billing group.",
+   "options": [
+    {
+     "name": "--billing-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-group-properties",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-certificate-from-csr",
+   "description": "Creates an X.509 certificate using the specified certificate signing request.",
+   "options": [
+    {
+     "name": "--certificate-pem-outfile",
+     "args": {}
+    },
+    {
+     "name": "--certificate-signing-request",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-set-as-active"
+    },
+    {
+     "name": "--set-as-active"
+    }
+   ]
+  },
+  {
+   "name": "create-certificate-provider",
+   "description": "Creates an Amazon Web Services IoT Core certificate provider.",
+   "options": [
+    {
+     "name": "--account-default-for-operations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--lambda-function-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-command",
+   "description": "Creates a command.",
+   "options": [
+    {
+     "name": "--command-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--mandatory-parameters",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {
+      "suggestions": [
+       "AWS-IoT",
+       "AWS-IoT-FleetWise"
+      ]
+     }
+    },
+    {
+     "name": "--payload",
+     "args": {}
+    },
+    {
+     "name": "--payload-template",
+     "args": {}
+    },
+    {
+     "name": "--preprocessor",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-custom-metric",
+   "description": "Use this API to define a Custom Metric published by your devices to Device Defender.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-type",
+     "args": {
+      "suggestions": [
+       "string-list",
+       "ip-address-list",
+       "number-list",
+       "number"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dimension",
+   "description": "Create a dimension that you can use to limit the scope of a metric used in a security profile for IoT Device Defender.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--string-values",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "TOPIC_FILTER"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-domain-configuration",
+   "description": "Creates a domain configuration.",
+   "options": [
+    {
+     "name": "--application-protocol",
+     "args": {
+      "suggestions": [
+       "SECURE_MQTT",
+       "MQTT_WSS",
+       "HTTPS",
+       "DEFAULT"
+      ]
+     }
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "CUSTOM_AUTH_X509",
+       "CUSTOM_AUTH",
+       "AWS_X509",
+       "AWS_SIGV4",
+       "DEFAULT"
+      ]
+     }
+    },
+    {
+     "name": "--authorizer-config",
+     "args": {}
+    },
+    {
+     "name": "--client-certificate-config",
+     "args": {}
+    },
+    {
+     "name": "--domain-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-name",
+     "args": {}
+    },
+    {
+     "name": "--server-certificate-arns",
+     "args": {}
+    },
+    {
+     "name": "--server-certificate-config",
+     "args": {}
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "DATA",
+       "CREDENTIAL_PROVIDER",
+       "JOBS"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tls-config",
+     "args": {}
+    },
+    {
+     "name": "--validation-certificate-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-dynamic-thing-group",
+   "description": "Creates a dynamic thing group.",
+   "options": [
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-version",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-group-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-fleet-metric",
+   "description": "Creates a fleet metric.",
+   "options": [
+    {
+     "name": "--aggregation-field",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--aggregation-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-version",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--unit",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-job",
+   "description": "Creates a job.",
+   "options": [
+    {
+     "name": "--abort-config",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--destination-package-versions",
+     "args": {}
+    },
+    {
+     "name": "--document",
+     "args": {}
+    },
+    {
+     "name": "--document-parameters",
+     "args": {}
+    },
+    {
+     "name": "--document-source",
+     "args": {}
+    },
+    {
+     "name": "--job-executions-retry-config",
+     "args": {}
+    },
+    {
+     "name": "--job-executions-rollout-config",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-template-arn",
+     "args": {}
+    },
+    {
+     "name": "--namespace-id",
+     "args": {}
+    },
+    {
+     "name": "--presigned-url-config",
+     "args": {}
+    },
+    {
+     "name": "--scheduling-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-selection",
+     "args": {
+      "suggestions": [
+       "CONTINUOUS",
+       "SNAPSHOT"
+      ]
+     }
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--timeout-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-job-template",
+   "description": "Creates a job template.",
+   "options": [
+    {
+     "name": "--abort-config",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--destination-package-versions",
+     "args": {}
+    },
+    {
+     "name": "--document",
+     "args": {}
+    },
+    {
+     "name": "--document-source",
+     "args": {}
+    },
+    {
+     "name": "--job-arn",
+     "args": {}
+    },
+    {
+     "name": "--job-executions-retry-config",
+     "args": {}
+    },
+    {
+     "name": "--job-executions-rollout-config",
+     "args": {}
+    },
+    {
+     "name": "--job-template-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--maintenance-windows",
+     "args": {}
+    },
+    {
+     "name": "--presigned-url-config",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-keys-and-certificate",
+   "description": "Creates a 2048-bit RSA key pair and issues an X.509 certificate using the issued public key.",
+   "options": [
+    {
+     "name": "--certificate-pem-outfile",
+     "args": {}
+    },
+    {
+     "name": "--no-set-as-active"
+    },
+    {
+     "name": "--private-key-outfile",
+     "args": {}
+    },
+    {
+     "name": "--public-key-outfile",
+     "args": {}
+    },
+    {
+     "name": "--set-as-active"
+    }
+   ]
+  },
+  {
+   "name": "create-mitigation-action",
+   "description": "Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask.",
+   "options": [
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-params",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-ota-update",
+   "description": "Creates an IoT OTA update on a target group of things or groups.",
+   "options": [
+    {
+     "name": "--additional-parameters",
+     "args": {}
+    },
+    {
+     "name": "--aws-job-abort-config",
+     "args": {}
+    },
+    {
+     "name": "--aws-job-executions-rollout-config",
+     "args": {}
+    },
+    {
+     "name": "--aws-job-presigned-url-config",
+     "args": {}
+    },
+    {
+     "name": "--aws-job-timeout-config",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--files",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ota-update-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protocols",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-selection",
+     "args": {
+      "suggestions": [
+       "CONTINUOUS",
+       "SNAPSHOT"
+      ]
+     }
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-package",
+   "description": "Creates an IoT software package that can be deployed to your fleet.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-package-version",
+   "description": "Creates a new version for an existing IoT software package.",
+   "options": [
+    {
+     "name": "--artifact",
+     "args": {}
+    },
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recipe",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--version-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-policy",
+   "description": "Creates an IoT policy.",
+   "options": [
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-policy-version",
+   "description": "Creates a new version of the specified IoT policy.",
+   "options": [
+    {
+     "name": "--no-set-as-default"
+    },
+    {
+     "name": "--policy-document",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--set-as-default"
+    }
+   ]
+  },
+  {
+   "name": "create-provisioning-claim",
+   "description": "Creates a provisioning claim.",
+   "options": [
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-provisioning-template",
+   "description": "Creates a provisioning template.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--pre-provisioning-hook",
+     "args": {}
+    },
+    {
+     "name": "--provisioning-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "FLEET_PROVISIONING",
+       "JITP"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "create-provisioning-template-version",
+   "description": "Creates a new version of a provisioning template.",
+   "options": [
+    {
+     "name": "--no-set-as-default"
+    },
+    {
+     "name": "--set-as-default"
+    },
+    {
+     "name": "--template-body",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-role-alias",
+   "description": "Creates a role alias.",
+   "options": [
+    {
+     "name": "--credential-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--role-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-scheduled-audit",
+   "description": "Creates a scheduled audit that is run at a specified time interval.",
+   "options": [
+    {
+     "name": "--day-of-month",
+     "args": {}
+    },
+    {
+     "name": "--day-of-week",
+     "args": {
+      "suggestions": [
+       "SUN",
+       "MON",
+       "TUE",
+       "WED",
+       "THU",
+       "FRI",
+       "SAT"
+      ]
+     }
+    },
+    {
+     "name": "--frequency",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "WEEKLY",
+       "BIWEEKLY",
+       "MONTHLY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--scheduled-audit-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-check-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-security-profile",
+   "description": "Creates a Device Defender security profile.",
+   "options": [
+    {
+     "name": "--additional-metrics-to-retain",
+     "args": {}
+    },
+    {
+     "name": "--additional-metrics-to-retain-v2",
+     "args": {}
+    },
+    {
+     "name": "--alert-targets",
+     "args": {}
+    },
+    {
+     "name": "--behaviors",
+     "args": {}
+    },
+    {
+     "name": "--metrics-export-config",
+     "args": {}
+    },
+    {
+     "name": "--security-profile-description",
+     "args": {}
+    },
+    {
+     "name": "--security-profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-stream",
+   "description": "Creates a stream for delivering one or more large files in chunks over MQTT.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--files",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stream-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-thing",
+   "description": "Creates a thing record in the registry.",
+   "options": [
+    {
+     "name": "--attribute-payload",
+     "args": {}
+    },
+    {
+     "name": "--billing-group-name",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-type-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-thing-group",
+   "description": "Create a thing group.",
+   "options": [
+    {
+     "name": "--parent-group-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-group-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-thing-type",
+   "description": "Creates a new thing type.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--thing-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-type-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-topic-rule",
+   "description": "Creates a rule.",
+   "options": [
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--topic-rule-payload",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-topic-rule-destination",
+   "description": "Creates a topic rule destination.",
+   "options": [
+    {
+     "name": "--destination-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-account-audit-configuration",
+   "description": "Restores the default settings for Device Defender audits for this account.",
+   "options": [
+    {
+     "name": "--delete-scheduled-audits"
+    },
+    {
+     "name": "--no-delete-scheduled-audits"
+    }
+   ]
+  },
+  {
+   "name": "delete-audit-suppression",
+   "description": "Deletes a Device Defender audit suppression.",
+   "options": [
+    {
+     "name": "--check-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-authorizer",
+   "description": "Deletes an authorizer.",
+   "options": [
+    {
+     "name": "--authorizer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-billing-group",
+   "description": "Deletes the billing group.",
+   "options": [
+    {
+     "name": "--billing-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-ca-certificate",
+   "description": "Deletes a registered CA certificate.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-certificate",
+   "description": "Deletes the specified certificate.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--no-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "delete-certificate-provider",
+   "description": "Deletes a certificate provider.",
+   "options": [
+    {
+     "name": "--certificate-provider-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-command",
+   "description": "Delete a command resource.",
+   "options": [
+    {
+     "name": "--command-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-command-execution",
+   "description": "Delete a command execution.",
+   "options": [
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-custom-metric",
+   "description": "Deletes a Device Defender detect custom metric.",
+   "options": [
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dimension",
+   "description": "Removes the specified dimension from your Amazon Web Services accounts.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-domain-configuration",
+   "description": "Deletes the specified domain configuration.",
+   "options": [
+    {
+     "name": "--domain-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dynamic-thing-group",
+   "description": "Deletes a dynamic thing group.",
+   "options": [
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-fleet-metric",
+   "description": "Deletes the specified fleet metric.",
+   "options": [
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-job",
+   "description": "Deletes a job and its related job executions.",
+   "options": [
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-id",
+     "args": {}
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "delete-job-execution",
+   "description": "Deletes a job execution.",
+   "options": [
+    {
+     "name": "--execution-number",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-id",
+     "args": {}
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-job-template",
+   "description": "Deletes the specified job template.",
+   "options": [
+    {
+     "name": "--job-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-mitigation-action",
+   "description": "Deletes a defined mitigation action from your Amazon Web Services accounts.",
+   "options": [
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ota-update",
+   "description": "Delete an OTA update.",
+   "options": [
+    {
+     "name": "--delete-stream"
+    },
+    {
+     "name": "--force-delete-aws-job"
+    },
+    {
+     "name": "--no-delete-stream"
+    },
+    {
+     "name": "--no-force-delete-aws-job"
+    },
+    {
+     "name": "--ota-update-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-package",
+   "description": "Deletes a specific version from a software package.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-package-version",
+   "description": "Deletes a specific version from a software package.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy",
+   "description": "Deletes the specified policy.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-policy-version",
+   "description": "Deletes the specified version of the specified policy.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-provisioning-template",
+   "description": "Deletes a provisioning template.",
+   "options": [
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-provisioning-template-version",
+   "description": "Deletes a provisioning template version.",
+   "options": [
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-registration-code",
+   "description": "Deletes a CA certificate registration code."
+  },
+  {
+   "name": "delete-role-alias",
+   "description": "Deletes a role alias Requires permission to access the DeleteRoleAlias action.",
+   "options": [
+    {
+     "name": "--role-alias",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-scheduled-audit",
+   "description": "Deletes a scheduled audit.",
+   "options": [
+    {
+     "name": "--scheduled-audit-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-security-profile",
+   "description": "Deletes a Device Defender security profile.",
+   "options": [
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--security-profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-stream",
+   "description": "Deletes a stream.",
+   "options": [
+    {
+     "name": "--stream-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-thing",
+   "description": "Deletes the specified thing.",
+   "options": [
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-thing-group",
+   "description": "Deletes a thing group.",
+   "options": [
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-thing-type",
+   "description": "Deletes the specified thing type.",
+   "options": [
+    {
+     "name": "--thing-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-topic-rule",
+   "description": "Deletes the rule.",
+   "options": [
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-topic-rule-destination",
+   "description": "Deletes a topic rule destination.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-v2-logging-level",
+   "description": "Deletes a logging level.",
+   "options": [
+    {
+     "name": "--target-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "THING_GROUP",
+       "CLIENT_ID",
+       "SOURCE_IP",
+       "PRINCIPAL_ID"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deprecate-thing-type",
+   "description": "Deprecates a thing type.",
+   "options": [
+    {
+     "name": "--no-undo-deprecate"
+    },
+    {
+     "name": "--thing-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--undo-deprecate"
+    }
+   ]
+  },
+  {
+   "name": "describe-account-audit-configuration",
+   "description": "Gets information about the Device Defender audit settings for this account."
+  },
+  {
+   "name": "describe-audit-finding",
+   "description": "Gets information about a single audit finding.",
+   "options": [
+    {
+     "name": "--finding-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-audit-mitigation-actions-task",
+   "description": "Gets information about an audit mitigation task that is used to apply mitigation actions to a set of audit findings.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-audit-suppression",
+   "description": "Gets information about a Device Defender audit suppression.",
+   "options": [
+    {
+     "name": "--check-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-audit-task",
+   "description": "Gets information about a Device Defender audit.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-authorizer",
+   "description": "Describes an authorizer.",
+   "options": [
+    {
+     "name": "--authorizer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-billing-group",
+   "description": "Returns information about a billing group.",
+   "options": [
+    {
+     "name": "--billing-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-ca-certificate",
+   "description": "Describes a registered CA certificate.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-certificate",
+   "description": "Gets information about the specified certificate.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-certificate-provider",
+   "description": "Describes a certificate provider.",
+   "options": [
+    {
+     "name": "--certificate-provider-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-custom-metric",
+   "description": "Gets information about a Device Defender detect custom metric.",
+   "options": [
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-default-authorizer",
+   "description": "Describes the default authorizer."
+  },
+  {
+   "name": "describe-detect-mitigation-actions-task",
+   "description": "Gets information about a Device Defender ML Detect mitigation action.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dimension",
+   "description": "Provides details about a dimension that is defined in your Amazon Web Services accounts.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-domain-configuration",
+   "description": "Gets summary information about a domain configuration.",
+   "options": [
+    {
+     "name": "--domain-configuration-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-encryption-configuration",
+   "description": "Retrieves the encryption configuration for resources and data of your Amazon Web Services account in Amazon Web Services IoT Core."
+  },
+  {
+   "name": "describe-endpoint",
+   "description": "Returns or creates a unique endpoint specific to the Amazon Web Services account making the call.",
+   "options": [
+    {
+     "name": "--endpoint-type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-event-configurations",
+   "description": "Describes event configurations."
+  },
+  {
+   "name": "describe-fleet-metric",
+   "description": "Gets information about the specified fleet metric.",
+   "options": [
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-index",
+   "description": "Describes a search index.",
+   "options": [
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job",
+   "description": "Describes a job.",
+   "options": [
+    {
+     "name": "--before-substitution"
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-before-substitution"
+    }
+   ]
+  },
+  {
+   "name": "describe-job-execution",
+   "description": "Describes a job execution.",
+   "options": [
+    {
+     "name": "--execution-number",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job-template",
+   "description": "Returns information about a job template.",
+   "options": [
+    {
+     "name": "--job-template-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-managed-job-template",
+   "description": "View details of a managed job template.",
+   "options": [
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-mitigation-action",
+   "description": "Gets information about a mitigation action.",
+   "options": [
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-provisioning-template",
+   "description": "Returns information about a provisioning template.",
+   "options": [
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-provisioning-template-version",
+   "description": "Returns information about a provisioning template version.",
+   "options": [
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-role-alias",
+   "description": "Describes a role alias.",
+   "options": [
+    {
+     "name": "--role-alias",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-scheduled-audit",
+   "description": "Gets information about a scheduled audit.",
+   "options": [
+    {
+     "name": "--scheduled-audit-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-security-profile",
+   "description": "Gets information about a Device Defender security profile.",
+   "options": [
+    {
+     "name": "--security-profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-stream",
+   "description": "Gets information about a stream.",
+   "options": [
+    {
+     "name": "--stream-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-thing",
+   "description": "Gets information about the specified thing.",
+   "options": [
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-thing-group",
+   "description": "Describe a thing group.",
+   "options": [
+    {
+     "name": "--thing-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-thing-registration-task",
+   "description": "Describes a bulk thing provisioning task.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-thing-type",
+   "description": "Gets information about the specified thing type.",
+   "options": [
+    {
+     "name": "--thing-type-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-policy",
+   "description": "Detaches a policy from the specified target.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-principal-policy",
+   "description": "Removes the specified policy from the specified certificate.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-security-profile",
+   "description": "Disassociates a Device Defender security profile from a thing group or from this account.",
+   "options": [
+    {
+     "name": "--security-profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--security-profile-target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "detach-thing-principal",
+   "description": "Detaches the specified principal from the specified thing.",
+   "options": [
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-topic-rule",
+   "description": "Disables the rule.",
+   "options": [
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-sbom-from-package-version",
+   "description": "Disassociates the selected software bill of materials (SBOM) from a specific software package version.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "enable-topic-rule",
+   "description": "Enables the rule.",
+   "options": [
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-behavior-model-training-summaries",
+   "description": "Returns a Device Defender's ML Detect Security Profile training model's status.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--security-profile-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-buckets-aggregation",
+   "description": "Aggregates on indexed data with search queries pertaining to particular fields.",
+   "options": [
+    {
+     "name": "--aggregation-field",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--buckets-aggregation-type",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-cardinality",
+   "description": "Returns the approximate count of unique values that match the query.",
+   "options": [
+    {
+     "name": "--aggregation-field",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-command",
+   "description": "Gets information about the specified command.",
+   "options": [
+    {
+     "name": "--command-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-command-execution",
+   "description": "Gets information about the specific command execution on a single device.",
+   "options": [
+    {
+     "name": "--execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-result"
+    },
+    {
+     "name": "--no-include-result"
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-effective-policies",
+   "description": "Gets a list of the policies that have an effect on the authorization behavior of the specified device when it connects to the IoT device gateway.",
+   "options": [
+    {
+     "name": "--cognito-identity-pool-id",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-indexing-configuration",
+   "description": "Gets the indexing configuration."
+  },
+  {
+   "name": "get-job-document",
+   "description": "Gets a job document.",
+   "options": [
+    {
+     "name": "--before-substitution"
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-before-substitution"
+    }
+   ]
+  },
+  {
+   "name": "get-logging-options",
+   "description": "Gets the logging options."
+  },
+  {
+   "name": "get-ota-update",
+   "description": "Gets an OTA update.",
+   "options": [
+    {
+     "name": "--ota-update-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-package",
+   "description": "Gets information about the specified software package.",
+   "options": [
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-package-configuration",
+   "description": "Gets information about the specified software package's configuration."
+  },
+  {
+   "name": "get-package-version",
+   "description": "Gets information about the specified package version.",
+   "options": [
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--version-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-percentiles",
+   "description": "Groups the aggregated values that match the query into percentile groupings.",
+   "options": [
+    {
+     "name": "--aggregation-field",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--percents",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-policy",
+   "description": "Gets information about the specified policy with the policy document of the default version.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-policy-version",
+   "description": "Gets information about the specified policy version.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-registration-code",
+   "description": "Gets a registration code used to register a CA certificate with IoT."
+  },
+  {
+   "name": "get-statistics",
+   "description": "Returns the count, average, sum, minimum, maximum, sum of squares, variance, and standard deviation for the specified aggregated field.",
+   "options": [
+    {
+     "name": "--aggregation-field",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-thing-connectivity-data",
+   "description": "Retrieves the live connectivity status per device.",
+   "options": [
+    {
+     "name": "--include-socket-information"
+    },
+    {
+     "name": "--no-include-socket-information"
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-topic-rule",
+   "description": "Gets information about the rule.",
+   "options": [
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-topic-rule-destination",
+   "description": "Gets information about a topic rule destination.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-v2-logging-options",
+   "description": "Gets the fine grained logging options.",
+   "options": [
+    {
+     "name": "--no-verbose"
+    },
+    {
+     "name": "--verbose"
+    }
+   ]
+  },
+  {
+   "name": "list-active-violations",
+   "description": "Lists the active violations for a given Device Defender security profile.",
+   "options": [
+    {
+     "name": "--behavior-criteria-type",
+     "args": {
+      "suggestions": [
+       "STATIC",
+       "STATISTICAL",
+       "MACHINE_LEARNING"
+      ]
+     }
+    },
+    {
+     "name": "--list-suppressed-alerts"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-list-suppressed-alerts"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--security-profile-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    },
+    {
+     "name": "--verification-state",
+     "args": {
+      "suggestions": [
+       "FALSE_POSITIVE",
+       "BENIGN_POSITIVE",
+       "TRUE_POSITIVE",
+       "UNKNOWN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-attached-policies",
+   "description": "Lists the policies attached to the specified thing group.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-recursive"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recursive"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-audit-findings",
+   "description": "Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period.",
+   "options": [
+    {
+     "name": "--check-name",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--list-suppressed-findings"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-list-suppressed-findings"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-audit-mitigation-actions-executions",
+   "description": "Gets the status of audit mitigation action tasks that were executed.",
+   "options": [
+    {
+     "name": "--action-status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "COMPLETED",
+       "FAILED",
+       "CANCELED",
+       "SKIPPED",
+       "PENDING"
+      ]
+     }
+    },
+    {
+     "name": "--finding-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-audit-mitigation-actions-tasks",
+   "description": "Gets a list of audit mitigation action tasks that match the specified filters.",
+   "options": [
+    {
+     "name": "--audit-task-id",
+     "args": {}
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--finding-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "COMPLETED",
+       "FAILED",
+       "CANCELED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-audit-suppressions",
+   "description": "Lists your Device Defender audit listings.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--check-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-audit-tasks",
+   "description": "Lists the Device Defender audits that have been performed during a given time period.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "COMPLETED",
+       "FAILED",
+       "CANCELED"
+      ]
+     }
+    },
+    {
+     "name": "--task-type",
+     "args": {
+      "suggestions": [
+       "ON_DEMAND_AUDIT_TASK",
+       "SCHEDULED_AUDIT_TASK"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-authorizers",
+   "description": "Lists the authorizers registered in your account.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-billing-groups",
+   "description": "Lists the billing groups you have created.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix-filter",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ca-certificates",
+   "description": "Lists the CA certificates registered for your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-certificate-providers",
+   "description": "Lists all your certificate providers in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    }
+   ]
+  },
+  {
+   "name": "list-certificates",
+   "description": "Lists the certificates registered in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-certificates-by-ca",
+   "description": "List the device certificates signed by the specified CA certificate.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--ca-certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-command-executions",
+   "description": "List all command executions.",
+   "options": [
+    {
+     "name": "--command-arn",
+     "args": {}
+    },
+    {
+     "name": "--completed-time-filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {
+      "suggestions": [
+       "AWS-IoT",
+       "AWS-IoT-FleetWise"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--started-time-filter",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "CREATED",
+       "IN_PROGRESS",
+       "SUCCEEDED",
+       "FAILED",
+       "REJECTED",
+       "TIMED_OUT"
+      ]
+     }
+    },
+    {
+     "name": "--target-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-commands",
+   "description": "List all commands in your account.",
+   "options": [
+    {
+     "name": "--command-parameter-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {
+      "suggestions": [
+       "AWS-IoT",
+       "AWS-IoT-FleetWise"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "ASCENDING",
+       "DESCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-custom-metrics",
+   "description": "Lists your Device Defender detect custom metrics.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-detect-mitigation-actions-executions",
+   "description": "Lists mitigation actions executions for a Device Defender ML Detect Security Profile.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    },
+    {
+     "name": "--violation-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-detect-mitigation-actions-tasks",
+   "description": "List of Device Defender ML Detect mitigation actions tasks.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dimensions",
+   "description": "List the set of dimensions that are defined for your Amazon Web Services accounts.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-domain-configurations",
+   "description": "Gets a list of domain configurations for the user.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-type",
+     "args": {
+      "suggestions": [
+       "DATA",
+       "CREDENTIAL_PROVIDER",
+       "JOBS"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-fleet-metrics",
+   "description": "Lists all your fleet metrics.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-indices",
+   "description": "Lists the search indices.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-job-executions-for-job",
+   "description": "Lists the job executions for a job.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "IN_PROGRESS",
+       "SUCCEEDED",
+       "FAILED",
+       "TIMED_OUT",
+       "REJECTED",
+       "REMOVED",
+       "CANCELED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-job-executions-for-thing",
+   "description": "Lists the job executions for the specified thing.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "IN_PROGRESS",
+       "SUCCEEDED",
+       "FAILED",
+       "TIMED_OUT",
+       "REJECTED",
+       "REMOVED",
+       "CANCELED"
+      ]
+     }
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-job-templates",
+   "description": "Returns a list of job templates.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "Lists jobs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "CANCELED",
+       "COMPLETED",
+       "DELETION_IN_PROGRESS",
+       "SCHEDULED"
+      ]
+     }
+    },
+    {
+     "name": "--target-selection",
+     "args": {
+      "suggestions": [
+       "CONTINUOUS",
+       "SNAPSHOT"
+      ]
+     }
+    },
+    {
+     "name": "--thing-group-id",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-managed-job-templates",
+   "description": "Returns a list of managed job templates.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-metric-values",
+   "description": "Lists the values reported for an IoT Device Defender metric (device-side metric, cloud-side metric, or custom metric) by the given thing during the specified time period.",
+   "options": [
+    {
+     "name": "--dimension-name",
+     "args": {}
+    },
+    {
+     "name": "--dimension-value-operator",
+     "args": {
+      "suggestions": [
+       "IN",
+       "NOT_IN"
+      ]
+     }
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-mitigation-actions",
+   "description": "Gets a list of all mitigation actions that match the specified filter criteria.",
+   "options": [
+    {
+     "name": "--action-type",
+     "args": {
+      "suggestions": [
+       "UPDATE_DEVICE_CERTIFICATE",
+       "UPDATE_CA_CERTIFICATE",
+       "ADD_THINGS_TO_THING_GROUP",
+       "REPLACE_DEFAULT_POLICY_VERSION",
+       "ENABLE_IOT_LOGGING",
+       "PUBLISH_FINDING_TO_SNS"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-ota-updates",
+   "description": "Lists OTA updates.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ota-update-status",
+     "args": {
+      "suggestions": [
+       "CREATE_PENDING",
+       "CREATE_IN_PROGRESS",
+       "CREATE_COMPLETE",
+       "CREATE_FAILED",
+       "DELETE_IN_PROGRESS",
+       "DELETE_FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-outgoing-certificates",
+   "description": "Lists certificates that are being transferred but not yet accepted.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-package-versions",
+   "description": "Lists the software package versions associated to the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "DRAFT",
+       "PUBLISHED",
+       "DEPRECATED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-packages",
+   "description": "Lists the software packages associated to the account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policies",
+   "description": "Lists your policies.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policy-principals",
+   "description": "Lists the principals associated with the specified policy.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-policy-versions",
+   "description": "Lists the versions of the specified policy and identifies the default version.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-principal-policies",
+   "description": "Lists the policies attached to the specified principal.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-principal-things",
+   "description": "Lists the things associated with the specified principal.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-principal-things-v2",
+   "description": "Lists the things associated with the specified principal.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-principal-type",
+     "args": {
+      "suggestions": [
+       "EXCLUSIVE_THING",
+       "NON_EXCLUSIVE_THING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-provisioning-template-versions",
+   "description": "A list of provisioning template versions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-provisioning-templates",
+   "description": "Lists the provisioning templates in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-related-resources-for-audit-finding",
+   "description": "The related resources of an Audit finding.",
+   "options": [
+    {
+     "name": "--finding-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-role-aliases",
+   "description": "Lists the role aliases registered in your account.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sbom-validation-results",
+   "description": "The validation results for all software bill of materials (SBOM) attached to a specific software package version.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--validation-result",
+     "args": {
+      "suggestions": [
+       "FAILED",
+       "SUCCEEDED"
+      ]
+     }
+    },
+    {
+     "name": "--version-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-scheduled-audits",
+   "description": "Lists all of your scheduled audits.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-security-profiles",
+   "description": "Lists the Device Defender security profiles you've created.",
+   "options": [
+    {
+     "name": "--dimension-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--metric-name",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-security-profiles-for-target",
+   "description": "Lists the Device Defender security profiles attached to a target (thing group).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-recursive"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recursive"
+    },
+    {
+     "name": "--security-profile-target-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-streams",
+   "description": "Lists all of the streams in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--ascending-order"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-ascending-order"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags (metadata) you have assigned to the resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-targets-for-policy",
+   "description": "List targets for the specified policy.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-targets-for-security-profile",
+   "description": "Lists the targets (thing groups) associated with a given Device Defender security profile.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--security-profile-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-thing-groups",
+   "description": "List the thing groups in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name-prefix-filter",
+     "args": {}
+    },
+    {
+     "name": "--no-recursive"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--parent-group",
+     "args": {}
+    },
+    {
+     "name": "--recursive"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-thing-groups-for-thing",
+   "description": "List the thing groups to which the specified thing belongs.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-thing-principals",
+   "description": "Lists the principals associated with the specified thing.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-thing-principals-v2",
+   "description": "Lists the principals associated with the specified thing.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-principal-type",
+     "args": {
+      "suggestions": [
+       "EXCLUSIVE_THING",
+       "NON_EXCLUSIVE_THING"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-thing-registration-task-reports",
+   "description": "Information about the thing registration tasks.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--report-type",
+     "args": {
+      "suggestions": [
+       "ERRORS",
+       "RESULTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-thing-registration-tasks",
+   "description": "List bulk thing provisioning tasks.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "InProgress",
+       "Completed",
+       "Failed",
+       "Cancelled",
+       "Cancelling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-thing-types",
+   "description": "Lists the existing thing types.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-type-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-things",
+   "description": "Lists your things.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {}
+    },
+    {
+     "name": "--attribute-value",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-use-prefix-attribute-value"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-type-name",
+     "args": {}
+    },
+    {
+     "name": "--use-prefix-attribute-value"
+    }
+   ]
+  },
+  {
+   "name": "list-things-in-billing-group",
+   "description": "Lists the things you have added to the given billing group.",
+   "options": [
+    {
+     "name": "--billing-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-things-in-thing-group",
+   "description": "Lists the things in the specified group.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-recursive"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recursive"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-topic-rule-destinations",
+   "description": "Lists all the topic rule destinations in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-topic-rules",
+   "description": "Lists the rules for the specific topic.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-rule-disabled"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--rule-disabled"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--topic",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-v2-logging-levels",
+   "description": "Lists logging levels.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "THING_GROUP",
+       "CLIENT_ID",
+       "SOURCE_IP",
+       "PRINCIPAL_ID"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-violation-events",
+   "description": "Lists the Device Defender security profile violations discovered during the given time period.",
+   "options": [
+    {
+     "name": "--behavior-criteria-type",
+     "args": {
+      "suggestions": [
+       "STATIC",
+       "STATISTICAL",
+       "MACHINE_LEARNING"
+      ]
+     }
+    },
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--list-suppressed-alerts"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-list-suppressed-alerts"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--security-profile-name",
+     "args": {}
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    },
+    {
+     "name": "--verification-state",
+     "args": {
+      "suggestions": [
+       "FALSE_POSITIVE",
+       "BENIGN_POSITIVE",
+       "TRUE_POSITIVE",
+       "UNKNOWN"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "put-verification-state-on-violation",
+   "description": "Set a verification state and provide a description of that verification state on a violation (detect alarm).",
+   "options": [
+    {
+     "name": "--verification-state",
+     "args": {
+      "suggestions": [
+       "FALSE_POSITIVE",
+       "BENIGN_POSITIVE",
+       "TRUE_POSITIVE",
+       "UNKNOWN"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--verification-state-description",
+     "args": {}
+    },
+    {
+     "name": "--violation-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-ca-certificate",
+   "description": "Registers a CA certificate with Amazon Web Services IoT Core.",
+   "options": [
+    {
+     "name": "--allow-auto-registration"
+    },
+    {
+     "name": "--ca-certificate",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--certificate-mode",
+     "args": {
+      "suggestions": [
+       "DEFAULT",
+       "SNI_ONLY"
+      ]
+     }
+    },
+    {
+     "name": "--no-allow-auto-registration"
+    },
+    {
+     "name": "--no-set-as-active"
+    },
+    {
+     "name": "--registration-config",
+     "args": {}
+    },
+    {
+     "name": "--set-as-active"
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--verification-certificate",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-certificate",
+   "description": "Registers a device certificate with IoT in the same certificate mode as the signing CA.",
+   "options": [
+    {
+     "name": "--ca-certificate-pem",
+     "args": {}
+    },
+    {
+     "name": "--certificate-pem",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-set-as-active"
+    },
+    {
+     "name": "--set-as-active"
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE",
+       "REVOKED",
+       "PENDING_TRANSFER",
+       "REGISTER_INACTIVE",
+       "PENDING_ACTIVATION"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "register-certificate-without-ca",
+   "description": "Register a certificate that does not have a certificate authority (CA).",
+   "options": [
+    {
+     "name": "--certificate-pem",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE",
+       "REVOKED",
+       "PENDING_TRANSFER",
+       "REGISTER_INACTIVE",
+       "PENDING_ACTIVATION"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "register-thing",
+   "description": "Provisions a thing in the device registry.",
+   "options": [
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--template-body",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-certificate-transfer",
+   "description": "Rejects a pending certificate transfer.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reject-reason",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-thing-from-billing-group",
+   "description": "Removes the given thing from the billing group.",
+   "options": [
+    {
+     "name": "--billing-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--billing-group-name",
+     "args": {}
+    },
+    {
+     "name": "--thing-arn",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-thing-from-thing-group",
+   "description": "Remove the specified thing from the specified group.",
+   "options": [
+    {
+     "name": "--thing-arn",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-arn",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "replace-topic-rule",
+   "description": "Replaces the rule.",
+   "options": [
+    {
+     "name": "--rule-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--topic-rule-payload",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-index",
+   "description": "Searches the specified index.",
+   "options": [
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "set-default-authorizer",
+   "description": "Sets the default authorizer.",
+   "options": [
+    {
+     "name": "--authorizer-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-default-policy-version",
+   "description": "Sets the specified version of the specified policy as the policy's default (operative) version.",
+   "options": [
+    {
+     "name": "--policy-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--policy-version-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-logging-options",
+   "description": "Sets the logging options.",
+   "options": [
+    {
+     "name": "--logging-options-payload",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-v2-logging-level",
+   "description": "Sets the logging level.",
+   "options": [
+    {
+     "name": "--log-level",
+     "args": {
+      "suggestions": [
+       "DEBUG",
+       "INFO",
+       "ERROR",
+       "WARN",
+       "DISABLED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--log-target",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-v2-logging-options",
+   "description": "Sets the logging options for the V2 logging service.",
+   "options": [
+    {
+     "name": "--default-log-level",
+     "args": {
+      "suggestions": [
+       "DEBUG",
+       "INFO",
+       "ERROR",
+       "WARN",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--disable-all-logs"
+    },
+    {
+     "name": "--event-configurations",
+     "args": {}
+    },
+    {
+     "name": "--no-disable-all-logs"
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-audit-mitigation-actions-task",
+   "description": "Starts a task that applies a set of mitigation actions to the specified target.",
+   "options": [
+    {
+     "name": "--audit-check-to-actions-mapping",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-detect-mitigation-actions-task",
+   "description": "Starts a Device Defender ML Detect mitigation actions task.",
+   "options": [
+    {
+     "name": "--actions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--include-only-active-violations"
+    },
+    {
+     "name": "--include-suppressed-alerts"
+    },
+    {
+     "name": "--no-include-only-active-violations"
+    },
+    {
+     "name": "--no-include-suppressed-alerts"
+    },
+    {
+     "name": "--target",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--violation-event-occurrence-range",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-on-demand-audit-task",
+   "description": "Starts an on-demand Device Defender audit.",
+   "options": [
+    {
+     "name": "--target-check-names",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-thing-registration-task",
+   "description": "Creates a bulk thing provisioning task.",
+   "options": [
+    {
+     "name": "--input-file-bucket",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-file-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-body",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-thing-registration-task",
+   "description": "Cancels a bulk thing provisioning task.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds to or modifies the tags of the given resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "test-authorization",
+   "description": "Tests if a specified principal is authorized to perform an IoT action on a specified resource.",
+   "options": [
+    {
+     "name": "--auth-infos",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-id",
+     "args": {}
+    },
+    {
+     "name": "--cognito-identity-pool-id",
+     "args": {}
+    },
+    {
+     "name": "--policy-names-to-add",
+     "args": {}
+    },
+    {
+     "name": "--policy-names-to-skip",
+     "args": {}
+    },
+    {
+     "name": "--principal",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "test-invoke-authorizer",
+   "description": "Tests a custom authorization behavior by invoking a specified custom authorizer.",
+   "options": [
+    {
+     "name": "--authorizer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--http-context",
+     "args": {}
+    },
+    {
+     "name": "--mqtt-context",
+     "args": {}
+    },
+    {
+     "name": "--tls-context",
+     "args": {}
+    },
+    {
+     "name": "--token",
+     "args": {}
+    },
+    {
+     "name": "--token-signature",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "transfer-certificate",
+   "description": "Transfers the specified certificate to the specified Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-aws-account",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transfer-message",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the given tags (metadata) from the resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-account-audit-configuration",
+   "description": "Configures or reconfigures the Device Defender audit settings for this account.",
+   "options": [
+    {
+     "name": "--audit-check-configurations",
+     "args": {}
+    },
+    {
+     "name": "--audit-notification-target-configurations",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-audit-suppression",
+   "description": "Updates a Device Defender audit suppression.",
+   "options": [
+    {
+     "name": "--check-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expiration-date",
+     "args": {}
+    },
+    {
+     "name": "--no-suppress-indefinitely"
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--suppress-indefinitely"
+    }
+   ]
+  },
+  {
+   "name": "update-authorizer",
+   "description": "Updates an authorizer.",
+   "options": [
+    {
+     "name": "--authorizer-function-arn",
+     "args": {}
+    },
+    {
+     "name": "--authorizer-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--enable-caching-for-http"
+    },
+    {
+     "name": "--no-enable-caching-for-http"
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--token-key-name",
+     "args": {}
+    },
+    {
+     "name": "--token-signing-public-keys",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-billing-group",
+   "description": "Updates information about the billing group.",
+   "options": [
+    {
+     "name": "--billing-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--billing-group-properties",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expected-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-ca-certificate",
+   "description": "Updates a registered CA certificate.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-auto-registration-status",
+     "args": {
+      "suggestions": [
+       "ENABLE",
+       "DISABLE"
+      ]
+     }
+    },
+    {
+     "name": "--new-status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE"
+      ]
+     }
+    },
+    {
+     "name": "--no-remove-auto-registration"
+    },
+    {
+     "name": "--registration-config",
+     "args": {}
+    },
+    {
+     "name": "--remove-auto-registration"
+    }
+   ]
+  },
+  {
+   "name": "update-certificate",
+   "description": "Updates the status of the specified certificate.",
+   "options": [
+    {
+     "name": "--certificate-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE",
+       "REVOKED",
+       "PENDING_TRANSFER",
+       "REGISTER_INACTIVE",
+       "PENDING_ACTIVATION"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-certificate-provider",
+   "description": "Updates a certificate provider.",
+   "options": [
+    {
+     "name": "--account-default-for-operations",
+     "args": {}
+    },
+    {
+     "name": "--certificate-provider-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--lambda-function-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-command",
+   "description": "Update information about a command or mark a command for deprecation.",
+   "options": [
+    {
+     "name": "--command-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deprecated"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--no-deprecated"
+    }
+   ]
+  },
+  {
+   "name": "update-custom-metric",
+   "description": "Updates a Device Defender detect custom metric.",
+   "options": [
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dimension",
+   "description": "Updates the definition for a dimension.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--string-values",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-domain-configuration",
+   "description": "Updates values stored in the domain configuration.",
+   "options": [
+    {
+     "name": "--application-protocol",
+     "args": {
+      "suggestions": [
+       "SECURE_MQTT",
+       "MQTT_WSS",
+       "HTTPS",
+       "DEFAULT"
+      ]
+     }
+    },
+    {
+     "name": "--authentication-type",
+     "args": {
+      "suggestions": [
+       "CUSTOM_AUTH_X509",
+       "CUSTOM_AUTH",
+       "AWS_X509",
+       "AWS_SIGV4",
+       "DEFAULT"
+      ]
+     }
+    },
+    {
+     "name": "--authorizer-config",
+     "args": {}
+    },
+    {
+     "name": "--client-certificate-config",
+     "args": {}
+    },
+    {
+     "name": "--domain-configuration-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--domain-configuration-status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--no-remove-authorizer-config"
+    },
+    {
+     "name": "--remove-authorizer-config"
+    },
+    {
+     "name": "--server-certificate-config",
+     "args": {}
+    },
+    {
+     "name": "--tls-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-dynamic-thing-group",
+   "description": "Updates a dynamic thing group.",
+   "options": [
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {}
+    },
+    {
+     "name": "--query-version",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-group-properties",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-encryption-configuration",
+   "description": "Updates the encryption configuration.",
+   "options": [
+    {
+     "name": "--encryption-type",
+     "args": {
+      "suggestions": [
+       "CUSTOMER_MANAGED_KMS_KEY",
+       "AWS_OWNED_KMS_KEY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--kms-access-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-event-configurations",
+   "description": "Updates the event configurations.",
+   "options": [
+    {
+     "name": "--event-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-fleet-metric",
+   "description": "Updates the data for a fleet metric.",
+   "options": [
+    {
+     "name": "--aggregation-field",
+     "args": {}
+    },
+    {
+     "name": "--aggregation-type",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metric-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--period",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {}
+    },
+    {
+     "name": "--query-version",
+     "args": {}
+    },
+    {
+     "name": "--unit",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-indexing-configuration",
+   "description": "Updates the search configuration.",
+   "options": [
+    {
+     "name": "--thing-group-indexing-configuration",
+     "args": {}
+    },
+    {
+     "name": "--thing-indexing-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-job",
+   "description": "Updates supported fields of the specified job.",
+   "options": [
+    {
+     "name": "--abort-config",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--job-executions-retry-config",
+     "args": {}
+    },
+    {
+     "name": "--job-executions-rollout-config",
+     "args": {}
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--namespace-id",
+     "args": {}
+    },
+    {
+     "name": "--presigned-url-config",
+     "args": {}
+    },
+    {
+     "name": "--timeout-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-mitigation-action",
+   "description": "Updates the definition for the specified mitigation action.",
+   "options": [
+    {
+     "name": "--action-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-params",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-package",
+   "description": "Updates the supported fields for a specific software package.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--default-version-name",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--no-unset-default-version"
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--unset-default-version"
+    }
+   ]
+  },
+  {
+   "name": "update-package-configuration",
+   "description": "Updates the software package configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--version-update-by-jobs-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-package-version",
+   "description": "Updates the supported fields for a specific package version.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "PUBLISH",
+       "DEPRECATE"
+      ]
+     }
+    },
+    {
+     "name": "--artifact",
+     "args": {}
+    },
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--package-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recipe",
+     "args": {}
+    },
+    {
+     "name": "--version-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-provisioning-template",
+   "description": "Updates a provisioning template.",
+   "options": [
+    {
+     "name": "--default-version-id",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--enabled"
+    },
+    {
+     "name": "--no-enabled"
+    },
+    {
+     "name": "--no-remove-pre-provisioning-hook"
+    },
+    {
+     "name": "--pre-provisioning-hook",
+     "args": {}
+    },
+    {
+     "name": "--provisioning-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--remove-pre-provisioning-hook"
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-role-alias",
+   "description": "Updates a role alias.",
+   "options": [
+    {
+     "name": "--credential-duration-seconds",
+     "args": {}
+    },
+    {
+     "name": "--role-alias",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-scheduled-audit",
+   "description": "Updates a scheduled audit, including which checks are performed and how often the audit takes place.",
+   "options": [
+    {
+     "name": "--day-of-month",
+     "args": {}
+    },
+    {
+     "name": "--day-of-week",
+     "args": {
+      "suggestions": [
+       "SUN",
+       "MON",
+       "TUE",
+       "WED",
+       "THU",
+       "FRI",
+       "SAT"
+      ]
+     }
+    },
+    {
+     "name": "--frequency",
+     "args": {
+      "suggestions": [
+       "DAILY",
+       "WEEKLY",
+       "BIWEEKLY",
+       "MONTHLY"
+      ]
+     }
+    },
+    {
+     "name": "--scheduled-audit-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-check-names",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-security-profile",
+   "description": "Updates a Device Defender security profile.",
+   "options": [
+    {
+     "name": "--additional-metrics-to-retain",
+     "args": {}
+    },
+    {
+     "name": "--additional-metrics-to-retain-v2",
+     "args": {}
+    },
+    {
+     "name": "--alert-targets",
+     "args": {}
+    },
+    {
+     "name": "--behaviors",
+     "args": {}
+    },
+    {
+     "name": "--delete-additional-metrics-to-retain"
+    },
+    {
+     "name": "--delete-alert-targets"
+    },
+    {
+     "name": "--delete-behaviors"
+    },
+    {
+     "name": "--delete-metrics-export-config"
+    },
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--metrics-export-config",
+     "args": {}
+    },
+    {
+     "name": "--no-delete-additional-metrics-to-retain"
+    },
+    {
+     "name": "--no-delete-alert-targets"
+    },
+    {
+     "name": "--no-delete-behaviors"
+    },
+    {
+     "name": "--no-delete-metrics-export-config"
+    },
+    {
+     "name": "--security-profile-description",
+     "args": {}
+    },
+    {
+     "name": "--security-profile-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-stream",
+   "description": "Updates an existing stream.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--files",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {}
+    },
+    {
+     "name": "--stream-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-thing",
+   "description": "Updates the data for a thing.",
+   "options": [
+    {
+     "name": "--attribute-payload",
+     "args": {}
+    },
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--no-remove-thing-type"
+    },
+    {
+     "name": "--remove-thing-type"
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-type-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-thing-group",
+   "description": "Update a thing group.",
+   "options": [
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--thing-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-group-properties",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-thing-groups-for-thing",
+   "description": "Updates the groups to which the thing belongs.",
+   "options": [
+    {
+     "name": "--no-override-dynamic-groups"
+    },
+    {
+     "name": "--override-dynamic-groups"
+    },
+    {
+     "name": "--thing-groups-to-add",
+     "args": {}
+    },
+    {
+     "name": "--thing-groups-to-remove",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-thing-type",
+   "description": "Updates a thing type.",
+   "options": [
+    {
+     "name": "--thing-type-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--thing-type-properties",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-topic-rule-destination",
+   "description": "Updates a topic rule destination.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "IN_PROGRESS",
+       "DISABLED",
+       "ERROR",
+       "DELETING"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-security-profile-behaviors",
+   "description": "Validates a Device Defender security profile behaviors specification.",
+   "options": [
+    {
+     "name": "--behaviors",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

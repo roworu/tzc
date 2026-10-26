@@ -1,0 +1,423 @@
+{
+ "name": "datapipeline",
+ "description": "AWS Data Pipeline configures and manages a data-driven workflow called a pipeline.",
+ "subcommands": [
+  {
+   "name": "activate-pipeline",
+   "description": "Validates the specified pipeline and starts processing pipeline tasks.",
+   "options": [
+    {
+     "name": "--parameter-values",
+     "args": {}
+    },
+    {
+     "name": "--parameter-values-uri",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-timestamp",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "add-tags",
+   "description": "Adds or modifies tags for the specified pipeline.",
+   "options": [
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-default-roles",
+   "description": "NOTE: Support for this command has been deprecated and may fail to create these roles if they do not already exist."
+  },
+  {
+   "name": "create-pipeline",
+   "description": "Creates a new, empty pipeline.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--unique-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deactivate-pipeline",
+   "description": "Deactivates the specified running pipeline.",
+   "options": [
+    {
+     "name": "--cancel-active"
+    },
+    {
+     "name": "--no-cancel-active"
+    },
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-pipeline",
+   "description": "Deletes a pipeline, its pipeline definition, and its run history.",
+   "options": [
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-objects",
+   "description": "Gets the object definitions for a set of objects associated with the pipeline.",
+   "options": [
+    {
+     "name": "--evaluate-expressions"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-evaluate-expressions"
+    },
+    {
+     "name": "--object-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-pipelines",
+   "description": "Retrieves metadata about one or more pipelines.",
+   "options": [
+    {
+     "name": "--pipeline-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "evaluate-expression",
+   "description": "Task runners call EvaluateExpression to evaluate a string in the context of the specified object.",
+   "options": [
+    {
+     "name": "--expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--object-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pipeline-definition",
+   "description": "Gets the definition of the specified pipeline.",
+   "options": [
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-pipelines",
+   "description": "Lists the pipeline identifiers for all active pipelines that you have permission to access.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-runs",
+   "description": "Lists the times the specified pipeline has run.",
+   "options": [
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--schedule-interval",
+     "args": {}
+    },
+    {
+     "name": "--start-interval",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "poll-for-task",
+   "description": "Task runners call PollForTask to receive a task to perform from AWS Data Pipeline.",
+   "options": [
+    {
+     "name": "--hostname",
+     "args": {}
+    },
+    {
+     "name": "--instance-identity",
+     "args": {}
+    },
+    {
+     "name": "--worker-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-pipeline-definition",
+   "description": "Adds tasks, schedules, and preconditions to the specified pipeline.",
+   "options": [
+    {
+     "name": "--parameter-objects",
+     "args": {}
+    },
+    {
+     "name": "--parameter-values",
+     "args": {}
+    },
+    {
+     "name": "--parameter-values-uri",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "query-objects",
+   "description": "Queries the specified pipeline for the names of objects that match the specified set of conditions.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--objects-query",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sphere",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-tags",
+   "description": "Removes existing tags from the specified pipeline.",
+   "options": [
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "report-task-progress",
+   "description": "Task runners call ReportTaskProgress when assigned a task to acknowledge that it has the task.",
+   "options": [
+    {
+     "name": "--fields",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "report-task-runner-heartbeat",
+   "description": "Task runners call ReportTaskRunnerHeartbeat every 15 minutes to indicate that they are operational.",
+   "options": [
+    {
+     "name": "--hostname",
+     "args": {}
+    },
+    {
+     "name": "--taskrunner-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--worker-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "set-status",
+   "description": "Requests that the status of the specified physical or logical pipeline objects be updated in the specified pipeline.",
+   "options": [
+    {
+     "name": "--object-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "set-task-status",
+   "description": "Task runners call SetTaskStatus to notify AWS Data Pipeline that a task is completed and provide information about the final status.",
+   "options": [
+    {
+     "name": "--error-id",
+     "args": {}
+    },
+    {
+     "name": "--error-message",
+     "args": {}
+    },
+    {
+     "name": "--error-stack-trace",
+     "args": {}
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-status",
+     "args": {
+      "suggestions": [
+       "FINISHED",
+       "FAILED",
+       "FALSE"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-pipeline-definition",
+   "description": "Validates the specified pipeline definition to ensure that it is well formed and can be run without error.",
+   "options": [
+    {
+     "name": "--parameter-objects",
+     "args": {}
+    },
+    {
+     "name": "--parameter-values",
+     "args": {}
+    },
+    {
+     "name": "--pipeline-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pipeline-objects",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

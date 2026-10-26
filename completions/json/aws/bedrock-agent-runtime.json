@@ -1,0 +1,623 @@
+{
+ "name": "bedrock-agent-runtime",
+ "description": "Contains APIs related to model invocation and querying of knowledge bases.",
+ "subcommands": [
+  {
+   "name": "create-invocation",
+   "description": "Creates a new invocation within a session.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--invocation-id",
+     "args": {}
+    },
+    {
+     "name": "--session-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-session",
+   "description": "Creates a session to temporarily store conversations for generative AI (GenAI) applications built with open-source frameworks such as LangGraph and LlamaIndex.",
+   "options": [
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--session-metadata",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-agent-memory",
+   "description": "Deletes memory from the specified memory identifier.",
+   "options": [
+    {
+     "name": "--agent-alias-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--memory-id",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-session",
+   "description": "Deletes a session that you ended.",
+   "options": [
+    {
+     "name": "--session-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "end-session",
+   "description": "Ends the session.",
+   "options": [
+    {
+     "name": "--session-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "generate-query",
+   "description": "Generates an SQL query from a natural language query.",
+   "options": [
+    {
+     "name": "--query-generation-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--transformation-configuration",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-agent-memory",
+   "description": "Gets the sessions stored in the memory of the agent.",
+   "options": [
+    {
+     "name": "--agent-alias-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--agent-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--memory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--memory-type",
+     "args": {
+      "suggestions": [
+       "SESSION_SUMMARY"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-document-content",
+   "description": "Retrieves the content of an ingested document from a knowledge base.",
+   "options": [
+    {
+     "name": "--data-source-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--document-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-format",
+     "args": {
+      "suggestions": [
+       "RAW",
+       "EXTRACTED"
+      ]
+     }
+    },
+    {
+     "name": "--user-context",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-execution-flow-snapshot",
+   "description": "Retrieves the flow definition snapshot used for a flow execution.",
+   "options": [
+    {
+     "name": "--execution-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-alias-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-flow-execution",
+   "description": "Retrieves details about a specific flow execution, including its status, start and end times, and any errors that occurred during execution.",
+   "options": [
+    {
+     "name": "--execution-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-alias-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-invocation-step",
+   "description": "Retrieves the details of a specific invocation step within an invocation in a session.",
+   "options": [
+    {
+     "name": "--invocation-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--invocation-step-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-session",
+   "description": "Retrieves details about a specific session.",
+   "options": [
+    {
+     "name": "--session-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-flow-execution-events",
+   "description": "Lists events that occurred during a flow execution.",
+   "options": [
+    {
+     "name": "--event-type",
+     "args": {
+      "suggestions": [
+       "Node",
+       "Flow"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--execution-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-alias-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-flow-executions",
+   "description": "Lists all executions of a flow.",
+   "options": [
+    {
+     "name": "--flow-alias-identifier",
+     "args": {}
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-invocation-steps",
+   "description": "Lists all invocation steps associated with a session and optionally, an invocation within the session.",
+   "options": [
+    {
+     "name": "--invocation-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--session-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-invocations",
+   "description": "Lists all invocations associated with a specific session.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--session-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sessions",
+   "description": "Lists all sessions in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List all the tags for the resource you specify.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-invocation-step",
+   "description": "Add an invocation step to an invocation in a session.",
+   "options": [
+    {
+     "name": "--invocation-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--invocation-step-id",
+     "args": {}
+    },
+    {
+     "name": "--invocation-step-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "rerank",
+   "description": "Reranks the relevance of sources based on queries.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--queries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--reranking-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sources",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "retrieve",
+   "description": "Queries a knowledge base and retrieves information from it.",
+   "options": [
+    {
+     "name": "--guardrail-configuration",
+     "args": {}
+    },
+    {
+     "name": "--knowledge-base-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--retrieval-configuration",
+     "args": {}
+    },
+    {
+     "name": "--retrieval-query",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--user-context",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "retrieve-and-generate",
+   "description": "Queries a knowledge base and generates responses based on the retrieved results and using the specified foundation model or inference profile.",
+   "options": [
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--retrieve-and-generate-configuration",
+     "args": {}
+    },
+    {
+     "name": "--session-configuration",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {}
+    },
+    {
+     "name": "--user-context",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-flow-execution",
+   "description": "Starts an execution of an Amazon Bedrock flow.",
+   "options": [
+    {
+     "name": "--flow-alias-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-execution-name",
+     "args": {}
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--inputs",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-performance-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-flow-execution",
+   "description": "Stops an Amazon Bedrock flow's execution.",
+   "options": [
+    {
+     "name": "--execution-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-alias-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associate tags with a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Remove tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-session",
+   "description": "Updates the metadata or encryption settings of a session.",
+   "options": [
+    {
+     "name": "--session-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-metadata",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,552 @@
+{
+ "name": "ds-data",
+ "description": "Amazon Web Services Directory Service Data is an extension of Directory Service.",
+ "subcommands": [
+  {
+   "name": "add-group-member",
+   "description": "Adds an existing user, group, or computer as a group member.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-realm",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-group",
+   "description": "Creates a new group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-scope",
+     "args": {
+      "suggestions": [
+       "DomainLocal",
+       "Global",
+       "Universal",
+       "BuiltinLocal"
+      ]
+     }
+    },
+    {
+     "name": "--group-type",
+     "args": {
+      "suggestions": [
+       "Distribution",
+       "Security"
+      ]
+     }
+    },
+    {
+     "name": "--other-attributes",
+     "args": {}
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-user",
+   "description": "Creates a new user.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email-address",
+     "args": {}
+    },
+    {
+     "name": "--given-name",
+     "args": {}
+    },
+    {
+     "name": "--other-attributes",
+     "args": {}
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--surname",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-group",
+   "description": "Deletes a group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-user",
+   "description": "Deletes a user.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-group",
+   "description": "Returns information about a specific group.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--other-attributes",
+     "args": {}
+    },
+    {
+     "name": "--realm",
+     "args": {}
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-user",
+   "description": "Returns information about a specific user.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--other-attributes",
+     "args": {}
+    },
+    {
+     "name": "--realm",
+     "args": {}
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disable-user",
+   "description": "Deactivates an active user account.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-group-members",
+   "description": "Returns member information for the specified group.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--member-realm",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--realm",
+     "args": {}
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-groups",
+   "description": "Returns group information for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--realm",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-groups-for-member",
+   "description": "Returns group information for the specified member.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--member-realm",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--realm",
+     "args": {}
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-users",
+   "description": "Returns user information for the specified directory.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--realm",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "remove-group-member",
+   "description": "Removes a member from a group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--member-realm",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-groups",
+   "description": "Searches the specified directory for a group.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--realm",
+     "args": {}
+    },
+    {
+     "name": "--search-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--search-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-users",
+   "description": "Searches the specified directory for a user.",
+   "options": [
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--realm",
+     "args": {}
+    },
+    {
+     "name": "--search-attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--search-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-group",
+   "description": "Updates group information.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--group-scope",
+     "args": {
+      "suggestions": [
+       "DomainLocal",
+       "Global",
+       "Universal",
+       "BuiltinLocal"
+      ]
+     }
+    },
+    {
+     "name": "--group-type",
+     "args": {
+      "suggestions": [
+       "Distribution",
+       "Security"
+      ]
+     }
+    },
+    {
+     "name": "--other-attributes",
+     "args": {}
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-type",
+     "args": {
+      "suggestions": [
+       "ADD",
+       "REPLACE",
+       "REMOVE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-user",
+   "description": "Updates user information.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--directory-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--email-address",
+     "args": {}
+    },
+    {
+     "name": "--given-name",
+     "args": {}
+    },
+    {
+     "name": "--other-attributes",
+     "args": {}
+    },
+    {
+     "name": "--sam-account-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--surname",
+     "args": {}
+    },
+    {
+     "name": "--update-type",
+     "args": {
+      "suggestions": [
+       "ADD",
+       "REPLACE",
+       "REMOVE"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

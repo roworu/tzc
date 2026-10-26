@@ -1,0 +1,2670 @@
+{
+ "name": "ecs",
+ "description": "Amazon Elastic Container Service Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service.",
+ "subcommands": [
+  {
+   "name": "continue-service-deployment",
+   "description": "Continues or rolls back an Amazon ECS service deployment that is paused at a lifecycle hook.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "ROLLBACK",
+       "CONTINUE"
+      ]
+     }
+    },
+    {
+     "name": "--hook-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-deployment-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-capacity-provider",
+   "description": "Creates a capacity provider.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-provider",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--managed-instances-provider",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-cluster",
+   "description": "Creates a new Amazon ECS cluster.",
+   "options": [
+    {
+     "name": "--capacity-providers",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {}
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--default-capacity-provider-strategy",
+     "args": {}
+    },
+    {
+     "name": "--service-connect-defaults",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-daemon",
+   "description": "Creates a new daemon in the specified cluster and capacity providers.",
+   "options": [
+    {
+     "name": "--capacity-provider-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-arn",
+     "args": {}
+    },
+    {
+     "name": "--daemon-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--daemon-task-definition-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--disable-execute-command"
+    },
+    {
+     "name": "--enable-ecs-managed-tags"
+    },
+    {
+     "name": "--enable-execute-command"
+    },
+    {
+     "name": "--no-enable-ecs-managed-tags"
+    },
+    {
+     "name": "--propagate-tags",
+     "args": {
+      "suggestions": [
+       "DAEMON",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-express-gateway-service",
+   "description": "Creates an Express service that simplifies deploying containerized web applications on Amazon ECS with managed Amazon Web Services infrastructure.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--cpu",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--health-check-path",
+     "args": {}
+    },
+    {
+     "name": "--infrastructure-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--memory",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--primary-container",
+     "args": {}
+    },
+    {
+     "name": "--scaling-target",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-definition-arn",
+     "args": {}
+    },
+    {
+     "name": "--task-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-service",
+   "description": "Runs and maintains your desired number of tasks from a specified task definition.",
+   "options": [
+    {
+     "name": "--availability-zone-rebalancing",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--capacity-provider-strategy",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--deployment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--deployment-controller",
+     "args": {}
+    },
+    {
+     "name": "--desired-count",
+     "args": {}
+    },
+    {
+     "name": "--disable-execute-command"
+    },
+    {
+     "name": "--enable-ecs-managed-tags"
+    },
+    {
+     "name": "--enable-execute-command"
+    },
+    {
+     "name": "--health-check-grace-period-seconds",
+     "args": {}
+    },
+    {
+     "name": "--launch-type",
+     "args": {
+      "suggestions": [
+       "EC2",
+       "FARGATE",
+       "EXTERNAL",
+       "MANAGED_INSTANCES"
+      ]
+     }
+    },
+    {
+     "name": "--load-balancers",
+     "args": {}
+    },
+    {
+     "name": "--monitoring",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-ecs-managed-tags"
+    },
+    {
+     "name": "--placement-constraints",
+     "args": {}
+    },
+    {
+     "name": "--placement-strategy",
+     "args": {}
+    },
+    {
+     "name": "--platform-version",
+     "args": {}
+    },
+    {
+     "name": "--propagate-tags",
+     "args": {
+      "suggestions": [
+       "TASK_DEFINITION",
+       "SERVICE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--role",
+     "args": {}
+    },
+    {
+     "name": "--scheduling-strategy",
+     "args": {
+      "suggestions": [
+       "REPLICA",
+       "DAEMON"
+      ]
+     }
+    },
+    {
+     "name": "--service-connect-configuration",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-registries",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-definition",
+     "args": {}
+    },
+    {
+     "name": "--volume-configurations",
+     "args": {}
+    },
+    {
+     "name": "--vpc-lattice-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-task-set",
+   "description": "Create a task set in the specified cluster and service.",
+   "options": [
+    {
+     "name": "--capacity-provider-strategy",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--external-id",
+     "args": {}
+    },
+    {
+     "name": "--launch-type",
+     "args": {
+      "suggestions": [
+       "EC2",
+       "FARGATE",
+       "EXTERNAL",
+       "MANAGED_INSTANCES"
+      ]
+     }
+    },
+    {
+     "name": "--load-balancers",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--platform-version",
+     "args": {}
+    },
+    {
+     "name": "--scale",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-registries",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-account-setting",
+   "description": "Disables an account setting for a specified user, role, or the root user for an account.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {
+      "suggestions": [
+       "serviceLongArnFormat",
+       "taskLongArnFormat",
+       "containerInstanceLongArnFormat",
+       "awsvpcTrunking",
+       "containerInsights",
+       "fargateFIPSMode",
+       "tagResourceAuthorization",
+       "fargateTaskRetirementWaitPeriod",
+       "guardDutyActivate",
+       "defaultLogDriverMode",
+       "fargateEventWindows"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--principal-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-attributes",
+   "description": "Deletes one or more custom attributes from an Amazon ECS resource.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-capacity-provider",
+   "description": "Deletes the specified capacity provider.",
+   "options": [
+    {
+     "name": "--capacity-provider",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Deletes the specified cluster.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-daemon",
+   "description": "Deletes the specified daemon.",
+   "options": [
+    {
+     "name": "--daemon-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-daemon-task-definition",
+   "description": "Deletes the specified daemon task definition.",
+   "options": [
+    {
+     "name": "--daemon-task-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-express-gateway-service",
+   "description": "Deletes an Express service and removes all associated Amazon Web Services resources.",
+   "options": [
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-service",
+   "description": "Deletes a specified service within a cluster.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-task-definitions",
+   "description": "Deletes one or more task definitions.",
+   "options": [
+    {
+     "name": "--task-definitions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-task-set",
+   "description": "Deletes a specified task set within a service.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-set",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deploy",
+   "description": "Deploys a new task definition to the specified ECS service.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--codedeploy-application",
+     "args": {}
+    },
+    {
+     "name": "--codedeploy-appspec",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--codedeploy-deployment-group",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-definition",
+     "args": {},
+     "priority": 75
+    }
+   ],
+   "subcommands": [
+    {
+     "name": "deregister",
+     "description": "Removes any tags from the on-premises instance; deregisters the on-premises instance from AWS CodeDeploy; and, unless requested otherwise, deletes the IAM user for the on-premises instance.",
+     "options": [
+      {
+       "name": "--instance-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--no-delete-iam-user"
+      }
+     ]
+    },
+    {
+     "name": "install",
+     "description": "Configures and installs the AWS CodeDeploy Agent on the on-premises instance.",
+     "options": [
+      {
+       "name": "--agent-installer",
+       "args": {}
+      },
+      {
+       "name": "--config-file",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--override-config"
+      }
+     ]
+    },
+    {
+     "name": "push",
+     "description": "Bundles and uploads to Amazon Simple Storage Service (Amazon S3) an application revision, which is a zip archive file that contains deployable content and an accompanying Application Specification file (AppSpec file).",
+     "options": [
+      {
+       "name": "--application-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--description",
+       "args": {}
+      },
+      {
+       "name": "--ignore-hidden-files"
+      },
+      {
+       "name": "--no-ignore-hidden-files"
+      },
+      {
+       "name": "--s3-location",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--source",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "register",
+     "description": "Creates an IAM user for the on-premises instance, if not provided, and saves the user's credentials to an on-premises instance configuration file; registers the on-premises instance with AWS CodeDeploy; and optionally adds tags to the on-premises instance.",
+     "options": [
+      {
+       "name": "--iam-user-arn",
+       "args": {}
+      },
+      {
+       "name": "--instance-name",
+       "args": {},
+       "priority": 75
+      },
+      {
+       "name": "--tags",
+       "args": {}
+      }
+     ]
+    },
+    {
+     "name": "uninstall",
+     "description": "Uninstalls the AWS CodeDeploy Agent from the on-premises instance."
+    }
+   ]
+  },
+  {
+   "name": "deregister-container-instance",
+   "description": "Deregisters an Amazon ECS container instance from the specified cluster.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--container-instance",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "deregister-task-definition",
+   "description": "Deregisters the specified task definition by family and revision.",
+   "options": [
+    {
+     "name": "--task-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-capacity-providers",
+   "description": "Describes one or more of your capacity providers.",
+   "options": [
+    {
+     "name": "--capacity-providers",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-clusters",
+   "description": "Describes one or more of your clusters.",
+   "options": [
+    {
+     "name": "--clusters",
+     "args": {}
+    },
+    {
+     "name": "--include",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-container-instances",
+   "description": "Describes one or more container instances.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--container-instances",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-daemon",
+   "description": "Describes the specified daemon.",
+   "options": [
+    {
+     "name": "--daemon-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-daemon-deployments",
+   "description": "Describes one or more of your daemon deployments.",
+   "options": [
+    {
+     "name": "--daemon-deployment-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-daemon-revisions",
+   "description": "Describes one or more of your daemon revisions.",
+   "options": [
+    {
+     "name": "--daemon-revision-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-daemon-task-definition",
+   "description": "Describes a daemon task definition.",
+   "options": [
+    {
+     "name": "--daemon-task-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-express-gateway-service",
+   "description": "Retrieves detailed information about an Express service, including current status, configuration, managed infrastructure, and service revisions.",
+   "options": [
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-service-deployments",
+   "description": "Describes one or more of your service deployments.",
+   "options": [
+    {
+     "name": "--service-deployment-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-service-revisions",
+   "description": "Describes one or more service revisions.",
+   "options": [
+    {
+     "name": "--service-revision-arns",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-services",
+   "description": "Describes the specified services running in your cluster.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--services",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-task-definition",
+   "description": "Describes a task definition.",
+   "options": [
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--task-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-task-sets",
+   "description": "Describes the task sets in the specified cluster and service.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-sets",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-tasks",
+   "description": "Describes a specified task or tasks.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--include",
+     "args": {}
+    },
+    {
+     "name": "--tasks",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "discover-poll-endpoint",
+   "description": "This action is only used by the Amazon ECS agent, and it is not intended for use outside of the agent.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--container-instance",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "execute-command",
+   "description": "Runs a command remotely on a container within a task.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--command",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--container",
+     "args": {}
+    },
+    {
+     "name": "--interactive",
+     "priority": 75
+    },
+    {
+     "name": "--non-interactive"
+    },
+    {
+     "name": "--task",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-task-protection",
+   "description": "Retrieves the protection status of tasks in an Amazon ECS service.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tasks",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-account-settings",
+   "description": "Lists the account settings for a specified principal.",
+   "options": [
+    {
+     "name": "--effective-settings"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {
+      "suggestions": [
+       "serviceLongArnFormat",
+       "taskLongArnFormat",
+       "containerInstanceLongArnFormat",
+       "awsvpcTrunking",
+       "containerInsights",
+       "fargateFIPSMode",
+       "tagResourceAuthorization",
+       "fargateTaskRetirementWaitPeriod",
+       "guardDutyActivate",
+       "defaultLogDriverMode",
+       "fargateEventWindows"
+      ]
+     }
+    },
+    {
+     "name": "--no-effective-settings"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--principal-arn",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--value",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-attributes",
+   "description": "Lists the attributes for Amazon ECS resources within a specified target type and cluster.",
+   "options": [
+    {
+     "name": "--attribute-name",
+     "args": {}
+    },
+    {
+     "name": "--attribute-value",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-type",
+     "args": {
+      "suggestions": [
+       "container-instance"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-clusters",
+   "description": "Returns a list of existing clusters.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-container-instances",
+   "description": "Returns a list of container instances in a specified cluster.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DRAINING",
+       "REGISTERING",
+       "DEREGISTERING",
+       "REGISTRATION_FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-daemon-deployments",
+   "description": "Returns a list of daemon deployments for a specified daemon.",
+   "options": [
+    {
+     "name": "--created-at",
+     "args": {}
+    },
+    {
+     "name": "--daemon-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-daemon-task-definitions",
+   "description": "Returns a list of daemon task definitions that are registered to your account.",
+   "options": [
+    {
+     "name": "--family",
+     "args": {}
+    },
+    {
+     "name": "--family-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--revision",
+     "args": {
+      "suggestions": [
+       "LAST_REGISTERED"
+      ]
+     }
+    },
+    {
+     "name": "--sort",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DELETE_IN_PROGRESS",
+       "ALL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-daemons",
+   "description": "Returns a list of daemons.",
+   "options": [
+    {
+     "name": "--capacity-provider-arns",
+     "args": {}
+    },
+    {
+     "name": "--cluster-arn",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-service-deployments",
+   "description": "This operation lists all the service deployments that meet the specified filter criteria.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--created-at",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services",
+   "description": "Returns a list of services.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--launch-type",
+     "args": {
+      "suggestions": [
+       "EC2",
+       "FARGATE",
+       "EXTERNAL",
+       "MANAGED_INSTANCES"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-management-type",
+     "args": {
+      "suggestions": [
+       "CUSTOMER",
+       "ECS"
+      ]
+     }
+    },
+    {
+     "name": "--scheduling-strategy",
+     "args": {
+      "suggestions": [
+       "REPLICA",
+       "DAEMON"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-services-by-namespace",
+   "description": "This operation lists all of the services that are associated with a Cloud Map namespace.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--namespace",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List the tags for an Amazon ECS resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-task-definition-families",
+   "description": "Returns a list of task definition families that are registered to your account.",
+   "options": [
+    {
+     "name": "--family-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE",
+       "ALL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-task-definitions",
+   "description": "Returns a list of task definitions that are registered to your account.",
+   "options": [
+    {
+     "name": "--family-prefix",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {
+      "suggestions": [
+       "ASC",
+       "DESC"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "INACTIVE",
+       "DELETE_IN_PROGRESS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-tasks",
+   "description": "Returns a list of tasks.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--container-instance",
+     "args": {}
+    },
+    {
+     "name": "--daemon-name",
+     "args": {}
+    },
+    {
+     "name": "--desired-status",
+     "args": {
+      "suggestions": [
+       "RUNNING",
+       "PENDING",
+       "STOPPED"
+      ]
+     }
+    },
+    {
+     "name": "--family",
+     "args": {}
+    },
+    {
+     "name": "--launch-type",
+     "args": {
+      "suggestions": [
+       "EC2",
+       "FARGATE",
+       "EXTERNAL",
+       "MANAGED_INSTANCES"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--service-name",
+     "args": {}
+    },
+    {
+     "name": "--started-by",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-account-setting",
+   "description": "Modifies an account setting.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {
+      "suggestions": [
+       "serviceLongArnFormat",
+       "taskLongArnFormat",
+       "containerInstanceLongArnFormat",
+       "awsvpcTrunking",
+       "containerInsights",
+       "fargateFIPSMode",
+       "tagResourceAuthorization",
+       "fargateTaskRetirementWaitPeriod",
+       "guardDutyActivate",
+       "defaultLogDriverMode",
+       "fargateEventWindows"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--principal-arn",
+     "args": {}
+    },
+    {
+     "name": "--value",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-account-setting-default",
+   "description": "Modifies an account setting for all users on an account for whom no individual account setting has been specified.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {
+      "suggestions": [
+       "serviceLongArnFormat",
+       "taskLongArnFormat",
+       "containerInstanceLongArnFormat",
+       "awsvpcTrunking",
+       "containerInsights",
+       "fargateFIPSMode",
+       "tagResourceAuthorization",
+       "fargateTaskRetirementWaitPeriod",
+       "guardDutyActivate",
+       "defaultLogDriverMode",
+       "fargateEventWindows"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--value",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-attributes",
+   "description": "Create or update an attribute on an Amazon ECS resource.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-cluster-capacity-providers",
+   "description": "Modifies the available capacity providers and the default capacity provider strategy for a cluster.",
+   "options": [
+    {
+     "name": "--capacity-providers",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--default-capacity-provider-strategy",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-container-instance",
+   "description": "This action is only used by the Amazon ECS agent, and it is not intended for use outside of the agent.",
+   "options": [
+    {
+     "name": "--attributes",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--container-instance-arn",
+     "args": {}
+    },
+    {
+     "name": "--instance-identity-document",
+     "args": {}
+    },
+    {
+     "name": "--instance-identity-document-signature",
+     "args": {}
+    },
+    {
+     "name": "--platform-devices",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--total-resources",
+     "args": {}
+    },
+    {
+     "name": "--version-info",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-daemon-task-definition",
+   "description": "Registers a new daemon task definition from the supplied family and containerDefinitions.",
+   "options": [
+    {
+     "name": "--container-definitions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cpu",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ipc-mode",
+     "args": {
+      "suggestions": [
+       "none",
+       "shared"
+      ]
+     }
+    },
+    {
+     "name": "--memory",
+     "args": {}
+    },
+    {
+     "name": "--pid-mode",
+     "args": {
+      "suggestions": [
+       "none",
+       "shared"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--volumes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "register-task-definition",
+   "description": "Registers a new task definition from the supplied family and containerDefinitions.",
+   "options": [
+    {
+     "name": "--container-definitions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cpu",
+     "args": {}
+    },
+    {
+     "name": "--enable-fault-injection"
+    },
+    {
+     "name": "--ephemeral-storage",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--family",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--inference-accelerators",
+     "args": {}
+    },
+    {
+     "name": "--ipc-mode",
+     "args": {
+      "suggestions": [
+       "host",
+       "task",
+       "none"
+      ]
+     }
+    },
+    {
+     "name": "--memory",
+     "args": {}
+    },
+    {
+     "name": "--network-mode",
+     "args": {
+      "suggestions": [
+       "bridge",
+       "host",
+       "awsvpc",
+       "none"
+      ]
+     }
+    },
+    {
+     "name": "--no-enable-fault-injection"
+    },
+    {
+     "name": "--pid-mode",
+     "args": {
+      "suggestions": [
+       "host",
+       "task"
+      ]
+     }
+    },
+    {
+     "name": "--placement-constraints",
+     "args": {}
+    },
+    {
+     "name": "--proxy-configuration",
+     "args": {}
+    },
+    {
+     "name": "--requires-compatibilities",
+     "args": {}
+    },
+    {
+     "name": "--runtime-platform",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--volumes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "run-task",
+   "description": "Starts a new task using the specified task definition.",
+   "options": [
+    {
+     "name": "--capacity-provider-strategy",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--count",
+     "args": {}
+    },
+    {
+     "name": "--disable-execute-command"
+    },
+    {
+     "name": "--enable-ecs-managed-tags"
+    },
+    {
+     "name": "--enable-execute-command"
+    },
+    {
+     "name": "--group",
+     "args": {}
+    },
+    {
+     "name": "--launch-type",
+     "args": {
+      "suggestions": [
+       "EC2",
+       "FARGATE",
+       "EXTERNAL",
+       "MANAGED_INSTANCES"
+      ]
+     }
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-ecs-managed-tags"
+    },
+    {
+     "name": "--overrides",
+     "args": {}
+    },
+    {
+     "name": "--placement-constraints",
+     "args": {}
+    },
+    {
+     "name": "--placement-strategy",
+     "args": {}
+    },
+    {
+     "name": "--platform-version",
+     "args": {}
+    },
+    {
+     "name": "--propagate-tags",
+     "args": {
+      "suggestions": [
+       "TASK_DEFINITION",
+       "SERVICE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--reference-id",
+     "args": {}
+    },
+    {
+     "name": "--started-by",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--volume-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-task",
+   "description": "Starts a new task from the specified task definition on the specified container instance or instances.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--container-instances",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--disable-execute-command"
+    },
+    {
+     "name": "--enable-ecs-managed-tags"
+    },
+    {
+     "name": "--enable-execute-command"
+    },
+    {
+     "name": "--group",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-ecs-managed-tags"
+    },
+    {
+     "name": "--overrides",
+     "args": {}
+    },
+    {
+     "name": "--propagate-tags",
+     "args": {
+      "suggestions": [
+       "TASK_DEFINITION",
+       "SERVICE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--reference-id",
+     "args": {}
+    },
+    {
+     "name": "--started-by",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--task-definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--volume-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "stop-service-deployment",
+   "description": "Stops an ongoing service deployment.",
+   "options": [
+    {
+     "name": "--service-deployment-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--stop-type",
+     "args": {
+      "suggestions": [
+       "ABORT",
+       "ROLLBACK"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "stop-task",
+   "description": "Stops a running task.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--task",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "submit-attachment-state-changes",
+   "description": "This action is only used by the Amazon ECS agent, and it is not intended for use outside of the agent.",
+   "options": [
+    {
+     "name": "--attachments",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "submit-container-state-change",
+   "description": "This action is only used by the Amazon ECS agent, and it is not intended for use outside of the agent.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--container-name",
+     "args": {}
+    },
+    {
+     "name": "--exit-code",
+     "args": {}
+    },
+    {
+     "name": "--network-bindings",
+     "args": {}
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--runtime-id",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    },
+    {
+     "name": "--task",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "submit-task-state-change",
+   "description": "This action is only used by the Amazon ECS agent, and it is not intended for use outside of the agent.",
+   "options": [
+    {
+     "name": "--attachments",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--containers",
+     "args": {}
+    },
+    {
+     "name": "--execution-stopped-at",
+     "args": {}
+    },
+    {
+     "name": "--managed-agents",
+     "args": {}
+    },
+    {
+     "name": "--pull-started-at",
+     "args": {}
+    },
+    {
+     "name": "--pull-stopped-at",
+     "args": {}
+    },
+    {
+     "name": "--reason",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {}
+    },
+    {
+     "name": "--task",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Associates the specified tags to a resource with the specified resourceArn.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes specified tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-capacity-provider",
+   "description": "Modifies the parameters for a capacity provider.",
+   "options": [
+    {
+     "name": "--auto-scaling-group-provider",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--managed-instances-provider",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cluster",
+   "description": "Updates the cluster.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--service-connect-defaults",
+     "args": {}
+    },
+    {
+     "name": "--settings",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-cluster-settings",
+   "description": "Modifies the settings to use for a cluster.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--settings",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-container-agent",
+   "description": "Updates the Amazon ECS container agent on a specified container instance.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--container-instance",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-container-instances-state",
+   "description": "Modifies the status of an Amazon ECS container instance.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--container-instances",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "DRAINING",
+       "REGISTERING",
+       "DEREGISTERING",
+       "REGISTRATION_FAILED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-daemon",
+   "description": "Updates the specified daemon.",
+   "options": [
+    {
+     "name": "--capacity-provider-arns",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--daemon-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--daemon-task-definition-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--deployment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--disable-execute-command"
+    },
+    {
+     "name": "--enable-ecs-managed-tags"
+    },
+    {
+     "name": "--enable-execute-command"
+    },
+    {
+     "name": "--no-enable-ecs-managed-tags"
+    },
+    {
+     "name": "--propagate-tags",
+     "args": {
+      "suggestions": [
+       "DAEMON",
+       "NONE"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-express-gateway-service",
+   "description": "Updates an existing Express service configuration.",
+   "options": [
+    {
+     "name": "--cpu",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--health-check-path",
+     "args": {}
+    },
+    {
+     "name": "--memory",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--primary-container",
+     "args": {}
+    },
+    {
+     "name": "--scaling-target",
+     "args": {}
+    },
+    {
+     "name": "--service-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-definition-arn",
+     "args": {}
+    },
+    {
+     "name": "--task-role-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-service",
+   "description": "Modifies the parameters of a service.",
+   "options": [
+    {
+     "name": "--availability-zone-rebalancing",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--capacity-provider-strategy",
+     "args": {}
+    },
+    {
+     "name": "--cluster",
+     "args": {}
+    },
+    {
+     "name": "--deployment-configuration",
+     "args": {}
+    },
+    {
+     "name": "--deployment-controller",
+     "args": {}
+    },
+    {
+     "name": "--desired-count",
+     "args": {}
+    },
+    {
+     "name": "--disable-execute-command"
+    },
+    {
+     "name": "--enable-ecs-managed-tags"
+    },
+    {
+     "name": "--enable-execute-command"
+    },
+    {
+     "name": "--force-new-deployment"
+    },
+    {
+     "name": "--health-check-grace-period-seconds",
+     "args": {}
+    },
+    {
+     "name": "--load-balancers",
+     "args": {}
+    },
+    {
+     "name": "--monitoring",
+     "args": {}
+    },
+    {
+     "name": "--network-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-enable-ecs-managed-tags"
+    },
+    {
+     "name": "--no-force-new-deployment"
+    },
+    {
+     "name": "--placement-constraints",
+     "args": {}
+    },
+    {
+     "name": "--placement-strategy",
+     "args": {}
+    },
+    {
+     "name": "--platform-version",
+     "args": {}
+    },
+    {
+     "name": "--propagate-tags",
+     "args": {
+      "suggestions": [
+       "TASK_DEFINITION",
+       "SERVICE",
+       "NONE"
+      ]
+     }
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service-connect-configuration",
+     "args": {}
+    },
+    {
+     "name": "--service-registries",
+     "args": {}
+    },
+    {
+     "name": "--task-definition",
+     "args": {}
+    },
+    {
+     "name": "--volume-configurations",
+     "args": {}
+    },
+    {
+     "name": "--vpc-lattice-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-service-primary-task-set",
+   "description": "Modifies which task set in a service is the primary task set.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--primary-task-set",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-task-protection",
+   "description": "Updates the protection status of a task.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expires-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--no-protection-enabled"
+    },
+    {
+     "name": "--protection-enabled",
+     "priority": 75
+    },
+    {
+     "name": "--tasks",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-task-set",
+   "description": "Modifies a task set.",
+   "options": [
+    {
+     "name": "--cluster",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scale",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--service",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-set",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "daemon-active",
+     "description": "Wait until JMESPath query daemon.status returns ACTIVE when polling with ``describe-daemon``.",
+     "options": [
+      {
+       "name": "--daemon-arn",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "daemon-deployment-stopped",
+     "description": "Wait until JMESPath query daemonDeployments[].status returns STOPPED for all elements when polling with ``describe-daemon-deployments``.",
+     "options": [
+      {
+       "name": "--daemon-deployment-arns",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "daemon-deployment-successful",
+     "description": "Wait until JMESPath query daemonDeployments[].status returns SUCCESSFUL for all elements when polling with ``describe-daemon-deployments``.",
+     "options": [
+      {
+       "name": "--daemon-deployment-arns",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "daemon-task-definition-active",
+     "description": "Wait until JMESPath query daemonTaskDefinition.status returns ACTIVE when polling with ``describe-daemon-task-definition``.",
+     "options": [
+      {
+       "name": "--daemon-task-definition",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "daemon-task-definition-deleted",
+     "description": "Wait until JMESPath query daemonTaskDefinition.status returns DELETED when polling with ``describe-daemon-task-definition``.",
+     "options": [
+      {
+       "name": "--daemon-task-definition",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "services-inactive",
+     "description": "Wait until JMESPath query services[].status returns INACTIVE for any element when polling with ``describe-services``.",
+     "options": [
+      {
+       "name": "--cluster",
+       "args": {}
+      },
+      {
+       "name": "--include",
+       "args": {}
+      },
+      {
+       "name": "--services",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "services-stable",
+     "description": "Wait until JMESPath query length(services[?!(length(deployments) == `1` && runningCount == desiredCount)]) == `0` returns True when polling with ``describe-services``.",
+     "options": [
+      {
+       "name": "--cluster",
+       "args": {}
+      },
+      {
+       "name": "--include",
+       "args": {}
+      },
+      {
+       "name": "--services",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "tasks-running",
+     "description": "Wait until JMESPath query tasks[].lastStatus returns RUNNING for all elements when polling with ``describe-tasks``.",
+     "options": [
+      {
+       "name": "--cluster",
+       "args": {}
+      },
+      {
+       "name": "--include",
+       "args": {}
+      },
+      {
+       "name": "--tasks",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    },
+    {
+     "name": "tasks-stopped",
+     "description": "Wait until JMESPath query tasks[].lastStatus returns STOPPED for all elements when polling with ``describe-tasks``.",
+     "options": [
+      {
+       "name": "--cluster",
+       "args": {}
+      },
+      {
+       "name": "--include",
+       "args": {}
+      },
+      {
+       "name": "--tasks",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

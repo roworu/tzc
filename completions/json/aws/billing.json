@@ -1,0 +1,412 @@
+{
+ "name": "billing",
+ "description": "You can use the Billing API to programatically list the billing views available to you for a given time period.",
+ "subcommands": [
+  {
+   "name": "associate-source-views",
+   "description": "Associates one or more source billing views with an existing billing view.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-views",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-billing-view",
+   "description": "Creates a billing view with the specified billing view attributes.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--data-filter-expression",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--source-views",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-billing-view",
+   "description": "Deletes the specified billing view.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--force"
+    },
+    {
+     "name": "--no-force"
+    }
+   ]
+  },
+  {
+   "name": "disassociate-source-views",
+   "description": "Removes the association between one or more source billing views and an existing billing view.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-views",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-billing-preferences",
+   "description": "Retrieves billing preferences for the specified feature.",
+   "options": [
+    {
+     "name": "--features",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-billing-view",
+   "description": "Returns the metadata associated to the specified billing view ARN.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-credit-allocation-history",
+   "description": "Returns the per-billing-month allocation history for credits applied to an Amazon Web Services account's bills.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--credit-id",
+     "args": {}
+    },
+    {
+     "name": "--end-date",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-date",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-credits",
+   "description": "Returns the list of Amazon Web Services account credits for the specified account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-date",
+     "args": {}
+    },
+    {
+     "name": "--no-payer-account-flag"
+    },
+    {
+     "name": "--payer-account-flag"
+    },
+    {
+     "name": "--start-date",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-enterprise-support-charge-summary",
+   "description": "Returns a summary of Enterprise Support data aggregated across all accounts in the Enterprise Support profile.",
+   "options": [
+    {
+     "name": "--billing-month",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-enterprise-support-contract-details",
+   "description": "Returns Enterprise Support contract details.",
+   "options": [
+    {
+     "name": "--billing-month",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-policy",
+   "description": "Returns the resource-based policy document attached to the resource in JSON format.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-billing-views",
+   "description": "Lists the billing views available for a given time period.",
+   "options": [
+    {
+     "name": "--active-time-range",
+     "args": {}
+    },
+    {
+     "name": "--arns",
+     "args": {}
+    },
+    {
+     "name": "--billing-view-types",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--names",
+     "args": {}
+    },
+    {
+     "name": "--owner-account-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--source-account-id",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-enterprise-support-linked-account-charges",
+   "description": "Returns Support-eligible spend broken down at linked account level.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {}
+    },
+    {
+     "name": "--billing-month",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-source-views-for-billing-view",
+   "description": "Lists the source views (managed Amazon Web Services billing views) associated with the billing view.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags associated with the billing view resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "redeem-credits",
+   "description": "Redeems an Amazon Web Services promotional credit code on behalf of the calling account.",
+   "options": [
+    {
+     "name": "--promo-code",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "An API operation for adding one or more tags (key-value pairs) to a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-billing-preferences",
+   "description": "Updates billing preferences for the specified feature.",
+   "options": [
+    {
+     "name": "--billing-preferences-per-key",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature",
+     "args": {
+      "suggestions": [
+       "RI_SHARING",
+       "RI_SHARING_HISTORY",
+       "CREDIT_SHARING",
+       "CREDIT_SHARING_HISTORY",
+       "CREDIT_LEVEL_SHARING",
+       "BILLING_ALERTS",
+       "CREDIT_PREFERENCE_OPTIONS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-billing-view",
+   "description": "An API to update the attributes of the billing view.",
+   "options": [
+    {
+     "name": "--arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-filter-expression",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

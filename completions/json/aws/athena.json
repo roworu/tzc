@@ -1,0 +1,1357 @@
+{
+ "name": "athena",
+ "description": "Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3.",
+ "subcommands": [
+  {
+   "name": "batch-get-named-query",
+   "description": "Returns the details of a single named query or a list of up to 50 queries, which you provide as an array of query ID strings.",
+   "options": [
+    {
+     "name": "--named-query-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-prepared-statement",
+   "description": "Returns the details of a single prepared statement or a list of up to 256 prepared statements for the array of prepared statement names that you provide.",
+   "options": [
+    {
+     "name": "--prepared-statement-names",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-query-execution",
+   "description": "Returns the details of a single query execution or a list of up to 50 query executions, which you provide as an array of query execution ID strings.",
+   "options": [
+    {
+     "name": "--query-execution-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-capacity-reservation",
+   "description": "Cancels the capacity reservation with the specified name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-capacity-reservation",
+   "description": "Creates a capacity reservation with the specified name and number of requested data processing units.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-dpus",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-data-catalog",
+   "description": "Creates (registers) a data catalog with the specified name and properties.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "LAMBDA",
+       "GLUE",
+       "HIVE",
+       "FEDERATED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-named-query",
+   "description": "Creates a named query in the specified workgroup.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--database",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-notebook",
+   "description": "Creates an empty ipynb file in the specified Apache Spark enabled workgroup.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-prepared-statement",
+   "description": "Creates a prepared statement for use with SQL queries in Athena.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--query-statement",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-presigned-notebook-url",
+   "description": "Gets an authentication token and the URL at which the notebook can be accessed.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-work-group",
+   "description": "Creates a workgroup with the specified name.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-capacity-reservation",
+   "description": "Deletes a cancelled capacity reservation.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-data-catalog",
+   "description": "Deletes a data catalog.",
+   "options": [
+    {
+     "name": "--delete-catalog-only"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-delete-catalog-only"
+    }
+   ]
+  },
+  {
+   "name": "delete-named-query",
+   "description": "Deletes the named query if you have access to the workgroup in which the query was saved.",
+   "options": [
+    {
+     "name": "--named-query-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-notebook",
+   "description": "Deletes the specified notebook.",
+   "options": [
+    {
+     "name": "--notebook-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-prepared-statement",
+   "description": "Deletes the prepared statement with the specified name from the specified workgroup.",
+   "options": [
+    {
+     "name": "--statement-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-work-group",
+   "description": "Deletes the workgroup with the specified name.",
+   "options": [
+    {
+     "name": "--no-recursive-delete-option"
+    },
+    {
+     "name": "--recursive-delete-option"
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "export-notebook",
+   "description": "Exports the specified notebook and its metadata.",
+   "options": [
+    {
+     "name": "--notebook-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-calculation-execution",
+   "description": "Describes a previously submitted calculation execution.",
+   "options": [
+    {
+     "name": "--calculation-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-calculation-execution-code",
+   "description": "Retrieves the unencrypted code that was executed for the calculation.",
+   "options": [
+    {
+     "name": "--calculation-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-calculation-execution-status",
+   "description": "Gets the status of a current calculation.",
+   "options": [
+    {
+     "name": "--calculation-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-capacity-assignment-configuration",
+   "description": "Gets the capacity assignment configuration for a capacity reservation, if one exists.",
+   "options": [
+    {
+     "name": "--capacity-reservation-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-capacity-reservation",
+   "description": "Returns information about the capacity reservation with the specified name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-data-catalog",
+   "description": "Returns the specified data catalog.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-database",
+   "description": "Returns a database object for the specified database and data catalog.",
+   "options": [
+    {
+     "name": "--catalog-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-named-query",
+   "description": "Returns information about a single query.",
+   "options": [
+    {
+     "name": "--named-query-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-notebook-metadata",
+   "description": "Retrieves notebook metadata for the specified notebook ID.",
+   "options": [
+    {
+     "name": "--notebook-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-prepared-statement",
+   "description": "Retrieves the prepared statement with the specified name from the specified workgroup.",
+   "options": [
+    {
+     "name": "--statement-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-query-execution",
+   "description": "Returns information about a single execution of a query if you have access to the workgroup in which the query ran.",
+   "options": [
+    {
+     "name": "--query-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-query-results",
+   "description": "Streams the results of a single query execution specified by QueryExecutionId from the Athena query results location in Amazon S3.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--query-execution-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-result-type",
+     "args": {
+      "suggestions": [
+       "DATA_MANIFEST",
+       "DATA_ROWS"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-query-runtime-statistics",
+   "description": "Returns query execution runtime statistics related to a single execution of a query if you have access to the workgroup in which the query ran.",
+   "options": [
+    {
+     "name": "--query-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-resource-dashboard",
+   "description": "Gets the Live UI/Persistence UI for a session.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-session",
+   "description": "Gets the full details of a previously created session, including the session status and configuration.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-session-endpoint",
+   "description": "Gets a connection endpoint and authentication token for a given session Id.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-session-status",
+   "description": "Gets the current status of a session.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-table-metadata",
+   "description": "Returns table metadata for the specified catalog, database, and table.",
+   "options": [
+    {
+     "name": "--catalog-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--table-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-work-group",
+   "description": "Returns information about the workgroup with the specified name.",
+   "options": [
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "import-notebook",
+   "description": "Imports a single ipynb file to a Spark enabled workgroup.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notebook-s3-location-uri",
+     "args": {}
+    },
+    {
+     "name": "--payload",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "IPYNB"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-application-dpu-sizes",
+   "description": "Returns the supported DPU sizes for the supported application runtimes (for example, Athena notebook version 1).",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-calculation-executions",
+   "description": "Lists the calculations that have been submitted to a session in descending order.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--state-filter",
+     "args": {
+      "suggestions": [
+       "CREATING",
+       "CREATED",
+       "QUEUED",
+       "RUNNING",
+       "CANCELING",
+       "CANCELED",
+       "COMPLETED",
+       "FAILED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-capacity-reservations",
+   "description": "Lists the capacity reservations for the current account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-data-catalogs",
+   "description": "Lists the data catalogs in the current Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-databases",
+   "description": "Lists the databases in the specified data catalog.",
+   "options": [
+    {
+     "name": "--catalog-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-engine-versions",
+   "description": "Returns a list of engine versions that are available to choose from, including the Auto option.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-executors",
+   "description": "Lists, in descending order, the executors that joined a session.",
+   "options": [
+    {
+     "name": "--executor-state-filter",
+     "args": {
+      "suggestions": [
+       "CREATING",
+       "CREATED",
+       "REGISTERED",
+       "TERMINATING",
+       "TERMINATED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-named-queries",
+   "description": "Provides a list of available query IDs only for queries saved in the specified workgroup.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-notebook-metadata",
+   "description": "Displays the notebook files for the specified workgroup in paginated format.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-notebook-sessions",
+   "description": "Lists, in descending order, the sessions that have been created in a notebook that are in an active state like CREATING, CREATED, IDLE or BUSY.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--notebook-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-prepared-statements",
+   "description": "Lists the prepared statements in the specified workgroup.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-query-executions",
+   "description": "Provides a list of available query execution IDs for the queries in the specified workgroup.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sessions",
+   "description": "Lists the sessions in a workgroup that are in an active state like CREATING, CREATED, IDLE, or BUSY.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    },
+    {
+     "name": "--state-filter",
+     "args": {
+      "suggestions": [
+       "CREATING",
+       "CREATED",
+       "IDLE",
+       "BUSY",
+       "TERMINATING",
+       "TERMINATED",
+       "DEGRADED",
+       "FAILED"
+      ]
+     }
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-table-metadata",
+   "description": "Lists the metadata for the tables in the specified data catalog database.",
+   "options": [
+    {
+     "name": "--catalog-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--database-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expression",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags associated with an Athena resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-work-groups",
+   "description": "Lists available workgroups for the account.",
+   "options": [
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--next-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-capacity-assignment-configuration",
+   "description": "Puts a new capacity assignment configuration for a specified capacity reservation.",
+   "options": [
+    {
+     "name": "--capacity-assignments",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--capacity-reservation-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-calculation-execution",
+   "description": "Submits calculations for execution within a session.",
+   "options": [
+    {
+     "name": "--calculation-configuration",
+     "args": {}
+    },
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--code-block",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-query-execution",
+   "description": "Runs the SQL query statements contained in the Query.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--engine-configuration",
+     "args": {}
+    },
+    {
+     "name": "--execution-parameters",
+     "args": {}
+    },
+    {
+     "name": "--query-execution-context",
+     "args": {}
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--result-configuration",
+     "args": {}
+    },
+    {
+     "name": "--result-reuse-configuration",
+     "args": {}
+    },
+    {
+     "name": "--work-group",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-session",
+   "description": "Creates a session for running calculations within a workgroup.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--copy-work-group-tags"
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--engine-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-role",
+     "args": {}
+    },
+    {
+     "name": "--monitoring-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-copy-work-group-tags"
+    },
+    {
+     "name": "--notebook-version",
+     "args": {}
+    },
+    {
+     "name": "--session-idle-timeout-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-calculation-execution",
+   "description": "Requests the cancellation of a calculation.",
+   "options": [
+    {
+     "name": "--calculation-execution-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-query-execution",
+   "description": "Stops a query execution.",
+   "options": [
+    {
+     "name": "--query-execution-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds one or more tags to an Athena resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-session",
+   "description": "Terminates an active session.",
+   "options": [
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from an Athena resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-capacity-reservation",
+   "description": "Updates the number of requested data processing units for the capacity reservation with the specified name.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-dpus",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-data-catalog",
+   "description": "Updates the data catalog that has the specified name.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "LAMBDA",
+       "GLUE",
+       "HIVE",
+       "FEDERATED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-named-query",
+   "description": "Updates a NamedQuery object.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--named-query-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--query-string",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-notebook",
+   "description": "Updates the contents of a Spark notebook.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--notebook-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--payload",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "IPYNB"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-notebook-metadata",
+   "description": "Updates the metadata for a notebook.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notebook-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-prepared-statement",
+   "description": "Updates a prepared statement.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--query-statement",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--statement-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-work-group",
+   "description": "Updates the workgroup with the specified name.",
+   "options": [
+    {
+     "name": "--configuration-updates",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     }
+    },
+    {
+     "name": "--work-group",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

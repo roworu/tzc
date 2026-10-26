@@ -1,0 +1,150 @@
+{
+ "name": "iot-jobs-data",
+ "description": "IoT Jobs is a service that allows you to define a set of jobs \u2014 remote operations that are sent to and executed on one or more devices connected to Amazon Web Services IoT Core.",
+ "subcommands": [
+  {
+   "name": "describe-job-execution",
+   "description": "Gets details of a job execution.",
+   "options": [
+    {
+     "name": "--execution-number",
+     "args": {}
+    },
+    {
+     "name": "--include-job-document"
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-job-document"
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-pending-job-executions",
+   "description": "Gets the list of all jobs for a thing that are not in a terminal status.",
+   "options": [
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-command-execution",
+   "description": "Using the command created with the CreateCommand API, start a command execution on a specific device.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--command-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-timeout-seconds",
+     "args": {}
+    },
+    {
+     "name": "--parameters",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-next-pending-job-execution",
+   "description": "Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a thing.",
+   "options": [
+    {
+     "name": "--status-details",
+     "args": {}
+    },
+    {
+     "name": "--step-timeout-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-job-execution",
+   "description": "Updates the status of a job execution.",
+   "options": [
+    {
+     "name": "--execution-number",
+     "args": {}
+    },
+    {
+     "name": "--expected-version",
+     "args": {}
+    },
+    {
+     "name": "--include-job-document"
+    },
+    {
+     "name": "--include-job-execution-state"
+    },
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-include-job-document"
+    },
+    {
+     "name": "--no-include-job-execution-state"
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "IN_PROGRESS",
+       "SUCCEEDED",
+       "FAILED",
+       "TIMED_OUT",
+       "REJECTED",
+       "REMOVED",
+       "CANCELED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--status-details",
+     "args": {}
+    },
+    {
+     "name": "--step-timeout-in-minutes",
+     "args": {}
+    },
+    {
+     "name": "--thing-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

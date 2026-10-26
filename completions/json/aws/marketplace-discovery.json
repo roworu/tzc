@@ -1,0 +1,188 @@
+{
+ "name": "marketplace-discovery",
+ "description": "The AWS Marketplace Discovery API provides programmatic access to the AWS Marketplace catalog, including searching and browsing listings, retrieving product details and fulfillment options, and accessing public and private offer pricing and terms.",
+ "subcommands": [
+  {
+   "name": "get-listing",
+   "description": "Provides details about a listing, such as descriptions, badges, categories, pricing model summaries, reviews, and associated products and offers.",
+   "options": [
+    {
+     "name": "--listing-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-offer",
+   "description": "Provides details about an offer, such as the pricing model, seller of record, availability dates, badges, and associated products.",
+   "options": [
+    {
+     "name": "--offer-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-offer-set",
+   "description": "Provides details about an offer set, which is a bundle of offers across multiple products.",
+   "options": [
+    {
+     "name": "--offer-set-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-offer-terms",
+   "description": "Returns the terms attached to an offer, such as pricing terms (usage-based, contract, BYOL, free trial), legal terms, payment schedules, validity terms, support terms, and renewal terms.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--offer-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-product",
+   "description": "Provides details about a product, such as descriptions, highlights, categories, fulfillment option summaries, promotional media, and seller engagement options.",
+   "options": [
+    {
+     "name": "--product-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-fulfillment-options",
+   "description": "Returns the fulfillment options available for a product, including deployment details such as version information, operating systems, usage instructions, and release notes.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--product-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-purchase-options",
+   "description": "Returns the purchase options (offers and offer sets) available to the buyer.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-facets",
+   "description": "Returns available facet values for filtering listings, such as categories, pricing models, fulfillment option types, publishers, and customer ratings.",
+   "options": [
+    {
+     "name": "--facet-types",
+     "args": {}
+    },
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--search-text",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "search-listings",
+   "description": "Returns a list of product listings based on search criteria and filters.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--search-text",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "RELEVANCE",
+       "AVERAGE_CUSTOMER_RATING"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "DESCENDING",
+       "ASCENDING"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

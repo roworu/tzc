@@ -1,0 +1,256 @@
+{
+ "name": "snow-device-management",
+ "description": "Amazon Web Services Snow Device Management documentation.",
+ "subcommands": [
+  {
+   "name": "cancel-task",
+   "description": "Sends a cancel request for a specified task.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-task",
+   "description": "Instructs one or more devices to start a task, such as unlocking or rebooting.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--command",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--targets",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-device",
+   "description": "Checks device-specific information, such as the device type, software version, IP addresses, and lock status.",
+   "options": [
+    {
+     "name": "--managed-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-device-ec2-instances",
+   "description": "Checks the current state of the Amazon EC2 instances.",
+   "options": [
+    {
+     "name": "--instance-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--managed-device-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-execution",
+   "description": "Checks the status of a remote task running on one or more target devices.",
+   "options": [
+    {
+     "name": "--managed-device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-task",
+   "description": "Checks the metadata for a given task on a device.",
+   "options": [
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-device-resources",
+   "description": "Returns a list of the Amazon Web Services resources available for a device.",
+   "options": [
+    {
+     "name": "--managed-device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--type",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-devices",
+   "description": "Returns a list of all devices on your Amazon Web Services account that have Amazon Web Services Snow Device Management enabled in the Amazon Web Services Region where the command is run.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-executions",
+   "description": "Returns the status of tasks for one or more target devices.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "QUEUED",
+       "IN_PROGRESS",
+       "CANCELED",
+       "FAILED",
+       "SUCCEEDED",
+       "REJECTED",
+       "TIMED_OUT"
+      ]
+     }
+    },
+    {
+     "name": "--task-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags for a managed device or task.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tasks",
+   "description": "Returns a list of tasks that can be filtered by state.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "IN_PROGRESS",
+       "CANCELED",
+       "COMPLETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or replaces tags on a device or task.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a tag from a device or task.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

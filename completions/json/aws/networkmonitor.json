@@ -1,0 +1,242 @@
+{
+ "name": "networkmonitor",
+ "description": "Amazon CloudWatch Network Monitor is an Amazon Web Services active network monitoring service that identifies if a network issues exists within the Amazon Web Services network or your own company network.",
+ "subcommands": [
+  {
+   "name": "create-monitor",
+   "description": "Creates a monitor between a source subnet and destination IP address.",
+   "options": [
+    {
+     "name": "--aggregation-period",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--probes",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-probe",
+   "description": "Create a probe within a monitor.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--probe",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-monitor",
+   "description": "Deletes a specified monitor.",
+   "options": [
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-probe",
+   "description": "Deletes the specified probe.",
+   "options": [
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--probe-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-monitor",
+   "description": "Returns details about a specific monitor.",
+   "options": [
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-probe",
+   "description": "Returns the details about a probe.",
+   "options": [
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--probe-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-monitors",
+   "description": "Returns a list of all of your monitors.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--state",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists the tags assigned to this resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds key-value pairs to a monitor or probe.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes a key-value pair from a monitor or probe.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-monitor",
+   "description": "Updates the aggregationPeriod for a monitor.",
+   "options": [
+    {
+     "name": "--aggregation-period",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-probe",
+   "description": "Updates a monitor probe.",
+   "options": [
+    {
+     "name": "--destination",
+     "args": {}
+    },
+    {
+     "name": "--destination-port",
+     "args": {}
+    },
+    {
+     "name": "--monitor-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--packet-size",
+     "args": {}
+    },
+    {
+     "name": "--probe-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--protocol",
+     "args": {
+      "suggestions": [
+       "TCP",
+       "ICMP"
+      ]
+     }
+    },
+    {
+     "name": "--state",
+     "args": {
+      "suggestions": [
+       "PENDING",
+       "ACTIVE",
+       "INACTIVE",
+       "ERROR",
+       "DELETING",
+       "DELETED"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

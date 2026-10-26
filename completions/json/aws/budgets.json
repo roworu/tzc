@@ -1,0 +1,717 @@
+{
+ "name": "budgets",
+ "description": "Use the Amazon Web Services Budgets API to plan your service usage, service costs, and instance reservations.",
+ "subcommands": [
+  {
+   "name": "create-budget",
+   "description": "Creates a budget and, if included, notifications and subscribers.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notifications-with-subscribers",
+     "args": {}
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-budget-action",
+   "description": "Creates a budget action.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-threshold",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-type",
+     "args": {
+      "suggestions": [
+       "APPLY_IAM_POLICY",
+       "APPLY_SCP_POLICY",
+       "RUN_SSM_DOCUMENTS"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--approval-model",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "MANUAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--definition",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification-type",
+     "args": {
+      "suggestions": [
+       "ACTUAL",
+       "FORECASTED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {}
+    },
+    {
+     "name": "--subscribers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-notification",
+   "description": "Creates a notification.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscribers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-subscriber",
+   "description": "Creates a subscriber.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscriber",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-budget",
+   "description": "Deletes a budget.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-budget-action",
+   "description": "Deletes a budget action.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-notification",
+   "description": "Deletes a notification.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-subscriber",
+   "description": "Deletes a subscriber.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--subscriber",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-budget",
+   "description": "Describes a budget.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-show-filter-expression"
+    },
+    {
+     "name": "--show-filter-expression"
+    }
+   ]
+  },
+  {
+   "name": "describe-budget-action",
+   "description": "Describes a budget action detail.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-budget-action-histories",
+   "description": "Describes a budget action history detail.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-budget-actions-for-account",
+   "description": "Describes all of the budget actions for an account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-budget-actions-for-budget",
+   "description": "Describes all of the budget actions for a budget.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-budget-notifications-for-account",
+   "description": "Lists the budget names and notifications that are associated with an account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-budget-performance-history",
+   "description": "Describes the history for DAILY, MONTHLY, and QUARTERLY budgets.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-period",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-budgets",
+   "description": "Lists the budgets that are associated with an account.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-show-filter-expression"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--show-filter-expression"
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-notifications-for-budget",
+   "description": "Lists the notifications that are associated with a budget.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-subscribers-for-notification",
+   "description": "Lists the subscribers that are associated with a notification.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--notification",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "execute-budget-action",
+   "description": "Executes a budget action.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--execution-type",
+     "args": {
+      "suggestions": [
+       "APPROVE_BUDGET_ACTION",
+       "RETRY_BUDGET_ACTION",
+       "REVERSE_BUDGET_ACTION",
+       "RESET_BUDGET_ACTION"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags associated with a budget or budget action resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Creates tags for a budget or budget action resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes tags associated with a budget or budget action resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-budget",
+   "description": "Updates a budget.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-budget",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-budget-action",
+   "description": "Updates a budget action.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--action-threshold",
+     "args": {}
+    },
+    {
+     "name": "--approval-model",
+     "args": {
+      "suggestions": [
+       "AUTOMATIC",
+       "MANUAL"
+      ]
+     }
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--definition",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {}
+    },
+    {
+     "name": "--notification-type",
+     "args": {
+      "suggestions": [
+       "ACTUAL",
+       "FORECASTED"
+      ]
+     }
+    },
+    {
+     "name": "--subscribers",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-notification",
+   "description": "Updates a notification.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-notification",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--old-notification",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-subscriber",
+   "description": "Updates a subscriber.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--budget-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--new-subscriber",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--notification",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--old-subscriber",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

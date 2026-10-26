@@ -1,0 +1,588 @@
+{
+ "name": "tnb",
+ "description": "Amazon Web Services Telco Network Builder (TNB) is a network automation service that helps you deploy and manage telecom networks.",
+ "subcommands": [
+  {
+   "name": "cancel-sol-network-operation",
+   "description": "Cancels a network operation.",
+   "options": [
+    {
+     "name": "--ns-lcm-op-occ-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-sol-function-package",
+   "description": "Creates a function package.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-sol-network-instance",
+   "description": "Creates a network instance.",
+   "options": [
+    {
+     "name": "--ns-description",
+     "args": {}
+    },
+    {
+     "name": "--ns-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nsd-info-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-sol-network-package",
+   "description": "Creates a network package.",
+   "options": [
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-sol-function-package",
+   "description": "Deletes a function package.",
+   "options": [
+    {
+     "name": "--vnf-pkg-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-sol-network-instance",
+   "description": "Deletes a network instance.",
+   "options": [
+    {
+     "name": "--ns-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-sol-network-package",
+   "description": "Deletes network package.",
+   "options": [
+    {
+     "name": "--nsd-info-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sol-function-instance",
+   "description": "Gets the details of a network function instance, including the instantiation state and metadata from the function package descriptor in the network function package.",
+   "options": [
+    {
+     "name": "--vnf-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sol-function-package",
+   "description": "Gets the details of an individual function package, such as the operational state and whether the package is in use.",
+   "options": [
+    {
+     "name": "--vnf-pkg-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sol-function-package-content",
+   "description": "Gets the contents of a function package.",
+   "options": [
+    {
+     "name": "--accept",
+     "args": {
+      "suggestions": [
+       "application/zip"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vnf-pkg-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sol-function-package-descriptor",
+   "description": "Gets a function package descriptor in a function package.",
+   "options": [
+    {
+     "name": "--accept",
+     "args": {
+      "suggestions": [
+       "text/plain"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vnf-pkg-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sol-network-instance",
+   "description": "Gets the details of the network instance.",
+   "options": [
+    {
+     "name": "--ns-instance-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sol-network-operation",
+   "description": "Gets the details of a network operation, including the tasks involved in the network operation and the status of the tasks.",
+   "options": [
+    {
+     "name": "--ns-lcm-op-occ-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sol-network-package",
+   "description": "Gets the details of a network package.",
+   "options": [
+    {
+     "name": "--nsd-info-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sol-network-package-content",
+   "description": "Gets the contents of a network package.",
+   "options": [
+    {
+     "name": "--accept",
+     "args": {
+      "suggestions": [
+       "application/zip"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--nsd-info-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-sol-network-package-descriptor",
+   "description": "Gets the content of the network service descriptor.",
+   "options": [
+    {
+     "name": "--nsd-info-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "instantiate-sol-network-instance",
+   "description": "Instantiates a network instance.",
+   "options": [
+    {
+     "name": "--additional-params-for-ns",
+     "args": {}
+    },
+    {
+     "name": "--dry-run"
+    },
+    {
+     "name": "--no-dry-run"
+    },
+    {
+     "name": "--ns-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sol-function-instances",
+   "description": "Lists network function instances.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sol-function-packages",
+   "description": "Lists information about function packages.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sol-network-instances",
+   "description": "Lists your network instances.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sol-network-operations",
+   "description": "Lists details for a network operation, including when the operation started and the status of the operation.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--ns-instance-id",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sol-network-packages",
+   "description": "Lists network packages.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags for AWS TNB resources.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-sol-function-package-content",
+   "description": "Uploads the contents of a function package.",
+   "options": [
+    {
+     "name": "--content-type",
+     "args": {
+      "suggestions": [
+       "application/zip"
+      ]
+     }
+    },
+    {
+     "name": "--file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vnf-pkg-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-sol-network-package-content",
+   "description": "Uploads the contents of a network package.",
+   "options": [
+    {
+     "name": "--content-type",
+     "args": {
+      "suggestions": [
+       "application/zip"
+      ]
+     }
+    },
+    {
+     "name": "--file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nsd-info-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Tags an AWS TNB resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "terminate-sol-network-instance",
+   "description": "Terminates a network instance.",
+   "options": [
+    {
+     "name": "--ns-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Untags an AWS TNB resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-sol-function-package",
+   "description": "Updates the operational state of function package.",
+   "options": [
+    {
+     "name": "--operational-state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--vnf-pkg-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-sol-network-instance",
+   "description": "Update a network instance.",
+   "options": [
+    {
+     "name": "--modify-vnf-info-data",
+     "args": {}
+    },
+    {
+     "name": "--ns-instance-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--update-ns",
+     "args": {}
+    },
+    {
+     "name": "--update-type",
+     "args": {
+      "suggestions": [
+       "MODIFY_VNF_INFORMATION",
+       "UPDATE_NS"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-sol-network-package",
+   "description": "Updates the operational state of a network package.",
+   "options": [
+    {
+     "name": "--nsd-info-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nsd-operational-state",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-sol-function-package-content",
+   "description": "Validates function package content.",
+   "options": [
+    {
+     "name": "--content-type",
+     "args": {
+      "suggestions": [
+       "application/zip"
+      ]
+     }
+    },
+    {
+     "name": "--file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vnf-pkg-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "validate-sol-network-package-content",
+   "description": "Validates network package content.",
+   "options": [
+    {
+     "name": "--content-type",
+     "args": {
+      "suggestions": [
+       "application/zip"
+      ]
+     }
+    },
+    {
+     "name": "--file",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--nsd-info-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

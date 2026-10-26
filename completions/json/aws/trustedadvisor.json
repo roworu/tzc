@@ -1,0 +1,614 @@
+{
+ "name": "trustedadvisor",
+ "description": "TrustedAdvisor Public API",
+ "subcommands": [
+  {
+   "name": "batch-update-recommendation-resource-exclusion",
+   "description": "Update one or more exclusion statuses for a list of recommendation resources.",
+   "options": [
+    {
+     "name": "--recommendation-resource-exclusions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-organization-recommendation",
+   "description": "Get a specific recommendation within an AWS Organizations organization.",
+   "options": [
+    {
+     "name": "--organization-recommendation-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-recommendation",
+   "description": "Get a specific Recommendation.",
+   "options": [
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "en",
+       "ja",
+       "zh",
+       "fr",
+       "de",
+       "ko",
+       "zh_TW",
+       "it",
+       "es",
+       "pt_BR",
+       "id"
+      ]
+     }
+    },
+    {
+     "name": "--recommendation-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-checks",
+   "description": "List a filterable set of Checks.",
+   "options": [
+    {
+     "name": "--aws-service",
+     "args": {}
+    },
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "en",
+       "ja",
+       "zh",
+       "fr",
+       "de",
+       "ko",
+       "zh_TW",
+       "it",
+       "es",
+       "pt_BR",
+       "id"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pillar",
+     "args": {
+      "suggestions": [
+       "cost_optimizing",
+       "performance",
+       "security",
+       "service_limits",
+       "fault_tolerance",
+       "operational_excellence"
+      ]
+     }
+    },
+    {
+     "name": "--source",
+     "args": {
+      "suggestions": [
+       "aws_config",
+       "compute_optimizer",
+       "cost_explorer",
+       "lse",
+       "manual",
+       "pse",
+       "rds",
+       "resilience",
+       "resilience_hub",
+       "security_hub",
+       "stir",
+       "ta_check",
+       "well_architected",
+       "cost_optimization_hub"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-organization-recommendation-accounts",
+   "description": "Lists the accounts that own the resources for an organization aggregate recommendation.",
+   "options": [
+    {
+     "name": "--affected-account-id",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-recommendation-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-organization-recommendation-resources",
+   "description": "List Resources of a Recommendation within an Organization.",
+   "options": [
+    {
+     "name": "--affected-account-id",
+     "args": {}
+    },
+    {
+     "name": "--exclusion-status",
+     "args": {
+      "suggestions": [
+       "excluded",
+       "included"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--organization-recommendation-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--region-code",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ok",
+       "warning",
+       "error"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-organization-recommendations",
+   "description": "List a filterable set of Recommendations within an Organization.",
+   "options": [
+    {
+     "name": "--after-last-updated-at",
+     "args": {}
+    },
+    {
+     "name": "--aws-service",
+     "args": {}
+    },
+    {
+     "name": "--before-last-updated-at",
+     "args": {}
+    },
+    {
+     "name": "--check-identifier",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pillar",
+     "args": {
+      "suggestions": [
+       "cost_optimizing",
+       "performance",
+       "security",
+       "service_limits",
+       "fault_tolerance",
+       "operational_excellence"
+      ]
+     }
+    },
+    {
+     "name": "--source",
+     "args": {
+      "suggestions": [
+       "aws_config",
+       "compute_optimizer",
+       "cost_explorer",
+       "lse",
+       "manual",
+       "pse",
+       "rds",
+       "resilience",
+       "resilience_hub",
+       "security_hub",
+       "stir",
+       "ta_check",
+       "well_architected",
+       "cost_optimization_hub"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ok",
+       "warning",
+       "error"
+      ]
+     }
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "standard",
+       "priority"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-recommendation-resources",
+   "description": "List Resources of a Recommendation.",
+   "options": [
+    {
+     "name": "--exclusion-status",
+     "args": {
+      "suggestions": [
+       "excluded",
+       "included"
+      ]
+     }
+    },
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "en",
+       "ja",
+       "zh",
+       "fr",
+       "de",
+       "ko",
+       "zh_TW",
+       "it",
+       "es",
+       "pt_BR",
+       "id"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recommendation-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--region-code",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ok",
+       "warning",
+       "error"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-recommendations",
+   "description": "List a filterable set of Recommendations.",
+   "options": [
+    {
+     "name": "--after-last-updated-at",
+     "args": {}
+    },
+    {
+     "name": "--aws-service",
+     "args": {}
+    },
+    {
+     "name": "--before-last-updated-at",
+     "args": {}
+    },
+    {
+     "name": "--check-identifier",
+     "args": {}
+    },
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "en",
+       "ja",
+       "zh",
+       "fr",
+       "de",
+       "ko",
+       "zh_TW",
+       "it",
+       "es",
+       "pt_BR",
+       "id"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pillar",
+     "args": {
+      "suggestions": [
+       "cost_optimizing",
+       "performance",
+       "security",
+       "service_limits",
+       "fault_tolerance",
+       "operational_excellence"
+      ]
+     }
+    },
+    {
+     "name": "--source",
+     "args": {
+      "suggestions": [
+       "aws_config",
+       "compute_optimizer",
+       "cost_explorer",
+       "lse",
+       "manual",
+       "pse",
+       "rds",
+       "resilience",
+       "resilience_hub",
+       "security_hub",
+       "stir",
+       "ta_check",
+       "well_architected",
+       "cost_optimization_hub"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ok",
+       "warning",
+       "error"
+      ]
+     }
+    },
+    {
+     "name": "--type",
+     "args": {
+      "suggestions": [
+       "standard",
+       "priority"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-recommendations-for-resource",
+   "description": "List all Trusted Advisor recommendations for a given AWS resource ARN.",
+   "options": [
+    {
+     "name": "--aws-resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--check-arn",
+     "args": {}
+    },
+    {
+     "name": "--language",
+     "args": {
+      "suggestions": [
+       "en",
+       "ja",
+       "zh",
+       "fr",
+       "de",
+       "ko",
+       "zh_TW",
+       "it",
+       "es",
+       "pt_BR",
+       "id"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--pillar",
+     "args": {
+      "suggestions": [
+       "cost_optimizing",
+       "performance",
+       "security",
+       "service_limits",
+       "fault_tolerance",
+       "operational_excellence"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ok",
+       "warning",
+       "error"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-organization-recommendation-lifecycle",
+   "description": "Update the lifecycle of a Recommendation within an Organization.",
+   "options": [
+    {
+     "name": "--lifecycle-stage",
+     "args": {
+      "suggestions": [
+       "pending_response",
+       "in_progress",
+       "dismissed",
+       "resolved"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--organization-recommendation-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-reason",
+     "args": {}
+    },
+    {
+     "name": "--update-reason-code",
+     "args": {
+      "suggestions": [
+       "non_critical_account",
+       "temporary_account",
+       "valid_business_case",
+       "other_methods_available",
+       "low_priority",
+       "not_applicable",
+       "other"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-recommendation-lifecycle",
+   "description": "Update the lifecyle of a Recommendation.",
+   "options": [
+    {
+     "name": "--lifecycle-stage",
+     "args": {
+      "suggestions": [
+       "pending_response",
+       "in_progress",
+       "dismissed",
+       "resolved"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--recommendation-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--update-reason",
+     "args": {}
+    },
+    {
+     "name": "--update-reason-code",
+     "args": {
+      "suggestions": [
+       "non_critical_account",
+       "temporary_account",
+       "valid_business_case",
+       "other_methods_available",
+       "low_priority",
+       "not_applicable",
+       "other"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

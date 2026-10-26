@@ -1,0 +1,515 @@
+{
+ "name": "partnercentral-channel",
+ "description": "AWS Partner Central Channel service for managing partner relationships, handshakes, and program management accounts.",
+ "subcommands": [
+  {
+   "name": "accept-channel-handshake",
+   "description": "Accepts a pending channel handshake request from another AWS account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-channel-handshake",
+   "description": "Cancels a pending channel handshake request.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-channel-handshake",
+   "description": "Creates a new channel handshake request to establish a partnership with another AWS account.",
+   "options": [
+    {
+     "name": "--associated-resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--handshake-type",
+     "args": {
+      "suggestions": [
+       "START_SERVICE_PERIOD",
+       "REVOKE_SERVICE_PERIOD",
+       "PROGRAM_MANAGEMENT_ACCOUNT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--payload",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-program-management-account",
+   "description": "Creates a new program management account for managing partner relationships.",
+   "options": [
+    {
+     "name": "--account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program",
+     "args": {
+      "suggestions": [
+       "SOLUTION_PROVIDER",
+       "DISTRIBUTION",
+       "DISTRIBUTION_SELLER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-relationship",
+   "description": "Creates a new partner relationship between accounts.",
+   "options": [
+    {
+     "name": "--associated-account-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--association-type",
+     "args": {
+      "suggestions": [
+       "DOWNSTREAM_SELLER",
+       "END_CUSTOMER",
+       "INTERNAL"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-management-account-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requested-support-plan",
+     "args": {}
+    },
+    {
+     "name": "--resale-account-model",
+     "args": {
+      "suggestions": [
+       "DISTRIBUTOR",
+       "END_CUSTOMER",
+       "SOLUTION_PROVIDER"
+      ]
+     }
+    },
+    {
+     "name": "--sector",
+     "args": {
+      "suggestions": [
+       "COMMERCIAL",
+       "GOVERNMENT",
+       "GOVERNMENT_EXCEPTION"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-program-management-account",
+   "description": "Deletes a program management account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-relationship",
+   "description": "Deletes a partner relationship.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-management-account-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-relationship",
+   "description": "Retrieves details of a specific partner relationship.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-management-account-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-channel-handshakes",
+   "description": "Lists channel handshakes based on specified criteria.",
+   "options": [
+    {
+     "name": "--associated-resource-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--handshake-type",
+     "args": {
+      "suggestions": [
+       "START_SERVICE_PERIOD",
+       "REVOKE_SERVICE_PERIOD",
+       "PROGRAM_MANAGEMENT_ACCOUNT"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--handshake-type-filters",
+     "args": {}
+    },
+    {
+     "name": "--handshake-type-sort",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--participant-type",
+     "args": {
+      "suggestions": [
+       "SENDER",
+       "RECEIVER"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--statuses",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-program-management-accounts",
+   "description": "Lists program management accounts based on specified criteria.",
+   "options": [
+    {
+     "name": "--account-ids",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--programs",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--statuses",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-relationships",
+   "description": "Lists partner relationships based on specified criteria.",
+   "options": [
+    {
+     "name": "--associated-account-ids",
+     "args": {}
+    },
+    {
+     "name": "--association-types",
+     "args": {}
+    },
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-names",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--program-management-account-identifiers",
+     "args": {}
+    },
+    {
+     "name": "--sort",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists tags associated with a specific resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "reject-channel-handshake",
+   "description": "Rejects a pending channel handshake request.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or updates tags for a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes tags from a specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-program-management-account",
+   "description": "Updates the properties of a program management account.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-relationship",
+   "description": "Updates the properties of a partner relationship.",
+   "options": [
+    {
+     "name": "--catalog",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--display-name",
+     "args": {}
+    },
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--program-management-account-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--requested-support-plan",
+     "args": {}
+    },
+    {
+     "name": "--revision",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

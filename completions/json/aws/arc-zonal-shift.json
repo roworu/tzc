@@ -1,0 +1,297 @@
+{
+ "name": "arc-zonal-shift",
+ "description": "Welcome to the API Reference Guide for zonal shift and zonal autoshift in Amazon Application Recovery Controller (ARC).",
+ "subcommands": [
+  {
+   "name": "cancel-practice-run",
+   "description": "Cancel an in-progress practice run zonal shift in Amazon Application Recovery Controller.",
+   "options": [
+    {
+     "name": "--zonal-shift-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "cancel-zonal-shift",
+   "description": "Cancel a zonal shift in Amazon Application Recovery Controller.",
+   "options": [
+    {
+     "name": "--zonal-shift-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-practice-run-configuration",
+   "description": "A practice run configuration for zonal autoshift is required when you enable zonal autoshift.",
+   "options": [
+    {
+     "name": "--allowed-windows",
+     "args": {}
+    },
+    {
+     "name": "--blocked-dates",
+     "args": {}
+    },
+    {
+     "name": "--blocked-windows",
+     "args": {}
+    },
+    {
+     "name": "--blocking-alarms",
+     "args": {}
+    },
+    {
+     "name": "--outcome-alarms",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-practice-run-configuration",
+   "description": "Deletes the practice run configuration for a resource.",
+   "options": [
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-autoshift-observer-notification-status",
+   "description": "Returns the status of the autoshift observer notification."
+  },
+  {
+   "name": "get-managed-resource",
+   "description": "Get information about a resource that's been registered for zonal shifts with Amazon Application Recovery Controller in this Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-autoshifts",
+   "description": "Returns the autoshifts for an Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "COMPLETED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-managed-resources",
+   "description": "Lists all the resources in your Amazon Web Services account in this Amazon Web Services Region that are managed for zonal shifts in Amazon Application Recovery Controller, and information about them.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-zonal-shifts",
+   "description": "Lists all active and completed zonal shifts in Amazon Application Recovery Controller in your Amazon Web Services account in this Amazon Web Services Region.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ACTIVE",
+       "EXPIRED",
+       "CANCELED"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "start-practice-run",
+   "description": "Start an on-demand practice run zonal shift in Amazon Application Recovery Controller.",
+   "options": [
+    {
+     "name": "--away-from",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--comment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-zonal-shift",
+   "description": "You start a zonal shift to temporarily move load balancer traffic away from an Availability Zone in an Amazon Web Services Region, to help your application recover immediately, for example, from a developer's bad code deployment or from an Amazon Web Services infrastructure failure in a single Availability Zone.",
+   "options": [
+    {
+     "name": "--away-from",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--comment",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--expires-in",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-autoshift-observer-notification-status",
+   "description": "Update the status of autoshift observer notification.",
+   "options": [
+    {
+     "name": "--status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-practice-run-configuration",
+   "description": "Update a practice run configuration to change one or more of the following: add, change, or remove the blocking alarm; change the outcome alarm; or add, change, or remove blocking dates or time windows.",
+   "options": [
+    {
+     "name": "--allowed-windows",
+     "args": {}
+    },
+    {
+     "name": "--blocked-dates",
+     "args": {}
+    },
+    {
+     "name": "--blocked-windows",
+     "args": {}
+    },
+    {
+     "name": "--blocking-alarms",
+     "args": {}
+    },
+    {
+     "name": "--outcome-alarms",
+     "args": {}
+    },
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-zonal-autoshift-configuration",
+   "description": "The zonal autoshift configuration for a resource includes the practice run configuration and the status for running autoshifts, zonal autoshift status.",
+   "options": [
+    {
+     "name": "--resource-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--zonal-autoshift-status",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-zonal-shift",
+   "description": "Update an active zonal shift in Amazon Application Recovery Controller in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--comment",
+     "args": {}
+    },
+    {
+     "name": "--expires-in",
+     "args": {}
+    },
+    {
+     "name": "--zonal-shift-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

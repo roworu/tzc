@@ -1,0 +1,157 @@
+{
+ "name": "sagemaker-featurestore-runtime",
+ "description": "Contains all data plane API operations and data types for the Amazon SageMaker Feature Store.",
+ "subcommands": [
+  {
+   "name": "batch-get-record",
+   "description": "Retrieves a batch of Records from a FeatureGroup.",
+   "options": [
+    {
+     "name": "--expiration-time-response",
+     "args": {
+      "suggestions": [
+       "Enabled",
+       "Disabled"
+      ]
+     }
+    },
+    {
+     "name": "--identifiers",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-write-record",
+   "description": "Writes a batch of Records to one or more FeatureGroups.",
+   "options": [
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ttl-duration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-record",
+   "description": "Deletes a Record from a FeatureGroup in the OnlineStore.",
+   "options": [
+    {
+     "name": "--deletion-mode",
+     "args": {
+      "suggestions": [
+       "SoftDelete",
+       "HardDelete"
+      ]
+     }
+    },
+    {
+     "name": "--event-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--record-identifier-value-as-string",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-stores",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-record",
+   "description": "Use for OnlineStore serving from a FeatureStore.",
+   "options": [
+    {
+     "name": "--expiration-time-response",
+     "args": {
+      "suggestions": [
+       "Enabled",
+       "Disabled"
+      ]
+     }
+    },
+    {
+     "name": "--feature-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--feature-names",
+     "args": {}
+    },
+    {
+     "name": "--record-identifier-value-as-string",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-records",
+   "description": "Lists the RecordIdentifier values of all records stored in a FeatureGroup's OnlineStore.",
+   "options": [
+    {
+     "name": "--feature-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-soft-deleted-records"
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--no-include-soft-deleted-records"
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-record",
+   "description": "The PutRecord API is used to ingest a list of Records into your feature group.",
+   "options": [
+    {
+     "name": "--feature-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--record",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--target-stores",
+     "args": {}
+    },
+    {
+     "name": "--ttl-duration",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,904 @@
+{
+ "name": "codecatalyst",
+ "description": "Welcome to the Amazon CodeCatalyst API reference.",
+ "subcommands": [
+  {
+   "name": "create-access-token",
+   "description": "Creates a personal access token (PAT) for the current user.",
+   "options": [
+    {
+     "name": "--expires-time",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-dev-environment",
+   "description": "Creates a Dev Environment in Amazon CodeCatalyst, a cloud-based development environment that you can use to quickly work on the code stored in the source repositories of your project.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--ides",
+     "args": {}
+    },
+    {
+     "name": "--inactivity-timeout-minutes",
+     "args": {}
+    },
+    {
+     "name": "--instance-type",
+     "args": {
+      "suggestions": [
+       "dev.standard1.small",
+       "dev.standard1.medium",
+       "dev.standard1.large",
+       "dev.standard1.xlarge"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--persistent-storage",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--repositories",
+     "args": {}
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--vpc-connection-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-project",
+   "description": "Creates a project in a specified space.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--display-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-source-repository",
+   "description": "Creates an empty Git-based source repository in a specified project.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-source-repository-branch",
+   "description": "Creates a branch in a specified source repository in Amazon CodeCatalyst.",
+   "options": [
+    {
+     "name": "--head-commit-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-access-token",
+   "description": "Deletes a specified personal access token (PAT).",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-dev-environment",
+   "description": "Deletes a Dev Environment.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project",
+   "description": "Deletes a project in a space.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-source-repository",
+   "description": "Deletes a source repository in Amazon CodeCatalyst.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-space",
+   "description": "Deletes a space.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-dev-environment",
+   "description": "Returns information about a Dev Environment for a source repository in a project.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-project",
+   "description": "Returns information about a project.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-source-repository",
+   "description": "Returns information about a source repository.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-source-repository-clone-urls",
+   "description": "Returns information about the URLs that can be used with a Git client to clone a source repository.",
+   "options": [
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-space",
+   "description": "Returns information about an space.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-subscription",
+   "description": "Returns information about the Amazon Web Services account used for billing purposes and the billing plan for the space.",
+   "options": [
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-user-details",
+   "description": "Returns information about a user.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {}
+    },
+    {
+     "name": "--user-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-workflow",
+   "description": "Returns information about a workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-workflow-run",
+   "description": "Returns information about a specified run of a workflow.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-access-tokens",
+   "description": "Lists all personal access tokens (PATs) associated with the user who calls the API.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dev-environment-sessions",
+   "description": "Retrieves a list of active sessions for a Dev Environment in a project.",
+   "options": [
+    {
+     "name": "--dev-environment-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-dev-environments",
+   "description": "Retrieves a list of Dev Environments in a project.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {}
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-event-logs",
+   "description": "Retrieves a list of events that occurred during a specific time in a space.",
+   "options": [
+    {
+     "name": "--end-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--event-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--start-time",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-projects",
+   "description": "Retrieves a list of projects.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-source-repositories",
+   "description": "Retrieves a list of source repositories in a project.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-source-repository-branches",
+   "description": "Retrieves a list of branches in a specified source repository.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-repository-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-spaces",
+   "description": "Retrieves a list of spaces.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflow-runs",
+   "description": "Retrieves a list of workflow runs of a specified workflow.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--workflow-id",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-workflows",
+   "description": "Retrieves a list of workflows in a specified project.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sort-by",
+     "args": {}
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-dev-environment",
+   "description": "Starts a specified Dev Environment and puts it into an active state.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ides",
+     "args": {}
+    },
+    {
+     "name": "--inactivity-timeout-minutes",
+     "args": {}
+    },
+    {
+     "name": "--instance-type",
+     "args": {
+      "suggestions": [
+       "dev.standard1.small",
+       "dev.standard1.medium",
+       "dev.standard1.large",
+       "dev.standard1.xlarge"
+      ]
+     }
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-dev-environment-session",
+   "description": "Starts a session for a specified Dev Environment.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-workflow-run",
+   "description": "Begins a run of a specified workflow.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--workflow-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-dev-environment",
+   "description": "Pauses a specified Dev Environment and places it in a non-running state.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "stop-dev-environment-session",
+   "description": "Stops a session for a specified Dev Environment.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--session-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dev-environment",
+   "description": "Changes one or more values for a Dev Environment.",
+   "options": [
+    {
+     "name": "--alias",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--ides",
+     "args": {}
+    },
+    {
+     "name": "--inactivity-timeout-minutes",
+     "args": {}
+    },
+    {
+     "name": "--instance-type",
+     "args": {
+      "suggestions": [
+       "dev.standard1.small",
+       "dev.standard1.medium",
+       "dev.standard1.large",
+       "dev.standard1.xlarge"
+      ]
+     }
+    },
+    {
+     "name": "--project-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-project",
+   "description": "Changes one or more values for a project.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--space-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-space",
+   "description": "Changes one or more values for a space.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-session",
+   "description": "Verifies whether the calling user has a valid Amazon CodeCatalyst login and session."
+  }
+ ]
+}

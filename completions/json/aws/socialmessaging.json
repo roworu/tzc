@@ -1,0 +1,636 @@
+{
+ "name": "socialmessaging",
+ "description": "Amazon Web Services End User Messaging Social, also referred to as Social messaging, is a messaging service that enables application developers to incorporate WhatsApp into their existing workflows.",
+ "subcommands": [
+  {
+   "name": "associate-whatsapp-business-account",
+   "description": "This is only used through the Amazon Web Services console during sign-up to associate your WhatsApp Business Account to your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--setup-finalization",
+     "args": {}
+    },
+    {
+     "name": "--signup-callback",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-whatsapp-flow",
+   "description": "Creates a new WhatsApp Flow.",
+   "options": [
+    {
+     "name": "--categories",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--clone-flow-id",
+     "args": {}
+    },
+    {
+     "name": "--flow-json",
+     "args": {}
+    },
+    {
+     "name": "--flow-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-publish"
+    },
+    {
+     "name": "--publish"
+    }
+   ]
+  },
+  {
+   "name": "create-whatsapp-message-template",
+   "description": "Creates a new WhatsApp message template from a custom definition.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--template-definition",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-whatsapp-message-template-from-library",
+   "description": "Creates a new WhatsApp message template using a template from Meta's template library.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meta-library-template",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-whatsapp-message-template-media",
+   "description": "Uploads media for use in a WhatsApp message template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-s3-file",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-whatsapp-flow",
+   "description": "Deletes a WhatsApp Flow permanently.",
+   "options": [
+    {
+     "name": "--flow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-whatsapp-media-message",
+   "description": "Delete a media object from the WhatsApp service.",
+   "options": [
+    {
+     "name": "--media-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origination-phone-number-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-whatsapp-message-media",
+   "description": "Delete a media object from the WhatsApp service.",
+   "options": [
+    {
+     "name": "--media-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origination-phone-number-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-whatsapp-message-template",
+   "description": "Deletes a WhatsApp message template.",
+   "options": [
+    {
+     "name": "--delete-all-languages"
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meta-template-id",
+     "args": {}
+    },
+    {
+     "name": "--no-delete-all-languages"
+    },
+    {
+     "name": "--template-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "deprecate-whatsapp-flow",
+   "description": "Deprecates a published WhatsApp Flow, marking it as no longer recommended for use.",
+   "options": [
+    {
+     "name": "--flow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-whatsapp-business-account",
+   "description": "Disassociate a WhatsApp Business Account (WABA) from your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-linked-whatsapp-business-account",
+   "description": "Get the details of your linked WhatsApp Business Account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-linked-whatsapp-business-account-phone-number",
+   "description": "Retrieve the WABA account id and phone number details of a WhatsApp business account phone number.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-whatsapp-flow",
+   "description": "Retrieves the metadata and status of a WhatsApp Flow, including validation errors, preview information, and health status.",
+   "options": [
+    {
+     "name": "--flow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-whatsapp-flow-preview",
+   "description": "Generates a web preview URL for testing a WhatsApp Flow before publishing.",
+   "options": [
+    {
+     "name": "--flow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--invalidate"
+    },
+    {
+     "name": "--no-invalidate"
+    }
+   ]
+  },
+  {
+   "name": "get-whatsapp-message-media",
+   "description": "Get a media file from the WhatsApp service.",
+   "options": [
+    {
+     "name": "--destination-s3-file",
+     "args": {}
+    },
+    {
+     "name": "--destination-s3-presigned-url",
+     "args": {}
+    },
+    {
+     "name": "--media-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--metadata-only"
+    },
+    {
+     "name": "--no-metadata-only"
+    },
+    {
+     "name": "--origination-phone-number-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-whatsapp-message-template",
+   "description": "Retrieves a specific WhatsApp message template.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meta-template-id",
+     "args": {}
+    },
+    {
+     "name": "--template-language-code",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-linked-whatsapp-business-accounts",
+   "description": "List all WhatsApp Business Accounts linked to your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "List all tags associated with a resource, such as a phone number or WABA.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-whatsapp-flow-assets",
+   "description": "Lists the assets (Flow JSON definition) of a WhatsApp Flow with presigned download URLs.",
+   "options": [
+    {
+     "name": "--flow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-whatsapp-flows",
+   "description": "Lists all WhatsApp Flows for a WhatsApp Business Account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-whatsapp-message-templates",
+   "description": "Lists WhatsApp message templates for a specific WhatsApp Business Account.",
+   "options": [
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-whatsapp-template-library",
+   "description": "Lists templates available in Meta's template library for WhatsApp messaging.",
+   "options": [
+    {
+     "name": "--filters",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "post-whatsapp-message-media",
+   "description": "Upload a media file to the WhatsApp service.",
+   "options": [
+    {
+     "name": "--origination-phone-number-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--source-s3-file",
+     "args": {}
+    },
+    {
+     "name": "--source-s3-presigned-url",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "publish-whatsapp-flow",
+   "description": "Publishes a WhatsApp Flow, making it available for use in template messages.",
+   "options": [
+    {
+     "name": "--flow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-whatsapp-business-account-event-destinations",
+   "description": "Add an event destination to log event data from WhatsApp for a WhatsApp Business Account (WABA).",
+   "options": [
+    {
+     "name": "--event-destinations",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-whatsapp-message",
+   "description": "Send a WhatsApp message.",
+   "options": [
+    {
+     "name": "--message",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meta-api-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--origination-phone-number-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or overwrites only the specified tags for the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes the specified tags from a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-whatsapp-flow",
+   "description": "Updates the metadata of a WhatsApp Flow, such as its name or categories.",
+   "options": [
+    {
+     "name": "--categories",
+     "args": {}
+    },
+    {
+     "name": "--flow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-name",
+     "args": {}
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-whatsapp-flow-assets",
+   "description": "Updates the Flow JSON definition (assets) of a WhatsApp Flow.",
+   "options": [
+    {
+     "name": "--flow-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--flow-json",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-whatsapp-message-template",
+   "description": "Updates an existing WhatsApp message template.",
+   "options": [
+    {
+     "name": "--cta-url-link-tracking-opted-out"
+    },
+    {
+     "name": "--id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--meta-template-id",
+     "args": {}
+    },
+    {
+     "name": "--no-cta-url-link-tracking-opted-out"
+    },
+    {
+     "name": "--parameter-format",
+     "args": {}
+    },
+    {
+     "name": "--template-category",
+     "args": {}
+    },
+    {
+     "name": "--template-components",
+     "args": {}
+    },
+    {
+     "name": "--template-language-code",
+     "args": {}
+    },
+    {
+     "name": "--template-name",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

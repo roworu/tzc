@@ -1,0 +1,300 @@
+{
+ "name": "bedrock-runtime",
+ "description": "Describes the API operations for running inference using Amazon Bedrock models.",
+ "subcommands": [
+  {
+   "name": "apply-guardrail",
+   "description": "The action to apply a guardrail.",
+   "options": [
+    {
+     "name": "--content",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guardrail-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--guardrail-version",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-scope",
+     "args": {
+      "suggestions": [
+       "INTERVENTIONS",
+       "FULL"
+      ]
+     }
+    },
+    {
+     "name": "--source",
+     "args": {
+      "suggestions": [
+       "INPUT",
+       "OUTPUT"
+      ]
+     },
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "converse",
+   "description": "Sends messages to the specified Amazon Bedrock model.",
+   "options": [
+    {
+     "name": "--additional-model-request-fields",
+     "args": {}
+    },
+    {
+     "name": "--additional-model-response-field-paths",
+     "args": {}
+    },
+    {
+     "name": "--guardrail-config",
+     "args": {}
+    },
+    {
+     "name": "--inference-config",
+     "args": {}
+    },
+    {
+     "name": "--messages",
+     "args": {}
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-config",
+     "args": {}
+    },
+    {
+     "name": "--performance-config",
+     "args": {}
+    },
+    {
+     "name": "--prompt-variables",
+     "args": {}
+    },
+    {
+     "name": "--request-metadata",
+     "args": {}
+    },
+    {
+     "name": "--service-tier",
+     "args": {}
+    },
+    {
+     "name": "--system",
+     "args": {}
+    },
+    {
+     "name": "--tool-config",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "count-tokens",
+   "description": "Returns the token count for a given inference request.",
+   "options": [
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-async-invoke",
+   "description": "Retrieve information about an asynchronous invocation.",
+   "options": [
+    {
+     "name": "--invocation-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "invoke-guardrail-checks",
+   "description": "Evaluates messages against inline guardrail checks.",
+   "options": [
+    {
+     "name": "--checks",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--messages",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "invoke-model",
+   "description": "Invokes the specified Amazon Bedrock model to run inference using the prompt and inference parameters provided in the request body.",
+   "options": [
+    {
+     "name": "--accept",
+     "args": {}
+    },
+    {
+     "name": "--body",
+     "args": {}
+    },
+    {
+     "name": "--content-type",
+     "args": {}
+    },
+    {
+     "name": "--guardrail-identifier",
+     "args": {}
+    },
+    {
+     "name": "--guardrail-version",
+     "args": {}
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--performance-config-latency",
+     "args": {
+      "suggestions": [
+       "standard",
+       "optimized"
+      ]
+     }
+    },
+    {
+     "name": "--request-metadata",
+     "args": {}
+    },
+    {
+     "name": "--service-tier",
+     "args": {
+      "suggestions": [
+       "priority",
+       "default",
+       "flex",
+       "reserved"
+      ]
+     }
+    },
+    {
+     "name": "--trace",
+     "args": {
+      "suggestions": [
+       "ENABLED",
+       "DISABLED",
+       "ENABLED_FULL"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "list-async-invokes",
+   "description": "Lists asynchronous invocations.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sort-by",
+     "args": {
+      "suggestions": [
+       "SubmissionTime"
+      ]
+     }
+    },
+    {
+     "name": "--sort-order",
+     "args": {
+      "suggestions": [
+       "Ascending",
+       "Descending"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--status-equals",
+     "args": {
+      "suggestions": [
+       "InProgress",
+       "Completed",
+       "Failed"
+      ]
+     }
+    },
+    {
+     "name": "--submit-time-after",
+     "args": {}
+    },
+    {
+     "name": "--submit-time-before",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-async-invoke",
+   "description": "Starts an asynchronous invocation.",
+   "options": [
+    {
+     "name": "--client-request-token",
+     "args": {}
+    },
+    {
+     "name": "--model-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--model-input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-data-config",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}

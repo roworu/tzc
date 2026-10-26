@@ -1,0 +1,1037 @@
+{
+ "name": "databrew",
+ "description": "Glue DataBrew is a visual, cloud-scale data-preparation service.",
+ "subcommands": [
+  {
+   "name": "batch-delete-recipe-version",
+   "description": "Deletes one or more versions of a recipe at a time.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recipe-versions",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-dataset",
+   "description": "Creates a new DataBrew dataset.",
+   "options": [
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "CSV",
+       "JSON",
+       "PARQUET",
+       "EXCEL",
+       "ORC"
+      ]
+     }
+    },
+    {
+     "name": "--format-options",
+     "args": {}
+    },
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--path-options",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-profile-job",
+   "description": "Creates a new job to analyze a dataset and create its data profile.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--encryption-mode",
+     "args": {
+      "suggestions": [
+       "SSE-KMS",
+       "SSE-S3"
+      ]
+     }
+    },
+    {
+     "name": "--job-sample",
+     "args": {}
+    },
+    {
+     "name": "--log-subscription",
+     "args": {
+      "suggestions": [
+       "ENABLE",
+       "DISABLE"
+      ]
+     }
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--max-retries",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    },
+    {
+     "name": "--validation-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-project",
+   "description": "Creates a new DataBrew project.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recipe-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sample",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-recipe",
+   "description": "Creates a new DataBrew recipe.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--steps",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-recipe-job",
+   "description": "Creates a new job to transform input data, using steps defined in an existing Glue DataBrew recipe",
+   "options": [
+    {
+     "name": "--data-catalog-outputs",
+     "args": {}
+    },
+    {
+     "name": "--database-outputs",
+     "args": {}
+    },
+    {
+     "name": "--dataset-name",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--encryption-mode",
+     "args": {
+      "suggestions": [
+       "SSE-KMS",
+       "SSE-S3"
+      ]
+     }
+    },
+    {
+     "name": "--log-subscription",
+     "args": {
+      "suggestions": [
+       "ENABLE",
+       "DISABLE"
+      ]
+     }
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--max-retries",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outputs",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {}
+    },
+    {
+     "name": "--recipe-reference",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-ruleset",
+   "description": "Creates a new ruleset that can be used in a profile job to validate the data quality of a dataset.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-schedule",
+   "description": "Creates a new schedule for one or more DataBrew jobs.",
+   "options": [
+    {
+     "name": "--cron-expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-names",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-dataset",
+   "description": "Deletes a dataset from DataBrew.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-job",
+   "description": "Deletes the specified DataBrew job.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-project",
+   "description": "Deletes an existing DataBrew project.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-recipe-version",
+   "description": "Deletes a single version of a DataBrew recipe.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recipe-version",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-ruleset",
+   "description": "Deletes a ruleset.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-schedule",
+   "description": "Deletes the specified DataBrew schedule.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-dataset",
+   "description": "Returns the definition of a specific DataBrew dataset.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job",
+   "description": "Returns the definition of a specific DataBrew job.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-job-run",
+   "description": "Represents one run of a DataBrew job.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-project",
+   "description": "Returns the definition of a specific DataBrew project.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-recipe",
+   "description": "Returns the definition of a specific DataBrew recipe corresponding to a particular version.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--recipe-version",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "describe-ruleset",
+   "description": "Retrieves detailed information about the ruleset.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-schedule",
+   "description": "Returns the definition of a specific DataBrew schedule.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-datasets",
+   "description": "Lists all of the DataBrew datasets.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-job-runs",
+   "description": "Lists all of the previous runs of a particular DataBrew job.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "Lists all of the DataBrew jobs that are defined.",
+   "options": [
+    {
+     "name": "--dataset-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--project-name",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-projects",
+   "description": "Lists all of the DataBrew projects that are defined.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recipe-versions",
+   "description": "Lists the versions of a particular DataBrew recipe, except for LATEST_WORKING.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-recipes",
+   "description": "Lists all of the DataBrew recipes that are defined.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--recipe-version",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-rulesets",
+   "description": "List all rulesets available in the current account or rulesets associated with a specific resource (dataset).",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--target-arn",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-schedules",
+   "description": "Lists the DataBrew schedules that are defined.",
+   "options": [
+    {
+     "name": "--job-name",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Lists all the tags for a DataBrew resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "publish-recipe",
+   "description": "Publishes a new version of a DataBrew recipe.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "send-project-session-action",
+   "description": "Performs a recipe step within an interactive DataBrew session that's currently open.",
+   "options": [
+    {
+     "name": "--client-session-id",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-preview"
+    },
+    {
+     "name": "--preview"
+    },
+    {
+     "name": "--recipe-step",
+     "args": {}
+    },
+    {
+     "name": "--step-index",
+     "args": {}
+    },
+    {
+     "name": "--view-frame",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "start-job-run",
+   "description": "Runs a DataBrew job.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-project-session",
+   "description": "Creates an interactive session, enabling you to manipulate data in a DataBrew project.",
+   "options": [
+    {
+     "name": "--assume-control"
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-assume-control"
+    }
+   ]
+  },
+  {
+   "name": "stop-job-run",
+   "description": "Stops a particular run of a job.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--run-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds metadata tags to a DataBrew resource, such as a dataset, project, recipe, job, or schedule.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes metadata tags from a DataBrew resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-dataset",
+   "description": "Modifies the definition of an existing DataBrew dataset.",
+   "options": [
+    {
+     "name": "--format",
+     "args": {
+      "suggestions": [
+       "CSV",
+       "JSON",
+       "PARQUET",
+       "EXCEL",
+       "ORC"
+      ]
+     }
+    },
+    {
+     "name": "--format-options",
+     "args": {}
+    },
+    {
+     "name": "--input",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--path-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-profile-job",
+   "description": "Modifies the definition of an existing profile job.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--encryption-mode",
+     "args": {
+      "suggestions": [
+       "SSE-KMS",
+       "SSE-S3"
+      ]
+     }
+    },
+    {
+     "name": "--job-sample",
+     "args": {}
+    },
+    {
+     "name": "--log-subscription",
+     "args": {
+      "suggestions": [
+       "ENABLE",
+       "DISABLE"
+      ]
+     }
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--max-retries",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--output-location",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    },
+    {
+     "name": "--validation-configurations",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-project",
+   "description": "Modifies the definition of an existing DataBrew project.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sample",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-recipe",
+   "description": "Modifies the definition of the LATEST_WORKING version of a DataBrew recipe.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--steps",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-recipe-job",
+   "description": "Modifies the definition of an existing DataBrew recipe job.",
+   "options": [
+    {
+     "name": "--data-catalog-outputs",
+     "args": {}
+    },
+    {
+     "name": "--database-outputs",
+     "args": {}
+    },
+    {
+     "name": "--encryption-key-arn",
+     "args": {}
+    },
+    {
+     "name": "--encryption-mode",
+     "args": {
+      "suggestions": [
+       "SSE-KMS",
+       "SSE-S3"
+      ]
+     }
+    },
+    {
+     "name": "--log-subscription",
+     "args": {
+      "suggestions": [
+       "ENABLE",
+       "DISABLE"
+      ]
+     }
+    },
+    {
+     "name": "--max-capacity",
+     "args": {}
+    },
+    {
+     "name": "--max-retries",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outputs",
+     "args": {}
+    },
+    {
+     "name": "--role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--timeout",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-ruleset",
+   "description": "Updates specified ruleset.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--rules",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-schedule",
+   "description": "Modifies the definition of an existing DataBrew schedule.",
+   "options": [
+    {
+     "name": "--cron-expression",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--job-names",
+     "args": {}
+    },
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

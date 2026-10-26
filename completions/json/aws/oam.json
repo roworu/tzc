@@ -1,0 +1,261 @@
+{
+ "name": "oam",
+ "description": "Use Amazon CloudWatch Observability Access Manager to create and manage links between source accounts and monitoring accounts by using CloudWatch cross-account observability.",
+ "subcommands": [
+  {
+   "name": "create-link",
+   "description": "Creates a link between a source account and a sink that you have created in a monitoring account.",
+   "options": [
+    {
+     "name": "--label-template",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--link-configuration",
+     "args": {}
+    },
+    {
+     "name": "--resource-types",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sink-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-sink",
+   "description": "Use this to create a sink in the current account, so that it can be used as a monitoring account in CloudWatch cross-account observability.",
+   "options": [
+    {
+     "name": "--name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-link",
+   "description": "Deletes a link between a monitoring account sink and a source account.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-sink",
+   "description": "Deletes a sink.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-link",
+   "description": "Returns complete information about one link.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-tags"
+    },
+    {
+     "name": "--no-include-tags"
+    }
+   ]
+  },
+  {
+   "name": "get-sink",
+   "description": "Returns complete information about one monitoring account sink.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-tags"
+    },
+    {
+     "name": "--no-include-tags"
+    }
+   ]
+  },
+  {
+   "name": "get-sink-policy",
+   "description": "Returns the current sink policy attached to this sink.",
+   "options": [
+    {
+     "name": "--sink-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-attached-links",
+   "description": "Returns a list of source account links that are linked to this monitoring account sink.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--sink-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-links",
+   "description": "Use this operation in a source account to return a list of links to monitoring account sinks that this source account has.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-sinks",
+   "description": "Use this operation in a monitoring account to return the list of sinks created in that account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Displays the tags associated with a resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "put-sink-policy",
+   "description": "Creates or updates the resource policy that grants permissions to source accounts to link to the monitoring account sink.",
+   "options": [
+    {
+     "name": "--policy",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--sink-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-link",
+   "description": "Use this operation to change what types of data are shared from a source account to its linked monitoring account sink.",
+   "options": [
+    {
+     "name": "--identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--include-tags"
+    },
+    {
+     "name": "--link-configuration",
+     "args": {}
+    },
+    {
+     "name": "--no-include-tags"
+    },
+    {
+     "name": "--resource-types",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  }
+ ]
+}

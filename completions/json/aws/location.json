@@ -1,0 +1,1610 @@
+{
+ "name": "location",
+ "description": "\"Suite of geospatial services including Maps, Places, Routes, Tracking, and Geofencing\"",
+ "subcommands": [
+  {
+   "name": "associate-tracker-consumer",
+   "description": "Creates an association between a geofence collection and a tracker resource.",
+   "options": [
+    {
+     "name": "--consumer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-device-position-history",
+   "description": "Deletes the position history of one or more devices from a tracker resource.",
+   "options": [
+    {
+     "name": "--device-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-delete-geofence",
+   "description": "Deletes a batch of geofences from a geofence collection.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--geofence-ids",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-evaluate-geofences",
+   "description": "Evaluates device positions against the geofence geometries from a given geofence collection.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-position-updates",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-get-device-position",
+   "description": "Lists the latest device positions for requested devices.",
+   "options": [
+    {
+     "name": "--device-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-put-geofence",
+   "description": "A batch request for storing geofence geometries into a given geofence collection, or updates the geometry of an existing geofence if a geofence ID is included in the request.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--entries",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "batch-update-device-position",
+   "description": "Uploads position update data for one or more devices to a tracker resource (up to 10 devices per batch).",
+   "options": [
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--updates",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "calculate-route",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--arrival-time",
+     "args": {}
+    },
+    {
+     "name": "--calculator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--car-mode-options",
+     "args": {}
+    },
+    {
+     "name": "--depart-now"
+    },
+    {
+     "name": "--departure-position",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--departure-time",
+     "args": {}
+    },
+    {
+     "name": "--destination-position",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--distance-unit",
+     "args": {
+      "suggestions": [
+       "Kilometers",
+       "Miles"
+      ]
+     }
+    },
+    {
+     "name": "--include-leg-geometry"
+    },
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--no-depart-now"
+    },
+    {
+     "name": "--no-include-leg-geometry"
+    },
+    {
+     "name": "--optimize-for",
+     "args": {
+      "suggestions": [
+       "FastestRoute",
+       "ShortestRoute"
+      ]
+     }
+    },
+    {
+     "name": "--travel-mode",
+     "args": {
+      "suggestions": [
+       "Car",
+       "Truck",
+       "Walking",
+       "Bicycle",
+       "Motorcycle"
+      ]
+     }
+    },
+    {
+     "name": "--truck-mode-options",
+     "args": {}
+    },
+    {
+     "name": "--waypoint-positions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "calculate-route-matrix",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--calculator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--car-mode-options",
+     "args": {}
+    },
+    {
+     "name": "--depart-now"
+    },
+    {
+     "name": "--departure-positions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--departure-time",
+     "args": {}
+    },
+    {
+     "name": "--destination-positions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--distance-unit",
+     "args": {
+      "suggestions": [
+       "Kilometers",
+       "Miles"
+      ]
+     }
+    },
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--no-depart-now"
+    },
+    {
+     "name": "--travel-mode",
+     "args": {
+      "suggestions": [
+       "Car",
+       "Truck",
+       "Walking",
+       "Bicycle",
+       "Motorcycle"
+      ]
+     }
+    },
+    {
+     "name": "--truck-mode-options",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "cancel-job",
+   "description": "CancelJob cancels a job that is currently running or pending.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "create-geofence-collection",
+   "description": "Creates a geofence collection, which manages and stores geofences.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    },
+    {
+     "name": "--pricing-plan-data-source",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-key",
+   "description": "Creates an API key resource in your Amazon Web Services account, which lets you grant actions for Amazon Location resources to the API key bearer.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expire-time",
+     "args": {}
+    },
+    {
+     "name": "--key-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-expiry"
+    },
+    {
+     "name": "--no-no-expiry"
+    },
+    {
+     "name": "--restrictions",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-map",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--map-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-place-index",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-route-calculator",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--calculator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--data-source",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-tracker",
+   "description": "Creates a tracker resource in your Amazon Web Services account, which lets you retrieve current and historical location of devices.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-bridge-enabled"
+    },
+    {
+     "name": "--kms-key-enable-geospatial-queries"
+    },
+    {
+     "name": "--kms-key-id",
+     "args": {}
+    },
+    {
+     "name": "--no-event-bridge-enabled"
+    },
+    {
+     "name": "--no-kms-key-enable-geospatial-queries"
+    },
+    {
+     "name": "--position-filtering",
+     "args": {
+      "suggestions": [
+       "TimeBased",
+       "DistanceBased",
+       "AccuracyBased"
+      ]
+     }
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    },
+    {
+     "name": "--pricing-plan-data-source",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-geofence-collection",
+   "description": "Deletes a geofence collection from your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-key",
+   "description": "Deletes the specified API key.",
+   "options": [
+    {
+     "name": "--force-delete"
+    },
+    {
+     "name": "--key-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-force-delete"
+    }
+   ]
+  },
+  {
+   "name": "delete-map",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--map-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-place-index",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-route-calculator",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--calculator-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-tracker",
+   "description": "Deletes a tracker resource from your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-geofence-collection",
+   "description": "Retrieves the geofence collection details.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-key",
+   "description": "Retrieves the API key resource details.",
+   "options": [
+    {
+     "name": "--key-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-map",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--map-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-place-index",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-route-calculator",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--calculator-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "describe-tracker",
+   "description": "Retrieves the tracker resource details.",
+   "options": [
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "disassociate-tracker-consumer",
+   "description": "Removes the association between a tracker resource and a geofence collection.",
+   "options": [
+    {
+     "name": "--consumer-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "forecast-geofence-events",
+   "description": "This action forecasts future geofence events that are likely to occur within a specified time horizon if a device continues moving at its current speed.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--device-state",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--distance-unit",
+     "args": {
+      "suggestions": [
+       "Kilometers",
+       "Miles"
+      ]
+     }
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--speed-unit",
+     "args": {
+      "suggestions": [
+       "KilometersPerHour",
+       "MilesPerHour"
+      ]
+     }
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--time-horizon-minutes",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "get-device-position",
+   "description": "Retrieves a device's most recent position according to its sample time.",
+   "options": [
+    {
+     "name": "--device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-device-position-history",
+   "description": "Retrieves the device position history from a tracker resource within a specified range of time.",
+   "options": [
+    {
+     "name": "--device-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--end-time-exclusive",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--start-time-inclusive",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-geofence",
+   "description": "Retrieves the geofence details from a geofence collection.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--geofence-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-job",
+   "description": "GetJob retrieves detailed information about a specific job, including its current status, configuration, and error information if the job failed.",
+   "options": [
+    {
+     "name": "--job-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-map-glyphs",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--font-stack",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--font-unicode-range",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--map-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-map-sprites",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--file-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--map-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-map-style-descriptor",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--map-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-map-tile",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--map-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--outfile",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--x",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--y",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--z",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-place",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--language",
+     "args": {}
+    },
+    {
+     "name": "--place-id",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-device-positions",
+   "description": "A batch request to retrieve all device positions.",
+   "options": [
+    {
+     "name": "--filter-geometry",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-geofence-collections",
+   "description": "Lists geofence collections in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-geofences",
+   "description": "Lists geofences stored in a given geofence collection.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-jobs",
+   "description": "ListJobs retrieves a list of jobs with optional filtering and pagination support.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-keys",
+   "description": "Lists API key resources in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--filter",
+     "args": {}
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-maps",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-place-indexes",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-route-calculators",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of tags that are applied to the specified Amazon Location resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-tracker-consumers",
+   "description": "Lists geofence collections currently associated to the given tracker resource.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-trackers",
+   "description": "Lists tracker resources in your Amazon Web Services account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "put-geofence",
+   "description": "Stores a geofence geometry in a given geofence collection, or updates the geometry of an existing geofence if a geofence ID is included in the request.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--geofence-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--geofence-properties",
+     "args": {}
+    },
+    {
+     "name": "--geometry",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-place-index-for-position",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--language",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--position",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-place-index-for-suggestions",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--bias-position",
+     "args": {}
+    },
+    {
+     "name": "--filter-b-box",
+     "args": {}
+    },
+    {
+     "name": "--filter-categories",
+     "args": {}
+    },
+    {
+     "name": "--filter-countries",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--language",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--text",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "search-place-index-for-text",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--bias-position",
+     "args": {}
+    },
+    {
+     "name": "--filter-b-box",
+     "args": {}
+    },
+    {
+     "name": "--filter-categories",
+     "args": {}
+    },
+    {
+     "name": "--filter-countries",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--key",
+     "args": {}
+    },
+    {
+     "name": "--language",
+     "args": {}
+    },
+    {
+     "name": "--max-results",
+     "args": {}
+    },
+    {
+     "name": "--text",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "start-job",
+   "description": "StartJob starts a new asynchronous bulk processing job.",
+   "options": [
+    {
+     "name": "--action",
+     "args": {
+      "suggestions": [
+       "ValidateAddress"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--action-options",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--execution-role-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--input-options",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--name",
+     "args": {}
+    },
+    {
+     "name": "--output-options",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Assigns one or more tags (key-value pairs) to the specified Amazon Location Service resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Removes one or more tags from the specified Amazon Location resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-geofence-collection",
+   "description": "Updates the specified properties of a given geofence collection.",
+   "options": [
+    {
+     "name": "--collection-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    },
+    {
+     "name": "--pricing-plan-data-source",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-key",
+   "description": "Updates the specified properties of a given API key resource.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--expire-time",
+     "args": {}
+    },
+    {
+     "name": "--force-update"
+    },
+    {
+     "name": "--key-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--no-expiry"
+    },
+    {
+     "name": "--no-force-update"
+    },
+    {
+     "name": "--no-no-expiry"
+    },
+    {
+     "name": "--restrictions",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-map",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--configuration-update",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--map-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-place-index",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--data-source-configuration",
+     "args": {}
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--index-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-route-calculator",
+   "description": "This operation is no longer current and may be deprecated in the future.",
+   "options": [
+    {
+     "name": "--calculator-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "update-tracker",
+   "description": "Updates the specified properties of a given tracker resource.",
+   "options": [
+    {
+     "name": "--description",
+     "args": {}
+    },
+    {
+     "name": "--event-bridge-enabled"
+    },
+    {
+     "name": "--kms-key-enable-geospatial-queries"
+    },
+    {
+     "name": "--no-event-bridge-enabled"
+    },
+    {
+     "name": "--no-kms-key-enable-geospatial-queries"
+    },
+    {
+     "name": "--position-filtering",
+     "args": {
+      "suggestions": [
+       "TimeBased",
+       "DistanceBased",
+       "AccuracyBased"
+      ]
+     }
+    },
+    {
+     "name": "--pricing-plan",
+     "args": {
+      "suggestions": [
+       "RequestBasedUsage",
+       "MobileAssetTracking",
+       "MobileAssetManagement"
+      ]
+     }
+    },
+    {
+     "name": "--pricing-plan-data-source",
+     "args": {}
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "verify-device-position",
+   "description": "Verifies the integrity of the device's position by determining if it was reported behind a proxy, and by comparing it to an inferred position estimated based on the device's state.",
+   "options": [
+    {
+     "name": "--device-state",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--distance-unit",
+     "args": {
+      "suggestions": [
+       "Kilometers",
+       "Miles"
+      ]
+     }
+    },
+    {
+     "name": "--tracker-name",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "wait",
+   "description": "Wait until a particular condition is satisfied.",
+   "subcommands": [
+    {
+     "name": "job-completed",
+     "description": "Wait until JMESPath query Status returns Completed when polling with ``get-job``.",
+     "options": [
+      {
+       "name": "--job-id",
+       "args": {},
+       "priority": 75
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

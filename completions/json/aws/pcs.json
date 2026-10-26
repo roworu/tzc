@@ -1,0 +1,493 @@
+{
+ "name": "pcs",
+ "description": "Parallel Computing Service (PCS) is a managed service that makes it easier for you to run and scale your high performance computing (HPC) workloads, and build scientific and engineering models on Amazon Web Services using Slurm.",
+ "subcommands": [
+  {
+   "name": "create-cluster",
+   "description": "Creates a cluster in your account.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--networking",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduler",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--size",
+     "args": {
+      "suggestions": [
+       "SMALL",
+       "MEDIUM",
+       "LARGE"
+      ]
+     },
+     "priority": 75
+    },
+    {
+     "name": "--slurm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-compute-node-group",
+   "description": "Creates a managed set of compute nodes.",
+   "options": [
+    {
+     "name": "--ami-id",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-node-group-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-launch-template",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--iam-instance-profile-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--instance-configs",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--node-lifecycle-actions",
+     "args": {}
+    },
+    {
+     "name": "--purchase-option",
+     "args": {
+      "suggestions": [
+       "ONDEMAND",
+       "SPOT",
+       "CAPACITY_BLOCK",
+       "INTERRUPTIBLE_CAPACITY_RESERVATION"
+      ]
+     }
+    },
+    {
+     "name": "--scaling-configuration",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--slurm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--spot-options",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "create-queue",
+   "description": "Creates a job queue.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-node-group-configurations",
+     "args": {}
+    },
+    {
+     "name": "--queue-name",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--slurm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--tags",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "delete-cluster",
+   "description": "Deletes a cluster and all its linked resources.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-compute-node-group",
+   "description": "Deletes a compute node group.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-node-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "delete-queue",
+   "description": "Deletes a job queue.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queue-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-cluster",
+   "description": "Returns detailed information about a running cluster in your account.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-compute-node-group",
+   "description": "Returns detailed information about a compute node group.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-node-group-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "get-queue",
+   "description": "Returns detailed information about a queue.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--queue-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "list-clusters",
+   "description": "Returns a list of running clusters in your account.",
+   "options": [
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-compute-node-groups",
+   "description": "Returns a list of all compute node groups associated with a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-queues",
+   "description": "Returns a list of all queues associated with a cluster.",
+   "options": [
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--max-items",
+     "args": {}
+    },
+    {
+     "name": "--page-size",
+     "args": {}
+    },
+    {
+     "name": "--starting-token",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "list-tags-for-resource",
+   "description": "Returns a list of all tags on an PCS resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "register-compute-node-group-instance",
+   "description": "This API action isn't intended for you to use.",
+   "options": [
+    {
+     "name": "--bootstrap-id",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "tag-resource",
+   "description": "Adds or edits tags on an PCS resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tags",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "untag-resource",
+   "description": "Deletes tags from an PCS resource.",
+   "options": [
+    {
+     "name": "--resource-arn",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--tag-keys",
+     "args": {},
+     "priority": 75
+    }
+   ]
+  },
+  {
+   "name": "update-cluster",
+   "description": "Updates a cluster configuration.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--scheduler",
+     "args": {}
+    },
+    {
+     "name": "--slurm-configuration",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-compute-node-group",
+   "description": "Updates a compute node group.",
+   "options": [
+    {
+     "name": "--ami-id",
+     "args": {}
+    },
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-node-group-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--custom-launch-template",
+     "args": {}
+    },
+    {
+     "name": "--iam-instance-profile-arn",
+     "args": {}
+    },
+    {
+     "name": "--node-lifecycle-actions",
+     "args": {}
+    },
+    {
+     "name": "--purchase-option",
+     "args": {
+      "suggestions": [
+       "ONDEMAND",
+       "SPOT",
+       "CAPACITY_BLOCK",
+       "INTERRUPTIBLE_CAPACITY_RESERVATION"
+      ]
+     }
+    },
+    {
+     "name": "--scaling-configuration",
+     "args": {}
+    },
+    {
+     "name": "--slurm-configuration",
+     "args": {}
+    },
+    {
+     "name": "--spot-options",
+     "args": {}
+    },
+    {
+     "name": "--subnet-ids",
+     "args": {}
+    }
+   ]
+  },
+  {
+   "name": "update-queue",
+   "description": "Updates the compute node group configuration of a queue.",
+   "options": [
+    {
+     "name": "--client-token",
+     "args": {}
+    },
+    {
+     "name": "--cluster-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--compute-node-group-configurations",
+     "args": {}
+    },
+    {
+     "name": "--queue-identifier",
+     "args": {},
+     "priority": 75
+    },
+    {
+     "name": "--slurm-configuration",
+     "args": {}
+    }
+   ]
+  }
+ ]
+}
