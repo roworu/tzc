@@ -56,7 +56,7 @@ You can configure completion popup UI/settings via env options
 | `TZC_HISTORY` | recent history entries starting with the typed line, shown above the completions; 0 disables, default 3 |
 | `TZC_HISTORY_PWD` | 1 shows only history run in the current directory (recorded this session), default 1; 0 shows all |
 | `TZC_NO_COLOR` | use `standout` for the selection instead of colors |
-| `TZC_DISABLE` | do not load the plugin |
+| `TZC_DISABLE` | do not load the plugin, or hide the popup if set in a running shell; e.g. `[[ $TERM_PROGRAM == vscode ]] && export TZC_DISABLE=1` before sourcing to skip it in an IDE terminal |
 
 ### Spec data
 
