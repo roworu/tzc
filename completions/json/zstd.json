@@ -1,0 +1,261 @@
+{
+ "name": "zstd",
+ "description": "Zstandard compression",
+ "options": [
+  {
+   "name": "-o",
+   "description": "Write output to a single file",
+   "args": {
+    "name": "output",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": [
+    "-k",
+    "--keep"
+   ],
+   "description": "Preserve input files"
+  },
+  {
+   "name": "--rm",
+   "description": "Remove input files after successful (de)compression"
+  },
+  {
+   "name": [
+    "-d",
+    "--decompress"
+   ],
+   "description": "Perform decompression"
+  },
+  {
+   "name": "-D",
+   "description": "Use dictionary for compression or decompression",
+   "args": {
+    "name": "dict",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": [
+    "-f",
+    "--force"
+   ],
+   "description": "Disable input and output checks"
+  },
+  {
+   "name": "-h",
+   "description": "Display short usage and exit"
+  },
+  {
+   "name": [
+    "-H",
+    "--help"
+   ],
+   "description": "Display full help and exit"
+  },
+  {
+   "name": [
+    "-V",
+    "--version"
+   ],
+   "description": "Display the program version and exit"
+  },
+  {
+   "name": [
+    "-c",
+    "--stdout"
+   ],
+   "description": "Write to stdout and keep input files"
+  },
+  {
+   "name": [
+    "-v",
+    "--verbose"
+   ],
+   "description": "Enable verbose output",
+   "isRepeatable": true
+  },
+  {
+   "name": [
+    "-q",
+    "--quiet"
+   ],
+   "description": "Suppress warnings",
+   "isRepeatable": true
+  },
+  {
+   "name": "--trace",
+   "description": "Log tracing information",
+   "args": {
+    "name": "log",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--progress",
+   "description": "Force show the progress counter"
+  },
+  {
+   "name": "--no-progress",
+   "description": "Hide the progress counter"
+  },
+  {
+   "name": "-r",
+   "description": "Operate recursively on directories"
+  },
+  {
+   "name": "--filelist",
+   "description": "Read a list of files to operate on",
+   "args": {
+    "name": "list",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "--output-dir-flat",
+   "description": "Store processed files in directory",
+   "args": {
+    "name": "dir",
+    "template": "folders"
+   }
+  },
+  {
+   "name": "--output-dir-mirror",
+   "description": "Store processed files in directory, keeping structure",
+   "args": {
+    "name": "dir",
+    "template": "folders"
+   }
+  },
+  {
+   "name": "--check",
+   "description": "Add or validate XXH64 integrity checksums"
+  },
+  {
+   "name": "--no-check",
+   "description": "Don't add or validate checksums"
+  },
+  {
+   "name": "--ultra",
+   "description": "Enable levels beyond 19, up to 22"
+  },
+  {
+   "name": "--fast",
+   "description": "Use very fast compression levels",
+   "args": {
+    "name": "level"
+   }
+  },
+  {
+   "name": "--adapt",
+   "description": "Dynamically adapt compression level to I/O conditions"
+  },
+  {
+   "name": "--long",
+   "description": "Enable long distance matching",
+   "args": {
+    "name": "windowLog"
+   }
+  },
+  {
+   "name": "--patch-from",
+   "description": "Use reference file for the diff engine",
+   "args": {
+    "name": "ref",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "-T",
+   "description": "Number of compression threads (0 for core count)",
+   "args": {
+    "name": "threads"
+   }
+  },
+  {
+   "name": "--single-thread",
+   "description": "Share a single thread for I/O and compression"
+  },
+  {
+   "name": "--rsyncable",
+   "description": "Compress using a rsync-friendly method"
+  },
+  {
+   "name": "--exclude-compressed",
+   "description": "Only compress files that are not already compressed"
+  },
+  {
+   "name": "--format",
+   "description": "Output format",
+   "args": {
+    "name": "format",
+    "suggestions": [
+     "zstd",
+     "gzip",
+     "xz",
+     "lzma",
+     "lz4"
+    ]
+   }
+  },
+  {
+   "name": "--no-dictID",
+   "description": "Don't write dictID into the header"
+  },
+  {
+   "name": "-t",
+   "description": "Test compressed file integrity"
+  },
+  {
+   "name": "-l",
+   "description": "List information about compressed files"
+  },
+  {
+   "name": "-b",
+   "description": "Benchmark file(s)"
+  },
+  {
+   "name": "-i",
+   "description": "Minimum evaluation time in seconds for benchmark",
+   "args": {
+    "name": "seconds"
+   }
+  },
+  {
+   "name": "--train",
+   "description": "Create a dictionary from training files"
+  },
+  {
+   "name": "--memory",
+   "description": "Memory limit for decompression",
+   "args": {
+    "name": "limit"
+   }
+  },
+  {
+   "name": "-M",
+   "description": "Memory limit for decompression",
+   "args": {
+    "name": "limit"
+   }
+  },
+  {
+   "name": "--zstd",
+   "description": "Set advanced compression parameters",
+   "args": {
+    "name": "params"
+   }
+  },
+  {
+   "name": "--",
+   "description": "Treat remaining arguments as files"
+  }
+ ],
+ "args": {
+  "name": "file",
+  "template": "filepaths",
+  "isOptional": true,
+  "isVariadic": true
+ }
+}

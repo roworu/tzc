@@ -1,0 +1,261 @@
+{
+ "name": "7z",
+ "description": "7-Zip file archiver",
+ "options": [
+  {
+   "name": "-o",
+   "description": "Set output directory, as -o<dir>",
+   "args": {
+    "name": "dir",
+    "template": "folders"
+   }
+  },
+  {
+   "name": "-p",
+   "description": "Set password, as -p<password>",
+   "args": {
+    "name": "password"
+   }
+  },
+  {
+   "name": "-t",
+   "description": "Type of archive",
+   "args": {
+    "name": "type",
+    "suggestions": [
+     "7z",
+     "zip",
+     "gzip",
+     "bzip2",
+     "tar",
+     "xz",
+     "wim",
+     "rar",
+     "iso",
+     "cab"
+    ]
+   }
+  },
+  {
+   "name": "-m",
+   "description": "Set compression method, as -m<param>",
+   "args": {
+    "name": "method"
+   }
+  },
+  {
+   "name": "-mx",
+   "description": "Compression level, as -mx=<0-9>",
+   "args": {
+    "name": "level"
+   }
+  },
+  {
+   "name": "-r",
+   "description": "Recurse subdirectories"
+  },
+  {
+   "name": "-y",
+   "description": "Assume yes on all queries"
+  },
+  {
+   "name": "-x",
+   "description": "Exclude filenames",
+   "args": {
+    "name": "exclude"
+   }
+  },
+  {
+   "name": "-i",
+   "description": "Include filenames",
+   "args": {
+    "name": "include"
+   }
+  },
+  {
+   "name": "-v",
+   "description": "Create volumes, as -v<size>",
+   "args": {
+    "name": "size"
+   }
+  },
+  {
+   "name": "-w",
+   "description": "Set working directory, as -w<dir>",
+   "args": {
+    "name": "dir",
+    "template": "folders"
+   }
+  },
+  {
+   "name": "-ao",
+   "description": "Overwrite mode, as -aoa/-aos/-aou/-aot"
+  },
+  {
+   "name": "-bb",
+   "description": "Set output log level",
+   "args": {
+    "name": "level"
+   }
+  },
+  {
+   "name": "-bd",
+   "description": "Disable progress indicator"
+  },
+  {
+   "name": "-sdel",
+   "description": "Delete files after compression"
+  },
+  {
+   "name": "-snh",
+   "description": "Store hard links as links"
+  },
+  {
+   "name": "-snl",
+   "description": "Store symbolic links as links"
+  },
+  {
+   "name": "-sfx",
+   "description": "Create SFX archive"
+  },
+  {
+   "name": "-si",
+   "description": "Read data from stdin"
+  },
+  {
+   "name": "-so",
+   "description": "Write data to stdout"
+  },
+  {
+   "name": "-spf",
+   "description": "Use fully qualified file paths"
+  },
+  {
+   "name": "-stl",
+   "description": "Set archive timestamp from the most recently modified file"
+  }
+ ],
+ "subcommands": [
+  {
+   "name": "a",
+   "description": "Add files to archive",
+   "args": [
+    {
+     "name": "archive",
+     "template": "filepaths"
+    },
+    {
+     "name": "file",
+     "template": "filepaths",
+     "isOptional": true,
+     "isVariadic": true
+    }
+   ]
+  },
+  {
+   "name": "b",
+   "description": "Benchmark"
+  },
+  {
+   "name": "d",
+   "description": "Delete files from archive",
+   "args": [
+    {
+     "name": "archive",
+     "template": "filepaths"
+    },
+    {
+     "name": "file",
+     "template": "filepaths",
+     "isOptional": true,
+     "isVariadic": true
+    }
+   ]
+  },
+  {
+   "name": "e",
+   "description": "Extract files without full paths",
+   "args": [
+    {
+     "name": "archive",
+     "template": "filepaths"
+    },
+    {
+     "name": "file",
+     "template": "filepaths",
+     "isOptional": true,
+     "isVariadic": true
+    }
+   ]
+  },
+  {
+   "name": "h",
+   "description": "Calculate hash values for files",
+   "args": {
+    "name": "file",
+    "template": "filepaths",
+    "isVariadic": true
+   }
+  },
+  {
+   "name": "i",
+   "description": "Show information about supported formats"
+  },
+  {
+   "name": "l",
+   "description": "List contents of archive",
+   "args": {
+    "name": "archive",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "rn",
+   "description": "Rename files in archive",
+   "args": {
+    "name": "archive",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "t",
+   "description": "Test integrity of archive",
+   "args": {
+    "name": "archive",
+    "template": "filepaths"
+   }
+  },
+  {
+   "name": "u",
+   "description": "Update files to archive",
+   "args": [
+    {
+     "name": "archive",
+     "template": "filepaths"
+    },
+    {
+     "name": "file",
+     "template": "filepaths",
+     "isOptional": true,
+     "isVariadic": true
+    }
+   ]
+  },
+  {
+   "name": "x",
+   "description": "Extract files with full paths",
+   "args": [
+    {
+     "name": "archive",
+     "template": "filepaths"
+    },
+    {
+     "name": "file",
+     "template": "filepaths",
+     "isOptional": true,
+     "isVariadic": true
+    }
+   ]
+  }
+ ]
+}
