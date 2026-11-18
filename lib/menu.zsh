@@ -2,6 +2,8 @@
 
 typeset -gi __tzc_active=0 __tzc_selected=0 __tzc_top=0 __tzc_owns=0
 typeset -g __tzc_last_key= __tzc_history_moved=0
+# Tab came before the reply for its line; the reply applies it
+typeset -gi __tzc_tab_pending=0
 typeset -gA __tzc_orig_bind
 
 : ${__tzc_max_rows:=${TZC_MAX_ROWS:-10}}
@@ -13,9 +15,51 @@ typeset -gA __tzc_orig_bind
 [[ $__tzc_max_width == <-> ]] || __tzc_max_width=80
 (( __tzc_max_width < 12 )) && __tzc_max_width=12
 
+# ask for the line's candidates; until the reply comes the menu shows what it
+# showed. without compcore the (history only) results are there at once.
 __tzc_compute() {
   emulate -L zsh
-  __tzc_complete "$BUFFER" "$CURSOR" "$PWD"
+  __tzc_last_key="$PWD:$PATH:$CURSOR:$BUFFER"
+  __tzc_tab_pending=0
+  __tzc_ask "$BUFFER" "$CURSOR" "$PWD" || __tzc_show
+  return 0
+}
+
+# show the current results, or hide the menu when there is nothing to show
+__tzc_show() {
+  emulate -L zsh
+  if __tzc_worth_showing; then
+    __tzc_active=1
+  else
+    __tzc_hide
+  fi
+  return 0
+}
+
+# zle -F handler: compcore answered. a reply to an older request, or for a line
+# that changed without a new request, shows nothing.
+__tzc_engine_ready() {
+  emulate -L zsh
+  local changed=0
+  # a second argument is zle's error for the fd: compcore is gone
+  if [[ -n ${2:-} ]]; then
+    __tzc_engine_close
+  else
+    __tzc_engine_read
+  fi
+  if (( __tzc_eng_fresh )) && [[ $__tzc_last_key == "$PWD:$PATH:$CURSOR:$BUFFER" ]]; then
+    __tzc_eng_fresh=0
+    __tzc_show
+    (( __tzc_active )) && __tzc_render
+    changed=1
+  fi
+  # the Tab waiting for this reply, or for a compcore that is now gone
+  if (( __tzc_tab_pending && (__tzc_eng_done || __tzc_eng_in < 0) )); then
+    __tzc_tab_pending=0
+    __tzc_tab
+    changed=1
+  fi
+  (( changed )) && zle -R
   return 0
 }
 
@@ -121,17 +165,7 @@ __tzc_pre_redraw() {
   if (( ${PENDING:-0} > 0 || ${KEYS_QUEUED_COUNT:-0} > 0 )); then
     return 0
   fi
-  local key="$PWD:$PATH:$CURSOR:$BUFFER"
-  if [[ $key != $__tzc_last_key ]]; then
-    __tzc_last_key=$key
-    __tzc_compute
-    if __tzc_worth_showing; then
-      __tzc_active=1
-    else
-      __tzc_hide
-      return 0
-    fi
-  fi
+  [[ "$PWD:$PATH:$CURSOR:$BUFFER" != $__tzc_last_key ]] && __tzc_compute
   (( __tzc_active )) && __tzc_render
   return 0
 }
@@ -139,12 +173,8 @@ __tzc_pre_redraw() {
 __tzc_accept() {
   emulate -L zsh
   setopt localoptions noglob
-  local key="$PWD:$PATH:$CURSOR:$BUFFER"
-  if [[ $key != $__tzc_last_key ]]; then
-    __tzc_last_key=$key
-    __tzc_compute
-    __tzc_worth_showing || return 1
-  fi
+  # candidates of another line must not be inserted into this one
+  [[ "$PWD:$PATH:$CURSOR:$BUFFER" == $__tzc_last_key ]] || return 1
   local n=${#__tzc_candidates}
   (( n )) || return 1
   local idx=$(( __tzc_selected + 1 ))
@@ -218,6 +248,14 @@ __tzc_down() {
 
 __tzc_tab() {
   emulate -L zsh
+  # Tab acts on the line's own candidates: while they are on their way, the
+  # reply applies it (__tzc_engine_ready). a line with no request in flight
+  # (blank, vi command mode...) shows no menu, so Tab goes to zsh.
+  if [[ "$PWD:$PATH:$CURSOR:$BUFFER" == $__tzc_last_key ]] &&
+     (( ! __tzc_eng_done && __tzc_eng_in >= 0 )); then
+    __tzc_tab_pending=1
+    return 0
+  fi
   if (( __tzc_active )); then
     __tzc_accept || __tzc_hide
     zle -R
@@ -256,6 +294,7 @@ __tzc_bind() {
 __tzc_finish() {
   emulate -L zsh
   __tzc_hide
+  __tzc_tab_pending=0
   __tzc_last_key=
   __tzc_history_moved=0
   return 0
@@ -281,6 +320,8 @@ __tzc_hook_install() {
 
 __tzc_menu_start() {
   emulate -L zsh
+  zle -N __tzc_engine_ready
+  (( __tzc_eng_in >= 0 )) && zle -F -w $__tzc_eng_in __tzc_engine_ready
   zle -N __tzc_up
   zle -N __tzc_down
   zle -N __tzc_tab
