@@ -38,6 +38,15 @@ typeset -g __tzc_history=${TZC_HISTORY:-3}
 __tzc_history=$(( 10#$__tzc_history ))
 typeset -ga __tzc_hist_lines
 typeset -g __tzc_hist_stamp=
+# TZC_HISTORY_PWD (default 1): only show history run in the current directory. zsh does
+# not store directories, so they are recorded per session by a preexec hook.
+typeset -g __tzc_history_pwd=${TZC_HISTORY_PWD:-1}
+typeset -gA __tzc_hist_dirs
+
+__tzc_hist_record_dir() {
+  __tzc_hist_dirs[$HISTCMD]=$PWD
+}
+(( __tzc_history_pwd == 1 )) && add-zsh-hook preexec __tzc_hist_record_dir
 
 # quote text for the open quote; close adds the closing quote. a leading ~ is
 # left unescaped so home paths keep working.
@@ -205,13 +214,18 @@ __tzc_hist_refresh() {
   setopt localoptions noglob
   # ${#history} is linear on the special parameter, so HISTCMD is the stamp
   local stamp=${HISTCMD:-0}
+  (( __tzc_history_pwd == 1 )) && stamp+=$PWD
   [[ $stamp == $__tzc_hist_stamp ]] && return 0
   __tzc_hist_stamp=$stamp
+  stamp=${HISTCMD:-0}
   local -a lines
   local key=$(( stamp - 1 ))
   local scans=0 window=500
   while (( key > 0 && scans < window * 2 && ${#lines} < window )); do
-    (( ${+history[$key]} )) && lines+=("${history[$key]}")
+    if (( ${+history[$key]} )); then
+      (( __tzc_history_pwd == 1 )) && [[ ${__tzc_hist_dirs[$key]} != $PWD ]] ||
+        lines+=("${history[$key]}")
+    fi
     scans=$(( scans + 1 ))
     key=$(( key - 1 ))
   done

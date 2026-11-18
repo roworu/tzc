@@ -34,6 +34,17 @@ On first run compiles completions and then builds package caches in the backgrou
 That happens once per installation; after a plugin update run
 `$HOME/.local/share/zsh/tzc/completions/compile.zsh` to recompile the specs.
 
+### Update
+
+Pull changes, recompile the specs and refresh the package caches, then restart the shell:
+
+```bash
+git -C ~/.local/share/zsh/tzc pull
+zsh ~/.local/share/zsh/tzc/completions/compile.zsh
+zsh ~/.local/share/zsh/tzc/completions/tools/package-cache.zsh
+exec zsh
+```
+
 ## Config
 
 You can configure completion popup UI/settings via env options
@@ -43,6 +54,7 @@ You can configure completion popup UI/settings via env options
 | `TZC_MAX_ROWS` | rows to show, description included, default 10 |
 | `TZC_MAX_WIDTH` | width popup may use, default 80 |
 | `TZC_HISTORY` | recent history entries starting with the typed line, shown above the completions; 0 disables, default 3 |
+| `TZC_HISTORY_PWD` | 1 shows only history run in the current directory (recorded this session), default 1; 0 shows all |
 | `TZC_NO_COLOR` | use `standout` for the selection instead of colors |
 | `TZC_DISABLE` | do not load the plugin |
 
