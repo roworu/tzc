@@ -3,7 +3,6 @@
 typeset -gA __tzc_palette
 typeset -g __tzc_menu_text
 typeset -ga __tzc_menu_regions
-typeset -gi __tzc_menu_rows
 typeset -gi __tzc_prompt_cols=-1
 typeset -ga __tzc_wrapped __tzc_box_lines __tzc_box_regions
 
@@ -148,7 +147,6 @@ __tzc_render_menu() {
   local IFS=$'\x1f'
   __tzc_menu_text=
   __tzc_menu_regions=()
-  __tzc_menu_rows=0
   local total=${#__tzc_candidates}
   (( total )) || return 1
 
@@ -231,7 +229,6 @@ __tzc_render_menu() {
   (( sel < top )) && top=$sel
   (( sel >= top + rows )) && top=$(( sel - rows + 1 ))
   __tzc_top=$top
-  __tzc_menu_rows=$rows
 
   __tzc_box __tzc_candidates $sel $top $rows $inner "${desc_lines[@]}"
 
