@@ -93,9 +93,11 @@ __tzc_engine_start() {
   [[ ${TZC_PROBE_HELP:-1} == 0 ]] && args+=(--no-probe)
   coproc "$bin" "${args[@]}" 2>/dev/null
   exec {__tzc_eng_in}<&p {__tzc_eng_out}>&p
-  disown %?serve 2>/dev/null
+  # job text is unexpanded ("$bin" ...), so match it as the current job
+  disown %+ 2>/dev/null
   # close the shell's own p ends, so compcore sees the end when ours close
   coproc exit
+  disown %+ 2>/dev/null
   return 0
 }
 
